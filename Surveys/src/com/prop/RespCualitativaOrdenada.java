@@ -1,3 +1,5 @@
+package com.prop;
+
 //una selección de entre k opciones ordenadas
 public class RespCualitativaOrdenada extends Respuesta {
 

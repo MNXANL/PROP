@@ -1,4 +1,4 @@
-//un conjunto de números que corresponde a las opciones seleccionadas por el usuario
+package com.prop;//un conjunto de números que corresponde a las opciones seleccionadas por el usuario
 import java.util.*;
 public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
 

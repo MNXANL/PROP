@@ -1,3 +1,5 @@
+package com.prop;
+
 /**
  * Clase que almacena las preguntas en formato numérico
  */

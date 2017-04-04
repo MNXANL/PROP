@@ -1,3 +1,5 @@
+package com.prop;
+
 //respuesta libre, un string conteniendo cualquier cosa
 public class RespLibre extends Respuesta{
     private String resp;

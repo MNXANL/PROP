@@ -1,3 +1,5 @@
+package com.prop;
+
 //una seleccion de entre k opciones sin ningun orden implícito
 public class RespCualitativaNoOrdenadaUnica extends Respuesta{
 
