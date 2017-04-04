@@ -5,4 +5,12 @@ package com.domini;
  */
 public class Administrador extends Usuario {
 
+    /**
+     * Crear un nuevo usuario
+     *
+     * @param name el User Name del nuevo usuario, debe ser unico
+     */
+    public Administrador(String name) {
+        super(name);
+    }
 }
