@@ -1,6 +1,8 @@
 package com.domini;
 
-//una respuesta a una pregunta en concreto
+/**
+ * Clase que representa  una respuesta a una pregunta de una encuesta
+ */
 public class Respuesta {
 
 }
