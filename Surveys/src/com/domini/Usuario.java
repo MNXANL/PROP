@@ -1,7 +1,7 @@
 package com.domini;
 
 /**
- * Created by aleixballetbo on 4/4/17.
+ * Usuarios que pueden usar la aplicacion
  */
 public class Usuario {
     int id;

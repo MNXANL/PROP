@@ -1,7 +1,8 @@
 package com.domini;
 
 /**
- * Created by aleixballetbo on 4/4/17.
+ * Controlador de la capa de dominio
  */
 public class ControladorDominio {
+
 }

@@ -1,7 +1,8 @@
 package com.domini;
 
 /**
- * Created by aleixballetbo on 4/4/17.
+ * Usuario de tipo Encuestado.
  */
 public class Encuestado extends Usuario {
+
 }
