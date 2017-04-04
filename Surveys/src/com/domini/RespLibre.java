@@ -1,4 +1,4 @@
-package com.prop;
+package com.domini;
 
 //respuesta libre, un string conteniendo cualquier cosa
 public class RespLibre extends Respuesta{

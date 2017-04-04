@@ -1,4 +1,4 @@
-package com.prop;
+package com.domini;
 
 //una seleccion de entre k opciones sin ningun orden implícito
 public class RespCualitativaNoOrdenadaUnica extends Respuesta{

@@ -1,4 +1,4 @@
-package com.prop;
+package com.domini;
 
 /**
  * Clase que almacena las preguntas en formato numérico

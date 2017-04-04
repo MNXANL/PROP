@@ -1,4 +1,4 @@
-package com.prop;
+package com.domini;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package com.prop;
+package com.domini;
 
 //una selección de entre k opciones ordenadas
 public class RespCualitativaOrdenada extends Respuesta {

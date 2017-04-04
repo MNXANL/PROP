@@ -1,4 +1,4 @@
-package com.prop;
+package com.domini;
 
 //una respuesta que consiste en un sólo valor float
 public class RespNumerica extends Respuesta{

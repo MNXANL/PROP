@@ -1,4 +1,4 @@
-package com.prop;
+package com.domini;
 
 /**
  * Created by mike on 3/28/17.

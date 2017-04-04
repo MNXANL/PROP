@@ -1,4 +1,4 @@
-package com.prop;
+package com.domini;
 
 import java.util.ArrayList;
 
