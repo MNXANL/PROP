@@ -2,37 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b006f05-294a-4ed5-b659-3c4eb1dcc830" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Casos de uso.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Casos_de_uso_Alejandro.odt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Casos_uso_Miguel.odt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Diagrama1.dia" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DudasDeProp.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PDFs/1er Lliurament-Nou-PROP-Miquel.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PDFs/3._Casos_dUs.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PDFs/Calendari-PROP-L23-1617.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PDFs/EnunciatP1617-info-extra.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PDFs/Enunciats-P1617.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PDFs/ejemplos_casos_uso.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/.idea/kotlinc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/src/Encuesta.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/src/PregCualitativaNoOrdenadaMultiple.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/src/PregCualitativaNoOrdenadaUnica.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/src/PregCualitativaOrdenada.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/src/PregNumerica.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/src/PregRespuestaLibre.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/src/Pregunta.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/src/RespCualitativaNoOrdenadaMultiple.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/src/RespCualitativaNoOrdenadaUnica.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/src/RespCualitativaOrdenada.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/src/RespLibre.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/src/RespNumerica.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Surveys/src/Respuesta.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/casos de uso Aleix.odt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plantilla.odt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/prop-2017-primavera.iml" afterPath="$PROJECT_DIR$/.idea/prop-2017-primavera.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,7 +17,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -127,27 +98,59 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prop-2017-primavera" />
+              <option name="myItemId" value="PROP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prop-2017-primavera" />
+              <option name="myItemId" value="PROP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PROP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PROP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PROP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PROP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PROP/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -416,7 +419,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18448023" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18448023" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -448,62 +451,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Surveys/src/Pregunta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Surveys/src/PregNumerica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Surveys/src/PregRespuestaLibre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Surveys/src/PregCualitativaOrdenada.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Surveys/src/PregCualitativaNoOrdenadaUnica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Surveys/src/PregCualitativaNoOrdenadaMultiple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="72" lean-forward="false" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Surveys/src/RespLibre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Surveys/src/Pregunta.java" />
+    <entry file="file://$PROJECT_DIR$/Surveys/src/PregNumerica.java" />
+    <entry file="file://$PROJECT_DIR$/Surveys/src/PregRespuestaLibre.java" />
+    <entry file="file://$PROJECT_DIR$/Surveys/src/PregCualitativaOrdenada.java" />
+    <entry file="file://$PROJECT_DIR$/Surveys/src/PregCualitativaNoOrdenadaUnica.java" />
+    <entry file="file://$PROJECT_DIR$/Surveys/src/PregCualitativaNoOrdenadaMultiple.java" />
+    <entry file="file://$PROJECT_DIR$/Surveys/src/RespLibre.java" />
     <entry file="file://$PROJECT_DIR$/Casos de uso.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -531,14 +485,7 @@
     <entry file="file://$PROJECT_DIR$/Surveys/RespCualitativaNoOrdenadaMultiple.java" />
     <entry file="file://$PROJECT_DIR$/Surveys/RespLibre.java" />
     <entry file="file://$PROJECT_DIR$/Surveys/RespCualitativaNoOrdenadaUnica.java" />
-    <entry file="file://$PROJECT_DIR$/Surveys/src/Respuesta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Surveys/src/Respuesta.java" />
     <entry file="file://$PROJECT_DIR$/DudasDeProp.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -546,94 +493,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Surveys/src/RespCualitativaNoOrdenadaMultiple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Surveys/src/RespCualitativaNoOrdenadaUnica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Surveys/src/Encuesta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Surveys/src/PregCualitativaNoOrdenadaMultiple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="72" lean-forward="false" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Surveys/src/PregCualitativaOrdenada.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Surveys/src/PregCualitativaNoOrdenadaUnica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Surveys/src/PregRespuestaLibre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Surveys/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Surveys/src/RespLibre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Surveys/src/PregNumerica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Surveys/src/Pregunta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Surveys/src/RespCualitativaNoOrdenadaMultiple.java" />
+    <entry file="file://$PROJECT_DIR$/Surveys/src/RespCualitativaNoOrdenadaUnica.java" />
+    <entry file="file://$PROJECT_DIR$/Surveys/src/Encuesta.java" />
+    <entry file="file://$PROJECT_DIR$/Surveys/src/PregCualitativaNoOrdenadaMultiple.java" />
+    <entry file="file://$PROJECT_DIR$/Surveys/src/PregCualitativaOrdenada.java" />
+    <entry file="file://$PROJECT_DIR$/Surveys/src/PregCualitativaNoOrdenadaUnica.java" />
+    <entry file="file://$PROJECT_DIR$/Surveys/src/PregRespuestaLibre.java" />
+    <entry file="file://$PROJECT_DIR$/Surveys/.idea/workspace.xml" />
+    <entry file="file://$PROJECT_DIR$/Surveys/src/RespLibre.java" />
+    <entry file="file://$PROJECT_DIR$/Surveys/src/PregNumerica.java" />
+    <entry file="file://$PROJECT_DIR$/Surveys/src/Pregunta.java" />
   </component>
   <component name="masterDetails">
     <states>
