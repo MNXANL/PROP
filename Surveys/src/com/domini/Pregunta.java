@@ -1,8 +1,6 @@
 package com.domini;
 
-/**
- * Created by mike on 3/28/17.
- */
+
 public class Pregunta {
     private String titulo;
 
