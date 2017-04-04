@@ -25,11 +25,11 @@ public class PregNumerica {
     }
 
 
-    public float updateValorMin(float valorMin) {
+    public void updateValorMin(float valorMin) {
         this.valorMin = valorMin;
     }
 
-    public float updateValorMax(float valorMax) {
+    public void updateValorMax(float valorMax) {
         this.valorMax = valorMax;
     }
 }
