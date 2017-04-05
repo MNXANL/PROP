@@ -12,8 +12,8 @@ public class PregCualitativaOrdenada extends Pregunta {
      * Constructora de la clase
      * @param opciones Opciones ordenadas a escoger
      */
-    public PregCualitativaOrdenada(ArrayList<String> opciones) {
-        super(Pregunta);
+    public PregCualitativaOrdenada(string titulo, ArrayList<String> opciones) {
+        super(titulo);
         this.opciones = opciones;
     }
 }

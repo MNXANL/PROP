@@ -13,8 +13,8 @@ public class PregCualitativaNoOrdenadaMultiple extends Pregunta {
      * Constructora de la clase, con mínimo 2 opciones
      * @param opciones El conjunto de opciones de la encuesta.
      */
-    public PregCualitativaNoOrdenadaMultiple(ArrayList<String> opciones) {
-        super(Pregunta);
+    public PregCualitativaNoOrdenadaMultiple(string titulo, ArrayList<String> opciones) {
+        super(titulo);
         this.opciones = opciones;
         maxOpciones = 2; //Si fuese igual a 1, no formaría parte de esta clase!
     }
@@ -24,8 +24,8 @@ public class PregCualitativaNoOrdenadaMultiple extends Pregunta {
      * @param opciones El conjunto de opciones de la encuesta
      * @param maxOpciones . Su valor debería ser 1 < maxOpciones <= opciones.size()
      */
-    public PregCualitativaNoOrdenadaMultiple(ArrayList<String> opciones, int maxOpciones) {
-        super(Pregunta);
+    public PregCualitativaNoOrdenadaMultiple(string titulo, ArrayList<String> opciones, int maxOpciones) {
+        super(titulo);
         this.opciones = opciones;
         this.maxOpciones = maxOpciones;
     }
