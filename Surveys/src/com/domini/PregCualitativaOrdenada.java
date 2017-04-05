@@ -12,7 +12,7 @@ public class PregCualitativaOrdenada extends Pregunta {
      * Constructora de la clase
      * @param opciones Opciones ordenadas a escoger
      */
-    public PregCualitativaOrdenada(string titulo, ArrayList<String> opciones) {
+    public PregCualitativaOrdenada(String titulo, ArrayList<String> opciones) {
         super(titulo);
         this.opciones = opciones;
     }

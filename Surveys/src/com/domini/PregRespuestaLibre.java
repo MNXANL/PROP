@@ -8,7 +8,7 @@ public class PregRespuestaLibre extends Pregunta {
     /**
      * Constructora por defecto
      */
-    public PregRespuestaLibre(string titulo) {
+    public PregRespuestaLibre(String titulo) {
         super(titulo);
     }
 }

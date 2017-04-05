@@ -1,0 +1,11 @@
+Título de la encuesta
+
+1.Título de la pregunta
+PCO
+Muy poco
+Poco
+Regular
+Bastante
+Mucho
+
+Final encuesta

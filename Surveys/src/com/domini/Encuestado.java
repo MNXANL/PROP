@@ -1,7 +1,7 @@
 package com.domini;
 
 /**
- * 17.
+ * Usuario de tipo Encuestado, que solo pueden ver y responder encuestas
  */
 public class Encuestado extends Usuario {
 
