@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Clase que guarda preguntas cualitativas ordenadas
  */
-public class PregCualitativaOrdenada extends ArrayList {
+public class PregCualitativaOrdenada extends Pregunta {
     ArrayList<String> opciones;
 
     /**
@@ -13,6 +13,7 @@ public class PregCualitativaOrdenada extends ArrayList {
      * @param opciones Opciones ordenadas a escoger
      */
     public PregCualitativaOrdenada(ArrayList<String> opciones) {
+        super(Pregunta);
         this.opciones = opciones;
     }
 }

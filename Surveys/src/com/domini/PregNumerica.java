@@ -3,7 +3,7 @@ package com.domini;
 /**
  * Clase que almacena las preguntas en formato numérico
  */
-public class PregNumerica {
+public class PregNumerica extends Pregunta {
     private float valorMin;
     private float valorMax;
     //public boolean floatingPoint;     Puede ser que lo necesitemos en un futuro...
@@ -12,6 +12,7 @@ public class PregNumerica {
      * Constructora de la clase con valores minimo y maximo en los extremos.
      */
     public PregNumerica() { //Admito clase vacía que coga el máximo intervalo posible.
+        super(Pregunta);
         valorMin = Float.MIN_VALUE;
         valorMax = Float.MAX_VALUE;
     }
@@ -22,6 +23,7 @@ public class PregNumerica {
      * @param valorMax valor maximo
      */
     public PregNumerica(float valorMin, float valorMax) {
+        super(Pregunta);
         this.valorMin = valorMin;
         this.valorMax = valorMax;
     }

@@ -4,9 +4,11 @@ package com.domini;
 /**
  * Clase con pregunta de formato libre
  */
-public class PregRespuestaLibre {
+public class PregRespuestaLibre extends Pregunta {
     /**
      * Constructora por defecto
      */
-    public PregRespuestaLibre() {}
+    public PregRespuestaLibre() {
+        super(Pregunta);
+    }
 }
