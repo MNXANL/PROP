@@ -30,4 +30,14 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
     public void set(int n){
         seleccion = n;
     }
+
+    /**
+     * devuelve la distancia entre dos respuestas de este tipo
+     * @param re respuesta a comparar
+     * @return 1 si son la misma respuesta, 0 sino
+     */
+    public double distance(RespCualitativaNoOrdenadaUnica re){
+        if(re.seleccion==seleccion) return 1;
+        else return 0;
+    }
 }

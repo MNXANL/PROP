@@ -5,12 +5,15 @@ package com.domini;
  */
 public class RespNumerica extends Respuesta{
     private float resp;
+    private float min, max;
 
     /**
      * @param f
      */
-    public RespNumerica(float f){
+    public RespNumerica(float f, float min, float max){
         resp=f;
+        this.min = min;
+        this.max = max;
     }
 
     /**
@@ -27,5 +30,14 @@ public class RespNumerica extends Respuesta{
      */
     public void set(float f){
         resp=f;
+    }
+
+    /**
+     * distancia entre dos respuestas numericas
+     * @param r respuesta a comparar
+     * @return valor entre 0 y 1 que representa la distancia
+     */
+    public double distance (RespNumerica r){
+        return Math.abs(r.resp -resp)/(max-min);
     }
 }

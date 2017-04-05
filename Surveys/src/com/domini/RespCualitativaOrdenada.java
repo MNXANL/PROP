@@ -6,13 +6,16 @@ package com.domini;
 public class RespCualitativaOrdenada extends Respuesta {
 
     private int seleccion;
+    private int noptions;
 
     /**
      *
-     * @param n
+     * @param ns numero de la seleccion que ha hecho el usuario
+     * @param nopts numero de opcciones totales
      */
-    public RespCualitativaOrdenada(int n){
-        seleccion = n;
+    public RespCualitativaOrdenada(int ns,int nopts){
+        seleccion = ns;
+        noptions=nopts;
     }
 
     /**
@@ -29,5 +32,17 @@ public class RespCualitativaOrdenada extends Respuesta {
      */
     public void set(int n){
         seleccion = n;
+    }
+
+    /**
+     * distancia entre dos respuestas cualitativas ordenadas
+     * @param re respuesta a comparar
+     * @return valor entre 0 y 1 que representa la distancia
+     */
+    public double distance(RespCualitativaOrdenada re){
+        if(noptions == 1) return 1;
+        else{
+            return Math.abs(re.seleccion-seleccion)/(noptions-1);
+        }
     }
 }

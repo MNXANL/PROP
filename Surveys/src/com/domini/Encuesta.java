@@ -10,7 +10,7 @@ public class Encuesta {
     private String title;
     private ArrayList<RespuestasEncuesta> X; //cada elemento de X es un conjunto de respuestas de un usuario a E
 
-    public Encuesta(){};
+    public Encuesta(){}
     /**
      * @param title el titulo que identifica la encuesta
      */
@@ -48,7 +48,7 @@ public class Encuesta {
      * exportar una encuesta fuera del programa
      * @param path Donde exportar la encuesta
      */
-    public void export(String path){
+    public void exportar(String path){
 
     }
 
