@@ -6,8 +6,9 @@ import java.util.ArrayList;
  * clase encuesta
  */
 public class Encuesta {
-    ArrayList<Pregunta> preguntas;
-    String title;
+    private ArrayList<Pregunta> preguntas;
+    private String title;
+    private ArrayList<RespuestasEncuesta> X;
 
     public Encuesta(){};
     /**
