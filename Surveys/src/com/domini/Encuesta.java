@@ -9,6 +9,7 @@ public class Encuesta {
     ArrayList<Pregunta> preguntas;
     String title;
 
+    public Encuesta(){};
     /**
      * @param title el titulo que identifica la encuesta
      */
@@ -30,6 +31,22 @@ public class Encuesta {
      */
     public void delete_question(int index){
         preguntas.remove(index);
+    }
+
+    /**
+     * importar una encuesta externa al programa
+     * @param path el lugar donde encontrar la encuesta
+     */
+    public void importar (String path){
+
+    }
+
+    /**
+     * exportar una encuesta fuera del programa
+     * @param path Donde exportar la encuesta
+     */
+    public void export(String path){
+
     }
 
 }
