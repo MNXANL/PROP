@@ -29,4 +29,11 @@ public class PregCualitativaNoOrdenadaMultiple extends Pregunta {
         this.opciones = opciones;
         this.maxOpciones = maxOpciones;
     }
+
+    public void PosiblesRespuestas(){
+        System.out.println("Elige " + maxOpciones + " de estas opciones: ");
+        for (int i : opciones) {
+            System.out.println(i + ": " + opciones[i]);
+        }
+    }
 }

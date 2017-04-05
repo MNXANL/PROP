@@ -16,4 +16,11 @@ public class PregCualitativaNoOrdenadaUnica extends Pregunta {
         super(titulo);
         this.opciones = opciones;
     }
+
+    public void PosiblesRespuestas(){
+        System.out.println("Elige una de estas opciones");
+        for (int i : opciones) {
+            System.out.println(i + ": " + opciones[i]);
+        }
+    }
 }

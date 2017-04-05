@@ -16,4 +16,13 @@ public class PregCualitativaOrdenada extends Pregunta {
         super(titulo);
         this.opciones = opciones;
     }
+
+    /**
+     *
+     */
+    public void PosiblesRespuestas(){
+        for (int i : opciones) {
+            System.out.println(i + ": " + opciones[i]);
+        }
+    }
 }

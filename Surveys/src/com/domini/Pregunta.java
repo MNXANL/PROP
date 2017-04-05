@@ -16,7 +16,11 @@ public class Pregunta {
     public String getTitulo() {
         return titulo;
 
-    }public void setTitulo(String titulo) {
+    }
+
+    public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
+
+    abstract public void PosiblesRespuestas();
 }
