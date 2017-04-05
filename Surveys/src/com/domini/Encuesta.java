@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Encuesta {
     private ArrayList<Pregunta> preguntas;
     private String title;
-    private ArrayList<RespuestasEncuesta> X;
+    private ArrayList<RespuestasEncuesta> X; //cada elemento de X es un conjunto de respuestas de un usuario a E
 
     public Encuesta(){};
     /**
@@ -16,6 +16,8 @@ public class Encuesta {
      */
     public Encuesta(String title){
         this.title = title;
+        X = new ArrayList<>();
+        preguntas = new ArrayList<>();
     }
 
     /**
@@ -48,6 +50,14 @@ public class Encuesta {
      */
     public void export(String path){
 
+    }
+
+    /**
+     * responder una encuesta es añadir una RespuestasEncuesta de un usuario al array X
+     * @param re Conjunto de respuestas de un usuario
+     */
+    public void responder(RespuestasEncuesta re){
+        X.add(re);
     }
 
 }
