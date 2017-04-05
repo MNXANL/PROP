@@ -1,6 +1,8 @@
 package com.domini;
 
-
+/**
+ * Clase con pregunta
+ */
 public class Pregunta {
     private String titulo;
 
