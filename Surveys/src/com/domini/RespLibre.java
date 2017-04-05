@@ -28,4 +28,8 @@ public class RespLibre extends Respuesta{
     public void set(String s){
         resp=s;
     }
+
+    public double distance (RespLibre r){
+        return 1;
+    }
 }
