@@ -1,5 +1,7 @@
 package com.domini;
 
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+
 import java.util.ArrayList;
 import java.io.*;
 
@@ -80,6 +82,42 @@ public class Encuesta {
                         preguntas.add(indexPreg,preg);
                         indexPreg++;
                     }
+                    else if (line.equals("PCNOU")) {
+                        //leer titulo de la pregunta
+                        String tituloP = bufferedReader.readLine();
+                        //leer todas las opciones de respuesta
+                        ArrayList<String> opciones = new ArrayList<>();
+                        int index = 0;
+                        while (!(line = bufferedReader.readLine()).equals("")){
+                            opciones.add(index,line);
+                            index++;
+                        }
+                        PregCualitativaNoOrdenadaUnica preg = new PregCualitativaNoOrdenadaUnica(tituloP,opciones);
+                        preguntas.add(indexPreg,preg);
+                        indexPreg++;
+                    }
+                    else if (line.equals("PCNOM")) {
+                        //leer titulo de la pregunta
+                        String tituloP = bufferedReader.readLine();
+                        //leer max opciones
+                        int max = Integer.parseInt(bufferedReader.readLine());
+                        //leer todas las opciones de respuesta
+                        ArrayList<String> opciones = new ArrayList<>();
+                        int index = 0;
+                        while (!(line = bufferedReader.readLine()).equals("")){
+                            opciones.add(index,line);
+                            index++;
+                        }
+                        PregCualitativaNoOrdenadaMultiple preg = new PregCualitativaNoOrdenadaMultiple(tituloP,opciones,max);
+                        preguntas.add(indexPreg,preg);
+                        indexPreg++;
+                    }
+                    else if (line.equals("PN")) {
+
+                    }
+                    else if (line.equals("PRL")) {
+
+                    }
                 }
                 else if (line.equals("Final encuesta")) {
 
@@ -120,9 +158,10 @@ public class Encuesta {
     }
 
     public void leer () {
-        System.out.println(title);
+        System.out.println(title + "\n");
         for (int i = 0; i < preguntas.size(); i++) {
             preguntas.get(i).leer();
+            System.out.println("");
         }
     }
 
