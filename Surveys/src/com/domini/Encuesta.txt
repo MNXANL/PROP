@@ -1,11 +1,19 @@
+Título
 Título de la encuesta
 
-1.Título de la pregunta
+Pregunta
 PCO
+Título de la pregunta
 Muy poco
 Poco
 Regular
 Bastante
 Mucho
+
+Pregunta
+PCO
+Título de la pregunta 2
+Sí
+No
 
 Final encuesta
