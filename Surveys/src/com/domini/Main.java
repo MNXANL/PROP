@@ -22,24 +22,30 @@ public class Main {
         e.leer();
 
         Presentacion();
-
+        boolean exit = false;
         //CtrlDomini cd = new CtrlDomini();   //Placeholder controlador capa dominio
-        while (true) {
+        while (!exit) {
             try {
-                int option = System.in.read();
-                switch (option){
-                    case 1:
-                        //cd.CreaEncuesta();
-                    case 2:
-                        //cd.ResponderEncuesta();
-                    case 3:
-                        //cd.ClusteringKmeans();
-                    case 4:
-                        break;
-                    default:
-                        System.out.println("Opción invalida. Por favor, vuelve a intentar con un número en el rango [1..4].");
+                int option = System.in.read() - '0';
+                System.out.println(option);
+                if (option == 1) {
+                    //cd.CreaEncuesta();
                 }
-            } catch (IOException e1) {
+                else if (option == 2) {
+                    //cd.RespondeEncuesta();
+                }
+                else if (option == 3) {
+                    //cd.ClusterEncuesta();
+                }
+                else if (option == 4) {
+                    System.out.println(option);
+                    exit = true;
+                }
+                else {
+                    System.out.println("Opción invalida. Por favor, vuelve a intentar con un número en el rango [1..4].");
+                }
+            }
+            catch (IOException e1) {
                 e1.printStackTrace();
             }
         }
