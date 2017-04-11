@@ -27,7 +27,7 @@ public class Encuesta {
 
     /**
      * anyadir una pregunta a la encuesta
-     * @param p
+     * @param p Pregunta a anyadir
      */
     public void add_question(Pregunta p){
         preguntas.add(p);
@@ -35,7 +35,7 @@ public class Encuesta {
 
     /**
      * borra la pregunta con indice i en la encuesta (de 0 a size-1)
-     * @param index
+     * @param index Indice de la pregunta a borrar
      */
     public void delete_question(int index){
         preguntas.remove(index);
@@ -43,7 +43,7 @@ public class Encuesta {
 
     /**
      * importar una encuesta externa al programa
-     * @param path el lugar donde encontrar la encuesta
+     * @param path El lugar donde encontrar la encuesta
      */
     public void importar (String path){
 
