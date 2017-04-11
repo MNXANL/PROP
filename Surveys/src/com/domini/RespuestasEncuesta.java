@@ -19,4 +19,11 @@ public class RespuestasEncuesta {
         Encuesta_respondida=title;
         User=user;
     }
+
+    public void ResponderPreguntasDeUnaEncuesta() {
+        Encuesta e = Encuesta(Encuesta_respondida);
+        e.responder(this);
+        //...
+
+    }
 }
