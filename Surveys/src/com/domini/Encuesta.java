@@ -1,7 +1,5 @@
 package com.domini;
 
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
 import java.util.ArrayList;
 import java.io.*;
 
@@ -52,12 +50,10 @@ public class Encuesta {
 
         try {
             // FileReader reads text files in the default encoding.
-            FileReader fileReader =
-                    new FileReader(path);
+            FileReader fileReader = new FileReader(path);
 
             // Always wrap FileReader in BufferedReader.
-            BufferedReader bufferedReader =
-                    new BufferedReader(fileReader);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
 
             int indexPreg = 0;
             while((line = bufferedReader.readLine()) != null) {
