@@ -11,4 +11,8 @@ public class PregRespuestaLibre extends Pregunta {
     public PregRespuestaLibre(String titulo) {
         super(titulo);
     }
+
+    public void leer () {
+        System.out.println(getTitulo());
+    }
 }

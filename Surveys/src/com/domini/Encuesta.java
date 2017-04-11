@@ -113,10 +113,20 @@ public class Encuesta {
                         indexPreg++;
                     }
                     else if (line.equals("PN")) {
-
+                        //leer titulo de la pregunta
+                        String tituloP = bufferedReader.readLine();
+                        float min = Float.parseFloat(bufferedReader.readLine());
+                        float max = Float.parseFloat(bufferedReader.readLine());
+                        //comprobar que min < max
+                        PregNumerica preg = new PregNumerica(tituloP,min,max);
+                        preguntas.add(indexPreg,preg);
+                        indexPreg++;
                     }
                     else if (line.equals("PRL")) {
-
+                        String tituloP = bufferedReader.readLine();
+                        PregRespuestaLibre preg = new PregRespuestaLibre(tituloP);
+                        preguntas.add(indexPreg,preg);
+                        indexPreg++;
                     }
                 }
                 else if (line.equals("Final encuesta")) {

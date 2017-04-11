@@ -58,4 +58,10 @@ public class PregNumerica extends Pregunta {
     public void updateValorMax(float valorMax) {
         this.valorMax = valorMax;
     }
+
+    public void leer () {
+        System.out.println(getTitulo());
+        System.out.println(valorMin);
+        System.out.println(valorMax);
+    }
 }
