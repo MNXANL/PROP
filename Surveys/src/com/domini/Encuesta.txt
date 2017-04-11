@@ -1,11 +1,30 @@
+Título
 Título de la encuesta
 
-1.Título de la pregunta
+Pregunta
 PCO
+Título de la pregunta 1
 Muy poco
 Poco
 Regular
 Bastante
 Mucho
+
+Pregunta
+PCNOU
+Título de la pregunta 2
+Rojo
+Azul
+Amarillo
+Verde
+
+Pregunta
+PCNOM
+Título de la pregunta 3
+2
+Opel
+Renault
+Hyundai
+Nissan
 
 Final encuesta

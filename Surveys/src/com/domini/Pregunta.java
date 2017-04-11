@@ -17,10 +17,11 @@ public class Pregunta {
         return titulo;
 
     }
-
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 
-    abstract public void PosiblesRespuestas();
+    public void leer () {
+
+    }
 }
