@@ -27,4 +27,14 @@ Renault
 Hyundai
 Nissan
 
+Pregunta
+PN
+Título de la pregunta 4
+0
+10
+
+Pregunta
+PRL
+Título de la pregunta 5
+
 Final encuesta

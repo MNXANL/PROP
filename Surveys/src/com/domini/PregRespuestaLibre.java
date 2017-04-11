@@ -12,7 +12,7 @@ public class PregRespuestaLibre extends Pregunta {
         super(titulo);
     }
 
-    public void PosiblesRespuestas(){
-        System.out.println("Formato libre.");
+    public void leer () {
+        System.out.println(getTitulo());
     }
 }

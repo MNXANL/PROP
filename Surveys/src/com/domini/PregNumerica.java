@@ -48,18 +48,20 @@ public class PregNumerica extends Pregunta {
      * Actualiza el valorMin de la clase
      * @param valorMin valor minimo a actualizar
      */
-    public void setValorMin(float valorMin) {
+    public void updateValorMin(float valorMin) {
         this.valorMin = valorMin;
     }
     /**
      * Actualiza el valorMax de la clase
      * @param valorMax valor maximo a actualizar
      */
-    public void setValorMax(float valorMax) {
+    public void updateValorMax(float valorMax) {
         this.valorMax = valorMax;
     }
 
-    public void PosiblesRespuestas(){
-        System.out.println(valorMin + " <= Numero <= " + valorMax);
+    public void leer () {
+        System.out.println(getTitulo());
+        System.out.println(valorMin);
+        System.out.println(valorMax);
     }
 }
