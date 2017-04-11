@@ -21,7 +21,7 @@ public class Pregunta {
         this.titulo = titulo;
     }
 
-    public void leer () {
+    public void leer ()     {}
 
-    }
+    public void respuesta() {}
 }
