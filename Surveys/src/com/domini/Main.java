@@ -1,8 +1,9 @@
 package com.domini;
+
 import java.io.*;
+import java.util.Scanner;
 
 public class Main {
-
 
     private static void Presentacion() {
         System.out.println("*** Gestión de encuestas de PROP ***");
@@ -17,30 +18,34 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+        /*
         Encuesta e = new Encuesta();
         e.importar("src/com/domini/Encuesta.txt");
         e.leer();
+        */
 
         Presentacion();
 
+        Scanner sc = new Scanner(System.in);
+
         //CtrlDomini cd = new CtrlDomini();   //Placeholder controlador capa dominio
         while (true) {
-            try {
-                int option = System.in.read();
-                switch (option){
-                    case 1:
-                        //cd.CreaEncuesta();
-                    case 2:
-                        //cd.ResponderEncuesta();
-                    case 3:
-                        //cd.ClusteringKmeans();
-                    case 4:
-                        break;
-                    default:
-                        System.out.println("Opción invalida. Por favor, vuelve a intentar con un número en el rango [1..4].");
-                }
-            } catch (IOException e1) {
-                e1.printStackTrace();
+            int option = sc.nextInt();
+            switch (option){
+                case 1:
+                    //cd.CreaEncuesta();
+                    System.out.println("opcion 1");
+                    break;
+                case 2:
+                    //cd.ResponderEncuesta();
+                    break;
+                case 3:
+                    //cd.ClusteringKmeans();
+                    break;
+                case 4:
+                    break;
+                default:
+                    System.out.println("Opción invalida. Por favor, vuelve a intentar con un número en el rango [1..4].");
             }
         }
     }
