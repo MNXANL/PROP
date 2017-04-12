@@ -24,6 +24,16 @@ public class Encuesta {
     }
 
     /**
+     * creador de copia
+     * @param E encuesta a copiar
+     */
+    public Encuesta (Encuesta E){
+        preguntas = (ArrayList) E.preguntas.clone();
+        title = new String(E.title);
+        X = (ArrayList) E.X.clone();
+    }
+
+    /**
      * anyadir una pregunta a la encuesta
      * @param p Pregunta a anyadir
      */
