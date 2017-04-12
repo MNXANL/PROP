@@ -1,5 +1,7 @@
 package com.domini;
 
+import com.sun.org.apache.regexp.internal.RE;
+
 /**
  * una seleccion de entre k opciones sin ningun orden implícito
  */
@@ -33,10 +35,11 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
 
     /**
      * devuelve la distancia entre dos respuestas de este tipo
-     * @param re respuesta a comparar
+     * @param x respuesta a comparar
      * @return 1 si son la misma respuesta, 0 sino
      */
-    public double distance(RespCualitativaNoOrdenadaUnica re){
+    public double distance(Respuesta x){
+        RespCualitativaNoOrdenadaUnica re = (RespCualitativaNoOrdenadaUnica) x;
         if(re.seleccion==seleccion) return 1;
         else return 0;
     }

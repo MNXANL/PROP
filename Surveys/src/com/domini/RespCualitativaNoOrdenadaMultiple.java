@@ -35,10 +35,11 @@ public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
 
     /**
      * devuelve la distancia en el intervalo [0,1]  de r a esta respuesta
-     * @param r Respuesta hasta la cual hay que medir la "distancia"
+     * @param x Respuesta hasta la cual hay que medir la "distancia"
      * @return un double entre 0 y 1
      */
-    public double distance (RespCualitativaNoOrdenadaMultiple r){
+    public double distance (Respuesta x){
+        RespCualitativaNoOrdenadaMultiple r = (RespCualitativaNoOrdenadaMultiple) x;
         HashSet<Integer> intersection = new HashSet<>(seleccion);
         intersection.retainAll(r.seleccion); //intersection contiene los elementos que tienen ambos sets en comun
         HashSet<Integer> union = new HashSet<>(seleccion);

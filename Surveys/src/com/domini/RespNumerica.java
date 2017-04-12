@@ -34,10 +34,11 @@ public class RespNumerica extends Respuesta{
 
     /**
      * distancia entre dos respuestas numericas
-     * @param r respuesta a comparar
+     * @param x respuesta a comparar
      * @return valor entre 0 y 1 que representa la distancia
      */
-    public double distance (RespNumerica r){
+    public double distance (Respuesta x){
+        RespNumerica r = (RespNumerica) x;
         return Math.abs(r.resp -resp)/(max-min);
     }
 }

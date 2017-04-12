@@ -26,7 +26,7 @@ public class Clustering {
     private double answer_dist(RespuestasEncuesta r1, RespuestasEncuesta r2){
         double acc = 0;
         for (int i = 0; i != r1.resps.size(); ++i){
-            acc += r1.resps.get(i).distance()
+            acc += r1.resps.get(i).distance(r2.resps.get(i));
         }
     }
 }

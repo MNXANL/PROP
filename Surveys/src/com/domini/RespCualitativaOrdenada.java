@@ -36,10 +36,11 @@ public class RespCualitativaOrdenada extends Respuesta {
 
     /**
      * distancia entre dos respuestas cualitativas ordenadas
-     * @param re respuesta a comparar
+     * @param x respuesta a comparar
      * @return valor entre 0 y 1 que representa la distancia
      */
-    public double distance(RespCualitativaOrdenada re){
+    public double distance(Respuesta x){
+        RespCualitativaOrdenada re = (RespCualitativaOrdenada) x;
         if(noptions == 1) return 1;
         else{
             return Math.abs(re.seleccion-seleccion)/(noptions-1);

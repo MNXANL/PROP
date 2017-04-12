@@ -37,10 +37,11 @@ public class RespLibre extends Respuesta{
 
     /**
      * distancia entre dos respuestas libres
-     * @param r respuesta a comparar
+     * @param x respuesta a comparar
      * @return
      */
-    public double distance (RespLibre r){
+    public double distance (Respuesta x){
+        RespLibre r = (RespLibre) x;
         String s1 = clean(resp.toLowerCase());
         String s2 = clean(r.resp.toLowerCase());
 
