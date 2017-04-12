@@ -1,5 +1,6 @@
 package com.domini;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.io.*;
 
@@ -209,5 +210,7 @@ public class Encuesta {
             System.out.println("");
         }
     }
-
+    public ArrayList<RespuestasEncuesta> getX (){
+        return new ArrayList<RespuestasEncuesta>(X);
+    }
 }
