@@ -12,6 +12,10 @@ public class PregRespuestaLibre extends Pregunta {
         super(titulo);
     }
 
+    public String tipo () {
+        return "PRL";
+    }
+
     public void leer () {
         System.out.println(getTitulo());
     }

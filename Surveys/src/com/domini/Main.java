@@ -18,11 +18,6 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        /*
-        Encuesta e = new Encuesta();
-        e.importar("src/com/domini/Encuesta.txt");
-        e.leer();
-        */
 
         Presentacion();
 
@@ -34,7 +29,11 @@ public class Main {
             switch (option){
                 case 1:
                     //cd.CreaEncuesta();
-                    System.out.println("opcion 1");
+
+                    Encuesta e = new Encuesta();
+                    e.importar("src/com/domini/Encuesta.txt");
+                    e.exportar("src/com/domini/EncuestaExportada.txt");
+
                     break;
                 case 2:
                     //cd.ResponderEncuesta();

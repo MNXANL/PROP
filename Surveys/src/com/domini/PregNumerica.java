@@ -59,6 +59,14 @@ public class PregNumerica extends Pregunta {
         this.valorMax = valorMax;
     }
 
+    public String tipo () {
+        return "PN";
+    }
+
+    public String getContenido () {
+        return valorMin+"\n"+valorMax+"\n";
+    }
+
     public void leer () {
         System.out.println(getTitulo());
         System.out.println(valorMin);

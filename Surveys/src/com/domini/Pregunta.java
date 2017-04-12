@@ -9,6 +9,7 @@ public class Pregunta {
     public Pregunta() {
         titulo = "";
     }
+
     public Pregunta(String titulo) {
         this.titulo = titulo;
     }
@@ -17,11 +18,20 @@ public class Pregunta {
         return titulo;
 
     }
+
+    public String getContenido () {
+        return "";
+    }
+
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 
     public void leer ()     {}
+
+    public String tipo () {
+        return null;
+    }
 
     public void respuesta() {}
 }

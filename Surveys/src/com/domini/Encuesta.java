@@ -152,7 +152,36 @@ public class Encuesta {
      * @param path Donde exportar la encuesta
      */
     public void exportar (String path){
+        try {
+            FileWriter fileWriter = new FileWriter(path);
 
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+            //Escribimos el título
+            bufferedWriter.write("Título\n");
+            bufferedWriter.write(this.title+"\n");
+
+            bufferedWriter.newLine();
+
+            //Escribimos toda la info de cada pregunta
+            for (int i = 0; i < preguntas.size(); i++) {
+                bufferedWriter.write("Pregunta\n");
+                String tipo = preguntas.get(i).tipo();
+                bufferedWriter.write(tipo+"\n");
+                bufferedWriter.write(preguntas.get(i).getTitulo()+"\n");
+                bufferedWriter.write(preguntas.get(i).getContenido());
+                bufferedWriter.newLine();
+            }
+            //Marcamos el final de la encuesta
+            bufferedWriter.write("Final encuesta");
+
+            bufferedWriter.close();
+        }
+        catch(IOException ex) {
+            System.out.println(
+                    "Error writing to file '"
+                            + path + "'");
+        }
     }
 
     /**
