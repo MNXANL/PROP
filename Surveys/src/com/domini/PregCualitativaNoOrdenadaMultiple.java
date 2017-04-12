@@ -30,10 +30,18 @@ public class PregCualitativaNoOrdenadaMultiple extends Pregunta {
         this.maxOpciones = maxOpciones;
     }
 
+    /**
+     * Obtener el tipo de la pregunta
+     * @return
+     */
     public String tipo () {
         return "PCNOM";
     }
 
+    /**
+     * Obtener toda la información de la pregunta a excepción del título
+     * @return
+     */
     public String getContenido () {
         String contenido = maxOpciones+"\n";
         for (int i = 0; i < opciones.size(); i++) {

@@ -12,6 +12,10 @@ public class PregRespuestaLibre extends Pregunta {
         super(titulo);
     }
 
+    /**
+     * Obtener el tipo de la pregunta
+     * @return
+     */
     public String tipo () {
         return "PRL";
     }

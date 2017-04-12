@@ -1,6 +1,5 @@
 package com.domini;
 
-import java.io.*;
 import java.util.Scanner;
 
 public class Main {
@@ -23,17 +22,12 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        //CtrlDomini cd = new CtrlDomini();   //Placeholder controlador capa dominio
+        ControladorDominio cd = new ControladorDominio();   //Placeholder controlador capa dominio
         while (true) {
             int option = sc.nextInt();
             switch (option){
                 case 1:
-                    //cd.CreaEncuesta();
-
-                    Encuesta e = new Encuesta();
-                    e.importar("src/com/domini/Encuesta.txt");
-                    e.exportar("src/com/domini/EncuestaExportada.txt");
-
+                    cd.crearEncuesta();
                     break;
                 case 2:
                     //cd.ResponderEncuesta();

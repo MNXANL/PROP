@@ -6,29 +6,52 @@ package com.domini;
 public class Pregunta {
     private String titulo;
 
+    /**
+     * Creadora por defecto
+     */
     public Pregunta() {
         titulo = "";
     }
 
+    /**
+     * Creadora de Pregunta con título
+     * @param titulo
+     */
     public Pregunta(String titulo) {
         this.titulo = titulo;
     }
 
+    /**
+     * Obtener el título de la pregunta
+     * @return
+     */
     public String getTitulo() {
         return titulo;
 
     }
 
+    /**
+     * Obtener toda la información de la pregunta a excepción del título
+     * @return
+     */
     public String getContenido () {
         return "";
     }
 
+    /**
+     *
+     * @param titulo
+     */
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 
     public void leer ()     {}
 
+    /**
+     * Obtener el tipo de la pregunta
+     * @return
+     */
     public String tipo () {
         return null;
     }

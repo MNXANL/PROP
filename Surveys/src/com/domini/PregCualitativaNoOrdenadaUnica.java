@@ -17,10 +17,18 @@ public class PregCualitativaNoOrdenadaUnica extends Pregunta {
         this.opciones = opciones;
     }
 
+    /**
+     * Obtener el tipo de la pregunta
+     * @return
+     */
     public String tipo () {
         return "PCNOU";
     }
 
+    /**
+     * Obtener toda la información de la pregunta a excepción del título
+     * @return
+     */
     public String getContenido () {
         String contenido = "";
         for (int i = 0; i < opciones.size(); i++) {

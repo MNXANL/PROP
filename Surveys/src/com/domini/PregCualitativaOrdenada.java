@@ -17,10 +17,18 @@ public class PregCualitativaOrdenada extends Pregunta {
         this.opciones = opciones;
     }
 
+    /**
+     * Obtener el tipo de la pregunta
+     * @return
+     */
     public String tipo () {
         return "PCO";
     }
 
+    /**
+     * Obtener toda la información de la pregunta a expeción del título
+     * @return
+     */
     public String getContenido () {
         String contenido = "";
         for (int i = 0; i < opciones.size(); i++) {

@@ -59,10 +59,18 @@ public class PregNumerica extends Pregunta {
         this.valorMax = valorMax;
     }
 
+    /**
+     * Obtener el tipo de la pregunta
+     * @return
+     */
     public String tipo () {
         return "PN";
     }
 
+    /**
+     * Obtener toda la información de la pregunta a excepción del título
+     * @return
+     */
     public String getContenido () {
         return valorMin+"\n"+valorMax+"\n";
     }
