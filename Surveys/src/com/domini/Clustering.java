@@ -26,7 +26,7 @@ public class Clustering {
      * correr el analisis kmeans, primero generando clusters iniciales antes de llamar al algoritmo
      */
     public void run(){
-        HashSet<RespuestasEncuesta> clusters = new HashSet<>();  //guarda los indices de los clusters iniciales, que seran conjuntos de respuestas de usuarios al azar
+        ArrayList<RespuestasEncuesta> clusters = new ArrayList<>();  //guarda los indices de los clusters iniciales, que seran conjuntos de respuestas de usuarios al azar
         ArrayList<RespuestasEncuesta> RE = E.getX();
 
         Random rand = new Random();
@@ -37,7 +37,18 @@ public class Clustering {
         }
         Kmeans(RE,clusters);
     }
-    private void Kmeans(ArrayList<RespuestasEncuesta> RE, HashSet<RespuestasEncuesta> clusters){
+    private void Kmeans(ArrayList<RespuestasEncuesta> RE, ArrayList<RespuestasEncuesta> clusters){
+        ArrayList<Integer> assig = new ArrayList<>(RE.size()); //assig[i] = número del cluster al que pertenece RE[i]
+        for(int i = 0; i != RE.size(); ++i){
+            RespuestasEncuesta r = RE.get(i);
+            double dist = 2;            //lo pongo a dos para que siempre coja el primero
+            for(int j = 0; j!=clusters.size(); ++j){    //asignar cada respuesta a su centroide mas cercano
+                RespuestasEncuesta cl = clusters.get(j);
+                if (answer_dist(r,cl) < dist)
+                    assig.set(i,j);
+            }
+        }
+        //recalcular centroides
 
     }
     /**
