@@ -31,6 +31,14 @@ public class Pregunta {
     }
 
     /**
+     *
+     * @param titulo
+     */
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    /**
      * Obtener toda la información de la pregunta a excepción del título
      * @return
      */
@@ -38,13 +46,6 @@ public class Pregunta {
         return "";
     }
 
-    /**
-     *
-     * @param titulo
-     */
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
 
     public void leer ()     {}
 

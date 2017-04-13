@@ -35,12 +35,28 @@ public class Encuesta {
         X = (ArrayList) E.X.clone();
     }
 
+    public void setTitulo (String titulo) {
+        title = titulo;
+    }
+
+    public String getTitulo () {
+        return title;
+    }
+
+    public Pregunta getPregunta (int index) {
+        return preguntas.get(index);
+    }
+
     /**
      * anyadir una pregunta a la encuesta
      * @param p Pregunta a anyadir
      */
     public void add_question(Pregunta p){
         preguntas.add(p);
+    }
+
+    public void add_question(int index, Pregunta p) {
+        preguntas.set(index,p);
     }
 
     /**

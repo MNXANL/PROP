@@ -8,12 +8,14 @@ public class Main {
         System.out.println("*** Gestión de encuestas de PROP ***");
         System.out.println("Elige tu opcion:");
 
+        System.out.println("   0. Menú");
         System.out.println("   1. Crear encuesta.");
         System.out.println("   2. Responder encuesta.");
         System.out.println("   3. Visualizar clustering encuesta");
         System.out.println("   4. Ver las respuestas de una encuesta");
-        System.out.println("   5. Volver a mostrar este mensaje");
-        System.out.println("   6. Salir del programa");
+        System.out.println("   5. Lista de las encuestas");
+        System.out.println("   6. Modificar encuesta");
+        System.out.println("   7. Salir del programa");
         //System.out.println("   5. Administrar usuarios"); Lo dejamos para el final!
     }
 
@@ -24,10 +26,14 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        ControladorDominio cd = new ControladorDominio();   //Placeholder controlador capa dominio
-        while (true) {
+        ControladorDominio cd = new ControladorDominio();
+
+        boolean continuar = true;
+        while (continuar) {
             int option = sc.nextInt();
             switch (option){
+                case 0:
+                    Presentacion();
                 case 1:
                     cd.crearEncuesta();
                     break;
@@ -41,12 +47,21 @@ public class Main {
                     cd.verRespuestasEncuesta();
                     break;
                 case 5:
-                    Presentacion();
+                    System.out.println(cd.listaEncuestas());
                     break;
                 case 6:
+                    System.out.println("Encuestas disponibles:");
+                    System.out.println(cd.listaEncuestas());
+                    System.out.println("Escribe el nombre de la encuesta que quieres modificar");
+                    sc.nextLine();
+                    String t = sc.nextLine();
+                    cd.modificarEncuesta(t);
+                    break;
+                case 7:
+                    continuar = false;
                     break;
                 default:
-                    System.out.println("Opción invalida. Por favor, vuelve a intentar con un número en el rango [1..4].");
+                    System.out.println("Opción invalida. Por favor, vuelve a intentar con un número en el rango [1..6].");
             }
         }
     }
