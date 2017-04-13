@@ -7,23 +7,27 @@ import java.util.ArrayList;
  */
 public class RespuestasEncuesta {
     ArrayList<Respuesta> resps;
-    String Encuesta_respondida;
+    Encuesta Encuesta_respondida;
     String User;
 
     /**
      * Creadora
-     * @param title El titulo de la encuesta a la que corresponden las preguntas
+     * @param e (El titulo de la) La encuesta a la que corresponden las preguntas
      * @param user EL usuario que ha respondido
      */
-    public RespuestasEncuesta(String title, String user) {
-        Encuesta_respondida=title;
+    public RespuestasEncuesta(Encuesta e, String user) {
+        Encuesta_respondida = e;
         User=user;
     }
 
     public void ResponderPreguntasDeUnaEncuesta() {
-        Encuesta e = new Encuesta(Encuesta_respondida);
-        e.responder(this);
-        //...
+        resps = Encuesta_respondida.ResponderEncuesta();
+    }
 
+    public void printarRespuestas() {
+        for (int i = 0; i < resps.size(); i++) {
+            RespLibre rl = (RespLibre) resps.get(i);
+            System.out.println("Respuesta pregunta " + i + ": " + rl.get());
+        }
     }
 }

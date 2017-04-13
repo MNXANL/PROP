@@ -3,13 +3,14 @@ package com.domini;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.io.*;
+import java.util.Scanner;
 
 /**
  * clase encuesta
  */
 public class Encuesta {
-    private ArrayList<Pregunta> preguntas;
     private String title;
+    private ArrayList<Pregunta> preguntas;
     private ArrayList<RespuestasEncuesta> X; //cada elemento de X es un conjunto de respuestas de un usuario a E
 
     public Encuesta(){
@@ -212,5 +213,24 @@ public class Encuesta {
     }
     public ArrayList<RespuestasEncuesta> getX (){
         return new ArrayList<RespuestasEncuesta>(X);
+    }
+
+    public ArrayList<Respuesta> ResponderEncuesta() {
+        ArrayList<Respuesta> ALR = new ArrayList<>();
+        for (int i = 0; i < preguntas.size(); i++) {
+            System.out.println(preguntas.get(i).getTitulo());
+            System.out.println(preguntas.get(i).getContenido());
+
+            Scanner sc = new Scanner(System.in);
+            String resp = sc.next();
+
+            Respuesta r = new RespLibre(resp);
+            ALR.add(r);
+        }
+        return ALR;
+    }
+
+    public String getTitle() {
+        return title;
     }
 }

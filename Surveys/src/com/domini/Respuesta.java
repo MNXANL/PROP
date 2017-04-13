@@ -5,4 +5,8 @@ package com.domini;
  */
 abstract public class Respuesta {
     abstract double distance(Respuesta r);
+
+    public String tipo () {
+        return null;
+    }
 }

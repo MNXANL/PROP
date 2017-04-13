@@ -46,4 +46,9 @@ public class RespCualitativaOrdenada extends Respuesta {
             return Math.abs(re.seleccion-seleccion)/(noptions-1);
         }
     }
+
+
+    public String tipo () {
+        return "PCO";
+    }
 }
