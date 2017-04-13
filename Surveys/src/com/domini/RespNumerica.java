@@ -1,26 +1,36 @@
 package com.domini;
 
 /**
- * una respuesta que consiste en un sólo valor float
+ * una respuesta que consiste en un sólo valor double
  */
 public class RespNumerica extends Respuesta{
-    private float resp;
-    private float min, max;
+    private double resp;
+    private double min, max;
 
     /**
      * @param f
      */
-    public RespNumerica(float f, float min, float max){
+    public RespNumerica(double f, double min, double max){
         resp=f;
         this.min = min;
         this.max = max;
     }
 
     /**
+     * creador de copia
+     * @param r
+     */
+    public RespNumerica(RespNumerica r){
+        this.resp = r.resp;
+        this.min = r.min;
+        this.max = r.max;
+    }
+
+    /**
      *
      * @return
      */
-    public float get(){
+    public double get(){
         return resp;
     }
 
@@ -28,7 +38,7 @@ public class RespNumerica extends Respuesta{
      *
      * @param f
      */
-    public void set(float f){
+    public void set(double f){
         resp=f;
     }
 

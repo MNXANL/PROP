@@ -19,6 +19,14 @@ public class RespCualitativaOrdenada extends Respuesta {
     }
 
     /**
+     * creador de copia
+     * @param r
+     */
+    public RespCualitativaOrdenada(RespCualitativaOrdenada r){
+        seleccion = r.seleccion;
+        noptions = r.noptions;
+    }
+    /**
      *
      * @return
      */
