@@ -4,7 +4,7 @@ import com.domini.Encuesta;
 
 import java.io.*;
 import java.util.HashMap;
-import java.util.StringJoiner;
+import java.util.TreeMap;
 
 /**
  * Controlador de la capa de datos
@@ -12,8 +12,8 @@ import java.util.StringJoiner;
 public class ControladorDatos {
     String pathEnc = "src/com/dades/DirectorioEncuestas";
 
-    public HashMap<String,Encuesta> cargar () {
-        HashMap<String,Encuesta> enc = new HashMap<String, Encuesta>();
+    public TreeMap<String,Encuesta> cargar () {
+        TreeMap<String,Encuesta> enc = new TreeMap<>();
 
         File folder = new File(pathEnc);
         File[] listOfFiles = folder.listFiles();

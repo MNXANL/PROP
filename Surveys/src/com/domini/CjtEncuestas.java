@@ -1,21 +1,19 @@
 package com.domini;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Set;
-import java.util.StringJoiner;
+import java.lang.reflect.Array;
+import java.util.*;
 
 /**
  * Created by aleixballetbo on 13/4/17.
  */
 public class CjtEncuestas {
-    HashMap<String, Encuesta> encuestas;
+    TreeMap<String, Encuesta> encuestas;
 
     public CjtEncuestas () {
-        encuestas = new HashMap<String, Encuesta>();
+        encuestas = new TreeMap<String, Encuesta>();
     }
 
-    public CjtEncuestas (HashMap<String,Encuesta> enc) {
+    public CjtEncuestas (TreeMap<String,Encuesta> enc) {
         encuestas = enc;
     }
 
@@ -27,19 +25,51 @@ public class CjtEncuestas {
         encuestas.remove(titulo);
     }
 
-    public Set<String> getTitulosEncuestas (String criterio) {
+    public String[] getTitulosEncuestas (String criterio) {
         if (criterio.equals("A-Z")) {
-            //treeMap
-            return encuestas.keySet();
+            return encuestas.keySet().toArray(new String[encuestas.keySet().size()]);
         }
         else if (criterio.equals("Z-A")) {
-
+            String[] titulos = encuestas.keySet().toArray(new String[encuestas.keySet().size()]);
+            int n = titulos.length;
+            for (int i = 0; i < n/2; i++) {
+                String temp = titulos[i];
+                titulos[i] = titulos[n-1-i];
+                titulos[n-1-i] = temp;
+            }
+            return titulos;
         }
         else if (criterio.equals("nuevas")) {
-
+            String[] titulos = encuestas.keySet().toArray(new String[encuestas.keySet().size()]);
+            Arrays.sort(titulos, new Comparator<String>() {
+                @Override
+                public int compare(String o1, String o2) {
+                    if (encuestas.get(o1).getFecha().before(encuestas.get(o2).getFecha())) {
+                        return 1;
+                    }
+                    else if (encuestas.get(o2).getFecha().before(encuestas.get(o1).getFecha())) {
+                        return -1;
+                    }
+                    return 0;
+                }
+            });
+            return titulos;
         }
         else if (criterio.equals("antiguas")) {
-
+            String[] titulos = encuestas.keySet().toArray(new String[encuestas.keySet().size()]);
+            Arrays.sort(titulos, new Comparator<String>() {
+                @Override
+                public int compare(String o1, String o2) {
+                    if (encuestas.get(o2).getFecha().before(encuestas.get(o1).getFecha())) {
+                        return 1;
+                    }
+                    else if (encuestas.get(o1).getFecha().before(encuestas.get(o2).getFecha())) {
+                        return -1;
+                    }
+                    return 0;
+                }
+            });
+            return titulos;
         }
         return null;
     }

@@ -52,18 +52,27 @@ public class Main {
                     System.out.println("Introduce el criterio de búsqueda:");
                     sc.nextLine();
                     String criterio = sc.nextLine();
-                    System.out.println(cd.listaEncuestas(criterio));
+                    String[] titulos = cd.listaEncuestas(criterio);
+                    for (int i = 0; i < titulos.length; i++) {
+                        System.out.println(titulos[i]);
+                    }
                     break;
                 case 6:
                     System.out.println("Encuestas disponibles:");
-                    System.out.println(cd.listaEncuestas("A-Z"));
+                    String[] t = cd.listaEncuestas("A-Z");
+                    for (int i = 0; i < t.length; i++) {
+                        System.out.println(t[i]);
+                    }
                     System.out.println("Escribe el nombre de la encuesta que quieres modificar");
                     sc.nextLine();
                     cd.modificarEncuesta(sc.nextLine());
                     break;
                 case 7:
                     System.out.println("Encuestas disponibles:");
-                    System.out.println(cd.listaEncuestas("A-Z"));
+                    String[] ti = cd.listaEncuestas("A-Z");
+                    for (int i = 0; i < ti.length; i++) {
+                        System.out.println(ti[i]);
+                    }
                     System.out.println("Escribe el nombre de la encuesta que quieres borrar");
                     sc.nextLine();
                     cd.borrarEncuesta(sc.nextLine());

@@ -94,6 +94,7 @@ public class ControladorDominio {
         }
         cjt.addEncuesta(e);
         contDatos.guardarEncuesta(e);
+        e.leer();
     }
 
     public void importarEncuesta (String path) {
@@ -101,7 +102,7 @@ public class ControladorDominio {
         contDatos.guardarEncuesta(e);
     }
 
-    public Set<String> listaEncuestas (String criterio) {
+    public String[] listaEncuestas (String criterio) {
         return cjt.getTitulosEncuestas(criterio);
     }
 

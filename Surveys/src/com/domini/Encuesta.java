@@ -1,10 +1,11 @@
 package com.domini;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 import java.io.*;
-import java.util.Date;
-import java.util.Scanner;
 
 /**
  * clase encuesta
@@ -17,6 +18,7 @@ public class Encuesta {
 
     public Encuesta(){
         preguntas = new ArrayList<>();
+        fecha = new Date();
     };
     /**
      * @param title el titulo que identifica la encuesta
@@ -35,6 +37,7 @@ public class Encuesta {
     public Encuesta (Encuesta E){
         preguntas = (ArrayList) E.preguntas.clone();
         title = new String(E.title);
+        fecha = (Date) E.fecha.clone();
         X = (ArrayList) E.X.clone();
     }
 
@@ -48,6 +51,10 @@ public class Encuesta {
 
     public Pregunta getPregunta (int index) {
         return preguntas.get(index);
+    }
+
+    public Date getFecha () {
+        return fecha;
     }
 
     /**
@@ -158,6 +165,11 @@ public class Encuesta {
                         indexPreg++;
                     }
                 }
+                else if (line.equals("Fecha")) {
+                    String f = bufferedReader.readLine();
+                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+                    e.fecha = sdf.parse(f);
+                }
                 else if (line.equals("Final encuesta")) {
 
                 }
@@ -177,6 +189,8 @@ public class Encuesta {
             System.out.println(
                     "Error reading file '"
                             + path + "'");
+        } catch (ParseException e1) {
+            e1.printStackTrace();
         }
 
         return e;
@@ -195,6 +209,14 @@ public class Encuesta {
             //Escribimos el título
             bufferedWriter.write("Título\n");
             bufferedWriter.write(this.title+"\n");
+
+            bufferedWriter.newLine();
+
+            //Escibimos la fecha
+            bufferedWriter.write("Fecha\n");
+            DateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+            String output = format.format(this.fecha);
+            bufferedWriter.write(output+"\n");
 
             bufferedWriter.newLine();
 
@@ -229,6 +251,9 @@ public class Encuesta {
 
     public void leer () {
         System.out.println(title + "\n");
+        DateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        String output = format.format(this.fecha);
+        System.out.println(output+"\n");
         for (int i = 0; i < preguntas.size(); i++) {
             preguntas.get(i).leer();
             System.out.println("");
