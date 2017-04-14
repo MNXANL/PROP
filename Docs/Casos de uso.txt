@@ -8,7 +8,7 @@ Gestionar encuestas
 	Exportar encuesta(s)
 
 Visualizar encuestas
-	Buscar en lista
+	Buscar en lista (A-Z, Z-A, más nuevas primero, más antiguas primero)
 	Buscar por criterio (palabras clave, fecha, ...)
 
 Responder encuestas

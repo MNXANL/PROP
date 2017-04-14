@@ -15,7 +15,8 @@ public class Main {
         System.out.println("   4. Ver las respuestas de una encuesta");
         System.out.println("   5. Lista de las encuestas");
         System.out.println("   6. Modificar encuesta");
-        System.out.println("   7. Salir del programa");
+        System.out.println("   7. Borrar encuesta");
+        System.out.println("   8. Salir del programa");
         //System.out.println("   5. Administrar usuarios"); Lo dejamos para el final!
     }
 
@@ -34,6 +35,7 @@ public class Main {
             switch (option){
                 case 0:
                     Presentacion();
+                    break;
                 case 1:
                     cd.crearEncuesta();
                     break;
@@ -47,17 +49,26 @@ public class Main {
                     cd.verRespuestasEncuesta();
                     break;
                 case 5:
-                    System.out.println(cd.listaEncuestas());
+                    System.out.println("Introduce el criterio de búsqueda:");
+                    sc.nextLine();
+                    String criterio = sc.nextLine();
+                    System.out.println(cd.listaEncuestas(criterio));
                     break;
                 case 6:
                     System.out.println("Encuestas disponibles:");
-                    System.out.println(cd.listaEncuestas());
+                    System.out.println(cd.listaEncuestas("A-Z"));
                     System.out.println("Escribe el nombre de la encuesta que quieres modificar");
                     sc.nextLine();
-                    String t = sc.nextLine();
-                    cd.modificarEncuesta(t);
+                    cd.modificarEncuesta(sc.nextLine());
                     break;
                 case 7:
+                    System.out.println("Encuestas disponibles:");
+                    System.out.println(cd.listaEncuestas("A-Z"));
+                    System.out.println("Escribe el nombre de la encuesta que quieres borrar");
+                    sc.nextLine();
+                    cd.borrarEncuesta(sc.nextLine());
+                    break;
+                case 8:
                     continuar = false;
                     break;
                 default:

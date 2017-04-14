@@ -1,5 +1,5 @@
 Título
-Título de la encuesta
+Encuesta
 
 Pregunta
 PCO

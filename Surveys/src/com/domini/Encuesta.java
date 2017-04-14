@@ -3,6 +3,7 @@ package com.domini;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.io.*;
+import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -10,6 +11,7 @@ import java.util.Scanner;
  */
 public class Encuesta {
     private String title;
+    private Date fecha;
     private ArrayList<Pregunta> preguntas;
     private ArrayList<RespuestasEncuesta> X; //cada elemento de X es un conjunto de respuestas de un usuario a E
 
@@ -21,6 +23,7 @@ public class Encuesta {
      */
     public Encuesta(String title){
         this.title = title;
+        this.fecha = new Date();
         X = new ArrayList<>();
         preguntas = new ArrayList<>();
     }
@@ -71,7 +74,9 @@ public class Encuesta {
      * importar una encuesta externa al programa
      * @param path El lugar donde encontrar la encuesta
      */
-    public void importar (String path){
+    public static Encuesta importar (String path){
+
+        Encuesta e = new Encuesta();
 
         // This will reference one line at a time
         String line = null;
@@ -87,7 +92,7 @@ public class Encuesta {
             while((line = bufferedReader.readLine()) != null) {
                 if (line.equals("Título")) {
                     line = bufferedReader.readLine();
-                    if (line != null) title = line;
+                    if (line != null) e.title = line;
                 }
                 else if (line.equals("Pregunta")) {
                     //leer tipo de pregunta
@@ -103,7 +108,7 @@ public class Encuesta {
                             index++;
                         }
                         PregCualitativaOrdenada preg = new PregCualitativaOrdenada(tituloP,opciones);
-                        preguntas.add(indexPreg,preg);
+                        e.preguntas.add(indexPreg,preg);
                         indexPreg++;
                     }
                     else if (line.equals("PCNOU")) {
@@ -117,7 +122,7 @@ public class Encuesta {
                             index++;
                         }
                         PregCualitativaNoOrdenadaUnica preg = new PregCualitativaNoOrdenadaUnica(tituloP,opciones);
-                        preguntas.add(indexPreg,preg);
+                        e.preguntas.add(indexPreg,preg);
                         indexPreg++;
                     }
                     else if (line.equals("PCNOM")) {
@@ -133,7 +138,7 @@ public class Encuesta {
                             index++;
                         }
                         PregCualitativaNoOrdenadaMultiple preg = new PregCualitativaNoOrdenadaMultiple(tituloP,opciones,max);
-                        preguntas.add(indexPreg,preg);
+                        e.preguntas.add(indexPreg,preg);
                         indexPreg++;
                     }
                     else if (line.equals("PN")) {
@@ -143,13 +148,13 @@ public class Encuesta {
                         float max = Float.parseFloat(bufferedReader.readLine());
                         //comprobar que min < max
                         PregNumerica preg = new PregNumerica(tituloP,min,max);
-                        preguntas.add(indexPreg,preg);
+                        e.preguntas.add(indexPreg,preg);
                         indexPreg++;
                     }
                     else if (line.equals("PRL")) {
                         String tituloP = bufferedReader.readLine();
                         PregRespuestaLibre preg = new PregRespuestaLibre(tituloP);
-                        preguntas.add(indexPreg,preg);
+                        e.preguntas.add(indexPreg,preg);
                         indexPreg++;
                     }
                 }
@@ -173,6 +178,8 @@ public class Encuesta {
                     "Error reading file '"
                             + path + "'");
         }
+
+        return e;
     }
 
     /**
@@ -181,7 +188,7 @@ public class Encuesta {
      */
     public void exportar (String path){
         try {
-            FileWriter fileWriter = new FileWriter(path);
+            FileWriter fileWriter = new FileWriter(path,false);
 
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
@@ -227,6 +234,7 @@ public class Encuesta {
             System.out.println("");
         }
     }
+
     public ArrayList<RespuestasEncuesta> getX (){
         return new ArrayList<RespuestasEncuesta>(X);
     }
@@ -244,9 +252,5 @@ public class Encuesta {
             ALR.add(r);
         }
         return ALR;
-    }
-
-    public String getTitle() {
-        return title;
     }
 }
