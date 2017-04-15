@@ -12,6 +12,7 @@ import java.util.*;
  */
 public class ControladorDominio {
     private Encuesta e;
+    private Usuario u;
     private RespuestasEncuesta re;
 
     ControladorDatos contDatos;
@@ -21,6 +22,32 @@ public class ControladorDominio {
     public ControladorDominio() {
         contDatos = new ControladorDatos();
         cjt = new CjtEncuestas(contDatos.cargar());
+        u = null;
+    }
+
+    public void logIn (String usuario, String pass) {
+        int x = contDatos.logIn(usuario,pass);
+        switch (x) {
+            case 0:
+                System.out.println("Usuario o contraseña incorrectos");
+                break;
+            case 1:
+                u = new Encuestado(usuario);
+                u.leer();
+                break;
+            case 2:
+                u = new Administrador(usuario);
+                u.leer();
+                break;
+        }
+    }
+
+    public void logOut () {
+        u = null;
+    }
+
+    public void nuevoUsuario (String tipo, String nombre, String pass) {
+        contDatos.nuevoUsuario (tipo,nombre,pass);
     }
 
     public void crearEncuesta () {

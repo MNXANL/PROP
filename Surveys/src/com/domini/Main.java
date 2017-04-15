@@ -78,6 +78,24 @@ public class Main {
                     cd.borrarEncuesta(sc.nextLine());
                     break;
                 case 8:
+                    sc.nextLine();
+                    System.out.println("Introduce el nombre de usuario");
+                    String user = sc.nextLine();
+                    System.out.println("Introduce la contraseña");
+                    String pass = sc.nextLine();
+                    cd.logIn(user,pass);
+                    break;
+                case 9:
+                    sc.nextLine();
+                    System.out.println("Qué tipo de usuario eres?");
+                    String tU = sc.nextLine();
+                    System.out.println("Introduce un nombre de usuario");
+                    String u = sc.nextLine();
+                    System.out.println("Introduce una contraseña");
+                    String p = sc.nextLine();
+                    cd.nuevoUsuario(tU,u,p);
+                    break;
+                case 10:
                     continuar = false;
                     break;
                 default:

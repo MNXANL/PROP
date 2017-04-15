@@ -1,5 +1,10 @@
 Casos de uso:
 
+Gestionar usuarios
+	LogIn
+	LogOut
+	Alta usuario
+
 Gestionar encuestas
 	Alta encuesta
 	Modificar encuesta
@@ -13,6 +18,8 @@ Visualizar encuestas
 
 Responder encuestas
 	Respuesta interactiva
+	Modificar respuesta
+	Borrar respuesta
 	Importación de respuesta
 	Exportación de respuesta
 

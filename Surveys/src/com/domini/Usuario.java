@@ -13,4 +13,8 @@ public class Usuario {
     public Usuario(String name){
         userName=name;
     }
+
+    public void leer () {
+        System.out.println(userName);
+    }
 }
