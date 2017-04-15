@@ -1,7 +1,10 @@
 package com.domini;
 
+import com.sun.tools.javac.util.*;
+
 import java.lang.reflect.Array;
 import java.util.*;
+import java.util.List;
 
 /**
  * Created by aleixballetbo on 13/4/17.
@@ -62,8 +65,7 @@ public class CjtEncuestas {
                 public int compare(String o1, String o2) {
                     if (encuestas.get(o2).getFecha().before(encuestas.get(o1).getFecha())) {
                         return 1;
-                    }
-                    else if (encuestas.get(o1).getFecha().before(encuestas.get(o2).getFecha())) {
+                    } else if (encuestas.get(o1).getFecha().before(encuestas.get(o2).getFecha())) {
                         return -1;
                     }
                     return 0;
@@ -72,6 +74,34 @@ public class CjtEncuestas {
             return titulos;
         }
         return null;
+    }
+
+    /**
+     * Devuelve los títulos de las encuestas que se encuentren en el intervalo indicado con fecha1 y fecha2 (exclusivo)
+     * @param fecha1 fecha más antigua a partir de la cual buscar
+     * @param fecha2 fecha más reciente
+     * @return
+     */
+    public String[] getTitulosEncuestasFecha (Date fecha1, Date fecha2) {
+        String[] t = encuestas.keySet().toArray(new String[encuestas.keySet().size()]);
+        ArrayList<String> titulos = new ArrayList<>();
+        for (int i = 0; i < t.length; i++) {
+            if (encuestas.get(t[i]).getFecha().after(fecha1) && encuestas.get(t[i]).getFecha().before(fecha2)) {
+                titulos.add(t[i]);
+            }
+        }
+        return titulos.toArray(new String[titulos.size()]);
+    }
+
+    public String[] getTitulosEncuestasPalabras (String palabras) {
+        String[] t = encuestas.keySet().toArray(new String[encuestas.keySet().size()]);
+        ArrayList<String> titulos = new ArrayList<>();
+        for (int i = 0; i < t.length; i++) {
+            if (t[i].contains(palabras)) {
+                titulos.add(t[i]);
+            }
+        }
+        return titulos.toArray(new String[titulos.size()]);
     }
 
     public Encuesta getEncuesta (String titulo) {

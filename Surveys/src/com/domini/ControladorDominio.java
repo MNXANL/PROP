@@ -2,6 +2,9 @@ package com.domini;
 
 import com.dades.ControladorDatos;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
 import java.util.*;
 
 /**
@@ -103,16 +106,27 @@ public class ControladorDominio {
     }
 
     public String[] listaEncuestas (String criterio) {
+        Scanner sc = new Scanner(System.in);
+        if (criterio.equals("fecha")) {
+            try {
+                System.out.println("Introduce la fecha más antigua: [dd/mm/aaaa]");
+                String f1 = sc.nextLine();
+                System.out.println("Introduce la fecha más reciente: [dd/mm/aaaa]");
+                String f2 = sc.nextLine();
+                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                Date fecha1 = sdf.parse(f1);
+                Date fecha2 = sdf.parse(f2);
+                return cjt.getTitulosEncuestasFecha(fecha1, fecha2);
+            } catch (ParseException e1) {
+                e1.printStackTrace();
+            }
+        }
+        else if (criterio.equals("palabras")) {
+            System.out.println("Introduce la(s) palabra(s) que quieras buscar:");
+            String palabras = sc.nextLine();
+            return  cjt.getTitulosEncuestasPalabras(palabras);
+        }
         return cjt.getTitulosEncuestas(criterio);
-    }
-
-    public Set<String> listaEncuestasPorPalabras (String criterio) {
-        String [] palabras = criterio.split("\\s+");
-        return null;
-    }
-
-    public Set<String> listaEncuestasPorFecha (Date fecha1, Date fecha2) {
-        return null;
     }
 
     public void modificarEncuesta(String tituloE) {
