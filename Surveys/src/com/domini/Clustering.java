@@ -1,8 +1,6 @@
 package com.domini;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Random;
 
 /**
@@ -27,7 +25,7 @@ public class Clustering {
      */
     public void run(){
         ArrayList<RespuestasEncuesta> centroids = new ArrayList<>();  //guarda los indices de los centroids iniciales, que seran conjuntos de respuestas de usuarios al azar
-        ArrayList<RespuestasEncuesta> RE = E.getX();
+        ArrayList<RespuestasEncuesta> RE = E.getCjtRespsEnc();
 
         Random rand = new Random();
         while(centroids.size() < k ){        //llenar el set de centroids iniciales con RespuestasEncuesta random de la encuesta

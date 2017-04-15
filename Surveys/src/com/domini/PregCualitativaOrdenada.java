@@ -32,7 +32,7 @@ public class PregCualitativaOrdenada extends Pregunta {
     public String getContenido () {
         String contenido = "";
         for (int i = 0; i < opciones.size(); i++) {
-            contenido += opciones.get(i) + "\n";
+            contenido += i + ") " + opciones.get(i) + "\n";
         }
         return contenido;
     }
@@ -42,5 +42,9 @@ public class PregCualitativaOrdenada extends Pregunta {
         for(int i = 0; i < opciones.size(); i++) {
             System.out.println(opciones.get(i));
         }
+    }
+
+    public int getMaxOptions() {
+        return opciones.size();
     }
 }

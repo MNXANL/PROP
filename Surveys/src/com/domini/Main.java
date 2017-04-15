@@ -40,13 +40,17 @@ public class Main {
                     cd.crearEncuesta();
                     break;
                 case 2:
-                    cd.responderEncuesta();
+                    System.out.println("Escribe el nombre de la encuesta que quieres responder: ");
+                    sc.nextLine();
+                    cd.responderEncuesta(sc.nextLine());
                     break;
                 case 3:
                     //cd.ClusteringKmeans();
                     break;
                 case 4:
-                    cd.verRespuestasEncuesta();
+                    System.out.println("Escribe el nombre de la encuesta para mostrar sus respuestas: ");
+                    sc.nextLine();
+                    cd.verRespuestasEncuesta(sc.nextLine());
                     break;
                 case 5:
                     System.out.println("Introduce el criterio de búsqueda:");
@@ -99,7 +103,7 @@ public class Main {
                     continuar = false;
                     break;
                 default:
-                    System.out.println("Opción invalida. Por favor, vuelve a intentar con un número en el rango [1..6].");
+                    System.out.println("Opción invalida. Por favor, vuelve a intentar con un número en el rango [0..8].");
             }
         }
     }

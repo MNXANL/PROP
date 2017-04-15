@@ -1,6 +1,5 @@
 package com.domini;
 
-import java.lang.reflect.Array;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -14,11 +13,12 @@ public class Encuesta {
     private String title;
     private Date fecha;
     private ArrayList<Pregunta> preguntas;
-    private ArrayList<RespuestasEncuesta> X; //cada elemento de X es un conjunto de respuestas de un usuario a E
+    private ArrayList<RespuestasEncuesta> CjtRespsEnc; //cada elemento de CjtRespsEnc es un conjunto de respuestas de un usuario a E
 
     public Encuesta(){
-        preguntas = new ArrayList<>();
         fecha = new Date();
+        preguntas = new ArrayList<>();
+        CjtRespsEnc = new ArrayList<RespuestasEncuesta>();
     };
     /**
      * @param title el titulo que identifica la encuesta
@@ -26,8 +26,8 @@ public class Encuesta {
     public Encuesta(String title){
         this.title = title;
         this.fecha = new Date();
-        X = new ArrayList<>();
-        preguntas = new ArrayList<>();
+        preguntas = new ArrayList<Pregunta>();
+        CjtRespsEnc = new ArrayList<RespuestasEncuesta>();
     }
 
     /**
@@ -36,9 +36,9 @@ public class Encuesta {
      */
     public Encuesta (Encuesta E){
         preguntas = (ArrayList) E.preguntas.clone();
-        title = new String(E.title);
+        title = E.title;
         fecha = (Date) E.fecha.clone();
-        X = (ArrayList) E.X.clone();
+        CjtRespsEnc = (ArrayList) E.CjtRespsEnc.clone();
     }
 
     public void setTitulo (String titulo) {
@@ -242,11 +242,11 @@ public class Encuesta {
     }
 
     /**
-     * responder una encuesta es añadir una RespuestasEncuesta de un usuario al array X
+     * responder una encuesta es añadir una RespuestasEncuesta de un usuario al array CjtRespsEnc
      * @param re Conjunto de respuestas de un usuario
      */
     public void responder(RespuestasEncuesta re){
-        X.add(re);
+        CjtRespsEnc.add(re);
     }
 
     public void leer () {
@@ -260,22 +260,65 @@ public class Encuesta {
         }
     }
 
-    public ArrayList<RespuestasEncuesta> getX (){
-        return new ArrayList<RespuestasEncuesta>(X);
+    public ArrayList<RespuestasEncuesta> getCjtRespsEnc(){
+        return new ArrayList<RespuestasEncuesta>(CjtRespsEnc);
     }
 
-    public ArrayList<Respuesta> ResponderEncuesta() {
+    public ArrayList<Respuesta> responderEncuesta() {
         ArrayList<Respuesta> ALR = new ArrayList<>();
         for (int i = 0; i < preguntas.size(); i++) {
             System.out.println(preguntas.get(i).getTitulo());
             System.out.println(preguntas.get(i).getContenido());
 
             Scanner sc = new Scanner(System.in);
-            String resp = sc.next();
 
-            Respuesta r = new RespLibre(resp);
-            ALR.add(r);
+            if (preguntas.get(i) instanceof PregRespuestaLibre) {
+                String resp = sc.next();
+                Respuesta r = new RespLibre(resp);
+                ALR.add(r);
+            }
+            else if (preguntas.get(i) instanceof PregNumerica) {
+                float resp = sc.nextFloat();
+
+                PregNumerica p = (PregNumerica) preguntas.get(i);
+                Respuesta r = new RespNumerica(resp, p.getValorMin(), p.getValorMax());
+                ALR.add(r);
+            }
+            else if (preguntas.get(i) instanceof PregCualitativaOrdenada) {
+                int resp = sc.nextInt();
+                ++resp;
+                PregCualitativaOrdenada p = (PregCualitativaOrdenada) preguntas.get(i);
+                Respuesta r = new RespCualitativaOrdenada(resp, p.getMaxOptions());
+                ALR.add(r);
+            }
+
+            else if (preguntas.get(i) instanceof PregCualitativaNoOrdenadaUnica) {
+                int resp = sc.nextInt();
+                PregCualitativaNoOrdenadaUnica p = (PregCualitativaNoOrdenadaUnica) preguntas.get(i);
+                Respuesta r = new RespCualitativaNoOrdenadaUnica(resp);
+                ALR.add(r);
+            }
+            else /*if (preguntas.get(i) instanceof PregCualitativaNoOrdenadaMultiple)*/ {
+                PregCualitativaNoOrdenadaMultiple p = (PregCualitativaNoOrdenadaMultiple) preguntas.get(i);
+                HashSet<Integer> CjtResps = new HashSet<>();
+                System.out.println("Escribe el número de opciones: ");
+                int opts = sc.nextInt();
+                for (int j = 0; j < opts; j++) {
+                    int resp = sc.nextInt();
+                    CjtResps.add(resp);
+                }
+                Respuesta r = new RespCualitativaNoOrdenadaMultiple(CjtResps);
+                ALR.add(r);
+            }
+
         }
         return ALR;
+    }
+
+
+    public void printarRespuestasDeEncuesta() {
+        for (int i = 0; i != CjtRespsEnc.size(); ++i) {
+            CjtRespsEnc.get(i).printarRespuestas();
+        }
     }
 }

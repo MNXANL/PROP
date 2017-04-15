@@ -104,7 +104,4 @@ public class RespLibre extends Respuesta{
     }
 
 
-    public String tipo () {
-        return "PRL";
-    }
 }

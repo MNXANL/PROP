@@ -11,16 +11,16 @@ public class RespCualitativaOrdenada extends Respuesta {
     /**
      *
      * @param ns numero de la seleccion que ha hecho el usuario
-     * @param nopts numero de opcciones totales
+     * @param nopts numero de opcciones totales a elegir
      */
-    public RespCualitativaOrdenada(int ns,int nopts){
+    public RespCualitativaOrdenada(int ns, int nopts){
         seleccion = ns;
-        noptions=nopts;
+        noptions = nopts;
     }
 
     /**
      * creador de copia
-     * @param r
+     * @param r copia de RespCualitativaOrdenada
      */
     public RespCualitativaOrdenada(RespCualitativaOrdenada r){
         seleccion = r.seleccion;
@@ -55,8 +55,7 @@ public class RespCualitativaOrdenada extends Respuesta {
         }
     }
 
-
-    public String tipo () {
-        return "PCO";
+    public int getNoptions(){
+        return noptions;
     }
 }

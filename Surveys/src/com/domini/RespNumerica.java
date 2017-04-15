@@ -49,11 +49,8 @@ public class RespNumerica extends Respuesta{
      */
     public double distance (Respuesta x){
         RespNumerica r = (RespNumerica) x;
-        return Math.abs(r.resp -resp)/(max-min);
+        return Math.abs(r.resp - resp)/(max-min);
     }
 
 
-    public String tipo () {
-        return "PN";
-    }
 }

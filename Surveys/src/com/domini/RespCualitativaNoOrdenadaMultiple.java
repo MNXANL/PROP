@@ -53,8 +53,4 @@ public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
         return (1-jaccard);
     }
 
-
-    public String tipo () {
-        return "PCNOU";
-    }
 }

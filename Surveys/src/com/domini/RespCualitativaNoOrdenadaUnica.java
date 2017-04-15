@@ -44,8 +44,4 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
         else return 0;
     }
 
-
-    public String tipo () {
-        return "PCNOM";
-    }
 }

@@ -45,7 +45,7 @@ public class PregCualitativaNoOrdenadaMultiple extends Pregunta {
     public String getContenido () {
         String contenido = maxOpciones+"\n";
         for (int i = 0; i < opciones.size(); i++) {
-            contenido += opciones.get(i) + "\n";
+            contenido += i + ") " + opciones.get(i) + "\n";
         }
 
         return contenido;
@@ -57,5 +57,9 @@ public class PregCualitativaNoOrdenadaMultiple extends Pregunta {
             System.out.println(opciones.get(i));
         }
         System.out.println(maxOpciones);
+    }
+
+    public int getMaxOptions() {
+        return maxOpciones;
     }
 }
