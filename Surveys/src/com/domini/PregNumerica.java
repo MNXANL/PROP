@@ -72,7 +72,7 @@ public class PregNumerica extends Pregunta {
      * @return
      */
     public String getContenido () {
-        return "Numero entre [" + valorMin + " .. " + valorMax + "]\n";
+        return valorMin+"\n"+valorMax+"\n";
     }
 
     public void leer () {
