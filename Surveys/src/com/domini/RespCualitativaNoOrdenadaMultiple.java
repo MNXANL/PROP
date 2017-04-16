@@ -7,6 +7,7 @@ import java.util.*;
 
 public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
 
+    //integer = seleccion, string = contenido de la seleccion, por conveniencia
     private HashMap<Integer, String> seleccion;
 
     /**
@@ -21,7 +22,11 @@ public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
      *
      * @return
      */
-    public HashMap<Integer, String> get(){
+    public HashSet<Integer> get(){
+        return new HashSet<>(seleccion.keySet());
+    }
+
+    public HashMap<Integer, String> getMap(){
         return seleccion;
     }
 

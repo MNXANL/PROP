@@ -1,6 +1,10 @@
 package com.domini;
 
+import com.sun.xml.internal.bind.v2.model.util.ArrayInfoUtil;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Random;
 
 /**
@@ -49,6 +53,7 @@ public class Clustering {
             }
         }
         //recalcular centroides
+        ArrayList<RespuestasEncuesta> oldCentroids = (ArrayList<RespuestasEncuesta>)centroids.clone();
         for(int i = 0; i!= centroids.size(); ++i){ //por cada centroide de un cluster
             RespuestasEncuesta newCentroid = new RespuestasEncuesta(E, "Centroid " + i);
             ArrayList<Respuesta> resps = centroids.get(i).resps;
@@ -62,10 +67,55 @@ public class Clustering {
                 if(resps.get(k) instanceof RespCualitativaOrdenada){
                     newCentroid.resps.add(RespCO_mode(i,k,assig,RE));
                 }
+                if(resps.get(k) instanceof RespCualitativaNoOrdenadaMultiple){
+                    newCentroid.resps.add(RespMUL_maxfreq(i,k,assig,RE));
+                }
                 centroids.set(i,newCentroid);
             }
         }
+        if(oldCentroids.equals(centroids)){ //el algoritmo ha acabado si los centroides no cambian
+            //de momento hacemos un output de assig para probar
+            System.out.println("asignacion de clusters");
+            for(int i : assig) System.out.println(i);
+        }
+        else Kmeans(RE,centroids);
 
+    }
+
+    /**
+     * devuelve la Respuesta que contiene la seleccion mas comun
+     * @param cli indice del cluster que estamos tratando
+     * @param rn numero de la respuesta dentro de RespuestasEncuesta
+     * @param assig vector que mapea los elementos de RE a un cluster
+     * @param RE lista de respuestas que han dado los encuestados
+     * @return
+     */
+    private RespCualitativaNoOrdenadaMultiple
+    RespMUL_maxfreq(int cli, int rn,ArrayList<Integer> assig, ArrayList<RespuestasEncuesta> RE ){
+
+        int maxCount;
+        maxCount=-1;
+        HashMap<Integer,String> maxValue = new HashMap<>();
+        for(int i = 0; i != RE.size(); ++i){
+            if(assig.get(i)==cli){      //solo tratamos los que pertenecen al cluster que nos piden
+                int count = 0;
+                RespCualitativaNoOrdenadaMultiple r = (RespCualitativaNoOrdenadaMultiple) RE.get(i).resps.get(rn);
+                for(int j = 0; j!= RE.size(); ++j){
+                    if(assig.get(j)==cli){
+                        RespCualitativaNoOrdenadaMultiple aux = (RespCualitativaNoOrdenadaMultiple) RE.get(j).resps.get(rn);
+                        HashSet<Integer> intersection = new HashSet<>(r.get());
+                        intersection.retainAll(aux.get());
+                        if(intersection.size() == r.get().size()) ++count;
+                    }
+                }
+                if(count > maxCount){
+                    maxCount = count;
+                    maxValue = new HashMap<Integer,String>(r.getMap());
+                }
+
+            }
+        }
+        return new RespCualitativaNoOrdenadaMultiple(maxValue);
     }
 
     /**

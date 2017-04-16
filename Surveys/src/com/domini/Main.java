@@ -46,7 +46,34 @@ public class Main {
                     cd.responderEncuesta(sc.nextLine());
                     break;
                 case 3:
-                    //cd.ClusteringKmeans();
+                    //cd.ClusteringKmeans()
+                    Encuesta E = new Encuesta("test");
+                    PregNumerica P = new PregNumerica("nota de prop?",0,10);
+                    E.add_question(P);
+
+                    RespuestasEncuesta RE1 = new RespuestasEncuesta(E,"Manolo");
+                    RespNumerica r1 = new RespNumerica(1,0,10);
+                    RE1.addRespuesta(r1);
+                    E.responder(RE1);
+
+                    RespuestasEncuesta RE2 = new RespuestasEncuesta(E,"Pepe");
+                    RespNumerica r2 = new RespNumerica(3,0,10);
+                    RE2.addRespuesta(r2);
+                    E.responder(RE2);
+
+                    RespuestasEncuesta RE3 = new RespuestasEncuesta(E,"Juan");
+                    RespNumerica r3 = new RespNumerica(5,0,10);
+                    RE3.addRespuesta(r3);
+                    E.responder(RE3);
+
+                    RespuestasEncuesta RE4 = new RespuestasEncuesta(E,"Rafa");
+                    RespNumerica r4 = new RespNumerica(7,0,10);
+                    RE4.addRespuesta(r4);
+                    E.responder(RE4);
+
+                    System.out.println("Introduce el número de clusters deseados");
+                    int k = sc.nextInt();
+                    Clustering c = new Clustering(E,k);
                     break;
                 case 4:
                     System.out.println("Escribe el nombre de la encuesta para mostrar sus respuestas: ");

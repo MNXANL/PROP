@@ -18,8 +18,11 @@ public class RespuestasEncuesta {
     public RespuestasEncuesta(Encuesta e, String user) {
         Encuesta_respondida = e;
         User = user;
+        resps = new ArrayList<>();
     }
-
+    public void addRespuesta(Respuesta r){
+        resps.add(r);
+    }
 
     /**
      * Creadora
@@ -30,7 +33,7 @@ public class RespuestasEncuesta {
     public RespuestasEncuesta(Encuesta e, String user, ArrayList<Respuesta> resps) {
         Encuesta_respondida = e;
         User = user;
-        this.resps = resps;
+        this.resps = (ArrayList<Respuesta>) resps.clone();
     }
 
 
@@ -60,7 +63,7 @@ public class RespuestasEncuesta {
             // !acabame!
             else if (resps.get(i) instanceof RespCualitativaNoOrdenadaMultiple) {
                 RespCualitativaNoOrdenadaMultiple rc = (RespCualitativaNoOrdenadaMultiple) resps.get(i);
-                Collection<String> colResps = rc.get().values();
+                Collection<String> colResps = rc.getMap().values();
 
                 if (colResps.size() == 1) System.out.println("1 opción elegida");
                 else                 System.out.println(colResps.size() + " opciones elegidas");
