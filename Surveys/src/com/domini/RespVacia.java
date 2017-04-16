@@ -1,5 +1,7 @@
 package com.domini;
 
+import java.util.Objects;
+
 /**
  * clase que sirve para representar una respuesta que no ha sido contestada
  */
@@ -15,5 +17,15 @@ public class RespVacia extends Respuesta{
             return 0;
         else
             return 1;
+    }
+    @Override
+    public boolean equals(Object o){
+        if(!(o instanceof RespNumerica))
+            return false;
+        return true;
+    }
+    @Override
+    public int hashCode(){
+        return 42;
     }
 }

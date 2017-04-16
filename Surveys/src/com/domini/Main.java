@@ -74,6 +74,7 @@ public class Main {
                     System.out.println("Introduce el número de clusters deseados");
                     int k = sc.nextInt();
                     Clustering c = new Clustering(E,k);
+                    c.run();
                     break;
                 case 4:
                     System.out.println("Escribe el nombre de la encuesta para mostrar sus respuestas: ");

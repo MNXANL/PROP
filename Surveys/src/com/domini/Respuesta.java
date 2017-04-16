@@ -5,5 +5,8 @@ package com.domini;
  */
 abstract public class Respuesta {
     abstract double distance(Respuesta r);
-
+    @Override
+    abstract public boolean equals(Object o );
+    @Override
+    abstract public int hashCode();
 }

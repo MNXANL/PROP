@@ -1,5 +1,7 @@
 package com.domini;
 
+import java.util.Objects;
+
 /**
  * una selección de entre k opciones ordenadas
  */
@@ -67,6 +69,18 @@ public class RespCualitativaOrdenada extends Respuesta {
         else{
             return Math.abs(re.seleccion-seleccion)/(noptions-1);
         }
+    }
+    @Override
+    public boolean equals(Object o){
+        if(!(o instanceof RespCualitativaOrdenada))
+            return false;
+        RespCualitativaOrdenada r = (RespCualitativaOrdenada) o;
+
+        return r.seleccion==seleccion && r.noptions==noptions;
+    }
+    @Override
+    public int hashCode(){
+        return Objects.hash(seleccion,noptions);
     }
 
 }

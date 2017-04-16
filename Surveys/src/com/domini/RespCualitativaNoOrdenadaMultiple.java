@@ -57,5 +57,19 @@ public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
         }
         return (1-jaccard);
     }
+    @Override
+    public boolean equals(Object o){
+        if(!(o instanceof RespCualitativaNoOrdenadaMultiple))
+            return false;
+        RespCualitativaNoOrdenadaMultiple r = (RespCualitativaNoOrdenadaMultiple) o;
+
+        HashSet<Integer> intersection = new HashSet<>(r.seleccion.keySet());
+        intersection.retainAll(seleccion.keySet());
+        return intersection.size()==seleccion.keySet().size();
+    }
+    @Override
+    public int hashCode(){
+        return Objects.hash(seleccion.keySet());
+    }
 
 }

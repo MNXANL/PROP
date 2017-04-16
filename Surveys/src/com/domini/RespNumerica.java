@@ -1,5 +1,7 @@
 package com.domini;
 
+import java.util.Objects;
+
 /**
  * una respuesta que consiste en un sólo valor double
  */
@@ -51,6 +53,17 @@ public class RespNumerica extends Respuesta{
         RespNumerica r = (RespNumerica) x;
         return Math.abs(r.resp - resp)/(max-min);
     }
+    @Override
+    public boolean equals(Object o){
+        if(!(o instanceof RespNumerica))
+            return false;
+        RespNumerica r = (RespNumerica) o;
 
+        return r.resp==resp && r.max == max && r.min == min;
+    }
+    @Override
+    public int hashCode(){
+        return Objects.hash(resp,min,max);
+    }
 
 }

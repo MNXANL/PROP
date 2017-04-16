@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashSet;
+import java.util.Objects;
 
 //respuesta libre, un string conteniendo cualquier cosa
 public class RespLibre extends Respuesta{
@@ -102,6 +103,16 @@ public class RespLibre extends Respuesta{
         }
         return result;
     }
+    @Override
+    public boolean equals(Object o){
+        if(!(o instanceof RespLibre))
+            return false;
+        RespLibre r = (RespLibre) o;
 
-
+        return clean(r.resp)==clean(resp);
+    }
+    @Override
+    public int hashCode(){
+        return Objects.hash(resp);
+    }
 }

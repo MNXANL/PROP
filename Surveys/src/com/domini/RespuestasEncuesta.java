@@ -37,6 +37,7 @@ public class RespuestasEncuesta {
     }
 
 
+
     public void printarRespuestas() {
         System.out.println("Respuestas del usuario " + User);
         System.out.println("----------------------");
@@ -75,5 +76,29 @@ public class RespuestasEncuesta {
             }
         }
         System.out.println();
+    }
+    @Override
+    public boolean equals(Object o){
+        if(!(o instanceof RespuestasEncuesta))
+            return false;
+
+        RespuestasEncuesta r=(RespuestasEncuesta) o;
+
+        if(r.resps.isEmpty() && resps.isEmpty())
+            return true;
+        else if (r.resps.size()!= resps.size())
+            return false;
+        else{
+            boolean b = true;
+            int i = 0;
+            while(b && i != resps.size())
+                if(!resps.get(i).equals(r.resps.get(i)))
+                    b= false;
+            return b;
+        }
+    }
+    @Override
+    public int hashCode(){
+        return Objects.hash(User,Encuesta_respondida.getFecha());
     }
 }

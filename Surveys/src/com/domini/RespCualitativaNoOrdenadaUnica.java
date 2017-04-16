@@ -2,6 +2,8 @@ package com.domini;
 
 import com.sun.org.apache.regexp.internal.RE;
 
+import java.util.Objects;
+
 /**
  * una seleccion de entre k opciones sin ningun orden implícito
  */
@@ -54,5 +56,16 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
         if (re.seleccion == seleccion) return 1;
         else return 0;
     }
+    @Override
+    public boolean equals(Object o){
+        if(!(o instanceof RespCualitativaNoOrdenadaUnica))
+            return false;
+        RespCualitativaNoOrdenadaUnica r = (RespCualitativaNoOrdenadaUnica) o;
 
+        return r.seleccion==seleccion;
+    }
+    @Override
+    public int hashCode(){
+        return Objects.hash(seleccion);
+    }
 }
