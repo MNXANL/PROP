@@ -1,4 +1,6 @@
-package com.domini;
+package tests.domini.PregNumerica;
+
+import com.domini.Pregunta;
 
 /**
  * Clase que almacena las preguntas en formato numérico
