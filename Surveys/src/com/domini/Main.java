@@ -16,18 +16,19 @@ public class Main {
         System.out.println("   5. Lista de las encuestas");
         System.out.println("   6. Modificar encuesta");
         System.out.println("   7. Borrar encuesta");
-        System.out.println("   8. Salir del programa");
-        //System.out.println("   5. Administrar usuarios"); Lo dejamos para el final!
+        System.out.println("   8. Iniciar sesion");
+        System.out.println("   9. Cerrar sesion");
+        System.out.println("   10. Crear nuevo usuario");
+        System.out.println("   11. Salir del programa");
     }
 
     public static void main(String[] args) {
-	// write your code here
+        ControladorDominio cd = new ControladorDominio();
 
         Presentacion();
 
         Scanner sc = new Scanner(System.in);
 
-        ControladorDominio cd = new ControladorDominio();
 
         boolean continuar = true;
         while (continuar) {
@@ -57,15 +58,15 @@ public class Main {
                     sc.nextLine();
                     String criterio = sc.nextLine();
                     String[] titulos = cd.listaEncuestas(criterio);
-                    for (int i = 0; i < titulos.length; i++) {
-                        System.out.println(titulos[i]);
+                    for (String titulo : titulos) {
+                        System.out.println(titulo);
                     }
                     break;
                 case 6:
                     System.out.println("Encuestas disponibles:");
                     String[] t = cd.listaEncuestas("A-Z");
-                    for (int i = 0; i < t.length; i++) {
-                        System.out.println(t[i]);
+                    for (String i : t) {
+                        System.out.println(i);
                     }
                     System.out.println("Escribe el nombre de la encuesta que quieres modificar");
                     sc.nextLine();
@@ -74,8 +75,8 @@ public class Main {
                 case 7:
                     System.out.println("Encuestas disponibles:");
                     String[] ti = cd.listaEncuestas("A-Z");
-                    for (int i = 0; i < ti.length; i++) {
-                        System.out.println(ti[i]);
+                    for (String i : ti) {
+                        System.out.println(i);
                     }
                     System.out.println("Escribe el nombre de la encuesta que quieres borrar");
                     sc.nextLine();
@@ -90,20 +91,24 @@ public class Main {
                     cd.logIn(user,pass);
                     break;
                 case 9:
+                    cd.logOut();
+                    System.out.println("Sesión cerrada");
+                    break;
+                case 10:
                     sc.nextLine();
-                    System.out.println("Qué tipo de usuario eres?");
+                    System.out.println("Qué tipo de usuario eres? [Admin/Enc]");
                     String tU = sc.nextLine();
                     System.out.println("Introduce un nombre de usuario");
                     String u = sc.nextLine();
                     System.out.println("Introduce una contraseña");
                     String p = sc.nextLine();
-                    cd.nuevoUsuario(tU,u,p);
+                    cd.nuevoUsuario(tU, u, p);
                     break;
-                case 10:
+                case 11:
                     continuar = false;
                     break;
                 default:
-                    System.out.println("Opción invalida. Por favor, vuelve a intentar con un número en el rango [0..8].");
+                    System.out.println("Opción invalida. Por favor, vuelve a intentar con un número en el rango [0..11].");
             }
         }
     }

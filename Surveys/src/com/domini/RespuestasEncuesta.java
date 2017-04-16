@@ -35,6 +35,8 @@ public class RespuestasEncuesta {
 
 
     public void printarRespuestas() {
+        System.out.println("Respuestas del usuario " + User);
+        System.out.println("----------------------");
         for (int i = 0; i < resps.size(); i++) {
             System.out.print("Respuesta pregunta " + i + ": ");
 
@@ -65,5 +67,6 @@ public class RespuestasEncuesta {
                 }
             }
         }
+        System.out.println();
     }
 }

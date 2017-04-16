@@ -17,4 +17,8 @@ public class Usuario {
     public void leer () {
         System.out.println(userName);
     }
+
+    public String getUsername() {
+        return userName;
+    }
 }

@@ -12,13 +12,42 @@ import java.util.*;
  */
 public class ControladorDominio {
     private Encuesta e;
-    //private RespuestasEncuesta re;
+    private Usuario u;
+    private RespuestasEncuesta re;
+
     ControladorDatos contDatos;
+
     CjtEncuestas cjt;
 
     public ControladorDominio() {
         contDatos = new ControladorDatos();
         cjt = new CjtEncuestas(contDatos.cargar());
+        u = null;
+    }
+
+    public void logIn (String usuario, String pass) {
+        int x = contDatos.logIn(usuario,pass);
+        switch (x) {
+            case 0:
+                System.out.println("Usuario o contraseña incorrectos");
+                break;
+            case 1:
+                u = new Encuestado(usuario);
+                u.leer();
+                break;
+            case 2:
+                u = new Administrador(usuario);
+                u.leer();
+                break;
+        }
+    }
+
+    public void logOut () {
+        u = null;
+    }
+
+    public void nuevoUsuario (String tipo, String nombre, String pass) {
+        contDatos.nuevoUsuario (tipo, nombre, pass);
     }
 
     public void crearEncuesta () {
@@ -43,7 +72,7 @@ public class ControladorDominio {
                     System.out.println("Introduce la opción número "+ (i+1));
                     opciones.add(i,sc.nextLine());
                 }
-                Pregunta preg = new PregCualitativaOrdenada(tituloP,opciones);
+                PregCualitativaOrdenada preg = new PregCualitativaOrdenada(tituloP,opciones);
                 e.add_question(preg);
             }
             else if (tipo.toUpperCase().equals("PCNOU")) {
@@ -55,7 +84,7 @@ public class ControladorDominio {
                     System.out.println("Introduce la opción número "+ (i+1));
                     opciones.add(i,sc.nextLine());
                 }
-                Pregunta preg = new PregCualitativaNoOrdenadaUnica(tituloP,opciones);
+                PregCualitativaNoOrdenadaUnica preg = new PregCualitativaNoOrdenadaUnica(tituloP,opciones);
                 e.add_question(preg);
             }
             else if (tipo.toUpperCase().equals("PCNOM")) {
@@ -70,7 +99,7 @@ public class ControladorDominio {
                     System.out.println("Introduce la opción número "+ (i+1));
                     opciones.add(i,sc.nextLine());
                 }
-                Pregunta preg = new PregCualitativaNoOrdenadaMultiple(tituloP,opciones,max);
+                PregCualitativaNoOrdenadaMultiple preg = new PregCualitativaNoOrdenadaMultiple(tituloP,opciones,max);
                 e.add_question(preg);
             }
             else if (tipo.toUpperCase().equals("PN")) {
@@ -84,7 +113,7 @@ public class ControladorDominio {
                 e.add_question(preg);
             }
             else if (tipo.toUpperCase().equals("PRL")) {
-                Pregunta preg = new PregRespuestaLibre(tituloP);
+                PregRespuestaLibre preg = new PregRespuestaLibre(tituloP);
                 e.add_question(preg);
             }
             else {
@@ -134,17 +163,17 @@ public class ControladorDominio {
         Scanner sc = new Scanner(System.in);
         System.out.println("Qué parte de la encuesta quieres modificar? [título, pregunta, nada]");
         String parte = sc.nextLine();
-        while (!parte.toLowerCase().equals("nada")) {
-            if (parte.toLowerCase().equals("título")) {
+        while (!parte.equals("nada")) {
+            if (parte.equals("título")) {
                 System.out.println("Introduce el nuevo título:");
                 String viejoTitulo = e.getTitulo();
                 String nuevoTitulo = sc.nextLine();
                 e.setTitulo(nuevoTitulo);
                 cjt.cambiarTitulo(nuevoTitulo, viejoTitulo);
-            } else if (parte.toLowerCase().equals("pregunta")) {
+            } else if (parte.equals("pregunta")) {
                 System.out.println("Introduce la acción a realizar [modificar, añadir, borrar]");
                 String accion = sc.nextLine();
-                if (accion.toLowerCase().equals("modificar")) {
+                if (accion.equals("modificar")) {
                     System.out.println("Introduce el número de la pregunta que quieres cambiar:");
                     int index = sc.nextInt();
                     index -= 1;
@@ -154,7 +183,7 @@ public class ControladorDominio {
                     System.out.println("Introduce el nuevo contenido:");
                     System.out.println("Introduce el título de la pregunta");
                     String tituloP = sc.nextLine();
-                    if (tipo.toUpperCase().equals("PCO")) {
+                    if (tipo.equals("PCO")) {
                         System.out.println("Cuántas opciones de respuesta tiene la pregunta?");
                         int n = sc.nextInt();
                         sc.nextLine();
@@ -165,7 +194,7 @@ public class ControladorDominio {
                         }
                         PregCualitativaOrdenada preg = new PregCualitativaOrdenada(tituloP, opciones);
                         e.add_question(index, preg);
-                    } else if (tipo.toUpperCase().equals("PCNOU")) {
+                    } else if (tipo.equals("PCNOU")) {
                         System.out.println("Cuántas opciones de respuesta tiene la pregunta?");
                         int n = sc.nextInt();
                         sc.nextLine();
@@ -176,7 +205,7 @@ public class ControladorDominio {
                         }
                         PregCualitativaNoOrdenadaUnica preg = new PregCualitativaNoOrdenadaUnica(tituloP, opciones);
                         e.add_question(index, preg);
-                    } else if (tipo.toUpperCase().equals("PCNOM")) {
+                    } else if (tipo.equals("PCNOM")) {
                         System.out.println("Cuántas opciones de respuesta tiene la pregunta?");
                         int n = sc.nextInt();
                         sc.nextLine();
@@ -190,7 +219,7 @@ public class ControladorDominio {
                         }
                         PregCualitativaNoOrdenadaMultiple preg = new PregCualitativaNoOrdenadaMultiple(tituloP, opciones, max);
                         e.add_question(index, preg);
-                    } else if (tipo.toUpperCase().equals("PN")) {
+                    } else if (tipo.equals("PN")) {
                         System.out.println("Cuál es el valor mínimo que admite ésta pregunta?");
                         int min = sc.nextInt();
                         sc.nextLine();
@@ -199,19 +228,19 @@ public class ControladorDominio {
                         sc.nextLine();
                         PregNumerica preg = new PregNumerica(tituloP, min, max);
                         e.add_question(index, preg);
-                    } else if (tipo.toUpperCase().equals("PRL")) {
+                    } else if (tipo.equals("PRL")) {
                         PregRespuestaLibre preg = new PregRespuestaLibre(tituloP);
                         e.add_question(index, preg);
                     }
                 }
-                else if (accion.toLowerCase().equals("borrar")) {
+                else if (accion.equals("borrar")) {
                     System.out.println("Introduce el número de la pregunta que quieres borrar:");
                     int index = sc.nextInt();
                     index -= 1;
                     sc.nextLine();
                     e.delete_question(index);
                 }
-                else if (accion.toLowerCase().equals("añadir")) {
+                else if (accion.equals("añadir")) {
                     System.out.println("Introduce el título de la pregunta");
                     String tituloP = sc.nextLine();
                     System.out.println("Introduce el tipo de pregunta [PCO, PCNOU, PCNOM, PN, PRL]");
@@ -227,7 +256,7 @@ public class ControladorDominio {
                         }
                         PregCualitativaOrdenada preg = new PregCualitativaOrdenada(tituloP, opciones);
                         e.add_question(preg);
-                    } else if (tipo.toUpperCase().equals("PCNOU")) {
+                    } else if (tipo.equals("PCNOU")) {
                         System.out.println("Cuántas opciones de respuesta tiene la pregunta?");
                         int n = sc.nextInt();
                         sc.nextLine();
@@ -238,7 +267,7 @@ public class ControladorDominio {
                         }
                         PregCualitativaNoOrdenadaUnica preg = new PregCualitativaNoOrdenadaUnica(tituloP, opciones);
                         e.add_question(preg);
-                    } else if (tipo.toUpperCase().equals("PCNOM")) {
+                    } else if (tipo.equals("PCNOM")) {
                         System.out.println("Cuántas opciones de respuesta tiene la pregunta?");
                         int n = sc.nextInt();
                         sc.nextLine();
@@ -252,7 +281,7 @@ public class ControladorDominio {
                         }
                         PregCualitativaNoOrdenadaMultiple preg = new PregCualitativaNoOrdenadaMultiple(tituloP, opciones, max);
                         e.add_question(preg);
-                    } else if (tipo.toUpperCase().equals("PN")) {
+                    } else if (tipo.equals("PN")) {
                         System.out.println("Cuál es el valor mínimo que admite ésta pregunta?");
                         int min = sc.nextInt();
                         sc.nextLine();
@@ -261,7 +290,7 @@ public class ControladorDominio {
                         sc.nextLine();
                         PregNumerica preg = new PregNumerica(tituloP, min, max);
                         e.add_question(preg);
-                    } else if (tipo.toUpperCase().equals("PRL")) {
+                    } else if (tipo.equals("PRL")) {
                         PregRespuestaLibre preg = new PregRespuestaLibre(tituloP);
                         e.add_question(preg);
                     }
@@ -280,15 +309,12 @@ public class ControladorDominio {
         contDatos.borrarEncuesta(titulo);
     }
 
-    //Por ahora, tal y como está hecho el controlador, responde a la ultima encuesta creada
-    //No hace falta comentar que deberíamos cambiarlo
+
     public void responderEncuesta(String tituloE) {
-        //re.ResponderPreguntasDeUnaEncuesta();
         Encuesta e = cjt.getEncuesta(tituloE);
         ArrayList<Respuesta> resp = e.responderEncuesta();
-        RespuestasEncuesta re = new RespuestasEncuesta(e, "John Doe", resp); //John Doe is a placeholder!
-        System.out.println("Encuesta respondida!!!");
-        //re.printarRespuestas();
+        RespuestasEncuesta re = new RespuestasEncuesta(e, u.getUsername(), resp);
+
         e.responder(re);
     }
 

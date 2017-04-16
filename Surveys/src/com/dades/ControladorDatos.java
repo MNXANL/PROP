@@ -35,9 +35,9 @@ public class ControladorDatos {
             if (!users.containsKey(nombre)) {
                 FileWriter fileWriter = new FileWriter(pathUsers, true);
                 BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-                if (tipo.equals("Admin")) {
+                if (tipo.toUpperCase().equals("ADMIN")) {
                     bufferedWriter.write("Admin\n");
-                } else if (tipo.equals("Enc")) {
+                } else if (tipo.toUpperCase().equals("ENC")) {
                     bufferedWriter.write("Enc\n");
                 }
                 bufferedWriter.write(nombre + "\n");
