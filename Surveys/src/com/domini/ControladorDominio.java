@@ -316,6 +316,8 @@ public class ControladorDominio {
         RespuestasEncuesta re = new RespuestasEncuesta(e, u.getUsername(), resp);
 
         e.responder(re);
+        System.out.println("Guardando encuesta...");
+        contDatos.guardarRespuestasEncuesta(re);
     }
 
     public void verRespuestasEncuesta(String tituloE) {

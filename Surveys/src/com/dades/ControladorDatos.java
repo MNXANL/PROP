@@ -1,6 +1,7 @@
 package com.dades;
 
 import com.domini.Encuesta;
+import com.domini.RespuestasEncuesta;
 import com.sun.tools.javac.util.Pair;
 
 import java.io.*;
@@ -12,6 +13,7 @@ import java.util.TreeMap;
  */
 public class ControladorDatos {
     String pathEnc = "src/com/dades/DirectorioEncuestas";
+    String pathResp = "src/com/dades/DirectorioRespuestas";
     String pathUsers = "src/com/dades/Usuarios.txt";
 
     HashMap<String, Pair<String, String>> users; //nombre, pass y tipo
@@ -108,6 +110,15 @@ public class ControladorDatos {
 
     public void borrarEncuesta (String titulo) {
         File f = new File (pathEnc+"/"+titulo+".txt");
+        f.delete();
+    }
+
+    public void guardarRespuestasEncuesta (RespuestasEncuesta re) {
+        re.exportar(pathResp + "/" + re.getNombreFichero()  +".txt");
+    }
+
+    public void borrarRespuestasEncuesta (String titulo) {
+        File f = new File (pathResp + "/" + titulo + ".txt");
         f.delete();
     }
 }
