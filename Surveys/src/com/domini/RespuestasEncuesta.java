@@ -288,4 +288,16 @@ public class RespuestasEncuesta {
             System.out.println("Error writing to file '" + path + "'");
         }
     }
+    @Override
+    public boolean equals(Object o){
+        if(!(o instanceof RespuestasEncuesta))
+            return false;
+        RespuestasEncuesta r = (RespuestasEncuesta) o;
+
+        return r.resps.equals(resps);
+    }
+    @Override
+    public int hashCode(){
+        return Objects.hash(Encuesta_respondida.getFecha(),User);
+    }
 }

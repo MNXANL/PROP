@@ -52,22 +52,22 @@ public class Main {
                     E.add_question(P);
 
                     RespuestasEncuesta RE1 = new RespuestasEncuesta(E,"Manolo");
-                    RespNumerica r1 = new RespNumerica(1,0,10);
+                    RespNumerica r1 = new RespNumerica(4,0,10);
                     RE1.addRespuesta(r1);
                     E.responder(RE1);
 
                     RespuestasEncuesta RE2 = new RespuestasEncuesta(E,"Pepe");
-                    RespNumerica r2 = new RespNumerica(3,0,10);
+                    RespNumerica r2 = new RespNumerica(6,0,10);
                     RE2.addRespuesta(r2);
                     E.responder(RE2);
 
                     RespuestasEncuesta RE3 = new RespuestasEncuesta(E,"Juan");
-                    RespNumerica r3 = new RespNumerica(5,0,10);
+                    RespNumerica r3 = new RespNumerica(8,0,10);
                     RE3.addRespuesta(r3);
                     E.responder(RE3);
 
                     RespuestasEncuesta RE4 = new RespuestasEncuesta(E,"Rafa");
-                    RespNumerica r4 = new RespNumerica(7,0,10);
+                    RespNumerica r4 = new RespNumerica(10,0,10);
                     RE4.addRespuesta(r4);
                     E.responder(RE4);
 

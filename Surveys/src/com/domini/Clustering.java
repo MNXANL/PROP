@@ -2,10 +2,7 @@ package com.domini;
 
 import com.sun.xml.internal.bind.v2.model.util.ArrayInfoUtil;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Clase encargada de realizar el analisis y clustering de las respuestas a una encuesta
@@ -79,6 +76,10 @@ public class Clustering {
 
             }
             RespuestasEncuesta oldCentroid = centroids.get(i);
+            RespNumerica old = (RespNumerica) oldCentroid.resps.get(0);
+            RespNumerica neu = (RespNumerica) newCentroid.resps.get(0);
+            System.out.println("old: " + old.get());
+            System.out.println("neu: " + neu.get());
             if(!oldCentroid.equals(newCentroid))
                 change=true;
             centroids.set(i,newCentroid);
@@ -86,7 +87,7 @@ public class Clustering {
         if(!change){ //el algoritmo ha acabado si los centroides no cambian
             //de momento hacemos un output de assig para probar
             System.out.println("asignacion de clusters");
-            for(int i : assig) System.out.println(i);
+            show_clusters(RE,assig,centroids.size());
         }
         else {
             System.out.println("Do the K means");
@@ -208,7 +209,7 @@ public class Clustering {
     private RespNumerica Respnum_avg (int cli, int rn,  ArrayList<Integer> assig, ArrayList<RespuestasEncuesta> RE){
         double sum,count;
         sum = count = 0;
-        RespNumerica result =(RespNumerica) RE.get(0).resps.get(rn);
+        RespNumerica result =new RespNumerica((RespNumerica) RE.get(0).resps.get(rn));
         for(int i = 0; i != RE.size(); ++i){
             if(assig.get(i)==cli){      //solo tratamos los que pertenecen al cluster que nos piden
                 ++count;
@@ -217,7 +218,7 @@ public class Clustering {
             }
         }
         result.set(sum/count);
-        return new RespNumerica(result);
+        return result;
     }
     /**
      * devuelve la distancia total entre el conjunto de respuestas de un usuario y otro
@@ -232,15 +233,28 @@ public class Clustering {
                 acc += 1;
             else {
                 acc += r1.resps.get(i).distance(r2.resps.get(i));
-                RespNumerica a =(RespNumerica) r1.resps.get(i);
-                RespNumerica b =(RespNumerica) r2.resps.get(i);
-                System.out.println("r1: " + a.get());
-                System.out.println("r2: " + b.get());
-                System.out.println("acc after: "+acc);
             }
 
         }
-        System.out.println ("Distance: "+acc/r1.resps.size());
+        //System.out.println ("Distance: "+acc/r1.resps.size());
         return acc/r1.resps.size();
+    }
+
+    /**
+     * mostrar una lista de clusters y los usuarios que pertenecen a ellos
+     * @param RE todas las respuestas de los usuarios a la encuesta
+     * @param assig el cluster asignado a cada usuario
+     * @param n el numero de clusters
+     */
+    private void show_clusters(ArrayList<RespuestasEncuesta> RE, ArrayList<Integer> assig, int n){
+        List<List<String>> clusters = new ArrayList<>(n);
+
+        for(int i = 0; i!=n; ++i){  //podria ser lineal en vez de O(n²) pero java no quiere ponerte facil usar matrices
+            System.out.println("Cluster " + i + ": ");
+            for(int j = 0; j != assig.size(); ++j){
+                if(assig.get(j)==i)
+                    System.out.println("\t"+RE.get(j).User);
+            }
+        }
     }
 }

@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6261926-014f-4e17-847e-29161c7babb7" name="Default" comment="clustering++">
+    <list default="true" id="a6261926-014f-4e17-847e-29161c7babb7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/Clustering.java" afterPath="$PROJECT_DIR$/src/com/domini/Clustering.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/Main.java" afterPath="$PROJECT_DIR$/src/com/domini/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java" afterPath="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java" afterPath="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java" afterPath="$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/RespLibre.java" afterPath="$PROJECT_DIR$/src/com/domini/RespLibre.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/RespNumerica.java" afterPath="$PROJECT_DIR$/src/com/domini/RespNumerica.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/RespVacia.java" afterPath="$PROJECT_DIR$/src/com/domini/RespVacia.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/Respuesta.java" afterPath="$PROJECT_DIR$/src/com/domini/Respuesta.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java" afterPath="$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -38,25 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RespLibre.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/RespLibre.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="115" column="32" lean-forward="false" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2985#2986#0" expanded="true" />
-                <element signature="e#3026#3027#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Clustering.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Clustering.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-191">
-              <caret line="61" column="50" lean-forward="true" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
+            <state relative-caret-position="413">
+              <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,10 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RespVacia.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RespVacia.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/domini/RespVacia.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
+            <state relative-caret-position="420">
               <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
               <folding>
                 <element signature="e#601#602#0" expanded="true" />
@@ -77,53 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RespCualitativaOrdenada.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="82" column="46" lean-forward="false" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
-              <folding>
-                <element signature="e#1868#1869#0" expanded="true" />
-                <element signature="e#1923#1924#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RespCualitativaNoOrdenadaUnica.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="69" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1441#1442#0" expanded="true" />
-                <element signature="e#1487#1488#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RespCualitativaNoOrdenadaMultiple.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="60" column="36" lean-forward="true" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
-              <folding>
-                <element signature="e#676#677#0" expanded="true" />
-                <element signature="e#708#709#0" expanded="true" />
-                <element signature="e#2136#2137#0" expanded="true" />
-                <element signature="e#2191#2192#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/domini/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="54" column="56" lean-forward="false" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -132,13 +69,16 @@
       <file leaf-file-name="RespuestasEncuesta.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="102" selection-end-column="5" />
+            <state relative-caret-position="1248">
+              <caret line="296" column="37" lean-forward="true" selection-start-line="296" selection-start-column="37" selection-end-line="296" selection-end-column="37" />
               <folding>
-                <element signature="e#593#594#0" expanded="true" />
-                <element signature="e#621#622#0" expanded="true" />
-                <element signature="e#3471#3472#0" expanded="true" />
-                <element signature="e#3543#3544#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#752#753#0" expanded="true" />
+                <element signature="e#780#781#0" expanded="true" />
+                <element signature="e#3100#3101#0" expanded="true" />
+                <element signature="e#3169#3170#0" expanded="true" />
+                <element signature="e#11995#11996#0" expanded="true" />
+                <element signature="e#12067#12068#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/domini/Respuesta.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+              <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -193,16 +133,16 @@
         <option value="$PROJECT_DIR$/src/com/domini/PregNumerica.java" />
         <option value="$PROJECT_DIR$/src/com/domini/PalabrasFuncionales" />
         <option value="$PROJECT_DIR$/src/com/domini/Encuesta.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/Clustering.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java" />
         <option value="$PROJECT_DIR$/src/com/domini/Respuesta.java" />
         <option value="$PROJECT_DIR$/src/com/domini/RespNumerica.java" />
         <option value="$PROJECT_DIR$/src/com/domini/RespLibre.java" />
         <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java" />
         <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java" />
         <option value="$PROJECT_DIR$/src/com/domini/RespVacia.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/Clustering.java" />
       </list>
     </option>
   </component>
@@ -772,7 +712,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492366643272</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="clustering++">
+      <created>1492374003828</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1492374003828</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -789,11 +736,11 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11893584" sideWeight="0.50292826" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32237872" sideWeight="0.5043924" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7089202" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3348983" sideWeight="0.4956076" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.64319247" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1171,33 +1118,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespVacia.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-191">
-          <caret line="61" column="50" lean-forward="true" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
+        <state relative-caret-position="420">
+          <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="102" selection-end-column="5" />
-          <folding>
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#621#622#0" expanded="true" />
-            <element signature="e#3471#3472#0" expanded="true" />
-            <element signature="e#3543#3544#0" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1205,7 +1132,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/domini/Respuesta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1223,8 +1150,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/RespLibre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="115" column="32" lean-forward="false" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
+        <state relative-caret-position="393">
+          <caret line="111" column="16" lean-forward="false" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2985#2986#0" expanded="true" />
@@ -1235,7 +1162,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
+        <state relative-caret-position="1068">
           <caret line="82" column="46" lean-forward="false" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
           <folding>
             <element signature="e#1868#1869#0" expanded="true" />
@@ -1258,8 +1185,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="60" column="36" lean-forward="true" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+        <state relative-caret-position="378">
+          <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
             <element signature="e#676#677#0" expanded="true" />
             <element signature="e#708#709#0" expanded="true" />
@@ -1269,13 +1196,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/RespVacia.java">
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        <state relative-caret-position="1248">
+          <caret line="296" column="37" lean-forward="true" selection-start-line="296" selection-start-column="37" selection-end-line="296" selection-end-column="37" />
           <folding>
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#3100#3101#0" expanded="true" />
+            <element signature="e#3169#3170#0" expanded="true" />
+            <element signature="e#11995#11996#0" expanded="true" />
+            <element signature="e#12067#12068#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="54" column="56" lean-forward="false" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
