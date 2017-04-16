@@ -49,21 +49,25 @@ public class RespuestasEncuesta {
                 System.out.println( rn.get() );
             }
             else if (resps.get(i) instanceof RespCualitativaOrdenada) {
-                RespCualitativaOrdenada rco = (RespCualitativaOrdenada) resps.get(i);
-                System.out.println( rco.get() + "/" + rco.getNoptions() );
+                RespCualitativaOrdenada rc = (RespCualitativaOrdenada) resps.get(i);
+                System.out.println( rc.getText() + " (" + rc.get() + ")");
             }
             else if (resps.get(i) instanceof RespCualitativaNoOrdenadaUnica) {
                 RespCualitativaNoOrdenadaUnica rc = (RespCualitativaNoOrdenadaUnica) resps.get(i);
-                System.out.println( rc.get() );
+                System.out.println( rc.getTxt() );
             }
+
+            // !acabame!
             else if (resps.get(i) instanceof RespCualitativaNoOrdenadaMultiple) {
                 RespCualitativaNoOrdenadaMultiple rc = (RespCualitativaNoOrdenadaMultiple) resps.get(i);
-                Set<Integer> set = rc.get();
-                if (set.size() == 1)    System.out.println("1 opcion elegida");
-                else                    System.out.println(set.size() + " opciones elegidas");
-                for (Integer j : set) {
-                    //<Text> es un placeholder y sin tocar nada veo un lio de navegabilidades...
-                    System.out.println(" --> " + j + " | " + "<Text>");
+                Collection<String> colResps = rc.get().values();
+
+                if (colResps.size() == 1) System.out.println("1 opción elegida");
+                else                 System.out.println(colResps.size() + " opciones elegidas");
+                int j = 0;
+                for (String col: colResps) {
+                    System.out.println(" - Opción " + j + ": " + col);
+                    ++j;
                 }
             }
         }

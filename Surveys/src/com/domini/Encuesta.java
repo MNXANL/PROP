@@ -288,24 +288,25 @@ public class Encuesta {
                 int resp = sc.nextInt();
                 ++resp;
                 PregCualitativaOrdenada p = (PregCualitativaOrdenada) preguntas.get(i);
-                Respuesta r = new RespCualitativaOrdenada(resp, p.getMaxOptions());
+                Respuesta r = new RespCualitativaOrdenada(resp, p.getMaxOptions(), p.getPreguntaIesima(resp));
                 ALR.add(r);
             }
 
             else if (preguntas.get(i) instanceof PregCualitativaNoOrdenadaUnica) {
                 int resp = sc.nextInt();
                 PregCualitativaNoOrdenadaUnica p = (PregCualitativaNoOrdenadaUnica) preguntas.get(i);
-                Respuesta r = new RespCualitativaNoOrdenadaUnica(resp);
+                Respuesta r = new RespCualitativaNoOrdenadaUnica(resp, p.getPreguntaIesima(resp));
                 ALR.add(r);
             }
             else /*if (preguntas.get(i) instanceof PregCualitativaNoOrdenadaMultiple)*/ {
                 PregCualitativaNoOrdenadaMultiple p = (PregCualitativaNoOrdenadaMultiple) preguntas.get(i);
-                HashSet<Integer> CjtResps = new HashSet<>();
+                HashMap<Integer, String> CjtResps = new HashMap<>();
                 System.out.println("Escribe el número de opciones: ");
                 int opts = sc.nextInt();
                 for (int j = 0; j < opts; j++) {
                     int resp = sc.nextInt();
-                    CjtResps.add(resp);
+                    String respTxt = p.getPreguntaIesima(resp);
+                    CjtResps.put(resp, respTxt);
                 }
                 Respuesta r = new RespCualitativaNoOrdenadaMultiple(CjtResps);
                 ALR.add(r);

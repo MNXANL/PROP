@@ -8,13 +8,15 @@ import com.sun.org.apache.regexp.internal.RE;
 public class RespCualitativaNoOrdenadaUnica extends Respuesta{
 
     private int seleccion;
+    private String textoSelec;
 
     /**
      *
      * @param n
      */
-    public RespCualitativaNoOrdenadaUnica(int n){
+    public RespCualitativaNoOrdenadaUnica(int n, String txt){
         seleccion = n;
+        textoSelec = txt;
     }
 
     /**
@@ -27,10 +29,19 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
 
     /**
      *
+     * @return
+     */
+    public String getTxt(){
+        return textoSelec;
+    }
+
+    /**
+     *
      * @param n
      */
-    public void set(int n){
+    public void set(int n, String txt){
         seleccion = n;
+        textoSelec = txt;
     }
 
     /**
@@ -40,7 +51,7 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
      */
     public double distance(Respuesta x){
         RespCualitativaNoOrdenadaUnica re = (RespCualitativaNoOrdenadaUnica) x;
-        if(re.seleccion==seleccion) return 1;
+        if (re.seleccion == seleccion) return 1;
         else return 0;
     }
 

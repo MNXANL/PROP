@@ -76,29 +76,30 @@ public class Clustering {
      * @param RE lista de respuestas que han dado los encuestados
      * @return
      */
-    private RespCualitativaNoOrdenadaUnica
-    RespCNOU_mode(int cli, int rn,  ArrayList<Integer> assig, ArrayList<RespuestasEncuesta> RE){
+    private RespCualitativaNoOrdenadaUnica RespCNOU_mode(int cli, int rn,  ArrayList<Integer> assig, ArrayList<RespuestasEncuesta> RE){
 
-        int maxValue,maxCount;
-        maxCount=maxValue=-1;
+        int maxValue, maxCount;
+        maxCount = maxValue = -1;
+        String text = "";
         for(int i = 0; i != RE.size(); ++i){
-            if(assig.get(i)==cli){      //solo tratamos los que pertenecen al cluster que nos piden
+            if(assig.get(i) == cli){      //solo tratamos los que pertenecen al cluster que nos piden
                 int count = 0;
                 RespCualitativaNoOrdenadaUnica r = (RespCualitativaNoOrdenadaUnica) RE.get(i).resps.get(rn);
                 for(int j = 0; j!= RE.size(); ++j){
                     if(assig.get(j)==cli){
                         RespCualitativaNoOrdenadaUnica aux = (RespCualitativaNoOrdenadaUnica) RE.get(j).resps.get(rn);
-                        if(r.get()==aux.get()) ++count;
+                        if (r.get()==aux.get()) ++count;
                     }
                 }
                 if(count > maxCount){
                     maxCount = count;
                     maxValue = r.get();
+                    text = r.getTxt();
                 }
 
             }
         }
-        return new RespCualitativaNoOrdenadaUnica(maxValue);
+        return new RespCualitativaNoOrdenadaUnica(maxValue, text);
     }
     /**
      * devuelve la Respuesta que contiene la moda de entre todas las respuestas

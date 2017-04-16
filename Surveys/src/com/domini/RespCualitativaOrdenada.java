@@ -6,6 +6,7 @@ package com.domini;
 public class RespCualitativaOrdenada extends Respuesta {
 
     private int seleccion;
+    private String textoSelec;
     private int noptions;
 
     /**
@@ -13,8 +14,9 @@ public class RespCualitativaOrdenada extends Respuesta {
      * @param ns numero de la seleccion que ha hecho el usuario
      * @param nopts numero de opcciones totales a elegir
      */
-    public RespCualitativaOrdenada(int ns, int nopts){
+    public RespCualitativaOrdenada(int ns, int nopts, String text){
         seleccion = ns;
+        textoSelec = text;
         noptions = nopts;
     }
 
@@ -24,6 +26,7 @@ public class RespCualitativaOrdenada extends Respuesta {
      */
     public RespCualitativaOrdenada(RespCualitativaOrdenada r){
         seleccion = r.seleccion;
+        textoSelec = r.textoSelec;
         noptions = r.noptions;
     }
     /**
@@ -32,6 +35,17 @@ public class RespCualitativaOrdenada extends Respuesta {
      */
     public int get(){
         return seleccion;
+    }
+    /**
+     *
+     * @return
+     */
+    public String getText(){
+        return textoSelec;
+    }
+
+    public int getNoptions(){
+        return noptions;
     }
 
     /**
@@ -55,7 +69,4 @@ public class RespCualitativaOrdenada extends Respuesta {
         }
     }
 
-    public int getNoptions(){
-        return noptions;
-    }
 }

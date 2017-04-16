@@ -51,6 +51,10 @@ public class PregCualitativaNoOrdenadaMultiple extends Pregunta {
         return contenido;
     }
 
+    public String getPreguntaIesima(int i) {
+        return opciones.get(i);
+    }
+
     public void leer () {
         System.out.println(getTitulo());
         for(int i = 0; i < opciones.size(); i++) {
@@ -59,6 +63,10 @@ public class PregCualitativaNoOrdenadaMultiple extends Pregunta {
         System.out.println(maxOpciones);
     }
 
+    /**
+     *
+     * @return
+     */
     public int getMaxOptions() {
         return maxOpciones;
     }

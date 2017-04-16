@@ -47,4 +47,8 @@ public class PregCualitativaOrdenada extends Pregunta {
     public int getMaxOptions() {
         return opciones.size();
     }
+
+    public String getPreguntaIesima(int i) {
+        return opciones.get(i);
+    }
 }

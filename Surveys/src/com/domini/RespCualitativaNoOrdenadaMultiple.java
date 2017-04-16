@@ -7,13 +7,13 @@ import java.util.*;
 
 public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
 
-    private HashSet<Integer> seleccion;
+    private HashMap<Integer, String> seleccion;
 
     /**
      *
      * @param seleccion
      */
-    public RespCualitativaNoOrdenadaMultiple(HashSet<Integer> seleccion){
+    public RespCualitativaNoOrdenadaMultiple(HashMap<Integer, String> seleccion){
         this.seleccion=seleccion;
     }
 
@@ -21,7 +21,7 @@ public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
      *
      * @return
      */
-    public HashSet<Integer> get(){
+    public HashMap<Integer, String> get(){
         return seleccion;
     }
 
@@ -29,8 +29,8 @@ public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
      *
      * @param seleccion
      */
-    public void set(HashSet<Integer> seleccion){
-        this.seleccion=seleccion;
+    public void set(HashMap<Integer, String> seleccion){
+        this.seleccion = seleccion;
     }
 
     /**
@@ -40,13 +40,13 @@ public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
      */
     public double distance (Respuesta x){
         RespCualitativaNoOrdenadaMultiple r = (RespCualitativaNoOrdenadaMultiple) x;
-        HashSet<Integer> intersection = new HashSet<>(seleccion);
-        intersection.retainAll(r.seleccion); //intersection contiene los elementos que tienen ambos sets en comun
-        HashSet<Integer> union = new HashSet<>(seleccion);
-        union.addAll(r.seleccion);
+        HashSet<Integer> intersection = new HashSet<>(seleccion.keySet());
+        intersection.retainAll(r.seleccion.keySet()); //intersection contiene los elementos que tienen ambos sets en comun
+        HashSet<Integer> union = new HashSet<>(seleccion.keySet());
+        union.addAll(r.seleccion.keySet());
 
         double jaccard;
-        if(union.size()==0) jaccard = 1;
+        if (union.size()==0) jaccard = 1;
         else{
             jaccard = (intersection.size()/union.size());
         }

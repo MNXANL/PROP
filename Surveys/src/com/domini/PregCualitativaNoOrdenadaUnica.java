@@ -43,4 +43,8 @@ public class PregCualitativaNoOrdenadaUnica extends Pregunta {
             System.out.println(opciones.get(i));
         }
     }
+
+    public String getPreguntaIesima(int i) {
+        return opciones.get(i);
+    }
 }
