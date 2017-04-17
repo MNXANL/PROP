@@ -65,9 +65,9 @@ public class RespCualitativaOrdenada extends Respuesta {
      */
     public double distance(Respuesta x){
         RespCualitativaOrdenada re = (RespCualitativaOrdenada) x;
-        if(noptions == 1) return 1;
+        if(noptions == 1) return 0;
         else{
-            return Math.abs(re.seleccion-seleccion)/(noptions-1);
+            return ((double) Math.abs(re.seleccion-seleccion))/(noptions-1);
         }
     }
     @Override

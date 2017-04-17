@@ -53,8 +53,8 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
      */
     public double distance(Respuesta x){
         RespCualitativaNoOrdenadaUnica re = (RespCualitativaNoOrdenadaUnica) x;
-        if (re.seleccion == seleccion) return 1;
-        else return 0;
+        if (re.seleccion == seleccion) return 0;
+        else return 1;
     }
     @Override
     public boolean equals(Object o){

@@ -27,13 +27,20 @@ public class Clustering {
     public void run(){
         ArrayList<RespuestasEncuesta> centroids = new ArrayList<>();  //guarda los indices de los centroids iniciales, que seran conjuntos de respuestas de usuarios al azar
         ArrayList<RespuestasEncuesta> RE = E.getCjtRespsEnc();
-
+        if(k>RE.size()){
+            System.out.println("No puede haber más clusters que encuestados");
+            return;
+        }
         Random rand = new Random();
+        HashSet<Integer> used = new HashSet<>();
         while(centroids.size() < k ){        //llenar el set de centroids iniciales con RespuestasEncuesta random de la encuesta
             int i = Math.abs(rand.nextInt()%RE.size());
-            System.out.println("value of i: " + i);
             RespuestasEncuesta aux = RE.get(i);
-            if(!centroids.contains(aux)) centroids.add(aux);
+            if(!used.contains(i)){
+                System.out.println("cluster " + centroids.size() + " "+aux.User);
+                centroids.add(aux);
+                used.add(i);
+            }
         }
         Kmeans(RE,centroids);
     }
@@ -47,49 +54,55 @@ public class Clustering {
             double dist = 2;            //lo pongo a dos para que siempre coja el primero
             for(int j = 0; j!=centroids.size(); ++j){    //asignar cada respuesta a su centroide mas cercano
                 RespuestasEncuesta cl = centroids.get(j);
+                System.out.println(r.User + " distance to cluster " +j+ " is "+ answer_dist(r,cl));
                 if (answer_dist(r,cl) < dist) {
                     assig.set(i, j);
+                    System.out.println(r.User +" assigned to " +j);
                     dist = answer_dist(r,cl);
                 }
             }
+        }
+        for(int i = 0; i!= assig.size();++i){
+            System.out.println(RE.get(i).User+ ": " + assig.get(i));
         }
         //recalcular centroides
 
         boolean change = false;
         for(int i = 0; i!= centroids.size(); ++i){ //por cada centroide de un cluster
-            RespuestasEncuesta newCentroid = new RespuestasEncuesta(E, "Centroid " + i);
-            ArrayList<Respuesta> resps = centroids.get(i).resps;
+            if(assig.contains(i)) {//no podemos recalcular los centroides de clusters que estan vacios
 
-            for(int k = 0; k != resps.size(); ++k){  // por cada Respuesta del conjunto
-                if(resps.get(k) instanceof RespNumerica){
-                    newCentroid.resps.add(Respnum_avg(i,k, assig, RE));
-                }
-                if(resps.get(k) instanceof RespCualitativaNoOrdenadaUnica){
-                    newCentroid.resps.add(RespCNOU_mode(i,k,assig,RE));
-                }
-                if(resps.get(k) instanceof RespCualitativaOrdenada){
-                    newCentroid.resps.add(RespCO_mode(i,k,assig,RE));
-                }
-                if(resps.get(k) instanceof RespCualitativaNoOrdenadaMultiple){
-                    newCentroid.resps.add(RespMUL_maxfreq(i,k,assig,RE));
-                }
+                RespuestasEncuesta newCentroid = new RespuestasEncuesta(E, "Centroid " + i);
+                ArrayList<Respuesta> resps = centroids.get(i).resps;
 
+                for (int k = 0; k != resps.size(); ++k) {  // por cada Respuesta del conjunto
+                    if (resps.get(k) instanceof RespNumerica) {
+                        newCentroid.resps.add(Respnum_avg(i, k, assig, RE));
+                    }
+                    if (resps.get(k) instanceof RespCualitativaNoOrdenadaUnica) {
+                        newCentroid.resps.add(RespCNOU_mode(i, k, assig, RE));
+                    }
+                    if (resps.get(k) instanceof RespCualitativaOrdenada) {
+                        newCentroid.resps.add(RespCO_mode(i, k, assig, RE));
+                    }
+                    if (resps.get(k) instanceof RespCualitativaNoOrdenadaMultiple) {
+                        newCentroid.resps.add(RespMUL_maxfreq(i, k, assig, RE));
+                    }
+
+                }
+                RespuestasEncuesta oldCentroid = centroids.get(i);
+                if (!oldCentroid.equals(newCentroid))
+                    change = true;
+                centroids.set(i, newCentroid);
             }
-            RespuestasEncuesta oldCentroid = centroids.get(i);
-            RespNumerica old = (RespNumerica) oldCentroid.resps.get(0);
-            RespNumerica neu = (RespNumerica) newCentroid.resps.get(0);
-            System.out.println("old: " + old.get());
-            System.out.println("neu: " + neu.get());
-            if(!oldCentroid.equals(newCentroid))
-                change=true;
-            centroids.set(i,newCentroid);
         }
         if(!change){ //el algoritmo ha acabado si los centroides no cambian
             //de momento hacemos un output de assig para probar
             System.out.println("asignacion de clusters");
             show_clusters(RE,assig,centroids.size());
         }
-        else {
+        else{
+            show_clusters(RE,assig,centroids.size());
+            System.out.println("numero de clusters: " + centroids.size());
             System.out.println("Do the K means");
             Kmeans(RE,centroids);
         }
@@ -105,7 +118,7 @@ public class Clustering {
      * @return
      */
     private RespCualitativaNoOrdenadaMultiple
-    RespMUL_maxfreq(int cli, int rn,ArrayList<Integer> assig, ArrayList<RespuestasEncuesta> RE ){
+    RespMUL_maxfreq(int cli, int rn,final ArrayList<Integer> assig,final  ArrayList<RespuestasEncuesta> RE ){
 
         int maxCount;
         maxCount=-1;
@@ -140,7 +153,7 @@ public class Clustering {
      * @param RE lista de respuestas que han dado los encuestados
      * @return
      */
-    private RespCualitativaNoOrdenadaUnica RespCNOU_mode(int cli, int rn,  ArrayList<Integer> assig, ArrayList<RespuestasEncuesta> RE){
+    private RespCualitativaNoOrdenadaUnica RespCNOU_mode(int cli, int rn, final ArrayList<Integer> assig, final ArrayList<RespuestasEncuesta> RE){
 
         int maxValue, maxCount;
         maxCount = maxValue = -1;
@@ -174,8 +187,8 @@ public class Clustering {
      * @return
      */
     private RespCualitativaOrdenada
-    RespCO_mode(int cli, int rn,  ArrayList<Integer> assig, ArrayList<RespuestasEncuesta> RE){
-        RespCualitativaOrdenada x =(RespCualitativaOrdenada) RE.get(0).resps.get(rn);
+    RespCO_mode(int cli, int rn,  final ArrayList<Integer> assig, final ArrayList<RespuestasEncuesta> RE){
+        RespCualitativaOrdenada x =new RespCualitativaOrdenada((RespCualitativaOrdenada) RE.get(0).resps.get(rn));
         int maxValue,maxCount;
         maxCount=maxValue=-1;
         for(int i = 0; i != RE.size(); ++i){
@@ -196,7 +209,7 @@ public class Clustering {
             }
         }
         x.set(maxValue);
-        return new RespCualitativaOrdenada(x);
+        return x;
     }
     /**
      * devuelve la RespNumerica que es la media de todas las respuestas numericas de un grupo de RespuestasEncuesta
@@ -206,7 +219,7 @@ public class Clustering {
      * @param RE lista de respuestas que han dado los encuestados
      * @return
      */
-    private RespNumerica Respnum_avg (int cli, int rn,  ArrayList<Integer> assig, ArrayList<RespuestasEncuesta> RE){
+    private RespNumerica Respnum_avg (int cli, int rn,  final ArrayList<Integer> assig, final ArrayList<RespuestasEncuesta> RE){
         double sum,count;
         sum = count = 0;
         RespNumerica result =new RespNumerica((RespNumerica) RE.get(0).resps.get(rn));
@@ -226,7 +239,7 @@ public class Clustering {
      * @param r2 conjunto de respuestas de un usuario 2
      * @return la distancia entre ambos
      */
-    private double answer_dist(RespuestasEncuesta r1, RespuestasEncuesta r2){
+    private double answer_dist(final RespuestasEncuesta r1,final RespuestasEncuesta r2){
         double acc = 0;
         for (int i = 0; i != r1.resps.size(); ++i){
             if(r2.resps.get(i) instanceof RespVacia && !(r1.resps.get(i) instanceof RespVacia))
