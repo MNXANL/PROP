@@ -63,7 +63,7 @@ public class Clustering {
             }
         }
         for(int i = 0; i!= assig.size();++i){
-            System.out.println(RE.get(i).getUser() + ": " + assig.get(i));
+            System.out.println(RE.get(i).getUser()+ ": " + assig.get(i));
         }
         //recalcular centroides
 
@@ -86,6 +86,10 @@ public class Clustering {
                     }
                     if (resps.get(k) instanceof RespCualitativaNoOrdenadaMultiple) {
                         newCentroid.getResps().add(RespMUL_maxfreq(i, k, assig, RE));
+                    }
+                    if (resps.get(k) instanceof  RespLibre) {
+                        System.out.println("soy resplibre");
+                        newCentroid.getResps().add(RespLib_maxfreq(i, k, assig, RE));
                     }
 
                 }
@@ -110,6 +114,44 @@ public class Clustering {
     }
 
     /**
+     * devuelve la palabra representativa del cluster, la que aparece mas veces en todos los strings
+     * @param cli indice del cluster que estamos tratando
+     * @param rn numero de la respuesta dentro de RespuestasEncuesta
+     * @param assig vector que mapea los elementos de RE a un cluster
+     * @param RE lista de respuestas que han dado los encuestados
+     * @return
+     */
+    private RespLibre
+    RespLib_maxfreq(int cli, int rn,final ArrayList<Integer> assig,final  ArrayList<RespuestasEncuesta> RE ){
+        System.out.println("leleleel");
+        HashMap<String,Integer> occ = new HashMap<>(); //por cada palabra, cuantas veces aparece
+        for(int i = 0; i!= RE.size(); ++i){
+            if(assig.get(i)==cli){
+                RespLibre aux =(RespLibre) RE.get(i).getResps().get(rn);
+                String s = aux.get();
+                String [] words = s.split(" ");
+                for(String w:words){
+                    if(occ.containsKey(w)){
+                        occ.put(w,occ.get(w)+1);
+                    }
+                    else
+                        occ.put(w,1);
+                }
+            }
+        }
+        //buscar el maximo en el mapa
+        int maxCount=-1;
+        String maxValue = new String();
+        for(HashMap.Entry<String,Integer> entry: occ.entrySet()) {
+            if (entry.getValue() > maxCount) {
+                maxValue = entry.getKey();
+                maxCount = entry.getValue();
+            }
+        }
+        System.out.println("Centroide: " + maxValue + " ocurrencias: " + maxCount);
+        return new RespLibre(maxValue);
+    }
+    /**
      * devuelve la Respuesta que contiene la seleccion mas comun
      * @param cli indice del cluster que estamos tratando
      * @param rn numero de la respuesta dentro de RespuestasEncuesta
@@ -120,8 +162,7 @@ public class Clustering {
     private RespCualitativaNoOrdenadaMultiple
     RespMUL_maxfreq(int cli, int rn,final ArrayList<Integer> assig,final  ArrayList<RespuestasEncuesta> RE ){
 
-        int maxCount;
-        maxCount=-1;
+        int maxCount=-1;
         HashMap<Integer,String> maxValue = new HashMap<>();
         for(int i = 0; i != RE.size(); ++i){
             if(assig.get(i)==cli){      //solo tratamos los que pertenecen al cluster que nos piden
@@ -137,7 +178,7 @@ public class Clustering {
                 }
                 if(count > maxCount){
                     maxCount = count;
-                    maxValue = new HashMap<Integer,String>(r.getMap());
+                    maxValue = new HashMap<>(r.getMap());
                 }
 
             }
@@ -245,11 +286,14 @@ public class Clustering {
             if(r2.getResps().get(i) instanceof RespVacia && !(r1.getResps().get(i) instanceof RespVacia))
                 acc += 1;
             else {
+                System.out.println("distance");
                 acc += r1.getResps().get(i).distance(r2.getResps().get(i));
             }
-
+            System.out.println("for");
         }
-        //System.out.println ("Distance: "+acc/r1.resps.size());
+
+        System.out.println("distancia hecha");
+        //System.out.println ("Distance: "+acc/r1.getResps().size());
         return acc/r1.getResps().size();
     }
 

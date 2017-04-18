@@ -1,6 +1,7 @@
 package com.domini;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
@@ -52,6 +53,48 @@ public class Main {
                     //cd.ClusteringKmeans()
 
                     Encuesta E = new Encuesta("test");
+                    PregRespuestaLibre P = new PregRespuestaLibre("¿Cuál es vuestro oficio?");
+                    E.add_question(P);
+
+                    RespuestasEncuesta RE1 = new RespuestasEncuesta(E,"Alejandro");
+                    RespLibre r1 = new RespLibre("Profesor de filosofía");
+                    RE1.addRespuesta(r1);
+                    E.responder(RE1);
+                    RespuestasEncuesta RE2 = new RespuestasEncuesta(E,"Miguel");
+                    RespLibre r2 = new RespLibre("Panadero");
+                    RE2.addRespuesta(r2);
+                    E.responder(RE2);
+                    RespuestasEncuesta RE3 = new RespuestasEncuesta(E,"Aleix");
+                    RespLibre r3 = new RespLibre("Profesor de Bellas Artes");
+                    RE3.addRespuesta(r3);
+                    E.responder(RE3);
+                    /*
+                    ArrayList<String> options = new ArrayList<>();
+                    options.add("azul");options.add("rojo");options.add("amarillo");options.add("verde");
+                    PregCualitativaNoOrdenadaMultiple PM = new PregCualitativaNoOrdenadaMultiple("colores que te molan",options);
+                    E.add_question(PM);
+
+                    RespuestasEncuesta RE1 = new RespuestasEncuesta(E,"Alejandro");
+                    HashMap<Integer,String> sel = new HashMap<>();
+                    sel.put(0,"azul");sel.put(1,"rojo");
+                    RespCualitativaNoOrdenadaMultiple r1 = new RespCualitativaNoOrdenadaMultiple(sel);
+                    RE1.addRespuesta(r1);
+                    E.responder(RE1);
+
+                    RespuestasEncuesta RE2 = new RespuestasEncuesta(E,"Miguel");
+                    HashMap<Integer,String> sel2 = new HashMap<>();
+                    sel2.put(0,"azul");sel2.put(1,"rojo");
+                    RespCualitativaNoOrdenadaMultiple r2 = new RespCualitativaNoOrdenadaMultiple(sel2);
+                    RE2.addRespuesta(r2);
+                    E.responder(RE2);
+
+                    RespuestasEncuesta RE3 = new RespuestasEncuesta(E,"Aleix");
+                    HashMap<Integer,String> sel3 = new HashMap<>();
+                    sel3.put(1,"rojo");sel3.put(2,"amarillo");
+                    RespCualitativaNoOrdenadaMultiple r3 = new RespCualitativaNoOrdenadaMultiple(sel3);
+                    RE3.addRespuesta(r3);
+                    E.responder(RE3);*/
+                    /*
                     ArrayList<String> x = new ArrayList<>();
                     x.add("mucho");x.add("meh");x.add("poco");x.add("nada");
                     PregCualitativaOrdenada P = new PregCualitativaOrdenada("Cuánto te gusta prop?",x);
@@ -85,7 +128,7 @@ public class Main {
                     RE4.addRespuesta(r4);
                     RespNumerica r44 = new RespNumerica(10,0,10);
                     RE4.addRespuesta(r44);
-                    E.responder(RE4);
+                    E.responder(RE4);   */
 
                     System.out.println("Introduce el número de clusters deseados");
                     int k = sc.nextInt();
