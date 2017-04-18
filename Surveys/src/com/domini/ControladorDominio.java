@@ -13,7 +13,6 @@ import java.util.*;
 public class ControladorDominio {
     private Encuesta e;
     private Usuario u;
-    private RespuestasEncuesta re;
 
     ControladorDatos contDatos;
 
@@ -312,7 +311,8 @@ public class ControladorDominio {
 
     public void responderEncuesta(String tituloE) {
         Encuesta e = cjt.getEncuesta(tituloE);
-        ArrayList<Respuesta> resp = e.responderEncuesta();
+
+        ArrayList<Respuesta> resp = e.responderEncuesta(u.getUsername());
         RespuestasEncuesta re = new RespuestasEncuesta(e, u.getUsername(), resp);
 
         e.responder(re);
@@ -324,5 +324,11 @@ public class ControladorDominio {
     public void verRespuestasEncuesta(String tituloE) {
         Encuesta e = cjt.getEncuesta(tituloE);
         e.printarRespuestasDeEncuesta();
+    }
+
+
+    public void borrarRespuestasEncuesta (String titulo) {
+        cjt.borrarRespuesta(titulo, u.getUsername());
+        contDatos.borrarRespuestasEncuesta(titulo + "_" + u.getUsername());
     }
 }

@@ -10,10 +10,27 @@ import java.util.*;
  * Esta clase es el conjunto de respuestas a una encuesta en concreto
  */
 public class RespuestasEncuesta {
-    ArrayList<Respuesta> resps;
-    Encuesta Encuesta_respondida;
-    Date fecha;
-    String User;
+    private ArrayList<Respuesta> resps;
+    private Encuesta Encuesta_respondida;
+    private Date fecha;
+    private String User;
+
+
+    public ArrayList<Respuesta> getResps() {
+        return resps;
+    }
+
+    public Encuesta getEncuesta_respondida() {
+        return Encuesta_respondida;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public String getUser() {
+        return User;
+    }
 
     /**
      * Creadora
@@ -79,6 +96,9 @@ public class RespuestasEncuesta {
                     System.out.println(" - Opción " + j + ": " + col);
                     ++j;
                 }
+            }
+            else { //RespVacia
+                System.out.println("[vacío]");
             }
         }
         System.out.println();
@@ -169,7 +189,11 @@ public class RespuestasEncuesta {
                         re.resps.add(indexPreg, resp);
                         indexPreg++;
                     }
-
+                    else { //line.equals("RV")
+                        RespVacia resp = new RespVacia();
+                        re.resps.add(indexPreg, resp);
+                        indexPreg++;
+                    }
                 }
                 else if (line.equals("Fecha")) {
                     String f = bufferedReader.readLine();
@@ -269,7 +293,7 @@ public class RespuestasEncuesta {
                     bufferedWriter.write(r.get() + "\n");
                     bufferedWriter.write(r.getText() + "\n");
                 }
-                else /*if (resps.get(i) instanceof RespCualitativaNoOrdenadaMultiple)*/ {
+                else if (resps.get(i) instanceof RespCualitativaNoOrdenadaMultiple) {
                     bufferedWriter.write("RCNOM\n"); //Tipo de respuesta
                     RespCualitativaNoOrdenadaMultiple r = (RespCualitativaNoOrdenadaMultiple) resps.get(i);
 
@@ -279,7 +303,9 @@ public class RespuestasEncuesta {
                         bufferedWriter.write(it.getKey() + "\n");   //Number
                         bufferedWriter.write(it.getValue() + "\n"); //String
                     }
-
+                }
+                else { //RespVacia
+                    bufferedWriter.write("RV\n");
                 }
                 bufferedWriter.newLine();
             }

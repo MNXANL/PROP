@@ -2,16 +2,13 @@ Título
 Encuesta
 
 Usuario
-pepe
+Aleix
 
 Fecha
-18/04/2017 12:08:48
+18/04/2017 12:33:08
 
 Respuesta pregunta
-RCO
-1
-5
-Poco
+RV
 
 Respuesta pregunta
 RCNOU
@@ -25,13 +22,10 @@ RCNOM
 Nissan
 
 Respuesta pregunta
-RN
-9.0
-0.0
-10.0
+RV
 
 Respuesta pregunta
 RL
-aaa
+asdsa
 
 Final respuestas encuesta

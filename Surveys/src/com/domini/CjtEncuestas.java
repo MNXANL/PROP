@@ -28,6 +28,10 @@ public class CjtEncuestas {
         encuestas.remove(titulo);
     }
 
+    public void borrarRespuesta(String titulo, String user) {
+        encuestas.get(titulo).borrarRespuesta(user);
+    }
+
     public String[] getTitulosEncuestas (String criterio) {
         if (criterio.equals("A-Z")) {
             return encuestas.keySet().toArray(new String[encuestas.keySet().size()]);

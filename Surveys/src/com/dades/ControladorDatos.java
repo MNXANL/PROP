@@ -124,6 +124,10 @@ public class ControladorDatos {
     public void guardarRespuestasEncuesta (RespuestasEncuesta re) {
         re.exportar(pathResp + "/" + re.getNombreFichero()  +".txt");
     }
+    public void actualizarRespuestasEncuesta (RespuestasEncuesta re) {
+        borrarRespuestasEncuesta(re.toString()); //maybe not like this
+        re.exportar(pathResp + "/" + re.getNombreFichero()  +".txt");
+    }
 
     public void borrarRespuestasEncuesta (String titulo) {
         File f = new File (pathResp + "/" + titulo + ".txt");

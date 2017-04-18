@@ -264,52 +264,77 @@ public class Encuesta {
         return new ArrayList<RespuestasEncuesta>(CjtRespsEnc);
     }
 
-    public ArrayList<Respuesta> responderEncuesta() {
+    public boolean borrarRespuesta(String user) {
+        for (int i = 0; i < getCjtRespsEnc().size(); ++i) {
+            if (CjtRespsEnc.get(i).getUser().equals(user)) {
+                CjtRespsEnc.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public ArrayList<Respuesta> responderEncuesta(String user) {
+        boolean found = false;
+        for (int i = 0; i < getCjtRespsEnc().size() && !found; ++i) {
+            if (CjtRespsEnc.get(i).getUser().equals(user)) { //Ya existe; la vamos a modificar
+                found = true;
+                CjtRespsEnc.get(i).printarRespuestas();
+                CjtRespsEnc.remove(i);
+            }
+        }
+
         ArrayList<Respuesta> ALR = new ArrayList<>();
         for (int i = 0; i < preguntas.size(); i++) {
             System.out.println(preguntas.get(i).getTitulo());
             System.out.println(preguntas.get(i).getContenido());
 
             Scanner sc = new Scanner(System.in);
+            String respu = sc.nextLine();
+            if (respu.equals("")) {
+                Respuesta r = new RespVacia();
+                ALR.add(r);
+            }
+            else {
 
-            if (preguntas.get(i) instanceof PregRespuestaLibre) {
-                String resp = sc.next();
-                Respuesta r = new RespLibre(resp);
-                ALR.add(r);
-            }
-            else if (preguntas.get(i) instanceof PregNumerica) {
-                float resp = sc.nextFloat();
-
-                PregNumerica p = (PregNumerica) preguntas.get(i);
-                Respuesta r = new RespNumerica(resp, p.getValorMin(), p.getValorMax());
-                ALR.add(r);
-            }
-            else if (preguntas.get(i) instanceof PregCualitativaOrdenada) {
-                int resp = sc.nextInt();
-                ++resp;
-                PregCualitativaOrdenada p = (PregCualitativaOrdenada) preguntas.get(i);
-                Respuesta r = new RespCualitativaOrdenada(resp, p.getMaxOptions(), p.getPreguntaIesima(resp));
-                ALR.add(r);
-            }
-
-            else if (preguntas.get(i) instanceof PregCualitativaNoOrdenadaUnica) {
-                int resp = sc.nextInt();
-                PregCualitativaNoOrdenadaUnica p = (PregCualitativaNoOrdenadaUnica) preguntas.get(i);
-                Respuesta r = new RespCualitativaNoOrdenadaUnica(resp, p.getPreguntaIesima(resp));
-                ALR.add(r);
-            }
-            else /*if (preguntas.get(i) instanceof PregCualitativaNoOrdenadaMultiple)*/ {
-                PregCualitativaNoOrdenadaMultiple p = (PregCualitativaNoOrdenadaMultiple) preguntas.get(i);
-                HashMap<Integer, String> CjtResps = new HashMap<>();
-                System.out.println("Escribe el número de opciones: ");
-                int opts = sc.nextInt();
-                for (int j = 0; j < opts; j++) {
-                    int resp = sc.nextInt();
-                    String respTxt = p.getPreguntaIesima(resp);
-                    CjtResps.put(resp, respTxt);
+                if (preguntas.get(i) instanceof PregRespuestaLibre) {
+                    Respuesta r = new RespLibre(respu);
+                    ALR.add(r);
                 }
-                Respuesta r = new RespCualitativaNoOrdenadaMultiple(CjtResps);
-                ALR.add(r);
+                else if (preguntas.get(i) instanceof PregNumerica) {
+                    float resp = Float.parseFloat(respu);
+
+                    PregNumerica p = (PregNumerica) preguntas.get(i);
+                    Respuesta r = new RespNumerica(resp, p.getValorMin(), p.getValorMax());
+                    ALR.add(r);
+                }
+                else if (preguntas.get(i) instanceof PregCualitativaOrdenada) {
+                    int resp = Integer.parseInt(respu);
+                    ++resp;
+                    PregCualitativaOrdenada p = (PregCualitativaOrdenada) preguntas.get(i);
+                    Respuesta r = new RespCualitativaOrdenada(resp, p.getMaxOptions(), p.getPreguntaIesima(resp));
+                    ALR.add(r);
+                }
+
+                else if (preguntas.get(i) instanceof PregCualitativaNoOrdenadaUnica) {
+                    int resp = Integer.parseInt(respu);
+                    PregCualitativaNoOrdenadaUnica p = (PregCualitativaNoOrdenadaUnica) preguntas.get(i);
+                    Respuesta r = new RespCualitativaNoOrdenadaUnica(resp, p.getPreguntaIesima(resp));
+                    ALR.add(r);
+                }
+                else /*if (preguntas.get(i) instanceof PregCualitativaNoOrdenadaMultiple)*/ {
+                    PregCualitativaNoOrdenadaMultiple p = (PregCualitativaNoOrdenadaMultiple) preguntas.get(i);
+                    HashMap<Integer, String> CjtResps = new HashMap<>();
+                    System.out.println("Escribe el número de opciones: ");
+                    int opts = Integer.parseInt(respu);
+                    for (int j = 0; j < opts; j++) {
+                        int resp = sc.nextInt();
+                        String respTxt = p.getPreguntaIesima(resp);
+                        CjtResps.put(resp, respTxt);
+                    }
+                    Respuesta r = new RespCualitativaNoOrdenadaMultiple(CjtResps);
+                    ALR.add(r);
+                }
             }
 
         }

@@ -20,7 +20,9 @@ public class Main {
         System.out.println("   8. Iniciar sesion");
         System.out.println("   9. Cerrar sesion");
         System.out.println("   10. Crear nuevo usuario");
-        System.out.println("   11. Salir del programa");
+        //System.out.println("   11. Modificar respuesta a encuesta");
+        System.out.println("   11. Borrar respuesta a encuesta");
+        System.out.println("   12. Salir del programa");
     }
 
     public static void main(String[] args) {
@@ -147,10 +149,15 @@ public class Main {
                     cd.nuevoUsuario(tU, u, p);
                     break;
                 case 11:
+                    System.out.println("Escribe el nombre de la encuesta respondida que quieres borrar: ");
+                    sc.nextLine();
+                    cd.borrarRespuestasEncuesta(sc.nextLine());
+                    break;
+                case 12:
                     continuar = false;
                     break;
                 default:
-                    System.out.println("Opción invalida. Por favor, vuelve a intentar con un número en el rango [0..11].");
+                    System.out.println("Opción invalida. Por favor, vuelve a intentar con un número en el rango [0..12].");
             }
         }
     }
