@@ -54,16 +54,13 @@ public class Clustering {
             double dist = 2;            //lo pongo a dos para que siempre coja el primero
             for(int j = 0; j!=centroids.size(); ++j){    //asignar cada respuesta a su centroide mas cercano
                 RespuestasEncuesta cl = centroids.get(j);
-                System.out.println(r.getUser() + " distance to cluster " +j+ " is "+ answer_dist(r,cl));
+                //System.out.println(r.getUser() + " distance to cluster " +j+ " is "+ answer_dist(r,cl));
                 if (answer_dist(r,cl) < dist) {
                     assig.set(i, j);
-                    System.out.println(r.getUser() +" assigned to " +j);
+                    //System.out.println(r.getUser() +" assigned to " +j);
                     dist = answer_dist(r,cl);
                 }
             }
-        }
-        for(int i = 0; i!= assig.size();++i){
-            System.out.println(RE.get(i).getUser()+ ": " + assig.get(i));
         }
         //recalcular centroides
 
@@ -88,7 +85,6 @@ public class Clustering {
                         newCentroid.getResps().add(RespMUL_maxfreq(i, k, assig, RE));
                     }
                     if (resps.get(k) instanceof  RespLibre) {
-                        System.out.println("soy resplibre");
                         newCentroid.getResps().add(RespLib_maxfreq(i, k, assig, RE));
                     }
 
@@ -101,12 +97,10 @@ public class Clustering {
         }
         if(!change){ //el algoritmo ha acabado si los centroides no cambian
             //de momento hacemos un output de assig para probar
-            System.out.println("asignacion de clusters");
+            System.out.println("asignacion de clusters: ");
             show_clusters(RE,assig,centroids.size());
         }
         else{
-            show_clusters(RE,assig,centroids.size());
-            System.out.println("numero de clusters: " + centroids.size());
             System.out.println("Do the K means");
             Kmeans(RE,centroids);
         }
@@ -123,7 +117,6 @@ public class Clustering {
      */
     private RespLibre
     RespLib_maxfreq(int cli, int rn,final ArrayList<Integer> assig,final  ArrayList<RespuestasEncuesta> RE ){
-        System.out.println("leleleel");
         HashMap<String,Integer> occ = new HashMap<>(); //por cada palabra, cuantas veces aparece
         for(int i = 0; i!= RE.size(); ++i){
             if(assig.get(i)==cli){
@@ -148,7 +141,6 @@ public class Clustering {
                 maxCount = entry.getValue();
             }
         }
-        System.out.println("Centroide: " + maxValue + " ocurrencias: " + maxCount);
         return new RespLibre(maxValue);
     }
     /**
@@ -194,7 +186,8 @@ public class Clustering {
      * @param RE lista de respuestas que han dado los encuestados
      * @return
      */
-    private RespCualitativaNoOrdenadaUnica RespCNOU_mode(int cli, int rn, final ArrayList<Integer> assig, final ArrayList<RespuestasEncuesta> RE){
+    private RespCualitativaNoOrdenadaUnica
+    RespCNOU_mode(int cli, int rn, final ArrayList<Integer> assig, final ArrayList<RespuestasEncuesta> RE){
 
         int maxValue, maxCount;
         maxCount = maxValue = -1;
@@ -286,13 +279,9 @@ public class Clustering {
             if(r2.getResps().get(i) instanceof RespVacia && !(r1.getResps().get(i) instanceof RespVacia))
                 acc += 1;
             else {
-                System.out.println("distance");
                 acc += r1.getResps().get(i).distance(r2.getResps().get(i));
             }
-            System.out.println("for");
         }
-
-        System.out.println("distancia hecha");
         //System.out.println ("Distance: "+acc/r1.getResps().size());
         return acc/r1.getResps().size();
     }
