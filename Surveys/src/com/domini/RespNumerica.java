@@ -35,6 +35,20 @@ public class RespNumerica extends Respuesta{
     public double get(){
         return resp;
     }
+    /**
+     *
+     * @return
+     */
+    public double getMin(){
+        return min;
+    }
+    /**
+     *
+     * @return
+     */
+    public double getMax(){
+        return max;
+    }
 
     /**
      *

@@ -171,7 +171,7 @@ public class Clustering {
                 if(count > maxCount){
                     maxCount = count;
                     maxValue = r.get();
-                    text = r.getTxt();
+                    text = r.getText();
                 }
 
             }

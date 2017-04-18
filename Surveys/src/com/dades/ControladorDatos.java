@@ -96,6 +96,14 @@ public class ControladorDatos {
             enc.put(e.getTitulo(), e);
         }
 
+        //cargamos respuestas encuestas
+        folder = new File(pathResp);
+        listOfFiles = folder.listFiles();
+
+        for (int i = 0; i < listOfFiles.length; i++) {
+            RespuestasEncuesta re = RespuestasEncuesta.importar(listOfFiles[i].getAbsolutePath());
+            enc.get(re.getEncuesta().getTitulo()).responder(re);
+        }
         return enc;
     }
 

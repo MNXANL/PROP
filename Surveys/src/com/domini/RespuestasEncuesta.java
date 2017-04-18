@@ -64,7 +64,7 @@ public class RespuestasEncuesta {
             }
             else if (resps.get(i) instanceof RespCualitativaNoOrdenadaUnica) {
                 RespCualitativaNoOrdenadaUnica rc = (RespCualitativaNoOrdenadaUnica) resps.get(i);
-                System.out.println( rc.getTxt() );
+                System.out.println( rc.getText() );
             }
 
             // !acabame!
@@ -93,8 +93,9 @@ public class RespuestasEncuesta {
      * @param path El lugar donde encontrar la encuesta
      */
     public static RespuestasEncuesta importar (String path){
-
-        /*RespuestasEncuesta re = new RespuestasEncuesta(Encuesta_respondida, User);
+        Encuesta e = new Encuesta();
+        Usuario u = new Usuario(" ");
+        RespuestasEncuesta re = new RespuestasEncuesta(e, u.getUsername());
 
         // This will reference one line at a time
         String line = null;
@@ -110,79 +111,77 @@ public class RespuestasEncuesta {
             while((line = bufferedReader.readLine()) != null) {
                 if (line.equals("Título")) {
                     line = bufferedReader.readLine();
-                    if (line != null) e.title = line;
+                    if (line != null) e.setTitulo(line);
                 }
-                else if (line.equals("Pregunta")) {
-                    //leer tipo de pregunta
+                else if (line.equals("Respuesta pregunta")) {
+                    //leer tipo de reespuesta
                     line = bufferedReader.readLine();
-                    if (line.equals("PCO")) {
-                        //leer titulo de la pregunta
-                        String tituloP = bufferedReader.readLine();
-                        //leer todas las opciones de respuesta
-                        ArrayList<String> opciones = new ArrayList<>();
-                        int index = 0;
-                        while (!(line = bufferedReader.readLine()).equals("")){
-                            opciones.add(index,line);
-                            index++;
-                        }
-                        PregCualitativaOrdenada preg = new PregCualitativaOrdenada(tituloP,opciones);
-                        e.preguntas.add(indexPreg,preg);
+                    if (line.equals("RCO")) {
+                        //leer indice escogido y Num opciones
+                        int idx = Integer.parseInt(bufferedReader.readLine());
+                        int nOpts = Integer.parseInt(bufferedReader.readLine());
+                        //leer texto opcion de respuesta
+                        String text = bufferedReader.readLine();
+
+                        RespCualitativaOrdenada resp = new RespCualitativaOrdenada(idx, nOpts, text);
+                        re.resps.add(indexPreg, resp);
                         indexPreg++;
                     }
-                    else if (line.equals("PCNOU")) {
-                        //leer titulo de la pregunta
-                        String tituloP = bufferedReader.readLine();
-                        //leer todas las opciones de respuesta
-                        ArrayList<String> opciones = new ArrayList<>();
-                        int index = 0;
-                        while (!(line = bufferedReader.readLine()).equals("")){
-                            opciones.add(index,line);
-                            index++;
-                        }
-                        PregCualitativaNoOrdenadaUnica preg = new PregCualitativaNoOrdenadaUnica(tituloP,opciones);
-                        e.preguntas.add(indexPreg,preg);
-                        indexPreg++;
-                    }
-                    else if (line.equals("PCNOM")) {
-                        //leer titulo de la pregunta
-                        String tituloP = bufferedReader.readLine();
-                        //leer max opciones
-                        int max = Integer.parseInt(bufferedReader.readLine());
-                        //leer todas las opciones de respuesta
-                        ArrayList<String> opciones = new ArrayList<>();
-                        int index = 0;
-                        while (!(line = bufferedReader.readLine()).equals("")){
-                            opciones.add(index,line);
-                            index++;
-                        }
-                        PregCualitativaNoOrdenadaMultiple preg = new PregCualitativaNoOrdenadaMultiple(tituloP,opciones,max);
-                        e.preguntas.add(indexPreg,preg);
-                        indexPreg++;
-                    }
-                    else if (line.equals("PN")) {
-                        //leer titulo de la pregunta
-                        String tituloP = bufferedReader.readLine();
+                    else if (line.equals("RN")) {
+                        //leer valor, minimo y maximo de la respuesta
+                        float val = Float.parseFloat(bufferedReader.readLine());
                         float min = Float.parseFloat(bufferedReader.readLine());
                         float max = Float.parseFloat(bufferedReader.readLine());
                         //comprobar que min < max
-                        PregNumerica preg = new PregNumerica(tituloP,min,max);
-                        e.preguntas.add(indexPreg,preg);
+                        RespNumerica resp = new RespNumerica(val, min, max);
+                        re.resps.add(indexPreg, resp);
                         indexPreg++;
                     }
-                    else if (line.equals("PRL")) {
-                        String tituloP = bufferedReader.readLine();
-                        PregRespuestaLibre preg = new PregRespuestaLibre(tituloP);
-                        e.preguntas.add(indexPreg,preg);
+                    else if (line.equals("RL")) {
+                        String answer = bufferedReader.readLine();
+                        RespLibre resp = new RespLibre(answer);
+                        re.resps.add(indexPreg, resp);
                         indexPreg++;
                     }
+                    else if (line.equals("RCNOU")) {
+                        //leer indice escogido
+                        int idx = Integer.parseInt(bufferedReader.readLine());
+                        //leer texto opcion de respuesta
+                        String text = bufferedReader.readLine();
+
+                        RespCualitativaNoOrdenadaUnica resp = new RespCualitativaNoOrdenadaUnica(idx, text);
+                        re.resps.add(indexPreg, resp);
+                        indexPreg++;
+                    }
+                    else if (line.equals("RCNOM")) {
+                        //leer max opciones
+                        int max = Integer.parseInt(bufferedReader.readLine());
+
+                        //leer todas las respuestas elegidas
+                        HashMap<Integer, String> res = new HashMap<>();
+                        for (int i = 0; i != max; ++i) {
+                            int opt = Integer.parseInt(bufferedReader.readLine());
+                            String text = bufferedReader.readLine();
+                            res.put(opt, text);
+                        }
+
+                        RespCualitativaNoOrdenadaMultiple resp = new RespCualitativaNoOrdenadaMultiple(res);
+                        re.resps.add(indexPreg, resp);
+                        indexPreg++;
+                    }
+
                 }
                 else if (line.equals("Fecha")) {
                     String f = bufferedReader.readLine();
                     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-                    e.fecha = sdf.parse(f);
+                    re.fecha = sdf.parse(f);
                 }
-                else if (line.equals("Final encuesta")) {
-
+                else if (line.equals("Usuario")) {
+                    String f = bufferedReader.readLine();
+                    re.User = f;
+                }
+                else if (line.equals("Final respuestas encuesta")) {
+                    //End
                 }
 
                 //System.out.println(line);
@@ -204,8 +203,8 @@ public class RespuestasEncuesta {
             e1.printStackTrace();
         }
 
-        return re;*/
-        return null;
+        //DEBUG: re.printarRespuestas();
+        return re;
     }
 
     /**
@@ -251,12 +250,16 @@ public class RespuestasEncuesta {
                     bufferedWriter.write("RN\n"); //Tipo de respuesta
                     RespNumerica r = (RespNumerica) resps.get(i);
                     bufferedWriter.write(r.get() + "\n");
+                    bufferedWriter.write(r.getMin() + "\n");
+                    bufferedWriter.write(r.getMax() + "\n");
 
                 }
                 else if (resps.get(i) instanceof RespCualitativaOrdenada) {
                     bufferedWriter.write("RCO\n"); //Tipo de respuesta
                     RespCualitativaOrdenada r = (RespCualitativaOrdenada) resps.get(i);
                     bufferedWriter.write(r.get() + "\n");
+                    bufferedWriter.write(r.getNoptions() + "\n");
+                    bufferedWriter.write(r.getText() + "\n");
 
                 }
 
@@ -264,16 +267,17 @@ public class RespuestasEncuesta {
                     bufferedWriter.write("RCNOU\n"); //Tipo de respuesta
                     RespCualitativaNoOrdenadaUnica r = (RespCualitativaNoOrdenadaUnica) resps.get(i);
                     bufferedWriter.write(r.get() + "\n");
-
+                    bufferedWriter.write(r.getText() + "\n");
                 }
                 else /*if (resps.get(i) instanceof RespCualitativaNoOrdenadaMultiple)*/ {
                     bufferedWriter.write("RCNOM\n"); //Tipo de respuesta
                     RespCualitativaNoOrdenadaMultiple r = (RespCualitativaNoOrdenadaMultiple) resps.get(i);
 
-                    Set<Integer> set = r.get();
+                    Map<Integer, String> set = r.getMap();
                     bufferedWriter.write(set.size() + "\n");
-                    for (Integer result: set) {
-                        bufferedWriter.write(result + "\n");
+                    for (Map.Entry<Integer, String> it : set.entrySet()) {
+                        bufferedWriter.write(it.getKey() + "\n");   //Number
+                        bufferedWriter.write(it.getValue() + "\n"); //String
                     }
 
                 }
@@ -299,5 +303,12 @@ public class RespuestasEncuesta {
     @Override
     public int hashCode(){
         return Objects.hash(Encuesta_respondida.getFecha(),User);
+    }
+
+    /**
+     *
+     */
+    public Encuesta getEncuesta() {
+        return Encuesta_respondida;
     }
 }

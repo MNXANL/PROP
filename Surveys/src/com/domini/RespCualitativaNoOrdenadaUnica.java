@@ -33,7 +33,7 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
      *
      * @return
      */
-    public String getTxt(){
+    public String getText(){
         return textoSelec;
     }
 
