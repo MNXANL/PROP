@@ -35,19 +35,64 @@ public class DriverPregCualitativaOrdenada {
     }
 
     public static void main (String [] args) {
+        System.out.println("Elige la opción a probar:");
+        System.out.println("1. Crear pregunta cualitativa ordenada con un título y opciones y mostrar el contenido de la pregunta");
+        System.out.println("2. Crear pregunta cualitativa ordenada con un título y opciones y mostrar el numero de opciones disponibles");
+        System.out.println("3. Crear una pregunta cualitativa ordenada y mostrar el tipo de pregunta creada");
+        System.out.println("4. Crear pregunta cualitativa ordenada con un título y opciones y mostrar la opción i-esima");
+        System.out.println("5. Fin del test");
+
         Scanner sc = new Scanner(System.in);
-        String titulo = sc.nextLine();
-        ArrayList<String> opciones = new ArrayList<>();
-        String o = new String();
-        while (!(o = sc.nextLine()).equals("")) {
-            opciones.add(o);
+
+        boolean continuar = true;
+        while (continuar) {
+            int o = sc.nextInt();
+            sc.nextLine();
+            switch (o) {
+                case 1:
+                    String titulo = sc.nextLine();
+                    ArrayList<String> opciones = new ArrayList<>();
+                    String op = new String();
+                    while (!(op = sc.nextLine()).equals("")) {
+                        opciones.add(op);
+                    }
+                    testPregCualitativaOrdenada(titulo,opciones);
+                    testLeer();
+                    break;
+                case 2:
+                    titulo = sc.nextLine();
+                    opciones = new ArrayList<>();
+                    while (!(op = sc.nextLine()).equals("")) {
+                        opciones.add(op);
+                    }
+                    testPregCualitativaOrdenada(titulo,opciones);
+                    testGetMaxOptions();
+                    break;
+                case 3:
+                    titulo = sc.nextLine();
+                    opciones = new ArrayList<>();
+                    while (!(op = sc.nextLine()).equals("")) {
+                        opciones.add(op);
+                    }
+                    testPregCualitativaOrdenada(titulo,opciones);
+                    testTipo();
+                    break;
+                case 4:
+                    titulo = sc.nextLine();
+                    opciones = new ArrayList<>();
+                    while (!(op = sc.nextLine()).equals("")) {
+                        opciones.add(op);
+                    }
+                    testPregCualitativaOrdenada(titulo,opciones);
+                    testgetPreguntaIesima(sc.nextInt());
+                    sc.nextLine();
+                    break;
+                case 5:
+                    continuar = false;
+                    break;
+                default:
+                    System.out.println("Opción no válida");
+            }
         }
-        testPregCualitativaOrdenada(titulo,opciones);
-        testTipo();
-        testGetContenido();
-        testLeer();
-        testGetMaxOptions();
-        int i = sc.nextInt();
-        testgetPreguntaIesima(i);
     }
 }
