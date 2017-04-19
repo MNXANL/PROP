@@ -1,0 +1,51 @@
+Prueba 1
+Descripción: Test de la clase RespCualitativaNoOrdenadaUnica, creación de respuesta y retorno de texto vacio
+Objetivos: Creación de una respuesta con numero elegido y texto vacío; devolución del texto
+Entrada:
+1
+10
+
+Salida:
+
+Resultado de la prueba: OK
+
+Prueba 2
+Descripción: Test de la clase RespCualitativaNoOrdenadaUnica, creación de respuesta y retorno de texto
+Objetivos: Creación de una respuesta con numero elegido y texto asociado; devolución del texto
+Entrada:
+2
+10
+Normal
+Salida:
+Normal
+
+Resultado de la prueba: OK
+
+Prueba 3
+Descripción: Test de la clase RespCualitativaNoOrdenadaUnica, creación de respuesta y modificacion de los atributos de la respuesta
+Objetivos: Creación de una respuesta con numero elegido y texto asociado; devolución del numero modificado
+Entrada:
+3
+10
+Normal
+9
+Modified
+
+Salida:
+9
+
+Resultado de la prueba: OK
+
+Prueba 4
+Descripción: Test de la clase RespCualitativaNoOrdenadaUnica, creación de respuesta y modificacion de los atributos de la respuesta
+Objetivos: Creación de una respuesta con numero elegido y texto asociado; devolución del texto modificado
+Entrada:
+4
+10
+Normal
+9
+Modified
+
+Salida:
+Modified
+Resultado de la prueba: OK
