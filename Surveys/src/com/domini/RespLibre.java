@@ -20,6 +20,10 @@ public class RespLibre extends Respuesta{
         resp=s;
     }
 
+    public RespLibre(RespLibre rl){
+        resp = new String(rl.get());
+    }
+
     /**
      *
      * @return
@@ -139,9 +143,13 @@ public class RespLibre extends Respuesta{
         }
 
         //poner las palabras no funcionales en el string de salida
-        for(String w : words){
-            if(!funcWords.contains(w))
-                result += w + " ";
+        for(int i = 0; i!= words.length; ++i){
+            String w = words[i];
+            if(!funcWords.contains(w)) {
+                result += w;
+                if(i!= words.length-1)
+                    result+=" ";
+            }
         }
         return result;
     }
