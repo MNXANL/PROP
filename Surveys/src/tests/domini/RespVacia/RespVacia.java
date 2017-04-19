@@ -1,4 +1,7 @@
-package com.domini;
+package tests.domini.RespVacia;
+
+import com.domini.RespNumerica;
+import com.domini.Respuesta;
 
 /**
  * clase que sirve para representar una respuesta que no ha sido contestada
@@ -18,7 +21,7 @@ public class RespVacia extends Respuesta{
     }
     @Override
     public boolean equals(Object o){
-        if(!(o instanceof RespVacia))
+        if(!(o instanceof RespNumerica))
             return false;
         return true;
     }

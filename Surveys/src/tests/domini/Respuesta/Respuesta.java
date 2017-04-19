@@ -1,4 +1,4 @@
-package com.domini;
+package tests.domini.Respuesta;
 
 /**
  * Clase que representa  una respuesta a una pregunta de una encuesta
