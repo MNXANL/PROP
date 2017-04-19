@@ -1,0 +1,8 @@
+Prueba 1
+Descripción: Test de la clase Administrador, creación de administradores
+Objetivos: Creación de un administrador con un nombre de usuario, y mostrar el nombre
+Entrada:
+Aleix
+Salida:
+Aleix
+Resultado de la prueba: OK

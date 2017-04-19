@@ -1,0 +1,109 @@
+Prueba 1
+Descripción: Test de la clase PregCualitativaNoOrdenadaMultiple, creación de preguntas cualitativas no ordenadas múltiples sin límite de respuestas
+Objetivos: Creación de una pregunta cualitativa no ordenada múltiple con título y diversas opciones, y mostrar el contenido
+Entrada:
+1
+Título
+Opel
+Renault
+Hyundai
+Nissan
+
+Salida:
+Título
+Opel
+Renault
+Hyundai
+Nissan
+4
+Resultado de la prueba: OK
+
+Prueba 2
+Descripción: Test de la clase PregCualitativaNoOrdenadaMultiple, creación de preguntas cualitativas no ordenadas múltiples con límite de respuestas
+Objetivos: Creación de una pregunta cualitativa no ordenada múltiple con título, diversas opciones y límite de respuestas, y mostrar el contenido
+Entrada:
+2
+Título
+Opel
+Renault
+Hyundai
+Nissan
+
+2
+Salida:
+Título
+Opel
+Renault
+Hyundai
+Nissan
+2
+Resultado de la prueba: OK
+
+Prueba 3
+Descripción: Test de la clase PregCualitativaNoOrdenadaMultiple, creación de preguntas cualitativas no ordenadas múltiples con límite de respuestas y consulta del límite de respuestas
+Objetivos: Creación de una pregunta cualitativa no ordenada múltiple con título, diversas opciones y límite de respuestas, y mostrar el límite de respuestas
+Entrada:
+3
+Título
+Opel
+Renault
+Hyundai
+Nissan
+
+2
+Salida:
+2
+Resultado de la prueba: OK
+
+Prueba 4
+Descripción: Test de la clase PregCualitativaNoOrdenadaMultiple, creación de preguntas cualitativas no ordenadas múltiples con límite de respuestas y comprobación de tipo
+Objetivos: Creación de una pregunta cualitativa no ordenada múltiple con título, diversas opciones y límite de respuestas, y comprobar que el tipo es correcto
+Entrada:
+4
+Título
+Opel
+Renault
+Hyundai
+Nissan
+
+2
+Salida:
+PCNOM
+Resultado de la prueba: OK
+
+Prueba 5
+Descripción: Test de la clase PregCualitativaNoOrdenadaMultiple, creación de preguntas cualitativas no ordenadas múltiples y consulta de la opción i-esima
+Objetivos: Creación de una pregunta cualitativa no ordenada múltiple con título, diversas opciones y límite de respuestas y mostrar la opción i-esima
+Entrada:
+5
+Título
+Opel
+Renault
+Hyundai
+Nissan
+
+2
+1
+Salida:
+Renault
+Resultado de la prueba: OK
+
+Prueba 6
+Descripción: Test de la clase PregCualitativaNoOrdenadaMultiple, creación de preguntas cualitativas no ordenadas múltiples y mostrar solo opciones
+Objetivos: Creación de una pregunta cualitativa no ordenada múltiple con título, diversas opciones y límite de respuestas, y mostrar las opciones de la pregunta sin el título
+Entrada:
+6
+Título
+Opel
+Renault
+Hyundai
+Nissan
+
+2
+Salida:
+2
+0) Opel
+1) Renault
+2) Hyundai
+3) Nissan
+Resultado de la prueba: OK

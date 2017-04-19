@@ -7,7 +7,6 @@ import java.util.Scanner;
  * Created by aleixballetbo on 16/4/17.
  */
 public class DriverPregCualitativaOrdenada {
-
     private static PregCualitativaOrdenada pco;
 
     public static void testPregCualitativaOrdenada (String titulo, ArrayList<String> opciones) {
@@ -40,7 +39,8 @@ public class DriverPregCualitativaOrdenada {
         System.out.println("2. Crear pregunta cualitativa ordenada con un título y opciones y mostrar el numero de opciones disponibles");
         System.out.println("3. Crear una pregunta cualitativa ordenada y mostrar el tipo de pregunta creada");
         System.out.println("4. Crear pregunta cualitativa ordenada con un título y opciones y mostrar la opción i-esima");
-        System.out.println("5. Fin del test");
+        System.out.println("5. Crear pregunta cualitativa ordenada con un título y opciones y mostrar el contenido sin el título");
+        System.out.println("6. Fin del test");
 
         Scanner sc = new Scanner(System.in);
 
@@ -88,6 +88,15 @@ public class DriverPregCualitativaOrdenada {
                     sc.nextLine();
                     break;
                 case 5:
+                    titulo = sc.nextLine();
+                    opciones = new ArrayList<>();
+                    while (!(op = sc.nextLine()).equals("")) {
+                        opciones.add(op);
+                    }
+                    testPregCualitativaOrdenada(titulo,opciones);
+                    testGetContenido();
+                    break;
+                case 6:
                     continuar = false;
                     break;
                 default:

@@ -18,7 +18,7 @@ public class PregCualitativaNoOrdenadaMultiple extends Pregunta {
     public PregCualitativaNoOrdenadaMultiple(String titulo, ArrayList<String> opciones) {
         super(titulo);
         this.opciones = opciones;
-        maxOpciones = 2; //Si fuese igual a 1, no formaría parte de esta clase!
+        maxOpciones = opciones.size(); //Si fuese igual a 1, no formaría parte de esta clase!
     }
 
     /**
