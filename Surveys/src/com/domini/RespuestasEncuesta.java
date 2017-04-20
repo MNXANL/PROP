@@ -84,7 +84,6 @@ public class RespuestasEncuesta {
                 System.out.println( rc.getText() );
             }
 
-            // !acabame!
             else if (resps.get(i) instanceof RespCualitativaNoOrdenadaMultiple) {
                 RespCualitativaNoOrdenadaMultiple rc = (RespCualitativaNoOrdenadaMultiple) resps.get(i);
                 Collection<String> colResps = rc.getMap().values();
