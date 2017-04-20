@@ -137,11 +137,6 @@ class UTestClustering {
 
         RespCualitativaOrdenada result = cl.RespCO_mode(cluster_index, resp_index, assig, REs);
         assertEquals(1, result.get());
-        if (result.get() == 1)
-            System.out.println("Test finalizado con éxito");
-        else
-            System.out.println("Test fallido: el centroide debería contener la seleccion 1" +
-                    " Pero contiene: `" + result.get() + "`");
     }
 
     @org.junit.jupiter.api.Test
