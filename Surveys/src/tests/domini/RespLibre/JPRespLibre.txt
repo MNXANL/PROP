@@ -1,39 +1,39 @@
 Prueba 1
-Descripción: Test de la clase Pregunta, creación de pregunta
-Objetivos: Creación de una pregunta sin título y comprobar que el título queda vacío
+Descripción: Test de la clase RespLibre, creación de respuesta y retorno de texto vacio
+Objetivos: Creación de una respuesta con texto vacío; devolución del texto
 Entrada:
 1
+
 Salida:
 
 Resultado de la prueba: OK
 
 Prueba 2
-Descripción: Test de la clase Pregunta, creación de pregunta
-Objetivos: Creación de una pregunta con título y comprobar que el título que se muestra es el correcto
+Descripción: Test de la clase RespLibre, creación de respuesta y retorno de texto
+Objetivos: Creación de una respuesta con texto asociado; devolución del texto
 Entrada:
 2
 Título
-Salida:
-Título
+Salida: Título
+
 Resultado de la prueba: OK
 
 Prueba 3
-Descripción: Test de la clase Pregunta, modificar título
-Objetivos: Creación de una pregunta sin título, cambiar el título y comprobar que efectivamente se ha cambiado
+Descripción: Test de la clase RespLibre, creación de respuesta y retorno de texto modificado
+Objetivos: Creación de una respuesta con texto asociado; devolución del texto modificado
 Entrada:
 3
+Título
 Nuevo título
-Salida:
-Nuevo título
+Salida: Nuevo título
+
 Resultado de la prueba: OK
 
 Prueba 4
-Descripción: Test de la clase Pregunta, modificar título
-Objetivos: Creación de una pregunta con título, cambiar el título y comprobar que efectivamente se ha cambiado
+Descripción: Test de la clase RespLibre, creación de respuesta y modificacion de numero elegido
+Objetivos: Creación de una respuesta con texto asociado; devolución de igualdad respecto a sí mismo
 Entrada:
 4
 Título
-Nuevo título
-Salida:
-Nuevo título
+Salida: true
 Resultado de la prueba: OK

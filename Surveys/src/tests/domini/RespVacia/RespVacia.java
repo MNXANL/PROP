@@ -21,7 +21,7 @@ public class RespVacia extends Respuesta{
     }
     @Override
     public boolean equals(Object o){
-        if(!(o instanceof RespNumerica))
+        if(!(o instanceof RespVacia))
             return false;
         return true;
     }
