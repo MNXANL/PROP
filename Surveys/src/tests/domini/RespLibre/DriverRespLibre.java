@@ -43,10 +43,10 @@ public class DriverRespLibre {
 
         System.out.println("1. Crear respuesta sin título");
         System.out.println("2. Crear respuesta con un título");
-        System.out.println("3. Comprobar que es igual a otra respuesta libre");
-        System.out.println("3. Comprobar que es igual a otra respuesta NO libre");
-        System.out.println("4. Retornar codigo de Hash");
-        System.out.println("5. Salir del test");
+        System.out.println("3. Comprobar que es igual a otra respuesta libre (previamente definida)");
+        System.out.println("4. Comprobar que es igual a otra respuesta NO libre");
+        System.out.println("5. Retornar codigo de Hash");
+        System.out.println("6. Salir del test");
 
         boolean inTest = true;
         while (inTest) {
@@ -59,10 +59,15 @@ public class DriverRespLibre {
                     testConstructor(txt);
                     break;
                 case 3:
+                    txt = sc.next();
+                    RespLibre rl = new RespLibre(txt);
+                    boolean b = testEquals(rl);
+                    if (b) System.out.println("TRUE");
+                    else   System.out.println("FALSE");
                    break;
                 case 4:
-                    Respuesta s4 = new RespVacia();
-                    boolean b = testEquals(s4);
+                    Respuesta rv = new RespVacia();
+                    b = testEquals(rv);
                     if (b) System.out.println("TRUE");
                     else   System.out.println("FALSE");
                     break;

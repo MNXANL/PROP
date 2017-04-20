@@ -18,7 +18,7 @@ public class RespVaciaTest {
     @Test
     public void distance () {
         RespVacia r = new RespVacia();
-        assertEquals(0, r.distance(r));
+        assertEquals(0, r.distance(r), 0.1);
     }
 
     @Test

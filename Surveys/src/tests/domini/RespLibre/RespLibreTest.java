@@ -2,6 +2,7 @@ package tests.domini.RespLibre;
 
 import org.junit.Test;
 import tests.domini.RespLibre.RespLibre;
+import tests.domini.RespLibre.RespLibre;
 
 import static org.junit.Assert.assertEquals;
 
@@ -18,16 +19,16 @@ public class RespLibreTest {
 
     @Test
     public void getTitulo () {
-        RespLibre r = new RespLibre("Título");
+        RespLibre r = new RespLibre("Titulo");
         String t = r.get();
-        assertEquals("Título", t);
+        assertEquals("Titulo ", t);
     }
 
     @Test
     public void setTitulo () {
-        RespLibre r = new RespLibre("Título");
-        r.set("Nuevo título");
-        assertEquals("Nuevo título", r.get());
+        RespLibre r = new RespLibre("Titulo");
+        r.set("Nuevo titulo");
+        assertEquals("Nuevo titulo ", r.get());
     }
 
     @Test

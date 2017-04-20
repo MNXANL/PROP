@@ -1,4 +1,6 @@
-package com.domini;
+package tests.domini.RespNumerica;
+
+import com.domini.Respuesta;
 
 import java.util.Objects;
 

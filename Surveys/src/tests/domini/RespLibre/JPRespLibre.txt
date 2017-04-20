@@ -14,7 +14,7 @@ Objetivos: Creación de una respuesta con texto asociado; devolución del texto
 Entrada:
 2
 Título
-Salida: Título
+Salida: Titulo
 
 Resultado de la prueba: OK
 
@@ -23,9 +23,9 @@ Descripción: Test de la clase RespLibre, creación de respuesta y retorno de te
 Objetivos: Creación de una respuesta con texto asociado; devolución del texto modificado
 Entrada:
 3
-Título
-Nuevo título
-Salida: Nuevo título
+Titulo
+Nuevo titulo
+Salida: Nuevo titulo
 
 Resultado de la prueba: OK
 
@@ -34,6 +34,6 @@ Descripción: Test de la clase RespLibre, creación de respuesta y modificacion 
 Objetivos: Creación de una respuesta con texto asociado; devolución de igualdad respecto a sí mismo
 Entrada:
 4
-Título
+Titulo
 Salida: true
 Resultado de la prueba: OK
