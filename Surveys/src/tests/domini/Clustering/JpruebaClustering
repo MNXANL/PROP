@@ -1,4 +1,5 @@
-Descripción:
+Descripción: Una pregunta representativa de cada tipo
+
 El objetivo de esta prueba es tener una respuesta de cada tipo
 para realizar el k-means, las demas funciones se prueban con instancias
 "hardcodeadas" porque en el momento de escribir estos tests no funciona bien

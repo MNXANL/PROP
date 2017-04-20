@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6261926-014f-4e17-847e-29161c7babb7" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/domini/Clustering/Test.txt" afterPath="$PROJECT_DIR$/src/tests/domini/Clustering/JpruebaClustering" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/domini/Clustering/DriverClustering.java" afterPath="$PROJECT_DIR$/src/tests/domini/Clustering/DriverClustering.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/domini/Clustering/JpruebaClustering" afterPath="$PROJECT_DIR$/src/tests/domini/Clustering/JpruebaClustering" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -176,8 +175,8 @@
       <file leaf-file-name="JpruebaClustering" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/JpruebaClustering">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="53" lean-forward="false" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -996,7 +995,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492689145834</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="clustering++tests">
+      <created>1492692753162</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1492692753162</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1596,8 +1602,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/JpruebaClustering">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="53" lean-forward="false" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
           <folding />
         </state>
       </provider>
