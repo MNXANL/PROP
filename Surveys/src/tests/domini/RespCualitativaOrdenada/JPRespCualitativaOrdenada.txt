@@ -1,0 +1,48 @@
+Prueba 1
+Descripción: Test de la clase RespCualitativaOrdenada, creación de respuesta y retorno de texto vacio
+Objetivos: Creación de una respuesta con numero elegido, numero de opciones y texto vacío; devolución del texto
+Entrada:
+1
+10
+20
+
+Salida:
+
+Resultado de la prueba: OK
+
+Prueba 2
+Descripción: Test de la clase RespCualitativaOrdenada, creación de respuesta y retorno de texto
+Objetivos: Creación de una respuesta con numero elegido, numero de opciones y texto asociado; devolución del texto
+Entrada:
+2
+10
+20
+Normal
+Salida: Normal
+
+Resultado de la prueba: OK
+
+Prueba 3
+Descripción: Test de la clase RespCualitativaOrdenada, creación de respuesta y retorno de numero
+Objetivos: Creación de una respuesta con numero elegido, numero de opciones y texto asociado; devolución del numero elegido
+Entrada:
+3
+Titulo
+
+Salida: Titulo
+
+Resultado de la prueba: OK
+
+Prueba 4
+Descripción: Test de la clase RespCualitativaOrdenada, creación de respuesta y modificacion de numero elegido
+Objetivos: Creación de una respuesta con numero elegido, numero de opciones y texto asociado; devolución del numero de opción elegido modificado
+Entrada:
+4
+10
+20
+Normal
+12
+
+Salida:
+12
+Resultado de la prueba: OK
