@@ -280,8 +280,8 @@ public class DriverClustering {
     }
 
     public static void main (String [] args){
-        System.out.println("Importando encuesta `Test` para realizar pruebas");
-        Encuesta E = Encuesta.importar("src/tests/domini/Clustering/Test.txt");
+        System.out.println("Importando encuesta `JpruebaClustering` para realizar pruebas");
+        Encuesta E = Encuesta.importar("src/tests/domini/Clustering/JpruebaClustering");
         cl = new Clustering(E,2);
         Scanner sc = new Scanner(System.in);
         System.out.println("Opciones:\n\t 1 - Probar el constructor \n" +

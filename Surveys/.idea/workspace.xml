@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6261926-014f-4e17-847e-29161c7babb7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tests/domini/Clustering/ClusteringUTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Clustering/UTestClustering.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/domini/Clustering/Test.txt" afterPath="$PROJECT_DIR$/src/tests/domini/Clustering/JpruebaClustering" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/domini/Clustering/DriverClustering.java" afterPath="$PROJECT_DIR$/src/tests/domini/Clustering/DriverClustering.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,9 +23,11 @@
       <file leaf-file-name="Clustering.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2415">
+            <state relative-caret-position="2344">
               <caret line="163" column="42" lean-forward="false" selection-start-line="163" selection-start-column="42" selection-end-line="163" selection-end-column="42" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClusteringUTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClusteringUTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/ClusteringUTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="164" column="6" lean-forward="false" selection-start-line="164" selection-start-column="6" selection-end-line="164" selection-end-column="6" />
+            <state relative-caret-position="180">
+              <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,8 +59,8 @@
       <file leaf-file-name="DriverClustering.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/DriverClustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="278" column="30" lean-forward="false" selection-start-line="278" selection-start-column="30" selection-end-line="278" selection-end-column="30" />
+            <state relative-caret-position="18">
+              <caret line="282" column="67" lean-forward="false" selection-start-line="282" selection-start-column="67" selection-end-line="282" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -171,11 +173,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/Test.txt">
+      <file leaf-file-name="JpruebaClustering" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/JpruebaClustering">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+            <state relative-caret-position="135">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JPEncuesta.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tests/domini/Encuesta/JPEncuesta.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1110">
+              <caret line="74" column="8" lean-forward="true" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -238,11 +250,12 @@
         <option value="$PROJECT_DIR$/src/com/domini/Clustering.java" />
         <option value="$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Encuesta.txt" />
         <option value="$PROJECT_DIR$/src/tests/domini/Clustering/Clustering.java" />
-        <option value="$PROJECT_DIR$/src/tests/domini/Clustering/DriverClustering.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/Clustering/Test.txt" />
         <option value="$PROJECT_DIR$/src/tests/domini/Encuesta/DriverEncuesta.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/Clustering/UTestClustering.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/Clustering/ClusteringUTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/domini/Clustering/DriverClustering.java" />
+        <option value="$PROJECT_DIR$/src/tests/domini/Clustering/JpruebaClustering" />
       </list>
     </option>
   </component>
@@ -317,7 +330,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="RespNumerica" />
+              <option name="myItemId" value="Encuesta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -358,54 +371,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Surveys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Surveys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dades" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Surveys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Surveys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dades" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DirectorioEncuestas" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -562,7 +527,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ClusteringUTest">
+  <component name="RunManager" selected="Application.DriverClustering">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="com.domini.Main" />
@@ -786,9 +751,9 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ClusteringUTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UTestClustering" />
-        <item index="2" class="java.lang.String" itemvalue="Application.DriverClustering" />
+        <item index="0" class="java.lang.String" itemvalue="Application.DriverClustering" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ClusteringUTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UTestClustering" />
         <item index="3" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -1024,7 +989,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492688110815</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="clustering++tests">
+      <created>1492689145834</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1492689145834</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1110,17 +1082,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/domini/RespLibre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-          <folding>
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1440,14 +1401,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2415">
-          <caret line="163" column="42" lean-forward="false" selection-start-line="163" selection-start-column="42" selection-end-line="163" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="795">
@@ -1476,14 +1429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-482">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/Test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -1568,16 +1513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/DriverClustering.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="278" column="30" lean-forward="false" selection-start-line="278" selection-start-column="30" selection-end-line="278" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/domini/Encuesta/DriverEncuesta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1623,11 +1558,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/ClusteringUTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="164" column="6" lean-forward="false" selection-start-line="164" selection-start-column="6" selection-end-line="164" selection-end-column="6" />
+        <state relative-caret-position="180">
+          <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2344">
+          <caret line="163" column="42" lean-forward="false" selection-start-line="163" selection-start-column="42" selection-end-line="163" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/domini/Encuesta/JPEncuesta.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="74" column="8" lean-forward="true" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/DriverClustering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="282" column="67" lean-forward="false" selection-start-line="282" selection-start-column="67" selection-end-line="282" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/JpruebaClustering">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
