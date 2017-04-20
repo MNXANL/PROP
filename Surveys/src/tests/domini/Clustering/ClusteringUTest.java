@@ -1,21 +1,22 @@
 package tests.domini.Clustering;
 
 import com.domini.*;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.*;
+
 /**
- * Unit Test de Clustering
+ * Created by adb on 4/20/17.
  */
-class UTestClustering {
+public class ClusteringUTest {
     private static Clustering cl;
 
-    @org.junit.jupiter.api.Test
-    void respLib_maxfreq() {
+    @Test
+    public void respLib_maxfreq() throws Exception {
         System.out.println("Esta función genera un centroide a partir de un conjunto de respuestas libres");
         int cluster_index = 0;
         int resp_index = 0;    //la encuesta ficticia solo tendra 1 pregunta
@@ -40,8 +41,8 @@ class UTestClustering {
         assertEquals("Profesor", result.get());
     }
 
-    @org.junit.jupiter.api.Test
-    void respMUL_maxfreq() {
+    @Test
+    public void respMUL_maxfreq() throws Exception {
         System.out.println("Esta función genera un centroide a partir de un conjunto de respuestas de multiple elección");
         int cluster_index = 0;
         int resp_index = 0;    //la encuesta ficticia solo tendra 1 pregunta
@@ -90,8 +91,9 @@ class UTestClustering {
         assertEquals(sol, result.get());
     }
 
-    @org.junit.jupiter.api.Test
-    void respCNOU_mode() {
+    @Test
+    public void respCNOU_mode() throws Exception {
+
         System.out.println("Esta función genera un centroide a partir de un conjunto de respuestas Cualitativas no Ordenadas");
         int cluster_index = 0;
         int resp_index = 0;    //la encuesta ficticia solo tendra 1 pregunta
@@ -115,8 +117,8 @@ class UTestClustering {
         assertEquals(0, result.get());
     }
 
-    @org.junit.jupiter.api.Test
-    void respCO_mode() {
+    @Test
+    public void respCO_mode() throws Exception {
         System.out.println("Esta función genera un centroide a partir de un conjunto de respuestas Cualitativas Ordenadas");
         int cluster_index = 0;
         int resp_index = 0;    //la encuesta ficticia solo tendra 1 pregunta
@@ -139,8 +141,8 @@ class UTestClustering {
         assertEquals(1, result.get());
     }
 
-    @org.junit.jupiter.api.Test
-    void respnum_avg() {
+    @Test
+    public void respnum_avg() throws Exception {
         System.out.println("Esta función genera un centroide a partir de un conjunto de respuestas numéricas");
         int cluster_index = 0;
         int resp_index = 0;    //la encuesta ficticia solo tendra 1 pregunta
@@ -160,7 +162,7 @@ class UTestClustering {
         }
 
         RespNumerica result = cl.Respnum_avg(cluster_index, resp_index, assig, REs);
-        assertEquals(20, result.get());
+        assertEquals(20, result.get(),0.0001);
     }
 
 }
