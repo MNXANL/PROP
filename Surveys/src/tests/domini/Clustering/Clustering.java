@@ -38,7 +38,6 @@ public class Clustering {
             int i = Math.abs(rand.nextInt()%RE.size());
             RespuestasEncuesta aux = RE.get(i);
             if(!used.contains(i)){
-                System.out.println("cluster " + centroids.size() + " "+aux.getUser());
                 centroids.add(aux);
                 used.add(i);
             }
@@ -102,7 +101,6 @@ public class Clustering {
             show_clusters(RE,assig,centroids.size());
         }
         else{
-            System.out.println("Do the K means");
             Kmeans(RE,centroids);
         }
 

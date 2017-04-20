@@ -165,7 +165,7 @@ public class Clustering {
                         RespCualitativaNoOrdenadaMultiple aux = (RespCualitativaNoOrdenadaMultiple) RE.get(j).getResps().get(rn);
                         HashSet<Integer> intersection = new HashSet<>(r.get());
                         intersection.retainAll(aux.get());
-                        if(intersection.size() == r.get().size()) ++count;
+                        if(intersection.size() == aux.get().size()) ++count;
                     }
                 }
                 if(count > maxCount){

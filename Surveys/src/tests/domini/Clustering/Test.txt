@@ -6,7 +6,7 @@ Fecha
 
 Pregunta
 PCO
-Título de la pregunta 1
+Test 1
 Muy poco
 Poco
 Regular
@@ -15,7 +15,7 @@ Mucho
 
 Pregunta
 PCNOU
-Título de la pregunta 2
+Test 2
 Rojo
 Azul
 Amarillo
@@ -23,7 +23,7 @@ Verde
 
 Pregunta
 PCNOM
-Título de la pregunta 3
+Test 3
 2
 Opel
 Renault
@@ -32,12 +32,12 @@ Nissan
 
 Pregunta
 PN
-Título de la pregunta 4
+Test 4
 0
 10
 
 Pregunta
 PRL
-Título de la pregunta 5
+Test 5
 
 Final encuesta
