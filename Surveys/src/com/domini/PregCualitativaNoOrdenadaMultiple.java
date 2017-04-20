@@ -20,7 +20,7 @@ public class PregCualitativaNoOrdenadaMultiple extends Pregunta {
     }
 
     /**
-     * Constructora de la clase, con
+     * Constructora de la clase, con mínimo 2 opciones
      * @param opciones El conjunto de opciones de la encuesta
      * @param maxOpciones . Su valor debería ser 1 < maxOpciones <= opciones.size()
      */
@@ -64,8 +64,8 @@ public class PregCualitativaNoOrdenadaMultiple extends Pregunta {
     }
 
     /**
-     *
-     * @return
+     * Obtener max. opciones
+     * @return maximo numero de opciones
      */
     public int getMaxOptions() {
         return maxOpciones;

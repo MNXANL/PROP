@@ -12,40 +12,43 @@ import java.util.Scanner;
 public class DriverEncuesta {
     private static Encuesta e = null;
 
-    public static void testSetTitulo (String titulo) {
+    private static void testSetTitulo(String titulo) {
         e.setTitulo(titulo);
     }
 
-    public static String testGetTitulo () {
+    private static String testGetTitulo() {
         return e.getTitulo();
     }
 
-    public static Date testGetFecha () {
+    private static Date testGetFecha() {
         return e.getFecha();
     }
 
-    public static Pregunta testGetPregunta (int i) {
+    private static Pregunta testGetPregunta(int i) {
         return e.getPregunta(i);
     }
 
-    public static void testAddQuestion(Pregunta p) {
+    private static void testAddQuestion(Pregunta p) {
         e.add_question(p);
     }
 
-    public static Encuesta testImportar (String path) {
+    private static Encuesta testImportar(String path) {
         return Encuesta.importar(path);
     }
 
-    public static void testExportar (String path) {
+    private static void testExportar(String path) {
         e.exportar(path);
     }
 
-    public static void testResponderEncuesta() {
+    private static void testResponderEncuesta() {
         ArrayList <Respuesta> resp = e.responderEncuesta("test");
-        tests.domini.RespuestasEncuesta.RespuestasEncuesta re =
-                new tests.domini.RespuestasEncuesta.RespuestasEncuesta(e, "test", resp);
-        RespuestasEncuesta res = new RespuestasEncuesta (null, null, null);
-        e.responder(res);
+        com.domini.Encuesta e_aux = new com.domini.Encuesta(e.getTitulo(), e.getFecha(), e.getPreguntas(), e.getCjtRespsEnc());
+        RespuestasEncuesta re =  new RespuestasEncuesta(e_aux, "test", resp);
+        e.responder(re);
+    }
+
+    private static void testVerRespuestasEncuesta() {
+        e.printarRespuestasDeEncuesta();
     }
 
     public static void main (String [] args) {
@@ -58,8 +61,9 @@ public class DriverEncuesta {
         System.out.println("6. Añadir una pregunta a una encuesta previamente creada con la opción 1 y mostrar la encuesta entera por pantalla");
         System.out.println("7. Importar una encuesta existente");
         System.out.println("8. Exportar una encuesta existente");
-        System.out.println("9. Responder una encuesta del sistema");
-        System.out.println("10. Fin del test");
+        System.out.println("9. Responder una encuesta creada con la opción 1");
+        System.out.println("10. Ver las respuestas hechas a una encuesta");
+        System.out.println("11. Fin del test");
 
         Scanner sc = new Scanner(System.in);
 
@@ -270,6 +274,17 @@ public class DriverEncuesta {
                     }
                     break;
                 case 10:
+                    if (e != null) {
+                        testVerRespuestasEncuesta();
+                    }
+                    else if (e != null && e.getCjtRespsEnc().isEmpty()) {
+                        System.out.println("Introduce tus respuestas primero con la opción 9");
+                    }
+                    else {
+                        System.out.println("Introduce una encuesta primero con la opción 1");
+                    }
+                    break;
+                case 11:
                     continuar = false;
                     break;
                 default:

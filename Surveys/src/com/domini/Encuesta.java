@@ -15,12 +15,18 @@ public class Encuesta {
     private ArrayList<Pregunta> preguntas;
     private ArrayList<RespuestasEncuesta> CjtRespsEnc; //cada elemento de CjtRespsEnc es un conjunto de respuestas de un usuario a E
 
+
+    /**
+     * Creadora
+     */
     public Encuesta(){
         fecha = new Date();
         preguntas = new ArrayList<>();
         CjtRespsEnc = new ArrayList<RespuestasEncuesta>();
     };
+
     /**
+     * Creadora
      * @param title el titulo que identifica la encuesta
      */
     public Encuesta(String title){
@@ -30,6 +36,19 @@ public class Encuesta {
         CjtRespsEnc = new ArrayList<RespuestasEncuesta>();
     }
 
+    /**
+     * creador de copia
+     * @param title el titulo que identifica la encuesta
+     * @param fecha la fecha de la encuesta
+     * @param ps las preguntas de la encuesta
+     * @param rs el conjunto de respuestas de la encuesta
+     */
+    public Encuesta (String title, Date fecha, ArrayList<Pregunta> ps, ArrayList<RespuestasEncuesta> rs){
+        this.title = title;
+        this.fecha = fecha;
+        preguntas = ps;
+        CjtRespsEnc = rs;
+    }
     /**
      * creador de copia
      * @param E encuesta a copiar
@@ -51,6 +70,10 @@ public class Encuesta {
 
     public Pregunta getPregunta (int index) {
         return preguntas.get(index);
+    }
+
+    public ArrayList<Pregunta> getPreguntas () {
+        return preguntas;
     }
 
     public Date getFecha () {
