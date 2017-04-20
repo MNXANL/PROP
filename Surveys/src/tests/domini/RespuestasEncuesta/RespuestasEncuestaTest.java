@@ -1,5 +1,6 @@
 package tests.domini.RespuestasEncuesta;
 
+import com.domini.Encuesta;
 import org.junit.Test;
 import tests.domini.RespNumerica.RespNumerica;
 
@@ -11,29 +12,33 @@ import static org.junit.Assert.assertEquals;
 public class RespuestasEncuestaTest {
     @Test
     public void getRespEnc () {
-        RespuestasEncuesta re = new RespuestasEncuesta();
-        double t = r.get();
-        assertEquals(0, t, 0.1);
+        Encuesta e = new Encuesta("Enc");
+        RespuestasEncuesta re = new RespuestasEncuesta(e, "user");
+        int t = re.getResps().size();
+        assertEquals(0, t);
     }
 
     @Test
     public void getRespEnc2 () {
-        RespNumerica r = new RespNumerica(0, -1000, 1000);
-        double t = r.getMin();
-        assertEquals(-1000, t, 0.1);
+        Encuesta e = new Encuesta("Enc");
+        RespuestasEncuesta re = new RespuestasEncuesta(e, "user");
+        Encuesta e1 = re.getEncuesta();
+        boolean b = e.equals(e1);
+        assertEquals(true, b);
     }
 
     @Test
     public void getRespEnc3 () {
-        RespNumerica r = new RespNumerica(0, -1000, 1000);
-        double t = r.getMax();
-        assertEquals(1000, r.getMax(), 0.1);
+        Encuesta e = new Encuesta("Enc");
+        RespuestasEncuesta re = new RespuestasEncuesta(e, "user");
+        String t = re.getNombreFichero();
+        assertEquals("Enc_user", t);
     }
 
     @Test
     public void setRespEnc () {
-        RespNumerica r = new RespNumerica(0, -1000, 1000);
-        r.set(555);
-        assertEquals(555, r.get(), 0.1);
+        Encuesta e = new Encuesta("Enc");
+        RespuestasEncuesta re = new RespuestasEncuesta(e, "user");
+        assertEquals("user", re.getUser());
     }
 }

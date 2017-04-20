@@ -1,97 +1,108 @@
 package tests.domini.RespuestasEncuesta;
 
+import com.domini.*;
+import tests.domini.RespuestasEncuesta.RespuestasEncuesta;
 
-import com.domini.RespNumerica;
-import com.domini.Respuesta;
-
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
+import static org.junit.Assert.assertEquals;
+
 /**
- * Driver de RespVacia
+ * Created by aleixballetbo on 16/4/17.
  */
 public class DriverRespuestasEncuesta {
-    private RespNumerica r;
 
-    public void testConstructor(double x, double min, double max) {
-        r = new RespNumerica(x, min, max);
-        System.out.println("Respuesta: " + r.get());
+    private static RespuestasEncuesta re;
+
+    public static void testRespuestasEncuesta (Encuesta e, String s) {
+        re = new RespuestasEncuesta(e, s);
+    }
+    public static void testRespuestasEncuesta2 (Encuesta e, String s) {
+        ArrayList<Respuesta> alr = new ArrayList<>();
+        alr.add(new RespVacia());
+        re = new RespuestasEncuesta(e, s, alr);
     }
 
-    public void testMin(double x, double min, double max) {
-        r = new RespNumerica(x, min, max);
-        System.out.println("Respuesta: " + r.getMin());
+    public static void testGet () {
+        ArrayList<Integer> i = new ArrayList<Integer> (re.hashCode());
+        System.out.println(i.get(0));
     }
 
-    public void testMax(double x, double min, double max) {
-        r = new RespNumerica(x, min, max);
-        System.out.println("Respuesta: " + r.getMax());
-    }
-
-    public void testSet(double s) {
-        r = new RespNumerica(0, Double.MIN_VALUE, Double.MAX_VALUE);
-        r.set(s);
-        System.out.println("Respuesta: " + r.get());
-    }
-
-    public double testDistance(Respuesta rr) {
-        return r.distance(rr);
+    public static void testGetFichero () {
+        System.out.println(re.getNombreFichero());
     }
 
 
-    public boolean testEquals(Object o) {
-        return r.equals(o);
+    public static void testGetHash () {
+        System.out.println(re.hashCode());
+    }
+
+    public static void testPrint () {
+        ArrayList<Respuesta> alr = new ArrayList<>();
+        alr.add(new RespLibre("a"));
+        alr.add(new RespNumerica(10, 0, 100));
+        alr.add(new RespLibre("b"));
+        alr.add(new RespCualitativaNoOrdenadaUnica(2,  "Azul"));
+        alr.add(new RespCualitativaOrdenada(8, 10, "Notable"));
+        re = new RespuestasEncuesta(re.getEncuesta(), re.getUser(), alr);
+        re.printarRespuestas();
     }
 
 
-    public int testhashCode() {
-        return r.hashCode();
-    }
+    public static void main (String [] args) {
+        System.out.println("Elige la opción a probar:");
+        System.out.println("1. Crear respuestas de encuesta con un solo titulo de encuesta y mostrar su hashcode");
+        System.out.println("2. Crear respuestas de encuesta con un solo titulo de encuesta y añadir respuesta vacia");
+        System.out.println("3. Crear respuestas de encuesta prefedinida y printar respuestas");
+        System.out.println("4. Crear respuestas de encuesta con un solo titulo de encuesta y ver el fichero que se generaria al exportar");
+        System.out.println("5. Fin del test");
 
-    public void main () {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("1. Crear respuesta sin valores");
-        System.out.println("2. Crear respuesta con un valor, maximo y minimo");
-        System.out.println("3. Crear respuesta y devolver valor minimo");
-        System.out.println("4. Crear respuesta y devolver valor maximo");
-        System.out.println("5. Retornar codigo de Hash");
-        System.out.println("6. Salir del test");
-
-        boolean inTest = true;
-        while (inTest) {
-            switch (sc.nextInt()) {
+        boolean continuar = true;
+        while (continuar) {
+            int o = sc.nextInt();
+            sc.nextLine();
+            switch (o) {
                 case 1:
-                    testConstructor(0, Double.MIN_VALUE, Double.MAX_VALUE);
+                    System.out.println("Titulo encuesta:");
+                    String titulo = sc.next();
+                    Encuesta e = new Encuesta(titulo);
+                    testRespuestasEncuesta(e, "test");
+
+                    testGetHash();
                     break;
                 case 2:
-                    double x = sc.nextDouble();
-                    double min = sc.nextDouble();
-                    double max = sc.nextDouble();
-                    testConstructor(x, min, max);
+                    System.out.println("Titulo encuesta:");
+                    titulo = sc.next();
+                    e = new Encuesta(titulo);
+                    testRespuestasEncuesta(e, "test");
+
+                    testGet();
                     break;
                 case 3:
-                    x = sc.nextDouble();
-                    min = sc.nextDouble();
-                    max = sc.nextDouble();
-                    testMax(x, min, max);
-                   break;
+                    System.out.println("Titulo encuesta:");
+                    titulo = sc.next();
+                    e = new Encuesta("titulo");
+                    testRespuestasEncuesta(e, "test");
+                    testPrint();
+                    break;
                 case 4:
-                    x = sc.nextDouble();
-                    min = sc.nextDouble();
-                    max = sc.nextDouble();
-                    testMin(x, min, max);
+                    System.out.println("Titulo encuesta:");
+                    titulo = sc.next();
+                    e = new Encuesta("titulo");
+                    testRespuestasEncuesta(e, "test");
+
+                    testGetFichero();
                     break;
                 case 5:
-                    System.out.println("HashCode = " + testhashCode());
-                    break;
-                case 6:
-                    inTest = false;
+                    continuar = false;
                     break;
                 default:
-                    System.out.println("Prueba con un numero entre [1..6]");
-                    break;
+                    System.out.println("Opción no válida");
             }
         }
-
     }
 }
