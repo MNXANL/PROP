@@ -40,6 +40,14 @@ public class DriverEncuesta {
         e.exportar(path);
     }
 
+    public static void testResponderEncuesta() {
+        ArrayList <Respuesta> resp = e.responderEncuesta("test");
+        tests.domini.RespuestasEncuesta.RespuestasEncuesta re =
+                new tests.domini.RespuestasEncuesta.RespuestasEncuesta(e, "test", resp);
+        RespuestasEncuesta res = new RespuestasEncuesta (null, null, null);
+        e.responder(res);
+    }
+
     public static void main (String [] args) {
         System.out.println("Elige la opción a probar");
         System.out.println("1. Crear encuesta de forma interactiva y mostrarla por pantalla");
@@ -49,6 +57,8 @@ public class DriverEncuesta {
         System.out.println("5. Obtener la pregunta i-esima de la encuesta creada con la opción 1");
         System.out.println("6. Añadir una pregunta a una encuesta previamente creada con la opción 1 y mostrar la encuesta entera por pantalla");
         System.out.println("7. Importar una encuesta existente");
+        System.out.println("8. Exportar una encuesta existente");
+        System.out.println("9. Responder una encuesta del sistema");
         System.out.println("10. Fin del test");
 
         Scanner sc = new Scanner(System.in);
@@ -246,6 +256,14 @@ public class DriverEncuesta {
                     if (e != null) {
                         System.out.println("Introduce el path");
                         testExportar(sc.nextLine());
+                    }
+                    else {
+                        System.out.println("Introduce una encuesta primero con la opción 1");
+                    }
+                    break;
+                case 9:
+                    if (e != null) {
+                        testResponderEncuesta();
                     }
                     else {
                         System.out.println("Introduce una encuesta primero con la opción 1");
