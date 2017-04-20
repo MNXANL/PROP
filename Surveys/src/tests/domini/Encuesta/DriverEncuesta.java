@@ -62,7 +62,7 @@ public class DriverEncuesta {
         System.out.println("7. Importar una encuesta existente");
         System.out.println("8. Exportar una encuesta existente");
         System.out.println("9. Responder una encuesta creada con la opción 1");
-        System.out.println("10. Ver las respuestas hechas a una encuesta");
+        System.out.println("10. Ver las respuestas hechas a una encuesta existente");
         System.out.println("11. Fin del test");
 
         Scanner sc = new Scanner(System.in);
