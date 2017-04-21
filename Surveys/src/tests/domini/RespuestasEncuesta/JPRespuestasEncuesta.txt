@@ -5,7 +5,8 @@ Entrada:
 1
 Enc
 User
-Salida: 0
+Salida:
+0
 
 Resultado de la prueba: OK
 
@@ -16,7 +17,8 @@ Entrada:
 2
 Enc
 User
-Salida: true
+Salida:
+true
 
 Resultado de la prueba: OK
 
@@ -27,7 +29,8 @@ Entrada:
 3
 Enc
 User
-Salida: 1000
+Salida:
+1000
 
 Resultado de la prueba: OK
 
@@ -38,5 +41,6 @@ Entrada:
 4
 Enc
 User
-Salida: User
+Salida:
+User
 Resultado de la prueba: OK

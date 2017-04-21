@@ -34,21 +34,21 @@ public class DriverRespNumerica {
         System.out.println("Respuesta: " + r.get());
     }
 
-    public double testDistance(Respuesta rr) {
-        return r.distance(rr);
+    public static void testDistance(Respuesta rr) {
+        System.out.println(r.distance(rr));
     }
 
 
-    public boolean testEquals(Object o) {
-        return r.equals(o);
+    public static void testEquals(Object o) {
+        System.out.println(r.equals(o));
     }
 
 
-    public static int testhashCode() {
-        return r.hashCode();
+    public static void testhashCode() {
+        System.out.println(r.hashCode());
     }
 
-    public static void main (String [] args) {
+    public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("1. Crear respuesta sin valores");
@@ -83,7 +83,7 @@ public class DriverRespNumerica {
                     testMin(x, min, max);
                     break;
                 case 5:
-                    System.out.println("HashCode = " + testhashCode());
+                    testhashCode();
                     break;
                 case 6:
                     inTest = false;

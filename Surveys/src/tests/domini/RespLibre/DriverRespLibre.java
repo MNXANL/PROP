@@ -16,29 +16,29 @@ public class DriverRespLibre {
 
     public static void testConstructor(String s) {
         r = new RespLibre(s);
-        System.out.println("Respuesta: " + r.get());
+        System.out.println(r.get());
     }
 
     public static void testSet(String s) {
         r.set(s);
-        System.out.println("Respuesta: " + r.get());
+        System.out.println(r.get());
     }
 
-    public static double testDistance(Respuesta rr) {
-        return r.distance(r);
-    }
-
-
-    public static boolean testEquals(Object o) {
-        return r.equals(o);
+    public static void  testDistance(Respuesta rr) {
+        System.out.println(r.distance(rr));
     }
 
 
-    public static int testhashCode() {
-        return r.hashCode();
+    public static void testEquals(Object o){
+        System.out.println(r.equals(o));
     }
 
-    public static void main (String [] args) {
+
+    public static void testhashCode() {
+        System.out.println(r.hashCode());
+    }
+
+    public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("1. Crear respuesta sin título");
@@ -61,18 +61,13 @@ public class DriverRespLibre {
                 case 3:
                     txt = sc.next();
                     RespLibre rl = new RespLibre(txt);
-                    boolean b = testEquals(rl);
-                    if (b) System.out.println("TRUE");
-                    else   System.out.println("FALSE");
+                    testEquals(rl);
                    break;
                 case 4:
                     Respuesta rv = new RespVacia();
-                    b = testEquals(rv);
-                    if (b) System.out.println("TRUE");
-                    else   System.out.println("FALSE");
+                    testEquals(rv);
                     break;
-                case 5:
-                    System.out.println("HashCode = " + testhashCode());
+                case 5:testhashCode();
                     break;
                 case 6:
                     inTest = false;

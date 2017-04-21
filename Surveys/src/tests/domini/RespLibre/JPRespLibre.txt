@@ -3,7 +3,6 @@ Descripción: Test de la clase RespLibre, creación de respuesta y retorno de te
 Objetivos: Creación de una respuesta con texto vacío; devolución del texto
 Entrada:
 1
-
 Salida:
 
 Resultado de la prueba: OK
@@ -19,21 +18,22 @@ Salida: Titulo
 Resultado de la prueba: OK
 
 Prueba 3
-Descripción: Test de la clase RespLibre, creación de respuesta y retorno de texto modificado
-Objetivos: Creación de una respuesta con texto asociado; devolución del texto modificado
+Descripción: Test de la clase RespLibre, creación de respuesta y comparacion a si misma
+Objetivos: Creación de una respuesta con texto asociado; devolución de igualdad respecto a sí mismo
 Entrada:
 3
 Titulo
-Nuevo titulo
-Salida: Nuevo titulo
+Salida:
+true
 
 Resultado de la prueba: OK
 
 Prueba 4
-Descripción: Test de la clase RespLibre, creación de respuesta y modificacion de numero elegido
-Objetivos: Creación de una respuesta con texto asociado; devolución de igualdad respecto a sí mismo
+Descripción: Test de la clase RespLibre, creación de respuesta y comparacion a resp. vacia
+Objetivos: Creación de una respuesta con texto asociado; devolución de igualdad respecto a una respuesta vacia
 Entrada:
 4
-Titulo
-Salida: true
+Salida:
+false
+
 Resultado de la prueba: OK

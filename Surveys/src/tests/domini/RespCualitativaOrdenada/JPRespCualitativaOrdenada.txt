@@ -1,35 +1,39 @@
 Prueba 1
-Descripción: Test de la clase RespCualitativaOrdenada, creación de respuesta y retorno de texto vacio
-Objetivos: Creación de una respuesta con numero elegido, numero de opciones y texto vacío; devolución del texto
+Descripción: Test de la clase RespCualitativaOrdenada, creación de respuesta y retorno de texto
+Objetivos: Creación de una respuesta con numero elegido, numero de opciones y texto; devolución del texto de respuesta
 Entrada:
 1
 10
 20
-
+Normal
 Salida:
+Normal
 
 Resultado de la prueba: OK
 
 Prueba 2
-Descripción: Test de la clase RespCualitativaOrdenada, creación de respuesta y retorno de texto
-Objetivos: Creación de una respuesta con numero elegido, numero de opciones y texto asociado; devolución del texto
+Descripción: Test de la clase RespCualitativaOrdenada, creación de respuesta y retorno de numero
+Objetivos: Creación de una respuesta con numero elegido, numero de opciones y texto asociado; devolución del numero elegido
 Entrada:
 2
 10
 20
 Normal
-Salida: Normal
+Salida:
+10
 
 Resultado de la prueba: OK
 
 Prueba 3
-Descripción: Test de la clase RespCualitativaOrdenada, creación de respuesta y retorno de numero
-Objetivos: Creación de una respuesta con numero elegido, numero de opciones y texto asociado; devolución del numero elegido
+Descripción: Test de la clase RespCualitativaOrdenada, creación de respuesta y retorno de numero de respuestas
+Objetivos: Creación de una respuesta con numero elegido, numero de opciones y texto asociado; devolución del numero de respuestas
 Entrada:
 3
-Titulo
-
-Salida: Titulo
+10
+20
+Normal
+Salida:
+20
 
 Resultado de la prueba: OK
 
@@ -41,8 +45,18 @@ Entrada:
 10
 20
 Normal
-12
-
 Salida:
-12
+0
+Resultado de la prueba: OK
+
+Prueba 5
+Descripción: Test de la clase RespCualitativaOrdenada, creación de respuesta y modificacion de numero elegido
+Objetivos: Creación de una respuesta con numero elegido, numero de opciones y texto asociado; devolución del numero de opción elegido modificado
+Entrada:
+5
+10
+20
+Normal
+Salida:
+true
 Resultado de la prueba: OK

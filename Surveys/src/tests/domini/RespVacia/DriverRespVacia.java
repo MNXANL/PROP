@@ -12,24 +12,28 @@ import java.util.Scanner;
 public class DriverRespVacia {
     private static RespVacia r;
 
-    public static double testDistance(Respuesta rr) {
-        return r.distance(rr);
+
+    public static void testDistance(Respuesta s) {
+        r = new RespVacia();
+        System.out.println(r.distance(s));
     }
 
 
-    public static boolean testEquals(Object o) {
-        return r.equals(o);
+    public static void testEquals(Object o) {
+        r = new RespVacia();
+        System.out.println(r.equals(o));
     }
 
 
-    public static int testhashCode() {
-        return r.hashCode();
+    public static void testhashCode() {
+
+        System.out.println(r.hashCode());
     }
 
-    public static void main (String [] args) {
+    public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Creando respuesta vacía: ");
-        r = new RespVacia();
+        RespVacia r = new RespVacia();
         System.out.println("Creada.");
 
         System.out.println("1. Ver distancia de respuesta vacía respecto respuesta vacía");
@@ -43,25 +47,23 @@ public class DriverRespVacia {
         while (inTest) {
             switch (sc.nextInt()) {
                 case 1:
-                    Respuesta s1 = new RespVacia();
-                    System.out.println("Distance = " + testDistance(s1));
+                    Respuesta s = new RespVacia();
+                    testDistance(s);
                     break;
                 case 2:
-                    Respuesta s2 = new RespLibre("");
-                    System.out.println("Distance = " + testDistance(s2));
+                    s = new RespLibre("");
+                    testDistance(s);
                     break;
                 case 3:
-                    Respuesta s3 = new RespVacia();
-                    testEquals(s3);
+                    s = new RespVacia();
+                    testEquals(s);
                     break;
                 case 4:
-                    Respuesta s4 = new RespLibre("");
-                    boolean b = testEquals(s4);
-                    if (b) System.out.println("TRUE");
-                    else   System.out.println("FALSE");
+                    s = new RespLibre("");
+                    testEquals(s);
                     break;
                 case 5:
-                    System.out.println("HashCode = " + testhashCode());
+                    testhashCode();
                     break;
                 case 6:
                     inTest = false;

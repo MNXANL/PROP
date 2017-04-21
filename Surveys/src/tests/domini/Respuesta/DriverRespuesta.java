@@ -10,14 +10,14 @@ import java.util.Scanner;
  */
 public class DriverRespuesta {
 
-    private static Respuesta r;
+    private Respuesta r;
 
-    public static double testDistance(com.domini.Respuesta r) {
+    public double testDistance(com.domini.Respuesta r) {
         return r.distance(r);
     }
 
 
-    public static boolean testEquals(Object o) {
+    public boolean testEquals(Object o) {
         return r.equals(o);
     }
 
@@ -26,7 +26,7 @@ public class DriverRespuesta {
         return r.hashCode();
     }
 
-    public static void main (String [] args) {
+    public static void main () {
         Scanner sc = new Scanner(System.in);
         System.out.print("Creada respuesta.");
 

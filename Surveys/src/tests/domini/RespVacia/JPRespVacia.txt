@@ -1,27 +1,48 @@
 Prueba 1
-Descripción: Test de la clase RespVacia
-Objetivos: Creación de una respuesta con texto asociado; devolución de igualdad respecto a sí mismo
+Descripción: Test de distancia de la clase RespVacia
+Objetivos: Creación de una respuesta con texto asociado; devolución de la distancia respecto a una respuesta vacia
 Entrada:
 1
-
-Salida: true
+Salida:
+0.0
 
 Resultado de la prueba: OK
 
 Prueba 2
-Descripción: Test de la clase RespVacia
-Objetivos: Creación de una respuesta con texto asociado; devolución de la distancia respecto a si misma
+Descripción: Test de distancia de la clase RespVacia
+Objetivos: Creación de una respuesta con texto asociado; devolución de la distancia respecto a una respuesta vacía
 Entrada:
 2
-Salida: 0
+Salida:
+1.0
 
 Resultado de la prueba: OK
 
 Prueba 3
-Descripción: Test de la clase RespVacia
+Descripción: Test de igualdad de la clase RespVacia
+Objetivos: Creación de una respuesta con texto asociado; devolución de igualdad con RespVacia
+Entrada:
+3
+Salida:
+true
+
+Resultado de la prueba: OK
+
+Prueba 4
+Descripción: Test de igualdad de la clase RespVacia
+Objetivos: Creación de una respuesta con texto asociado; devolución de igualdad con RespVacia
+Entrada:
+3
+Salida:
+false
+
+Resultado de la prueba: OK
+Prueba 4
+Descripción: Test de hashCode de la clase RespVacia
 Objetivos: Creación de una respuesta con texto asociado; devolución del hashCode
 Entrada:
 3
-Salida: 42
+Salida:
+42
 
 Resultado de la prueba: OK

@@ -19,7 +19,7 @@ public class DriverRespuestasEncuesta {
     }
 
     public static void testGetDate () {
-        System.out.println("Encuesta '" + re.getEncuesta().getTitulo() + "' creada el dia: " + re.getFecha().toString());
+        System.out.println("Encuesta " + re.getEncuesta().getTitulo() + " creada el dia: " + re.getFecha().toString());
     }
 
     public static void testGetFichero () {

@@ -6,7 +6,8 @@ Entrada:
 0
 -1000
 1000
-Salida: 0
+Salida:
+0
 
 Resultado de la prueba: OK
 
@@ -18,7 +19,8 @@ Entrada:
 0
 -1000
 1000
-Salida: -1000
+Salida:
+-1000
 
 Resultado de la prueba: OK
 
@@ -30,7 +32,8 @@ Entrada:
 0
 -1000
 1000
-Salida: 1000
+Salida:
+1000
 
 Resultado de la prueba: OK
 
@@ -43,5 +46,21 @@ Entrada:
 -1000
 1000
 555
-Salida: 555
+Salida:
+555
+
+Resultado de la prueba: OK
+
+Prueba 4
+Descripción: Test de la clase RespLibre, creación de respuesta y modificacion de numero de respuesta
+Objetivos: Creación de una respuesta con numero y valores minimo y maximo; devolución del numero de hash
+Entrada:
+4
+0
+-1000
+1000
+555
+Salida:
+42
+
 Resultado de la prueba: OK
