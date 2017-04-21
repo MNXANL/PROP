@@ -1,0 +1,97 @@
+Prueba 1
+Descripción: Test de la clase CjtEncuestas, crear y añadir encuestas al conjunto
+Objetivo: Crear varias encuestas, añadirlas al conjunto de encuestas creadas y mostrarlas por pantalla
+Entrada:
+1
+A
+no
+Salida:
+A
+
+20/04/2017 11:54:07
+
+Entrada:
+1
+B
+no
+Salida:
+B
+
+20/04/2017 11:54:20
+
+Entrada:
+1
+C
+no
+Salida:
+C
+
+20/04/2017 11:54:32
+
+Resultado de la prueba: OK
+
+Prueba 2
+Descripción: Test de la clase CjtEncuestas, borrar una encuesta
+Objetivo: Borrar una de las encuestas añadidas anteriormente
+Entrada:
+2
+A
+Salida:
+Encuesta borrada
+Resultado de la prueba: OK
+
+Prueba 3
+Descripción: Test de la clase CjtEncuestas, listar las encuestas según diversos criterios
+Objetivo: Obtener una lista de las encuestas añadidas anteriormente (Prueba 1) ordenada por diversos criterios (A-Z, Z-A, nuevas, antiguas)
+Entrada:
+3
+A-Z
+Salida:
+A
+B
+C
+Entrada
+3
+Z-A
+Salida:
+C
+B
+A
+Entrada:
+3
+nuevas
+Salida:
+C
+B
+A
+Entrada:
+3
+antiguas
+Salida:
+A
+B
+C
+Resultado de la prueba: OK
+
+Prueba 4
+Descripción: Test de la clase CjtEncuestas, listar encuestas por intervalo de fechas
+Objetivo: Obtener una lista de las encuestas (Prueba 1) que fueron creadas entre dos fechas, teniendo en cuenta que las fechas de inicio y fin no se contabilizan
+Entrada:
+4
+10/04/2017
+30/04/2017
+Salida:
+A
+B
+C
+Resultado de la prueba: OK
+
+Prueba 5
+Descripción: Test de la clase CjtEncuesta, listar por palabra(s)
+Objetivo: Obtener una lista de las encuestas (Prueba 1) cuyo título coincida con la palabra o palabras introducidas
+Entrada:
+5
+A
+Salida:
+A
+Resultado de la prueba: OK

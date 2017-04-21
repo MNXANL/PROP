@@ -1,0 +1,27 @@
+Prueba 1
+Descripción: Test de la clase RespVacia
+Objetivos: Creación de una respuesta con texto asociado; devolución de igualdad respecto a sí mismo
+Entrada:
+1
+
+Salida: true
+
+Resultado de la prueba: OK
+
+Prueba 2
+Descripción: Test de la clase RespVacia
+Objetivos: Creación de una respuesta con texto asociado; devolución de la distancia respecto a si misma
+Entrada:
+2
+Salida: 0
+
+Resultado de la prueba: OK
+
+Prueba 3
+Descripción: Test de la clase RespVacia
+Objetivos: Creación de una respuesta con texto asociado; devolución del hashCode
+Entrada:
+3
+Salida: 42
+
+Resultado de la prueba: OK

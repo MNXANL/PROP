@@ -1,0 +1,39 @@
+Título
+Encuesta
+
+Usuario
+Juan
+
+Fecha
+18/04/2017 09:47:10
+
+Respuesta pregunta
+RCO
+3
+5
+Bastante
+
+Respuesta pregunta
+RCNOU
+2
+Amarillo
+
+Respuesta pregunta
+RCNOM
+2
+0
+Opel
+2
+Hyundai
+
+Respuesta pregunta
+RN
+4.0
+0.0
+10.0
+
+Respuesta pregunta
+RL
+asdas
+
+Final respuestas encuesta

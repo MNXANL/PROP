@@ -1,0 +1,39 @@
+Prueba 1
+Descripción: Test de la clase RespLibre, creación de respuesta y retorno de texto vacio
+Objetivos: Creación de una respuesta con texto vacío; devolución del texto
+Entrada:
+1
+
+Salida:
+
+Resultado de la prueba: OK
+
+Prueba 2
+Descripción: Test de la clase RespLibre, creación de respuesta y retorno de texto
+Objetivos: Creación de una respuesta con texto asociado; devolución del texto
+Entrada:
+2
+Título
+Salida: Titulo
+
+Resultado de la prueba: OK
+
+Prueba 3
+Descripción: Test de la clase RespLibre, creación de respuesta y retorno de texto modificado
+Objetivos: Creación de una respuesta con texto asociado; devolución del texto modificado
+Entrada:
+3
+Titulo
+Nuevo titulo
+Salida: Nuevo titulo
+
+Resultado de la prueba: OK
+
+Prueba 4
+Descripción: Test de la clase RespLibre, creación de respuesta y modificacion de numero elegido
+Objetivos: Creación de una respuesta con texto asociado; devolución de igualdad respecto a sí mismo
+Entrada:
+4
+Titulo
+Salida: true
+Resultado de la prueba: OK
