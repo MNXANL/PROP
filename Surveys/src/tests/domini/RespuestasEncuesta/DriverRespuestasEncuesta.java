@@ -4,10 +4,8 @@ import com.domini.*;
 import tests.domini.RespuestasEncuesta.RespuestasEncuesta;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Scanner;
 
-import static org.junit.Assert.assertEquals;
 
 /**
  * Created by aleixballetbo on 16/4/17.
@@ -19,15 +17,9 @@ public class DriverRespuestasEncuesta {
     public static void testRespuestasEncuesta (Encuesta e, String s) {
         re = new RespuestasEncuesta(e, s);
     }
-    public static void testRespuestasEncuesta2 (Encuesta e, String s) {
-        ArrayList<Respuesta> alr = new ArrayList<>();
-        alr.add(new RespVacia());
-        re = new RespuestasEncuesta(e, s, alr);
-    }
 
-    public static void testGet () {
-        ArrayList<Integer> i = new ArrayList<Integer> (re.hashCode());
-        System.out.println(i.get(0));
+    public static void testGetDate () {
+        System.out.println("Encuesta '" + re.getEncuesta().getTitulo() + "' creada el dia: " + re.getFecha().toString());
     }
 
     public static void testGetFichero () {
@@ -51,10 +43,10 @@ public class DriverRespuestasEncuesta {
     }
 
 
-    public static void main (String [] args) {
+    public static void main(String[] args) {
         System.out.println("Elige la opción a probar:");
         System.out.println("1. Crear respuestas de encuesta con un solo titulo de encuesta y mostrar su hashcode");
-        System.out.println("2. Crear respuestas de encuesta con un solo titulo de encuesta y añadir respuesta vacia");
+        System.out.println("2. Crear respuestas de encuesta con un solo titulo de encuesta y ver fecha de creacion");
         System.out.println("3. Crear respuestas de encuesta prefedinida y printar respuestas");
         System.out.println("4. Crear respuestas de encuesta con un solo titulo de encuesta y ver el fichero que se generaria al exportar");
         System.out.println("5. Fin del test");
@@ -80,7 +72,7 @@ public class DriverRespuestasEncuesta {
                     e = new Encuesta(titulo);
                     testRespuestasEncuesta(e, "test");
 
-                    testGet();
+                    testGetDate();
                     break;
                 case 3:
                     System.out.println("Titulo encuesta:");
