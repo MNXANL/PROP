@@ -31,10 +31,10 @@ public class DriverPregCualitativaNoOrdenadaUnica {
 
     public static void main (String [] args) {
         System.out.println("Elige la opción a probar:");
-        System.out.println("1. Crear pregunta cualitativa ordenada con un título y opciones y mostrar el contenido de la pregunta");
-        System.out.println("2. Crear una pregunta cualitativa ordenada y mostrar el tipo de pregunta creada");
-        System.out.println("3. Crear pregunta cualitativa ordenada con un título y opciones y mostrar la opción i-esima");
-        System.out.println("4. Crear pregunta cualitativa ordenada con un título y opciones y mostrar el contenido sin el título");
+        System.out.println("1. Crear pregunta cualitativa no ordenada única con un título y opciones y mostrar el contenido de la pregunta");
+        System.out.println("2. Crear una pregunta cualitativa no ordenada única y mostrar el tipo de pregunta creada");
+        System.out.println("3. Crear pregunta cualitativa no ordenada única con un título y opciones y mostrar la opción i-esima");
+        System.out.println("4. Crear pregunta cualitativa no ordenada única con un título y opciones y mostrar el contenido sin el título");
         System.out.println("5. Fin del test");
 
         Scanner sc = new Scanner(System.in);

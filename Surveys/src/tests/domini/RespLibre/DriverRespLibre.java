@@ -12,33 +12,33 @@ import java.util.Scanner;
  * Driver de RespVacia
  */
 public class DriverRespLibre {
-    private RespLibre r;
+    private static RespLibre r;
 
-    public void testConstructor(String s) {
+    public static void testConstructor(String s) {
         r = new RespLibre(s);
         System.out.println("Respuesta: " + r.get());
     }
 
-    public void testSet(String s) {
+    public static void testSet(String s) {
         r.set(s);
         System.out.println("Respuesta: " + r.get());
     }
 
-    public double testDistance(Respuesta rr) {
+    public static double testDistance(Respuesta rr) {
         return r.distance(r);
     }
 
 
-    public boolean testEquals(Object o) {
+    public static boolean testEquals(Object o) {
         return r.equals(o);
     }
 
 
-    public int testhashCode() {
+    public static int testhashCode() {
         return r.hashCode();
     }
 
-    public void main () {
+    public static void main (String [] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("1. Crear respuesta sin título");

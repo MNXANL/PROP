@@ -28,32 +28,28 @@ public class Main {
 
     public static void main(String[] args) {
         ControladorDominio cd = new ControladorDominio();
-        boolean hasLogIn = false;
+        int hasLogIn = 0;
 
         Scanner sc = new Scanner(System.in);
-        while (!hasLogIn) {
+        while (hasLogIn == 0) {
             System.out.println("Introduce el nombre de usuario");
             String user = sc.nextLine();
             System.out.println("Introduce la contraseña");
             String pass = sc.nextLine();
-            cd.logIn(user, pass);
-            hasLogIn = true;
+            hasLogIn = cd.logIn(user, pass);
         }
 
         Presentacion();
 
-
-
         boolean continuar = true;
         while (continuar) {
-            if (!hasLogIn) {
+            if (hasLogIn == 0) {
                 sc.nextLine();
                 System.out.println("Introduce el nombre de usuario");
                 String user = sc.nextLine();
                 System.out.println("Introduce la contraseña");
                 String pass = sc.nextLine();
-                cd.logIn(user, pass);
-                hasLogIn = true;
+                hasLogIn = cd.logIn(user, pass);
             }
              else {
                 int option = sc.nextInt();
@@ -159,7 +155,7 @@ public class Main {
                     case 9:
                         cd.logOut();
                         System.out.println("Sesión cerrada");
-                        hasLogIn = false;
+                        hasLogIn = 0;
                         break;
                     case 10:
                         sc.nextLine();

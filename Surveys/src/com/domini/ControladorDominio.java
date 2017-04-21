@@ -24,7 +24,7 @@ public class ControladorDominio {
         u = null;
     }
 
-    public void logIn (String usuario, String pass) {
+    public int logIn (String usuario, String pass) {
         int x = contDatos.logIn(usuario,pass);
         switch (x) {
             case 0:
@@ -39,6 +39,7 @@ public class ControladorDominio {
                 u.leer();
                 break;
         }
+        return x;
     }
 
     public void logOut () {
