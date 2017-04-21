@@ -168,7 +168,7 @@ Objetivo: Crear una nueva encuesta a partir de una ya existente en un archivo tx
 Archivos: Encuesta.txt
 Entrada:
 7
-src/tests/domini/Encuesta/Encuesta.txt
+src/com/dades/DirectorioEncuestas/Encuesta.txt
 Salida:
 Encuesta
 
@@ -207,7 +207,7 @@ Descripción: Test de la clase Encuesta, exportación de encuesta
 Objetivo: Crear un archivo .txt a partir de una encuesta creada con la opción 1
 Entrada:
 8
-src/tests/domini/Encuesta/Encuesta.txt
+src/com/dades/DirectorioEncuestas/Encuesta.txt
 Salida:
 (Creación del archivo Encuesta.txt en el path correcto)
 Resultado de la prueba: OK

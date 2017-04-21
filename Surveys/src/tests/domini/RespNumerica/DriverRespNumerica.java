@@ -11,24 +11,24 @@ import java.util.Scanner;
  * Driver de RespVacia
  */
 public class DriverRespNumerica {
-    private RespNumerica r;
+    private static RespNumerica r;
 
-    public void testConstructor(double x, double min, double max) {
+    public static void testConstructor(double x, double min, double max) {
         r = new RespNumerica(x, min, max);
         System.out.println("Respuesta: " + r.get());
     }
 
-    public void testMin(double x, double min, double max) {
+    public static void testMin(double x, double min, double max) {
         r = new RespNumerica(x, min, max);
         System.out.println("Respuesta: " + r.getMin());
     }
 
-    public void testMax(double x, double min, double max) {
+    public static void testMax(double x, double min, double max) {
         r = new RespNumerica(x, min, max);
         System.out.println("Respuesta: " + r.getMax());
     }
 
-    public void testSet(double s) {
+    public static void testSet(double s) {
         r = new RespNumerica(0, Double.MIN_VALUE, Double.MAX_VALUE);
         r.set(s);
         System.out.println("Respuesta: " + r.get());
@@ -44,11 +44,11 @@ public class DriverRespNumerica {
     }
 
 
-    public int testhashCode() {
+    public static int testhashCode() {
         return r.hashCode();
     }
 
-    public void main () {
+    public static void main (String [] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("1. Crear respuesta sin valores");

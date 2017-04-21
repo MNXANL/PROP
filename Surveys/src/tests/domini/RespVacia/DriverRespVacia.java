@@ -10,23 +10,23 @@ import java.util.Scanner;
  * Driver de RespVacia
  */
 public class DriverRespVacia {
-    private RespVacia r;
+    private static RespVacia r;
 
-    public double testDistance(Respuesta rr) {
+    public static double testDistance(Respuesta rr) {
         return r.distance(rr);
     }
 
 
-    public boolean testEquals(Object o) {
+    public static boolean testEquals(Object o) {
         return r.equals(o);
     }
 
 
-    public int testhashCode() {
+    public static int testhashCode() {
         return r.hashCode();
     }
 
-    public void main () {
+    public static void main (String [] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Creando respuesta vacía: ");
         r = new RespVacia();
