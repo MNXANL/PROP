@@ -2,7 +2,6 @@ package com.dades;
 
 import com.domini.Encuesta;
 import com.domini.RespuestasEncuesta;
-import com.sun.tools.javac.util.Pair;
 
 import java.io.*;
 import java.util.HashMap;
@@ -16,12 +15,21 @@ public class ControladorDatos {
     String pathResp = "src/com/dades/DirectorioRespuestas";
     String pathUsers = "src/com/dades/Usuarios.txt";
 
-    HashMap<String, Pair<String, String>> users; //nombre, pass y tipo
+    public class Tuple<X, Y> {
+        public final X x;
+        public final Y y;
+        public Tuple(X x, Y y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
+    HashMap<String, Tuple<String, String>> users; //nombre, pass y tipo
 
     public int logIn (String usuario, String pass) {
         if (users.containsKey(usuario)) {
-            String p = users.get(usuario).fst;
-            String t = users.get(usuario).snd;
+            String p = users.get(usuario).x;
+            String t = users.get(usuario).y;
             if (p.equals(pass) && t.equals("Enc")) {
                 return 1;
             }
@@ -45,7 +53,7 @@ public class ControladorDatos {
                 bufferedWriter.write(nombre + "\n");
                 bufferedWriter.write(pass + "\n");
                 bufferedWriter.close();
-                Pair<String, String> p = new Pair<>(pass, tipo);
+                Tuple<String, String> p = new Tuple<>(pass, tipo);
                 users.put(nombre, p);
             }
             else {
@@ -69,7 +77,7 @@ public class ControladorDatos {
             while ((tipo = bufferedReader.readLine()) != null && !tipo.equals("")) {
                 String nombre = bufferedReader.readLine();
                 String pass = bufferedReader.readLine();
-                Pair<String, String> p = new Pair<>(pass,tipo);
+                Tuple<String, String> p = new Tuple<>(pass,tipo);
                 users.put(nombre,p);
             }
             bufferedReader.close();
