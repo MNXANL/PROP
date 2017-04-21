@@ -32,7 +32,7 @@ Prueba 4
 Descripción: Test de igualdad de la clase RespVacia
 Objetivos: Creación de una respuesta con texto asociado; devolución de igualdad con RespVacia
 Entrada:
-3
+4
 Salida:
 false
 
@@ -41,7 +41,7 @@ Prueba 4
 Descripción: Test de hashCode de la clase RespVacia
 Objetivos: Creación de una respuesta con texto asociado; devolución del hashCode
 Entrada:
-3
+5
 Salida:
 42
 

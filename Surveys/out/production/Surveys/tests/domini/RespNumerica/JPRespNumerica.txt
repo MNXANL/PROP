@@ -1,47 +1,63 @@
 Prueba 1
 Descripción: Test de la clase RespLibre, creación de respuesta y retorno de respuesta
-Objetivos: Creación de una respuesta con numero y valores minimo y maximo; devolución del numero de respuesta
+Objetivos: Creación de una respuesta con numero y valores minimo y maximo ya asignados; devolución del numero de respuesta
 Entrada:
 1
-0
--1000
-1000
-Salida: 0
+Salida:
+0.0
 
 Resultado de la prueba: OK
 
 Prueba 2
-Descripción: Test de la clase RespLibre, creación de respuesta y retorno de valor minimo
-Objetivos: Creación de una respuesta con numero y valores minimo y maximo; devolución del valor minimo de respuesta
+Descripción: Test de la clase RespLibre, creación de respuesta y retorno de respuesta
+Objetivos: Creación de una respuesta con numero y valores minimo y maximo; devolución del numero de respuesta
 Entrada:
 2
 0
 -1000
 1000
-Salida: -1000
+Salida:
+0.0
 
 Resultado de la prueba: OK
 
 Prueba 3
-Descripción: Test de la clase RespLibre, creación de respuesta y retorno de valor maximo
-Objetivos: Creación de una respuesta con numero y valores minimo y maximo; devolución del valor maximo de respuesta
+Descripción: Test de la clase RespLibre, creación de respuesta y retorno de valor minimo
+Objetivos: Creación de una respuesta con numero y valores minimo y maximo; devolución del valor minimo de respuesta
 Entrada:
 3
 0
 -1000
 1000
-Salida: 1000
+Salida:
+-1000.0
 
 Resultado de la prueba: OK
 
 Prueba 4
-Descripción: Test de la clase RespLibre, creación de respuesta y modificacion de numero de respuesta
-Objetivos: Creación de una respuesta con numero y valores minimo y maximo; devolución del numero de respuesta modificado
+Descripción: Test de la clase RespLibre, creación de respuesta y retorno de valor maximo
+Objetivos: Creación de una respuesta con numero y valores minimo y maximo; devolución del valor maximo de respuesta
 Entrada:
 4
 0
 -1000
 1000
+Salida:
+1000.0
+
+Resultado de la prueba: OK
+
+
+Prueba 5
+Descripción: Test de la clase RespLibre, creación de respuesta y modificacion de numero de respuesta
+Objetivos: Creación de una respuesta con numero y valores minimo y maximo; devolución del numero de hash
+Entrada:
+5
+0
+-1000
+1000
 555
-Salida: 555
+Salida:
+29791
+
 Resultado de la prueba: OK

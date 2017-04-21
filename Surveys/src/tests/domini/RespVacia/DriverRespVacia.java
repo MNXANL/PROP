@@ -39,9 +39,9 @@ public class DriverRespVacia {
         System.out.println("1. Ver distancia de respuesta vacía respecto respuesta vacía");
         System.out.println("2. Ver distancia de respuesta vacía respecto respuesta NO vacía");
         System.out.println("3. Comprobar que es igual a otra respuesta vacía");
-        System.out.println("3. Comprobar que es igual a otra respuesta NO vacía");
-        System.out.println("4. Retornar codigo de Hash");
-        System.out.println("5. Salir del test");
+        System.out.println("4. Comprobar que es igual a otra respuesta NO vacía");
+        System.out.println("5. Retornar codigo de Hash");
+        System.out.println("6. Salir del test");
 
         boolean inTest = true;
         while (inTest) {

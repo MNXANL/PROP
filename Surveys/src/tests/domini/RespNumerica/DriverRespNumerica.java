@@ -62,7 +62,7 @@ public class DriverRespNumerica {
         while (inTest) {
             switch (sc.nextInt()) {
                 case 1:
-                    testConstructor(0, Double.MIN_VALUE, Double.MAX_VALUE);
+                    testConstructor(0, -10000, +10000);
                     break;
                 case 2:
                     double x = sc.nextDouble();
@@ -74,13 +74,13 @@ public class DriverRespNumerica {
                     x = sc.nextDouble();
                     min = sc.nextDouble();
                     max = sc.nextDouble();
-                    testMax(x, min, max);
+                    testMin(x, min, max);
                    break;
                 case 4:
                     x = sc.nextDouble();
                     min = sc.nextDouble();
                     max = sc.nextDouble();
-                    testMin(x, min, max);
+                    testMax(x, min, max);
                     break;
                 case 5:
                     testhashCode();

@@ -3,10 +3,12 @@ Descripción: Test de la clase RespCualitativaNoOrdenadaUnica, creación de resp
 Objetivos: Creación de una respuesta con numero elegido y texto vacío; devolución del texto
 Entrada:
 1
-10
-
+2
+Normal
+2
+Normal
 Salida:
-
+Normal
 Resultado de la prueba: OK
 
 Prueba 2
@@ -17,35 +19,30 @@ Entrada:
 10
 Normal
 Salida:
-Normal
+2
 
 Resultado de la prueba: OK
 
 Prueba 3
-Descripción: Test de la clase RespCualitativaNoOrdenadaUnica, creación de respuesta y modificacion de los atributos de la respuesta
-Objetivos: Creación de una respuesta con numero elegido y texto asociado; devolución del numero modificado
+Descripción: Test de la clase RespCualitativaNoOrdenadaUnica, retorno de distancia
+Objetivos: Creación de una respuesta con numero elegido y texto asociado; retorno de distancia
 Entrada:
 3
 10
 Normal
-9
-Modified
-
 Salida:
-9
+0
 
 Resultado de la prueba: OK
 
 Prueba 4
-Descripción: Test de la clase RespCualitativaNoOrdenadaUnica, creación de respuesta y modificacion de los atributos de la respuesta
-Objetivos: Creación de una respuesta con numero elegido y texto asociado; devolución del texto modificado
+Descripción: Test de la clase RespCualitativaNoOrdenadaUnica, comprobación de igualdad
+Objetivos: Creación de una respuesta con numero elegido y texto asociado; comprobación de igualdad
 Entrada:
 4
 10
 Normal
-9
-Modified
-
 Salida:
-Modified
+true
+
 Resultado de la prueba: OK

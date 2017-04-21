@@ -1,12 +1,12 @@
 Prueba 1
-Descripción: Test de la clase RespCualitativaNoOrdenadaMultiple, creación de respuesta y retorno del diccionario elegido
-Objetivos: Creación de una respuesta con numero elegido y texto vacío; devolución del diccionario elegido
+Descripción: Test de la clase RespCualitativaNoOrdenadaMultiple, creación de respuesta y retorno de numero
+Objetivos: Creación de una respuesta con numero elegido y texto asociado; devolución del numero de respuesta de la primera opcion
 Entrada:
+2
 1
-1
-
+Resp
 Salida:
-<1, Resp>
+Resp
 
 Resultado de la prueba: OK
 
@@ -29,10 +29,19 @@ Entrada:
 3
 1
 Resp
-2
-Mod
-
 Salida:
-Mod
+0.0
+
+Resultado de la prueba: OK
+
+Prueba 4
+Descripción: Test de la clase RespCualitativaNoOrdenadaMultiple, creación de respuesta y retorno de texto y devolucion de igualdad respecto a si misma
+Objetivos: Creación de una respuesta con numero elegido y texto asociado; devolución de igualdad respecto a si misma
+Entrada:
+3
+1
+Resp
+Salida:
+true
 
 Resultado de la prueba: OK
