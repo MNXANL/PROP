@@ -33,15 +33,17 @@ public class Clustering {
         }
         Random rand = new Random();
         HashSet<Integer> used = new HashSet<>();
+        System.out.println("-----centroides iniciales----");
         while(centroids.size() < k ){        //llenar el set de centroids iniciales con RespuestasEncuesta random de la encuesta
             int i = Math.abs(rand.nextInt()%RE.size());
             RespuestasEncuesta aux = RE.get(i);
             if(!used.contains(i)){
-                System.out.println("cluster " + centroids.size() + " "+aux.getUser());
+                System.out.println("centroide " + centroids.size() + ": "+aux.getUser());
                 centroids.add(aux);
                 used.add(i);
             }
         }
+        System.out.println();
         Kmeans(RE,centroids);
     }
     private void Kmeans(ArrayList<RespuestasEncuesta> RE, ArrayList<RespuestasEncuesta> centroids){
@@ -97,11 +99,10 @@ public class Clustering {
         }
         if(!change){ //el algoritmo ha acabado si los centroides no cambian
             //de momento hacemos un output de assig para probar
-            System.out.println("asignacion de clusters: ");
+            System.out.println("*** Asignacion de clusters ***");
             show_clusters(RE,assig,centroids.size());
         }
         else{
-            System.out.println("Do the K means");
             Kmeans(RE,centroids);
         }
 
