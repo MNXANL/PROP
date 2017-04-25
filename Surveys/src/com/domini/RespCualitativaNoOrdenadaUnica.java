@@ -14,7 +14,7 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
 
     /**
      *
-     * @param n
+     * @param n numero de la opcion seleccionada
      */
     public RespCualitativaNoOrdenadaUnica(int n, String txt){
         seleccion = n;
@@ -23,7 +23,7 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
 
     /**
      *
-     * @return
+     * @return la seleccion
      */
     public int get(){
         return seleccion;
@@ -31,7 +31,7 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
 
     /**
      *
-     * @return
+     * @return el string correspondiente a la seleccion
      */
     public String getText(){
         return textoSelec;
@@ -39,7 +39,7 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
 
     /**
      *
-     * @param n
+     * @param n seleccion
      */
     public void set(int n, String txt){
         seleccion = n;

@@ -12,7 +12,7 @@ public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
 
     /**
      *
-     * @param seleccion
+     * @param seleccion el set que contiene las selecciones del encuestado
      */
     public RespCualitativaNoOrdenadaMultiple(HashMap<Integer, String> seleccion){
         this.seleccion=seleccion;
@@ -20,19 +20,23 @@ public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
 
     /**
      *
-     * @return
+     * @return  las selecciones
      */
     public HashSet<Integer> get(){
         return new HashSet<>(seleccion.keySet());
     }
 
+    /**
+     *
+     * @return las selecciones con su string correspondiente
+     */
     public HashMap<Integer, String> getMap(){
         return seleccion;
     }
 
     /**
      *
-     * @param seleccion
+     * @param seleccion el set que contiene las selecciones del encuestado
      */
     public void set(HashMap<Integer, String> seleccion){
         this.seleccion = seleccion;

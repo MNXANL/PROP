@@ -121,7 +121,7 @@ public class RespLibre extends Respuesta{
      */
     private String clean (String r){
         String [] words = r.split(" ");
-        String path = "src/com/domini/PalabrasFuncionales";
+        String path = "src/com/dades/PalabrasFuncionales";
         String result = "";
         HashSet<String> funcWords = new HashSet<>();
 

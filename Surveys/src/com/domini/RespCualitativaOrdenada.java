@@ -33,14 +33,14 @@ public class RespCualitativaOrdenada extends Respuesta {
     }
     /**
      *
-     * @return
+     * @return seleccion
      */
     public int get(){
         return seleccion;
     }
     /**
      *
-     * @return
+     * @return texto correspondiente a la seleccion
      */
     public String getText(){
         return textoSelec;
@@ -52,7 +52,7 @@ public class RespCualitativaOrdenada extends Respuesta {
 
     /**
      *
-     * @param n
+     * @param n seleccion
      */
     public void set(int n){
         seleccion = n;

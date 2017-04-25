@@ -7,26 +7,32 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Objects;
 
-//respuesta libre, un string conteniendo cualquier cosa
+/**
+ * Respuesta libre, un string de tamaño y contenido arbitrarios
+ */
 public class RespLibre extends Respuesta{
     private String resp;
 
     /**
      *
-     * @param s
+     * @param s respuesta en formato libre
      */
 
     public RespLibre(String s){
         resp=s;
     }
 
+    /**
+     * creadora con copia
+     * @param rl respuesta libre a copiar
+     */
     public RespLibre(RespLibre rl){
         resp = new String(rl.get());
     }
 
     /**
      *
-     * @return
+     * @return la respuesta tras haber eliminado las palabras funcionales
      */
     public String get(){
         return clean(resp);
@@ -123,7 +129,7 @@ public class RespLibre extends Respuesta{
      */
     private String clean (String r){
         String [] words = r.split(" ");
-        String path = "src/com/domini/PalabrasFuncionales";
+        String path = "src/com/dades/PalabrasFuncionales";
         String result = "";
         HashSet<String> funcWords = new HashSet<>();
 

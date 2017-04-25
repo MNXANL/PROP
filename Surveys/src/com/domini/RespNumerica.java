@@ -10,7 +10,10 @@ public class RespNumerica extends Respuesta{
     private double min, max;
 
     /**
-     * @param f
+     * creadora
+     * @param f valor respondido
+     * @param min valor maximo posible
+     * @param max valor minimo posible
      */
     public RespNumerica(double f, double min, double max){
         try {
@@ -27,7 +30,7 @@ public class RespNumerica extends Respuesta{
 
     /**
      * creador de copia
-     * @param r
+     * @param r RespNumerica a copiar
      */
     public RespNumerica(RespNumerica r){
         try {
@@ -44,21 +47,21 @@ public class RespNumerica extends Respuesta{
 
     /**
      *
-     * @return
+     * @return respuesta
      */
     public double get(){
         return resp;
     }
     /**
      *
-     * @return
+     * @return minimo
      */
     public double getMin(){
         return min;
     }
     /**
      *
-     * @return
+     * @return maximo
      */
     public double getMax(){
         return max;
@@ -66,7 +69,7 @@ public class RespNumerica extends Respuesta{
 
     /**
      *
-     * @param f
+     * @param f respuesta
      */
     public void set(double f){
         resp=f;

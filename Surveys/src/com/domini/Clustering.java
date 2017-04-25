@@ -49,6 +49,12 @@ public class Clustering {
         System.out.println();
         Kmeans(RE,centroids);
     }
+
+    /**
+     * Algoritmo k-means para la agrupación en clusters
+     * @param RE Respuestas a la encuesta E
+     * @param centroids lista de centroides de cada uno de los K clusters
+     */
     private void Kmeans(ArrayList<RespuestasEncuesta> RE, ArrayList<RespuestasEncuesta> centroids){
 
         ArrayList<Integer> assig = new ArrayList<>(); //assig[i] = número del cluster al que pertenece RE[i]
