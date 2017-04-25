@@ -18,7 +18,7 @@ public class ControladorDominio {
 
     CjtEncuestas cjt;
 
-    public ControladorDominio() {
+    public ControladorDominio() throws ExcFormatoIncorrecto{
         contDatos = new ControladorDatos();
         cjt = new CjtEncuestas(contDatos.cargar());
         u = null;
@@ -128,7 +128,13 @@ public class ControladorDominio {
     }
 
     public void importarEncuesta (String path) {
-        Encuesta e = Encuesta.importar(path);
+        Encuesta e = null;
+        try {
+            e = Encuesta.importar(path);
+        } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
+            String linea = excFormatoIncorrecto.getMessage();
+            System.out.println("Error en la importación de la encuesta "+path+". Error en la linea "+linea+".");
+        }
         contDatos.guardarEncuesta(e);
     }
 

@@ -1,6 +1,7 @@
 package com.dades;
 
 import com.domini.Encuesta;
+import com.domini.ExcFormatoIncorrecto;
 import com.domini.RespuestasEncuesta;
 
 import java.io.*;
@@ -67,7 +68,7 @@ public class ControladorDatos {
         }
     }
 
-    public TreeMap<String,Encuesta> cargar () {
+    public TreeMap<String,Encuesta> cargar () throws ExcFormatoIncorrecto{
         //cargamos usuarios existentes
         users = new HashMap<>();
         try {

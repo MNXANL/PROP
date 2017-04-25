@@ -104,13 +104,13 @@ public class Encuesta {
      * importar una encuesta externa al programa
      * @param path El lugar donde encontrar la encuesta
      */
-    public static Encuesta importar (String path){
+    public static Encuesta importar (String path) throws ExcFormatoIncorrecto{
 
         Encuesta e = new Encuesta();
 
         // This will reference one line at a time
         String line = null;
-
+        int contLinea = 0;
         try {
             // FileReader reads text files in the default encoding.
             FileReader fileReader = new FileReader(path);
@@ -120,23 +120,47 @@ public class Encuesta {
 
             int indexPreg = 0;
             while((line = bufferedReader.readLine()) != null) {
+                contLinea++;
                 if (line.equals("Título")) {
                     line = bufferedReader.readLine();
-                    if (line != null) e.title = line;
+                    contLinea++;
+                    if (line.equals("")){
+                        ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Título de encuesta vacío");
+                        throw exc;
+                    }
+                    else if (line == null) {
+                        ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Encuesta inacabada");
+                        throw exc;
+                    }
+                    else {
+                        e.title = line;
+                    }
                 }
                 else if (line.equals("Pregunta")) {
                     //leer tipo de pregunta
                     line = bufferedReader.readLine();
+                    contLinea++;
                     if (line.equals("PCO")) {
                         //leer titulo de la pregunta
                         String tituloP = bufferedReader.readLine();
+                        contLinea++;
+                        if (tituloP.equals("")) {
+                            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Título de pregunta vacío");
+                            throw exc;
+                        }
+                        else if (line == null) {
+                            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Encuesta inacabada");
+                            throw exc;
+                        }
                         //leer todas las opciones de respuesta
                         ArrayList<String> opciones = new ArrayList<>();
                         int index = 0;
                         while (!(line = bufferedReader.readLine()).equals("")){
+                            contLinea++;
                             opciones.add(index,line);
                             index++;
                         }
+                        contLinea++;
                         PregCualitativaOrdenada preg = new PregCualitativaOrdenada(tituloP,opciones);
                         e.preguntas.add(indexPreg,preg);
                         indexPreg++;
@@ -144,13 +168,16 @@ public class Encuesta {
                     else if (line.equals("PCNOU")) {
                         //leer titulo de la pregunta
                         String tituloP = bufferedReader.readLine();
+                        contLinea++;
                         //leer todas las opciones de respuesta
                         ArrayList<String> opciones = new ArrayList<>();
                         int index = 0;
                         while (!(line = bufferedReader.readLine()).equals("")){
+                            contLinea++;
                             opciones.add(index,line);
                             index++;
                         }
+                        contLinea++;
                         PregCualitativaNoOrdenadaUnica preg = new PregCualitativaNoOrdenadaUnica(tituloP,opciones);
                         e.preguntas.add(indexPreg,preg);
                         indexPreg++;
@@ -158,15 +185,18 @@ public class Encuesta {
                     else if (line.equals("PCNOM")) {
                         //leer titulo de la pregunta
                         String tituloP = bufferedReader.readLine();
+                        contLinea++;
                         //leer max opciones
                         int max = Integer.parseInt(bufferedReader.readLine());
                         //leer todas las opciones de respuesta
                         ArrayList<String> opciones = new ArrayList<>();
                         int index = 0;
                         while (!(line = bufferedReader.readLine()).equals("")){
+                            contLinea++;
                             opciones.add(index,line);
                             index++;
                         }
+                        contLinea++;
                         PregCualitativaNoOrdenadaMultiple preg = new PregCualitativaNoOrdenadaMultiple(tituloP,opciones,max);
                         e.preguntas.add(indexPreg,preg);
                         indexPreg++;
@@ -174,8 +204,11 @@ public class Encuesta {
                     else if (line.equals("PN")) {
                         //leer titulo de la pregunta
                         String tituloP = bufferedReader.readLine();
+                        contLinea++;
                         float min = Float.parseFloat(bufferedReader.readLine());
+                        contLinea++;
                         float max = Float.parseFloat(bufferedReader.readLine());
+                        contLinea++;
                         //comprobar que min < max
                         PregNumerica preg = new PregNumerica(tituloP,min,max);
                         e.preguntas.add(indexPreg,preg);
@@ -183,21 +216,34 @@ public class Encuesta {
                     }
                     else if (line.equals("PRL")) {
                         String tituloP = bufferedReader.readLine();
+                        contLinea++;
                         PregRespuestaLibre preg = new PregRespuestaLibre(tituloP);
                         e.preguntas.add(indexPreg,preg);
                         indexPreg++;
                     }
+                    else if (line != null){
+                        ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en la linea "+contLinea+". El tipo de pregunta no existe.");
+                        throw exc;
+                    }
+                    else {
+                        ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en la linea "+contLinea+". Encuesta inacabada.");
+                        throw exc;
+                    }
                 }
                 else if (line.equals("Fecha")) {
                     String f = bufferedReader.readLine();
+                    contLinea++;
                     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
                     e.fecha = sdf.parse(f);
                 }
-                else if (line.equals("Final encuesta")) {
+                else if (line.equals("Final encuesta") || line.equals("")) {
 
                 }
-
-                //System.out.println(line);
+                else {
+                    //throw exception
+                    ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en línea "+Integer.toString(contLinea));
+                    throw exc;
+                }
             }
 
             // Always close files.
@@ -213,6 +259,7 @@ public class Encuesta {
                     "Error reading file '"
                             + path + "'");
         } catch (ParseException e1) {
+            //fecha mal escrita
             e1.printStackTrace();
         }
 

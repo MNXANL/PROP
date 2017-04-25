@@ -26,7 +26,7 @@ public class DriverRespuesta {
         return r.hashCode();
     }
 
-    public static void main () {
+    public static void main (String [] arg) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Creada respuesta.");
 

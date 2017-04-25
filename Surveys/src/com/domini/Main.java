@@ -26,7 +26,7 @@ public class Main {
         System.out.println("   12. Salir del programa");
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExcFormatoIncorrecto{
         ControladorDominio cd = new ControladorDominio();
         int hasLogIn = 0;
 

@@ -32,8 +32,9 @@ public class DriverEncuesta {
         e.add_question(p);
     }
 
-    private static Encuesta testImportar(String path) {
-        return Encuesta.importar(path);
+    private static Encuesta testImportar(String path) throws ExcFormatoIncorrecto {
+        Encuesta e = Encuesta.importar(path);
+        return e;
     }
 
     private static void testExportar(String path) {
@@ -253,8 +254,15 @@ public class DriverEncuesta {
                     break;
                 case 7:
                     System.out.println("Introduce el path");
-                    e = testImportar(sc.nextLine());
-                    e.leer();
+                    String path = sc.nextLine();
+                    try {
+                        e = testImportar(path);
+                        e.leer();
+                    }
+                    catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
+                        String m = excFormatoIncorrecto.getMessage();
+                        System.out.println("Error en la importación de la encuesta "+path+". "+m);
+                    }
                     break;
                 case 8:
                     if (e != null) {
