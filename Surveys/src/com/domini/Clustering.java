@@ -10,6 +10,7 @@ import java.util.*;
 public class Clustering {
     private Encuesta E;
     private int k;
+    private HashSet<Integer> skipColumns;
 
     /**
      *Creadora de clustering
@@ -19,6 +20,7 @@ public class Clustering {
     public Clustering(Encuesta E, int k){
         this.E = new Encuesta(E);
         this.k = k;
+        skipColumns = new HashSet<>();
     }
 
     /**
@@ -31,6 +33,7 @@ public class Clustering {
             System.out.println("No puede haber más clusters que encuestados");
             return;
         }
+        preprocess(RE);
         Random rand = new Random();
         HashSet<Integer> used = new HashSet<>();
         System.out.println("-----centroides iniciales----");
@@ -74,20 +77,22 @@ public class Clustering {
                 ArrayList<Respuesta> resps = centroids.get(i).getResps();
 
                 for (int k = 0; k != resps.size(); ++k) {  // por cada Respuesta del conjunto
-                    if (resps.get(k) instanceof RespNumerica) {
-                        newCentroid.getResps().add(Respnum_avg(i, k, assig, RE));
-                    }
-                    if (resps.get(k) instanceof RespCualitativaNoOrdenadaUnica) {
-                        newCentroid.getResps().add(RespCNOU_mode(i, k, assig, RE));
-                    }
-                    if (resps.get(k) instanceof RespCualitativaOrdenada) {
-                        newCentroid.getResps().add(RespCO_mode(i, k, assig, RE));
-                    }
-                    if (resps.get(k) instanceof RespCualitativaNoOrdenadaMultiple) {
-                        newCentroid.getResps().add(RespMUL_maxfreq(i, k, assig, RE));
-                    }
-                    if (resps.get(k) instanceof  RespLibre) {
-                        newCentroid.getResps().add(RespLib_maxfreq(i, k, assig, RE));
+                    if(!skipColumns.contains(k)) {
+                        if (resps.get(k) instanceof RespNumerica) {
+                            newCentroid.getResps().add(Respnum_avg(i, k, assig, RE));
+                        }
+                        if (resps.get(k) instanceof RespCualitativaNoOrdenadaUnica) {
+                            newCentroid.getResps().add(RespCNOU_mode(i, k, assig, RE));
+                        }
+                        if (resps.get(k) instanceof RespCualitativaOrdenada) {
+                            newCentroid.getResps().add(RespCO_mode(i, k, assig, RE));
+                        }
+                        if (resps.get(k) instanceof RespCualitativaNoOrdenadaMultiple) {
+                            newCentroid.getResps().add(RespMUL_maxfreq(i, k, assig, RE));
+                        }
+                        if (resps.get(k) instanceof RespLibre) {
+                            newCentroid.getResps().add(RespLib_maxfreq(i, k, assig, RE));
+                        }
                     }
 
                 }
@@ -276,11 +281,13 @@ public class Clustering {
      */
     private double answer_dist(final RespuestasEncuesta r1,final RespuestasEncuesta r2){
         double acc = 0;
-        for (int i = 0; i != r1.getResps().size(); ++i){
-            if(r2.getResps().get(i) instanceof RespVacia && !(r1.getResps().get(i) instanceof RespVacia))
-                acc += 1;
-            else {
-                acc += r1.getResps().get(i).distance(r2.getResps().get(i));
+        for (int i = 0; i != r1.getResps().size(); ++i) {
+            if(!skipColumns.contains(i)){
+                if (r2.getResps().get(i) instanceof RespVacia && !(r1.getResps().get(i) instanceof RespVacia))
+                    acc += 1;
+                else {
+                    acc += r1.getResps().get(i).distance(r2.getResps().get(i));
+                }
             }
         }
         //System.out.println ("Distance: "+acc/r1.getResps().size());
@@ -302,6 +309,24 @@ public class Clustering {
                 if(assig.get(j)==i)
                     System.out.println("\t"+RE.get(j).getUser());
             }
+        }
+    }
+
+    /**
+     * Convierte las respuestas vacias a un formato tratable por el algoritmo
+     * @param RE todas las respuestas de los usuarios a la encuesta
+     */
+    private void preprocess(ArrayList<RespuestasEncuesta> RE){
+        RespuestasEncuesta r; //auxiliar
+        int n = RE.get(0).getResps().size();
+        for(int i = 0; i != n ; ++i) {  //por cada respuesta de la encuesta
+            int nVacias = 0; // numero de respuestas vacias a la pregunta i
+            for (int j = 0; j != RE.size(); ++j) {
+                r = RE.get(j);
+                if(r.getResps().get(i) instanceof RespVacia)++nVacias;
+            }
+            if(nVacias > RE.size()/2)   // mas de la mitad no han contestado la pregunta i
+                skipColumns.add(i);
         }
     }
 }
