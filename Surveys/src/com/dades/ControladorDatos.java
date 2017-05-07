@@ -138,6 +138,35 @@ public class ControladorDatos {
         re.exportar(pathResp + "/" + re.getNombreFichero()  +".txt");
     }
 
+    /* Not 100% working... yet
+
+    public void importarEncAndRespDeUnPath (String absolPath) {
+
+        TreeMap<String,Encuesta> enc = new TreeMap<>();
+
+        File folder = new File(absolPath);
+        File[] listOfFiles = folder.listFiles();
+
+        for (int i = 0; i < listOfFiles.length; i++) {
+            Encuesta e = null;
+            try {
+                e = Encuesta.importar(listOfFiles[i].getAbsolutePath());
+            } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
+                excFormatoIncorrecto.printStackTrace();
+            }
+            enc.put(e.getTitulo(), e);
+        }
+
+        //cargamos respuestas encuestas
+        folder = new File(pathResp);
+        listOfFiles = folder.listFiles();
+
+        for (int i = 0; i < listOfFiles.length; i++) {
+            RespuestasEncuesta re = RespuestasEncuesta.importar(listOfFiles[i].getAbsolutePath());
+            enc.get(re.getEncuesta().getTitulo()).responder(re);
+        }
+    }*/
+
     public void borrarRespuestasEncuesta (String titulo) {
         File f = new File (pathResp + "/" + titulo + ".txt");
         f.delete();

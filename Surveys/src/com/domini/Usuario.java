@@ -14,6 +14,9 @@ public class Usuario {
         userName=name;
     }
 
+    /**
+     *
+     */
     public void leer () {
         System.out.println(userName);
     }

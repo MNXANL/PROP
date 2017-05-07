@@ -142,7 +142,12 @@ public class RespuestasEncuesta {
                         //leer texto opcion de respuesta
                         String text = bufferedReader.readLine();
 
-                        RespCualitativaOrdenada resp = new RespCualitativaOrdenada(idx, nOpts, text);
+                        RespCualitativaOrdenada resp = null;
+                        try {
+                            resp = new RespCualitativaOrdenada(idx, nOpts, text);
+                        } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
+                            excFormatoIncorrecto.printStackTrace();
+                        }
                         re.resps.add(indexPreg, resp);
                         indexPreg++;
                     }
@@ -152,7 +157,12 @@ public class RespuestasEncuesta {
                         float min = Float.parseFloat(bufferedReader.readLine());
                         float max = Float.parseFloat(bufferedReader.readLine());
                         //comprobar que min < max
-                        RespNumerica resp = new RespNumerica(val, min, max);
+                        RespNumerica resp = null;
+                        try {
+                            resp = new RespNumerica(val, min, max);
+                        } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
+                            excFormatoIncorrecto.printStackTrace();
+                        }
                         re.resps.add(indexPreg, resp);
                         indexPreg++;
                     }
@@ -168,7 +178,12 @@ public class RespuestasEncuesta {
                         //leer texto opcion de respuesta
                         String text = bufferedReader.readLine();
 
-                        RespCualitativaNoOrdenadaUnica resp = new RespCualitativaNoOrdenadaUnica(idx, text);
+                        RespCualitativaNoOrdenadaUnica resp = null;
+                        try {
+                            resp = new RespCualitativaNoOrdenadaUnica(idx, text);
+                        } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
+                            excFormatoIncorrecto.printStackTrace();
+                        }
                         re.resps.add(indexPreg, resp);
                         indexPreg++;
                     }

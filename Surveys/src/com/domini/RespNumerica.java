@@ -15,34 +15,24 @@ public class RespNumerica extends Respuesta{
      * @param min valor maximo posible
      * @param max valor minimo posible
      */
-    public RespNumerica(double f, double min, double max){
-        try {
-            if (min > max || f < min || f > max)
-                throw new IllegalArgumentException("Fuera de rango!");
-            resp=f;
-            this.min = min;
-            this.max = max;
-        }
-        catch (IllegalArgumentException e) {
-            System.out.println("Numeros fuera de rango!");
-        }
+    public RespNumerica(double f, double min, double max) throws ExcFormatoIncorrecto {
+        if (min > max || f < min || f > max)
+            throw new ExcFormatoIncorrecto("Formato de números incorrecto!");
+        resp=f;
+        this.min = min;
+        this.max = max;
     }
 
     /**
      * creador de copia
      * @param r RespNumerica a copiar
      */
-    public RespNumerica(RespNumerica r){
-        try {
-            if (r.min > r.max || r.resp < r.min || r.resp > r.max)
-                throw new IllegalArgumentException("Fuera de rango!");
-            this.resp = r.resp;
-            this.min = r.min;
-            this.max = r.max;
-        }
-        catch (IllegalArgumentException e) {
-            System.out.println("Numeros fuera de rango!");
-        }
+    public RespNumerica(RespNumerica r) throws ExcFormatoIncorrecto {
+        if (r.min > r.max || r.resp < r.min || r.resp > r.max)
+            throw new ExcFormatoIncorrecto("Formato incorrecto! Valor min <= [Tu valor] <= Valor max");
+        this.resp = r.resp;
+        this.min = r.min;
+        this.max = r.max;
     }
 
     /**

@@ -16,7 +16,8 @@ public class RespCualitativaOrdenada extends Respuesta {
      * @param ns numero de la seleccion que ha hecho el usuario
      * @param nopts numero de opcciones totales a elegir
      */
-    public RespCualitativaOrdenada(int ns, int nopts, String text){
+    public RespCualitativaOrdenada(int ns, int nopts, String text) throws ExcFormatoIncorrecto {
+        if (0 > ns || nopts < ns) throw new ExcFormatoIncorrecto("Formato incorrecto! Numero fuera de rango de respuesta");
         seleccion = ns;
         textoSelec = text;
         noptions = nopts;

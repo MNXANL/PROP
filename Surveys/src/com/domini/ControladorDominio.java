@@ -109,7 +109,12 @@ public class ControladorDominio {
                 System.out.println("Cuál es el valor máximo que admite ésta pregunta?");
                 int max = sc.nextInt();
                 sc.nextLine();
-                PregNumerica preg = new PregNumerica(tituloP,min,max);
+                PregNumerica preg = null;
+                try {
+                    preg = new PregNumerica(tituloP,min,max);
+                } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
+                    excFormatoIncorrecto.printStackTrace();
+                }
                 e.add_question(preg);
             }
             else if (tipo.toUpperCase().equals("PRL")) {
@@ -232,7 +237,12 @@ public class ControladorDominio {
                         System.out.println("Cuál es el valor máximo que admite ésta pregunta?");
                         int max = sc.nextInt();
                         sc.nextLine();
-                        PregNumerica preg = new PregNumerica(tituloP, min, max);
+                        PregNumerica preg = null;
+                        try {
+                            preg = new PregNumerica(tituloP, min, max);
+                        } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
+                            excFormatoIncorrecto.printStackTrace();
+                        }
                         e.add_question(index, preg);
                     } else if (tipo.equals("PRL")) {
                         PregRespuestaLibre preg = new PregRespuestaLibre(tituloP);
@@ -294,7 +304,12 @@ public class ControladorDominio {
                         System.out.println("Cuál es el valor máximo que admite ésta pregunta?");
                         int max = sc.nextInt();
                         sc.nextLine();
-                        PregNumerica preg = new PregNumerica(tituloP, min, max);
+                        PregNumerica preg = null;
+                        try {
+                            preg = new PregNumerica(tituloP, min, max);
+                        } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
+                            excFormatoIncorrecto.printStackTrace();
+                        }
                         e.add_question(preg);
                     } else if (tipo.equals("PRL")) {
                         PregRespuestaLibre preg = new PregRespuestaLibre(tituloP);

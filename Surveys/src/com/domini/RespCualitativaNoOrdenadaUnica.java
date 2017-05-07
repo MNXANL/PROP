@@ -16,7 +16,8 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
      *
      * @param n numero de la opcion seleccionada
      */
-    public RespCualitativaNoOrdenadaUnica(int n, String txt){
+    public RespCualitativaNoOrdenadaUnica(int n, String txt) throws ExcFormatoIncorrecto {
+        if (n > 0) throw new ExcFormatoIncorrecto("Formato incorrecto! Numero negativo o no válido.");
         seleccion = n;
         textoSelec = txt;
     }

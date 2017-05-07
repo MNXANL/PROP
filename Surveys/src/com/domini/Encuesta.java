@@ -469,20 +469,35 @@ public class Encuesta {
                 else if (preguntas.get(i) instanceof PregNumerica) {
                     float resp = Float.parseFloat(respu);
                     PregNumerica p = (PregNumerica) preguntas.get(i);
-                    Respuesta r = new RespNumerica(resp, p.getValorMin(), p.getValorMax());
+                    Respuesta r = null;
+                    try {
+                        r = new RespNumerica(resp, p.getValorMin(), p.getValorMax());
+                    } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
+                        excFormatoIncorrecto.printStackTrace();
+                    }
                     ALR.add(r);
                 }
                 else if (preguntas.get(i) instanceof PregCualitativaOrdenada) {
                     int resp = Integer.parseInt(respu);
                     ++resp;
                     PregCualitativaOrdenada p = (PregCualitativaOrdenada) preguntas.get(i);
-                    Respuesta r = new RespCualitativaOrdenada(resp, p.getMaxOptions(), p.getPreguntaIesima(resp));
+                    Respuesta r = null;
+                    try {
+                        r = new RespCualitativaOrdenada(resp, p.getMaxOptions(), p.getPreguntaIesima(resp));
+                    } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
+                        excFormatoIncorrecto.printStackTrace();
+                    }
                     ALR.add(r);
                 }
                 else if (preguntas.get(i) instanceof PregCualitativaNoOrdenadaUnica) {
                     int resp = Integer.parseInt(respu);
                     PregCualitativaNoOrdenadaUnica p = (PregCualitativaNoOrdenadaUnica) preguntas.get(i);
-                    Respuesta r = new RespCualitativaNoOrdenadaUnica(resp, p.getPreguntaIesima(resp));
+                    Respuesta r = null;
+                    try {
+                        r = new RespCualitativaNoOrdenadaUnica(resp, p.getPreguntaIesima(resp));
+                    } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
+                        excFormatoIncorrecto.printStackTrace();
+                    }
                     ALR.add(r);
                 }
                 else {
