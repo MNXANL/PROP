@@ -11,7 +11,7 @@ import java.util.*;
  */
 public class RespuestasEncuesta {
     private ArrayList<Respuesta> resps;
-    private Encuesta Encuesta_respondida;
+    private String Encuesta_respondida;
     private Date fecha;
     private String User;
 
@@ -20,7 +20,7 @@ public class RespuestasEncuesta {
         return resps;
     }
 
-    public Encuesta getEncuesta_respondida() {
+    public String getNombreEncuesta_respondida() {
         return Encuesta_respondida;
     }
 
@@ -38,7 +38,7 @@ public class RespuestasEncuesta {
      * @param user El usuario que ha respondido
      */
     public RespuestasEncuesta(Encuesta e, String user) {
-        Encuesta_respondida = e;
+        Encuesta_respondida = e.getTitulo();
         User = user;
         resps = new ArrayList<>();
         fecha = new Date();
@@ -54,7 +54,7 @@ public class RespuestasEncuesta {
      * @param resps Las respuestas de la encuesta en sí
      */
     public RespuestasEncuesta(Encuesta e, String user, ArrayList<Respuesta> resps) {
-        Encuesta_respondida = e;
+        Encuesta_respondida = e.getTitulo();
         User = user;
         this.resps = (ArrayList<Respuesta>) resps.clone();
         this.fecha = new Date();
@@ -104,7 +104,7 @@ public class RespuestasEncuesta {
     }
 
     public String getNombreFichero() {
-        return (Encuesta_respondida.getTitulo() + "_" + User);
+        return (Encuesta_respondida + "_" + User);
     }
 
     /**
@@ -118,38 +118,38 @@ public class RespuestasEncuesta {
 
         // This will reference one line at a time
         String line = null;
-
         try {
             // FileReader reads text files in the default encoding.
             FileReader fileReader = new FileReader(path);
 
             // Always wrap FileReader in BufferedReader.
             BufferedReader bufferedReader = new BufferedReader(fileReader);
-
+            int indexLine = 0;
             int indexPreg = 0;
             while((line = bufferedReader.readLine()) != null) {
                 if (line.equals("Título")) {
                     line = bufferedReader.readLine();
-                    if (line != null) e.setTitulo(line);
+                    if (line != null && !line.equals("")) {
+                        e.setTitulo(line);
+                    }
+                    else if (line != null && line.equals("")) {
+                        //throw new ExcFormatoIncorrecto("Formato incorrecto! ");
+                    }
                 }
                 else if (line.equals("Respuesta pregunta")) {
                     //leer tipo de reespuesta
                     line = bufferedReader.readLine();
                     if (line.equals("RCO")) {
-                        //leer indice escogido y Num opciones
-                        int idx = Integer.parseInt(bufferedReader.readLine());
-                        int nOpts = Integer.parseInt(bufferedReader.readLine());
-                        //leer texto opcion de respuesta
-                        String text = bufferedReader.readLine();
+                            //leer indice escogido y Num opciones
+                            int idx = Integer.parseInt(bufferedReader.readLine());
+                            int nOpts = Integer.parseInt(bufferedReader.readLine());
+                            //leer texto opcion de respuesta
+                            String text = bufferedReader.readLine();
 
-                        RespCualitativaOrdenada resp = null;
-                        try {
+                            RespCualitativaOrdenada resp = null;
                             resp = new RespCualitativaOrdenada(idx, nOpts, text);
-                        } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
-                            excFormatoIncorrecto.printStackTrace();
-                        }
-                        re.resps.add(indexPreg, resp);
-                        indexPreg++;
+                            re.resps.add(indexPreg, resp);
+                            indexPreg++;
                     }
                     else if (line.equals("RN")) {
                         //leer valor, minimo y maximo de la respuesta
@@ -158,11 +158,8 @@ public class RespuestasEncuesta {
                         float max = Float.parseFloat(bufferedReader.readLine());
                         //comprobar que min < max
                         RespNumerica resp = null;
-                        try {
                             resp = new RespNumerica(val, min, max);
-                        } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
-                            excFormatoIncorrecto.printStackTrace();
-                        }
+
                         re.resps.add(indexPreg, resp);
                         indexPreg++;
                     }
@@ -173,19 +170,15 @@ public class RespuestasEncuesta {
                         indexPreg++;
                     }
                     else if (line.equals("RCNOU")) {
-                        //leer indice escogido
-                        int idx = Integer.parseInt(bufferedReader.readLine());
-                        //leer texto opcion de respuesta
-                        String text = bufferedReader.readLine();
+                            //leer indice escogido
+                            int idx = Integer.parseInt(bufferedReader.readLine());
+                            //leer texto opcion de respuesta
+                            String text = bufferedReader.readLine();
 
-                        RespCualitativaNoOrdenadaUnica resp = null;
-                        try {
+                            RespCualitativaNoOrdenadaUnica resp = null;
                             resp = new RespCualitativaNoOrdenadaUnica(idx, text);
-                        } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
-                            excFormatoIncorrecto.printStackTrace();
-                        }
-                        re.resps.add(indexPreg, resp);
-                        indexPreg++;
+                            re.resps.add(indexPreg, resp);
+                            indexPreg++;
                     }
                     else if (line.equals("RCNOM")) {
                         //leer max opciones
@@ -195,6 +188,7 @@ public class RespuestasEncuesta {
                         HashMap<Integer, String> res = new HashMap<>();
                         for (int i = 0; i != max; ++i) {
                             int opt = Integer.parseInt(bufferedReader.readLine());
+                            //if (0 > opt || opt > idx) a;
                             String text = bufferedReader.readLine();
                             res.put(opt, text);
                         }
@@ -257,7 +251,7 @@ public class RespuestasEncuesta {
 
             //Escribimos el título de la encuesta respondida
             bufferedWriter.write("Título\n");
-            bufferedWriter.write(Encuesta_respondida.getTitulo() + "\n");
+            bufferedWriter.write(Encuesta_respondida + "\n");
 
             bufferedWriter.newLine();
 
@@ -342,13 +336,8 @@ public class RespuestasEncuesta {
     }
     @Override
     public int hashCode(){
-        return Objects.hash(Encuesta_respondida.getFecha(),User);
+        return Objects.hash(Encuesta_respondida, User);
     }
 
-    /**
-     *
-     */
-    public Encuesta getEncuesta() {
-        return Encuesta_respondida;
-    }
+
 }

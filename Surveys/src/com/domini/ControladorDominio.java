@@ -110,11 +110,8 @@ public class ControladorDominio {
                 int max = sc.nextInt();
                 sc.nextLine();
                 PregNumerica preg = null;
-                try {
-                    preg = new PregNumerica(tituloP,min,max);
-                } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
-                    excFormatoIncorrecto.printStackTrace();
-                }
+                preg = new PregNumerica(tituloP,min,max);
+
                 e.add_question(preg);
             }
             else if (tipo.toUpperCase().equals("PRL")) {
@@ -238,11 +235,8 @@ public class ControladorDominio {
                         int max = sc.nextInt();
                         sc.nextLine();
                         PregNumerica preg = null;
-                        try {
                             preg = new PregNumerica(tituloP, min, max);
-                        } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
-                            excFormatoIncorrecto.printStackTrace();
-                        }
+
                         e.add_question(index, preg);
                     } else if (tipo.equals("PRL")) {
                         PregRespuestaLibre preg = new PregRespuestaLibre(tituloP);
@@ -305,11 +299,8 @@ public class ControladorDominio {
                         int max = sc.nextInt();
                         sc.nextLine();
                         PregNumerica preg = null;
-                        try {
                             preg = new PregNumerica(tituloP, min, max);
-                        } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
-                            excFormatoIncorrecto.printStackTrace();
-                        }
+
                         e.add_question(preg);
                     } else if (tipo.equals("PRL")) {
                         PregRespuestaLibre preg = new PregRespuestaLibre(tituloP);

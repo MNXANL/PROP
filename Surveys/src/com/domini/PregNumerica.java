@@ -22,9 +22,9 @@ public class PregNumerica extends Pregunta {
      * @param valorMin valor minimo
      * @param valorMax valor maximo
      */
-    public PregNumerica(String titulo, double valorMin, double valorMax) throws ExcFormatoIncorrecto {
+    public PregNumerica(String titulo, double valorMin, double valorMax)  {
         super(titulo);
-        if (valorMin > valorMax) throw new ExcFormatoIncorrecto("Formato incorrecto! Valor min <= Valor max");
+        //if (valorMin > valorMax) throw new ExcFormatoIncorrecto("Formato incorrecto! Valor min <= Valor max");
         this.valorMin = valorMin;
         this.valorMax = valorMax;
     }

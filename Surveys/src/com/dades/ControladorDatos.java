@@ -110,8 +110,11 @@ public class ControladorDatos {
         listOfFiles = folder.listFiles();
 
         for (int i = 0; i < listOfFiles.length; i++) {
+                String path = listOfFiles[i].getAbsolutePath();
+
+
             RespuestasEncuesta re = RespuestasEncuesta.importar(listOfFiles[i].getAbsolutePath());
-            enc.get(re.getEncuesta().getTitulo()).responder(re);
+            enc.get(re.getNombreEncuesta_respondida()).responder(re);
         }
         return enc;
     }
