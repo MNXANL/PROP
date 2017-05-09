@@ -10,7 +10,7 @@ import java.util.*;
 public class Clustering {
     private Encuesta E;
     private int k;
-    private HashSet<Integer> skipColumns;
+    boolean [][] skippables;
 
     /**
      *Creadora de clustering
@@ -20,7 +20,7 @@ public class Clustering {
     public Clustering(Encuesta E, int k){
         this.E = new Encuesta(E);
         this.k = k;
-        skipColumns = new HashSet<>();
+        skippables = new boolean[E.getCjtRespsEnc().size()][E.getCjtRespsEnc().get(0).getResps().size()];
     }
 
     /**
@@ -83,7 +83,6 @@ public class Clustering {
                 ArrayList<Respuesta> resps = centroids.get(i).getResps();
 
                 for (int k = 0; k != resps.size(); ++k) {  // por cada Respuesta del conjunto
-                    if(!skipColumns.contains(k)) {
                         if (resps.get(k) instanceof RespNumerica) {
                             newCentroid.getResps().add(Respnum_avg(i, k, assig, RE));
                         }
@@ -99,7 +98,6 @@ public class Clustering {
                         if (resps.get(k) instanceof RespLibre) {
                             newCentroid.getResps().add(RespLib_maxfreq(i, k, assig, RE));
                         }
-                    }
 
                 }
                 RespuestasEncuesta oldCentroid = centroids.get(i);
@@ -132,15 +130,16 @@ public class Clustering {
         HashMap<String,Integer> occ = new HashMap<>(); //por cada palabra, cuantas veces aparece
         for(int i = 0; i!= RE.size(); ++i){
             if(assig.get(i)==cli){
-                RespLibre aux =(RespLibre) RE.get(i).getResps().get(rn);
-                String s = aux.get();
-                String [] words = s.split(" ");
-                for(String w:words){
-                    if(occ.containsKey(w)){
-                        occ.put(w,occ.get(w)+1);
+                if(!skippables[i][rn]) {
+                    RespLibre aux = (RespLibre) RE.get(i).getResps().get(rn);
+                    String s = aux.get();
+                    String[] words = s.split(" ");
+                    for (String w : words) {
+                        if (occ.containsKey(w)) {
+                            occ.put(w, occ.get(w) + 1);
+                        } else
+                            occ.put(w, 1);
                     }
-                    else
-                        occ.put(w,1);
                 }
             }
         }
@@ -170,19 +169,21 @@ public class Clustering {
         HashMap<Integer,String> maxValue = new HashMap<>();
         for(int i = 0; i != RE.size(); ++i){
             if(assig.get(i)==cli){      //solo tratamos los que pertenecen al cluster que nos piden
-                int count = 0;
-                RespCualitativaNoOrdenadaMultiple r = (RespCualitativaNoOrdenadaMultiple) RE.get(i).getResps().get(rn);
-                for(int j = 0; j!= RE.size(); ++j){
-                    if(assig.get(j)==cli){
-                        RespCualitativaNoOrdenadaMultiple aux = (RespCualitativaNoOrdenadaMultiple) RE.get(j).getResps().get(rn);
-                        HashSet<Integer> intersection = new HashSet<>(r.get());
-                        intersection.retainAll(aux.get());
-                        if(intersection.size() == aux.get().size()) ++count;
+                if(!skippables[i][rn]) {
+                    int count = 0;
+                    RespCualitativaNoOrdenadaMultiple r = (RespCualitativaNoOrdenadaMultiple) RE.get(i).getResps().get(rn);
+                    for (int j = 0; j != RE.size(); ++j) {
+                        if (assig.get(j) == cli) {
+                            RespCualitativaNoOrdenadaMultiple aux = (RespCualitativaNoOrdenadaMultiple) RE.get(j).getResps().get(rn);
+                            HashSet<Integer> intersection = new HashSet<>(r.get());
+                            intersection.retainAll(aux.get());
+                            if (intersection.size() == aux.get().size()) ++count;
+                        }
                     }
-                }
-                if(count > maxCount){
-                    maxCount = count;
-                    maxValue = new HashMap<>(r.getMap());
+                    if (count > maxCount) {
+                        maxCount = count;
+                        maxValue = new HashMap<>(r.getMap());
+                    }
                 }
 
             }
@@ -206,18 +207,20 @@ public class Clustering {
         String text = "";
         for(int i = 0; i != RE.size(); ++i){
             if(assig.get(i) == cli){      //solo tratamos los que pertenecen al cluster que nos piden
-                int count = 0;
-                RespCualitativaNoOrdenadaUnica r = (RespCualitativaNoOrdenadaUnica) RE.get(i).getResps().get(rn);
-                for(int j = 0; j!= RE.size(); ++j){
-                    if(assig.get(j)==cli){
-                        RespCualitativaNoOrdenadaUnica aux = (RespCualitativaNoOrdenadaUnica) RE.get(j).getResps().get(rn);
-                        if (r.get()==aux.get()) ++count;
+                if(!skippables[i][rn]) {
+                    int count = 0;
+                    RespCualitativaNoOrdenadaUnica r = (RespCualitativaNoOrdenadaUnica) RE.get(i).getResps().get(rn);
+                    for (int j = 0; j != RE.size(); ++j) {
+                        if (assig.get(j) == cli) {
+                            RespCualitativaNoOrdenadaUnica aux = (RespCualitativaNoOrdenadaUnica) RE.get(j).getResps().get(rn);
+                            if (r.get() == aux.get()) ++count;
+                        }
                     }
-                }
-                if(count > maxCount){
-                    maxCount = count;
-                    maxValue = r.get();
-                    text = r.getText();
+                    if (count > maxCount) {
+                        maxCount = count;
+                        maxValue = r.get();
+                        text = r.getText();
+                    }
                 }
 
             }
@@ -239,17 +242,19 @@ public class Clustering {
         maxCount=maxValue=-1;
         for(int i = 0; i != RE.size(); ++i){
             if(assig.get(i)==cli){      //solo tratamos los que pertenecen al cluster que nos piden
-                int count = 0;
-                RespCualitativaOrdenada r = (RespCualitativaOrdenada) RE.get(i).getResps().get(rn);
-                for(int j = 0; j!= RE.size(); ++j){
-                    if(assig.get(j)==cli){
-                        RespCualitativaOrdenada aux = (RespCualitativaOrdenada) RE.get(j).getResps().get(rn);
-                        if(r.get()==aux.get()) ++count;
+                if(!skippables[i][rn]) {
+                    int count = 0;
+                    RespCualitativaOrdenada r = (RespCualitativaOrdenada) RE.get(i).getResps().get(rn);
+                    for (int j = 0; j != RE.size(); ++j) {
+                        if (assig.get(j) == cli) {
+                            RespCualitativaOrdenada aux = (RespCualitativaOrdenada) RE.get(j).getResps().get(rn);
+                            if (r.get() == aux.get()) ++count;
+                        }
                     }
-                }
-                if(count > maxCount){
-                    maxCount = count;
-                    maxValue = r.get();
+                    if (count > maxCount) {
+                        maxCount = count;
+                        maxValue = r.get();
+                    }
                 }
 
             }
@@ -288,13 +293,11 @@ public class Clustering {
     private double answer_dist(final RespuestasEncuesta r1,final RespuestasEncuesta r2){
         double acc = 0;
         for (int i = 0; i != r1.getResps().size(); ++i) {
-            if(!skipColumns.contains(i)){
                 if (r2.getResps().get(i) instanceof RespVacia && !(r1.getResps().get(i) instanceof RespVacia))
                     acc += 1;
                 else {
                     acc += r1.getResps().get(i).distance(r2.getResps().get(i));
                 }
-            }
         }
         //System.out.println ("Distance: "+acc/r1.getResps().size());
         return acc/r1.getResps().size();
@@ -319,20 +322,17 @@ public class Clustering {
     }
 
     /**
-     * Convierte las respuestas vacias a un formato tratable por el algoritmo
+     * si hay una pregunta que solo ha sido contestada se anyade a skippables
      * @param RE todas las respuestas de los usuarios a la encuesta
      */
     private void preprocess(ArrayList<RespuestasEncuesta> RE){
         RespuestasEncuesta r; //auxiliar
         int n = RE.get(0).getResps().size();
-        for(int i = 0; i != n ; ++i) {  //por cada respuesta de la encuesta
-            int nVacias = 0; // numero de respuestas vacias a la pregunta i
-            for (int j = 0; j != RE.size(); ++j) {
-                r = RE.get(j);
-                if(r.getResps().get(i) instanceof RespVacia)++nVacias;
+
+        for(int i = 0; i != RE.size() ; ++i)   //por cada usuario encuestado
+            for(int j = 0; j != n; ++j){        //por cada pregunta
+                if(RE.get(i).getResps().get(j) instanceof RespVacia)
+                    skippables[i][j] = true;
             }
-            if(nVacias > RE.size()/2)   // mas de la mitad no han contestado la pregunta i
-                skipColumns.add(i);
-        }
     }
 }
