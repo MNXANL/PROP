@@ -15,9 +15,7 @@ public class RespNumerica extends Respuesta{
      * @param min valor maximo posible
      * @param max valor minimo posible
      */
-    public RespNumerica(double f, double min, double max) throws ExcFormatoIncorrecto {
-        if (min > max || f < min || f > max)
-            throw new ExcFormatoIncorrecto("Formato de números incorrecto!");
+    public RespNumerica(double f, double min, double max){
         resp=f;
         this.min = min;
         this.max = max;
@@ -27,9 +25,7 @@ public class RespNumerica extends Respuesta{
      * creador de copia
      * @param r RespNumerica a copiar
      */
-    public RespNumerica(RespNumerica r) throws ExcFormatoIncorrecto {
-        if (r.min > r.max || r.resp < r.min || r.resp > r.max)
-            throw new ExcFormatoIncorrecto("Formato incorrecto! Valor min <= [Tu valor] <= Valor max");
+    public RespNumerica(RespNumerica r){
         this.resp = r.resp;
         this.min = r.min;
         this.max = r.max;
