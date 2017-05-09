@@ -37,8 +37,8 @@ public class RespuestasEncuesta {
      * @param e (El titulo de la) La encuesta a la que corresponden las preguntas
      * @param user El usuario que ha respondido
      */
-    public RespuestasEncuesta(Encuesta e, String user) {
-        Encuesta_respondida = e.getTitulo();
+    public RespuestasEncuesta(String e, String user) {
+        Encuesta_respondida = e;
         User = user;
         resps = new ArrayList<>();
         fecha = new Date();
@@ -111,85 +111,117 @@ public class RespuestasEncuesta {
      * importar una encuesta externa al programa
      * @param path El lugar donde encontrar la encuesta
      */
-    public static RespuestasEncuesta importar (String path){
-        Encuesta e = new Encuesta();
-        Usuario u = new Usuario(" ");
-        RespuestasEncuesta re = new RespuestasEncuesta(e, u.getUsername());
-
+    public static RespuestasEncuesta importar (String path) throws ExcFormatoIncorrecto{
+        RespuestasEncuesta re = null;
         // This will reference one line at a time
         String line = null;
+        int contLinea = 0;
         try {
             // FileReader reads text files in the default encoding.
             FileReader fileReader = new FileReader(path);
 
             // Always wrap FileReader in BufferedReader.
             BufferedReader bufferedReader = new BufferedReader(fileReader);
-            int indexLine = 0;
             int indexPreg = 0;
+            String TitleEnc = "";
+            boolean hasTitulo = false;
+            boolean hasUsuario = false;
             while((line = bufferedReader.readLine()) != null) {
+                ++contLinea;
                 if (line.equals("Título")) {
-                    line = bufferedReader.readLine();
-                    if (line != null && !line.equals("")) {
-                        e.setTitulo(line);
+                    line = bufferedReader.readLine(); ++contLinea;
+                    if (line == null) {
+                        ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Encuesta inacabada");
+                        throw exc;
                     }
-                    else if (line != null && line.equals("")) {
-                        //throw new ExcFormatoIncorrecto("Formato incorrecto! ");
+                    else if (line.equals("")){
+                        ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Título de encuesta vacío");
+                        throw exc;
                     }
+                    else {
+                        TitleEnc = line;
+                    }
+                    hasTitulo = true;
                 }
-                else if (line.equals("Respuesta pregunta")) {
+                else if (line.equals("Usuario") && hasTitulo) {
+                    String username = bufferedReader.readLine(); ++contLinea;
+                    if (username == null) {
+                        ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Encuesta inacabada");
+                        throw exc;
+                    }
+                    else if (username.equals("")) {
+                        ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Usuario vacío");
+                        throw exc;
+                    }
+                    re = new RespuestasEncuesta(TitleEnc, username);
+                    hasUsuario = true;
+                }
+                else if (line.equals("Fecha") && hasUsuario) {
+                    String f = bufferedReader.readLine(); ++contLinea;
+                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+                    re.fecha = sdf.parse(f);
+                }
+                else if (line.equals("Respuesta pregunta") && hasUsuario) {
                     //leer tipo de reespuesta
-                    line = bufferedReader.readLine();
+                    line = bufferedReader.readLine(); ++contLinea;
                     if (line.equals("RCO")) {
-                            //leer indice escogido y Num opciones
-                            int idx = Integer.parseInt(bufferedReader.readLine());
-                            int nOpts = Integer.parseInt(bufferedReader.readLine());
-                            //leer texto opcion de respuesta
-                            String text = bufferedReader.readLine();
+                        //leer indice escogido y Num opciones
+                        int idx = Integer.parseInt(bufferedReader.readLine()); ++contLinea;
+                        int nOpts = Integer.parseInt(bufferedReader.readLine()); ++contLinea;
+                        //leer texto opcion de respuesta
+                        String text = bufferedReader.readLine(); ++contLinea;
 
-                            RespCualitativaOrdenada resp = null;
-                            resp = new RespCualitativaOrdenada(idx, nOpts, text);
-                            re.resps.add(indexPreg, resp);
-                            indexPreg++;
+                        RespCualitativaOrdenada resp = null;
+                        resp = new RespCualitativaOrdenada(idx, nOpts, text);
+                        re.resps.add(indexPreg, resp);
+                        indexPreg++;
                     }
                     else if (line.equals("RN")) {
                         //leer valor, minimo y maximo de la respuesta
-                        float val = Float.parseFloat(bufferedReader.readLine());
-                        float min = Float.parseFloat(bufferedReader.readLine());
-                        float max = Float.parseFloat(bufferedReader.readLine());
+                        float val = Float.parseFloat(bufferedReader.readLine()); ++contLinea;
+                        float min = Float.parseFloat(bufferedReader.readLine()); ++contLinea;
+                        float max = Float.parseFloat(bufferedReader.readLine()); ++contLinea;
                         //comprobar que min < max
+                        if (min > val || min > max || val > max) {
+                            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Rangos numéricos incorrectos");
+                            throw exc;
+                        }
                         RespNumerica resp = null;
-                            resp = new RespNumerica(val, min, max);
+                        resp = new RespNumerica(val, min, max);
 
                         re.resps.add(indexPreg, resp);
                         indexPreg++;
                     }
                     else if (line.equals("RL")) {
-                        String answer = bufferedReader.readLine();
+                        String answer = bufferedReader.readLine(); ++contLinea;
                         RespLibre resp = new RespLibre(answer);
                         re.resps.add(indexPreg, resp);
                         indexPreg++;
                     }
                     else if (line.equals("RCNOU")) {
-                            //leer indice escogido
-                            int idx = Integer.parseInt(bufferedReader.readLine());
-                            //leer texto opcion de respuesta
-                            String text = bufferedReader.readLine();
+                        //leer indice escogido
+                        int idx = Integer.parseInt(bufferedReader.readLine()); ++contLinea;
+                        //leer texto opcion de respuesta
+                        String text = bufferedReader.readLine(); ++contLinea;
 
-                            RespCualitativaNoOrdenadaUnica resp = null;
-                            resp = new RespCualitativaNoOrdenadaUnica(idx, text);
-                            re.resps.add(indexPreg, resp);
-                            indexPreg++;
+                        RespCualitativaNoOrdenadaUnica resp = null;
+                        resp = new RespCualitativaNoOrdenadaUnica(idx, text);
+                        re.resps.add(indexPreg, resp);
+                        indexPreg++;
                     }
                     else if (line.equals("RCNOM")) {
                         //leer max opciones
-                        int max = Integer.parseInt(bufferedReader.readLine());
+                        int max = Integer.parseInt(bufferedReader.readLine()); ++contLinea;
 
                         //leer todas las respuestas elegidas
                         HashMap<Integer, String> res = new HashMap<>();
                         for (int i = 0; i != max; ++i) {
-                            int opt = Integer.parseInt(bufferedReader.readLine());
-                            //if (0 > opt || opt > idx) a;
-                            String text = bufferedReader.readLine();
+                            int opt = Integer.parseInt(bufferedReader.readLine()); ++contLinea;
+                            if (0 > opt) {
+                                ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Formato de fecha incorrecto. Formato a seguir: dd/MM/aa hh:mm:ss");
+                                throw exc;
+                            };
+                            String text = bufferedReader.readLine(); ++contLinea;
                             res.put(opt, text);
                         }
 
@@ -197,25 +229,23 @@ public class RespuestasEncuesta {
                         re.resps.add(indexPreg, resp);
                         indexPreg++;
                     }
-                    else { //line.equals("RV")
+                    else if (line.equals("RV")) {
                         RespVacia resp = new RespVacia();
                         re.resps.add(indexPreg, resp);
                         indexPreg++;
                     }
+                    else {
+                        ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en línea "+Integer.toString(contLinea)+". Tipo de respuesta incorrecto.");
+                        throw exc;
+                    }
                 }
-                else if (line.equals("Fecha")) {
-                    String f = bufferedReader.readLine();
-                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-                    re.fecha = sdf.parse(f);
-                }
-                else if (line.equals("Usuario")) {
-                    String f = bufferedReader.readLine();
-                    re.User = f;
-                }
-                else if (line.equals("Final respuestas encuesta")) {
+                else if (line.equals("Final respuestas encuesta") && hasUsuario) {
                     //End
                 }
-
+                else {
+                    ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en línea "+Integer.toString(contLinea)+". Palabra clave incorrecta.");
+                    throw exc;
+                }
                 //System.out.println(line);
             }
 
@@ -231,8 +261,14 @@ public class RespuestasEncuesta {
             System.out.println(
                     "Error reading file '"
                             + path + "'");
-        } catch (ParseException e1) {
-            e1.printStackTrace();
+        }
+        catch (ParseException e1) {
+            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Formato de fecha incorrecto. Formato a seguir: dd/MM/aa hh:mm:ss");
+            throw exc;
+        }
+        catch (NumberFormatException nfe) {
+            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Número mal definido.");
+            throw exc;
         }
 
         //DEBUG: re.printarRespuestas();
