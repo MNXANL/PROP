@@ -327,6 +327,9 @@ public class Encuesta {
                 else if (line.equals("Final encuesta") || line.equals("")) {
 
                 }
+                else if (line.charAt(0)=='#'){
+                    contLinea++;
+                }
                 else {
                     //throw exception
                     ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en línea "+Integer.toString(contLinea)+". Palabra clave incorrecta.");
@@ -474,20 +477,25 @@ public class Encuesta {
                 else if (preguntas.get(i) instanceof PregNumerica) {
                     float resp = Float.parseFloat(respu);
                     PregNumerica p = (PregNumerica) preguntas.get(i);
-                    Respuesta r = new RespNumerica(resp, p.getValorMin(), p.getValorMax());
+                    Respuesta r = null;
+                    r = new RespNumerica(resp, p.getValorMin(), p.getValorMax());
+
                     ALR.add(r);
                 }
                 else if (preguntas.get(i) instanceof PregCualitativaOrdenada) {
                     int resp = Integer.parseInt(respu);
                     ++resp;
                     PregCualitativaOrdenada p = (PregCualitativaOrdenada) preguntas.get(i);
-                    Respuesta r = new RespCualitativaOrdenada(resp, p.getMaxOptions(), p.getPreguntaIesima(resp));
+                    Respuesta r = null;
+                    r = new RespCualitativaOrdenada(resp, p.getMaxOptions(), p.getPreguntaIesima(resp));
                     ALR.add(r);
                 }
                 else if (preguntas.get(i) instanceof PregCualitativaNoOrdenadaUnica) {
                     int resp = Integer.parseInt(respu);
                     PregCualitativaNoOrdenadaUnica p = (PregCualitativaNoOrdenadaUnica) preguntas.get(i);
-                    Respuesta r = new RespCualitativaNoOrdenadaUnica(resp, p.getPreguntaIesima(resp));
+                    Respuesta r = null;
+                    r = new RespCualitativaNoOrdenadaUnica(resp, p.getPreguntaIesima(resp));
+
                     ALR.add(r);
                 }
                 else {
