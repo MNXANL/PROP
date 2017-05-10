@@ -31,7 +31,7 @@ public class ClusteringUTest {
             assig.add(0);
         for (Integer i = 0; i != 5; ++i) {
             String userName = new String("TestUser " + i);
-            RespuestasEncuesta RE = new RespuestasEncuesta(E, userName);
+            RespuestasEncuesta RE = new RespuestasEncuesta(E.getTitulo(), userName);
             RespLibre r = new RespLibre(oficios[i]);
             RE.addRespuesta(r);
             REs.add(RE);
@@ -55,7 +55,7 @@ public class ClusteringUTest {
         while (assig.size() != 3)     //a funciones del test todas las respuestas son de un cluster 0
             assig.add(0);
 
-        RespuestasEncuesta RE = new RespuestasEncuesta(E, "TestUser1");
+        RespuestasEncuesta RE = new RespuestasEncuesta(E.getTitulo(), "TestUser1");
         HashMap<Integer, String> h = new HashMap<>();
         h.put(0, "azul");
         h.put(4, "gris");
@@ -64,7 +64,7 @@ public class ClusteringUTest {
         RE.addRespuesta(r);
         REs.add(RE);
 
-        RespuestasEncuesta RE2 = new RespuestasEncuesta(E, "TestUser2");
+        RespuestasEncuesta RE2 = new RespuestasEncuesta(E.getTitulo(), "TestUser2");
         HashMap<Integer, String> h2 = new HashMap<>();
         h2.put(3, "blanco");
         h2.put(4, "gris");
@@ -73,7 +73,7 @@ public class ClusteringUTest {
         RE2.addRespuesta(r2);
         REs.add(RE2);
 
-        RespuestasEncuesta RE3 = new RespuestasEncuesta(E, "TestUser3");
+        RespuestasEncuesta RE3 = new RespuestasEncuesta(E.getTitulo(), "TestUser3");
         HashMap<Integer, String> h3 = new HashMap<>();
         h3.put(3, "blanco");
         h3.put(4, "gris");
@@ -107,7 +107,7 @@ public class ClusteringUTest {
             assig.add(0);
         for (Integer i = 0; i != 5; ++i) {
             String userName = new String("TestUser " + i);
-            RespuestasEncuesta RE = new RespuestasEncuesta(E, userName);
+            RespuestasEncuesta RE = new RespuestasEncuesta(E.getTitulo(), userName);
             RespCualitativaNoOrdenadaUnica r = new RespCualitativaNoOrdenadaUnica(i % 4, "da igual");
             RE.addRespuesta(r);
             REs.add(RE);
@@ -131,7 +131,7 @@ public class ClusteringUTest {
             assig.add(0);
         for (Integer i = 0; i != 5; ++i) {
             String userName = new String("TestUser " + i);
-            RespuestasEncuesta RE = new RespuestasEncuesta(E, userName);
+            RespuestasEncuesta RE = new RespuestasEncuesta(E.getTitulo(), userName);
             RespCualitativaOrdenada r = new RespCualitativaOrdenada(i % 4 + 1, 5, "da igual");
             RE.addRespuesta(r);
             REs.add(RE);
@@ -155,7 +155,7 @@ public class ClusteringUTest {
             assig.add(0);
         for (Integer i = 0; i != 5; ++i) {
             String userName = new String("TestUser " + i);
-            RespuestasEncuesta RE = new RespuestasEncuesta(E, userName);
+            RespuestasEncuesta RE = new RespuestasEncuesta(E.getTitulo(), userName);
             RespNumerica r = new RespNumerica(10 * i, 0, 1000000);
             RE.addRespuesta(r);
             REs.add(RE);

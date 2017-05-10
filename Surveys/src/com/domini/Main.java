@@ -77,28 +77,28 @@ public class Main {
                     PregNumerica P2 = new PregNumerica("nota de prop?",0,10);
                     E.add_question(P2);
 
-                    RespuestasEncuesta RE1 = new RespuestasEncuesta(E,"Manolo0");
+                    RespuestasEncuesta RE1 = new RespuestasEncuesta(E.getTitulo(),"Manolo0");
                     RespCualitativaOrdenada r1 = new RespCualitativaOrdenada(0,4,"nada");
                     RE1.addRespuesta(r1);
                     RespNumerica r11 = new RespNumerica(4,0,10);
                     RE1.addRespuesta(r11);
                     E.responder(RE1);
 
-                    RespuestasEncuesta RE2 = new RespuestasEncuesta(E,"Pepe1");
+                    RespuestasEncuesta RE2 = new RespuestasEncuesta(E.getTitulo(),"Pepe1");
                     RespCualitativaOrdenada r2 = new RespCualitativaOrdenada(1,4,"nada");
                     RE2.addRespuesta(r2);
                     RespNumerica r22 = new RespNumerica(6,0,10);
                     RE2.addRespuesta(r22);
                     E.responder(RE2);
 
-                    RespuestasEncuesta RE3 = new RespuestasEncuesta(E,"Juan2");
+                    RespuestasEncuesta RE3 = new RespuestasEncuesta(E.getTitulo(),"Juan2");
                     RespCualitativaOrdenada r3 = new RespCualitativaOrdenada(2,4,"meh");
                     RE3.addRespuesta(r3);
                     RespNumerica r33 = new RespNumerica(8,0,10);
                     RE3.addRespuesta(r33);
                     E.responder(RE3);
 
-                    RespuestasEncuesta RE4 = new RespuestasEncuesta(E,"Rafa3");
+                    RespuestasEncuesta RE4 = new RespuestasEncuesta(E.getTitulo(),"Rafa3");
                     RespCualitativaOrdenada r4 = new RespCualitativaOrdenada(3,4,"mucho");
                     RE4.addRespuesta(r4);
                     RespNumerica r44 = new RespNumerica(10,0,10);

@@ -19,10 +19,10 @@ public class DriverClustering {
     }
     //run es la funcion que llama a kmeans dandole el estado inicial, no tiene sentido probar run y kmeans por separado
     public static void TestRun(Encuesta E){
-        RespuestasEncuesta r1 = new RespuestasEncuesta(E,"Joan");
-        RespuestasEncuesta r2 = new RespuestasEncuesta(E,"Oriol");
-        RespuestasEncuesta r3 = new RespuestasEncuesta(E,"Marta");
-        RespuestasEncuesta r4 = new RespuestasEncuesta(E,"Anna");
+        RespuestasEncuesta r1 = new RespuestasEncuesta(E.getTitulo(),"Joan");
+        RespuestasEncuesta r2 = new RespuestasEncuesta(E.getTitulo(),"Oriol");
+        RespuestasEncuesta r3 = new RespuestasEncuesta(E.getTitulo(),"Marta");
+        RespuestasEncuesta r4 = new RespuestasEncuesta(E.getTitulo(),"Anna");
 
         RespCualitativaOrdenada ro1 = new RespCualitativaOrdenada(0,5,"Muy poco");
         RespCualitativaOrdenada ro2 = new RespCualitativaOrdenada(4,5,"Mucho");
@@ -88,7 +88,7 @@ public class DriverClustering {
             assig.add(0);
         for(Integer i = 0; i!= 5; ++i) {
             String userName = new String("TestUser "+i);
-            RespuestasEncuesta RE = new RespuestasEncuesta(E, userName);
+            RespuestasEncuesta RE = new RespuestasEncuesta(E.getTitulo(), userName);
             RespLibre r = new RespLibre(oficios[i]);
             RE.addRespuesta(r);
             REs.add(RE);
@@ -114,21 +114,21 @@ public class DriverClustering {
         while(assig.size()!=3)     //a funciones del test todas las respuestas son de un cluster 0
             assig.add(0);
 
-        RespuestasEncuesta RE = new RespuestasEncuesta(E, "TestUser1");
+        RespuestasEncuesta RE = new RespuestasEncuesta(E.getTitulo(), "TestUser1");
         HashMap<Integer,String> h = new HashMap<>();
         h.put(0,"azul");h.put(4,"gris");h.put(2,"rojo");
         RespCualitativaNoOrdenadaMultiple r = new RespCualitativaNoOrdenadaMultiple(h);
         RE.addRespuesta(r);
         REs.add(RE);
 
-        RespuestasEncuesta RE2 = new RespuestasEncuesta(E, "TestUser2");
+        RespuestasEncuesta RE2 = new RespuestasEncuesta(E.getTitulo(), "TestUser2");
         HashMap<Integer,String> h2 = new HashMap<>();
         h2.put(3,"blanco");h2.put(4,"gris");h2.put(2,"rojo");
         RespCualitativaNoOrdenadaMultiple r2 = new RespCualitativaNoOrdenadaMultiple(h2);
         RE2.addRespuesta(r2);
         REs.add(RE2);
 
-        RespuestasEncuesta RE3 = new RespuestasEncuesta(E, "TestUser3");
+        RespuestasEncuesta RE3 = new RespuestasEncuesta(E.getTitulo(), "TestUser3");
         HashMap<Integer,String> h3 = new HashMap<>();
         h3.put(3,"blanco");h3.put(4,"gris");h3.put(2,"rojo");
         RespCualitativaNoOrdenadaMultiple r3 = new RespCualitativaNoOrdenadaMultiple(h3);
@@ -162,7 +162,7 @@ public class DriverClustering {
             assig.add(0);
         for(Integer i = 0; i!= 5; ++i) {
             String userName = new String("TestUser "+i);
-            RespuestasEncuesta RE = new RespuestasEncuesta(E, userName);
+            RespuestasEncuesta RE = new RespuestasEncuesta(E.getTitulo(), userName);
             RespCualitativaNoOrdenadaUnica r = new RespCualitativaNoOrdenadaUnica(i%4,"da igual");
             RE.addRespuesta(r);
             REs.add(RE);
@@ -188,7 +188,7 @@ public class DriverClustering {
             assig.add(0);
         for(Integer i = 0; i!= 5; ++i) {
             String userName = new String("TestUser "+i);
-            RespuestasEncuesta RE = new RespuestasEncuesta(E, userName);
+            RespuestasEncuesta RE = new RespuestasEncuesta(E.getTitulo(), userName);
             RespCualitativaOrdenada r = new RespCualitativaOrdenada(i%4+1,5,"da igual");
             RE.addRespuesta(r);
             REs.add(RE);
@@ -214,7 +214,7 @@ public class DriverClustering {
             assig.add(0);
         for(Integer i = 0; i!= 5; ++i) {
             String userName = new String("TestUser "+i);
-            RespuestasEncuesta RE = new RespuestasEncuesta(E, userName);
+            RespuestasEncuesta RE = new RespuestasEncuesta(E.getTitulo(), userName);
             RespNumerica r = new RespNumerica(10*i,0,1000000);
             RE.addRespuesta(r);
             REs.add(RE);
@@ -229,8 +229,8 @@ public class DriverClustering {
     }
     public static void Testanswer_dist(){
         Encuesta aux = new Encuesta("aux");
-        RespuestasEncuesta r1 = new RespuestasEncuesta(aux,"Joan");
-        RespuestasEncuesta r2 = new RespuestasEncuesta(aux,"Oriol");
+        RespuestasEncuesta r1 = new RespuestasEncuesta(aux.getTitulo(),"Joan");
+        RespuestasEncuesta r2 = new RespuestasEncuesta(aux.getTitulo(),"Oriol");
 
         RespLibre l1 = new RespLibre("Soy una Respuesta Libre e independiente, no necesito a ningún hombre");
         RespLibre l2 = new RespLibre("Soy una Respuesta Libre pero lo de independiente no está tan claro");
@@ -257,15 +257,15 @@ public class DriverClustering {
     }
     public static void Testshow_clusters(){
         Encuesta aux = new Encuesta("aux");
-        RespuestasEncuesta r1 = new RespuestasEncuesta(aux,"Joan");
-        RespuestasEncuesta r2 = new RespuestasEncuesta(aux,"Oriol");
-        RespuestasEncuesta r3 = new RespuestasEncuesta(aux,"Enric");
-        RespuestasEncuesta r4 = new RespuestasEncuesta(aux,"Pere");
-        RespuestasEncuesta r5 = new RespuestasEncuesta(aux,"Jaume");
-        RespuestasEncuesta r6 = new RespuestasEncuesta(aux,"Pau");
-        RespuestasEncuesta r7 = new RespuestasEncuesta(aux,"Albert");
-        RespuestasEncuesta r8 = new RespuestasEncuesta(aux,"Anna");
-        RespuestasEncuesta r9 = new RespuestasEncuesta(aux,"Maria");
+        RespuestasEncuesta r1 = new RespuestasEncuesta(aux.getTitulo(),"Joan");
+        RespuestasEncuesta r2 = new RespuestasEncuesta(aux.getTitulo(),"Oriol");
+        RespuestasEncuesta r3 = new RespuestasEncuesta(aux.getTitulo(),"Enric");
+        RespuestasEncuesta r4 = new RespuestasEncuesta(aux.getTitulo(),"Pere");
+        RespuestasEncuesta r5 = new RespuestasEncuesta(aux.getTitulo(),"Jaume");
+        RespuestasEncuesta r6 = new RespuestasEncuesta(aux.getTitulo(),"Pau");
+        RespuestasEncuesta r7 = new RespuestasEncuesta(aux.getTitulo(),"Albert");
+        RespuestasEncuesta r8 = new RespuestasEncuesta(aux.getTitulo(),"Anna");
+        RespuestasEncuesta r9 = new RespuestasEncuesta(aux.getTitulo(),"Maria");
         ArrayList<RespuestasEncuesta> Rs = new ArrayList<>();
         Rs.add(r1);Rs.add(r2);Rs.add(r3);Rs.add(r4);Rs.add(r5);
         Rs.add(r6);Rs.add(r7);Rs.add(r8);Rs.add(r9);

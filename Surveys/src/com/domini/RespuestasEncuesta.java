@@ -178,9 +178,9 @@ public class RespuestasEncuesta {
                     }
                     else if (line.equals("RN")) {
                         //leer valor, minimo y maximo de la respuesta
-                        float val = Float.parseFloat(bufferedReader.readLine()); ++contLinea;
-                        float min = Float.parseFloat(bufferedReader.readLine()); ++contLinea;
-                        float max = Float.parseFloat(bufferedReader.readLine()); ++contLinea;
+                        double val = Double.parseDouble(bufferedReader.readLine()); ++contLinea;
+                        double min = Double.parseDouble(bufferedReader.readLine()); ++contLinea;
+                        double max = Double.parseDouble(bufferedReader.readLine()); ++contLinea;
                         //comprobar que min < max
                         if (min > val || min > max || val > max) {
                             ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Rangos numéricos incorrectos");
@@ -239,9 +239,8 @@ public class RespuestasEncuesta {
                         throw exc;
                     }
                 }
-                else if (line.equals("Final respuestas encuesta") && hasUsuario) {
-                    //End
-                }
+                else if (line.equals("Final respuestas encuesta") && hasUsuario) { }
+                else if (line.equals("")) {}
                 else {
                     ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en línea "+Integer.toString(contLinea)+". Palabra clave incorrecta.");
                     throw exc;

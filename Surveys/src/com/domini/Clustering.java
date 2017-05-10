@@ -79,7 +79,7 @@ public class Clustering {
         for(int i = 0; i!= centroids.size(); ++i){ //por cada centroide de un cluster
             if(assig.contains(i)) {//no podemos recalcular los centroides de clusters que estan vacios
 
-                RespuestasEncuesta newCentroid = new RespuestasEncuesta(E, "Centroid " + i);
+                RespuestasEncuesta newCentroid = new RespuestasEncuesta(E.getTitulo(), "Centroid " + i);
                 ArrayList<Respuesta> resps = centroids.get(i).getResps();
 
                 for (int k = 0; k != resps.size(); ++k) {  // por cada Respuesta del conjunto
