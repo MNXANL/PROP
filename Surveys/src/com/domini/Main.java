@@ -3,6 +3,9 @@ package com.domini;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
+import com.presentacio.*;
+
+import javax.swing.*;
 
 public class Main {
 
@@ -27,6 +30,15 @@ public class Main {
     }
 
     public static void main(String[] args) throws ExcFormatoIncorrecto{
+        //esto no deberia ir aquí
+        JFrame jf = new JFrame("Surveys");
+        jf.setContentPane(new LogIn().getPanel1());
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.pack();
+        jf.setVisible(true);
+        LogIn li = new LogIn();
+
+
         ControladorDominio cd = new ControladorDominio();
         int hasLogIn = 0;
 
