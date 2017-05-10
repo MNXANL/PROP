@@ -280,7 +280,6 @@ public class DriverClustering {
     }
 
     public static void main (String [] args) throws ExcFormatoIncorrecto{
-        System.out.println("Importando encuesta `JpruebaClustering` para realizar pruebas");
         Encuesta E = Encuesta.importar("src/tests/domini/Clustering/JpruebaClustering");
         cl = new Clustering(E,2);
         Scanner sc = new Scanner(System.in);

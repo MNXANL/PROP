@@ -322,6 +322,9 @@ public class Encuesta {
                 else if (line.equals("Final encuesta") || line.equals("")) {
 
                 }
+                else if (line.charAt(0)=='#'){
+                    contLinea++;
+                }
                 else {
                     //throw exception
                     ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en línea "+Integer.toString(contLinea)+". Palabra clave incorrecta.");

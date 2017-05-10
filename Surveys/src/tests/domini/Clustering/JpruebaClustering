@@ -1,13 +1,13 @@
-Descripción: Una pregunta representativa de cada tipo
+#Descripción: Una pregunta representativa de cada tipo
 
-El objetivo de esta prueba es tener una respuesta de cada tipo
-para realizar el k-means, las demas funciones se prueban con instancias
-"hardcodeadas" porque en el momento de escribir estos tests no funciona bien
-la generación interactiva de respuestas. De todos modos: habiendo una
-pregunta de cada tipo y varias respuestas para cada una ya se prueba
-toda la funcionalidad de k-means, si funciona con una de cada podemos
-asumir (aunque ya he probado varias combinaciones más para estar seguro)
-que funcionará para cualquier otra combinación.
+#El objetivo de esta prueba es tener una respuesta de cada tipo
+#para realizar el k-means, las demas funciones se prueban con instancias
+#"hardcodeadas" porque en el momento de escribir estos tests no funciona bien
+#la generación interactiva de respuestas. De todos modos: habiendo una
+#pregunta de cada tipo y varias respuestas para cada una ya se prueba
+#toda la funcionalidad de k-means, si funciona con una de cada podemos
+#asumir (aunque ya he probado varias combinaciones más para estar seguro)
+#que funcionará para cualquier otra combinación.
 
 
 Título
