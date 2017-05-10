@@ -126,6 +126,7 @@ public class RespuestasEncuesta {
             String TitleEnc = "";
             boolean hasTitulo = false;
             boolean hasUsuario = false;
+            boolean hasFinished = false;
             while((line = bufferedReader.readLine()) != null) {
                 ++contLinea;
                 if (line.equals("Título")) {
@@ -167,7 +168,15 @@ public class RespuestasEncuesta {
                     if (line.equals("RCO")) {
                         //leer indice escogido y Num opciones
                         int idx = Integer.parseInt(bufferedReader.readLine()); ++contLinea;
+                        if (idx < 0) {
+                            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Indice negativo.");
+                            throw exc;
+                        }
                         int nOpts = Integer.parseInt(bufferedReader.readLine()); ++contLinea;
+                        if (nOpts < idx) {
+                            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Rangos de indice y opciones incorrectos.");
+                            throw exc;
+                        }
                         //leer texto opcion de respuesta
                         String text = bufferedReader.readLine(); ++contLinea;
 
@@ -181,7 +190,6 @@ public class RespuestasEncuesta {
                         double val = Double.parseDouble(bufferedReader.readLine()); ++contLinea;
                         double min = Double.parseDouble(bufferedReader.readLine()); ++contLinea;
                         double max = Double.parseDouble(bufferedReader.readLine()); ++contLinea;
-                        //comprobar que min < max
                         if (min > val || min > max || val > max) {
                             ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Rangos numéricos incorrectos");
                             throw exc;
@@ -194,6 +202,10 @@ public class RespuestasEncuesta {
                     }
                     else if (line.equals("RL")) {
                         String answer = bufferedReader.readLine(); ++contLinea;
+                        if (answer == null) {
+                            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Encuesta inacabada");
+                            throw exc;
+                        }
                         RespLibre resp = new RespLibre(answer);
                         re.resps.add(indexPreg, resp);
                         indexPreg++;
@@ -239,7 +251,9 @@ public class RespuestasEncuesta {
                         throw exc;
                     }
                 }
-                else if (line.equals("Final respuestas encuesta") && hasUsuario) { }
+                else if (line.equals("Final respuestas encuesta") && hasUsuario) {
+                    hasFinished = true;
+                }
                 else if (line.equals("")) {}
                 else {
                     ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en línea "+Integer.toString(contLinea)+". Palabra clave incorrecta.");
@@ -250,16 +264,16 @@ public class RespuestasEncuesta {
 
             // Always close files.
             bufferedReader.close();
+            if (!hasFinished)  {
+                ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Encuesta inacabada");
+                throw exc;
+            }
         }
         catch(FileNotFoundException ex) {
-            System.out.println(
-                    "Unable to open file '" +
-                            path + "'");
+            System.out.println("Unable to open file '" + path + "'");
         }
         catch(IOException ex) {
-            System.out.println(
-                    "Error reading file '"
-                            + path + "'");
+            System.out.println("Error reading file '" + path + "'");
         }
         catch (ParseException e1) {
             ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Formato de fecha incorrecto. Formato a seguir: dd/MM/aa hh:mm:ss");
