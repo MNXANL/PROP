@@ -29,16 +29,18 @@ public class Main {
         System.out.println("   12. Salir del programa");
     }
 
-    public static void main(String[] args) throws ExcFormatoIncorrecto{
-        //esto no deberia ir aquí
-        JFrame jf = new JFrame("Surveys");
-        jf.setContentPane(new LogIn().getPanel1());
-        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jf.pack();
-        jf.setVisible(true);
-        LogIn li = new LogIn();
+    public static void main(String[] args) {
+        javax.swing.SwingUtilities.invokeLater(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        ControladorPresentacio ctrlPres = new ControladorPresentacio();
+                        ctrlPres.inicializarPresentacion();
+                    }
+                }
+        );
 
-
+        /*
         ControladorDominio cd = new ControladorDominio();
         int hasLogIn = 0;
 
@@ -192,5 +194,6 @@ public class Main {
                 }
             }
         }
+        */
     }
 }

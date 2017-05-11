@@ -9,22 +9,41 @@ import java.awt.event.ActionListener;
  * Created by aleixballetbo on 10/5/17.
  */
 public class LogIn {
+    ControladorPresentacio ctrlPres;
+
     private JTextField textField1;
     private JPasswordField passwordField1;
     private JButton button1;
     private JPanel panel1;
+    private JLabel error;
 
-    public LogIn() {
+    public LogIn(ControladorPresentacio ctrlPres) {
+        this.ctrlPres = ctrlPres;
+        asignarListeners();
+    }
+
+    public void asignarListeners() {
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Click");
+                if (!textField1.getText().equals("") && !passwordField1.getText().equals("")) {
+                    ctrlPres.logIn(textField1.getText(), passwordField1.getText());
+                }
             }
         });
     }
 
-    public JPanel getPanel1() {
-        return panel1;
+    public void datosIncorrectos() {
+        error.setText("Nombre de usuario o contraseña incorrectos");
+        error.updateUI();
+    }
+
+    public void show() {
+        JFrame jf = new JFrame("Surveys");
+        jf.setContentPane(panel1);
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.pack();
+        jf.setVisible(true);
     }
 
     {
@@ -48,53 +67,52 @@ public class LogIn {
         label1.setText("Nombre de usuario");
         GridBagConstraints gbc;
         gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.anchor = GridBagConstraints.WEST;
-        panel1.add(label1, gbc);
-        final JPanel spacer1 = new JPanel();
-        gbc = new GridBagConstraints();
         gbc.gridx = 1;
         gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.ipadx = 20;
-        panel1.add(spacer1, gbc);
-        final JPanel spacer2 = new JPanel();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        panel1.add(spacer2, gbc);
+        gbc.weightx = 1.0;
+        gbc.anchor = GridBagConstraints.WEST;
+        panel1.add(label1, gbc);
         final JLabel label2 = new JLabel();
         label2.setText("Contraseña");
         gbc = new GridBagConstraints();
-        gbc.gridx = 2;
+        gbc.gridx = 3;
         gbc.gridy = 0;
+        gbc.weightx = 1.0;
         gbc.anchor = GridBagConstraints.WEST;
         panel1.add(label2, gbc);
-        textField1 = new JTextField();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 2;
-        gbc.anchor = GridBagConstraints.WEST;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.ipadx = 100;
-        panel1.add(textField1, gbc);
         passwordField1 = new JPasswordField();
         gbc = new GridBagConstraints();
-        gbc.gridx = 2;
+        gbc.gridx = 3;
         gbc.gridy = 2;
+        gbc.weightx = 1.0;
         gbc.anchor = GridBagConstraints.WEST;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.ipadx = 100;
         panel1.add(passwordField1, gbc);
         button1 = new JButton();
         button1.setText("Button");
         gbc = new GridBagConstraints();
-        gbc.gridx = 1;
+        gbc.gridx = 2;
         gbc.gridy = 3;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.weightx = 1.0;
         panel1.add(button1, gbc);
+        textField1 = new JTextField();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 2;
+        gbc.weightx = 1.0;
+        gbc.anchor = GridBagConstraints.WEST;
+        gbc.ipadx = 100;
+        panel1.add(textField1, gbc);
+        error = new JLabel();
+        error.setEnabled(true);
+        error.setHorizontalAlignment(11);
+        error.setText("        ");
+        error.setVisible(true);
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 4;
+        gbc.gridwidth = 3;
+        panel1.add(error, gbc);
     }
 
     /**

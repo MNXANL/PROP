@@ -28,7 +28,6 @@ public class ControladorDominio {
         int x = contDatos.logIn(usuario,pass);
         switch (x) {
             case 0:
-                System.out.println("Usuario o contraseña incorrectos");
                 break;
             case 1:
                 u = new Encuestado(usuario);
