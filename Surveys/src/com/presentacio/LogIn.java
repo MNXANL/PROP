@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 public class LogIn {
     ControladorPresentacio ctrlPres;
 
+    private JFrame frame = new JFrame("LogIn");
     private JTextField textField1;
     private JPasswordField passwordField1;
     private JButton button1;
@@ -39,11 +40,14 @@ public class LogIn {
     }
 
     public void show() {
-        JFrame jf = new JFrame("Surveys");
-        jf.setContentPane(panel1);
-        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jf.pack();
-        jf.setVisible(true);
+        frame.setContentPane(panel1);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+    }
+
+    public void close() {
+        frame.setVisible(false);
     }
 
     {
@@ -113,6 +117,18 @@ public class LogIn {
         gbc.gridy = 4;
         gbc.gridwidth = 3;
         panel1.add(error, gbc);
+        final JPanel spacer1 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panel1.add(spacer1, gbc);
+        final JPanel spacer2 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 4;
+        gbc.gridy = 0;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panel1.add(spacer2, gbc);
     }
 
     /**

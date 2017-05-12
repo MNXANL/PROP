@@ -31,14 +31,16 @@ public class ControladorDominio {
                 break;
             case 1:
                 u = new Encuestado(usuario);
-                u.leer();
                 break;
             case 2:
                 u = new Administrador(usuario);
-                u.leer();
                 break;
         }
         return x;
+    }
+
+    public String getUser() {
+        return u.getUsername();
     }
 
     public void logOut () {

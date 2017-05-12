@@ -46,7 +46,7 @@ public class CjtEncuestas {
             }
             return titulos;
         }
-        else if (criterio.equals("nuevas")) {
+        else if (criterio.equals("Nuevas")) {
             String[] titulos = encuestas.keySet().toArray(new String[encuestas.keySet().size()]);
             Arrays.sort(titulos, new Comparator<String>() {
                 @Override
@@ -62,7 +62,7 @@ public class CjtEncuestas {
             });
             return titulos;
         }
-        else if (criterio.equals("antiguas")) {
+        else if (criterio.equals("Antiguas")) {
             String[] titulos = encuestas.keySet().toArray(new String[encuestas.keySet().size()]);
             Arrays.sort(titulos, new Comparator<String>() {
                 @Override
