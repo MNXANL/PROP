@@ -46,4 +46,12 @@ public class ControladorPresentacio {
     public void buscarEncuestas (String criterio) {
         vp.llenarLista(ctrlDom.listaEncuestas(criterio));
     }
+
+    public void buscarEncuestasPalabras (String palabras) {
+        vp.llenarLista(ctrlDom.listaEncuestasPalabras(palabras));
+    }
+
+    public void buscarEncuestaFecha (String f1, String f2) {
+        vp.llenarLista(ctrlDom.listaEncuestaFecha(f1,f2));
+    }
 }

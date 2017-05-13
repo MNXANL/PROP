@@ -157,12 +157,24 @@ public class ControladorDominio {
                 e1.printStackTrace();
             }
         }
-        else if (criterio.equals("palabras")) {
-            System.out.println("Introduce la(s) palabra(s) que quieras buscar:");
-            String palabras = sc.nextLine();
-            return  cjt.getTitulosEncuestasPalabras(palabras);
-        }
         return cjt.getTitulosEncuestas(criterio);
+    }
+
+    public String[] listaEncuestasPalabras (String palabras) {
+        return  cjt.getTitulosEncuestasPalabras(palabras);
+    }
+
+    public String[] listaEncuestaFecha (String f1, String f2) {
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            Date fecha1 = sdf.parse(f1);
+            Date fecha2 = sdf.parse(f2);
+            return cjt.getTitulosEncuestasFecha(fecha1, fecha2);
+        }
+        catch (ParseException e1) {
+            e1.printStackTrace();
+        }
+        return null;
     }
 
     public void modificarEncuesta(String tituloE) {
