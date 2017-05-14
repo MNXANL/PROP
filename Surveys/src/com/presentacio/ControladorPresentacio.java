@@ -2,6 +2,7 @@ package com.presentacio;
 
 import com.domini.ControladorDominio;
 import com.domini.ExcFormatoIncorrecto;
+import com.domini.ExcUsuarioExistente;
 
 import javax.swing.*;
 import java.time.Instant;
@@ -15,6 +16,7 @@ public class ControladorPresentacio {
 
     LogIn li = null;
     VistaPrincipal vp = null;
+    RegistroUsuario ru = null;
     private String criterio;
 
     public ControladorPresentacio() {
@@ -42,6 +44,22 @@ public class ControladorPresentacio {
             vp.llenarLista(ctrlDom.listaEncuestas("A-Z"));
             vp.show();
         }
+    }
+
+    public void logOut () {
+        ctrlDom.logOut();
+        li.show();
+        vp.close();
+    }
+
+    public void registrarse() {
+        ru = new RegistroUsuario(this);
+        ru.show();
+    }
+
+    public void registrarUsuario (String user, String pass) throws ExcUsuarioExistente {
+        ctrlDom.nuevoUsuario("Enc", user, pass);
+        ru.close();
     }
 
     public void buscarEncuestas (String criterio) {

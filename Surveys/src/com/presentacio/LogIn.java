@@ -14,9 +14,10 @@ public class LogIn {
     private JFrame frame = new JFrame("LogIn");
     private JTextField textField1;
     private JPasswordField passwordField1;
-    private JButton button1;
+    private JButton logInButton;
     private JPanel panel1;
     private JLabel error;
+    private JButton registrarseButton;
 
     public LogIn(ControladorPresentacio ctrlPres) {
         this.ctrlPres = ctrlPres;
@@ -24,12 +25,18 @@ public class LogIn {
     }
 
     public void asignarListeners() {
-        button1.addActionListener(new ActionListener() {
+        logInButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (!textField1.getText().equals("") && !passwordField1.getText().equals("")) {
                     ctrlPres.logIn(textField1.getText(), passwordField1.getText());
                 }
+            }
+        });
+        registrarseButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ctrlPres.registrarse();
             }
         });
     }
@@ -122,13 +129,13 @@ public class LogIn {
         gbc.gridy = 1;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panel1.add(spacer2, gbc);
-        button1 = new JButton();
-        button1.setText("Button");
+        logInButton = new JButton();
+        logInButton.setText("Iniciar sesión");
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
         gbc.gridy = 6;
         gbc.weightx = 1.0;
-        panel1.add(button1, gbc);
+        panel1.add(logInButton, gbc);
         final JPanel spacer3 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 2;
@@ -156,9 +163,15 @@ public class LogIn {
         final JPanel spacer7 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
-        gbc.gridy = 7;
+        gbc.gridy = 8;
         gbc.fill = GridBagConstraints.VERTICAL;
         panel1.add(spacer7, gbc);
+        registrarseButton = new JButton();
+        registrarseButton.setText("Registrarse");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 3;
+        gbc.gridy = 7;
+        panel1.add(registrarseButton, gbc);
     }
 
     /**

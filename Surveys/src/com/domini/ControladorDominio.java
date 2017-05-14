@@ -47,7 +47,7 @@ public class ControladorDominio {
         u = null;
     }
 
-    public void nuevoUsuario (String tipo, String nombre, String pass) {
+    public void nuevoUsuario (String tipo, String nombre, String pass) throws ExcUsuarioExistente {
         contDatos.nuevoUsuario (tipo, nombre, pass);
     }
 

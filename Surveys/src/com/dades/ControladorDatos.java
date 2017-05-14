@@ -2,6 +2,7 @@ package com.dades;
 
 import com.domini.Encuesta;
 import com.domini.ExcFormatoIncorrecto;
+import com.domini.ExcUsuarioExistente;
 import com.domini.RespuestasEncuesta;
 
 import java.io.*;
@@ -29,6 +30,7 @@ public class ControladorDatos {
 
     public int logIn (String usuario, String pass) {
         if (users.containsKey(usuario)) {
+            System.out.println("Existe");
             String p = users.get(usuario).x;
             String t = users.get(usuario).y;
             if (p.equals(pass) && t.equals("Enc")) {
@@ -41,7 +43,7 @@ public class ControladorDatos {
         return 0;
     }
 
-    public void nuevoUsuario (String tipo, String nombre, String pass) {
+    public void nuevoUsuario (String tipo, String nombre, String pass) throws ExcUsuarioExistente {
         try {
             if (!users.containsKey(nombre)) {
                 FileWriter fileWriter = new FileWriter(pathUsers, true);
@@ -59,6 +61,8 @@ public class ControladorDatos {
             }
             else {
                 System.out.println("El nombre de usuario que has introducido ya existe");
+                ExcUsuarioExistente exc = new ExcUsuarioExistente("El nombre de usuario que has introducido ya existe");
+                throw exc;
             }
         }
         catch(IOException ex) {
