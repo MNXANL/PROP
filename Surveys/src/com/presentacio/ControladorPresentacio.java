@@ -17,6 +17,7 @@ public class ControladorPresentacio {
     LogIn li = null;
     VistaPrincipal vp = null;
     RegistroUsuario ru = null;
+    VistaCrearEncuesta ce = null;
     private String criterio;
 
     public ControladorPresentacio() {
@@ -65,6 +66,16 @@ public class ControladorPresentacio {
     public void buscarEncuestas (String criterio) {
         this.criterio = criterio;
         vp.llenarLista(ctrlDom.listaEncuestas(criterio));
+    }
+
+    public void responder() {
+        ce = new VistaCrearEncuesta(this);
+        ce.show();
+    }
+
+    public void respuestaEncuesta() {
+        //ctrlDom.responderEncuesta(...);
+        ce.close();
     }
 
     public void buscarEncuestasPalabras (String palabras) {

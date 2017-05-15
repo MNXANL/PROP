@@ -69,7 +69,7 @@ public class VistaPrincipal {
         nuevaEncuestaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Coming soon");
+                ctrlPres.responder();
             }
         });
 
@@ -246,6 +246,9 @@ public class VistaPrincipal {
     private void $$$setupUI$$$() {
         panel1 = new JPanel();
         panel1.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(6, 6, new Insets(5, 5, 5, 5), -1, -1));
+        panel1.setMinimumSize(new Dimension(800, 600));
+        panel1.setOpaque(true);
+        panel1.setPreferredSize(new Dimension(1024, 768));
         userLabel = new JLabel();
         userLabel.setText("Hola usuario");
         panel1.add(userLabel, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_NORTH, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
