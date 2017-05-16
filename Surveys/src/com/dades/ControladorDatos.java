@@ -30,7 +30,6 @@ public class ControladorDatos {
 
     public int logIn (String usuario, String pass) {
         if (users.containsKey(usuario)) {
-            System.out.println("Existe");
             String p = users.get(usuario).x;
             String t = users.get(usuario).y;
             if (p.equals(pass) && t.equals("Enc")) {

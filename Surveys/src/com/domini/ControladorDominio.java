@@ -142,21 +142,6 @@ public class ControladorDominio {
     }
 
     public String[] listaEncuestas (String criterio) {
-        Scanner sc = new Scanner(System.in);
-        if (criterio.equals("fecha")) {
-            try {
-                System.out.println("Introduce la fecha más antigua: [dd/mm/aaaa]");
-                String f1 = sc.nextLine();
-                System.out.println("Introduce la fecha más reciente: [dd/mm/aaaa]");
-                String f2 = sc.nextLine();
-                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-                Date fecha1 = sdf.parse(f1);
-                Date fecha2 = sdf.parse(f2);
-                return cjt.getTitulosEncuestasFecha(fecha1, fecha2);
-            } catch (ParseException e1) {
-                e1.printStackTrace();
-            }
-        }
         return cjt.getTitulosEncuestas(criterio);
     }
 
@@ -169,6 +154,9 @@ public class ControladorDominio {
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             Date fecha1 = sdf.parse(f1);
             Date fecha2 = sdf.parse(f2);
+            fecha2.setHours(23);
+            fecha2.setMinutes(59);
+            fecha2.setSeconds(59);
             return cjt.getTitulosEncuestasFecha(fecha1, fecha2);
         }
         catch (ParseException e1) {

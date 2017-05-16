@@ -33,6 +33,8 @@ public class ControladorPresentacio {
     public void inicializarPresentacion() {
         li = new LogIn(this);
         li.show();
+        //Encuesta e = new Encuesta();
+        //e.show();
     }
 
     public void logIn (String user, String pass) {
@@ -69,8 +71,25 @@ public class ControladorPresentacio {
     }
 
     public void responder() {
-        ce = new VistaCrearEncuesta(this);
-        ce.show();
+        JOptionPane optionPane = new JOptionPane("Desea crear una encuesta interactivamente o importar una encuesta?", JOptionPane.QUESTION_MESSAGE);
+        String[] opciones = {"Importar", "Crear"};
+        optionPane.setOptions(opciones);
+        JDialog dialogOptionPane = optionPane.createDialog(new JFrame(), "AVISO");
+        dialogOptionPane.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        dialogOptionPane.pack();
+        dialogOptionPane.setVisible(true);
+
+        String vsel = (String) optionPane.getValue();
+        int isel;
+        for (isel = 0; isel < opciones.length && !opciones[isel].equals(vsel); isel++) ;
+
+        if (isel == 0) {
+            System.out.println("Importar");
+        }
+        else if (isel == 1) {
+            ce = new VistaCrearEncuesta(this);
+            ce.show();
+        }
     }
 
     public void respuestaEncuesta() {
