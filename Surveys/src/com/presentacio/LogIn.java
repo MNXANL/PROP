@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 /**
  * Created by aleixballetbo on 10/5/17.
@@ -22,6 +24,7 @@ public class LogIn {
     public LogIn(ControladorPresentacio ctrlPres) {
         this.ctrlPres = ctrlPres;
         asignarListeners();
+
     }
 
     public void asignarListeners() {
@@ -33,6 +36,31 @@ public class LogIn {
                 }
             }
         });
+        textField1.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                super.keyPressed(e);
+                System.out.println(e.getKeyChar());
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    if (!textField1.getText().equals("") && !passwordField1.getText().equals("")) {
+                        ctrlPres.logIn(textField1.getText(), passwordField1.getText());
+                    } else datosIncorrectos();
+                }
+            }
+        });
+        passwordField1.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                super.keyPressed(e);
+                System.out.println(e.getKeyChar());
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    if (!textField1.getText().equals("") && !passwordField1.getText().equals("")) {
+                        ctrlPres.logIn(textField1.getText(), passwordField1.getText());
+                    } else datosIncorrectos();
+                }
+            }
+        });
+
         registrarseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -151,27 +179,33 @@ public class LogIn {
         final JPanel spacer5 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
-        gbc.gridy = 5;
+        gbc.gridy = 0;
         gbc.fill = GridBagConstraints.VERTICAL;
         panel1.add(spacer5, gbc);
         final JPanel spacer6 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
-        gbc.gridy = 0;
+        gbc.gridy = 9;
         gbc.fill = GridBagConstraints.VERTICAL;
         panel1.add(spacer6, gbc);
-        final JPanel spacer7 = new JPanel();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 3;
-        gbc.gridy = 8;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        panel1.add(spacer7, gbc);
         registrarseButton = new JButton();
         registrarseButton.setText("Registrarse");
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
-        gbc.gridy = 7;
+        gbc.gridy = 8;
         panel1.add(registrarseButton, gbc);
+        final JPanel spacer7 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 3;
+        gbc.gridy = 7;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        panel1.add(spacer7, gbc);
+        final JSeparator separator1 = new JSeparator();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 3;
+        gbc.gridy = 5;
+        gbc.fill = GridBagConstraints.BOTH;
+        panel1.add(separator1, gbc);
     }
 
     /**
