@@ -20,7 +20,7 @@ public class Clustering {
     public Clustering(Encuesta E, int k){
         this.E = new Encuesta(E);
         this.k = k;
-            }
+    }
 
     /**
      * correr el analisis kmeans, primero generando centroids iniciales antes de llamar al algoritmo
@@ -97,6 +97,9 @@ public class Clustering {
                         }
                         if (resps.get(k) instanceof RespLibre) {
                             newCentroid.getResps().add(RespLib_maxfreq(i, k, assig, RE));
+                        }
+                        if (resps.get(k) instanceof RespVacia){
+                            newCentroid.getResps().add(new RespVacia());
                         }
 
                 }
@@ -237,7 +240,6 @@ public class Clustering {
      */
     private RespCualitativaOrdenada
     RespCO_mode(int cli, int rn,  final ArrayList<Integer> assig, final ArrayList<RespuestasEncuesta> RE){
-        RespCualitativaOrdenada x =new RespCualitativaOrdenada((RespCualitativaOrdenada) RE.get(0).getResps().get(rn));
         int maxValue,maxCount;
         maxCount=maxValue=-1;
         for(int i = 0; i != RE.size(); ++i){
@@ -259,6 +261,9 @@ public class Clustering {
 
             }
         }
+        int i = 0;
+        while(i < RE.size() && RE.get(i).getResps().get(rn) instanceof RespVacia)++i;
+        RespCualitativaOrdenada x =new RespCualitativaOrdenada((RespCualitativaOrdenada) RE.get(i).getResps().get(rn));
         x.set(maxValue);
         return x;
     }
@@ -273,12 +278,16 @@ public class Clustering {
     private RespNumerica Respnum_avg (int cli, int rn,  final ArrayList<Integer> assig, final ArrayList<RespuestasEncuesta> RE){
         double sum,count;
         sum = count = 0;
-        RespNumerica result =new RespNumerica((RespNumerica) RE.get(0).getResps().get(rn));
+        int u = 0;
+        while(u < RE.size() && RE.get(u).getResps().get(rn) instanceof RespVacia)++u;
+        RespNumerica result =new RespNumerica((RespNumerica) RE.get(u).getResps().get(rn));
         for(int i = 0; i != RE.size(); ++i){
-            if(assig.get(i)==cli){      //solo tratamos los que pertenecen al cluster que nos piden
-                ++count;
-                RespNumerica aux = (RespNumerica) RE.get(i).getResps().get(rn);
-                sum += aux.get();
+            if(!skippables[i][rn]) {
+                if (assig.get(i) == cli) {      //solo tratamos los que pertenecen al cluster que nos piden
+                    ++count;
+                    RespNumerica aux = (RespNumerica) RE.get(i).getResps().get(rn);
+                    sum += aux.get();
+                }
             }
         }
         result.set(sum/count);
