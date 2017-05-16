@@ -1,16 +1,18 @@
 package com.presentacio;
 
+
 import javax.swing.*;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**todo: cambiar  [ pregField --> pregOptField ]  desde el editor!!! */
+
 public class VistaCrearEncuesta {
     private ControladorPresentacio ctrlPres;
     private JFrame frame = new JFrame("Creadora de encuesta");
-
 
     private JPanel panelList;
     private JLabel userLabel;
@@ -28,6 +30,7 @@ public class VistaCrearEncuesta {
     private JPanel PregCual;
     private JList listOption;
     private DefaultListModel<String> modelPregs;
+    private DefaultListModel<String> modelEnc;
     private JButton guardarPreguntaButton;
     private JButton plusButton;
     private JButton minusButton;
@@ -47,7 +50,6 @@ public class VistaCrearEncuesta {
     public VistaCrearEncuesta(ControladorPresentacio ctrlPres) {
         this.ctrlPres = ctrlPres;
         asignarListeners();
-
         String tipoResp[] = {"Libre", "Numérica", "Cualitativa ordenada", "Cualitativa no ordenada unica", "Cualitativa no ordenada multiple"};
         for (String tr : tipoResp) {
             comboBox1.addItem(tr);
@@ -58,7 +60,9 @@ public class VistaCrearEncuesta {
         PregNum.setVisible(false);
         PregCual.setVisible(false);
         PCNOMpanel.setVisible(false);
+        modelEnc = new DefaultListModel<>();
         modelPregs = new DefaultListModel<>();
+        list1.setModel(modelEnc);
         listOption.setModel(modelPregs);
 
         minSpinner.setValue(0);
@@ -95,28 +99,63 @@ public class VistaCrearEncuesta {
             }
         });
 
+        guardarPreguntaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (!preguntaField.getText().equals("")) {
+                    modelEnc.addElement(preguntaField.getText());
+                    preguntaField.setText("");
+                }
+
+                /*Pregunta p = new Pregunta();
+                if (comboBox1.getSelectedItem().toString().equals("Numérica")) {
+
+
+                } else if (comboBox1.getSelectedItem().toString().equals("Libre")) {
+
+
+                } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa ordenada")) {
+
+
+                } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa no ordenada unica")) {
+
+
+                } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa no ordenada multiple")) {
+
+
+                }*/
+            }
+        });
+
         comboBox1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (comboBox1.getSelectedItem().toString().equals("Numérica")) {
                     PregNum.setVisible(true);
                     PregCual.setVisible(false);
                     PCNOMpanel.setVisible(false);
+                    guardarPreguntaButton.setEnabled(true);
                 } else if (comboBox1.getSelectedItem().toString().equals("Libre")) {
                     PregNum.setVisible(false);
                     PregCual.setVisible(false);
                     PCNOMpanel.setVisible(false);
+                    guardarPreguntaButton.setEnabled(true);
                 } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa ordenada")) {
                     PregNum.setVisible(false);
                     PregCual.setVisible(true);
                     PCNOMpanel.setVisible(false);
+                    guardarPreguntaButton.setEnabled(false);
                 } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa no ordenada unica")) {
                     PregNum.setVisible(false);
                     PregCual.setVisible(true);
                     PCNOMpanel.setVisible(false);
+                    if (modelPregs.size() == 0) guardarPreguntaButton.setEnabled(false);
+                    else guardarPreguntaButton.setEnabled(true);
                 } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa no ordenada multiple")) {
                     PregNum.setVisible(false);
                     PregCual.setVisible(true);
                     PCNOMpanel.setVisible(true);
+                    if (modelPregs.size() == 0) guardarPreguntaButton.setEnabled(false);
+                    else guardarPreguntaButton.setEnabled(true);
                 }
             }
         });
@@ -138,25 +177,22 @@ public class VistaCrearEncuesta {
                     modelPregs.remove(listOption.getSelectedIndex());
                     listOption.setModel(modelPregs);
                 }
-                if (modelPregs.size() == 0) guardarPreguntaButton.setEnabled(false);
-                else                        guardarPreguntaButton.setEnabled(true);
+                minusButton.setEnabled(false);
             }
         });
 
-        preguntaField.getDocument().addDocumentListener(new DocumentListener() {
+        listOption.addListSelectionListener(new ListSelectionListener() {
             @Override
-            public void insertUpdate(DocumentEvent e) {
-                guardarPreguntaButton.setEnabled(true);
+            public void valueChanged(ListSelectionEvent e) {
+                minusButton.setEnabled(true);
             }
+        });
 
+        listOption.addListSelectionListener(new ListSelectionListener() {
             @Override
-            public void removeUpdate(DocumentEvent e) {
-                guardarPreguntaButton.setEnabled(true);
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                guardarPreguntaButton.setEnabled(true);
+            public void valueChanged(ListSelectionEvent e) {
+                modificarPreguntaButton.setEnabled(true);
+                borrarPreguntaButton.setEnabled(true);
             }
         });
 
