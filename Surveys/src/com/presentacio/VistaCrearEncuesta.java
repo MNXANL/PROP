@@ -1,8 +1,8 @@
 package com.presentacio;
 
-import com.domini.Pregunta;
-
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,7 +27,7 @@ public class VistaCrearEncuesta {
     private JPanel PregNum;
     private JPanel PregCual;
     private JList listOption;
-    private DefaultListModel<String> listPregs;
+    private DefaultListModel<String> modelPregs;
     private JButton guardarPreguntaButton;
     private JButton plusButton;
     private JButton minusButton;
@@ -35,8 +35,9 @@ public class VistaCrearEncuesta {
     private JPanel buttonPanel;
     private JPanel PCNOMpanel;
     private JTextField pregField;
-    private JSpinner spinner2;
-    private JSpinner spinner3;
+    private JSpinner minSpinner;
+    private JSpinner maxSpinner;
+    private JButton guardarEncuestaButton;
 
     /**
      * Constructora vista de creación de encuesta
@@ -57,10 +58,18 @@ public class VistaCrearEncuesta {
         PregNum.setVisible(false);
         PregCual.setVisible(false);
         PCNOMpanel.setVisible(false);
+        modelPregs = new DefaultListModel<>();
+        listOption.setModel(modelPregs);
 
-
+        minSpinner.setValue(0);
+        maxSpinner.setValue(10);
+        spinner1.setValue(2);
+        minusButton.setEnabled(false);
     }
 
+    /**
+     * Método para asignar los listeners de la vista.
+     */
     private void asignarListeners() {
         nuevaPreguntaButton.addActionListener(new ActionListener() {
             @Override
@@ -109,25 +118,45 @@ public class VistaCrearEncuesta {
                     PregCual.setVisible(true);
                     PCNOMpanel.setVisible(true);
                 }
-
             }
         });
 
         plusButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (!pregField.getSelectedText().equals("")) {
-                    //listOption.add(pregField.getSelectedText());
-                    listPregs.addElement(pregField.getSelectedText());
-                    listOption.setModel(listPregs);
+                if (!pregField.getText().equals("")) {
+                    modelPregs.addElement(pregField.getText());
                     pregField.setText("");
                 }
+                if (!guardarPreguntaButton.isEnabled()) guardarPreguntaButton.setEnabled(true);
             }
         });
         minusButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                listOption.remove(0);
+                if (listOption.getSelectedIndex() >= 0 || listOption.getSelectedIndex() < modelPregs.size()) {
+                    modelPregs.remove(listOption.getSelectedIndex());
+                    listOption.setModel(modelPregs);
+                }
+                if (modelPregs.size() == 0) guardarPreguntaButton.setEnabled(false);
+                else                        guardarPreguntaButton.setEnabled(true);
+            }
+        });
+
+        preguntaField.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                guardarPreguntaButton.setEnabled(true);
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                guardarPreguntaButton.setEnabled(true);
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                guardarPreguntaButton.setEnabled(true);
             }
         });
 
@@ -154,13 +183,19 @@ public class VistaCrearEncuesta {
         return isel;
     }
 
+    /**
+     * Método para visualizar la vista
+     */
     public void show() {
         frame.setContentPane(panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
     }
 
+    /**
+     * Método para cerrar la vista
+     */
     public void close() {
         frame.setVisible(false);
     }
@@ -190,7 +225,7 @@ public class VistaCrearEncuesta {
         panel1.setMinimumSize(new Dimension(965, 300));
         panel1.setPreferredSize(new Dimension(965, 300));
         panelBotones = new JPanel();
-        panelBotones.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(7, 2, new Insets(0, 0, 0, 0), -1, -1));
+        panelBotones.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(8, 2, new Insets(0, 0, 0, 0), -1, -1));
         GridBagConstraints gbc;
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
@@ -218,6 +253,9 @@ public class VistaCrearEncuesta {
         modificarPreguntaButton.setEnabled(false);
         modificarPreguntaButton.setText("Modificar pregunta");
         panelBotones.add(modificarPreguntaButton, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        guardarEncuestaButton = new JButton();
+        guardarEncuestaButton.setText("Guardar encuesta");
+        panelBotones.add(guardarEncuestaButton, new com.intellij.uiDesigner.core.GridConstraints(7, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         panelList = new JPanel();
         panelList.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(6, 6, new Insets(5, 5, 5, 5), -1, -1));
         gbc = new GridBagConstraints();
@@ -377,20 +415,20 @@ public class VistaCrearEncuesta {
         gbc.gridy = 0;
         gbc.fill = GridBagConstraints.VERTICAL;
         PregNum.add(spacer18, gbc);
-        spinner3 = new JSpinner();
+        maxSpinner = new JSpinner();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 7;
         gbc.anchor = GridBagConstraints.WEST;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        PregNum.add(spinner3, gbc);
-        spinner2 = new JSpinner();
+        PregNum.add(maxSpinner, gbc);
+        minSpinner = new JSpinner();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 3;
         gbc.anchor = GridBagConstraints.WEST;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        PregNum.add(spinner2, gbc);
+        PregNum.add(minSpinner, gbc);
         PregCual = new JPanel();
         PregCual.setLayout(new GridBagLayout());
         PregCual.setEnabled(true);

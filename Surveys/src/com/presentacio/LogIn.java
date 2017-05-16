@@ -161,7 +161,7 @@ public class LogIn {
         logInButton.setText("Iniciar sesión");
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
-        gbc.gridy = 6;
+        gbc.gridy = 5;
         gbc.weightx = 1.0;
         panel1.add(logInButton, gbc);
         final JPanel spacer3 = new JPanel();
@@ -185,27 +185,21 @@ public class LogIn {
         final JPanel spacer6 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
-        gbc.gridy = 9;
+        gbc.gridy = 8;
         gbc.fill = GridBagConstraints.VERTICAL;
         panel1.add(spacer6, gbc);
         registrarseButton = new JButton();
         registrarseButton.setText("Registrarse");
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
-        gbc.gridy = 8;
+        gbc.gridy = 7;
         panel1.add(registrarseButton, gbc);
         final JPanel spacer7 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
-        gbc.gridy = 7;
+        gbc.gridy = 6;
         gbc.fill = GridBagConstraints.VERTICAL;
         panel1.add(spacer7, gbc);
-        final JSeparator separator1 = new JSeparator();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 3;
-        gbc.gridy = 5;
-        gbc.fill = GridBagConstraints.BOTH;
-        panel1.add(separator1, gbc);
     }
 
     /**
