@@ -10,7 +10,7 @@ import java.util.*;
 public class Clustering {
     private Encuesta E;
     private int k;
-    boolean [][] skippables;
+    private boolean [][] skippables;
 
     /**
      *Creadora de clustering
@@ -20,13 +20,13 @@ public class Clustering {
     public Clustering(Encuesta E, int k){
         this.E = new Encuesta(E);
         this.k = k;
-        skippables = new boolean[E.getCjtRespsEnc().size()][E.getCjtRespsEnc().get(0).getResps().size()];
-    }
+            }
 
     /**
      * correr el analisis kmeans, primero generando centroids iniciales antes de llamar al algoritmo
      */
     public void run(){
+        skippables = new boolean[E.getCjtRespsEnc().size()][E.getCjtRespsEnc().get(0).getResps().size()];
         ArrayList<RespuestasEncuesta> centroids = new ArrayList<>();  //guarda los indices de los centroids iniciales, que seran conjuntos de respuestas de usuarios al azar
         ArrayList<RespuestasEncuesta> RE = E.getCjtRespsEnc();
         if(k>RE.size()){
