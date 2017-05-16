@@ -30,7 +30,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-/*        javax.swing.SwingUtilities.invokeLater(
+        javax.swing.SwingUtilities.invokeLater(
                 new Runnable() {
                     @Override
                     public void run() {
@@ -39,7 +39,7 @@ public class Main {
                     }
                 }
         );
-*/
+/*
         try {
             ControladorDominio cd = new ControladorDominio();
 
@@ -203,7 +203,7 @@ public class Main {
         }
         catch(ExcUsuarioExistente u){
             System.out.println("YOLO");
-        }
+        }*/
 
     }
 }
