@@ -1,6 +1,7 @@
 package com.presentacio;
 
 import com.domini.ControladorDominio;
+import com.domini.ExcEncuestaExistente;
 import com.domini.ExcFormatoIncorrecto;
 import com.domini.ExcUsuarioExistente;
 
@@ -18,6 +19,8 @@ public class ControladorPresentacio {
     VistaPrincipal vp = null;
     RegistroUsuario ru = null;
     VistaCrearEncuesta ce = null;
+    ImportarEncuesta ie = null;
+
     private String criterio;
 
     public ControladorPresentacio() {
@@ -26,7 +29,7 @@ public class ControladorPresentacio {
             criterio = "A-Z";
         }
         catch (ExcFormatoIncorrecto e) {
-            //mostrar error
+            System.out.println("error formato incorrecto");
         }
     }
 
@@ -70,7 +73,7 @@ public class ControladorPresentacio {
         vp.llenarLista(ctrlDom.listaEncuestas(criterio));
     }
 
-    public void responder() {
+    public void crearEncuesta() {
         JOptionPane optionPane = new JOptionPane("Desea crear una encuesta interactivamente o importar una encuesta?", JOptionPane.QUESTION_MESSAGE);
         String[] opciones = {"Importar", "Crear"};
         optionPane.setOptions(opciones);
@@ -84,12 +87,22 @@ public class ControladorPresentacio {
         for (isel = 0; isel < opciones.length && !opciones[isel].equals(vsel); isel++) ;
 
         if (isel == 0) {
-            System.out.println("Importar");
+            ie = new ImportarEncuesta(this);
+            ie.show();
         }
         else if (isel == 1) {
             ce = new VistaCrearEncuesta(this);
             ce.show();
         }
+    }
+
+    public void importarEncuesta(String path) throws ExcFormatoIncorrecto, ExcEncuestaExistente{
+        ctrlDom.importarEncuesta(path);
+        vp.llenarLista(ctrlDom.listaEncuestas(criterio));
+    }
+
+    public void exportarEncuesta(String enc, String path) {
+        ctrlDom.exportarEncuesta(enc, path);
     }
 
     public void respuestaEncuesta() {
@@ -111,6 +124,7 @@ public class ControladorPresentacio {
         ctrlDom.borrarEncuesta(titulo);
         vp.llenarLista(ctrlDom.listaEncuestas(criterio));
     }
+
 
 
 }

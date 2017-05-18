@@ -51,7 +51,7 @@ public class ControladorDominio {
         contDatos.nuevoUsuario (tipo, nombre, pass);
     }
 
-    public void crearEncuesta () {
+    public void crearEncuesta () throws ExcEncuestaExistente{
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce el título de la encuesta");
         String tituloE = sc.nextLine();
@@ -130,15 +130,14 @@ public class ControladorDominio {
         e.leer();
     }
 
-    public void importarEncuesta (String path) {
-        Encuesta e = null;
-        try {
-            e = Encuesta.importar(path);
-        } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
-            String linea = excFormatoIncorrecto.getMessage();
-            System.out.println("Error en la importación de la encuesta "+path+". Error en la linea "+linea+".");
-        }
+    public void importarEncuesta (String path) throws ExcFormatoIncorrecto, ExcEncuestaExistente{
+        Encuesta e  = Encuesta.importar(path);
+        cjt.addEncuesta(e);
         contDatos.guardarEncuesta(e);
+    }
+
+    public void exportarEncuesta (String enc, String path) {
+        cjt.getEncuesta(enc).exportar(path);
     }
 
     public String[] listaEncuestas (String criterio) {

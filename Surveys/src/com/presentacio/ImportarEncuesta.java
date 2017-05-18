@@ -1,7 +1,14 @@
 package com.presentacio;
 
+import com.domini.ExcEncuestaExistente;
+import com.domini.ExcFormatoIncorrecto;
+
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by aleixballetbo on 16/5/17.
@@ -9,17 +16,51 @@ import java.awt.*;
 public class ImportarEncuesta {
     private ControladorPresentacio ctrlPres;
 
-    private JFrame frame;
+    private JFrame frame = new JFrame("Importar encuesta");
     private JPanel panel1;
     private JFileChooser fileChooser;
 
     public ImportarEncuesta(ControladorPresentacio ctrlPres) {
         this.ctrlPres = ctrlPres;
+        asignarListeners();
+    }
+
+    public void asignarListeners() {
+        FileFilter txt = new FileNameExtensionFilter("txt", "txt");
+        fileChooser.setFileFilter(txt);
+
+        fileChooser.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    if (e.getActionCommand().equals(JFileChooser.APPROVE_SELECTION)) {
+                        ctrlPres.importarEncuesta(fileChooser.getSelectedFile().getAbsolutePath());
+                        close();
+                    } else if (e.getActionCommand().equals(JFileChooser.CANCEL_SELECTION)) {
+                        close();
+                    }
+                } catch (ExcFormatoIncorrecto e1) {
+                    aviso(e1.getMessage());
+                } catch (ExcEncuestaExistente e2) {
+                    aviso(e2.getMessage());
+                }
+            }
+        });
+    }
+
+    public void aviso(String mensaje) {
+        JOptionPane optionPane = new JOptionPane(mensaje, JOptionPane.ERROR_MESSAGE);
+        String[] strBotones = {"Aceptar"};
+        optionPane.setOptions(strBotones);
+        JDialog dialogOptionPane = optionPane.createDialog(new JFrame(), "AVISO");
+        dialogOptionPane.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        dialogOptionPane.pack();
+        dialogOptionPane.setVisible(true);
     }
 
     public void show() {
         frame.setContentPane(panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
     }

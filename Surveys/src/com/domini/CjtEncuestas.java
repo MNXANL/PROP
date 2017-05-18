@@ -20,8 +20,14 @@ public class CjtEncuestas {
         encuestas = enc;
     }
 
-    public void addEncuesta (Encuesta e) {
-        encuestas.put(e.getTitulo(), e);
+    public void addEncuesta (Encuesta e) throws ExcEncuestaExistente{
+        if (!encuestas.containsKey(e.getTitulo())) {
+            encuestas.put(e.getTitulo(), e);
+        }
+        else {
+            ExcEncuestaExistente exc = new ExcEncuestaExistente("La encuesta con título " + e.getTitulo() + " ya existe.");
+            throw exc;
+        }
     }
 
     public void borrarEncuesta (String titulo) {

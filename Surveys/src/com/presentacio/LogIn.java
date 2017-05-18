@@ -40,7 +40,7 @@ public class LogIn {
             @Override
             public void keyPressed(KeyEvent e) {
                 super.keyPressed(e);
-                System.out.println(e.getKeyChar());
+                //System.out.println(e.getKeyChar());
                 if (e.getKeyCode() == KeyEvent.VK_ENTER) {
                     if (!textField1.getText().equals("") && !passwordField1.getText().equals("")) {
                         ctrlPres.logIn(textField1.getText(), passwordField1.getText());
@@ -52,7 +52,7 @@ public class LogIn {
             @Override
             public void keyPressed(KeyEvent e) {
                 super.keyPressed(e);
-                System.out.println(e.getKeyChar());
+                //System.out.println(e.getKeyChar());
                 if (e.getKeyCode() == KeyEvent.VK_ENTER) {
                     if (!textField1.getText().equals("") && !passwordField1.getText().equals("")) {
                         ctrlPres.logIn(textField1.getText(), passwordField1.getText());
