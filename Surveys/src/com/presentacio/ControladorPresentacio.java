@@ -10,6 +10,7 @@ import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.File;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -100,7 +101,7 @@ public class ControladorPresentacio {
     }
 
     public void responderEncuesta() {
-        JOptionPane optionPane = new JOptionPane("Desea crear una encuesta interactivamente o importar una encuesta?", JOptionPane.QUESTION_MESSAGE);
+        JOptionPane optionPane = new JOptionPane("Desea responder una encuesta interactivamente o importar las respuestas de una encuesta?", JOptionPane.QUESTION_MESSAGE);
         String[] opciones = {"Importar", "Crear"};
         optionPane.setOptions(opciones);
         JDialog dialogOptionPane = optionPane.createDialog(new JFrame(), "AVISO");
@@ -122,6 +123,11 @@ public class ControladorPresentacio {
 
     public void importarEncuesta(String path) throws ExcFormatoIncorrecto, ExcEncuestaExistente{
         ctrlDom.importarEncuesta(path);
+        vp.llenarLista(ctrlDom.listaEncuestas(criterio));
+    }
+
+    public void crearEncuestaArgs(String titulo, ArrayList<ArrayList<String>> enc) throws ExcEncuestaExistente {
+        ctrlDom.crearEncuestaMatrix(titulo, enc);
         vp.llenarLista(ctrlDom.listaEncuestas(criterio));
     }
 

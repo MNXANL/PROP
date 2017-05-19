@@ -1,11 +1,13 @@
 package com.domini;
 
 import com.dades.ControladorDatos;
+import com.sun.corba.se.impl.logging.InterceptorsSystemException;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
 import java.util.*;
+import java.util.concurrent.atomic.DoubleAccumulator;
 
 /**
  * Controlador de la capa de dominio
@@ -51,6 +53,52 @@ public class ControladorDominio {
         contDatos.nuevoUsuario (tipo, nombre, pass);
     }
 
+    /**
+     * Metodo para crear la encuesta desde la vista creadora
+     * @param enc Matriz de encuesta con sus preguntas (una por indice, salvo el indice 0 que guarda el título)
+     * @throws ExcEncuestaExistente
+     */
+    public void crearEncuestaMatrix(String titulo, ArrayList<ArrayList<String>> enc) throws ExcEncuestaExistente {
+        e = new Encuesta(titulo); //Pillar el titulo
+        for (int i = 0; i < enc.size(); i++) {
+            Pregunta p = null;
+            if (enc.get(i).get(0).equals("PN")) {
+                p = new PregNumerica(enc.get(i).get(1), Double.parseDouble(enc.get(i).get(2)), Double.parseDouble(enc.get(i).get(3)));
+            }
+            else if (enc.get(i).get(0).equals("PRL")) {
+                p = new PregRespuestaLibre(enc.get(i).get(1));
+            }
+            else if (enc.get(i).get(0).equals("PCO")) {
+                ArrayList<String> opts = new ArrayList<>();
+                for (int j = 2; j != enc.get(i).size(); ++j) {
+                    opts.add(enc.get(i).get(j));
+                }
+                p = new PregCualitativaOrdenada(enc.get(i).get(1), opts);
+            }
+            else if (enc.get(i).get(0).equals("PCNOU")) {
+                ArrayList<String> opts = new ArrayList<>();
+                for (int j = 2; j != enc.get(i).size(); ++j) {
+                    opts.add(enc.get(i).get(j));
+                }
+                p = new PregCualitativaNoOrdenadaUnica(enc.get(i).get(1), opts);
+
+            }
+            else if (enc.get(i).get(0).equals("PCNOM")) {
+                int maxOpts = Integer.parseInt(enc.get(i).get(2));
+                ArrayList<String> opts = new ArrayList<>();
+                for (int j = 3; j != enc.get(i).size(); ++j) {
+                    opts.add(enc.get(i).get(j));
+                }
+                p = new PregCualitativaNoOrdenadaMultiple( enc.get(i).get(1), opts, maxOpts );
+            }
+            e.add_question(p);
+            System.out.println(" --> Pregunta" + i + " OK");
+        }
+        System.out.println("Encuesta " + e.getTitulo() + " guardada con éxito");
+        cjt.addEncuesta(e);
+        contDatos.guardarEncuesta(e);
+        e.leer();
+    }
     public void crearEncuesta () throws ExcEncuestaExistente{
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce el título de la encuesta");

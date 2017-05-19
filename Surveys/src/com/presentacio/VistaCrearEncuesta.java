@@ -1,14 +1,16 @@
 package com.presentacio;
 
 
+import com.domini.ExcEncuestaExistente;
+
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
-/**todo: cambiar  [ pregField --> pregOptField ]  desde el editor!!! */
 
 public class VistaCrearEncuesta {
     private ControladorPresentacio ctrlPres;
@@ -37,10 +39,11 @@ public class VistaCrearEncuesta {
     private JSpinner spinner1;
     private JPanel buttonPanel;
     private JPanel PCNOMpanel;
-    private JTextField pregField;
+    private JTextField optField;
     private JSpinner minSpinner;
     private JSpinner maxSpinner;
     private JButton guardarEncuestaButton;
+    private ArrayList<ArrayList<String>> PreguntasGuardadas;
 
     /**
      * Constructora vista de creación de encuesta
@@ -69,6 +72,8 @@ public class VistaCrearEncuesta {
         maxSpinner.setValue(10);
         spinner1.setValue(2);
         minusButton.setEnabled(false);
+
+        PreguntasGuardadas = new ArrayList<ArrayList<String>>();
     }
 
     /**
@@ -103,27 +108,60 @@ public class VistaCrearEncuesta {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (!preguntaField.getText().equals("")) {
-                    modelEnc.addElement(preguntaField.getText());
+                    String NomPreg = preguntaField.getText();
+                    modelEnc.addElement(NomPreg);
+                    ArrayList<String> preg = new ArrayList<>();
                     preguntaField.setText("");
+                    if (comboBox1.getSelectedItem().toString().equals("Numérica")) {
+                        preg.add("PN");
+                        preg.add(NomPreg);
+                        preg.add(minSpinner.getValue().toString()); //Min
+                        preg.add(maxSpinner.getValue().toString()); //Max
+                    } else if (comboBox1.getSelectedItem().toString().equals("Libre")) {
+                        preg.add("PRL");
+                        preg.add(NomPreg);
+                    } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa ordenada")) {
+                        preg.add("PCO");
+                        preg.add(NomPreg);
+                        for (int i = 0; i != modelPregs.size(); ++i) {
+                            preg.add(modelPregs.getElementAt(i));
+                        }
+                    } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa no ordenada unica")) {
+                        preg.add("PCNOU");
+                        preg.add(NomPreg);
+                        for (int i = 0; i != modelPregs.size(); ++i) {
+                            preg.add(modelPregs.getElementAt(i));
+                        }
+                    } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa no ordenada multiple")) {
+                        if (Integer.parseInt(spinner1.getValue().toString()) > 1) {
+                            preg.add("PCNOM");
+                            preg.add(NomPreg);
+                            preg.add(spinner1.getValue().toString());
+                            for (int i = 0; i != modelPregs.size(); ++i) {
+                                preg.add(modelPregs.getElementAt(i));
+                            }
+                        } else System.out.println("ERROR: at least 2 options");
+                    }
+                    if (!guardarEncuestaButton.isEnabled()) {
+                        guardarEncuestaButton.setEnabled(true);
+                        modificarPreguntaButton.setEnabled(true);
+                        borrarPreguntaButton.setEnabled(true);
+                    }
+                    if (!modelPregs.isEmpty()) modelPregs.clear();
+                    PreguntasGuardadas.add(preg);
                 }
+            }
+        });
 
-                /*Pregunta p = new Pregunta();
-                if (comboBox1.getSelectedItem().toString().equals("Numérica")) {
-
-
-                } else if (comboBox1.getSelectedItem().toString().equals("Libre")) {
-
-
-                } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa ordenada")) {
-
-
-                } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa no ordenada unica")) {
-
-
-                } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa no ordenada multiple")) {
-
-
-                }*/
+        guardarEncuestaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    ctrlPres.crearEncuestaArgs(palClave.getText(), PreguntasGuardadas);
+                    close();
+                } catch (ExcEncuestaExistente excEncuestaExistente) {
+                    excEncuestaExistente.printStackTrace();
+                }
             }
         });
 
@@ -163,9 +201,9 @@ public class VistaCrearEncuesta {
         plusButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (!pregField.getText().equals("")) {
-                    modelPregs.addElement(pregField.getText());
-                    pregField.setText("");
+                if (!optField.getText().equals("")) {
+                    modelPregs.addElement(optField.getText());
+                    optField.setText("");
                 }
                 if (!guardarPreguntaButton.isEnabled()) guardarPreguntaButton.setEnabled(true);
             }
@@ -195,6 +233,7 @@ public class VistaCrearEncuesta {
                 borrarPreguntaButton.setEnabled(true);
             }
         });
+
 
     }
 
@@ -290,6 +329,7 @@ public class VistaCrearEncuesta {
         modificarPreguntaButton.setText("Modificar pregunta");
         panelBotones.add(modificarPreguntaButton, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         guardarEncuestaButton = new JButton();
+        guardarEncuestaButton.setEnabled(false);
         guardarEncuestaButton.setText("Guardar encuesta");
         panelBotones.add(guardarEncuestaButton, new com.intellij.uiDesigner.core.GridConstraints(7, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         panelList = new JPanel();
@@ -571,13 +611,13 @@ public class VistaCrearEncuesta {
         gbc.gridy = 9;
         gbc.fill = GridBagConstraints.VERTICAL;
         PregCual.add(spacer27, gbc);
-        pregField = new JTextField();
+        optField = new JTextField();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 3;
         gbc.anchor = GridBagConstraints.WEST;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        PregCual.add(pregField, gbc);
+        PregCual.add(optField, gbc);
         final JPanel spacer28 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
