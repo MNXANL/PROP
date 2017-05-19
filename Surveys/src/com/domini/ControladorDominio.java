@@ -334,6 +334,12 @@ public class ControladorDominio {
         System.out.println("Guardada.");
     }
 
+    public void importarRespuestaEncuesta(String tituloE, String path) throws ExcFormatoIncorrecto{
+        RespuestasEncuesta re = RespuestasEncuesta.importar(path);
+        cjt.getEncuesta(tituloE).responder(re);
+        contDatos.guardarRespuestasEncuesta(re);
+    }
+
     public void verRespuestasEncuesta(String tituloE) {
         Encuesta e = cjt.getEncuesta(tituloE);
         e.printarRespuestasDeEncuesta();

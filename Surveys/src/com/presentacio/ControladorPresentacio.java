@@ -6,6 +6,9 @@ import com.domini.ExcFormatoIncorrecto;
 import com.domini.ExcUsuarioExistente;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import java.io.File;
 import java.time.Instant;
 import java.util.Date;
 
@@ -96,6 +99,27 @@ public class ControladorPresentacio {
         }
     }
 
+    public void responderEncuesta() {
+        JOptionPane optionPane = new JOptionPane("Desea crear una encuesta interactivamente o importar una encuesta?", JOptionPane.QUESTION_MESSAGE);
+        String[] opciones = {"Importar", "Crear"};
+        optionPane.setOptions(opciones);
+        JDialog dialogOptionPane = optionPane.createDialog(new JFrame(), "AVISO");
+        dialogOptionPane.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        dialogOptionPane.pack();
+        dialogOptionPane.setVisible(true);
+
+        String vsel = (String) optionPane.getValue();
+        int isel;
+        for (isel = 0; isel < opciones.length && !opciones[isel].equals(vsel); isel++) ;
+
+        if (isel == 0) {
+            vp.importarRespuesta();
+        }
+        else if (isel == 1) {
+            System.out.println("Responder encuesta interactivamente");
+        }
+    }
+
     public void importarEncuesta(String path) throws ExcFormatoIncorrecto, ExcEncuestaExistente{
         ctrlDom.importarEncuesta(path);
         vp.llenarLista(ctrlDom.listaEncuestas(criterio));
@@ -103,6 +127,11 @@ public class ControladorPresentacio {
 
     public void exportarEncuesta(String enc, String path) {
         ctrlDom.exportarEncuesta(enc, path);
+    }
+
+    public void importarRespuestaEncuesta(String enc, String path) throws ExcFormatoIncorrecto{
+        ctrlDom.importarRespuestaEncuesta(enc,path);
+        ctrlDom.verRespuestasEncuesta(enc);
     }
 
     public void respuestaEncuesta() {
