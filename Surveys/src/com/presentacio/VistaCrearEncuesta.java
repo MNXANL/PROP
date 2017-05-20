@@ -156,6 +156,7 @@ public class VistaCrearEncuesta {
                     for (int i = 2; i < PregMod.size(); i++) {
                         modelPregs.addElement(PregMod.get(i));
                     }
+                    comboBox1.setSelectedIndex(3);
                 } else if (PregMod.get(0).equals("PCNOM")) {
                     panelVisibility(4);
                     preguntaField.setText(PregMod.get(1));
@@ -164,6 +165,7 @@ public class VistaCrearEncuesta {
                     for (int i = 3; i < PregMod.size(); i++) {
                         modelPregs.addElement(PregMod.get(i));
                     }
+                    comboBox1.setSelectedIndex(4);
                 }
                 esModificado = true;
             }
