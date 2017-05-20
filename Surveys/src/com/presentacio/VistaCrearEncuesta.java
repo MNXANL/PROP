@@ -121,6 +121,7 @@ public class VistaCrearEncuesta {
             @Override
             public void actionPerformed(ActionEvent e) {
                 panelPreg.setVisible(true);
+                esModificado = false;
             }
         });
 
@@ -133,8 +134,8 @@ public class VistaCrearEncuesta {
                 if (PregMod.get(0).equals("PN")) {
                     panelVisibility(0);
                     preguntaField.setText(PregMod.get(1));
-                    minSpinner.setValue(PregMod.get(2));
-                    maxSpinner.setValue(PregMod.get(3));
+                    minSpinner.setValue(Integer.parseInt(PregMod.get(2)));
+                    maxSpinner.setValue(Integer.parseInt(PregMod.get(3)));
                     comboBox1.setSelectedIndex(1);
                 } else if (PregMod.get(0).equals("PRL")) {
                     panelVisibility(1);
@@ -158,7 +159,7 @@ public class VistaCrearEncuesta {
                 } else if (PregMod.get(0).equals("PCNOM")) {
                     panelVisibility(4);
                     preguntaField.setText(PregMod.get(1));
-                    spinner1.setValue(PregMod.get(2));
+                    spinner1.setValue(Integer.parseInt(PregMod.get(2)));
                     modelPregs.clear();
                     for (int i = 3; i < PregMod.size(); i++) {
                         modelPregs.addElement(PregMod.get(i));
@@ -188,10 +189,13 @@ public class VistaCrearEncuesta {
                     ArrayList<String> preg = new ArrayList<>();
                     preguntaField.setText("");
                     if (comboBox1.getSelectedItem().toString().equals("Numérica")) {
-                        preg.add("PN");
-                        preg.add(NomPreg);
-                        preg.add(minSpinner.getValue().toString()); //Min
-                        preg.add(maxSpinner.getValue().toString()); //Max
+                        if (Integer.parseInt(minSpinner.getValue().toString()) <= Integer.parseInt(maxSpinner.getValue().toString())) {
+                            preg.add("PN");
+                            preg.add(NomPreg);
+                            preg.add(minSpinner.getValue().toString()); //Min
+                            preg.add(maxSpinner.getValue().toString()); //Max
+                        }
+                        else System.out.println("ERROR: min < max");
                     } else if (comboBox1.getSelectedItem().toString().equals("Libre")) {
                         preg.add("PRL");
                         preg.add(NomPreg);
