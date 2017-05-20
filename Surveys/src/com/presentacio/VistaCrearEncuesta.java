@@ -45,6 +45,9 @@ public class VistaCrearEncuesta {
     private JButton guardarEncuestaButton;
     private ArrayList<ArrayList<String>> PreguntasGuardadas;
 
+    private boolean esModificado;
+    private int idxMod;
+
     /**
      * Constructora vista de creación de encuesta
      *
@@ -74,6 +77,40 @@ public class VistaCrearEncuesta {
         minusButton.setEnabled(false);
 
         PreguntasGuardadas = new ArrayList<ArrayList<String>>();
+        esModificado = false;
+        idxMod = -1;
+    }
+
+    private void panelVisibility(int idx) {
+        if (idx == 0) {
+            PregNum.setVisible(true);
+            PregCual.setVisible(false);
+            PCNOMpanel.setVisible(false);
+            guardarPreguntaButton.setEnabled(true);
+        } else if (idx == 1) {
+            PregNum.setVisible(false);
+            PregCual.setVisible(false);
+            PCNOMpanel.setVisible(false);
+            guardarPreguntaButton.setEnabled(true);
+        } else if (idx == 2) {
+            PregNum.setVisible(false);
+            PregCual.setVisible(true);
+            PCNOMpanel.setVisible(false);
+            if (modelPregs.size() == 0) guardarPreguntaButton.setEnabled(false);
+            else guardarPreguntaButton.setEnabled(true);
+        } else if (idx == 3) {
+            PregNum.setVisible(false);
+            PregCual.setVisible(true);
+            PCNOMpanel.setVisible(false);
+            if (modelPregs.size() == 0) guardarPreguntaButton.setEnabled(false);
+            else guardarPreguntaButton.setEnabled(true);
+        } else if (idx == 4) {
+            PregNum.setVisible(false);
+            PregCual.setVisible(true);
+            PCNOMpanel.setVisible(true);
+            if (modelPregs.size() == 0) guardarPreguntaButton.setEnabled(false);
+            else guardarPreguntaButton.setEnabled(true);
+        }
     }
 
     /**
@@ -91,7 +128,43 @@ public class VistaCrearEncuesta {
         modificarPreguntaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Coming soon...");
+                idxMod = list1.getSelectedIndex();
+                ArrayList<String> PregMod = PreguntasGuardadas.get(idxMod);
+                if (PregMod.get(0).equals("PN")) {
+                    panelVisibility(0);
+                    preguntaField.setText(PregMod.get(1));
+                    minSpinner.setValue(PregMod.get(2));
+                    maxSpinner.setValue(PregMod.get(3));
+                    comboBox1.setSelectedIndex(1);
+                } else if (PregMod.get(0).equals("PRL")) {
+                    panelVisibility(1);
+                    preguntaField.setText(PregMod.get(1));
+                    comboBox1.setSelectedIndex(0);
+                } else if (PregMod.get(0).equals("PCO")) {
+                    panelVisibility(2);
+                    preguntaField.setText(PregMod.get(1));
+                    modelPregs.clear();
+                    for (int i = 2; i < PregMod.size(); i++) {
+                        modelPregs.addElement(PregMod.get(i));
+                    }
+                    comboBox1.setSelectedIndex(2);
+                } else if (PregMod.get(0).equals("PCNOU")) {
+                    panelVisibility(3);
+                    preguntaField.setText(PregMod.get(1));
+                    modelPregs.clear();
+                    for (int i = 2; i < PregMod.size(); i++) {
+                        modelPregs.addElement(PregMod.get(i));
+                    }
+                } else if (PregMod.get(0).equals("PCNOM")) {
+                    panelVisibility(4);
+                    preguntaField.setText(PregMod.get(1));
+                    spinner1.setValue(PregMod.get(2));
+                    modelPregs.clear();
+                    for (int i = 3; i < PregMod.size(); i++) {
+                        modelPregs.addElement(PregMod.get(i));
+                    }
+                }
+                esModificado = true;
             }
         });
 
@@ -112,7 +185,6 @@ public class VistaCrearEncuesta {
             public void actionPerformed(ActionEvent e) {
                 if (!preguntaField.getText().equals("")) {
                     String NomPreg = preguntaField.getText();
-                    modelEnc.addElement(NomPreg);
                     ArrayList<String> preg = new ArrayList<>();
                     preguntaField.setText("");
                     if (comboBox1.getSelectedItem().toString().equals("Numérica")) {
@@ -151,7 +223,15 @@ public class VistaCrearEncuesta {
                         borrarPreguntaButton.setEnabled(true);
                     }
                     if (!modelPregs.isEmpty()) modelPregs.clear();
-                    PreguntasGuardadas.add(preg);
+                    if (esModificado) {
+                        esModificado = false;
+                        PreguntasGuardadas.set(idxMod, preg);
+                        modelEnc.set(idxMod, NomPreg);
+                    }
+                    else {
+                        modelEnc.addElement(NomPreg);
+                        PreguntasGuardadas.add(preg);
+                    }
                 }
             }
         });
@@ -171,32 +251,15 @@ public class VistaCrearEncuesta {
         comboBox1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (comboBox1.getSelectedItem().toString().equals("Numérica")) {
-                    PregNum.setVisible(true);
-                    PregCual.setVisible(false);
-                    PCNOMpanel.setVisible(false);
-                    guardarPreguntaButton.setEnabled(true);
+                    panelVisibility(0);
                 } else if (comboBox1.getSelectedItem().toString().equals("Libre")) {
-                    PregNum.setVisible(false);
-                    PregCual.setVisible(false);
-                    PCNOMpanel.setVisible(false);
-                    guardarPreguntaButton.setEnabled(true);
+                    panelVisibility(1);
                 } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa ordenada")) {
-                    PregNum.setVisible(false);
-                    PregCual.setVisible(true);
-                    PCNOMpanel.setVisible(false);
-                    guardarPreguntaButton.setEnabled(false);
+                    panelVisibility(2);
                 } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa no ordenada unica")) {
-                    PregNum.setVisible(false);
-                    PregCual.setVisible(true);
-                    PCNOMpanel.setVisible(false);
-                    if (modelPregs.size() == 0) guardarPreguntaButton.setEnabled(false);
-                    else guardarPreguntaButton.setEnabled(true);
+                    panelVisibility(3);
                 } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa no ordenada multiple")) {
-                    PregNum.setVisible(false);
-                    PregCual.setVisible(true);
-                    PCNOMpanel.setVisible(true);
-                    if (modelPregs.size() == 0) guardarPreguntaButton.setEnabled(false);
-                    else guardarPreguntaButton.setEnabled(true);
+                    panelVisibility(4);
                 }
             }
         });
