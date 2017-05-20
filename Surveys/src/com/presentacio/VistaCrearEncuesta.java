@@ -100,7 +100,10 @@ public class VistaCrearEncuesta {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Borrando: " + list1.getSelectedValue().toString());
-                if (AvisoBorrarPregunta() == 0) ctrlPres.borrarEncuesta(list1.getSelectedValue().toString());
+                if (AvisoBorrarPregunta() == 0) {
+                    PreguntasGuardadas.remove(list1.getSelectedIndex());
+                    modelEnc.remove(list1.getSelectedIndex());
+                }
             }
         });
 
