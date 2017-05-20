@@ -192,9 +192,18 @@ public class ControladorDominio {
         return cjt.getTitulosEncuestas(criterio);
     }
 
+    public String[] listaEncuestasUsuario (String criterio, boolean respondidas) {
+        return cjt.getTitulosEncuestasUsuario(criterio, this.getUser(), respondidas);
+    }
+
     public String[] listaEncuestasPalabras (String palabras) {
         return  cjt.getTitulosEncuestasPalabras(palabras);
     }
+
+    public String[] listaEncuestasPalabrasUsuario (String palabras, boolean respondidas) {
+        return  cjt.getTitulosEncuestasPalabrasUsuario(palabras, this.getUser(), respondidas);
+    }
+
 
     public String[] listaEncuestaFecha (String f1, String f2) {
         try {
@@ -205,6 +214,22 @@ public class ControladorDominio {
             fecha2.setMinutes(59);
             fecha2.setSeconds(59);
             return cjt.getTitulosEncuestasFecha(fecha1, fecha2);
+        }
+        catch (ParseException e1) {
+            e1.printStackTrace();
+        }
+        return null;
+    }
+
+    public String[] listaEncuestaFechaUsuario (String f1, String f2, boolean respondidas) {
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            Date fecha1 = sdf.parse(f1);
+            Date fecha2 = sdf.parse(f2);
+            fecha2.setHours(23);
+            fecha2.setMinutes(59);
+            fecha2.setSeconds(59);
+            return cjt.getTitulosEncuestasFechaUsuario(fecha1, fecha2, this.getUser(), respondidas);
         }
         catch (ParseException e1) {
             e1.printStackTrace();
@@ -384,8 +409,13 @@ public class ControladorDominio {
 
     public void importarRespuestaEncuesta(String tituloE, String path) throws ExcFormatoIncorrecto{
         RespuestasEncuesta re = RespuestasEncuesta.importar(path);
-        cjt.getEncuesta(tituloE).responder(re);
-        contDatos.guardarRespuestasEncuesta(re);
+        boolean respuestaExistente = cjt.getEncuesta(tituloE).responder(re);
+        if (respuestaExistente) {
+            contDatos.actualizarRespuestasEncuesta(re);
+        }
+        else {
+            contDatos.guardarRespuestasEncuesta(re);
+        }
     }
 
     public void verRespuestasEncuesta(String tituloE) {

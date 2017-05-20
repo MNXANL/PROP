@@ -86,8 +86,97 @@ public class CjtEncuestas {
         return null;
     }
 
+    public String[] getTitulosEncuestasUsuario (String criterio, String user, boolean respondidas) {
+        if (criterio.equals("A-Z")) {
+            Set<String> enc = new TreeSet<>(encuestas.keySet());
+            Iterator<String> iterator = enc.iterator();
+            while (iterator.hasNext()) {
+                if (respondidas) {
+                    if (!encuestas.get(iterator.next()).respondida(user)) iterator.remove();
+                }
+                else {
+                    if (encuestas.get(iterator.next()).respondida(user)) iterator.remove();
+                }
+            }
+            return enc.toArray(new String[enc.size()]);
+        }
+        else if (criterio.equals("Z-A")) {
+            Set<String> enc = new TreeSet<>(encuestas.keySet());
+            Iterator<String> iterator = enc.iterator();
+            while (iterator.hasNext()) {
+                if (respondidas) {
+                    if (!encuestas.get(iterator.next()).respondida(user)) iterator.remove();
+                }
+                else {
+                    if (encuestas.get(iterator.next()).respondida(user)) iterator.remove();
+                }
+            }
+            String[] titulos = enc.toArray(new String[enc.size()]);
+            int n = titulos.length;
+            for (int i = 0; i < n/2; i++) {
+                String temp = titulos[i];
+                titulos[i] = titulos[n-1-i];
+                titulos[n-1-i] = temp;
+            }
+            return titulos;
+        }
+        else if (criterio.equals("Nuevas")) {
+            Set<String> enc = new TreeSet<>(encuestas.keySet());
+            Iterator<String> iterator = enc.iterator();
+            while (iterator.hasNext()) {
+                if (respondidas) {
+                    if (!encuestas.get(iterator.next()).respondida(user)) iterator.remove();
+                }
+                else {
+                    if (encuestas.get(iterator.next()).respondida(user)) iterator.remove();
+                }
+            }
+            String[] titulos = enc.toArray(new String[enc.size()]);
+            Arrays.sort(titulos, new Comparator<String>() {
+                @Override
+                public int compare(String o1, String o2) {
+                    if (encuestas.get(o1).getFecha().before(encuestas.get(o2).getFecha())) {
+                        return 1;
+                    }
+                    else if (encuestas.get(o2).getFecha().before(encuestas.get(o1).getFecha())) {
+                        return -1;
+                    }
+                    return 0;
+                }
+            });
+            return titulos;
+        }
+        else if (criterio.equals("Antiguas")) {
+            Set<String> enc = new TreeSet<>(encuestas.keySet());
+            Iterator<String> iterator = enc.iterator();
+            while (iterator.hasNext()) {
+                if (respondidas) {
+                    if (!encuestas.get(iterator.next()).respondida(user)) iterator.remove();
+                }
+                else {
+                    if (encuestas.get(iterator.next()).respondida(user)) iterator.remove();
+                }
+            }
+            String[] titulos = enc.toArray(new String[enc.size()]);
+            Arrays.sort(titulos, new Comparator<String>() {
+                @Override
+                public int compare(String o1, String o2) {
+                    if (encuestas.get(o2).getFecha().before(encuestas.get(o1).getFecha())) {
+                        return 1;
+                    } else if (encuestas.get(o1).getFecha().before(encuestas.get(o2).getFecha())) {
+                        return -1;
+                    }
+                    return 0;
+                }
+            });
+            return titulos;
+        }
+        return null;
+    }
+
+
     /**
-     * Devuelve los títulos de las encuestas que se encuentren en el intervalo indicado con fecha1 y fecha2 (exclusivo)
+     * Devuelve los títulos de las encuestas que se encuentren en el intervalo indicado con fecha1 y fecha2 (inclusivo)
      * @param fecha1 fecha más antigua a partir de la cual buscar
      * @param fecha2 fecha más reciente
      * @return
@@ -103,8 +192,51 @@ public class CjtEncuestas {
         return titulos.toArray(new String[titulos.size()]);
     }
 
+    public String[] getTitulosEncuestasFechaUsuario (Date fecha1, Date fecha2, String user, boolean respondidas) {
+        Set<String> enc = new TreeSet<>(encuestas.keySet());
+        Iterator<String> iterator = enc.iterator();
+        while (iterator.hasNext()) {
+            if (respondidas) {
+                if (!encuestas.get(iterator.next()).respondida(user)) iterator.remove();
+            }
+            else {
+                if (encuestas.get(iterator.next()).respondida(user)) iterator.remove();
+            }
+        }
+        String[] t = enc.toArray(new String[enc.size()]);
+        ArrayList<String> titulos = new ArrayList<>();
+        for (int i = 0; i < t.length; i++) {
+            if (encuestas.get(t[i]).getFecha().after(fecha1) && encuestas.get(t[i]).getFecha().before(fecha2)) {
+                titulos.add(t[i]);
+            }
+        }
+        return titulos.toArray(new String[titulos.size()]);
+    }
+
+
     public String[] getTitulosEncuestasPalabras (String palabras) {
         String[] t = encuestas.keySet().toArray(new String[encuestas.keySet().size()]);
+        ArrayList<String> titulos = new ArrayList<>();
+        for (int i = 0; i < t.length; i++) {
+            if (t[i].contains(palabras)) {
+                titulos.add(t[i]);
+            }
+        }
+        return titulos.toArray(new String[titulos.size()]);
+    }
+
+    public String[] getTitulosEncuestasPalabrasUsuario (String palabras, String user, boolean respondidas) {
+        Set<String> enc = new TreeSet<>(encuestas.keySet());
+        Iterator<String> iterator = enc.iterator();
+        while (iterator.hasNext()) {
+            if (respondidas) {
+                if (!encuestas.get(iterator.next()).respondida(user)) iterator.remove();
+            }
+            else {
+                if (encuestas.get(iterator.next()).respondida(user)) iterator.remove();
+            }
+        }
+        String[] t = enc.toArray(new String[enc.size()]);
         ArrayList<String> titulos = new ArrayList<>();
         for (int i = 0; i < t.length; i++) {
             if (t[i].contains(palabras)) {

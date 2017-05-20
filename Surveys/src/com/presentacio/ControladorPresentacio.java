@@ -6,12 +6,7 @@ import com.domini.ExcFormatoIncorrecto;
 import com.domini.ExcUsuarioExistente;
 
 import javax.swing.*;
-import javax.swing.filechooser.FileFilter;
-import javax.swing.filechooser.FileNameExtensionFilter;
-import java.io.File;
-import java.time.Instant;
 import java.util.ArrayList;
-import java.util.Date;
 
 /**
  * Controlador de la capa de presentación
@@ -20,7 +15,8 @@ public class ControladorPresentacio {
     private ControladorDominio ctrlDom;
 
     LogIn li = null;
-    VistaPrincipal vp = null;
+    VistaPrincipalAdmin vp = null;
+    VistaPrincipalUsuario vu = null;
     RegistroUsuario ru = null;
     VistaCrearEncuesta ce = null;
     ImportarEncuesta ie = null;
@@ -45,12 +41,20 @@ public class ControladorPresentacio {
     }
 
     public void logIn (String user, String pass) {
-        if (ctrlDom.logIn(user,pass) == 0) {
+        int codigo = ctrlDom.logIn(user,pass);
+        if (codigo == 0) {
             li.datosIncorrectos();
         }
-        else {
+        else if (codigo == 1) {
             li.close();
-            vp = new VistaPrincipal(this, ctrlDom.getUser());
+            vu = new VistaPrincipalUsuario(this, ctrlDom.getUser());
+            vu.llenarListaEncuestas(ctrlDom.listaEncuestasUsuario("A-Z", false));
+            vu.llenarListaEncuestasRespondidas(ctrlDom.listaEncuestasUsuario("A-Z", true));
+            vu.show();
+        }
+        else if (codigo == 2) {
+            li.close();
+            vp = new VistaPrincipalAdmin(this, ctrlDom.getUser());
             vp.llenarLista(ctrlDom.listaEncuestas("A-Z"));
             vp.show();
         }
@@ -59,7 +63,12 @@ public class ControladorPresentacio {
     public void logOut () {
         ctrlDom.logOut();
         li.show();
-        vp.close();
+        if (vp != null) {
+            vp.close();
+        }
+        if (vu != null) {
+            vu.close();
+        }
     }
 
     public void registrarse() {
@@ -75,6 +84,31 @@ public class ControladorPresentacio {
     public void buscarEncuestas (String criterio) {
         this.criterio = criterio;
         vp.llenarLista(ctrlDom.listaEncuestas(criterio));
+    }
+
+    public void buscarEncuestasUsuario(String criterio) {
+        this.criterio = criterio;
+        vu.llenarListaEncuestas(ctrlDom.listaEncuestasUsuario(criterio, false));
+        vu.llenarListaEncuestasRespondidas(ctrlDom.listaEncuestasUsuario(criterio, true));
+    }
+
+    public void buscarEncuestasPalabras (String palabras) {
+        vp.llenarLista(ctrlDom.listaEncuestasPalabras(palabras));
+    }
+
+    public void buscarEncuestasPalabrasUsuario (String palabras) {
+        vu.llenarListaEncuestas(ctrlDom.listaEncuestasPalabrasUsuario(palabras, false));
+        vu.llenarListaEncuestasRespondidas(ctrlDom.listaEncuestasPalabrasUsuario(palabras, true));
+    }
+
+    public void buscarEncuestaFecha (String f1, String f2) {
+        vp.llenarLista(ctrlDom.listaEncuestaFecha(f1,f2));
+    }
+
+    public void buscarEncuestaFechaUsuario (String f1, String f2) {
+        vu.llenarListaEncuestas(ctrlDom.listaEncuestaFechaUsuario(f1,f2, false));
+        vu.llenarListaEncuestasRespondidas(ctrlDom.listaEncuestaFechaUsuario(f1,f2, true));
+
     }
 
     public void crearEncuesta() {
@@ -143,14 +177,6 @@ public class ControladorPresentacio {
     public void respuestaEncuesta() {
         //ctrlDom.responderEncuesta(...);
         ce.close();
-    }
-
-    public void buscarEncuestasPalabras (String palabras) {
-        vp.llenarLista(ctrlDom.listaEncuestasPalabras(palabras));
-    }
-
-    public void buscarEncuestaFecha (String f1, String f2) {
-        vp.llenarLista(ctrlDom.listaEncuestaFecha(f1,f2));
     }
 
     public void borrarEncuesta(String titulo) {

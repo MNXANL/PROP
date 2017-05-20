@@ -405,8 +405,25 @@ public class Encuesta {
      * responder una encuesta es añadir una RespuestasEncuesta de un usuario al array CjtRespsEnc
      * @param re Conjunto de respuestas de un usuario
      */
-    public void responder(RespuestasEncuesta re){
+    public boolean responder(RespuestasEncuesta re){
+        for (int i = 0; i < CjtRespsEnc.size(); i++) {
+            if (CjtRespsEnc.get(i).getUser().equals(re.getUser())) {
+                CjtRespsEnc.remove(i);
+                CjtRespsEnc.add(re);
+                return true;
+            }
+        }
         CjtRespsEnc.add(re);
+        return false;
+    }
+
+    public boolean respondida(String user) {
+        for (int i = 0; i < CjtRespsEnc.size(); i++) {
+            if (CjtRespsEnc.get(i).getUser().equals(user)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void leer () {
