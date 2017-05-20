@@ -3,10 +3,7 @@ package com.presentacio;
 import com.domini.ExcFormatoIncorrecto;
 
 import javax.swing.*;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
+import javax.swing.event.*;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
@@ -33,6 +30,7 @@ public class VistaPrincipalUsuario {
     private JButton responderEncuestaButton;
     private JList list2;
     private JButton exportarRespuestaButton;
+    private JTabbedPane tabs;
 
     /**
      * Constructora vista principal del programa
@@ -69,6 +67,15 @@ public class VistaPrincipalUsuario {
                 seleccionadaEncuestaSinResponder();
             }
         });
+        list1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+
+        list2.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                seleccionadaEncuestaRespondida();
+            }
+        });
+        list2.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
         palClave.getDocument().addDocumentListener(new DocumentListener() {
             @Override
@@ -134,6 +141,26 @@ public class VistaPrincipalUsuario {
                 ctrlPres.responderEncuesta();
             }
         });
+
+        exportarRespuestaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
+        tabs.addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                int i = tabs.getSelectedIndex();
+                if (i == 0) {
+                    list2.clearSelection();
+                } else if (i == 1) {
+                    list1.clearSelection();
+                }
+                NOseleccionadaEncuesta();
+            }
+        });
     }
 
     private void palabrasClaveChanged() {
@@ -189,14 +216,17 @@ public class VistaPrincipalUsuario {
 
     public void NOseleccionadaEncuesta() {
         responderEncuestaButton.setEnabled(false);
+        exportarRespuestaButton.setEnabled(false);
     }
 
     public void seleccionadaEncuestaSinResponder() {
         responderEncuestaButton.setEnabled(true);
+        exportarRespuestaButton.setEnabled(false);
     }
 
     public void seleccionadaEncuestaRespondida() {
         responderEncuestaButton.setEnabled(false);
+        exportarRespuestaButton.setEnabled(true);
     }
 
     public void importarRespuesta() {
@@ -205,21 +235,28 @@ public class VistaPrincipalUsuario {
         fileChooser.setDialogTitle("Selecciona la(s) respuesta(s) que quieres importar");
         FileFilter txt = new FileNameExtensionFilter("txt", "txt");
         fileChooser.setFileFilter(txt);
-        fileChooser.setMultiSelectionEnabled(true);
+        fileChooser.setMultiSelectionEnabled(false);
 
         int userSelection = fileChooser.showOpenDialog(parentFrame);
         if (userSelection == JFileChooser.APPROVE_OPTION) {
-            File[] filesToSave = fileChooser.getSelectedFiles();
+            File fileToSave = fileChooser.getSelectedFile();
             try {
-                for (int i = 0; i < filesToSave.length; i++) {
-                    String enc = list1.getSelectedValue().toString();
-                    String path = filesToSave[i].getAbsolutePath();
-                    ctrlPres.importarRespuestaEncuesta(enc, path);
-                }
+                String enc = list1.getSelectedValue().toString();
+                String path = fileToSave.getAbsolutePath();
+                ctrlPres.importarRespuestaEncuesta(enc, path);
             } catch (ExcFormatoIncorrecto e1) {
                 aviso(e1.getMessage());
             }
         }
+
+        // actualizar listas
+        if (comboBox1.isEnabled())
+            ctrlPres.buscarEncuestasUsuario(comboBox1.getSelectedItem().toString());
+        else if (palClave.isEnabled() && !palClave.getText().equals(""))
+            ctrlPres.buscarEncuestasPalabrasUsuario(palClave.getText());
+        else if (fechaIni.isEnabled() && fechaFin.isEnabled() && !fechaIni.getText().equals("") && !fechaFin.getText().equals(""))
+            ctrlPres.buscarEncuestaFechaUsuario(fechaIni.getText(), fechaFin.getText());
+
     }
 
     public void aviso(String mensaje) {
@@ -306,11 +343,11 @@ public class VistaPrincipalUsuario {
         cerrarSesiónButton = new JButton();
         cerrarSesiónButton.setText("Cerrar sesión");
         panel1.add(cerrarSesiónButton, new com.intellij.uiDesigner.core.GridConstraints(0, 5, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        final JTabbedPane tabbedPane1 = new JTabbedPane();
-        panel1.add(tabbedPane1, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 2, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, new Dimension(200, 200), null, 0, false));
+        tabs = new JTabbedPane();
+        panel1.add(tabs, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 2, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, new Dimension(200, 200), null, 0, false));
         final JPanel panel3 = new JPanel();
         panel3.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
-        tabbedPane1.addTab("Encuestas", panel3);
+        tabs.addTab("Encuestas", panel3);
         final JScrollPane scrollPane1 = new JScrollPane();
         panel3.add(scrollPane1, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         list1 = new JList();
@@ -319,7 +356,7 @@ public class VistaPrincipalUsuario {
         scrollPane1.setViewportView(list1);
         final JPanel panel4 = new JPanel();
         panel4.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
-        tabbedPane1.addTab("Encuestas respondidas", panel4);
+        tabs.addTab("Encuestas respondidas", panel4);
         final JScrollPane scrollPane2 = new JScrollPane();
         panel4.add(scrollPane2, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         list2 = new JList();

@@ -65,9 +65,15 @@ public class ControladorPresentacio {
         li.show();
         if (vp != null) {
             vp.close();
+            vp = null;
+            ce = null;
+            ie = null;
         }
         if (vu != null) {
             vu.close();
+            vu = null;
+            ce = null;
+            ie = null;
         }
     }
 
@@ -148,7 +154,10 @@ public class ControladorPresentacio {
         for (isel = 0; isel < opciones.length && !opciones[isel].equals(vsel); isel++) ;
 
         if (isel == 0) {
-            vp.importarRespuesta();
+            if (vp != null)
+                vp.importarRespuesta();
+            else if (vu != null)
+                vu.importarRespuesta();
         }
         else if (isel == 1) {
             System.out.println("Responder encuesta interactivamente");
@@ -171,7 +180,7 @@ public class ControladorPresentacio {
 
     public void importarRespuestaEncuesta(String enc, String path) throws ExcFormatoIncorrecto{
         ctrlDom.importarRespuestaEncuesta(enc,path);
-        ctrlDom.verRespuestasEncuesta(enc);
+        //ctrlDom.verRespuestasEncuesta(enc);
     }
 
     public void respuestaEncuesta() {
