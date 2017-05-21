@@ -428,7 +428,7 @@ public class ControladorDominio {
     }
 
 
-    public void borrarRespuestasEncuesta (String titulo) {
+    public void borrarRespuestaEncuesta (String titulo) {
         cjt.borrarRespuesta(titulo, u.getUsername());
         contDatos.borrarRespuestasEncuesta(titulo + "_" + u.getUsername());
     }

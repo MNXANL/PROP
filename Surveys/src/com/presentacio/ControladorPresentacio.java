@@ -144,6 +144,27 @@ public class ControladorPresentacio {
         }
     }
 
+    public void importarEncuesta(String path) throws ExcFormatoIncorrecto, ExcEncuestaExistente{
+        ctrlDom.importarEncuesta(path);
+        vp.llenarLista(ctrlDom.listaEncuestas(criterio));
+    }
+
+    public void crearEncuestaArgs(String titulo, ArrayList<ArrayList<String>> enc) throws ExcEncuestaExistente {
+        ctrlDom.crearEncuestaMatrix(titulo, enc);
+        vp.llenarLista(ctrlDom.listaEncuestas(criterio));
+    }
+
+    public void exportarEncuesta(String enc, String path) {
+        ctrlDom.exportarEncuesta(enc, path);
+    }
+
+    public void borrarEncuesta(String titulo) {
+        //JOptionPane.showMessageDialog(vp, "Eggs are not supposed to be green.");
+
+        ctrlDom.borrarEncuesta(titulo);
+        vp.llenarLista(ctrlDom.listaEncuestas(criterio));
+    }
+
     public void responderEncuesta() {
         JOptionPane optionPane = new JOptionPane("Desea responder una encuesta interactivamente o importar las respuestas de una encuesta?", JOptionPane.QUESTION_MESSAGE);
         String[] opciones = {"Importar", "Crear"};
@@ -168,20 +189,6 @@ public class ControladorPresentacio {
         }
     }
 
-    public void importarEncuesta(String path) throws ExcFormatoIncorrecto, ExcEncuestaExistente{
-        ctrlDom.importarEncuesta(path);
-        vp.llenarLista(ctrlDom.listaEncuestas(criterio));
-    }
-
-    public void crearEncuestaArgs(String titulo, ArrayList<ArrayList<String>> enc) throws ExcEncuestaExistente {
-        ctrlDom.crearEncuestaMatrix(titulo, enc);
-        vp.llenarLista(ctrlDom.listaEncuestas(criterio));
-    }
-
-    public void exportarEncuesta(String enc, String path) {
-        ctrlDom.exportarEncuesta(enc, path);
-    }
-
     public void importarRespuestaEncuesta(String enc, String path) throws ExcFormatoIncorrecto{
         ctrlDom.importarRespuestaEncuesta(enc,path);
         //ctrlDom.verRespuestasEncuesta(enc);
@@ -191,16 +198,13 @@ public class ControladorPresentacio {
         ctrlDom.exportarRespuestaEncuesta(enc,path);
     }
 
+    public void borrarRespuestaEncuesta(String enc) {
+        ctrlDom.borrarRespuestaEncuesta(enc);
+    }
+
     public void respuestaEncuesta() {
         //ctrlDom.responderEncuesta(...);
         ce.close();
-    }
-
-    public void borrarEncuesta(String titulo) {
-        //JOptionPane.showMessageDialog(vp, "Eggs are not supposed to be green.");
-
-        ctrlDom.borrarEncuesta(titulo);
-        vp.llenarLista(ctrlDom.listaEncuestas(criterio));
     }
 
 

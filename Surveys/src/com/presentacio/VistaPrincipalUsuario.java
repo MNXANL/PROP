@@ -31,6 +31,7 @@ public class VistaPrincipalUsuario {
     private JList list2;
     private JButton exportarRespuestaButton;
     private JTabbedPane tabs;
+    private JButton borrarRespuestaButton;
 
     /**
      * Constructora vista principal del programa
@@ -51,20 +52,19 @@ public class VistaPrincipalUsuario {
         buscarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (comboBox1.isEnabled())
-                    ctrlPres.buscarEncuestasUsuario(comboBox1.getSelectedItem().toString());
-                else if (palClave.isEnabled() && !palClave.getText().equals(""))
-                    ctrlPres.buscarEncuestasPalabrasUsuario(palClave.getText());
-                else if (fechaIni.isEnabled() && fechaFin.isEnabled() && !fechaIni.getText().equals("") && !fechaFin.getText().equals(""))
-                    ctrlPres.buscarEncuestaFechaUsuario(fechaIni.getText(), fechaFin.getText());
-
+                buscar();
             }
         });
 
         list1.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
-                seleccionadaEncuestaSinResponder();
+                if (list1.isSelectionEmpty()) {
+                    NOseleccionadaEncuesta();
+                }
+                else {
+                    seleccionadaEncuestaSinResponder();
+                }
             }
         });
         list1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -72,7 +72,12 @@ public class VistaPrincipalUsuario {
         list2.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
-                seleccionadaEncuestaRespondida();
+                if (list2.isSelectionEmpty()) {
+                    NOseleccionadaEncuesta();
+                }
+                else {
+                    seleccionadaEncuestaRespondida();
+                }
             }
         });
         list2.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -170,6 +175,15 @@ public class VistaPrincipalUsuario {
                 NOseleccionadaEncuesta();
             }
         });
+
+        borrarRespuestaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (AvisoBorrarRespuestaEncuesta() == 0)
+                    ctrlPres.borrarRespuestaEncuesta(list2.getSelectedValue().toString());
+                    buscar();
+            }
+        });
     }
 
     private void palabrasClaveChanged() {
@@ -223,19 +237,31 @@ public class VistaPrincipalUsuario {
         list2.setModel(model);
     }
 
+    public void buscar() {
+        if (comboBox1.isEnabled())
+            ctrlPres.buscarEncuestasUsuario(comboBox1.getSelectedItem().toString());
+        else if (palClave.isEnabled() && !palClave.getText().equals(""))
+            ctrlPres.buscarEncuestasPalabrasUsuario(palClave.getText());
+        else if (fechaIni.isEnabled() && fechaFin.isEnabled() && !fechaIni.getText().equals("") && !fechaFin.getText().equals(""))
+            ctrlPres.buscarEncuestaFechaUsuario(fechaIni.getText(), fechaFin.getText());
+    }
+
     public void NOseleccionadaEncuesta() {
         responderEncuestaButton.setEnabled(false);
         exportarRespuestaButton.setEnabled(false);
+        borrarRespuestaButton.setEnabled(false);
     }
 
     public void seleccionadaEncuestaSinResponder() {
         responderEncuestaButton.setEnabled(true);
         exportarRespuestaButton.setEnabled(false);
+        borrarRespuestaButton.setEnabled(false);
     }
 
     public void seleccionadaEncuestaRespondida() {
         responderEncuestaButton.setEnabled(false);
         exportarRespuestaButton.setEnabled(true);
+        borrarRespuestaButton.setEnabled(true);
     }
 
     public void importarRespuesta() {
@@ -257,15 +283,8 @@ public class VistaPrincipalUsuario {
                 aviso(e1.getMessage());
             }
         }
-
         // actualizar listas
-        if (comboBox1.isEnabled())
-            ctrlPres.buscarEncuestasUsuario(comboBox1.getSelectedItem().toString());
-        else if (palClave.isEnabled() && !palClave.getText().equals(""))
-            ctrlPres.buscarEncuestasPalabrasUsuario(palClave.getText());
-        else if (fechaIni.isEnabled() && fechaFin.isEnabled() && !fechaIni.getText().equals("") && !fechaFin.getText().equals(""))
-            ctrlPres.buscarEncuestaFechaUsuario(fechaIni.getText(), fechaFin.getText());
-
+        buscar();
     }
 
     public void aviso(String mensaje) {
@@ -276,6 +295,22 @@ public class VistaPrincipalUsuario {
         dialogOptionPane.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         dialogOptionPane.pack();
         dialogOptionPane.setVisible(true);
+    }
+
+    private int AvisoBorrarRespuestaEncuesta() {
+        JOptionPane optionPane = new JOptionPane("Quieres borrar tu respuesta a esta encuesta?", 3);
+        String[] strBotones = {"Sí", "No"};
+        optionPane.setOptions(strBotones);
+        JDialog dialogOptionPane = optionPane.createDialog(new JFrame(), "AVISO");
+        dialogOptionPane.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        dialogOptionPane.pack();
+        dialogOptionPane.setVisible(true);
+
+        // Captura la opcion elegida
+        String vsel = (String) optionPane.getValue();
+        int isel;
+        for (isel = 0; isel < strBotones.length && !strBotones[isel].equals(vsel); isel++) ;
+        return isel;
     }
 
     {
@@ -331,10 +366,10 @@ public class VistaPrincipalUsuario {
         label4.setText("Fecha Final");
         panel1.add(label4, new com.intellij.uiDesigner.core.GridConstraints(1, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JPanel panel2 = new JPanel();
-        panel2.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(6, 2, new Insets(0, 0, 0, 0), -1, -1));
+        panel2.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(8, 2, new Insets(0, 0, 0, 0), -1, -1));
         panel1.add(panel2, new com.intellij.uiDesigner.core.GridConstraints(3, 5, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer1 = new com.intellij.uiDesigner.core.Spacer();
-        panel2.add(spacer1, new com.intellij.uiDesigner.core.GridConstraints(5, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
+        panel2.add(spacer1, new com.intellij.uiDesigner.core.GridConstraints(7, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
         responderEncuestaButton = new JButton();
         responderEncuestaButton.setEnabled(false);
         responderEncuestaButton.setText("Responder encuesta");
@@ -349,6 +384,12 @@ public class VistaPrincipalUsuario {
         panel2.add(spacer3, new com.intellij.uiDesigner.core.GridConstraints(4, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer4 = new com.intellij.uiDesigner.core.Spacer();
         panel2.add(spacer4, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
+        borrarRespuestaButton = new JButton();
+        borrarRespuestaButton.setEnabled(false);
+        borrarRespuestaButton.setText("Borrar respuesta");
+        panel2.add(borrarRespuestaButton, new com.intellij.uiDesigner.core.GridConstraints(5, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        final com.intellij.uiDesigner.core.Spacer spacer5 = new com.intellij.uiDesigner.core.Spacer();
+        panel2.add(spacer5, new com.intellij.uiDesigner.core.GridConstraints(6, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         cerrarSesiónButton = new JButton();
         cerrarSesiónButton.setText("Cerrar sesión");
         panel1.add(cerrarSesiónButton, new com.intellij.uiDesigner.core.GridConstraints(0, 5, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
