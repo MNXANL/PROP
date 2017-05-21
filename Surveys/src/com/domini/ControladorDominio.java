@@ -418,6 +418,10 @@ public class ControladorDominio {
         }
     }
 
+    public void exportarRespuestaEncuesta(String tituloE, String path) {
+        cjt.getEncuesta(tituloE).getRespuesta(u.getUsername()).exportar(path);
+    }
+
     public void verRespuestasEncuesta(String tituloE) {
         Encuesta e = cjt.getEncuesta(tituloE);
         e.printarRespuestasDeEncuesta();

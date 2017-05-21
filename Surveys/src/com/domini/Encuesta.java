@@ -426,6 +426,15 @@ public class Encuesta {
         return false;
     }
 
+    public RespuestasEncuesta getRespuesta(String user) {
+        for (int i = 0; i < CjtRespsEnc.size(); i++) {
+            if (CjtRespsEnc.get(i).getUser().equals(user)) {
+                return CjtRespsEnc.get(i);
+            }
+        }
+        return null;
+    }
+
     public void leer () {
         System.out.println(title + "\n");
         DateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");

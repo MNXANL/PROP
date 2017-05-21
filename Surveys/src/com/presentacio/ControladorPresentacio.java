@@ -87,6 +87,10 @@ public class ControladorPresentacio {
         ru.close();
     }
 
+    public String getUsername () {
+        return ctrlDom.getUser();
+    }
+
     public void buscarEncuestas (String criterio) {
         this.criterio = criterio;
         vp.llenarLista(ctrlDom.listaEncuestas(criterio));
@@ -181,6 +185,10 @@ public class ControladorPresentacio {
     public void importarRespuestaEncuesta(String enc, String path) throws ExcFormatoIncorrecto{
         ctrlDom.importarRespuestaEncuesta(enc,path);
         //ctrlDom.verRespuestasEncuesta(enc);
+    }
+
+    public void exportarRespuestaEncuesta(String enc, String path) {
+        ctrlDom.exportarRespuestaEncuesta(enc,path);
     }
 
     public void respuestaEncuesta() {

@@ -145,7 +145,16 @@ public class VistaPrincipalUsuario {
         exportarRespuestaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                JFrame parentFrame = new JFrame();
+                JFileChooser fileChooser = new JFileChooser();
+                fileChooser.setDialogTitle("Selecciona donde quieres guardar la respuesta");
+                fileChooser.setSelectedFile(new File(list2.getSelectedValue().toString() + "_" + ctrlPres.getUsername() + ".txt"));
 
+                int userSelection = fileChooser.showSaveDialog(parentFrame);
+                if (userSelection == JFileChooser.APPROVE_OPTION) {
+                    File fileToSave = fileChooser.getSelectedFile();
+                    ctrlPres.exportarRespuestaEncuesta(list2.getSelectedValue().toString(), fileToSave.getAbsolutePath());
+                }
             }
         });
 
