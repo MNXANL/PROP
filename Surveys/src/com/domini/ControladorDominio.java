@@ -407,8 +407,12 @@ public class ControladorDominio {
         System.out.println("Guardada.");
     }
 
-    public void importarRespuestaEncuesta(String tituloE, String path) throws ExcFormatoIncorrecto{
+    public void importarRespuestaEncuesta(String tituloE, String path) throws ExcFormatoIncorrecto, ExcUsuarioRespuestaIncorrecto {
         RespuestasEncuesta re = RespuestasEncuesta.importar(path);
+        if (!re.getUser().equals(this.getUser()) && !this.getUser().equals("admin")) {
+            ExcUsuarioRespuestaIncorrecto exc = new ExcUsuarioRespuestaIncorrecto("El usuario que figura en el documento de respuesta no se corresponde con el usuario actual del sistema");
+            throw exc;
+        }
         boolean respuestaExistente = cjt.getEncuesta(tituloE).responder(re);
         if (respuestaExistente) {
             contDatos.actualizarRespuestasEncuesta(re);

@@ -1,6 +1,7 @@
 package com.presentacio;
 
 import com.domini.ExcFormatoIncorrecto;
+import com.domini.ExcUsuarioRespuestaIncorrecto;
 
 import javax.swing.*;
 import javax.swing.event.*;
@@ -61,8 +62,7 @@ public class VistaPrincipalUsuario {
             public void valueChanged(ListSelectionEvent e) {
                 if (list1.isSelectionEmpty()) {
                     NOseleccionadaEncuesta();
-                }
-                else {
+                } else {
                     seleccionadaEncuestaSinResponder();
                 }
             }
@@ -74,8 +74,7 @@ public class VistaPrincipalUsuario {
             public void valueChanged(ListSelectionEvent e) {
                 if (list2.isSelectionEmpty()) {
                     NOseleccionadaEncuesta();
-                }
-                else {
+                } else {
                     seleccionadaEncuestaRespondida();
                 }
             }
@@ -181,7 +180,7 @@ public class VistaPrincipalUsuario {
             public void actionPerformed(ActionEvent e) {
                 if (AvisoBorrarRespuestaEncuesta() == 0)
                     ctrlPres.borrarRespuestaEncuesta(list2.getSelectedValue().toString());
-                    buscar();
+                buscar();
             }
         });
     }
@@ -281,6 +280,8 @@ public class VistaPrincipalUsuario {
                 ctrlPres.importarRespuestaEncuesta(enc, path);
             } catch (ExcFormatoIncorrecto e1) {
                 aviso(e1.getMessage());
+            } catch (ExcUsuarioRespuestaIncorrecto e2) {
+                aviso(e2.getMessage());
             }
         }
         // actualizar listas

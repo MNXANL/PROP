@@ -1,9 +1,6 @@
 package com.presentacio;
 
-import com.domini.ControladorDominio;
-import com.domini.ExcEncuestaExistente;
-import com.domini.ExcFormatoIncorrecto;
-import com.domini.ExcUsuarioExistente;
+import com.domini.*;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -189,7 +186,7 @@ public class ControladorPresentacio {
         }
     }
 
-    public void importarRespuestaEncuesta(String enc, String path) throws ExcFormatoIncorrecto{
+    public void importarRespuestaEncuesta(String enc, String path) throws ExcFormatoIncorrecto, ExcUsuarioRespuestaIncorrecto{
         ctrlDom.importarRespuestaEncuesta(enc,path);
         //ctrlDom.verRespuestasEncuesta(enc);
     }

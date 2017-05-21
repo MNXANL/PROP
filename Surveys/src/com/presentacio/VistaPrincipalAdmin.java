@@ -1,6 +1,7 @@
 package com.presentacio;
 
 import com.domini.ExcFormatoIncorrecto;
+import com.domini.ExcUsuarioRespuestaIncorrecto;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -286,6 +287,8 @@ public class VistaPrincipalAdmin {
                 }
             } catch (ExcFormatoIncorrecto e1) {
                 aviso(e1.getMessage());
+            } catch (ExcUsuarioRespuestaIncorrecto e2) {
+
             }
         }
     }
