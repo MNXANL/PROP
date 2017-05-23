@@ -9,12 +9,14 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
-public class VistaCrearEncuesta {
+public class VistaRespInteractiva {
     private ControladorPresentacio ctrlPres;
-    private JFrame frame = new JFrame("Creadora de encuesta");
+    private ArrayList<ArrayList<String>> enc;
+    private JFrame frame = new JFrame("Responder encuestas");
 
     private JPanel panelList;
     private JLabel userLabel;
@@ -34,27 +36,23 @@ public class VistaCrearEncuesta {
     private DefaultListModel<String> modelPregs;
     private DefaultListModel<String> modelEnc;
     private JButton guardarPreguntaButton;
-    private JButton plusButton;
-    private JButton minusButton;
     private JSpinner spinner1;
-    private JPanel buttonPanel;
-    private JPanel PCNOMpanel;
     private JTextField optField;
-    private JSpinner minSpinner;
-    private JSpinner maxSpinner;
     private JButton guardarEncuestaButton;
+    private JTextArea textArea1;
     private ArrayList<ArrayList<String>> PreguntasGuardadas;
 
     private boolean esModificado;
     private int idxMod;
 
     /**
-     * Constructora vista de creación de encuesta
+     * Constructora vista de respuesta interactiva
      *
      * @param ctrlPres Controlador de presentacion
      */
-    public VistaCrearEncuesta(ControladorPresentacio ctrlPres) {
+    public VistaRespInteractiva(ControladorPresentacio ctrlPres, ArrayList<ArrayList<String>> enc) {
         this.ctrlPres = ctrlPres;
+        this.enc = enc;
         asignarListeners();
         String tipoResp[] = {"Libre", "Numérica", "Cualitativa ordenada", "Cualitativa no ordenada unica", "Cualitativa no ordenada multiple"};
         for (String tr : tipoResp) {
@@ -65,16 +63,12 @@ public class VistaCrearEncuesta {
         panelPreg.setVisible(false);
         PregNum.setVisible(false);
         PregCual.setVisible(false);
-        PCNOMpanel.setVisible(false);
         modelEnc = new DefaultListModel<>();
         modelPregs = new DefaultListModel<>();
         list1.setModel(modelEnc);
         listOption.setModel(modelPregs);
 
-        minSpinner.setValue(0);
-        maxSpinner.setValue(10);
         spinner1.setValue(2);
-        minusButton.setEnabled(false);
 
         PreguntasGuardadas = new ArrayList<ArrayList<String>>();
         esModificado = false;
@@ -85,29 +79,24 @@ public class VistaCrearEncuesta {
         if (idx == 0) {
             PregNum.setVisible(true);
             PregCual.setVisible(false);
-            PCNOMpanel.setVisible(false);
             guardarPreguntaButton.setEnabled(true);
         } else if (idx == 1) {
             PregNum.setVisible(false);
             PregCual.setVisible(false);
-            PCNOMpanel.setVisible(false);
             guardarPreguntaButton.setEnabled(true);
         } else if (idx == 2) {
             PregNum.setVisible(false);
             PregCual.setVisible(true);
-            PCNOMpanel.setVisible(false);
             if (modelPregs.size() == 0) guardarPreguntaButton.setEnabled(false);
             else guardarPreguntaButton.setEnabled(true);
         } else if (idx == 3) {
             PregNum.setVisible(false);
             PregCual.setVisible(true);
-            PCNOMpanel.setVisible(false);
             if (modelPregs.size() == 0) guardarPreguntaButton.setEnabled(false);
             else guardarPreguntaButton.setEnabled(true);
         } else if (idx == 4) {
             PregNum.setVisible(false);
             PregCual.setVisible(true);
-            PCNOMpanel.setVisible(true);
             if (modelPregs.size() == 0) guardarPreguntaButton.setEnabled(false);
             else guardarPreguntaButton.setEnabled(true);
         }
@@ -134,8 +123,6 @@ public class VistaCrearEncuesta {
                 if (PregMod.get(0).equals("PN")) {
                     panelVisibility(0);
                     preguntaField.setText(PregMod.get(1));
-                    minSpinner.setValue(Integer.parseInt(PregMod.get(2)));
-                    maxSpinner.setValue(Integer.parseInt(PregMod.get(3)));
                     comboBox1.setSelectedIndex(1);
                 } else if (PregMod.get(0).equals("PRL")) {
                     panelVisibility(1);
@@ -191,13 +178,6 @@ public class VistaCrearEncuesta {
                     ArrayList<String> preg = new ArrayList<>();
                     preguntaField.setText("");
                     if (comboBox1.getSelectedItem().toString().equals("Numérica")) {
-                        if (Integer.parseInt(minSpinner.getValue().toString()) <= Integer.parseInt(maxSpinner.getValue().toString())) {
-                            preg.add("PN");
-                            preg.add(NomPreg);
-                            preg.add(minSpinner.getValue().toString()); //Min
-                            preg.add(maxSpinner.getValue().toString()); //Max
-                        }
-                        else System.out.println("ERROR: min < max");
                     } else if (comboBox1.getSelectedItem().toString().equals("Libre")) {
                         preg.add("PRL");
                         preg.add(NomPreg);
@@ -233,8 +213,7 @@ public class VistaCrearEncuesta {
                         esModificado = false;
                         PreguntasGuardadas.set(idxMod, preg);
                         modelEnc.set(idxMod, NomPreg);
-                    }
-                    else {
+                    } else {
                         modelEnc.addElement(NomPreg);
                         PreguntasGuardadas.add(preg);
                     }
@@ -270,27 +249,6 @@ public class VistaCrearEncuesta {
             }
         });
 
-        plusButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (!optField.getText().equals("")) {
-                    modelPregs.addElement(optField.getText());
-                    optField.setText("");
-                }
-                if (!guardarPreguntaButton.isEnabled()) guardarPreguntaButton.setEnabled(true);
-            }
-        });
-        minusButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (listOption.getSelectedIndex() >= 0 || listOption.getSelectedIndex() < modelPregs.size()) {
-                    modelPregs.remove(listOption.getSelectedIndex());
-                    listOption.setModel(modelPregs);
-                }
-                minusButton.setEnabled(false);
-            }
-        });
-
         list1.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
@@ -302,7 +260,7 @@ public class VistaCrearEncuesta {
         listOption.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
-                minusButton.setEnabled(true);
+                //...
             }
         });
 
@@ -355,11 +313,6 @@ public class VistaCrearEncuesta {
         frame.setVisible(false);
     }
 
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
-
     {
 // GUI initializer generated by IntelliJ IDEA GUI Designer
 // >>> IMPORTANT!! <<<
@@ -388,7 +341,7 @@ public class VistaCrearEncuesta {
         gbc.fill = GridBagConstraints.BOTH;
         panel1.add(panelBotones, gbc);
         nuevaPreguntaButton = new JButton();
-        nuevaPreguntaButton.setText("Nueva pregunta");
+        nuevaPreguntaButton.setText("Responder pregunta");
         panelBotones.add(nuevaPreguntaButton, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer1 = new com.intellij.uiDesigner.core.Spacer();
         panelBotones.add(spacer1, new com.intellij.uiDesigner.core.GridConstraints(1, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
@@ -396,7 +349,7 @@ public class VistaCrearEncuesta {
         panelBotones.add(spacer2, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         borrarPreguntaButton = new JButton();
         borrarPreguntaButton.setEnabled(false);
-        borrarPreguntaButton.setText("Borrar pregunta");
+        borrarPreguntaButton.setText("Borrar respuesta");
         panelBotones.add(borrarPreguntaButton, new com.intellij.uiDesigner.core.GridConstraints(5, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer3 = new com.intellij.uiDesigner.core.Spacer();
         panelBotones.add(spacer3, new com.intellij.uiDesigner.core.GridConstraints(6, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
@@ -406,31 +359,29 @@ public class VistaCrearEncuesta {
         panelBotones.add(spacer5, new com.intellij.uiDesigner.core.GridConstraints(4, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         modificarPreguntaButton = new JButton();
         modificarPreguntaButton.setEnabled(false);
-        modificarPreguntaButton.setText("Modificar pregunta");
+        modificarPreguntaButton.setText("Modificar respuesta");
         panelBotones.add(modificarPreguntaButton, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         guardarEncuestaButton = new JButton();
         guardarEncuestaButton.setEnabled(false);
-        guardarEncuestaButton.setText("Guardar encuesta");
+        guardarEncuestaButton.setText("Guardar respuestas de encuesta");
         panelBotones.add(guardarEncuestaButton, new com.intellij.uiDesigner.core.GridConstraints(7, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         panelList = new JPanel();
-        panelList.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(6, 6, new Insets(5, 5, 5, 5), -1, -1));
+        panelList.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(5, 6, new Insets(5, 5, 5, 5), -1, -1));
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 0;
         panel1.add(panelList, gbc);
         userLabel = new JLabel();
-        userLabel.setText("Creadora de encuestas");
+        userLabel.setText("Responder encuesta");
         panelList.add(userLabel, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_NORTH, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        palClave = new JTextField();
-        panelList.add(palClave, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(300, 24), null, 0, false));
         final JScrollPane scrollPane1 = new JScrollPane();
-        panelList.add(scrollPane1, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 2, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
+        panelList.add(scrollPane1, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 2, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         list1 = new JList();
         final DefaultListModel defaultListModel1 = new DefaultListModel();
         list1.setModel(defaultListModel1);
         scrollPane1.setViewportView(list1);
         final JLabel label1 = new JLabel();
-        label1.setText("Título");
+        label1.setText("<Título pregunta>");
         panelList.add(label1, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         panelPreg = new JPanel();
         panelPreg.setLayout(new GridBagLayout());
@@ -443,8 +394,9 @@ public class VistaCrearEncuesta {
         panel1.add(panelPreg, gbc);
         final JPanel spacer6 = new JPanel();
         gbc = new GridBagConstraints();
-        gbc.gridx = 2;
-        gbc.gridy = 1;
+        gbc.gridx = 1;
+        gbc.gridy = 0;
+        gbc.gridheight = 4;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelPreg.add(spacer6, gbc);
         final JPanel spacer7 = new JPanel();
@@ -453,65 +405,39 @@ public class VistaCrearEncuesta {
         gbc.gridy = 3;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelPreg.add(spacer7, gbc);
-        final JLabel label2 = new JLabel();
-        label2.setText("Nombre pregunta");
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 1;
-        gbc.anchor = GridBagConstraints.WEST;
-        panelPreg.add(label2, gbc);
-        preguntaField = new JTextField();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 3;
-        gbc.anchor = GridBagConstraints.WEST;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        panelPreg.add(preguntaField, gbc);
-        final JPanel spacer8 = new JPanel();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 2;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        panelPreg.add(spacer8, gbc);
-        final JPanel spacer9 = new JPanel();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 4;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        panelPreg.add(spacer9, gbc);
-        comboBox1 = new JComboBox();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 5;
-        gbc.anchor = GridBagConstraints.WEST;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        panelPreg.add(comboBox1, gbc);
-        final JPanel spacer10 = new JPanel();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 6;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        panelPreg.add(spacer10, gbc);
         guardarPreguntaButton = new JButton();
         guardarPreguntaButton.setEnabled(false);
         guardarPreguntaButton.setText("Guardar pregunta");
         gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 7;
+        gbc.gridx = 0;
+        gbc.gridy = 4;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelPreg.add(guardarPreguntaButton, gbc);
-        final JPanel spacer11 = new JPanel();
+        final JPanel spacer8 = new JPanel();
         gbc = new GridBagConstraints();
-        gbc.gridx = 1;
+        gbc.gridx = 0;
+        gbc.gridy = 5;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        panelPreg.add(spacer8, gbc);
+        textArea1 = new JTextArea();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.fill = GridBagConstraints.BOTH;
+        panelPreg.add(textArea1, gbc);
+        final JPanel spacer9 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        panelPreg.add(spacer9, gbc);
+        final JLabel label2 = new JLabel();
+        label2.setText("Escribe tu respuesta:");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
         gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        panelPreg.add(spacer11, gbc);
-        final JPanel spacer12 = new JPanel();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 8;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        panelPreg.add(spacer12, gbc);
+        gbc.anchor = GridBagConstraints.WEST;
+        panelPreg.add(label2, gbc);
         PregNum = new JPanel();
         PregNum.setLayout(new GridBagLayout());
         PregNum.setEnabled(true);
@@ -521,70 +447,83 @@ public class VistaCrearEncuesta {
         gbc.gridy = 0;
         gbc.fill = GridBagConstraints.BOTH;
         panel1.add(PregNum, gbc);
-        final JPanel spacer13 = new JPanel();
+        final JPanel spacer10 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
         gbc.gridy = 3;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        PregNum.add(spacer13, gbc);
-        final JPanel spacer14 = new JPanel();
+        PregNum.add(spacer10, gbc);
+        final JPanel spacer11 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 4;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregNum.add(spacer14, gbc);
-        final JPanel spacer15 = new JPanel();
+        PregNum.add(spacer11, gbc);
+        final JPanel spacer12 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregNum.add(spacer15, gbc);
+        PregNum.add(spacer12, gbc);
         final JLabel label3 = new JLabel();
-        label3.setText("Valor mínimo");
+        label3.setText("Valores mínimo y máximo:");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.anchor = GridBagConstraints.WEST;
         PregNum.add(label3, gbc);
-        final JPanel spacer16 = new JPanel();
+        final JPanel spacer13 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 8;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregNum.add(spacer16, gbc);
-        final JPanel spacer17 = new JPanel();
+        PregNum.add(spacer13, gbc);
+        final JPanel spacer14 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 6;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregNum.add(spacer17, gbc);
+        PregNum.add(spacer14, gbc);
         final JLabel label4 = new JLabel();
-        label4.setText("Valor máximo");
+        label4.setText("Resultado:");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 5;
         gbc.anchor = GridBagConstraints.WEST;
         PregNum.add(label4, gbc);
-        final JPanel spacer18 = new JPanel();
+        final JPanel spacer15 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregNum.add(spacer18, gbc);
-        maxSpinner = new JSpinner();
+        PregNum.add(spacer15, gbc);
+        spinner1 = new JSpinner();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 7;
         gbc.anchor = GridBagConstraints.WEST;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        PregNum.add(maxSpinner, gbc);
-        minSpinner = new JSpinner();
+        PregNum.add(spinner1, gbc);
+        final JLabel label5 = new JLabel();
+        label5.setText("[0 .. 10]");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 3;
-        gbc.anchor = GridBagConstraints.WEST;
+        PregNum.add(label5, gbc);
+        final JButton button1 = new JButton();
+        button1.setEnabled(false);
+        button1.setText("Guardar pregunta");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 9;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        PregNum.add(minSpinner, gbc);
+        PregNum.add(button1, gbc);
+        final JPanel spacer16 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 10;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        PregNum.add(spacer16, gbc);
         PregCual = new JPanel();
         PregCual.setLayout(new GridBagLayout());
         PregCual.setEnabled(true);
@@ -594,103 +533,18 @@ public class VistaCrearEncuesta {
         gbc.gridy = 0;
         gbc.fill = GridBagConstraints.BOTH;
         panel1.add(PregCual, gbc);
-        buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridBagLayout());
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 7;
-        gbc.fill = GridBagConstraints.BOTH;
-        PregCual.add(buttonPanel, gbc);
-        plusButton = new JButton();
-        plusButton.setText("+");
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        buttonPanel.add(plusButton, gbc);
-        final JPanel spacer19 = new JPanel();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 2;
-        gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        buttonPanel.add(spacer19, gbc);
-        final JPanel spacer20 = new JPanel();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 1;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        buttonPanel.add(spacer20, gbc);
-        minusButton = new JButton();
-        minusButton.setText("-");
-        gbc = new GridBagConstraints();
-        gbc.gridx = 3;
-        gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        buttonPanel.add(minusButton, gbc);
-        final JPanel spacer21 = new JPanel();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 4;
-        gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        buttonPanel.add(spacer21, gbc);
-        final JPanel spacer22 = new JPanel();
+        final JPanel spacer17 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        buttonPanel.add(spacer22, gbc);
-        final JPanel spacer23 = new JPanel();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 3;
-        gbc.gridy = 1;
         gbc.fill = GridBagConstraints.VERTICAL;
-        buttonPanel.add(spacer23, gbc);
-        PCNOMpanel = new JPanel();
-        PCNOMpanel.setLayout(new GridBagLayout());
+        PregCual.add(spacer17, gbc);
+        final JPanel spacer18 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 8;
-        gbc.fill = GridBagConstraints.BOTH;
-        PregCual.add(PCNOMpanel, gbc);
-        spinner1 = new JSpinner();
-        spinner1.setDebugGraphicsOptions(5);
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 0;
-        gbc.anchor = GridBagConstraints.WEST;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        PCNOMpanel.add(spinner1, gbc);
-        final JPanel spacer24 = new JPanel();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 2;
-        gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        PCNOMpanel.add(spacer24, gbc);
-        final JPanel spacer25 = new JPanel();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 1;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PCNOMpanel.add(spacer25, gbc);
-        final JLabel label5 = new JLabel();
-        label5.setText("# maximo opciones:  ");
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.anchor = GridBagConstraints.WEST;
-        PCNOMpanel.add(label5, gbc);
-        final JPanel spacer26 = new JPanel();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        PregCual.add(spacer26, gbc);
-        final JPanel spacer27 = new JPanel();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 9;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        PregCual.add(spacer27, gbc);
+        PregCual.add(spacer18, gbc);
         optField = new JTextField();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
@@ -698,24 +552,24 @@ public class VistaCrearEncuesta {
         gbc.anchor = GridBagConstraints.WEST;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         PregCual.add(optField, gbc);
-        final JPanel spacer28 = new JPanel();
+        final JPanel spacer19 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregCual.add(spacer28, gbc);
-        final JPanel spacer29 = new JPanel();
+        PregCual.add(spacer19, gbc);
+        final JPanel spacer20 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 4;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregCual.add(spacer29, gbc);
-        final JPanel spacer30 = new JPanel();
+        PregCual.add(spacer20, gbc);
+        final JPanel spacer21 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 6;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregCual.add(spacer30, gbc);
+        PregCual.add(spacer21, gbc);
         final JLabel label6 = new JLabel();
         label6.setText("Opciones de respuesta:");
         gbc = new GridBagConstraints();
@@ -732,12 +586,33 @@ public class VistaCrearEncuesta {
         PregCual.add(scrollPane2, gbc);
         listOption = new JList();
         scrollPane2.setViewportView(listOption);
-        final JPanel spacer31 = new JPanel();
+        final JLabel label7 = new JLabel();
+        label7.setText("# maximo opciones:  <2>");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 7;
+        gbc.anchor = GridBagConstraints.WEST;
+        PregCual.add(label7, gbc);
+        final JButton button2 = new JButton();
+        button2.setEnabled(false);
+        button2.setText("Guardar pregunta");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 9;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        PregCual.add(button2, gbc);
+        final JPanel spacer22 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 10;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        PregCual.add(spacer22, gbc);
+        final JPanel spacer23 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 5;
         gbc.gridy = 0;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        panel1.add(spacer31, gbc);
+        panel1.add(spacer23, gbc);
     }
 
     /**

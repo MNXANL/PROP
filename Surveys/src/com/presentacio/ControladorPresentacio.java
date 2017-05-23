@@ -16,6 +16,7 @@ public class ControladorPresentacio {
     VistaPrincipalUsuario vu = null;
     RegistroUsuario ru = null;
     VistaCrearEncuesta ce = null;
+    VistaRespInteractiva ri = null;
     ImportarEncuesta ie = null;
 
     private String criterio;
@@ -182,7 +183,8 @@ public class ControladorPresentacio {
                 vu.importarRespuesta();
         }
         else if (isel == 1) {
-            System.out.println("Responder encuesta interactivamente");
+            ri = new VistaRespInteractiva(this, null);
+            ri.show();
         }
     }
 
