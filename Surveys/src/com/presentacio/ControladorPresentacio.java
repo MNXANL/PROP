@@ -142,6 +142,11 @@ public class ControladorPresentacio {
         }
     }
 
+    public void modificarEncuesta(String titulo) {
+        ce = new VistaCrearEncuesta(this, titulo, ctrlDom.getEncuestaMatrix(titulo));
+        ce.show();
+    }
+
     public void importarEncuesta(String path) throws ExcFormatoIncorrecto, ExcEncuestaExistente{
         ctrlDom.importarEncuesta(path);
         vp.llenarLista(ctrlDom.listaEncuestas(criterio));
@@ -207,5 +212,8 @@ public class ControladorPresentacio {
     }
 
 
-
+    public void actualizarEncuestaArgs(String text, ArrayList<ArrayList<String>> preguntasGuardadas) {
+        ctrlDom.actualizarEncuestaMatrix(text, preguntasGuardadas);
+        vp.llenarLista(ctrlDom.listaEncuestas(criterio));
+    }
 }

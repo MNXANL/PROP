@@ -85,7 +85,7 @@ public class VistaPrincipalAdmin {
         modificarEncuestaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Coming sooner");
+                ctrlPres.modificarEncuesta(list1.getSelectedValue().toString());
             }
         });
 

@@ -18,7 +18,7 @@ public class VistaCrearEncuesta {
 
     private JPanel panelList;
     private JLabel userLabel;
-    private JTextField palClave;
+    private JTextField tituloEnc;
     private JList list1;
     private JButton nuevaPreguntaButton;
     private JButton borrarPreguntaButton;
@@ -46,6 +46,7 @@ public class VistaCrearEncuesta {
     private ArrayList<ArrayList<String>> PreguntasGuardadas;
 
     private boolean esModificado;
+    private boolean modEnc;
     private int idxMod;
 
     /**
@@ -79,6 +80,44 @@ public class VistaCrearEncuesta {
         PreguntasGuardadas = new ArrayList<ArrayList<String>>();
         esModificado = false;
         idxMod = -1;
+        modEnc = false;
+    }
+
+    /**
+     * Constructora vista de creación de encuesta
+     *
+     * @param ctrlPres Controlador de presentacion
+     */
+    public VistaCrearEncuesta(ControladorPresentacio ctrlPres, String titulo, ArrayList<ArrayList<String>> pregs) {
+        this.ctrlPres = ctrlPres;
+        asignarListeners();
+        String tipoResp[] = {"Libre", "Numérica", "Cualitativa ordenada", "Cualitativa no ordenada unica", "Cualitativa no ordenada multiple"};
+        for (String tr : tipoResp) {
+            comboBox1.addItem(tr);
+        }
+        listOption.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        PregNum.setVisible(false);
+        panelPreg.setVisible(false);
+        PregNum.setVisible(false);
+        PregCual.setVisible(false);
+        PCNOMpanel.setVisible(false);
+        modelEnc = new DefaultListModel<>();
+        modelPregs = new DefaultListModel<>();
+        list1.setModel(modelEnc);
+        listOption.setModel(modelPregs);
+
+        minSpinner.setValue(0);
+        maxSpinner.setValue(10);
+        spinner1.setValue(2);
+        minusButton.setEnabled(false);
+        esModificado = false;
+        idxMod = -1;
+
+        PreguntasGuardadas = pregs;
+        tituloEnc.setText(titulo);
+        for (ArrayList<String> p : pregs) modelEnc.addElement(p.get(1)); //Añadir titulos al modelo
+        frame.setTitle("Modificadora de encuesta");
+        modEnc = true;
     }
 
     private void panelVisibility(int idx) {
@@ -167,6 +206,7 @@ public class VistaCrearEncuesta {
                     }
                     comboBox1.setSelectedIndex(4);
                 }
+                panelPreg.setVisible(true);
                 esModificado = true;
             }
         });
@@ -196,8 +236,7 @@ public class VistaCrearEncuesta {
                             preg.add(NomPreg);
                             preg.add(minSpinner.getValue().toString()); //Min
                             preg.add(maxSpinner.getValue().toString()); //Max
-                        }
-                        else System.out.println("ERROR: min < max");
+                        } else System.out.println("ERROR: min < max");
                     } else if (comboBox1.getSelectedItem().toString().equals("Libre")) {
                         preg.add("PRL");
                         preg.add(NomPreg);
@@ -233,8 +272,7 @@ public class VistaCrearEncuesta {
                         esModificado = false;
                         PreguntasGuardadas.set(idxMod, preg);
                         modelEnc.set(idxMod, NomPreg);
-                    }
-                    else {
+                    } else {
                         modelEnc.addElement(NomPreg);
                         PreguntasGuardadas.add(preg);
                     }
@@ -246,7 +284,8 @@ public class VistaCrearEncuesta {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    ctrlPres.crearEncuestaArgs(palClave.getText(), PreguntasGuardadas);
+                    if (!modEnc) ctrlPres.actualizarEncuestaArgs(tituloEnc.getText(), PreguntasGuardadas);
+                    else ctrlPres.crearEncuestaArgs(tituloEnc.getText(), PreguntasGuardadas);
                     close();
                 } catch (ExcEncuestaExistente excEncuestaExistente) {
                     excEncuestaExistente.printStackTrace();
@@ -421,8 +460,8 @@ public class VistaCrearEncuesta {
         userLabel = new JLabel();
         userLabel.setText("Creadora de encuestas");
         panelList.add(userLabel, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_NORTH, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        palClave = new JTextField();
-        panelList.add(palClave, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(300, 24), null, 0, false));
+        tituloEnc = new JTextField();
+        panelList.add(tituloEnc, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(300, 24), null, 0, false));
         final JScrollPane scrollPane1 = new JScrollPane();
         panelList.add(scrollPane1, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 2, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         list1 = new JList();

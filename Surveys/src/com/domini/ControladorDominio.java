@@ -441,4 +441,11 @@ public class ControladorDominio {
         cjt.borrarRespuesta(titulo, u.getUsername());
         contDatos.borrarRespuestasEncuesta(titulo + "_" + u.getUsername());
     }
+
+    public void actualizarEncuestaMatrix(String text, ArrayList<ArrayList<String>> preguntasGuardadas) {
+        //contDatos.actualizarEncuesta(titulo);
+
+        /*
+        */
+    }
 }
