@@ -487,7 +487,7 @@ public class Encuesta {
                     ++resp;
                     PregCualitativaOrdenada p = (PregCualitativaOrdenada) preguntas.get(i);
                     Respuesta r = null;
-                    r = new RespCualitativaOrdenada(resp, p.getMaxOptions(), p.getPreguntaIesima(resp));
+                    r = new RespCualitativaOrdenada(resp, p.getSize(), p.getPreguntaIesima(resp));
                     ALR.add(r);
                 }
                 else if (preguntas.get(i) instanceof PregCualitativaNoOrdenadaUnica) {

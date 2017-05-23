@@ -61,7 +61,6 @@ public class VistaRespInteractiva {
 
         spinner1.setValue(2);
 
-        PreguntasGuardadas = new ArrayList<ArrayList<String>>();
         esModificado = false;
         idxMod = -1;
     }
@@ -576,6 +575,8 @@ public class VistaRespInteractiva {
         gbc.fill = GridBagConstraints.BOTH;
         PregCual.add(scrollPane2, gbc);
         listaOpciones = new JList();
+        final DefaultListModel defaultListModel2 = new DefaultListModel();
+        listaOpciones.setModel(defaultListModel2);
         scrollPane2.setViewportView(listaOpciones);
         final JLabel label7 = new JLabel();
         label7.setText("# maximo opciones:  <2>");

@@ -47,4 +47,12 @@ public class PregCualitativaNoOrdenadaUnica extends Pregunta {
     public String getPreguntaIesima(int i) {
         return opciones.get(i);
     }
+
+    /**
+     * Obtener tamanyo preguntas
+     * @return maximo numero de preguntas
+     */
+    public int getSize() {
+        return opciones.size();
+    }
 }

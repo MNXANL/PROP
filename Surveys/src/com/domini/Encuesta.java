@@ -1,6 +1,5 @@
 package com.domini;
 
-import java.lang.reflect.Array;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -448,7 +447,42 @@ public class Encuesta {
     }
 
     public ArrayList<ArrayList<String>> getMatrix () {
-
+        ArrayList<ArrayList<String>> pregs = new ArrayList<>();
+        for (Pregunta p : preguntas) {
+            ArrayList<String> preg = new ArrayList<>();
+            if (p.tipo().equals("PRL")) {
+                preg.add(p.tipo()); preg.add(p.getTitulo());
+            }
+            else if (p.tipo().equals("PN")) {
+                PregNumerica pn = (PregNumerica) p;
+                preg.add(pn.tipo()); preg.add(pn.getTitulo());
+                preg.add( String.valueOf(pn.getValorMin()));
+                preg.add( String.valueOf(pn.getValorMax()));
+            }
+            else if (p.tipo().equals("PCO")) {
+                PregCualitativaOrdenada pc = (PregCualitativaOrdenada) p;
+                preg.add(pc.tipo()); preg.add(pc.getTitulo());
+                for (int i = 0; i != pc.getSize(); ++i) {
+                    preg.add(pc.getPreguntaIesima(i));
+                }
+            }
+            else if (p.tipo().equals("PCNOU")) {
+                PregCualitativaNoOrdenadaUnica pc = (PregCualitativaNoOrdenadaUnica) p;
+                preg.add(pc.tipo()); preg.add(pc.getTitulo());
+                for (int i = 0; i != pc.getSize(); ++i) {
+                    preg.add(pc.getPreguntaIesima(i));
+                }
+            }
+            else if (p.tipo().equals("PCNOM")) {
+                PregCualitativaNoOrdenadaMultiple pc = (PregCualitativaNoOrdenadaMultiple) p;
+                preg.add(pc.tipo()); preg.add(pc.getTitulo()); preg.add(String.valueOf(pc.getMaxOptions()));
+                for (int i = 0; i != pc.getSize(); ++i) {
+                    preg.add(pc.getPreguntaIesima(i));
+                }
+            }
+            pregs.add(preg);
+        }
+        return pregs;
     }
 
     public ArrayList<RespuestasEncuesta> getCjtRespsEnc(){
@@ -513,7 +547,7 @@ public class Encuesta {
                     ++resp;
                     PregCualitativaOrdenada p = (PregCualitativaOrdenada) preguntas.get(i);
                     Respuesta r = null;
-                    r = new RespCualitativaOrdenada(resp, p.getMaxOptions(), p.getPreguntaIesima(resp));
+                    r = new RespCualitativaOrdenada(resp, p.getSize(), p.getPreguntaIesima(resp));
                     ALR.add(r);
                 }
                 else if (preguntas.get(i) instanceof PregCualitativaNoOrdenadaUnica) {

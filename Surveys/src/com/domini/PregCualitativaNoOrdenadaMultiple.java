@@ -70,4 +70,13 @@ public class PregCualitativaNoOrdenadaMultiple extends Pregunta {
     public int getMaxOptions() {
         return maxOpciones;
     }
+
+
+    /**
+     * Obtener tamanyo preguntas
+     * @return maximo numero de preguntas
+     */
+    public int getSize() {
+        return opciones.size();
+    }
 }
