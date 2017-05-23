@@ -99,6 +99,11 @@ public class ControladorDominio {
         contDatos.guardarEncuesta(e);
         e.leer();
     }
+
+    public ArrayList<ArrayList<String>> getEncuestaMatrix (String tituloE) {
+        return cjt.getEncuesta(tituloE).getMatrix();
+    }
+
     public void crearEncuesta () throws ExcEncuestaExistente{
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce el título de la encuesta");

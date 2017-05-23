@@ -36,7 +36,7 @@ public class VistaPrincipalAdmin {
     private JButton clusteringButton;
     private JButton cerrarSesiónButton;
     private JButton exportarButton;
-    private JButton responderEncuestaButton;
+    private JButton importarRespuestasButton;
 
     /**
      * Constructora vista principal del programa
@@ -172,10 +172,10 @@ public class VistaPrincipalAdmin {
             }
         });
 
-        responderEncuestaButton.addActionListener(new ActionListener() {
+        importarRespuestasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ctrlPres.responderEncuesta();
+                importarRespuesta();
             }
         });
     }
@@ -249,7 +249,7 @@ public class VistaPrincipalAdmin {
         modificarEncuestaButton.setEnabled(false);
         clusteringButton.setEnabled(false);
         exportarButton.setEnabled(false);
-        responderEncuestaButton.setEnabled(false);
+        importarRespuestasButton.setEnabled(false);
     }
 
     public void seleccionadaEncuestaSinResponder() {
@@ -257,7 +257,7 @@ public class VistaPrincipalAdmin {
         modificarEncuestaButton.setEnabled(true);
         clusteringButton.setEnabled(false);
         exportarButton.setEnabled(true);
-        responderEncuestaButton.setEnabled(true);
+        importarRespuestasButton.setEnabled(true);
     }
 
     public void seleccionadaEncuestaRespondida() {
@@ -265,7 +265,7 @@ public class VistaPrincipalAdmin {
         borrarEncuestaButton.setEnabled(true);
         modificarEncuestaButton.setEnabled(true);
         exportarButton.setEnabled(true);
-        responderEncuestaButton.setEnabled(false);
+        importarRespuestasButton.setEnabled(false);
     }
 
     public void importarRespuesta() {
@@ -389,10 +389,10 @@ public class VistaPrincipalAdmin {
         exportarButton.setEnabled(false);
         exportarButton.setText("Exportar encuesta");
         panel2.add(exportarButton, new com.intellij.uiDesigner.core.GridConstraints(10, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        responderEncuestaButton = new JButton();
-        responderEncuestaButton.setEnabled(false);
-        responderEncuestaButton.setText("Responder encuesta");
-        panel2.add(responderEncuestaButton, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        importarRespuestasButton = new JButton();
+        importarRespuestasButton.setEnabled(false);
+        importarRespuestasButton.setText("Importar respuestas");
+        panel2.add(importarRespuestasButton, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         cerrarSesiónButton = new JButton();
         cerrarSesiónButton.setText("Cerrar sesión");
         panel1.add(cerrarSesiónButton, new com.intellij.uiDesigner.core.GridConstraints(0, 5, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));

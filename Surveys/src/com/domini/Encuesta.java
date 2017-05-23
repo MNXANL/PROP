@@ -1,5 +1,6 @@
 package com.domini;
 
+import java.lang.reflect.Array;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -444,6 +445,10 @@ public class Encuesta {
             preguntas.get(i).leer();
             System.out.println("");
         }
+    }
+
+    public ArrayList<ArrayList<String>> getMatrix () {
+
     }
 
     public ArrayList<RespuestasEncuesta> getCjtRespsEnc(){

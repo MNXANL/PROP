@@ -9,7 +9,6 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
@@ -20,19 +19,16 @@ public class VistaRespInteractiva {
 
     private JPanel panelList;
     private JLabel userLabel;
-    private JTextField palClave;
-    private JList list1;
+    private JList listaPreguntas;
     private JButton nuevaPreguntaButton;
     private JButton borrarPreguntaButton;
     private JButton modificarPreguntaButton;
     private JPanel panelBotones;
     private JPanel panel1;
-    private JTextField preguntaField;
-    private JComboBox comboBox1;
     private JPanel panelPreg;
     private JPanel PregNum;
     private JPanel PregCual;
-    private JList listOption;
+    private JList listaOpciones;
     private DefaultListModel<String> modelPregs;
     private DefaultListModel<String> modelEnc;
     private JButton guardarPreguntaButton;
@@ -40,7 +36,6 @@ public class VistaRespInteractiva {
     private JTextField optField;
     private JButton guardarEncuestaButton;
     private JTextArea textArea1;
-    private ArrayList<ArrayList<String>> PreguntasGuardadas;
 
     private boolean esModificado;
     private int idxMod;
@@ -54,19 +49,15 @@ public class VistaRespInteractiva {
         this.ctrlPres = ctrlPres;
         this.enc = enc;
         asignarListeners();
-        String tipoResp[] = {"Libre", "Numérica", "Cualitativa ordenada", "Cualitativa no ordenada unica", "Cualitativa no ordenada multiple"};
-        for (String tr : tipoResp) {
-            comboBox1.addItem(tr);
-        }
-        listOption.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        listaOpciones.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         PregNum.setVisible(false);
         panelPreg.setVisible(false);
         PregNum.setVisible(false);
         PregCual.setVisible(false);
         modelEnc = new DefaultListModel<>();
         modelPregs = new DefaultListModel<>();
-        list1.setModel(modelEnc);
-        listOption.setModel(modelPregs);
+        listaPreguntas.setModel(modelEnc);
+        listaOpciones.setModel(modelPregs);
 
         spinner1.setValue(2);
 
@@ -118,7 +109,7 @@ public class VistaRespInteractiva {
         modificarPreguntaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                idxMod = list1.getSelectedIndex();
+                idxMod = listaPreguntas.getSelectedIndex();
                 ArrayList<String> PregMod = PreguntasGuardadas.get(idxMod);
                 if (PregMod.get(0).equals("PN")) {
                     panelVisibility(0);
@@ -162,10 +153,10 @@ public class VistaRespInteractiva {
         borrarPreguntaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Borrando: " + list1.getSelectedValue().toString());
+                System.out.println("Borrando: " + listaPreguntas.getSelectedValue().toString());
                 if (AvisoBorrarPregunta() == 0) {
-                    PreguntasGuardadas.remove(list1.getSelectedIndex());
-                    modelEnc.remove(list1.getSelectedIndex());
+                    PreguntasGuardadas.remove(listaPreguntas.getSelectedIndex());
+                    modelEnc.remove(listaPreguntas.getSelectedIndex());
                 }
             }
         });
@@ -249,7 +240,7 @@ public class VistaRespInteractiva {
             }
         });
 
-        list1.addListSelectionListener(new ListSelectionListener() {
+        listaPreguntas.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
                 modificarPreguntaButton.setEnabled(true);
@@ -257,14 +248,14 @@ public class VistaRespInteractiva {
             }
         });
 
-        listOption.addListSelectionListener(new ListSelectionListener() {
+        listaOpciones.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
                 //...
             }
         });
 
-        listOption.addListSelectionListener(new ListSelectionListener() {
+        listaOpciones.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
                 modificarPreguntaButton.setEnabled(true);
@@ -376,10 +367,10 @@ public class VistaRespInteractiva {
         panelList.add(userLabel, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_NORTH, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JScrollPane scrollPane1 = new JScrollPane();
         panelList.add(scrollPane1, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 2, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
-        list1 = new JList();
+        listaPreguntas = new JList();
         final DefaultListModel defaultListModel1 = new DefaultListModel();
-        list1.setModel(defaultListModel1);
-        scrollPane1.setViewportView(list1);
+        listaPreguntas.setModel(defaultListModel1);
+        scrollPane1.setViewportView(listaPreguntas);
         final JLabel label1 = new JLabel();
         label1.setText("<Título pregunta>");
         panelList.add(label1, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
@@ -584,8 +575,8 @@ public class VistaRespInteractiva {
         gbc.gridy = 5;
         gbc.fill = GridBagConstraints.BOTH;
         PregCual.add(scrollPane2, gbc);
-        listOption = new JList();
-        scrollPane2.setViewportView(listOption);
+        listaOpciones = new JList();
+        scrollPane2.setViewportView(listaOpciones);
         final JLabel label7 = new JLabel();
         label7.setText("# maximo opciones:  <2>");
         gbc = new GridBagConstraints();
