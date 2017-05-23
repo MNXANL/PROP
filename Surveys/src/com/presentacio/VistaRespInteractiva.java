@@ -108,43 +108,6 @@ public class VistaRespInteractiva {
         modificarPreguntaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                idxMod = listaPreguntas.getSelectedIndex();
-                ArrayList<String> PregMod = PreguntasGuardadas.get(idxMod);
-                if (PregMod.get(0).equals("PN")) {
-                    panelVisibility(0);
-                    preguntaField.setText(PregMod.get(1));
-                    comboBox1.setSelectedIndex(1);
-                } else if (PregMod.get(0).equals("PRL")) {
-                    panelVisibility(1);
-                    preguntaField.setText(PregMod.get(1));
-                    comboBox1.setSelectedIndex(0);
-                } else if (PregMod.get(0).equals("PCO")) {
-                    panelVisibility(2);
-                    preguntaField.setText(PregMod.get(1));
-                    modelPregs.clear();
-                    for (int i = 2; i < PregMod.size(); i++) {
-                        modelPregs.addElement(PregMod.get(i));
-                    }
-                    comboBox1.setSelectedIndex(2);
-                } else if (PregMod.get(0).equals("PCNOU")) {
-                    panelVisibility(3);
-                    preguntaField.setText(PregMod.get(1));
-                    modelPregs.clear();
-                    for (int i = 2; i < PregMod.size(); i++) {
-                        modelPregs.addElement(PregMod.get(i));
-                    }
-                    comboBox1.setSelectedIndex(3);
-                } else if (PregMod.get(0).equals("PCNOM")) {
-                    panelVisibility(4);
-                    preguntaField.setText(PregMod.get(1));
-                    spinner1.setValue(Integer.parseInt(PregMod.get(2)));
-                    modelPregs.clear();
-                    for (int i = 3; i < PregMod.size(); i++) {
-                        modelPregs.addElement(PregMod.get(i));
-                    }
-                    comboBox1.setSelectedIndex(4);
-                }
-                esModificado = true;
             }
         });
 
@@ -152,92 +115,24 @@ public class VistaRespInteractiva {
         borrarPreguntaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Borrando: " + listaPreguntas.getSelectedValue().toString());
-                if (AvisoBorrarPregunta() == 0) {
-                    PreguntasGuardadas.remove(listaPreguntas.getSelectedIndex());
-                    modelEnc.remove(listaPreguntas.getSelectedIndex());
-                }
+
             }
         });
 
         guardarPreguntaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (!preguntaField.getText().equals("")) {
-                    String NomPreg = preguntaField.getText();
-                    ArrayList<String> preg = new ArrayList<>();
-                    preguntaField.setText("");
-                    if (comboBox1.getSelectedItem().toString().equals("Numérica")) {
-                    } else if (comboBox1.getSelectedItem().toString().equals("Libre")) {
-                        preg.add("PRL");
-                        preg.add(NomPreg);
-                    } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa ordenada")) {
-                        preg.add("PCO");
-                        preg.add(NomPreg);
-                        for (int i = 0; i != modelPregs.size(); ++i) {
-                            preg.add(modelPregs.getElementAt(i));
-                        }
-                    } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa no ordenada unica")) {
-                        preg.add("PCNOU");
-                        preg.add(NomPreg);
-                        for (int i = 0; i != modelPregs.size(); ++i) {
-                            preg.add(modelPregs.getElementAt(i));
-                        }
-                    } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa no ordenada multiple")) {
-                        if (Integer.parseInt(spinner1.getValue().toString()) > 1) {
-                            preg.add("PCNOM");
-                            preg.add(NomPreg);
-                            preg.add(spinner1.getValue().toString());
-                            for (int i = 0; i != modelPregs.size(); ++i) {
-                                preg.add(modelPregs.getElementAt(i));
-                            }
-                        } else System.out.println("ERROR: at least 2 options");
-                    }
-                    if (!guardarEncuestaButton.isEnabled()) {
-                        guardarEncuestaButton.setEnabled(true);
-                        modificarPreguntaButton.setEnabled(true);
-                        borrarPreguntaButton.setEnabled(true);
-                    }
-                    if (!modelPregs.isEmpty()) modelPregs.clear();
-                    if (esModificado) {
-                        esModificado = false;
-                        PreguntasGuardadas.set(idxMod, preg);
-                        modelEnc.set(idxMod, NomPreg);
-                    } else {
-                        modelEnc.addElement(NomPreg);
-                        PreguntasGuardadas.add(preg);
-                    }
-                }
+
             }
         });
 
         guardarEncuestaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    ctrlPres.crearEncuestaArgs(palClave.getText(), PreguntasGuardadas);
-                    close();
-                } catch (ExcEncuestaExistente excEncuestaExistente) {
-                    excEncuestaExistente.printStackTrace();
-                }
+
             }
         });
 
-        comboBox1.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                if (comboBox1.getSelectedItem().toString().equals("Numérica")) {
-                    panelVisibility(0);
-                } else if (comboBox1.getSelectedItem().toString().equals("Libre")) {
-                    panelVisibility(1);
-                } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa ordenada")) {
-                    panelVisibility(2);
-                } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa no ordenada unica")) {
-                    panelVisibility(3);
-                } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa no ordenada multiple")) {
-                    panelVisibility(4);
-                }
-            }
-        });
 
         listaPreguntas.addListSelectionListener(new ListSelectionListener() {
             @Override
