@@ -86,7 +86,7 @@ public class VistaPrincipalAdmin {
         clusteringButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ctrlPres.Clusters(1);
+                ctrlPres.Clusters("Encuesta.txt",1);
             }
         });
 

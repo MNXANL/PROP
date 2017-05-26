@@ -143,17 +143,8 @@ public class ControladorPresentacio {
             ce.show();
         }
     }
-    public void Clusters(int k) {
-        try {
-            ctrlDom.importarEncuesta("src/com/dades/DirectorioEncuestas/Encuesta.txt");
-        }
-        catch (ExcFormatoIncorrecto e){
-            System.out.println("fizz");
-        }
-        catch (ExcEncuestaExistente e){
-            System.out.println("buzz");
-        }
-        vc = new VistaClustering(ctrlDom.clustering(k));
+    public void Clusters(String name, int k) {
+        vc = new VistaClustering(ctrlDom.clustering(name,k));
     }
     public void modificarEncuesta(String titulo) {
         ce = new VistaCrearEncuesta(this, titulo, ctrlDom.getEncuestaMatrix(titulo));

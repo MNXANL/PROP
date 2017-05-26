@@ -52,8 +52,8 @@ public class ControladorDominio {
     public void nuevoUsuario (String tipo, String nombre, String pass) throws ExcUsuarioExistente {
         contDatos.nuevoUsuario (tipo, nombre, pass);
     }
-    public HashMap<Integer,List<String>> clustering(int k){
-        Clustering C = new Clustering(e,k);
+    public HashMap<Integer,List<String>> clustering(String name,int k){
+        Clustering C = new Clustering(cjt.getEncuesta(name),k);
         return C.run();
     }
 
