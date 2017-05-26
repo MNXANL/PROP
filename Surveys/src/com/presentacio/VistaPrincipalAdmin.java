@@ -83,7 +83,12 @@ public class VistaPrincipalAdmin {
                 ctrlPres.crearEncuesta();
             }
         });
-
+        clusteringButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ctrlPres.Clusters(1);
+            }
+        });
 
         modificarEncuestaButton.addActionListener(new ActionListener() {
             @Override
