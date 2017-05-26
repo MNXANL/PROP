@@ -418,12 +418,16 @@ public class ControladorDominio {
             ExcUsuarioRespuestaIncorrecto exc = new ExcUsuarioRespuestaIncorrecto("El usuario que figura en el documento de respuesta no se corresponde con el usuario actual del sistema");
             throw exc;
         }
-        boolean respuestaExistente = cjt.getEncuesta(tituloE).responder(re);
-        if (respuestaExistente) {
-            contDatos.actualizarRespuestasEncuesta(re);
+        if (re.getNombreEncuesta_respondida().equals(tituloE)) {
+            boolean respuestaExistente = cjt.getEncuesta(tituloE).responder(re);
+            if (respuestaExistente) {
+                contDatos.actualizarRespuestasEncuesta(re);
+            } else {
+                contDatos.guardarRespuestasEncuesta(re);
+            }
         }
         else {
-            contDatos.guardarRespuestasEncuesta(re);
+            //exc;
         }
     }
 
@@ -442,10 +446,9 @@ public class ControladorDominio {
         contDatos.borrarRespuestasEncuesta(titulo + "_" + u.getUsername());
     }
 
-    public void actualizarEncuestaMatrix(String text, ArrayList<ArrayList<String>> preguntasGuardadas) {
-        //contDatos.actualizarEncuesta(titulo);
-
-        /*
-        */
+    public void actualizarEncuestaMatrix(String tituloAnt, String titulo, ArrayList<ArrayList<String>> preguntasGuardadas) throws ExcEncuestaExistente {
+        cjt.borrarEncuesta(tituloAnt);
+        crearEncuestaMatrix(titulo, preguntasGuardadas);
+        contDatos.actualizarEncuesta(tituloAnt, cjt.getEncuesta(titulo));
     }
 }

@@ -385,7 +385,7 @@
                   <gridbag weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
-                  <debugGraphicsOptions value="5"/>
+                  <debugGraphicsOptions value="0"/>
                 </properties>
               </component>
               <hspacer id="11ab5">

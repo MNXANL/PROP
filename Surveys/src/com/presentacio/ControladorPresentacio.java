@@ -3,6 +3,7 @@ package com.presentacio;
 import com.domini.*;
 
 import javax.swing.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -168,7 +169,7 @@ public class ControladorPresentacio {
         vp.llenarLista(ctrlDom.listaEncuestas(criterio));
     }
 
-    public void responderEncuesta() {
+    public void responderEncuesta(String enc) {
         JOptionPane optionPane = new JOptionPane("Desea responder una encuesta interactivamente o importar las respuestas de una encuesta?", JOptionPane.QUESTION_MESSAGE);
         String[] opciones = {"Importar", "Crear"};
         optionPane.setOptions(opciones);
@@ -182,13 +183,11 @@ public class ControladorPresentacio {
         for (isel = 0; isel < opciones.length && !opciones[isel].equals(vsel); isel++) ;
 
         if (isel == 0) {
-            if (vp != null)
-                vp.importarRespuesta();
-            else if (vu != null)
+            if (vu != null)
                 vu.importarRespuesta();
         }
         else if (isel == 1) {
-            ri = new VistaRespInteractiva(this, null);
+            ri = new VistaRespInteractiva(this, enc, ctrlDom.getEncuestaMatrix(enc));
             ri.show();
         }
     }
@@ -212,8 +211,8 @@ public class ControladorPresentacio {
     }
 
 
-    public void actualizarEncuestaArgs(String text, ArrayList<ArrayList<String>> preguntasGuardadas) {
-        ctrlDom.actualizarEncuestaMatrix(text, preguntasGuardadas);
+    public void actualizarEncuestaArgs(String encAnt, String enc, ArrayList<ArrayList<String>> preguntasGuardadas) throws ExcEncuestaExistente {
+        ctrlDom.actualizarEncuestaMatrix(encAnt, enc, preguntasGuardadas);
         vp.llenarLista(ctrlDom.listaEncuestas(criterio));
     }
 }

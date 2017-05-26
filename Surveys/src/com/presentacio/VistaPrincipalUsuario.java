@@ -142,7 +142,7 @@ public class VistaPrincipalUsuario {
         responderEncuestaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ctrlPres.responderEncuesta();
+                ctrlPres.responderEncuesta(list1.getSelectedValue().toString());
             }
         });
 

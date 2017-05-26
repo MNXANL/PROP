@@ -70,7 +70,10 @@ public class VistaPrincipalAdmin {
         list1.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
-                seleccionadaEncuestaSinResponder();
+                if (list1.isSelectionEmpty())
+                    NOseleccionadaEncuesta();
+                else //comprobar si respondida o no
+                    seleccionadaEncuestaSinResponder();
             }
         });
 
@@ -263,9 +266,9 @@ public class VistaPrincipalAdmin {
     public void seleccionadaEncuestaRespondida() {
         clusteringButton.setEnabled(true);
         borrarEncuestaButton.setEnabled(true);
-        modificarEncuestaButton.setEnabled(true);
+        modificarEncuestaButton.setEnabled(false);
         exportarButton.setEnabled(true);
-        importarRespuestasButton.setEnabled(false);
+        importarRespuestasButton.setEnabled(true);
     }
 
     public void importarRespuesta() {

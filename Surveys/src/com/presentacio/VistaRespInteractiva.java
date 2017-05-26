@@ -1,8 +1,6 @@
 package com.presentacio;
 
 
-import com.domini.ExcEncuestaExistente;
-
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -14,28 +12,29 @@ import java.util.ArrayList;
 
 public class VistaRespInteractiva {
     private ControladorPresentacio ctrlPres;
-    private ArrayList<ArrayList<String>> enc;
+    private ArrayList<ArrayList<String>> pregs;
     private JFrame frame = new JFrame("Responder encuestas");
 
     private JPanel panelList;
-    private JLabel userLabel;
+    private JLabel tituloEnc;
     private JList listaPreguntas;
-    private JButton nuevaPreguntaButton;
-    private JButton borrarPreguntaButton;
-    private JButton modificarPreguntaButton;
+    private JButton responderPreguntaButton;
+    private JButton borrarRespuestaButton;
+    private JButton modificarRespuestaButton;
     private JPanel panelBotones;
     private JPanel panel1;
-    private JPanel panelPreg;
-    private JPanel PregNum;
-    private JPanel PregCual;
+    private JPanel panelRespLibre;
+    private JPanel panelRespNum;
+    private JPanel panelRespCual;
     private JList listaOpciones;
     private DefaultListModel<String> modelPregs;
     private DefaultListModel<String> modelEnc;
-    private JButton guardarPreguntaButton;
+    private JButton guardarRespuestaLibreButton;
     private JSpinner spinner1;
-    private JTextField optField;
-    private JButton guardarEncuestaButton;
+    private JButton guardarRespuestasButton;
     private JTextArea textArea1;
+    private JButton guardarRespuestaNumericaButton;
+    private JButton guardarRespuestaCualitativaButton;
 
     private boolean esModificado;
     private int idxMod;
@@ -45,21 +44,24 @@ public class VistaRespInteractiva {
      *
      * @param ctrlPres Controlador de presentacion
      */
-    public VistaRespInteractiva(ControladorPresentacio ctrlPres, ArrayList<ArrayList<String>> enc) {
+    public VistaRespInteractiva(ControladorPresentacio ctrlPres, String enc, ArrayList<ArrayList<String>> pregs) {
         this.ctrlPres = ctrlPres;
-        this.enc = enc;
+        this.pregs = pregs;
         asignarListeners();
         listaOpciones.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        PregNum.setVisible(false);
-        panelPreg.setVisible(false);
-        PregNum.setVisible(false);
-        PregCual.setVisible(false);
+        panelRespNum.setVisible(false);
+        panelRespLibre.setVisible(false);
+        panelRespNum.setVisible(false);
+        panelRespCual.setVisible(false);
         modelEnc = new DefaultListModel<>();
         modelPregs = new DefaultListModel<>();
         listaPreguntas.setModel(modelEnc);
         listaOpciones.setModel(modelPregs);
 
-        spinner1.setValue(2);
+        tituloEnc.setText(enc);
+        for (ArrayList<String> p : pregs) modelEnc.addElement(p.get(1));
+
+        spinner1.setValue(0);
 
         esModificado = false;
         idxMod = -1;
@@ -67,28 +69,28 @@ public class VistaRespInteractiva {
 
     private void panelVisibility(int idx) {
         if (idx == 0) {
-            PregNum.setVisible(true);
-            PregCual.setVisible(false);
-            guardarPreguntaButton.setEnabled(true);
+            panelRespNum.setVisible(true);
+            panelRespCual.setVisible(false);
+            guardarRespuestaLibreButton.setEnabled(true);
         } else if (idx == 1) {
-            PregNum.setVisible(false);
-            PregCual.setVisible(false);
-            guardarPreguntaButton.setEnabled(true);
+            panelRespNum.setVisible(false);
+            panelRespCual.setVisible(false);
+            guardarRespuestaLibreButton.setEnabled(true);
         } else if (idx == 2) {
-            PregNum.setVisible(false);
-            PregCual.setVisible(true);
-            if (modelPregs.size() == 0) guardarPreguntaButton.setEnabled(false);
-            else guardarPreguntaButton.setEnabled(true);
+            panelRespNum.setVisible(false);
+            panelRespCual.setVisible(true);
+            if (modelPregs.size() == 0) guardarRespuestaLibreButton.setEnabled(false);
+            else guardarRespuestaLibreButton.setEnabled(true);
         } else if (idx == 3) {
-            PregNum.setVisible(false);
-            PregCual.setVisible(true);
-            if (modelPregs.size() == 0) guardarPreguntaButton.setEnabled(false);
-            else guardarPreguntaButton.setEnabled(true);
+            panelRespNum.setVisible(false);
+            panelRespCual.setVisible(true);
+            if (modelPregs.size() == 0) guardarRespuestaLibreButton.setEnabled(false);
+            else guardarRespuestaLibreButton.setEnabled(true);
         } else if (idx == 4) {
-            PregNum.setVisible(false);
-            PregCual.setVisible(true);
-            if (modelPregs.size() == 0) guardarPreguntaButton.setEnabled(false);
-            else guardarPreguntaButton.setEnabled(true);
+            panelRespNum.setVisible(false);
+            panelRespCual.setVisible(true);
+            if (modelPregs.size() == 0) guardarRespuestaLibreButton.setEnabled(false);
+            else guardarRespuestaLibreButton.setEnabled(true);
         }
     }
 
@@ -96,37 +98,71 @@ public class VistaRespInteractiva {
      * Método para asignar los listeners de la vista.
      */
     private void asignarListeners() {
-        nuevaPreguntaButton.addActionListener(new ActionListener() {
+        responderPreguntaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                panelPreg.setVisible(true);
-                esModificado = false;
+                responderPreguntaButton.setEnabled(false);
+                int i = listaPreguntas.getSelectedIndex();
+                ArrayList<String> preg = pregs.get(i);
+                if (preg.get(0).equals("PRL")) {
+                    panelRespLibre.setVisible(true);
+                    guardarRespuestaLibreButton.setEnabled(true);
+                } else if (preg.get(0).equals("PN")) {
+                    panelRespNum.setVisible(true);
+                    guardarRespuestaNumericaButton.setEnabled(true);
+                } else if (preg.get(0).equals("PCO")) {
+                    panelRespCual.setVisible(true);
+                    guardarRespuestaCualitativaButton.setEnabled(true);
+                } else if (preg.get(0).equals("PCNOU")) {
+                    panelRespCual.setVisible(true);
+                    guardarRespuestaCualitativaButton.setEnabled(true);
+                } else if (preg.get(0).equals("PCNOM")) {
+                    panelRespCual.setVisible(true);
+                    guardarRespuestaCualitativaButton.setEnabled(true);
+                }
             }
         });
 
 
-        modificarPreguntaButton.addActionListener(new ActionListener() {
+        modificarRespuestaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
             }
         });
 
 
-        borrarPreguntaButton.addActionListener(new ActionListener() {
+        borrarRespuestaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
 
-        guardarPreguntaButton.addActionListener(new ActionListener() {
+        guardarRespuestaLibreButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                responderPreguntaButton.setEnabled(true);
+                panelRespLibre.setVisible(false);
             }
         });
 
-        guardarEncuestaButton.addActionListener(new ActionListener() {
+        guardarRespuestaNumericaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                responderPreguntaButton.setEnabled(true);
+                panelRespNum.setVisible(false);
+            }
+        });
+
+        guardarRespuestaCualitativaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                responderPreguntaButton.setEnabled(true);
+                panelRespCual.setVisible(false);
+            }
+        });
+
+        guardarRespuestasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -137,8 +173,15 @@ public class VistaRespInteractiva {
         listaPreguntas.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
-                modificarPreguntaButton.setEnabled(true);
-                borrarPreguntaButton.setEnabled(true);
+                if (!listaPreguntas.isSelectionEmpty()) {
+                    responderPreguntaButton.setEnabled(true);
+                    modificarRespuestaButton.setEnabled(true);
+                    borrarRespuestaButton.setEnabled(true);
+                } else {
+                    responderPreguntaButton.setEnabled(false);
+                    modificarRespuestaButton.setEnabled(false);
+                    borrarRespuestaButton.setEnabled(false);
+                }
             }
         });
 
@@ -146,14 +189,6 @@ public class VistaRespInteractiva {
             @Override
             public void valueChanged(ListSelectionEvent e) {
                 //...
-            }
-        });
-
-        listaOpciones.addListSelectionListener(new ListSelectionListener() {
-            @Override
-            public void valueChanged(ListSelectionEvent e) {
-                modificarPreguntaButton.setEnabled(true);
-                borrarPreguntaButton.setEnabled(true);
             }
         });
 
@@ -165,8 +200,8 @@ public class VistaRespInteractiva {
      *
      * @return identificador de borrado de encuesta: 0 = Sí; 1 = No
      */
-    private int AvisoBorrarPregunta() {
-        JOptionPane optionPane = new JOptionPane("Quieres borrar esta pregunta?", 3);
+    private int AvisoBorrarRespuesta() {
+        JOptionPane optionPane = new JOptionPane("Quieres borrar la respuesta a esta pregunta?", 3);
         String[] strBotones = {"Sí", "No"};
         optionPane.setOptions(strBotones);
         JDialog dialogOptionPane = optionPane.createDialog(new JFrame(), "AVISO");
@@ -222,284 +257,273 @@ public class VistaRespInteractiva {
         GridBagConstraints gbc;
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 0;
+        gbc.gridy = 1;
         gbc.fill = GridBagConstraints.BOTH;
         panel1.add(panelBotones, gbc);
-        nuevaPreguntaButton = new JButton();
-        nuevaPreguntaButton.setText("Responder pregunta");
-        panelBotones.add(nuevaPreguntaButton, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        responderPreguntaButton = new JButton();
+        responderPreguntaButton.setText("Responder pregunta");
+        panelBotones.add(responderPreguntaButton, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer1 = new com.intellij.uiDesigner.core.Spacer();
         panelBotones.add(spacer1, new com.intellij.uiDesigner.core.GridConstraints(1, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer2 = new com.intellij.uiDesigner.core.Spacer();
         panelBotones.add(spacer2, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
-        borrarPreguntaButton = new JButton();
-        borrarPreguntaButton.setEnabled(false);
-        borrarPreguntaButton.setText("Borrar respuesta");
-        panelBotones.add(borrarPreguntaButton, new com.intellij.uiDesigner.core.GridConstraints(5, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        borrarRespuestaButton = new JButton();
+        borrarRespuestaButton.setEnabled(false);
+        borrarRespuestaButton.setText("Borrar respuesta");
+        panelBotones.add(borrarRespuestaButton, new com.intellij.uiDesigner.core.GridConstraints(5, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer3 = new com.intellij.uiDesigner.core.Spacer();
         panelBotones.add(spacer3, new com.intellij.uiDesigner.core.GridConstraints(6, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer4 = new com.intellij.uiDesigner.core.Spacer();
         panelBotones.add(spacer4, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer5 = new com.intellij.uiDesigner.core.Spacer();
         panelBotones.add(spacer5, new com.intellij.uiDesigner.core.GridConstraints(4, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
-        modificarPreguntaButton = new JButton();
-        modificarPreguntaButton.setEnabled(false);
-        modificarPreguntaButton.setText("Modificar respuesta");
-        panelBotones.add(modificarPreguntaButton, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        guardarEncuestaButton = new JButton();
-        guardarEncuestaButton.setEnabled(false);
-        guardarEncuestaButton.setText("Guardar respuestas de encuesta");
-        panelBotones.add(guardarEncuestaButton, new com.intellij.uiDesigner.core.GridConstraints(7, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        modificarRespuestaButton = new JButton();
+        modificarRespuestaButton.setEnabled(false);
+        modificarRespuestaButton.setText("Modificar respuesta");
+        panelBotones.add(modificarRespuestaButton, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        guardarRespuestasButton = new JButton();
+        guardarRespuestasButton.setEnabled(false);
+        guardarRespuestasButton.setText("Guardar respuestas");
+        panelBotones.add(guardarRespuestasButton, new com.intellij.uiDesigner.core.GridConstraints(7, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         panelList = new JPanel();
-        panelList.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(5, 6, new Insets(5, 5, 5, 5), -1, -1));
+        panelList.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(4, 6, new Insets(5, 5, 5, 5), -1, -1));
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
-        gbc.gridy = 0;
+        gbc.gridy = 1;
         panel1.add(panelList, gbc);
-        userLabel = new JLabel();
-        userLabel.setText("Responder encuesta");
-        panelList.add(userLabel, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_NORTH, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JScrollPane scrollPane1 = new JScrollPane();
-        panelList.add(scrollPane1, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 2, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
+        panelList.add(scrollPane1, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 2, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         listaPreguntas = new JList();
         final DefaultListModel defaultListModel1 = new DefaultListModel();
         listaPreguntas.setModel(defaultListModel1);
         scrollPane1.setViewportView(listaPreguntas);
-        final JLabel label1 = new JLabel();
-        label1.setText("<Título pregunta>");
-        panelList.add(label1, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        panelPreg = new JPanel();
-        panelPreg.setLayout(new GridBagLayout());
-        panelPreg.setEnabled(true);
-        panelPreg.setVisible(true);
+        panelRespLibre = new JPanel();
+        panelRespLibre.setLayout(new GridBagLayout());
+        panelRespLibre.setEnabled(true);
+        panelRespLibre.setVisible(true);
         gbc = new GridBagConstraints();
         gbc.gridx = 2;
-        gbc.gridy = 0;
+        gbc.gridy = 1;
         gbc.fill = GridBagConstraints.BOTH;
-        panel1.add(panelPreg, gbc);
+        panel1.add(panelRespLibre, gbc);
         final JPanel spacer6 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
         gbc.gridy = 0;
         gbc.gridheight = 4;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        panelPreg.add(spacer6, gbc);
+        panelRespLibre.add(spacer6, gbc);
         final JPanel spacer7 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 3;
         gbc.fill = GridBagConstraints.VERTICAL;
-        panelPreg.add(spacer7, gbc);
-        guardarPreguntaButton = new JButton();
-        guardarPreguntaButton.setEnabled(false);
-        guardarPreguntaButton.setText("Guardar pregunta");
+        panelRespLibre.add(spacer7, gbc);
+        guardarRespuestaLibreButton = new JButton();
+        guardarRespuestaLibreButton.setEnabled(false);
+        guardarRespuestaLibreButton.setText("Guardar respuesta");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 4;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        panelPreg.add(guardarPreguntaButton, gbc);
+        panelRespLibre.add(guardarRespuestaLibreButton, gbc);
         final JPanel spacer8 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 5;
         gbc.fill = GridBagConstraints.VERTICAL;
-        panelPreg.add(spacer8, gbc);
+        panelRespLibre.add(spacer8, gbc);
         textArea1 = new JTextArea();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.fill = GridBagConstraints.BOTH;
-        panelPreg.add(textArea1, gbc);
+        panelRespLibre.add(textArea1, gbc);
         final JPanel spacer9 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.fill = GridBagConstraints.VERTICAL;
-        panelPreg.add(spacer9, gbc);
-        final JLabel label2 = new JLabel();
-        label2.setText("Escribe tu respuesta:");
+        panelRespLibre.add(spacer9, gbc);
+        final JLabel label1 = new JLabel();
+        label1.setText("Escribe tu respuesta:");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.WEST;
-        panelPreg.add(label2, gbc);
-        PregNum = new JPanel();
-        PregNum.setLayout(new GridBagLayout());
-        PregNum.setEnabled(true);
-        PregNum.setVisible(true);
+        panelRespLibre.add(label1, gbc);
+        panelRespNum = new JPanel();
+        panelRespNum.setLayout(new GridBagLayout());
+        panelRespNum.setEnabled(true);
+        panelRespNum.setVisible(true);
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
-        gbc.gridy = 0;
+        gbc.gridy = 1;
         gbc.fill = GridBagConstraints.BOTH;
-        panel1.add(PregNum, gbc);
+        panel1.add(panelRespNum, gbc);
         final JPanel spacer10 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
         gbc.gridy = 3;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        PregNum.add(spacer10, gbc);
+        panelRespNum.add(spacer10, gbc);
         final JPanel spacer11 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 4;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregNum.add(spacer11, gbc);
+        panelRespNum.add(spacer11, gbc);
         final JPanel spacer12 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregNum.add(spacer12, gbc);
-        final JLabel label3 = new JLabel();
-        label3.setText("Valores mínimo y máximo:");
+        panelRespNum.add(spacer12, gbc);
+        final JLabel label2 = new JLabel();
+        label2.setText("Valores mínimo y máximo:");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.anchor = GridBagConstraints.WEST;
-        PregNum.add(label3, gbc);
+        panelRespNum.add(label2, gbc);
         final JPanel spacer13 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 8;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregNum.add(spacer13, gbc);
+        panelRespNum.add(spacer13, gbc);
         final JPanel spacer14 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 6;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregNum.add(spacer14, gbc);
-        final JLabel label4 = new JLabel();
-        label4.setText("Resultado:");
+        panelRespNum.add(spacer14, gbc);
+        final JLabel label3 = new JLabel();
+        label3.setText("Resultado:");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 5;
         gbc.anchor = GridBagConstraints.WEST;
-        PregNum.add(label4, gbc);
+        panelRespNum.add(label3, gbc);
         final JPanel spacer15 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregNum.add(spacer15, gbc);
+        panelRespNum.add(spacer15, gbc);
         spinner1 = new JSpinner();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 7;
         gbc.anchor = GridBagConstraints.WEST;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        PregNum.add(spinner1, gbc);
-        final JLabel label5 = new JLabel();
-        label5.setText("[0 .. 10]");
+        panelRespNum.add(spinner1, gbc);
+        final JLabel label4 = new JLabel();
+        label4.setText("[0 .. 10]");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 3;
-        PregNum.add(label5, gbc);
-        final JButton button1 = new JButton();
-        button1.setEnabled(false);
-        button1.setText("Guardar pregunta");
+        panelRespNum.add(label4, gbc);
+        guardarRespuestaNumericaButton = new JButton();
+        guardarRespuestaNumericaButton.setEnabled(false);
+        guardarRespuestaNumericaButton.setText("Guardar respuesta");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 9;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        PregNum.add(button1, gbc);
+        panelRespNum.add(guardarRespuestaNumericaButton, gbc);
         final JPanel spacer16 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 10;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregNum.add(spacer16, gbc);
-        PregCual = new JPanel();
-        PregCual.setLayout(new GridBagLayout());
-        PregCual.setEnabled(true);
-        PregCual.setVisible(true);
+        panelRespNum.add(spacer16, gbc);
+        panelRespCual = new JPanel();
+        panelRespCual.setLayout(new GridBagLayout());
+        panelRespCual.setEnabled(true);
+        panelRespCual.setVisible(true);
         gbc = new GridBagConstraints();
         gbc.gridx = 4;
-        gbc.gridy = 0;
+        gbc.gridy = 1;
         gbc.fill = GridBagConstraints.BOTH;
-        panel1.add(PregCual, gbc);
+        panel1.add(panelRespCual, gbc);
         final JPanel spacer17 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregCual.add(spacer17, gbc);
+        panelRespCual.add(spacer17, gbc);
         final JPanel spacer18 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
-        gbc.gridy = 8;
+        gbc.gridy = 6;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregCual.add(spacer18, gbc);
-        optField = new JTextField();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 3;
-        gbc.anchor = GridBagConstraints.WEST;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        PregCual.add(optField, gbc);
+        panelRespCual.add(spacer18, gbc);
         final JPanel spacer19 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregCual.add(spacer19, gbc);
+        panelRespCual.add(spacer19, gbc);
         final JPanel spacer20 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 4;
         gbc.fill = GridBagConstraints.VERTICAL;
-        PregCual.add(spacer20, gbc);
-        final JPanel spacer21 = new JPanel();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 6;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        PregCual.add(spacer21, gbc);
-        final JLabel label6 = new JLabel();
-        label6.setText("Opciones de respuesta:");
+        panelRespCual.add(spacer20, gbc);
+        final JLabel label5 = new JLabel();
+        label5.setText("Opciones de respuesta:");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.anchor = GridBagConstraints.WEST;
-        PregCual.add(label6, gbc);
+        panelRespCual.add(label5, gbc);
         final JScrollPane scrollPane2 = new JScrollPane();
         scrollPane2.setPreferredSize(new Dimension(190, 64));
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
-        gbc.gridy = 5;
+        gbc.gridy = 3;
         gbc.fill = GridBagConstraints.BOTH;
-        PregCual.add(scrollPane2, gbc);
+        panelRespCual.add(scrollPane2, gbc);
         listaOpciones = new JList();
         final DefaultListModel defaultListModel2 = new DefaultListModel();
         listaOpciones.setModel(defaultListModel2);
         scrollPane2.setViewportView(listaOpciones);
-        final JLabel label7 = new JLabel();
-        label7.setText("# maximo opciones:  <2>");
+        final JLabel label6 = new JLabel();
+        label6.setText("# maximo opciones:  <2>");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 5;
+        gbc.anchor = GridBagConstraints.WEST;
+        panelRespCual.add(label6, gbc);
+        guardarRespuestaCualitativaButton = new JButton();
+        guardarRespuestaCualitativaButton.setEnabled(false);
+        guardarRespuestaCualitativaButton.setText("Guardar respuesta");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 7;
-        gbc.anchor = GridBagConstraints.WEST;
-        PregCual.add(label7, gbc);
-        final JButton button2 = new JButton();
-        button2.setEnabled(false);
-        button2.setText("Guardar pregunta");
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panelRespCual.add(guardarRespuestaCualitativaButton, gbc);
+        final JPanel spacer21 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
-        gbc.gridy = 9;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        PregCual.add(button2, gbc);
+        gbc.gridy = 8;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        panelRespCual.add(spacer21, gbc);
         final JPanel spacer22 = new JPanel();
         gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 10;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        PregCual.add(spacer22, gbc);
-        final JPanel spacer23 = new JPanel();
-        gbc = new GridBagConstraints();
         gbc.gridx = 5;
-        gbc.gridy = 0;
+        gbc.gridy = 1;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        panel1.add(spacer23, gbc);
+        panel1.add(spacer22, gbc);
+        tituloEnc = new JLabel();
+        tituloEnc.setText("Título encuesta");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.gridwidth = 5;
+        gbc.anchor = GridBagConstraints.NORTH;
+        panel1.add(tituloEnc, gbc);
     }
 
     /**
