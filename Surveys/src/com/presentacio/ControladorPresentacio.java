@@ -19,6 +19,7 @@ public class ControladorPresentacio {
     VistaCrearEncuesta ce = null;
     VistaRespInteractiva ri = null;
     ImportarEncuesta ie = null;
+    VistaClustering vc = null;
 
     private String criterio;
 
@@ -142,7 +143,18 @@ public class ControladorPresentacio {
             ce.show();
         }
     }
-
+    public void Clusters(int k) {
+        try {
+            ctrlDom.importarEncuesta("src/tests/domini/Clustering/JpruebaClustering");
+        }
+        catch (ExcFormatoIncorrecto e){
+            System.out.println("fizz");
+        }
+        catch (ExcEncuestaExistente e){
+            System.out.println("buzz");
+        }
+        vc = new VistaClustering(ctrlDom.clustering(k));
+    }
     public void modificarEncuesta(String titulo) {
         ce = new VistaCrearEncuesta(this, titulo, ctrlDom.getEncuestaMatrix(titulo));
         ce.show();

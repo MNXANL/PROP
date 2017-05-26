@@ -52,6 +52,10 @@ public class ControladorDominio {
     public void nuevoUsuario (String tipo, String nombre, String pass) throws ExcUsuarioExistente {
         contDatos.nuevoUsuario (tipo, nombre, pass);
     }
+    public HashMap<Integer,List<String>> clustering(int k){
+        Clustering C = new Clustering(e,k);
+        return C.run();
+    }
 
     /**
      * Metodo para crear la encuesta desde la vista creadora

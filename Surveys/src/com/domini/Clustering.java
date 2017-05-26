@@ -25,13 +25,13 @@ public class Clustering {
     /**
      * correr el analisis kmeans, primero generando centroids iniciales antes de llamar al algoritmo
      */
-    public void run(){
+    public HashMap<Integer,List<String>> run(){
         skippables = new boolean[E.getCjtRespsEnc().size()][E.getCjtRespsEnc().get(0).getResps().size()];
         ArrayList<RespuestasEncuesta> centroids = new ArrayList<>();  //guarda los indices de los centroids iniciales, que seran conjuntos de respuestas de usuarios al azar
         ArrayList<RespuestasEncuesta> RE = E.getCjtRespsEnc();
         if(k>RE.size()){
             System.out.println("No puede haber más clusters que encuestados");
-            return;
+            return null;
         }
         preprocess(RE);
         Random rand = new Random();
@@ -47,7 +47,7 @@ public class Clustering {
             }
         }
         System.out.println();
-        Kmeans(RE,centroids);
+        return Kmeans(RE,centroids);
     }
 
     /**
@@ -55,7 +55,7 @@ public class Clustering {
      * @param RE Respuestas a la encuesta E
      * @param centroids lista de centroides de cada uno de los K clusters
      */
-    private void Kmeans(ArrayList<RespuestasEncuesta> RE, ArrayList<RespuestasEncuesta> centroids){
+    private HashMap<Integer,List<String>> Kmeans(ArrayList<RespuestasEncuesta> RE, ArrayList<RespuestasEncuesta> centroids){
 
         ArrayList<Integer> assig = new ArrayList<>(); //assig[i] = número del cluster al que pertenece RE[i]
         while(assig.size()< RE.size()) assig.add(-1); //inicializar assig
@@ -110,14 +110,22 @@ public class Clustering {
             }
         }
         if(!change){ //el algoritmo ha acabado si los centroides no cambian
-            //de momento hacemos un output de assig para probar
             System.out.println("*** Asignacion de clusters ***");
-            show_clusters(RE,assig,centroids.size());
+            HashMap<Integer,List<String>> ret = new HashMap<>();
+            for(int i = 0; i != centroids.size(); ++i){  //podria ser lineal en vez de O(n²) pero java no quiere ponerte facil usar matrices
+                List<String> assignees = new ArrayList<>();
+                for(int j = 0; j != assig.size(); ++j){
+                    if(assig.get(j)==i)
+                        assignees.add(RE.get(j).getUser());
+                }
+                ret.put(i,assignees);
+            }
+            //show_clusters(RE,assig,centroids.size());
         }
         else{
             Kmeans(RE,centroids);
         }
-
+    return null;
     }
 
     /**
