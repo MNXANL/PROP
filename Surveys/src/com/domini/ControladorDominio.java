@@ -53,7 +53,10 @@ public class ControladorDominio {
         contDatos.nuevoUsuario (tipo, nombre, pass);
     }
     public HashMap<Integer,List<String>> clustering(String name,int k){
-        Clustering C = new Clustering(cjt.getEncuesta(name),k);
+        Encuesta x = cjt.getEncuesta(name);
+    //ME FALTA UNA MANERA DE CONSEGUIR RESPUESTAS PARA X
+
+        Clustering C = new Clustering(x,k);
         return C.run();
     }
 
