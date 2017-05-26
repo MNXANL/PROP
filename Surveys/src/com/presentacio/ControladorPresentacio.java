@@ -145,7 +145,7 @@ public class ControladorPresentacio {
     }
     public void Clusters(int k) {
         try {
-            ctrlDom.importarEncuesta("src/tests/domini/Clustering/JpruebaClustering");
+            ctrlDom.importarEncuesta("src/com/dades/DirectorioEncuestas/Encuesta.txt");
         }
         catch (ExcFormatoIncorrecto e){
             System.out.println("fizz");
