@@ -15,6 +15,7 @@
           <component id="c4210" class="javax.swing.JTable" binding="clusterTable">
             <constraints/>
             <properties>
+              <fillsViewportHeight value="true"/>
               <font name="Georgia"/>
             </properties>
           </component>

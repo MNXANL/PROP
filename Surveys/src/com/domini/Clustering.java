@@ -120,14 +120,14 @@ public class Clustering {
                 }
                 ret.put(i,assignees);
             }
+            System.out.println("returning ret");
             return ret;
             //show_clusters(RE,assig,centroids.size());
         }
         else{
-            Kmeans(RE,centroids);
+            System.out.println("calling k means");
+            return Kmeans(RE,centroids);
         }
-        System.out.println("returning null");
-    return null;
     }
 
     /**

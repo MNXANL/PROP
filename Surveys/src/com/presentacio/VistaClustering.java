@@ -3,13 +3,12 @@ package com.presentacio;
 import com.domini.Encuesta;
 import com.domini.ExcEncuestaExistente;
 import com.domini.ExcFormatoIncorrecto;
+import tests.domini.Clustering.ClusteringUTest;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Arrays;
-import java.util.HashMap;
+import java.util.*;
 import java.util.List;
-import java.util.Vector;
 
 /**
  * Created by Alejandro on 26/05/2017.
@@ -24,27 +23,39 @@ public class VistaClustering {
     }
 
     public void Initialize(HashMap<Integer, List<String>> clusts) {
-        Vector rowData = new Vector();
-
-
+        int maxAssig = 0;
+        for (Map.Entry<Integer, List<String>> entry : clusts.entrySet()) {
+            if (entry.getValue().size() > maxAssig)
+                maxAssig = entry.getValue().size();
+        }
         String[] columnNames = new String[clusts.size()];
-        for (Integer i = 1; i != clusts.size() + 1; ++i) {
-            columnNames[i] = i.toString();
-            Vector colData = new Vector();
-            for (String name : clusts.get(i - 1)) {
-                colData.add(name);
-            }
-            rowData.add(colData);
+        Object[][] data = new Object[maxAssig][clusts.size()];
+        for (Integer i = 0; i != clusts.size(); ++i) {
+            columnNames[i] = "CLUSTER " + (i + 1);
         }
 
-        Vector columnNamesV = new Vector(Arrays.asList(columnNames));
+        for (Map.Entry<Integer, List<String>> entry : clusts.entrySet()) {
+            for (String name : entry.getValue()) {
+                int i = 0;
+                while (data[i][entry.getKey()] != null) ++i;
+                data[i][entry.getKey()] = name;
+            }
+        }
 
-        JTable table = new JTable(rowData, columnNamesV);
-        JFrame f = new JFrame();
-        f.setSize(300, 300);
-        f.add(new JScrollPane(table));
-        f.setVisible(true);
-        //clusterTable=new JTable(2,clusts.size());
+        clusterTable = new JTable(data, columnNames);
+        scrollable = new JScrollPane(clusterTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        clusterTable.setFillsViewportHeight(true);
+        clusterTable.setSize(800, 800);
+        clusterTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        clusterTable.setVisible(true);
+        scrollable.add(clusterTable);
+        scrollable.setVisible(true);
+        CPanel.setVisible(false);
+        JFrame jf = new JFrame();
+        jf.setSize(500, 500);
+        jf.setVisible(true);
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.add(scrollable);
     }
 
     {
@@ -67,6 +78,7 @@ public class VistaClustering {
         scrollable = new JScrollPane();
         CPanel.add(scrollable, BorderLayout.CENTER);
         clusterTable = new JTable();
+        clusterTable.setFillsViewportHeight(true);
         clusterTable.setFont(new Font("Georgia", clusterTable.getFont().getStyle(), clusterTable.getFont().getSize()));
         scrollable.setViewportView(clusterTable);
     }
