@@ -251,6 +251,7 @@ public class Clustering {
         int maxValue,maxCount;
         maxCount=maxValue=-1;
         for(int i = 0; i != RE.size(); ++i){
+            if(!skippables[i][rn])
             if(assig.get(i)==cli){      //solo tratamos los que pertenecen al cluster que nos piden
                 if(!skippables[i][rn]) {
                     int count = 0;
