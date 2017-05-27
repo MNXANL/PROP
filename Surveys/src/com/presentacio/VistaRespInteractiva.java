@@ -37,6 +37,9 @@ public class VistaRespInteractiva {
     private JButton guardarRespuestaCualitativaButton;
     private JLabel minMax;
     private JLabel maxOpts;
+    private JButton NSNCButtonRL;
+    private JButton NSNCButtonRN;
+    private JButton NSNCButtonRC;
 
     private ArrayList<ArrayList<String>> respuestas;
 
@@ -127,7 +130,7 @@ public class VistaRespInteractiva {
                     spinner1.setModel(sm);
                 } else if (preg.get(0).equals("PCO")) {
                     panelRespCual.setVisible(true);
-                    guardarRespuestaCualitativaButton.setEnabled(true);
+                    //guardarRespuestaCualitativaButton.setEnabled(true);
                     modelOpts = new DefaultListModel<>();
                     for (int j = 2; j < preg.size(); j++) {
                         modelOpts.addElement(preg.get(j));
@@ -137,7 +140,7 @@ public class VistaRespInteractiva {
                     maxOpts.setText("# máximo de opciones: 1");
                 } else if (preg.get(0).equals("PCNOU")) {
                     panelRespCual.setVisible(true);
-                    guardarRespuestaCualitativaButton.setEnabled(true);
+                    //guardarRespuestaCualitativaButton.setEnabled(true);
                     modelOpts = new DefaultListModel<>();
                     for (int j = 2; j < preg.size(); j++) {
                         modelOpts.addElement(preg.get(j));
@@ -147,7 +150,7 @@ public class VistaRespInteractiva {
                     maxOpts.setText("# máximo de opciones: 1");
                 } else if (preg.get(0).equals("PCNOM")) {
                     panelRespCual.setVisible(true);
-                    guardarRespuestaCualitativaButton.setEnabled(true);
+                    //guardarRespuestaCualitativaButton.setEnabled(true);
                     modelOpts = new DefaultListModel<>();
                     for (int j = 3; j < preg.size(); j++) {
                         modelOpts.addElement(preg.get(j));
@@ -190,6 +193,19 @@ public class VistaRespInteractiva {
             }
         });
 
+        NSNCButtonRL.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                responderPreguntaButton.setEnabled(true);
+                panelRespLibre.setVisible(false);
+                ArrayList<String> resp = new ArrayList<>();
+                resp.add("RV");
+                respuestas.remove(listaPreguntas.getSelectedIndex());
+                respuestas.add(listaPreguntas.getSelectedIndex(), resp);
+                listaPreguntas.setEnabled(true);
+            }
+        });
+
         guardarRespuestaNumericaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -200,6 +216,19 @@ public class VistaRespInteractiva {
                 resp.add(spinner1.getValue().toString());
                 resp.add(pregs.get(listaPreguntas.getSelectedIndex()).get(2));
                 resp.add(pregs.get(listaPreguntas.getSelectedIndex()).get(3));
+                respuestas.remove(listaPreguntas.getSelectedIndex());
+                respuestas.add(listaPreguntas.getSelectedIndex(), resp);
+                listaPreguntas.setEnabled(true);
+            }
+        });
+
+        NSNCButtonRN.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                responderPreguntaButton.setEnabled(true);
+                panelRespNum.setVisible(false);
+                ArrayList<String> resp = new ArrayList<>();
+                resp.add("RV");
                 respuestas.remove(listaPreguntas.getSelectedIndex());
                 respuestas.add(listaPreguntas.getSelectedIndex(), resp);
                 listaPreguntas.setEnabled(true);
@@ -217,19 +246,30 @@ public class VistaRespInteractiva {
                     resp.add(Integer.toString(listaOpciones.getSelectedIndex()));
                     resp.add(Integer.toString(listaOpciones.getModel().getSize()));
                     resp.add(listaOpciones.getSelectedValue().toString());
-                }
-                else if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCNOU")) {
+                } else if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCNOU")) {
                     resp.add("RCNOU");
                     resp.add(Integer.toString(listaOpciones.getSelectedIndex()));
                     resp.add(listaOpciones.getSelectedValue().toString());
-                }
-                else if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCNOM")) {
+                } else if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCNOM")) {
                     resp.add("RCNOM");
                     for (int i = 0; i < listaOpciones.getSelectedValuesList().size(); i++) {
                         resp.add(Integer.toString(listaOpciones.getSelectedIndices()[i]));
                         resp.add(listaOpciones.getSelectedValuesList().get(i).toString());
                     }
                 }
+                respuestas.remove(listaPreguntas.getSelectedIndex());
+                respuestas.add(listaPreguntas.getSelectedIndex(), resp);
+                listaPreguntas.setEnabled(true);
+            }
+        });
+
+        NSNCButtonRC.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                responderPreguntaButton.setEnabled(true);
+                panelRespCual.setVisible(false);
+                ArrayList<String> resp = new ArrayList<>();
+                resp.add("RV");
                 respuestas.remove(listaPreguntas.getSelectedIndex());
                 respuestas.add(listaPreguntas.getSelectedIndex(), resp);
                 listaPreguntas.setEnabled(true);
@@ -262,7 +302,11 @@ public class VistaRespInteractiva {
         listaOpciones.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
-                //...
+                if (listaOpciones.isSelectionEmpty()) {
+                    guardarRespuestaCualitativaButton.setEnabled(false);
+                } else {
+                    guardarRespuestaCualitativaButton.setEnabled(true);
+                }
             }
         });
 
@@ -399,9 +443,8 @@ public class VistaRespInteractiva {
         guardarRespuestaLibreButton.setEnabled(false);
         guardarRespuestaLibreButton.setText("Guardar respuesta");
         gbc = new GridBagConstraints();
-        gbc.gridx = 1;
+        gbc.gridx = 2;
         gbc.gridy = 5;
-        gbc.gridwidth = 2;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelRespLibre.add(guardarRespuestaLibreButton, gbc);
         final JPanel spacer8 = new JPanel();
@@ -437,6 +480,13 @@ public class VistaRespInteractiva {
         gbc.gridy = 2;
         gbc.fill = GridBagConstraints.BOTH;
         panelRespLibre.add(textArea1, gbc);
+        NSNCButtonRL = new JButton();
+        NSNCButtonRL.setText("NS / NC");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 2;
+        gbc.gridy = 7;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panelRespLibre.add(NSNCButtonRL, gbc);
         panelRespNum = new JPanel();
         panelRespNum.setLayout(new GridBagLayout());
         panelRespNum.setEnabled(true);
@@ -529,6 +579,13 @@ public class VistaRespInteractiva {
         gbc.gridy = 1;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelRespNum.add(spacer18, gbc);
+        NSNCButtonRN = new JButton();
+        NSNCButtonRN.setText("NS / NC");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 11;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panelRespNum.add(NSNCButtonRN, gbc);
         panelRespCual = new JPanel();
         panelRespCual.setLayout(new GridBagLayout());
         panelRespCual.setEnabled(true);
@@ -617,6 +674,14 @@ public class VistaRespInteractiva {
         gbc.gridy = 1;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelRespCual.add(spacer24, gbc);
+        NSNCButtonRC = new JButton();
+        NSNCButtonRC.setText("NS / NC");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 9;
+        gbc.gridwidth = 2;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panelRespCual.add(NSNCButtonRC, gbc);
         final JPanel spacer25 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 5;

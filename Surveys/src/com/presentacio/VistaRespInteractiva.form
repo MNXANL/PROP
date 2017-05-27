@@ -134,7 +134,7 @@
           </vspacer>
           <component id="cefef" class="javax.swing.JButton" binding="guardarRespuestaLibreButton">
             <constraints>
-              <grid row="5" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
@@ -177,6 +177,15 @@
               <gridbag weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties/>
+          </component>
+          <component id="5c9ee" class="javax.swing.JButton" binding="NSNCButtonRL">
+            <constraints>
+              <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="NS / NC"/>
+            </properties>
           </component>
         </children>
       </grid>
@@ -283,6 +292,15 @@
               <gridbag weightx="0.0" weighty="0.0"/>
             </constraints>
           </hspacer>
+          <component id="a0762" class="javax.swing.JButton" binding="NSNCButtonRN">
+            <constraints>
+              <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="NS / NC"/>
+            </properties>
+          </component>
         </children>
       </grid>
       <grid id="ed0d4" binding="panelRespCual" layout-manager="GridBagLayout">
@@ -380,6 +398,15 @@
               <gridbag weightx="0.0" weighty="0.0"/>
             </constraints>
           </hspacer>
+          <component id="26295" class="javax.swing.JButton" binding="NSNCButtonRC">
+            <constraints>
+              <grid row="9" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="NS / NC"/>
+            </properties>
+          </component>
         </children>
       </grid>
       <hspacer id="c3511">
