@@ -112,6 +112,7 @@ public class VistaRespInteractiva {
         responderPreguntaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                listaPreguntas.setEnabled(false);
                 responderPreguntaButton.setEnabled(false);
                 int i = listaPreguntas.getSelectedIndex();
                 ArrayList<String> preg = pregs.get(i);
@@ -181,6 +182,7 @@ public class VistaRespInteractiva {
                 resp.add(textArea1.getText());
                 respuestas.remove(listaPreguntas.getSelectedIndex());
                 respuestas.add(listaPreguntas.getSelectedIndex(), resp);
+                listaPreguntas.setEnabled(true);
             }
         });
 
@@ -196,6 +198,7 @@ public class VistaRespInteractiva {
                 resp.add(pregs.get(listaPreguntas.getSelectedIndex()).get(3).toString());
                 respuestas.remove(listaPreguntas.getSelectedIndex());
                 respuestas.add(listaPreguntas.getSelectedIndex(), resp);
+                listaPreguntas.setEnabled(true);
             }
         });
 
@@ -204,24 +207,33 @@ public class VistaRespInteractiva {
             public void actionPerformed(ActionEvent e) {
                 responderPreguntaButton.setEnabled(true);
                 panelRespCual.setVisible(false);
+                ArrayList<String> resp = new ArrayList<>();
                 if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCO")) {
-                    ArrayList<String> resp = new ArrayList<>();
                     resp.add("RCO");
                     resp.add(Integer.toString(listaOpciones.getSelectedIndex()));
                     resp.add(Integer.toString(listaOpciones.getModel().getSize()));
                     resp.add(listaOpciones.getSelectedValue().toString());
                 } else if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCNOU")) {
-
-                } else if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCO")) {
-
+                    resp.add("RCNOU");
+                    resp.add(Integer.toString(listaOpciones.getSelectedIndex()));
+                    resp.add(listaOpciones.getSelectedValue().toString());
+                } else if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCNOM")) {
+                    resp.add("RCO");
+                    for (int i = 0; i < listaOpciones.getSelectedValuesList().size(); i++) {
+                        resp.add(Integer.toString(listaOpciones.getSelectedIndices()[i]));
+                        resp.add(listaOpciones.getSelectedValuesList().get(i).toString());
+                    }
                 }
+                respuestas.remove(listaPreguntas.getSelectedIndex());
+                respuestas.add(listaPreguntas.getSelectedIndex(), resp);
+                listaPreguntas.setEnabled(true);
             }
         });
 
         guardarRespuestasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                ctrlPres.guardarRespEnc(tituloEnc.getText(), respuestas);
             }
         });
 
@@ -343,6 +355,7 @@ public class VistaRespInteractiva {
         panelBotones.add(guardarRespuestasButton, new com.intellij.uiDesigner.core.GridConstraints(7, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         panelList = new JPanel();
         panelList.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(4, 6, new Insets(5, 5, 5, 5), -1, -1));
+        panelList.setMinimumSize(new Dimension(414, 153));
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 1;
