@@ -14,6 +14,7 @@ import java.util.List;
  * Created by Alejandro on 26/05/2017.
  */
 public class VistaClustering {
+    private JFrame frame = new JFrame("Clustering");
     private JPanel CPanel;
     private JTable clusterTable;
     private JScrollPane scrollable;
@@ -50,12 +51,12 @@ public class VistaClustering {
         clusterTable.setVisible(true);
         scrollable.add(clusterTable);
         scrollable.setVisible(true);
-        CPanel.setVisible(false);
-        JFrame jf = new JFrame();
-        jf.setSize(500, 500);
-        jf.setVisible(true);
-        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jf.add(scrollable);
+        CPanel.add(scrollable);
+        CPanel.setVisible(true);
+        frame.setContentPane(CPanel);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
     }
 
     {

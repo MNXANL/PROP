@@ -1,6 +1,5 @@
 package com.presentacio;
 
-import oracle.jvm.hotspot.jfr.JFR;
 
 import javax.naming.ldap.Control;
 import javax.swing.*;
