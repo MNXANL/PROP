@@ -28,10 +28,10 @@ public class VistaClustering {
 
 
         String[] columnNames = new String[clusts.size()];
-        for(Integer i = 1; i!= clusts.size()+1; ++i){
+        for (Integer i = 1; i != clusts.size() + 1; ++i) {
             columnNames[i] = i.toString();
             Vector colData = new Vector();
-            for(String name : clusts.get(i-1)){
+            for (String name : clusts.get(i - 1)) {
                 colData.add(name);
             }
             rowData.add(colData);
