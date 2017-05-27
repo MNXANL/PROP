@@ -27,7 +27,7 @@ public class VistaRespInteractiva {
     private JPanel panelRespNum;
     private JPanel panelRespCual;
     private JList listaOpciones;
-    private DefaultListModel<String> modelPregs;
+    private DefaultListModel<String> modelOpts;
     private DefaultListModel<String> modelEnc;
     private JButton guardarRespuestaLibreButton;
     private JSpinner spinner1;
@@ -35,6 +35,10 @@ public class VistaRespInteractiva {
     private JTextArea textArea1;
     private JButton guardarRespuestaNumericaButton;
     private JButton guardarRespuestaCualitativaButton;
+    private JLabel minMax;
+    private JLabel maxOpts;
+
+    private ArrayList<ArrayList<String>> respuestas;
 
     private boolean esModificado;
     private int idxMod;
@@ -54,9 +58,16 @@ public class VistaRespInteractiva {
         panelRespNum.setVisible(false);
         panelRespCual.setVisible(false);
         modelEnc = new DefaultListModel<>();
-        modelPregs = new DefaultListModel<>();
+        modelOpts = new DefaultListModel<>();
         listaPreguntas.setModel(modelEnc);
-        listaOpciones.setModel(modelPregs);
+        listaOpciones.setModel(modelOpts);
+
+        respuestas = new ArrayList<>();
+        for (int i = 0; i < pregs.size(); i++) {
+            ArrayList<String> r = new ArrayList<>();
+            r.add("RV");
+            respuestas.add(r);
+        }
 
         tituloEnc.setText(enc);
         for (ArrayList<String> p : pregs) modelEnc.addElement(p.get(1));
@@ -79,17 +90,17 @@ public class VistaRespInteractiva {
         } else if (idx == 2) {
             panelRespNum.setVisible(false);
             panelRespCual.setVisible(true);
-            if (modelPregs.size() == 0) guardarRespuestaLibreButton.setEnabled(false);
+            if (modelOpts.size() == 0) guardarRespuestaLibreButton.setEnabled(false);
             else guardarRespuestaLibreButton.setEnabled(true);
         } else if (idx == 3) {
             panelRespNum.setVisible(false);
             panelRespCual.setVisible(true);
-            if (modelPregs.size() == 0) guardarRespuestaLibreButton.setEnabled(false);
+            if (modelOpts.size() == 0) guardarRespuestaLibreButton.setEnabled(false);
             else guardarRespuestaLibreButton.setEnabled(true);
         } else if (idx == 4) {
             panelRespNum.setVisible(false);
             panelRespCual.setVisible(true);
-            if (modelPregs.size() == 0) guardarRespuestaLibreButton.setEnabled(false);
+            if (modelOpts.size() == 0) guardarRespuestaLibreButton.setEnabled(false);
             else guardarRespuestaLibreButton.setEnabled(true);
         }
     }
@@ -110,15 +121,37 @@ public class VistaRespInteractiva {
                 } else if (preg.get(0).equals("PN")) {
                     panelRespNum.setVisible(true);
                     guardarRespuestaNumericaButton.setEnabled(true);
+                    minMax.setText(preg.get(2) + "..." + preg.get(3));
                 } else if (preg.get(0).equals("PCO")) {
                     panelRespCual.setVisible(true);
                     guardarRespuestaCualitativaButton.setEnabled(true);
+                    modelOpts = new DefaultListModel<>();
+                    for (int j = 2; j < preg.size(); j++) {
+                        modelOpts.addElement(preg.get(j));
+                    }
+                    listaOpciones.setModel(modelOpts);
+                    listaOpciones.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+                    maxOpts.setText("# máximo de opciones: 1");
                 } else if (preg.get(0).equals("PCNOU")) {
                     panelRespCual.setVisible(true);
                     guardarRespuestaCualitativaButton.setEnabled(true);
+                    modelOpts = new DefaultListModel<>();
+                    for (int j = 2; j < preg.size(); j++) {
+                        modelOpts.addElement(preg.get(j));
+                    }
+                    listaOpciones.setModel(modelOpts);
+                    listaOpciones.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+                    maxOpts.setText("# máximo de opciones: 1");
                 } else if (preg.get(0).equals("PCNOM")) {
                     panelRespCual.setVisible(true);
                     guardarRespuestaCualitativaButton.setEnabled(true);
+                    modelOpts = new DefaultListModel<>();
+                    for (int j = 3; j < preg.size(); j++) {
+                        modelOpts.addElement(preg.get(j));
+                    }
+                    listaOpciones.setModel(modelOpts);
+                    listaOpciones.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+                    maxOpts.setText("# máximo de opciones: " + preg.get(2));
                 }
             }
         });
@@ -143,6 +176,11 @@ public class VistaRespInteractiva {
             public void actionPerformed(ActionEvent e) {
                 responderPreguntaButton.setEnabled(true);
                 panelRespLibre.setVisible(false);
+                ArrayList<String> resp = new ArrayList<>();
+                resp.add("RL");
+                resp.add(textArea1.getText());
+                respuestas.remove(listaPreguntas.getSelectedIndex());
+                respuestas.add(listaPreguntas.getSelectedIndex(), resp);
             }
         });
 
@@ -151,6 +189,13 @@ public class VistaRespInteractiva {
             public void actionPerformed(ActionEvent e) {
                 responderPreguntaButton.setEnabled(true);
                 panelRespNum.setVisible(false);
+                ArrayList<String> resp = new ArrayList<>();
+                resp.add("RN");
+                resp.add(spinner1.getValue().toString());
+                resp.add(pregs.get(listaPreguntas.getSelectedIndex()).get(2).toString());
+                resp.add(pregs.get(listaPreguntas.getSelectedIndex()).get(3).toString());
+                respuestas.remove(listaPreguntas.getSelectedIndex());
+                respuestas.add(listaPreguntas.getSelectedIndex(), resp);
             }
         });
 
@@ -159,6 +204,17 @@ public class VistaRespInteractiva {
             public void actionPerformed(ActionEvent e) {
                 responderPreguntaButton.setEnabled(true);
                 panelRespCual.setVisible(false);
+                if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCO")) {
+                    ArrayList<String> resp = new ArrayList<>();
+                    resp.add("RCO");
+                    resp.add(Integer.toString(listaOpciones.getSelectedIndex()));
+                    resp.add(Integer.toString(listaOpciones.getModel().getSize()));
+                    resp.add(listaOpciones.getSelectedValue().toString());
+                } else if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCNOU")) {
+
+                } else if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCO")) {
+
+                }
             }
         });
 
@@ -418,12 +474,12 @@ public class VistaRespInteractiva {
         gbc.anchor = GridBagConstraints.WEST;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelRespNum.add(spinner1, gbc);
-        final JLabel label4 = new JLabel();
-        label4.setText("[0 .. 10]");
+        minMax = new JLabel();
+        minMax.setText("[0 .. 10]");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 3;
-        panelRespNum.add(label4, gbc);
+        panelRespNum.add(minMax, gbc);
         guardarRespuestaNumericaButton = new JButton();
         guardarRespuestaNumericaButton.setEnabled(false);
         guardarRespuestaNumericaButton.setText("Guardar respuesta");
@@ -471,13 +527,13 @@ public class VistaRespInteractiva {
         gbc.gridy = 4;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelRespCual.add(spacer20, gbc);
-        final JLabel label5 = new JLabel();
-        label5.setText("Opciones de respuesta:");
+        final JLabel label4 = new JLabel();
+        label4.setText("Opciones de respuesta:");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.anchor = GridBagConstraints.WEST;
-        panelRespCual.add(label5, gbc);
+        panelRespCual.add(label4, gbc);
         final JScrollPane scrollPane2 = new JScrollPane();
         scrollPane2.setPreferredSize(new Dimension(190, 64));
         gbc = new GridBagConstraints();
@@ -489,13 +545,13 @@ public class VistaRespInteractiva {
         final DefaultListModel defaultListModel2 = new DefaultListModel();
         listaOpciones.setModel(defaultListModel2);
         scrollPane2.setViewportView(listaOpciones);
-        final JLabel label6 = new JLabel();
-        label6.setText("# maximo opciones:  <2>");
+        maxOpts = new JLabel();
+        maxOpts.setText("# maximo opciones:  <2>");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 5;
         gbc.anchor = GridBagConstraints.WEST;
-        panelRespCual.add(label6, gbc);
+        panelRespCual.add(maxOpts, gbc);
         guardarRespuestaCualitativaButton = new JButton();
         guardarRespuestaCualitativaButton.setEnabled(false);
         guardarRespuestaCualitativaButton.setText("Guardar respuesta");

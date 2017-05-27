@@ -244,7 +244,7 @@
             </constraints>
             <properties/>
           </component>
-          <component id="371e1" class="javax.swing.JLabel">
+          <component id="371e1" class="javax.swing.JLabel" binding="minMax">
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
               <gridbag weightx="0.0" weighty="0.0"/>
@@ -333,7 +333,7 @@
               </component>
             </children>
           </scrollpane>
-          <component id="79d35" class="javax.swing.JLabel">
+          <component id="79d35" class="javax.swing.JLabel" binding="maxOpts">
             <constraints>
               <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
               <gridbag weightx="0.0" weighty="0.0"/>
