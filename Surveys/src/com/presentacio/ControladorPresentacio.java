@@ -218,4 +218,8 @@ public class ControladorPresentacio {
         ctrlDom.actualizarEncuestaMatrix(encAnt, enc, preguntasGuardadas);
         vp.llenarLista(ctrlDom.listaEncuestas(criterio));
     }
+
+    public void guardarRespEnc(String titulo, ArrayList<ArrayList<String>> resps) {
+        ctrlDom.responderEncuestaMatrix(titulo, resps);
+    }
 }

@@ -405,6 +405,16 @@ public class ControladorDominio {
     }
 
 
+    public void responderEncuestaMatrix(String titulo, ArrayList<ArrayList<String>> resps) {
+        e = new Encuesta(titulo);
+        for (int i = 0; i != resps.size(); ++i) {
+            for (int j = 0; j != resps.get(j).size(); ++j) {
+
+            }
+        }
+
+    }
+
     public void responderEncuesta(String tituloE) {
         Encuesta e = cjt.getEncuesta(tituloE);
 
