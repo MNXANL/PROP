@@ -46,13 +46,9 @@ public class VistaClustering {
         clusterTable = new JTable(data, columnNames);
         scrollable = new JScrollPane(clusterTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         clusterTable.setFillsViewportHeight(true);
-        clusterTable.setSize(800, 800);
-        clusterTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-        clusterTable.setVisible(true);
-        scrollable.add(clusterTable);
-        scrollable.setVisible(true);
+        //clusterTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         CPanel.add(scrollable);
-        CPanel.setVisible(true);
+        frame.add(CPanel);
         frame.setContentPane(CPanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
@@ -76,6 +72,7 @@ public class VistaClustering {
     private void $$$setupUI$$$() {
         CPanel = new JPanel();
         CPanel.setLayout(new BorderLayout(0, 0));
+        CPanel.setPreferredSize(new Dimension(0, 0));
         scrollable = new JScrollPane();
         CPanel.add(scrollable, BorderLayout.CENTER);
         clusterTable = new JTable();
