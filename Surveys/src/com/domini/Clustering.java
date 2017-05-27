@@ -184,7 +184,7 @@ public class Clustering {
                     int count = 0;
                     RespCualitativaNoOrdenadaMultiple r = (RespCualitativaNoOrdenadaMultiple) RE.get(i).getResps().get(rn);
                     for (int j = 0; j != RE.size(); ++j) {
-                        if (assig.get(j) == cli) {
+                        if (assig.get(j) == cli && !skippables[j][rn]) {
                             RespCualitativaNoOrdenadaMultiple aux = (RespCualitativaNoOrdenadaMultiple) RE.get(j).getResps().get(rn);
                             HashSet<Integer> intersection = new HashSet<>(r.get());
                             intersection.retainAll(aux.get());
@@ -222,7 +222,7 @@ public class Clustering {
                     int count = 0;
                     RespCualitativaNoOrdenadaUnica r = (RespCualitativaNoOrdenadaUnica) RE.get(i).getResps().get(rn);
                     for (int j = 0; j != RE.size(); ++j) {
-                        if (assig.get(j) == cli) {
+                        if (assig.get(j) == cli && !skippables[j][rn]) {
                             RespCualitativaNoOrdenadaUnica aux = (RespCualitativaNoOrdenadaUnica) RE.get(j).getResps().get(rn);
                             if (r.get() == aux.get()) ++count;
                         }
@@ -251,13 +251,12 @@ public class Clustering {
         int maxValue,maxCount;
         maxCount=maxValue=-1;
         for(int i = 0; i != RE.size(); ++i){
-            if(!skippables[i][rn])
             if(assig.get(i)==cli){      //solo tratamos los que pertenecen al cluster que nos piden
                 if(!skippables[i][rn]) {
                     int count = 0;
                     RespCualitativaOrdenada r = (RespCualitativaOrdenada) RE.get(i).getResps().get(rn);
                     for (int j = 0; j != RE.size(); ++j) {
-                        if (assig.get(j) == cli) {
+                        if (assig.get(j) == cli && !skippables[j][rn]) {
                             RespCualitativaOrdenada aux = (RespCualitativaOrdenada) RE.get(j).getResps().get(rn);
                             if (r.get() == aux.get()) ++count;
                         }

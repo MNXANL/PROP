@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/com/domini/Clustering.java" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a6261926-014f-4e17-847e-29161c7babb7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Surveys/tests/domini/RespLibre/DriverRespLibre.class" afterPath="$PROJECT_DIR$/out/production/Surveys/tests/domini/RespLibre/DriverRespLibre.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/ControladorDominio.java" afterPath="$PROJECT_DIR$/src/com/domini/ControladorDominio.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java" afterPath="$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.form" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Surveys/com/dades/DirectorioRespuestas/Encuesta_Aleix.txt" afterPath="$PROJECT_DIR$/out/production/Surveys/com/dades/DirectorioRespuestas/Encuesta_Aleix.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/Clustering.java" afterPath="$PROJECT_DIR$/src/com/domini/Clustering.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,28 +21,28 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Surveys$Main.coverage" NAME="Main Coverage Results" MODIFIED="1492515452694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Surveys$RV.coverage" NAME="RV Coverage Results" MODIFIED="1492771702600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VistaCrearEncuesta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java">
+      <file leaf-file-name="Clustering.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="286" column="62" lean-forward="false" selection-start-line="286" selection-start-column="62" selection-end-line="286" selection-end-column="62" />
+            <state relative-caret-position="1014">
+              <caret line="143" column="37" lean-forward="true" selection-start-line="143" selection-start-column="37" selection-end-line="143" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1495883778890" expanded="true" signature="5771:5777" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EncuestaCopiada.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/EncuestaCopiada.txt">
+      <file leaf-file-name="Encuesta.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/domini/Encuesta.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -49,9 +51,99 @@
       <file leaf-file-name="VistaPrincipalAdmin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="87" column="78" lean-forward="false" selection-start-line="87" selection-start-column="78" selection-end-line="87" selection-end-column="78" />
-              <folding />
+            <state relative-caret-position="129">
+              <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+              <folding>
+                <element signature="e#3202#3203#0" expanded="true" />
+                <element signature="e#4004#4005#0" expanded="true" />
+                <element signature="e#4058#4059#0" expanded="true" />
+                <element signature="e#4137#4138#0" expanded="true" />
+                <element signature="e#4191#4192#0" expanded="true" />
+                <element signature="e#4271#4272#0" expanded="true" />
+                <element signature="e#4325#4326#0" expanded="true" />
+                <element signature="e#4492#4493#0" expanded="true" />
+                <element signature="e#4538#4539#0" expanded="true" />
+                <element signature="e#4617#4618#0" expanded="true" />
+                <element signature="e#4663#4664#0" expanded="true" />
+                <element signature="e#4743#4744#0" expanded="true" />
+                <element signature="e#4789#4790#0" expanded="true" />
+                <element signature="e#4956#4957#0" expanded="true" />
+                <element signature="e#5002#5003#0" expanded="true" />
+                <element signature="e#5081#5082#0" expanded="true" />
+                <element signature="e#5127#5128#0" expanded="true" />
+                <element signature="e#5207#5208#0" expanded="true" />
+                <element signature="e#5253#5254#0" expanded="true" />
+                <element signature="e#5413#5414#0" expanded="true" />
+                <element signature="e#5462#5463#0" expanded="true" />
+                <element signature="e#6452#6453#0" expanded="true" />
+                <element signature="e#6503#6504#0" expanded="true" />
+                <element signature="e#8230#8231#0" expanded="true" />
+                <element signature="e#8269#8270#0" expanded="true" />
+                <element signature="initializer##0;class#VistaPrincipalAdmin#0" expanded="true" />
+                <element signature="initializer##0;class#VistaPrincipalAdmin#0" expanded="true" />
+                <marker date="1495883778890" expanded="false" signature="20728:24484" ph="UI Designer generated code" />
+                <marker date="1495883778890" expanded="false" signature="24453:24464" ph=" { " />
+                <marker date="1495883778890" expanded="false" signature="24478:24484" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControladorPresentacio.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+              <folding>
+                <element signature="e#4567#4568#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControladorDominio.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/domini/ControladorDominio.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding>
+                <marker date="1495881649157" expanded="true" signature="1514:1734" ph="/**...*/" />
+                <marker date="1495881649157" expanded="true" signature="1848:3687" ph="{...}" />
+                <marker date="1495881649157" expanded="true" signature="3764:3824" ph="{...}" />
+                <marker date="1495881649157" expanded="true" signature="3886:7589" ph="{...}" />
+                <marker date="1495881649157" expanded="true" signature="7687:7807" ph="{...}" />
+                <marker date="1495881649157" expanded="false" signature="7867:7878" ph=" { " />
+                <marker date="1495881649157" expanded="false" signature="7914:7920" ph=" }" />
+                <marker date="1495881649157" expanded="false" signature="7974:7985" ph=" { " />
+                <marker date="1495881649157" expanded="false" signature="8026:8032" ph=" }" />
+                <marker date="1495881649157" expanded="true" signature="8115:8208" ph="{...}" />
+                <marker date="1495881649157" expanded="false" signature="8270:8281" ph=" { " />
+                <marker date="1495881649157" expanded="false" signature="8331:8337" ph=" }" />
+                <marker date="1495881649157" expanded="true" signature="8428:8530" ph="{...}" />
+                <marker date="1495881649157" expanded="true" signature="8595:9048" ph="{...}" />
+                <marker date="1495881649157" expanded="true" signature="9140:9629" ph="{...}" />
+                <marker date="1495881649157" expanded="true" signature="9681:18214" ph="{...}" />
+                <marker date="1495881649157" expanded="true" signature="18263:18348" ph="{...}" />
+                <marker date="1495881649157" expanded="true" signature="18401:18781" ph="{...}" />
+                <marker date="1495881649157" expanded="true" signature="18913:19686" ph="{...}" />
+                <marker date="1495881649157" expanded="true" signature="19759:19845" ph="{...}" />
+                <marker date="1495881649157" expanded="true" signature="19901:19996" ph="{...}" />
+                <marker date="1495881649157" expanded="true" signature="20055:20192" ph="{...}" />
+                <marker date="1495881649157" expanded="true" signature="20345:20522" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VistaCrearEncuesta.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="930">
+              <caret line="72" column="16" lean-forward="false" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
+              <folding>
+                <marker date="1495825867672" expanded="true" signature="33249:36372" ph="{...}" />
+                <marker date="1495825867672" expanded="true" signature="36147:36372" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,66 +155,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VistaRespInteractiva.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.java">
+      <file leaf-file-name="VistaClustering.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="142" column="11" lean-forward="false" selection-start-line="142" selection-start-column="11" selection-end-line="142" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6205#6206#0" expanded="true" />
-                <element signature="e#6244#6245#0" expanded="true" />
-                <element signature="initializer##0;class#VistaRespInteractiva#0" expanded="true" />
-                <element signature="initializer##0;class#VistaRespInteractiva#0" expanded="true" />
-                <element signature="e#22286#22287#0" expanded="true" />
-                <element signature="e#22315#22316#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControladorPresentacio.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="215" column="33" lean-forward="true" selection-start-line="215" selection-start-column="33" selection-end-line="215" selection-end-column="33" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControladorDominio.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/ControladorDominio.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="448" column="8" lean-forward="false" selection-start-line="448" selection-start-column="8" selection-end-line="448" selection-end-column="8" />
-              <folding>
-                <marker date="1495540038895" expanded="false" signature="7677:7688" ph=" { " />
-                <marker date="1495540038895" expanded="false" signature="7724:7730" ph=" }" />
-                <marker date="1495540038895" expanded="false" signature="7784:7795" ph=" { " />
-                <marker date="1495540038895" expanded="false" signature="7836:7842" ph=" }" />
-                <marker date="1495540038895" expanded="false" signature="8080:8091" ph=" { " />
-                <marker date="1495540038895" expanded="false" signature="8141:8147" ph=" }" />
-              </folding>
-            </state>
+      <file leaf-file-name="VistaClustering.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Encuesta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/Encuesta.java">
+      <file leaf-file-name="Usuarios.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dades/Usuarios.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="482" column="12" lean-forward="false" selection-start-line="482" selection-start-column="12" selection-end-line="482" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PregCualitativaNoOrdenadaUnica.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaUnica.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="50" column="4" lean-forward="false" selection-start-line="50" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
+            <state relative-caret-position="135">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -139,36 +193,16 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>datosInc</find>
-      <find>cerrar</find>
-      <find>llena</find>
-      <find>lle</find>
-      <find>ll</find>
-      <find>documentLis</find>
-      <find>aviso</find>
-      <find>avisob</find>
-      <find>.add(</find>
-      <find>.add</find>
-      <find>guardarPreguntaButton.setEnab</find>
-      <find>listOption</find>
-      <find>modelEnc.a</find>
-      <find>optFIeld</find>
-      <find>listOption.add</find>
-      <find>crearEncue</find>
-      <find>modelEnc</find>
-      <find>llenarLista</find>
-      <find>)</find>
-      <find>crearEncuesta</find>
-      <find>guardarEncuesta</find>
-      <find>crear</find>
-      <find>exportar</find>
-      <find>borrarEncues</find>
-      <find>pREGUNTASgUARDADas</find>
-      <find>PreguntasGuardadas.get(list1.getSelectedIndex())</find>
-      <find>ce = new</find>
-      <find>crearEncuestaMatrix</find>
-      <find>modificarPreg</find>
-      <find>Matrix</find>
+      <find>pco</find>
+      <find>Pregunta</find>
+      <find>respuesta cualitativa ordenada</find>
+      <find>RespCualitativaOrdenada</find>
+      <find>RespCualitativaNoOrdenadaUnica</find>
+      <find>rco</find>
+      <find>RespLibre</find>
+      <find>creación de respuesta</find>
+      <find>private</find>
+      <find>clustering</find>
     </findStrings>
     <replaceStrings>
       <replace>rco</replace>
@@ -179,12 +213,6 @@
       <replace>re</replace>
       <replace>RespuestasEncuesta</replace>
       <replace>creación de encuesta y usuario</replace>
-      <replace>double</replace>
-      <replace>aux.getTitulo()</replace>
-      <replace>(aux.getTitulo()</replace>
-      <replace>(E.getTitulo()</replace>
-      <replace>optField</replace>
-      <replace>PregMod</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -199,64 +227,64 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaMultiple/DriverRespCualitativaNoOrdenadaMultiple.java" />
-        <option value="$PROJECT_DIR$/src/tests/domini/RespuestasEncuesta/RespuestasEncuestaTest.java" />
-        <option value="$PROJECT_DIR$/src/tests/domini/RespuestasEncuesta/DriverRespuestasEncuesta.java" />
-        <option value="$PROJECT_DIR$/src/tests/domini/Respuesta/DriverRespuesta.java" />
-        <option value="$PROJECT_DIR$/src/tests/domini/RespuestasEncuesta/JPRespuestasEncuesta.txt" />
-        <option value="$PROJECT_DIR$/src/tests/domini/RespLibre/DriverRespLibre.java" />
-        <option value="$PROJECT_DIR$/src/tests/domini/RespLibre/JPRespLibre.txt" />
+        <option value="$PROJECT_DIR$/src/com/domini/PregCualitativaOrdenada.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/PregRespuestaLibre.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/Pregunta.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/Usuario.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/Encuestado.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/Administrador.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/Respuesta.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/RespVacia.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/PalabrasFuncionales" />
+        <option value="$PROJECT_DIR$/src/tests/domini/PregRespuestaLibre/DriverPregRespuestaLibre.java" />
+        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaOrdenada/RespCualitativaOrdenada.java" />
+        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaOrdenada/PregRespuestaCualitativaOrdenadaTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/domini/Pregunta/PreguntaTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaOrdenada/RespCualitativaOrdenadaTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaOrdenada/DriverRespCualitativaOrdenada.java" />
+        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaUnica/RespCualitativaNoOrdenadaUnica.java" />
+        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaUnica/DriverRespCualitativaNoOrdenadaUnica.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaOrdenada/JPRespCualitativaOrdenada.txt" />
         <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaUnica/JPRespCualitativaNoOrdenadaUnica.txt" />
+        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaUnica/RespCualitativaNoOrdenadaUnicaTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaMultiple/RespCualitativaNoOrdenadaMultiple.java" />
+        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaMultiple/RespCualitativaNoOrdenadaMultipleTest.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaMultiple/JPRespCualitativaNoOrdenadaMultiple.txt" />
-        <option value="$PROJECT_DIR$/src/tests/domini/RespVacia/DriverRespVacia.java" />
-        <option value="$PROJECT_DIR$/src/tests/domini/RespVacia/JPRespVacia.txt" />
-        <option value="$PROJECT_DIR$/src/tests/domini/RespNumerica/DriverRespNumerica.java" />
-        <option value="$PROJECT_DIR$/src/tests/domini/RespNumerica/JPRespNumerica.txt" />
-        <option value="$PROJECT_DIR$/src/tests/domini/Respuesta/JPRespuesta.txt" />
+        <option value="$PROJECT_DIR$/src/tests/domini/RespuestasEncuesta/RespuestasEncuesta.java" />
+        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaMultiple/DriverRespCualitativaNoOrdenadaMultiple.java" />
+        <option value="$PROJECT_DIR$/src/tests/domini/RespuestasEncuesta/RespuestasEncuestaTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/domini/RespuestasEncuesta/JPRespuestasEncuesta.txt" />
+        <option value="$PROJECT_DIR$/src/tests/domini/RespuestasEncuesta/DriverRespuestasEncuesta.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/PregNumerica.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaMultiple.java" />
         <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/Usuario.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/RespLibre.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/RespLibre/RespLibre.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java" />
         <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java" />
         <option value="$PROJECT_DIR$/src/com/domini/RespNumerica.java" />
-        <option value="$PROJECT_DIR$/src/com/dades/ControladorDatos.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/PregNumerica.java" />
-        <option value="$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_Juan.txt" />
-        <option value="$PROJECT_DIR$/src/com/domini/Clustering.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/Clustering/DriverClustering.java" />
-        <option value="$PROJECT_DIR$/src/tests/domini/Clustering/Clustering.java" />
-        <option value="$PROJECT_DIR$/src/tests/domini/Clustering/ClusteringUTest.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/presentacio/MainMenu.java" />
-        <option value="$PROJECT_DIR$/src/com/presentacio/MainMenu.form" />
-        <option value="$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/EncuestaCopy.txt" />
-        <option value="$PROJECT_DIR$/src/com/presentacio/VistaPrincipal.java" />
-        <option value="$PROJECT_DIR$/src/com/presentacio/VistaPrincipal.form" />
-        <option value="$PROJECT_DIR$/src/com/presentacio/RegistroUsuario.java" />
-        <option value="$PROJECT_DIR$/src/com/presentacio/LogIn.java" />
-        <option value="$PROJECT_DIR$/src/com/presentacio/LogIn.form" />
-        <option value="$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/EnTuPutaCara.txt" />
-        <option value="$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Puto.txt" />
-        <option value="$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.form" />
-        <option value="$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaMultiple.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaUnica.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/PregCualitativaOrdenada.java" />
         <option value="$PROJECT_DIR$/src/com/domini/Encuesta.java" />
-        <option value="$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.java" />
-        <option value="$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.form" />
-        <option value="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java" />
+        <option value="$PROJECT_DIR$/src/tests/domini/Clustering/JpruebaClustering" />
+        <option value="$PROJECT_DIR$/src/com/dades/ControladorDatos.java" />
+        <option value="$PROJECT_DIR$/src/tests/domini/Clustering/ClusteringUTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/domini/Clustering/Clustering.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/Main.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java" />
+        <option value="$PROJECT_DIR$/src/com/presentacio/vistaClustering.form" />
+        <option value="$PROJECT_DIR$/src/com/presentacio/vistaClustering.java" />
+        <option value="$PROJECT_DIR$/src/com/presentacio/VistaClustering.form" />
         <option value="$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java" />
         <option value="$PROJECT_DIR$/src/com/domini/ControladorDominio.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/Clustering.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
     <option name="width" value="1368" />
-    <option name="height" value="742" />
+    <option name="height" value="741" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
@@ -276,6 +304,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -342,32 +372,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="presentacio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VistaPrincipalAdmin" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Surveys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Surveys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="domini" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -394,56 +398,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Surveys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Surveys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dades" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DirectorioEncuestas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="/usr/lib/jvm/java-8-openjdk/lib/tools.jar!/" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="223" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/dades" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="tests.domini.RespCualitativaNoOrdenadaMultiple" />
       <recent name="tests.domini.RespCualitativaNoOrdenadaUnica" />
       <recent name="tests.domini.RespCualitativaOrdenada" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/com/dades/DirectorioEncuestas" />
-      <recent name="$PROJECT_DIR$/src/tests/domini/Respuesta" />
       <recent name="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaMultiple" />
       <recent name="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaUnica" />
       <recent name="$PROJECT_DIR$/src/tests/domini/RespCualitativaOrdenada" />
@@ -463,10 +439,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/domini/ControladorDominio.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/domini/Encuesta.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.form</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaClustering.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.form</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.java</PATH>
         </FILE-GROUP>
@@ -577,59 +550,50 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
+    <configuration default="false" name="ClusteringUTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tests.domini.Clustering.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Surveys" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tests.domini.Clustering" />
+      <option name="MAIN_CLASS_NAME" value="tests.domini.Clustering.ClusteringUTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
+    <configuration default="false" name="DriverClustering" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tests.domini.Clustering.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="tests.domini.Clustering.DriverClustering" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Surveys" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -946,67 +910,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="RV" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="tests.domini.RespVacia.DriverRespVacia" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Surveys" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="RNum" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="tests.domini.RespNumerica.DriverRespNumerica" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Surveys" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="RL" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="tests.domini.RespLibre.DriverRespLibre" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Surveys" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="GUI | Login" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="com.presentacio.LogIn" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Surveys" />
-      <envs />
-      <method />
-    </configuration>
-    <list size="14">
+    <list size="12">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.JUnit Pregunta" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.JUnit PreguntaNum" />
@@ -1017,11 +921,15 @@
       <item index="7" class="java.lang.String" itemvalue="Application.RCNOM" />
       <item index="8" class="java.lang.String" itemvalue="JUnit.JUnit RCNOM" />
       <item index="9" class="java.lang.String" itemvalue="JUnit.JUnit RE" />
-      <item index="10" class="java.lang.String" itemvalue="Application.RV" />
-      <item index="11" class="java.lang.String" itemvalue="Application.RNum" />
-      <item index="12" class="java.lang.String" itemvalue="Application.RL" />
-      <item index="13" class="java.lang.String" itemvalue="Application.GUI | Login" />
+      <item index="10" class="java.lang.String" itemvalue="JUnit.ClusteringUTest" />
+      <item index="11" class="java.lang.String" itemvalue="Application.DriverClustering" />
     </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.DriverClustering" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ClusteringUTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -1033,6 +941,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491302909485</updated>
+    </task>
+    <task id="LOCAL-00001" summary="project">
+      <created>1491303318900</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1491303318900</updated>
     </task>
     <task id="LOCAL-00002" summary="domini">
       <created>1491303462180</created>
@@ -1230,159 +1145,75 @@
       <option name="project" value="LOCAL" />
       <updated>1492764952474</updated>
     </task>
-    <task id="LOCAL-00030" summary="Drivers corregidos">
-      <created>1492773794031</created>
+    <task id="LOCAL-00030" summary="clustering++tests">
+      <created>1492765120043</created>
       <option name="number" value="00030" />
       <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
-      <updated>1492773794031</updated>
+      <updated>1492765120043</updated>
     </task>
-    <task id="LOCAL-00031" summary="Drivers fixed">
-      <created>1492774493446</created>
+    <task id="LOCAL-00031" summary="respuestas vacias">
+      <created>1493119443438</created>
       <option name="number" value="00031" />
       <option name="presentableId" value="LOCAL-00031" />
       <option name="project" value="LOCAL" />
-      <updated>1492774493446</updated>
+      <updated>1493119443438</updated>
     </task>
-    <task id="LOCAL-00032" summary="Más excepciones y plantilla de lo de las resp. enc. del profe">
-      <created>1494192297747</created>
+    <task id="LOCAL-00032" summary="respuestas vacias">
+      <created>1493121208288</created>
       <option name="number" value="00032" />
       <option name="presentableId" value="LOCAL-00032" />
       <option name="project" value="LOCAL" />
-      <updated>1494192297747</updated>
+      <updated>1493121208288</updated>
     </task>
-    <task id="LOCAL-00033" summary="Arreglando resp enc">
-      <created>1494328253936</created>
+    <task id="LOCAL-00033" summary="clustering bien">
+      <created>1494325053997</created>
       <option name="number" value="00033" />
       <option name="presentableId" value="LOCAL-00033" />
       <option name="project" value="LOCAL" />
-      <updated>1494328253936</updated>
+      <updated>1494325053997</updated>
     </task>
-    <task id="LOCAL-00034" summary="Arreglando todo resp enc + Excepcion inicial">
-      <created>1494422506936</created>
+    <task id="LOCAL-00034" summary="clustering bien">
+      <created>1494328332822</created>
       <option name="number" value="00034" />
       <option name="presentableId" value="LOCAL-00034" />
       <option name="project" value="LOCAL" />
-      <updated>1494422506936</updated>
+      <updated>1494328332822</updated>
     </task>
-    <task id="LOCAL-00035" summary="Arreglando todo resp enc 2.0">
-      <created>1494424158014</created>
+    <task id="LOCAL-00035" summary="clustering bien">
+      <created>1494328842606</created>
       <option name="number" value="00035" />
       <option name="presentableId" value="LOCAL-00035" />
       <option name="project" value="LOCAL" />
-      <updated>1494424158014</updated>
+      <updated>1494328842606</updated>
     </task>
-    <task id="LOCAL-00036" summary="Docs: 2a entrega + Java GUI ref">
-      <created>1494424574082</created>
+    <task id="LOCAL-00036" summary="clustering bien">
+      <created>1494931080586</created>
       <option name="number" value="00036" />
       <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
-      <updated>1494424574082</updated>
+      <updated>1494931080586</updated>
     </task>
-    <task id="LOCAL-00037" summary="Borrado de encuestas OK (probar bajo vuestra responsabilidad!)">
-      <created>1494693195355</created>
+    <task id="LOCAL-00037" summary="clustering bien">
+      <created>1494934085891</created>
       <option name="number" value="00037" />
       <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
-      <updated>1494693195355</updated>
+      <updated>1494934085891</updated>
     </task>
-    <task id="LOCAL-00038" summary="Mejorando iface creacion de encuestas">
-      <created>1494848946415</created>
+    <task id="LOCAL-00038" summary="clustering bien probablemente">
+      <created>1494934149938</created>
       <option name="number" value="00038" />
       <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
-      <updated>1494848946415</updated>
+      <updated>1494934149938</updated>
     </task>
-    <task id="LOCAL-00039" summary="Mejorando iface creacion de encuestas V2">
-      <created>1494856431303</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1494856431303</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Login con Enter + crear encuesta v3">
-      <created>1494928108982</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1494928108982</updated>
-    </task>
-    <task id="LOCAL-00041" summary="stuff en clase">
-      <created>1494933560800</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1494933560800</updated>
-    </task>
-    <task id="LOCAL-00042" summary="stuff en clase">
-      <created>1494935692363</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1494935692363</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Crear encuestas interactivas done (desde Praga con amor &lt;3 )">
-      <created>1495227031731</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1495227031731</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Modificar versión Beta">
-      <created>1495299460265</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1495299460265</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Fix spinboxes + Vista Admin rename">
-      <created>1495300758181</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1495300758181</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Modificar hecho!">
-      <created>1495300962879</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1495300962879</updated>
-    </task>
-    <task id="LOCAL-00047" summary="cambiar idx preg. cual">
-      <created>1495534231677</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1495534231677</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Vista respuesta esqueleto">
-      <created>1495536437615</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1495536437615</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Matrix pregs">
-      <created>1495538350297</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1495538350297</updated>
-    </task>
-    <task id="LOCAL-00050" summary="fixes">
-      <created>1495538713840</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1495538713840</updated>
-    </task>
-    <option name="localTasksCounter" value="51" />
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JUnit_RCNOM - 2017.04.19 at 23h 42m 35s.xml">
-      <configuration name="JUnit RCNOM" configurationId="JUnit" />
+    <history-entry file="ClusteringUTest - 2017.05.09 at 13h 21m 03s.xml">
+      <configuration name="ClusteringUTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="JUnit_RCNOM - 2017.04.19 at 23h 43m 12s.xml">
       <configuration name="JUnit RCNOM" configurationId="JUnit" />
@@ -1412,92 +1243,78 @@
       <configuration name="JUnit RE" configurationId="JUnit" />
     </history-entry>
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1368" height="742" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32766616" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30911902" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32707354" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32237872" sideWeight="0.5043924" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19165379" sideWeight="0.4956076" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13601236" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3114241" sideWeight="0.4956076" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23787168" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21083455" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18960468" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2244582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5399061" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38639876" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="project" />
+    <MESSAGE value="domini" />
+    <MESSAGE value="fd" />
+    <MESSAGE value="sadfs" />
+    <MESSAGE value="Encuesta" />
+    <MESSAGE value="nuevas clases" />
+    <MESSAGE value="javadoc resps" />
+    <MESSAGE value="encuesta" />
+    <MESSAGE value="distancias hechas menos libre" />
+    <MESSAGE value="palabras funcionales" />
+    <MESSAGE value="Levenshtein" />
     <MESSAGE value="cluster" />
     <MESSAGE value="clustering++" />
     <MESSAGE value="Colgados drivers y tests respuestas (no) cualitativas de todo tipo" />
     <MESSAGE value="Drivers y tests ACABADOS!" />
     <MESSAGE value="clustering++tests" />
-    <MESSAGE value="Drivers corregidos" />
-    <MESSAGE value="Drivers fixed" />
-    <MESSAGE value="Más excepciones y plantilla de lo de las resp. enc. del profe" />
-    <MESSAGE value="Arreglando resp enc" />
-    <MESSAGE value="Arreglando todo resp enc + Excepcion inicial" />
-    <MESSAGE value="Arreglando todo resp enc 2.0" />
-    <MESSAGE value="Docs: 2a entrega + Java GUI ref" />
-    <MESSAGE value="Borrado de encuestas OK (probar bajo vuestra responsabilidad!)" />
-    <MESSAGE value="Mejorando iface creacion de encuestas" />
-    <MESSAGE value="Mejorando iface creacion de encuestas V2" />
-    <MESSAGE value="Login con Enter + crear encuesta v3" />
-    <MESSAGE value="stuff en clase" />
-    <MESSAGE value="Crear encuestas interactivas done (desde Praga con amor &lt;3 )" />
-    <MESSAGE value="Modificar versión Beta" />
-    <MESSAGE value="Fix spinboxes + Vista Admin rename" />
-    <MESSAGE value="Modificar hecho!" />
-    <MESSAGE value="cambiar idx preg. cual" />
-    <MESSAGE value="Vista respuesta esqueleto" />
-    <MESSAGE value="Matrix pregs" />
-    <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="respuestas vacias" />
+    <MESSAGE value="clustering bien" />
+    <MESSAGE value="clustering bien probablemente" />
+    <option name="LAST_COMMIT_MESSAGE" value="clustering bien probablemente" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tests/domini/RespLibre/DriverRespLibre.java</url>
-          <line>41</line>
-          <properties />
-          <option name="timeStamp" value="2" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/domini/Clustering.java</url>
+          <line>309</line>
+          <properties class="com.domini.Clustering" method="answer_dist">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1506,86 +1323,267 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_Juan.txt">
+    <entry file="file://$PROJECT_DIR$/src/tests/domini/CjtEncuestas/DriverCjtEncuestas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/RespNumerica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="127" column="12" lean-forward="false" selection-start-line="127" selection-start-column="12" selection-end-line="127" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/Clustering.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="80" column="85" lean-forward="false" selection-start-line="80" selection-start-column="85" selection-end-line="80" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/DriverClustering.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="90" column="59" lean-forward="false" selection-start-line="90" selection-start-column="59" selection-end-line="90" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/ClusteringUTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="157" column="59" lean-forward="false" selection-start-line="157" selection-start-column="59" selection-end-line="157" selection-end-column="59" />
+        <state relative-caret-position="-1904">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/domini/CjtEncuestas/CjtEncuestasTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="39" selection-end-column="40" />
+        <state relative-caret-position="64">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/CjtEncuestas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="114" column="16" lean-forward="true" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/domini/Encuesta/EncuestaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/Administrador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/Usuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/Respuesta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/domini/PregNumerica/PregNumerica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-80">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/PregRespuestaLibre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/Pregunta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/domini/RespNumerica/RespNumericaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/domini/Encuesta/DriverEncuesta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespVacia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/domini/Encuesta/JPEncuesta.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="74" column="8" lean-forward="false" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/domini/RespLibre/RespLibreTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/domini/RespLibre/RespLibre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="123" column="36" lean-forward="false" selection-start-line="123" selection-start-column="36" selection-end-line="123" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/ExcFormatoIncorrecto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/Encuestado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespNumerica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="27" column="39" lean-forward="false" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaMultiple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaUnica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-326">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/PregNumerica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="48" column="40" lean-forward="false" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/domini/Encuesta/Encuesta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="483" column="34" lean-forward="false" selection-start-line="483" selection-start-column="34" selection-end-line="483" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-207">
+          <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="73" column="13" lean-forward="false" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/Clustering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/ClusteringUTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/DriverClustering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="96" column="78" lean-forward="false" selection-start-line="96" selection-start-column="78" selection-end-line="96" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/JpruebaClustering">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dades/ControladorDatos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1725">
+          <caret line="122" column="13" lean-forward="false" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespLibre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="141" column="13" lean-forward="true" selection-start-line="141" selection-start-column="13" selection-end-line="141" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/PregCualitativaOrdenada.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/util/ArrayList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="194" column="38" lean-forward="false" selection-start-line="194" selection-start-column="38" selection-end-line="194" selection-end-column="38" />
+        <state relative-caret-position="225">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/presentacio/MainMenu.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/presentacio/MainMenu.form" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/Usuarios.txt">
+    <entry file="file://$PROJECT_DIR$/src/com/domini/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/EncuestaCopy.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/presentacio/RegistroUsuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="405">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <marker date="1494934134978" expanded="true" signature="9637:9643" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/presentacio/LogIn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1168">
-          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <marker date="1495638431589" expanded="true" signature="6657:6670" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1595,297 +1593,149 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.form">
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/ImportarEncuesta.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Inyourface.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/aaaaaaaaaaaayy lmao.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/EnTuPutaCara.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/pollas.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/domini/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="37" column="43" lean-forward="true" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+        <state relative-caret-position="930">
+          <caret line="72" column="16" lean-forward="false" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
           <folding>
-            <element signature="method#Presentacion#0;class#Main#0" expanded="false" />
+            <marker date="1495825867672" expanded="true" signature="33249:36372" ph="{...}" />
+            <marker date="1495825867672" expanded="true" signature="36147:36372" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Biene.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/ghghghgh.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Puto.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/ttttttttt.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/ControladorDatos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="124" column="31" lean-forward="false" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="31" />
-          <folding>
-            <element signature="e#4324#4325#0" expanded="false" />
-            <element signature="e#4384#4385#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaPrincipal.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/asdasd.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/aasdasda.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/QWERTY.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/polla.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/ADFDFA.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Enc.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Encuesta.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaPrincipalUsuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="144" column="45" lean-forward="false" selection-start-line="144" selection-start-column="45" selection-end-line="144" selection-end-column="45" />
-          <folding>
-            <element signature="e#4363#4364#0" expanded="true" />
-            <element signature="e#4423#4424#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/CjtEncuestas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3274">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/PregNumerica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/Pregunta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-178">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaMultiple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="74" column="4" lean-forward="false" selection-start-line="74" selection-start-column="4" selection-end-line="80" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/PregCualitativaOrdenada.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaUnica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="50" column="4" lean-forward="false" selection-start-line="50" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/Encuesta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="482" column="12" lean-forward="false" selection-start-line="482" selection-start-column="12" selection-end-line="482" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="142" column="11" lean-forward="false" selection-start-line="142" selection-start-column="11" selection-end-line="142" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6205#6206#0" expanded="true" />
-            <element signature="e#6244#6245#0" expanded="true" />
-            <element signature="initializer##0;class#VistaRespInteractiva#0" expanded="true" />
-            <element signature="initializer##0;class#VistaRespInteractiva#0" expanded="true" />
-            <element signature="e#22286#22287#0" expanded="true" />
-            <element signature="e#22315#22316#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/vistaClustering.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/vistaClustering.form" />
     <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java">
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="87" column="78" lean-forward="false" selection-start-line="87" selection-start-column="78" selection-end-line="87" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/EncuestaCopiada.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/EncuestaCopiada2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-461">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="286" column="62" lean-forward="false" selection-start-line="286" selection-start-column="62" selection-end-line="286" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java">
+    <entry file="file://$PROJECT_DIR$/src/com/dades/Usuarios.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="215" column="33" lean-forward="true" selection-start-line="215" selection-start-column="33" selection-end-line="215" selection-end-column="33" />
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/ControladorDominio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="448" column="8" lean-forward="false" selection-start-line="448" selection-start-column="8" selection-end-line="448" selection-end-column="8" />
+        <state relative-caret-position="129">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
-            <marker date="1495540038895" expanded="false" signature="7677:7688" ph=" { " />
-            <marker date="1495540038895" expanded="false" signature="7724:7730" ph=" }" />
-            <marker date="1495540038895" expanded="false" signature="7784:7795" ph=" { " />
-            <marker date="1495540038895" expanded="false" signature="7836:7842" ph=" }" />
-            <marker date="1495540038895" expanded="false" signature="8080:8091" ph=" { " />
-            <marker date="1495540038895" expanded="false" signature="8141:8147" ph=" }" />
+            <marker date="1495881649157" expanded="true" signature="1514:1734" ph="/**...*/" />
+            <marker date="1495881649157" expanded="true" signature="1848:3687" ph="{...}" />
+            <marker date="1495881649157" expanded="true" signature="3764:3824" ph="{...}" />
+            <marker date="1495881649157" expanded="true" signature="3886:7589" ph="{...}" />
+            <marker date="1495881649157" expanded="true" signature="7687:7807" ph="{...}" />
+            <marker date="1495881649157" expanded="false" signature="7867:7878" ph=" { " />
+            <marker date="1495881649157" expanded="false" signature="7914:7920" ph=" }" />
+            <marker date="1495881649157" expanded="false" signature="7974:7985" ph=" { " />
+            <marker date="1495881649157" expanded="false" signature="8026:8032" ph=" }" />
+            <marker date="1495881649157" expanded="true" signature="8115:8208" ph="{...}" />
+            <marker date="1495881649157" expanded="false" signature="8270:8281" ph=" { " />
+            <marker date="1495881649157" expanded="false" signature="8331:8337" ph=" }" />
+            <marker date="1495881649157" expanded="true" signature="8428:8530" ph="{...}" />
+            <marker date="1495881649157" expanded="true" signature="8595:9048" ph="{...}" />
+            <marker date="1495881649157" expanded="true" signature="9140:9629" ph="{...}" />
+            <marker date="1495881649157" expanded="true" signature="9681:18214" ph="{...}" />
+            <marker date="1495881649157" expanded="true" signature="18263:18348" ph="{...}" />
+            <marker date="1495881649157" expanded="true" signature="18401:18781" ph="{...}" />
+            <marker date="1495881649157" expanded="true" signature="18913:19686" ph="{...}" />
+            <marker date="1495881649157" expanded="true" signature="19759:19845" ph="{...}" />
+            <marker date="1495881649157" expanded="true" signature="19901:19996" ph="{...}" />
+            <marker date="1495881649157" expanded="true" signature="20055:20192" ph="{...}" />
+            <marker date="1495881649157" expanded="true" signature="20345:20522" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Surveys</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/Encuesta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding>
+            <element signature="e#3202#3203#0" expanded="true" />
+            <element signature="e#4004#4005#0" expanded="true" />
+            <element signature="e#4058#4059#0" expanded="true" />
+            <element signature="e#4137#4138#0" expanded="true" />
+            <element signature="e#4191#4192#0" expanded="true" />
+            <element signature="e#4271#4272#0" expanded="true" />
+            <element signature="e#4325#4326#0" expanded="true" />
+            <element signature="e#4492#4493#0" expanded="true" />
+            <element signature="e#4538#4539#0" expanded="true" />
+            <element signature="e#4617#4618#0" expanded="true" />
+            <element signature="e#4663#4664#0" expanded="true" />
+            <element signature="e#4743#4744#0" expanded="true" />
+            <element signature="e#4789#4790#0" expanded="true" />
+            <element signature="e#4956#4957#0" expanded="true" />
+            <element signature="e#5002#5003#0" expanded="true" />
+            <element signature="e#5081#5082#0" expanded="true" />
+            <element signature="e#5127#5128#0" expanded="true" />
+            <element signature="e#5207#5208#0" expanded="true" />
+            <element signature="e#5253#5254#0" expanded="true" />
+            <element signature="e#5413#5414#0" expanded="true" />
+            <element signature="e#5462#5463#0" expanded="true" />
+            <element signature="e#6452#6453#0" expanded="true" />
+            <element signature="e#6503#6504#0" expanded="true" />
+            <element signature="e#8230#8231#0" expanded="true" />
+            <element signature="e#8269#8270#0" expanded="true" />
+            <element signature="initializer##0;class#VistaPrincipalAdmin#0" expanded="true" />
+            <element signature="initializer##0;class#VistaPrincipalAdmin#0" expanded="true" />
+            <marker date="1495883778890" expanded="false" signature="20728:24484" ph="UI Designer generated code" />
+            <marker date="1495883778890" expanded="false" signature="24453:24464" ph=" { " />
+            <marker date="1495883778890" expanded="false" signature="24478:24484" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+          <folding>
+            <element signature="e#4567#4568#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1014">
+          <caret line="143" column="37" lean-forward="true" selection-start-line="143" selection-start-column="37" selection-end-line="143" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1495883778890" expanded="true" signature="5771:5777" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
