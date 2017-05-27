@@ -19,6 +19,7 @@
             <properties>
               <fillsViewportHeight value="true"/>
               <font name="Georgia"/>
+              <preferredScrollableViewportSize width="-1" height="-1"/>
             </properties>
           </component>
         </children>

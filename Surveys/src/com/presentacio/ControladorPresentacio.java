@@ -214,6 +214,13 @@ public class ControladorPresentacio {
         ctrlDom.borrarRespuestaEncuesta(enc);
     }
 
+    public boolean encuestaRespondida(String enc) {
+        if (ctrlDom.getNumResps(enc) > 0) {
+            return true;
+        }
+        else return false;
+    }
+
     public void respuestaEncuesta() {
         //ctrlDom.responderEncuesta(...);
         ce.close();

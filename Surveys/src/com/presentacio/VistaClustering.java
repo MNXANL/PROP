@@ -78,6 +78,7 @@ public class VistaClustering {
         clusterTable = new JTable();
         clusterTable.setFillsViewportHeight(true);
         clusterTable.setFont(new Font("Georgia", clusterTable.getFont().getStyle(), clusterTable.getFont().getSize()));
+        clusterTable.setPreferredScrollableViewportSize(new Dimension(-1, -1));
         scrollable.setViewportView(clusterTable);
     }
 
