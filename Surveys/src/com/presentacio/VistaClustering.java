@@ -25,12 +25,17 @@ public class VistaClustering {
 
     public void Initialize(HashMap<Integer, List<String>> clusts) {
         Vector rowData = new Vector();
-        for (int i = 0; i < 1; i++) {
-            Vector colData = new Vector(Arrays.asList("qq"));
+
+
+        String[] columnNames = new String[clusts.size()];
+        for(Integer i = 1; i!= clusts.size()+1; ++i){
+            columnNames[i] = i.toString();
+            Vector colData = new Vector();
+            for(String name : clusts.get(i-1)){
+                colData.add(name);
+            }
             rowData.add(colData);
         }
-
-        String[] columnNames = {"a"};
 
         Vector columnNamesV = new Vector(Arrays.asList(columnNames));
 
