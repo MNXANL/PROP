@@ -68,7 +68,7 @@ public class VistaRespInteractiva {
             r.add("RV");
             respuestas.add(r);
         }
-
+        guardarRespuestasButton.setEnabled(true);
         tituloEnc.setText(enc);
         for (ArrayList<String> p : pregs) modelEnc.addElement(p.get(1));
 
@@ -122,7 +122,9 @@ public class VistaRespInteractiva {
                 } else if (preg.get(0).equals("PN")) {
                     panelRespNum.setVisible(true);
                     guardarRespuestaNumericaButton.setEnabled(true);
-                    minMax.setText(preg.get(2) + "..." + preg.get(3));
+                    minMax.setText(preg.get(2) + " .. " + preg.get(3));
+                    SpinnerModel sm = new SpinnerNumberModel(Integer.parseInt(preg.get(2)), Integer.MIN_VALUE, Integer.MAX_VALUE, 0.01);
+                    spinner1.setModel(sm);
                 } else if (preg.get(0).equals("PCO")) {
                     panelRespCual.setVisible(true);
                     guardarRespuestaCualitativaButton.setEnabled(true);
@@ -194,8 +196,8 @@ public class VistaRespInteractiva {
                 ArrayList<String> resp = new ArrayList<>();
                 resp.add("RN");
                 resp.add(spinner1.getValue().toString());
-                resp.add(pregs.get(listaPreguntas.getSelectedIndex()).get(2).toString());
-                resp.add(pregs.get(listaPreguntas.getSelectedIndex()).get(3).toString());
+                resp.add(pregs.get(listaPreguntas.getSelectedIndex()).get(2));
+                resp.add(pregs.get(listaPreguntas.getSelectedIndex()).get(3));
                 respuestas.remove(listaPreguntas.getSelectedIndex());
                 respuestas.add(listaPreguntas.getSelectedIndex(), resp);
                 listaPreguntas.setEnabled(true);
@@ -213,12 +215,14 @@ public class VistaRespInteractiva {
                     resp.add(Integer.toString(listaOpciones.getSelectedIndex()));
                     resp.add(Integer.toString(listaOpciones.getModel().getSize()));
                     resp.add(listaOpciones.getSelectedValue().toString());
-                } else if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCNOU")) {
+                }
+                else if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCNOU")) {
                     resp.add("RCNOU");
                     resp.add(Integer.toString(listaOpciones.getSelectedIndex()));
                     resp.add(listaOpciones.getSelectedValue().toString());
-                } else if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCNOM")) {
-                    resp.add("RCO");
+                }
+                else if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCNOM")) {
+                    resp.add("RCNOM");
                     for (int i = 0; i < listaOpciones.getSelectedValuesList().size(); i++) {
                         resp.add(Integer.toString(listaOpciones.getSelectedIndices()[i]));
                         resp.add(listaOpciones.getSelectedValuesList().get(i).toString());

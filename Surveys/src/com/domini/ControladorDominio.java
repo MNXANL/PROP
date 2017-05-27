@@ -407,12 +407,39 @@ public class ControladorDominio {
 
     public void responderEncuestaMatrix(String titulo, ArrayList<ArrayList<String>> resps) {
         e = new Encuesta(titulo);
+        ArrayList<Respuesta> ALR = new ArrayList<>();
         for (int i = 0; i != resps.size(); ++i) {
-            for (int j = 0; j != resps.get(j).size(); ++j) {
+            Respuesta r = null;
+            ArrayList<String> r_ith = resps.get(i);
+            if (r_ith.get(0).equals("RN")) {
+                r = new RespNumerica(Double.parseDouble(r_ith.get(1)), Double.parseDouble(r_ith.get(2)), Double.parseDouble(r_ith.get(3)));
+            }
+            else if (r_ith.get(0).equals("RL")) {
+                r = new RespLibre(r_ith.get(1));
 
             }
-        }
+            else if (r_ith.get(0).equals("RCO")) {
+                r = new RespCualitativaOrdenada(Integer.parseInt(r_ith.get(1)), Integer.parseInt(r_ith.get(2)), r_ith.get(3));
+            }
+            else if (r_ith.get(0).equals("RCNOU")) {
+                r = new RespCualitativaNoOrdenadaUnica(Integer.parseInt(r_ith.get(1)), r_ith.get(2));
+            }
+            else if (r_ith.get(0).equals("RCNOM")) {
 
+                HashMap<Integer, String> str = new HashMap<>();
+                for (int j = 1; j < r_ith.size(); j += 2) {
+                    str.put( Integer.parseInt(r_ith.get(j)), r_ith.get(j + 1) );
+                }
+                r = new RespCualitativaNoOrdenadaMultiple(str);
+            }
+            ALR.add(r);
+        }
+        RespuestasEncuesta re = new RespuestasEncuesta(e, u.getUsername(), ALR);
+
+        e.responder(re);
+        System.out.println("Guardando encuesta...");
+        contDatos.guardarRespuestasEncuesta(re);
+        System.out.println("Guardada.");
     }
 
     public void responderEncuesta(String tituloE) {
