@@ -54,8 +54,6 @@ public class ControladorDominio {
     }
     public HashMap<Integer,List<String>> clustering(String name,int k){
         Encuesta x = cjt.getEncuesta(name);
-    //ME FALTA UNA MANERA DE CONSEGUIR RESPUESTAS PARA X
-
         Clustering C = new Clustering(x,k);
         return C.run();
     }
