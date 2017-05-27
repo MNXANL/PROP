@@ -488,6 +488,10 @@ public class ControladorDominio {
         contDatos.borrarRespuestasEncuesta(titulo + "_" + u.getUsername());
     }
 
+    public int getNumResps(String enc) {
+        return cjt.getEncuesta(enc).getNumResps();
+    }
+
     public void actualizarEncuestaMatrix(String tituloAnt, String titulo, ArrayList<ArrayList<String>> preguntasGuardadas) throws ExcEncuestaExistente {
         cjt.borrarEncuesta(tituloAnt);
         crearEncuestaMatrix(titulo, preguntasGuardadas);

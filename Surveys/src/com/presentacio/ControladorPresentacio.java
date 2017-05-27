@@ -144,7 +144,7 @@ public class ControladorPresentacio {
         }
     }
     public void Clusters(String name) {
-        VistaKClustering vkc = new VistaKClustering(this, name);
+        VistaKClustering vkc = new VistaKClustering(this, name, ctrlDom.getNumResps(name));
         vkc.show();
     }
 

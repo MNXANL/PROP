@@ -19,9 +19,9 @@ public class VistaKClustering {
 
     private ControladorPresentacio ctrlPres;
 
-    public VistaKClustering(ControladorPresentacio ctrlPres, String enc) {
+    public VistaKClustering(ControladorPresentacio ctrlPres, String enc, int maxClusters) {
         this.ctrlPres = ctrlPres;
-        spinner1.setModel(new SpinnerNumberModel(1, 1, Integer.MAX_VALUE, 1));
+        spinner1.setModel(new SpinnerNumberModel(1, 1, maxClusters, 1));
         clusteringButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

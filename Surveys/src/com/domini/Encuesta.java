@@ -435,6 +435,10 @@ public class Encuesta {
         return null;
     }
 
+    public int getNumResps () {
+        return CjtRespsEnc.size();
+    }
+
     public void leer () {
         System.out.println(title + "\n");
         DateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
