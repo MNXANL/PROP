@@ -83,10 +83,11 @@ public class VistaPrincipalAdmin {
                 ctrlPres.crearEncuesta();
             }
         });
+
         clusteringButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ctrlPres.Clusters("Encuesta", 3);
+                ctrlPres.Clusters(list1.getSelectedValue().toString());
             }
         });
 
@@ -263,7 +264,7 @@ public class VistaPrincipalAdmin {
     public void seleccionadaEncuestaSinResponder() {
         borrarEncuestaButton.setEnabled(true);
         modificarEncuestaButton.setEnabled(true);
-        clusteringButton.setEnabled(false);
+        clusteringButton.setEnabled(true); // false
         exportarButton.setEnabled(true);
         importarRespuestasButton.setEnabled(true);
     }
@@ -386,7 +387,7 @@ public class VistaPrincipalAdmin {
         final com.intellij.uiDesigner.core.Spacer spacer6 = new com.intellij.uiDesigner.core.Spacer();
         panel2.add(spacer6, new com.intellij.uiDesigner.core.GridConstraints(5, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         clusteringButton = new JButton();
-        clusteringButton.setEnabled(true);
+        clusteringButton.setEnabled(false);
         clusteringButton.setText("Clustering");
         panel2.add(clusteringButton, new com.intellij.uiDesigner.core.GridConstraints(4, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         modificarEncuestaButton = new JButton();

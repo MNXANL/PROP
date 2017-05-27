@@ -170,7 +170,9 @@ public class VistaRespInteractiva {
         borrarRespuestaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                if (AvisoBorrarRespuesta() == 0) {
+                    respuestas.remove(listaPreguntas.getSelectedIndex());
+                }
             }
         });
 

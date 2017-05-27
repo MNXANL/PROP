@@ -143,9 +143,15 @@ public class ControladorPresentacio {
             ce.show();
         }
     }
-    public void Clusters(String name, int k) {
+    public void Clusters(String name) {
+        VistaKClustering vkc = new VistaKClustering(this, name);
+        vkc.show();
+    }
+
+    public void Clustering(String name, int k) {
         vc = new VistaClustering(ctrlDom.clustering(name,k));
     }
+
     public void modificarEncuesta(String titulo) {
         ce = new VistaCrearEncuesta(this, titulo, ctrlDom.getEncuestaMatrix(titulo));
         ce.show();
