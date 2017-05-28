@@ -180,7 +180,7 @@ public class ControladorPresentacio {
 
     public void responderEncuesta(String enc) {
         JOptionPane optionPane = new JOptionPane("Desea responder una encuesta interactivamente o importar las respuestas de una encuesta?", JOptionPane.QUESTION_MESSAGE);
-        String[] opciones = {"Importar", "Crear"};
+        String[] opciones = {"Importar", "Responder"};
         optionPane.setOptions(opciones);
         JDialog dialogOptionPane = optionPane.createDialog(new JFrame(), "AVISO");
         dialogOptionPane.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
