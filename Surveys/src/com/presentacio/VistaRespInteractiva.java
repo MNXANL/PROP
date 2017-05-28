@@ -122,25 +122,15 @@ public class VistaRespInteractiva {
                 if (preg.get(0).equals("PRL")) {
                     panelRespLibre.setVisible(true);
                     guardarRespuestaLibreButton.setEnabled(true);
+                    textArea1.setText("");
                 } else if (preg.get(0).equals("PN")) {
                     panelRespNum.setVisible(true);
                     guardarRespuestaNumericaButton.setEnabled(true);
                     minMax.setText(preg.get(2) + " .. " + preg.get(3));
                     SpinnerModel sm = new SpinnerNumberModel(Double.parseDouble(preg.get(2)), Double.parseDouble(preg.get(2)), Double.parseDouble(preg.get(3)), 0.01);
                     spinner1.setModel(sm);
-                } else if (preg.get(0).equals("PCO")) {
+                } else if (preg.get(0).equals("PCO") || preg.get(0).equals("PCNOU")) {
                     panelRespCual.setVisible(true);
-                    //guardarRespuestaCualitativaButton.setEnabled(true);
-                    modelOpts = new DefaultListModel<>();
-                    for (int j = 2; j < preg.size(); j++) {
-                        modelOpts.addElement(preg.get(j));
-                    }
-                    listaOpciones.setModel(modelOpts);
-                    listaOpciones.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-                    maxOpts.setText("# máximo de opciones: 1");
-                } else if (preg.get(0).equals("PCNOU")) {
-                    panelRespCual.setVisible(true);
-                    //guardarRespuestaCualitativaButton.setEnabled(true);
                     modelOpts = new DefaultListModel<>();
                     for (int j = 2; j < preg.size(); j++) {
                         modelOpts.addElement(preg.get(j));
@@ -150,7 +140,6 @@ public class VistaRespInteractiva {
                     maxOpts.setText("# máximo de opciones: 1");
                 } else if (preg.get(0).equals("PCNOM")) {
                     panelRespCual.setVisible(true);
-                    //guardarRespuestaCualitativaButton.setEnabled(true);
                     modelOpts = new DefaultListModel<>();
                     for (int j = 3; j < preg.size(); j++) {
                         modelOpts.addElement(preg.get(j));
@@ -191,10 +180,11 @@ public class VistaRespInteractiva {
                     modelOpts = new DefaultListModel<>();
                     for (int j = 2; j < preg.size(); j++) {
                         modelOpts.addElement(preg.get(j));
+
                     }
                     listaOpciones.setModel(modelOpts);
                     listaOpciones.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-                    listaOpciones.setSelectedIndex();
+                    listaOpciones.setSelectedIndex(modelOpts.indexOf(respuestas.get(i).get(3)));
                     maxOpts.setText("# máximo de opciones: 1");
                 } else if (preg.get(0).equals("PCNOU")) {
                     panelRespCual.setVisible(true);
@@ -205,6 +195,7 @@ public class VistaRespInteractiva {
                     }
                     listaOpciones.setModel(modelOpts);
                     listaOpciones.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+                    listaOpciones.setSelectedIndex(modelOpts.indexOf(respuestas.get(i).get(2)));
                     maxOpts.setText("# máximo de opciones: 1");
                 } else if (preg.get(0).equals("PCNOM")) {
                     panelRespCual.setVisible(true);
@@ -215,6 +206,11 @@ public class VistaRespInteractiva {
                     }
                     listaOpciones.setModel(modelOpts);
                     listaOpciones.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+                    int[] opts = new int[respuestas.get(i).size() - 2];
+                    for (int k = 2; k < respuestas.get(i).size(); k++) {
+                        opts[k - 2] = modelOpts.indexOf(respuestas.get(i).get(k));
+                    }
+                    listaOpciones.setSelectedIndices(opts);
                     maxOpts.setText("# máximo de opciones: " + preg.get(2));
                 }
             }
@@ -225,14 +221,13 @@ public class VistaRespInteractiva {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (AvisoBorrarRespuesta() == 0) {
-                    respuestas.remove(listaPreguntas.getSelectedIndex());
+                    ArrayList<String> r = new ArrayList<>();
+                    r.add("RV");
+                    respuestas.set(listaPreguntas.getSelectedIndex(), r);
+                    responderPreguntaButton.setEnabled(true);
+                    modificarRespuestaButton.setEnabled(false);
+                    borrarRespuestaButton.setEnabled(false);
                 }
-                listaPreguntas.setEnabled(true);
-                panelRespCual.setVisible(false);
-                panelRespNum.setVisible(false);
-                panelRespLibre.setVisible(false);
-                panelBotones.setVisible(true);
-                panelList.setVisible(true);
             }
         });
 
@@ -247,7 +242,9 @@ public class VistaRespInteractiva {
                 respuestas.remove(listaPreguntas.getSelectedIndex());
                 respuestas.add(listaPreguntas.getSelectedIndex(), resp);
                 listaPreguntas.setEnabled(true);
-                textArea1.setText("");
+                responderPreguntaButton.setEnabled(false);
+                modificarRespuestaButton.setEnabled(true);
+                borrarRespuestaButton.setEnabled(true);
             }
         });
 
@@ -255,6 +252,8 @@ public class VistaRespInteractiva {
             @Override
             public void actionPerformed(ActionEvent e) {
                 responderPreguntaButton.setEnabled(true);
+                modificarRespuestaButton.setEnabled(false);
+                borrarRespuestaButton.setEnabled(false);
                 panelRespLibre.setVisible(false);
                 ArrayList<String> resp = new ArrayList<>();
                 resp.add("RV");
@@ -267,7 +266,9 @@ public class VistaRespInteractiva {
         guardarRespuestaNumericaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                responderPreguntaButton.setEnabled(true);
+                responderPreguntaButton.setEnabled(false);
+                modificarRespuestaButton.setEnabled(true);
+                borrarRespuestaButton.setEnabled(true);
                 panelRespNum.setVisible(false);
                 ArrayList<String> resp = new ArrayList<>();
                 resp.add("RN");
@@ -284,6 +285,8 @@ public class VistaRespInteractiva {
             @Override
             public void actionPerformed(ActionEvent e) {
                 responderPreguntaButton.setEnabled(true);
+                modificarRespuestaButton.setEnabled(false);
+                borrarRespuestaButton.setEnabled(false);
                 panelRespNum.setVisible(false);
                 ArrayList<String> resp = new ArrayList<>();
                 resp.add("RV");
@@ -296,7 +299,9 @@ public class VistaRespInteractiva {
         guardarRespuestaCualitativaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                responderPreguntaButton.setEnabled(true);
+                responderPreguntaButton.setEnabled(false);
+                modificarRespuestaButton.setEnabled(true);
+                borrarRespuestaButton.setEnabled(true);
                 panelRespCual.setVisible(false);
                 ArrayList<String> resp = new ArrayList<>();
                 if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCO")) {
@@ -325,6 +330,8 @@ public class VistaRespInteractiva {
             @Override
             public void actionPerformed(ActionEvent e) {
                 responderPreguntaButton.setEnabled(true);
+                modificarRespuestaButton.setEnabled(false);
+                borrarRespuestaButton.setEnabled(false);
                 panelRespCual.setVisible(false);
                 ArrayList<String> resp = new ArrayList<>();
                 resp.add("RV");
@@ -361,8 +368,6 @@ public class VistaRespInteractiva {
                     modificarRespuestaButton.setEnabled(false);
                     borrarRespuestaButton.setEnabled(false);
                 }
-
-
             }
         });
 
