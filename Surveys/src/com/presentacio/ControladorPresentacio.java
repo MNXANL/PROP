@@ -234,5 +234,6 @@ public class ControladorPresentacio {
 
     public void guardarRespEnc(String titulo, ArrayList<ArrayList<String>> resps) {
         ctrlDom.responderEncuestaMatrix(titulo, resps);
+        vu.buscar();
     }
 }

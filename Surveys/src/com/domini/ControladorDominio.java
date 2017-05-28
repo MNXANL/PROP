@@ -406,7 +406,7 @@ public class ControladorDominio {
 
 
     public void responderEncuestaMatrix(String titulo, ArrayList<ArrayList<String>> resps) {
-        e = new Encuesta(titulo);
+        e = cjt.getEncuesta(titulo);
         ArrayList<Respuesta> ALR = new ArrayList<>();
         for (int i = 0; i != resps.size(); ++i) {
             Respuesta r = null;
