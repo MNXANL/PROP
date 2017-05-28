@@ -126,7 +126,7 @@ public class VistaRespInteractiva {
                     panelRespNum.setVisible(true);
                     guardarRespuestaNumericaButton.setEnabled(true);
                     minMax.setText(preg.get(2) + " .. " + preg.get(3));
-                    SpinnerModel sm = new SpinnerNumberModel(Integer.parseInt(preg.get(2)), Integer.MIN_VALUE, Integer.MAX_VALUE, 0.01);
+                    SpinnerModel sm = new SpinnerNumberModel(Double.parseDouble(preg.get(2)), Double.parseDouble(preg.get(2)), Double.parseDouble(preg.get(3)), 0.01);
                     spinner1.setModel(sm);
                 } else if (preg.get(0).equals("PCO")) {
                     panelRespCual.setVisible(true);
@@ -166,6 +166,57 @@ public class VistaRespInteractiva {
         modificarRespuestaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                esModificado = true;
+                idxMod = listaPreguntas.getSelectedIndex();
+
+                listaPreguntas.setEnabled(false);
+                responderPreguntaButton.setEnabled(false);
+                int i = listaPreguntas.getSelectedIndex();
+                ArrayList<String> preg = pregs.get(i);
+                if (preg.get(0).equals("PRL")) {
+                    panelRespLibre.setVisible(true);
+                    guardarRespuestaLibreButton.setEnabled(true);
+                    textArea1.setText(respuestas.get(i).get(1));
+                } else if (preg.get(0).equals("PN")) {
+                    panelRespNum.setVisible(true);
+                    guardarRespuestaNumericaButton.setEnabled(true);
+                    minMax.setText(preg.get(2) + " .. " + preg.get(3));
+                    SpinnerModel sm = new SpinnerNumberModel(Double.parseDouble(preg.get(2)), Double.parseDouble(preg.get(2)), Double.parseDouble(preg.get(3)), 0.01);
+                    spinner1.setModel(sm);
+                    Double d = Double.parseDouble(respuestas.get(i).get(1));
+                    spinner1.setValue(d); //yolo
+                } else if (preg.get(0).equals("PCO")) {
+                    panelRespCual.setVisible(true);
+                    //guardarRespuestaCualitativaButton.setEnabled(true);
+                    modelOpts = new DefaultListModel<>();
+                    for (int j = 2; j < preg.size(); j++) {
+                        modelOpts.addElement(preg.get(j));
+                    }
+                    listaOpciones.setModel(modelOpts);
+                    listaOpciones.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+                    listaOpciones.setSelectedIndex();
+                    maxOpts.setText("# máximo de opciones: 1");
+                } else if (preg.get(0).equals("PCNOU")) {
+                    panelRespCual.setVisible(true);
+                    //guardarRespuestaCualitativaButton.setEnabled(true);
+                    modelOpts = new DefaultListModel<>();
+                    for (int j = 2; j < preg.size(); j++) {
+                        modelOpts.addElement(preg.get(j));
+                    }
+                    listaOpciones.setModel(modelOpts);
+                    listaOpciones.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+                    maxOpts.setText("# máximo de opciones: 1");
+                } else if (preg.get(0).equals("PCNOM")) {
+                    panelRespCual.setVisible(true);
+                    //guardarRespuestaCualitativaButton.setEnabled(true);
+                    modelOpts = new DefaultListModel<>();
+                    for (int j = 3; j < preg.size(); j++) {
+                        modelOpts.addElement(preg.get(j));
+                    }
+                    listaOpciones.setModel(modelOpts);
+                    listaOpciones.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+                    maxOpts.setText("# máximo de opciones: " + preg.get(2));
+                }
             }
         });
 
@@ -176,6 +227,12 @@ public class VistaRespInteractiva {
                 if (AvisoBorrarRespuesta() == 0) {
                     respuestas.remove(listaPreguntas.getSelectedIndex());
                 }
+                listaPreguntas.setEnabled(true);
+                panelRespCual.setVisible(false);
+                panelRespNum.setVisible(false);
+                panelRespLibre.setVisible(false);
+                panelBotones.setVisible(true);
+                panelList.setVisible(true);
             }
         });
 
@@ -190,6 +247,7 @@ public class VistaRespInteractiva {
                 respuestas.remove(listaPreguntas.getSelectedIndex());
                 respuestas.add(listaPreguntas.getSelectedIndex(), resp);
                 listaPreguntas.setEnabled(true);
+                textArea1.setText("");
             }
         });
 
@@ -280,6 +338,7 @@ public class VistaRespInteractiva {
             @Override
             public void actionPerformed(ActionEvent e) {
                 ctrlPres.guardarRespEnc(tituloEnc.getText(), respuestas);
+                close();
             }
         });
 
@@ -288,14 +347,22 @@ public class VistaRespInteractiva {
             @Override
             public void valueChanged(ListSelectionEvent e) {
                 if (!listaPreguntas.isSelectionEmpty()) {
-                    responderPreguntaButton.setEnabled(true);
-                    modificarRespuestaButton.setEnabled(true);
-                    borrarRespuestaButton.setEnabled(true);
+                    if (respuestas.get(listaPreguntas.getSelectedIndex()).get(0).equals("RV")) {
+                        responderPreguntaButton.setEnabled(true);
+                        modificarRespuestaButton.setEnabled(false);
+                        borrarRespuestaButton.setEnabled(false);
+                    } else {
+                        responderPreguntaButton.setEnabled(false);
+                        modificarRespuestaButton.setEnabled(true);
+                        borrarRespuestaButton.setEnabled(true);
+                    }
                 } else {
                     responderPreguntaButton.setEnabled(false);
                     modificarRespuestaButton.setEnabled(false);
                     borrarRespuestaButton.setEnabled(false);
                 }
+
+
             }
         });
 
