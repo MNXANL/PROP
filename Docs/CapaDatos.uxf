@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>150</y>
+      <w>510</w>
+      <h>410</h>
+    </coordinates>
+    <panel_attributes>*ControladorDatos*
+
+{innerclass
+*Tuple&lt;X, Y&gt;*
+--
++ x: X
++ y: Y
+--
++ Tuple(x: X, y: Y)
+innerclass}
+
+--
+- pathEnc: String = "src/com/dades/DirectorioEncuestas"
+- pathResp: String = "src/com/dades/DirectorioRespuestas"
+- pathUsers: String = "src/com/dades/Usuarios.txt"
+- users: HashMap&lt; String, Tuple&lt;String, String&gt; &gt;
+--
++ logIn(usuario: String): int
++ nuevoUsuario(tipo: String, nombre: String, pass: String)
++ cargar(): TreeMap&lt;String, Encuesta&gt;
++ guardarEncuesta(e: Encuesta)
++ actualizarEncuesta(titulo: String, e: Encuesta)
++ borrarEncuesta(titulo: String)
++ guardarRespuestasEncuesta(re: RespuestasEncuesta)
++ actualizarRespuestasEncuesta(re: RespuestasEncuesta)
++ borrarRespuestasEncuesta(re: RespuestasEncuesta)</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

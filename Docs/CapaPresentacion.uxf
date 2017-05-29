@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>564</x>
+      <y>78</y>
+      <w>450</w>
+      <h>378</h>
+    </coordinates>
+    <panel_attributes>*ControladorPresentacio*
+--
+- ctrlDom: ControladorDominio
+li : LogIn
+vp : VistaPrincipalAdmin
+vu : VistaPrincipalUsuario
+ru: RegistroUsuario
+ce: VistaCrearEncuesta
+ri: VistaRespInteractiva
+ie: ImportarEncuesta
+vc: VistaClustering
+- criterio: String
+--
++ ControladorPresentacio()
++ inicializarPresentacion()
++ logIn(user: String, pass: String)
++ logOut()
++ registrarse() 
++ registrarusuario(user: String, pass: String)
++ getUsername(): String
++ buscarEncuestas(criterio: String)
++ buscarEncuestasUsuario(criterio: String)
++ buscarEncuestasPalabra(criterio: String)
++ buscarEncuestasPalabrasUsuario(criterio: String)
++ buscarEncuestaFecha(f1: String, f2: String)
++ buscarEncuestaFechaUsuario(f1: String, f2: String)
++ Clusters(name: String)
++ Clustering(name: String, k: int)
++ modificarEncuesta(titulo: String)
++ importarEncuesta(path: String)
++ crearEncuestaArgs(titulo: String, enc: ArrayList&lt;ArrayList&lt;String&gt;&gt;)
++ exportarEncuesta(enc: String, path: String)
++ borrarEncuesta(titulo: String)
++ responderEncuesta(enc: String)
++ importarRespuestaEncuesta(enc: String, path: String)
++ exportarRespuestaEncuesta(enc: String, path: String)
++ borrarRespuestaEncuesta(enc: String, path: String)
++ encuestaRespondida(enc: String)
++ actualizarEncuestaArgs(encAnt: String, enc: String, preguntasGuardadas: ArrayList&lt;ArrayList&lt;String&gt;&gt;)
++ guardarRespEnc(titulo: String, enc: ArrayList&lt;ArrayList&lt;String&gt;&gt;)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>36</y>
+      <w>222</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>*ImportarEncuesta*
+--
+- ctrlPres: ControladorPresentacio
+--
++ ImportarEncuesta(ctrlPres: ControladorPresentacio)
++ asignarListeners()
++ aviso(mensaje: String)
++ show()
++ close()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>498</x>
+      <y>78</y>
+      <w>78</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1008</x>
+      <y>228</y>
+      <w>84</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1008</x>
+      <y>132</y>
+      <w>84</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1008</x>
+      <y>78</y>
+      <w>84</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>126</y>
+      <w>174</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>*LogIn*
+--
+- ctrlPres: ControladorPresentacio
+--
++ LogIn(ctrlPres: ControladorPresentacio)
++ asignarListeners()
++ datosIncorrectos()
++ show()
++ close()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>216</y>
+      <w>246</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>*VistaClustering*
+--
+- ctrlPres: ControladorPresentacio
+--
++ VistaClustering(cp: ControladorPresentacio, 
+    clusts: HashMap&lt;Integer, List&lt;String&gt;&gt;, name: String)
++ Initialize(clusts: HashMap&lt;Integer, List&lt;String&gt;&gt;)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>42</y>
+      <w>234</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>*RegistroUsuario*
+--
+- ctrlPres: ControladorPresentacio
+--
++ RegistroUsuario(ctrlPres: ControladorPresentacio)
++ asignarListeners()
++ lanzarAviso(contenido: String)
++ show()
++ close()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>294</y>
+      <w>216</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>*VistaKClustering*
+--
+- ctrlPres: ControladorPresentacio
+--
++ VistaKClustering(ctrlPres: ControladorPresentacio, 
+    enc: String, maxClusters: int)
++ show()
++ close()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1008</x>
+      <y>294</y>
+      <w>84</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>132</y>
+      <w>234</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>*VistaRespInteractiva*
+--
+- ctrlPres: ControladorPresentacio
+- pregs: ArrayList&lt;ArrayList&lt;String&gt;&gt;
+--
++ VistaRespInteractiva(ctrlPres: ControladorPresentacio,
+    enc: String, pregs: ArrayList&lt;ArrayList&lt;String&gt;&gt;)
+- asignarListeners()
+- AvisoBorrarEncuesta(): int
++ show()
++ close()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>498</x>
+      <y>168</y>
+      <w>78</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>240</y>
+      <w>234</w>
+      <h>186</h>
+    </coordinates>
+    <panel_attributes>*VistaPrincipalUsuario*
+--
+- ctrlPres: ControladorPresentacio
+--
++ VistaPrincipalUsuario(ctrlPres: ControladorPresentacio,
+    user: String)
++ asignarListeners()
+- palabrasClaveChanged()
+- fechaChanged()
++ show()
++ close()
++ llenarListaEncuestas(lista: String[])
++ llenarListaEncuestasRespondidas(lista: String[])
++ buscar()
++ NOseleccionadaEncuesta()
++ seleccionadaEncuestaSinResponder()
++ seleccionadaEncuestaRespondida()
++ importarRespuesta()
++ aviso(mensaje: String)
+- AvisoBorrarEncuesta(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>498</x>
+      <y>246</y>
+      <w>78</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>432</y>
+      <w>234</w>
+      <h>186</h>
+    </coordinates>
+    <panel_attributes>*VistaPrincipalAdmin*
+--
+- ctrlPres: ControladorPresentacio
+--
++ VistaPrincipalAdmin(ctrlPres: ControladorPresentacio,
+    user: String)
+- asignarListeners()
+- panelVisibility()
+- AvisoBorrarPregunta(): int
++ show()
++ close()
++ aviso(mensaje: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>498</x>
+      <y>390</y>
+      <w>78</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..1</panel_attributes>
+    <additional_attributes>110.0;10.0;70.0;10.0;70.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>378</y>
+      <w>240</w>
+      <h>228</h>
+    </coordinates>
+    <panel_attributes>*VistaCrearEncuesta*
+--
+- ctrlPres: ControladorPresentacio
+- esModificado: boolean
+- modEnc: boolean
+- idxMod: int
+- tituloAnterior: String
+- PreguntasGuardadas: ArrayList&lt;ArrayList&lt;String&gt;&gt;
+--
++ VistaCrearEncuesta(ctrlPres: ControladorPresentacio)
++ VistaCrearEncuesta(ctrlPres: ControladorPresentacio,
+    titulo: String, pregs: ArrayList&lt;ArrayList&lt;String&gt;&gt;)
++ asignarListeners()
+- palabrasClaveChanged()
+- fechaChanged()
++ show()
++ close()
++ llenarLista(lista: String[])
++ buscar()
++ NOseleccionadaEncuesta()
++ seleccionadaEncuestaSinResponder()
++ seleccionadaEncuestaRespondida()
++ importarRespuesta()
++ aviso(mensaje: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1008</x>
+      <y>396</y>
+      <w>84</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..1</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+</diagram>
