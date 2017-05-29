@@ -1,12 +1,12 @@
 package com.presentacio;
 
-import com.domini.Encuesta;
-import com.domini.ExcEncuestaExistente;
-import com.domini.ExcFormatoIncorrecto;
-import tests.domini.Clustering.ClusteringUTest;
+import com.domini.ControladorDominio;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.*;
 import java.util.List;
 
@@ -16,11 +16,24 @@ import java.util.List;
 public class VistaClustering {
     private JFrame frame = new JFrame("Clustering");
     private JPanel CPanel;
-    private JTable clusterTable;
+    private JButton recalc;
+    private JTabbedPane tabs;
+    private JPanel clusters;
+    private JPanel centroids;
     private JScrollPane scrollable;
+    private JTable clusterTable;
+    private ControladorPresentacio cp;
 
-    public VistaClustering(HashMap<Integer, List<String>> clusts) {
+    public VistaClustering(ControladorPresentacio cp, HashMap<Integer, List<String>> clusts, String name) {
         Initialize(clusts);
+        this.cp = cp;
+        recalc.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                cp.Clusters(name);
+                frame.setVisible(false);
+            }
+        });
     }
 
     public void Initialize(HashMap<Integer, List<String>> clusts) {
@@ -42,17 +55,28 @@ public class VistaClustering {
                 data[i][entry.getKey()] = name;
             }
         }
-
-        clusterTable = new JTable(data, columnNames);
+        DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
+        clusterTable = new JTable(tableModel);
+        for (Object[] os : data) {
+            tableModel.addRow(os);
+        }
         scrollable = new JScrollPane(clusterTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        clusterTable.setFillsViewportHeight(true);
-        //clusterTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-        CPanel.add(scrollable);
+        //clusterTable.setFillsViewportHeight(true);
+        clusterTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        clusters.add(scrollable);
         frame.add(CPanel);
+        CPanel.setPreferredSize(clusterTable.getSize());
+        CPanel.setSize(clusterTable.getSize());
+
+
         frame.setContentPane(CPanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
+        frame.setSize(500, 500);
         frame.setVisible(true);
+        frame.setVisible(true);
+
+
     }
 
     {

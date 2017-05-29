@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a6261926-014f-4e17-847e-29161c7babb7" name="Default" comment="clustering bien probablemente">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaClustering.form" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaClustering.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java" afterPath="$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,7 +26,7 @@
       <file leaf-file-name="Clustering.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="1905">
               <caret line="129" column="9" lean-forward="false" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -41,31 +41,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="780">
               <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1717#1718#0" expanded="false" />
-                <element signature="e#1747#1748#0" expanded="false" />
-                <element signature="e#1781#1782#0" expanded="false" />
-                <element signature="e#1809#1810#0" expanded="false" />
-                <element signature="e#1856#1857#0" expanded="false" />
-                <element signature="e#1899#1900#0" expanded="false" />
-                <element signature="e#1949#1950#0" expanded="false" />
-                <element signature="e#1981#1982#0" expanded="false" />
-                <element signature="e#2012#2013#0" expanded="false" />
-                <element signature="e#2040#2041#0" expanded="false" />
-                <element signature="e#2176#2177#0" expanded="false" />
-                <element signature="e#2208#2209#0" expanded="false" />
-                <element signature="e#2263#2264#0" expanded="false" />
-                <element signature="e#2301#2302#0" expanded="false" />
-                <element signature="e#2482#2483#0" expanded="false" />
-                <element signature="e#2521#2522#0" expanded="false" />
-                <marker date="1495900800454" expanded="true" signature="18966:19316" ph="{...}" />
-                <marker date="1495900800454" expanded="true" signature="19371:21083" ph="{...}" />
-                <marker date="1495900800454" expanded="false" signature="21142:21152" ph=" { " />
-                <marker date="1495900800454" expanded="false" signature="21206:21212" ph=" }" />
-                <marker date="1495900800454" expanded="true" signature="21262:21504" ph="{...}" />
-                <marker date="1495900800454" expanded="true" signature="21569:25201" ph="{...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -73,12 +49,18 @@
       <file leaf-file-name="VistaPrincipalAdmin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="89" column="47" lean-forward="false" selection-start-line="89" selection-start-column="47" selection-end-line="89" selection-end-column="47" />
+            <state relative-caret-position="1200">
+              <caret line="93" column="47" lean-forward="false" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
               <folding>
-                <marker date="1495900126111" expanded="true" signature="20760:24396" ph="{...}" />
-                <marker date="1495900126111" expanded="false" signature="20760:24516" ph="UI Designer generated code" />
-                <marker date="1495900126111" expanded="true" signature="24402:24438" ph="/**...*/" />
+                <marker date="1496071439861" expanded="true" signature="9181:9279" ph="{...}" />
+                <marker date="1496071439861" expanded="true" signature="9330:9570" ph="{...}" />
+                <marker date="1496071439861" expanded="true" signature="9608:10652" ph="{...}" />
+                <marker date="1496071439861" expanded="true" signature="10692:11107" ph="{...}" />
+                <marker date="1496071439861" expanded="true" signature="11113:11264" ph="{...}" />
+                <marker date="1496071439861" expanded="true" signature="11115:11233" ph="//..." />
+                <marker date="1496071439861" expanded="true" signature="11270:11450" ph="/**...*/" />
+                <marker date="1496071439861" expanded="true" signature="11484:24542" ph="{...}" />
+                <marker date="1496071439861" expanded="true" signature="20906:24542" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -87,23 +69,14 @@
       <file leaf-file-name="ControladorPresentacio.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+            <state relative-caret-position="1125">
+              <caret line="138" column="22" lean-forward="true" selection-start-line="138" selection-start-column="22" selection-end-line="138" selection-end-column="22" />
               <folding>
-                <marker date="1495900800454" expanded="true" signature="4780:4892" ph="{...}" />
-                <marker date="1495900800454" expanded="true" signature="4989:5094" ph="{...}" />
-                <marker date="1495900800454" expanded="true" signature="5207:5322" ph="{...}" />
-                <marker date="1495900800454" expanded="false" signature="5381:5392" ph=" { " />
-                <marker date="1495900800454" expanded="false" signature="5428:5434" ph=" }" />
-                <marker date="1495900800454" expanded="true" signature="5482:5671" ph="{...}" />
-                <marker date="1495900800454" expanded="true" signature="5719:6641" ph="{...}" />
-                <marker date="1495900800454" expanded="true" signature="6768:6874" ph="{...}" />
-                <marker date="1495900800454" expanded="false" signature="6942:6953" ph=" { " />
-                <marker date="1495900800454" expanded="false" signature="6997:7003" ph=" }" />
-                <marker date="1495900800454" expanded="false" signature="7056:7067" ph=" { " />
-                <marker date="1495900800454" expanded="false" signature="7104:7110" ph=" }" />
-                <marker date="1495900800454" expanded="true" signature="7148:7217" ph="{...}" />
-                <marker date="1495900800454" expanded="true" signature="7363:7503" ph="{...}" />
+                <element signature="e#6957#6958#0" expanded="true" />
+                <element signature="e#7016#7017#0" expanded="true" />
+                <element signature="e#7071#7072#0" expanded="true" />
+                <element signature="e#7123#7124#0" expanded="true" />
+                <marker date="1496071439934" expanded="true" signature="7842:7850" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -112,10 +85,17 @@
       <file leaf-file-name="ControladorDominio.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/domini/ControladorDominio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
+            <state relative-caret-position="675">
               <caret line="56" column="43" lean-forward="false" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
               <folding>
-                <marker date="1495900800454" expanded="true" signature="20036:20416" ph="{...}" />
+                <marker date="1496071439861" expanded="true" signature="20039:20419" ph="{...}" />
+                <marker date="1496071439861" expanded="true" signature="20551:21324" ph="{...}" />
+                <marker date="1496071439861" expanded="true" signature="21397:21483" ph="{...}" />
+                <marker date="1496071439861" expanded="true" signature="21539:21634" ph="{...}" />
+                <marker date="1496071439861" expanded="true" signature="21693:21830" ph="{...}" />
+                <marker date="1496071439861" expanded="true" signature="21870:21881" ph=" { " />
+                <marker date="1496071439861" expanded="true" signature="21923:21929" ph=" }" />
+                <marker date="1496071439861" expanded="true" signature="22082:22259" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -141,14 +121,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VistaClustering.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VistaClustering.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+            <state relative-caret-position="-510">
+              <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
               <folding>
                 <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
                 <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
+                <marker date="1496071446641" expanded="false" signature="3766:3777" ph=" { " />
+                <marker date="1496071446641" expanded="false" signature="3791:3797" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -157,22 +139,16 @@
       <file leaf-file-name="VistaKClustering.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaKClustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+            <state relative-caret-position="480">
+              <caret line="36" column="37" lean-forward="false" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1495900800508" expanded="false" signature="1285:1296" ph=" { " />
-                <marker date="1495900800508" expanded="false" signature="1320:1326" ph=" }" />
-                <marker date="1495900800508" expanded="false" signature="1332:1483" ph="UI Designer generated code" />
-                <marker date="1495900800508" expanded="false" signature="1332:6163" ph="UI Designer generated code" />
-                <marker date="1495900800508" expanded="false" signature="6132:6143" ph=" { " />
-                <marker date="1495900800508" expanded="false" signature="6157:6163" ph=" }" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VistaClustering.form" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VistaClustering.form" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.form">
           <provider selected="true" editor-type-id="ui-designer">
             <state />
@@ -269,13 +245,13 @@
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/vistaClustering.form" />
         <option value="$PROJECT_DIR$/src/com/presentacio/vistaClustering.java" />
-        <option value="$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java" />
         <option value="$PROJECT_DIR$/src/com/domini/ControladorDominio.java" />
         <option value="$PROJECT_DIR$/src/com/domini/Clustering.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaKClustering.java" />
-        <option value="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaClustering.form" />
+        <option value="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" />
+        <option value="$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java" />
       </list>
     </option>
   </component>
@@ -302,6 +278,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -348,6 +326,58 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="presentacio" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentacio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VistaPrincipalAdmin" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentacio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VistaKClustering" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -419,10 +449,6 @@
               <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domini" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -448,9 +474,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -490,9 +514,12 @@
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/domini/ControladorDominio.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/domini/Encuesta.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaKClustering.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaClustering.form</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaClustering.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.form</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -1669,7 +1696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1677,37 +1703,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
           <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1717#1718#0" expanded="false" />
-            <element signature="e#1747#1748#0" expanded="false" />
-            <element signature="e#1781#1782#0" expanded="false" />
-            <element signature="e#1809#1810#0" expanded="false" />
-            <element signature="e#1856#1857#0" expanded="false" />
-            <element signature="e#1899#1900#0" expanded="false" />
-            <element signature="e#1949#1950#0" expanded="false" />
-            <element signature="e#1981#1982#0" expanded="false" />
-            <element signature="e#2012#2013#0" expanded="false" />
-            <element signature="e#2040#2041#0" expanded="false" />
-            <element signature="e#2176#2177#0" expanded="false" />
-            <element signature="e#2208#2209#0" expanded="false" />
-            <element signature="e#2263#2264#0" expanded="false" />
-            <element signature="e#2301#2302#0" expanded="false" />
-            <element signature="e#2482#2483#0" expanded="false" />
-            <element signature="e#2521#2522#0" expanded="false" />
-            <marker date="1495900800454" expanded="true" signature="18966:19316" ph="{...}" />
-            <marker date="1495900800454" expanded="true" signature="19371:21083" ph="{...}" />
-            <marker date="1495900800454" expanded="false" signature="21142:21152" ph=" { " />
-            <marker date="1495900800454" expanded="false" signature="21206:21212" ph=" }" />
-            <marker date="1495900800454" expanded="true" signature="21262:21504" ph="{...}" />
-            <marker date="1495900800454" expanded="true" signature="21569:25201" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="1905">
           <caret line="129" column="9" lean-forward="false" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1716,37 +1718,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
-          <folding>
-            <marker date="1495900800454" expanded="true" signature="4780:4892" ph="{...}" />
-            <marker date="1495900800454" expanded="true" signature="4989:5094" ph="{...}" />
-            <marker date="1495900800454" expanded="true" signature="5207:5322" ph="{...}" />
-            <marker date="1495900800454" expanded="false" signature="5381:5392" ph=" { " />
-            <marker date="1495900800454" expanded="false" signature="5428:5434" ph=" }" />
-            <marker date="1495900800454" expanded="true" signature="5482:5671" ph="{...}" />
-            <marker date="1495900800454" expanded="true" signature="5719:6641" ph="{...}" />
-            <marker date="1495900800454" expanded="true" signature="6768:6874" ph="{...}" />
-            <marker date="1495900800454" expanded="false" signature="6942:6953" ph=" { " />
-            <marker date="1495900800454" expanded="false" signature="6997:7003" ph=" }" />
-            <marker date="1495900800454" expanded="false" signature="7056:7067" ph=" { " />
-            <marker date="1495900800454" expanded="false" signature="7104:7110" ph=" }" />
-            <marker date="1495900800454" expanded="true" signature="7148:7217" ph="{...}" />
-            <marker date="1495900800454" expanded="true" signature="7363:7503" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="89" column="47" lean-forward="false" selection-start-line="89" selection-start-column="47" selection-end-line="89" selection-end-column="47" />
+        <state relative-caret-position="1200">
+          <caret line="93" column="47" lean-forward="false" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
           <folding>
-            <marker date="1495900126111" expanded="true" signature="20760:24396" ph="{...}" />
-            <marker date="1495900126111" expanded="false" signature="20760:24516" ph="UI Designer generated code" />
-            <marker date="1495900126111" expanded="true" signature="24402:24438" ph="/**...*/" />
+            <marker date="1496071439861" expanded="true" signature="9181:9279" ph="{...}" />
+            <marker date="1496071439861" expanded="true" signature="9330:9570" ph="{...}" />
+            <marker date="1496071439861" expanded="true" signature="9608:10652" ph="{...}" />
+            <marker date="1496071439861" expanded="true" signature="10692:11107" ph="{...}" />
+            <marker date="1496071439861" expanded="true" signature="11113:11264" ph="{...}" />
+            <marker date="1496071439861" expanded="true" signature="11115:11233" ph="//..." />
+            <marker date="1496071439861" expanded="true" signature="11270:11450" ph="/**...*/" />
+            <marker date="1496071439861" expanded="true" signature="11484:24542" ph="{...}" />
+            <marker date="1496071439861" expanded="true" signature="20906:24542" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1761,10 +1746,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/ControladorDominio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
+        <state relative-caret-position="675">
           <caret line="56" column="43" lean-forward="false" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
           <folding>
-            <marker date="1495900800454" expanded="true" signature="20036:20416" ph="{...}" />
+            <marker date="1496071439861" expanded="true" signature="20039:20419" ph="{...}" />
+            <marker date="1496071439861" expanded="true" signature="20551:21324" ph="{...}" />
+            <marker date="1496071439861" expanded="true" signature="21397:21483" ph="{...}" />
+            <marker date="1496071439861" expanded="true" signature="21539:21634" ph="{...}" />
+            <marker date="1496071439861" expanded="true" signature="21693:21830" ph="{...}" />
+            <marker date="1496071439861" expanded="true" signature="21870:21881" ph=" { " />
+            <marker date="1496071439861" expanded="true" signature="21923:21929" ph=" }" />
+            <marker date="1496071439861" expanded="true" signature="22082:22259" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1787,27 +1779,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaKClustering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        <state relative-caret-position="480">
+          <caret line="36" column="37" lean-forward="false" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1495900800508" expanded="false" signature="1285:1296" ph=" { " />
-            <marker date="1495900800508" expanded="false" signature="1320:1326" ph=" }" />
-            <marker date="1495900800508" expanded="false" signature="1332:1483" ph="UI Designer generated code" />
-            <marker date="1495900800508" expanded="false" signature="1332:6163" ph="UI Designer generated code" />
-            <marker date="1495900800508" expanded="false" signature="6132:6143" ph=" { " />
-            <marker date="1495900800508" expanded="false" signature="6157:6163" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-          <folding>
-            <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
-            <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1815,6 +1790,33 @@
     <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="138" column="22" lean-forward="true" selection-start-line="138" selection-start-column="22" selection-end-line="138" selection-end-column="22" />
+          <folding>
+            <element signature="e#6957#6958#0" expanded="true" />
+            <element signature="e#7016#7017#0" expanded="true" />
+            <element signature="e#7071#7072#0" expanded="true" />
+            <element signature="e#7123#7124#0" expanded="true" />
+            <marker date="1496071439934" expanded="true" signature="7842:7850" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding>
+            <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
+            <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
+            <marker date="1496071446641" expanded="false" signature="3766:3777" ph=" { " />
+            <marker date="1496071446641" expanded="false" signature="3791:3797" ph=" }" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

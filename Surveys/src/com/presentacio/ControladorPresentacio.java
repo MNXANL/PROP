@@ -149,7 +149,7 @@ public class ControladorPresentacio {
     }
 
     public void Clustering(String name, int k) {
-        vc = new VistaClustering(ctrlDom.clustering(name,k));
+        vc = new VistaClustering(this,ctrlDom.clustering(name,k),name);
     }
 
     public void modificarEncuesta(String titulo) {
