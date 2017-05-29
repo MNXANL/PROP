@@ -5,25 +5,40 @@
       <xy x="20" y="20" width="500" height="400"/>
     </constraints>
     <properties>
-      <preferredSize width="0" height="0"/>
+      <preferredSize width="200" height="200"/>
     </properties>
     <border type="none"/>
     <children>
-      <scrollpane id="d3397" binding="scrollable">
+      <component id="ab470" class="javax.swing.JButton" binding="recalc">
+        <constraints border-constraint="South"/>
+        <properties>
+          <label value="Seleccionar otra K"/>
+          <text value="Seleccionar otra K"/>
+        </properties>
+      </component>
+      <tabbedpane id="8b5bb" binding="tabs">
         <constraints border-constraint="Center"/>
         <properties/>
         <border type="none"/>
         <children>
-          <component id="c4210" class="javax.swing.JTable" binding="clusterTable">
-            <constraints/>
-            <properties>
-              <fillsViewportHeight value="true"/>
-              <font name="Georgia"/>
-              <preferredScrollableViewportSize width="-1" height="-1"/>
-            </properties>
-          </component>
+          <grid id="5f8dd" binding="clusters" layout-manager="GridBagLayout">
+            <constraints>
+              <tabbedpane title="Untitled"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <grid id="f53fe" binding="centroids" layout-manager="GridBagLayout">
+            <constraints>
+              <tabbedpane title="Untitled"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
+          </grid>
         </children>
-      </scrollpane>
+      </tabbedpane>
     </children>
   </grid>
 </form>

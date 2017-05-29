@@ -96,14 +96,19 @@ public class VistaClustering {
     private void $$$setupUI$$$() {
         CPanel = new JPanel();
         CPanel.setLayout(new BorderLayout(0, 0));
-        CPanel.setPreferredSize(new Dimension(0, 0));
-        scrollable = new JScrollPane();
-        CPanel.add(scrollable, BorderLayout.CENTER);
-        clusterTable = new JTable();
-        clusterTable.setFillsViewportHeight(true);
-        clusterTable.setFont(new Font("Georgia", clusterTable.getFont().getStyle(), clusterTable.getFont().getSize()));
-        clusterTable.setPreferredScrollableViewportSize(new Dimension(-1, -1));
-        scrollable.setViewportView(clusterTable);
+        CPanel.setPreferredSize(new Dimension(200, 200));
+        recalc = new JButton();
+        recalc.setLabel("Seleccionar otra K");
+        recalc.setText("Seleccionar otra K");
+        CPanel.add(recalc, BorderLayout.SOUTH);
+        tabs = new JTabbedPane();
+        CPanel.add(tabs, BorderLayout.CENTER);
+        clusters = new JPanel();
+        clusters.setLayout(new GridBagLayout());
+        tabs.addTab("Untitled", clusters);
+        centroids = new JPanel();
+        centroids.setLayout(new GridBagLayout());
+        tabs.addTab("Untitled", centroids);
     }
 
     /**
