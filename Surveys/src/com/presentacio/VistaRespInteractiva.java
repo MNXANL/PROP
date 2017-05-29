@@ -43,9 +43,6 @@ public class VistaRespInteractiva {
 
     private ArrayList<ArrayList<String>> respuestas;
 
-    private boolean esModificado;
-    private int idxMod;
-
     /**
      * Constructora vista de respuesta interactiva
      *
@@ -77,36 +74,9 @@ public class VistaRespInteractiva {
 
         spinner1.setValue(0);
 
-        esModificado = false;
-        idxMod = -1;
     }
 
-    private void panelVisibility(int idx) {
-        if (idx == 0) {
-            panelRespNum.setVisible(true);
-            panelRespCual.setVisible(false);
-            guardarRespuestaLibreButton.setEnabled(true);
-        } else if (idx == 1) {
-            panelRespNum.setVisible(false);
-            panelRespCual.setVisible(false);
-            guardarRespuestaLibreButton.setEnabled(true);
-        } else if (idx == 2) {
-            panelRespNum.setVisible(false);
-            panelRespCual.setVisible(true);
-            if (modelOpts.size() == 0) guardarRespuestaLibreButton.setEnabled(false);
-            else guardarRespuestaLibreButton.setEnabled(true);
-        } else if (idx == 3) {
-            panelRespNum.setVisible(false);
-            panelRespCual.setVisible(true);
-            if (modelOpts.size() == 0) guardarRespuestaLibreButton.setEnabled(false);
-            else guardarRespuestaLibreButton.setEnabled(true);
-        } else if (idx == 4) {
-            panelRespNum.setVisible(false);
-            panelRespCual.setVisible(true);
-            if (modelOpts.size() == 0) guardarRespuestaLibreButton.setEnabled(false);
-            else guardarRespuestaLibreButton.setEnabled(true);
-        }
-    }
+
 
     /**
      * Método para asignar los listeners de la vista.
@@ -155,8 +125,6 @@ public class VistaRespInteractiva {
         modificarRespuestaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                esModificado = true;
-                idxMod = listaPreguntas.getSelectedIndex();
 
                 listaPreguntas.setEnabled(false);
                 responderPreguntaButton.setEnabled(false);

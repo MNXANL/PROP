@@ -247,7 +247,6 @@ public class VistaPrincipalAdmin {
         frame.setVisible(false);
     }
 
-
     public void llenarLista(String[] lista) {
 
         DefaultListModel<String> model = new DefaultListModel<>();

@@ -1,7 +1,7 @@
 package tests.domini.RespuestasEncuesta;
 
 import com.domini.*;
-import tests.domini.RespuestasEncuesta.RespuestasEncuesta;
+import tests.domini.RespuestasEncuesta.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
