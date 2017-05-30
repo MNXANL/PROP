@@ -96,42 +96,42 @@ n = args.n
 
 for x in range (0,n):
 
-	file = open('Encuesta_User'+str(x), 'w+')
+	file = open('Encuesta_User'+str(x)+'.txt', 'w+')
 	file.write('Título\nEncuesta\n\nUsuario\nUser'+str(x)+'\n\n')
 	file.write('Fecha\n18/05/2017 10:11:12\n\n')
 
 	file.write('Respuesta pregunta\n')
 	if coinToss():
-		file.write('RV\n')
+		file.write('RV\n\n')
 	else:
 		file.write(ansRCO())
 
 	file.write('Respuesta pregunta\n')	
 	if coinToss():
-		file.write('RV\n')
+		file.write('RV\n\n')
 	else:
 		file.write(ansRCNOU())
 	
 	file.write('Respuesta pregunta\n')	
 	if coinToss():
-		file.write('RV\n')
+		file.write('RV\n\n')
 	else:
 		file.write(ansRCNOM())
 
 
 	file.write('Respuesta pregunta\n')
 	if coinToss():
-		file.write('RV\n')
+		file.write('RV\n\n')
 	else:
 		file.write(ansRN())
 
 	file.write('Respuesta pregunta\n')	
 	if coinToss():
-		file.write('RV\n')
+		file.write('RV\n\n')
 	else:
 		file.write(ansRL())				
 
-
+	file.write("\n\nFinal respuestas encuesta")
 
 
 
