@@ -151,7 +151,7 @@ public class RespLibre extends Respuesta{
         //poner las palabras no funcionales en el string de salida
         for(int i = 0; i!= words.length; ++i){
             String w = words[i];
-            if(!funcWords.contains(w)) {
+            if(!funcWords.contains(w.toLowerCase())) {
                 result += w;
                 if(i!= words.length-1)
                     result+=" ";
