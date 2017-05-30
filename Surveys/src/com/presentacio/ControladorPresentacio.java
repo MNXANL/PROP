@@ -5,6 +5,8 @@ import com.domini.*;
 import javax.swing.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Controlador de la capa de presentación
@@ -149,7 +151,8 @@ public class ControladorPresentacio {
     }
 
     public void Clustering(String name, int k) {
-        vc = new VistaClustering(this,ctrlDom.clustering(name,k),name);
+        HashMap<Integer,List<String>> c = ctrlDom.clustering(name,k);
+        vc = new VistaClustering(this,c,ctrlDom.getCentroids(),name);
     }
 
     public void modificarEncuesta(String titulo) {

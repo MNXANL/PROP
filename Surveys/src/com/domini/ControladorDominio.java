@@ -15,6 +15,7 @@ import java.util.concurrent.atomic.DoubleAccumulator;
 public class ControladorDominio {
     private Encuesta e;
     private Usuario u;
+    private Clustering cl;
 
     ControladorDatos contDatos;
 
@@ -54,8 +55,16 @@ public class ControladorDominio {
     }
     public HashMap<Integer,List<String>> clustering(String name,int k){
         Encuesta x = cjt.getEncuesta(name);
-        Clustering C = new Clustering(x,k);
-        return C.run();
+        cl = new Clustering(x,k);
+        return cl.run();
+    }
+
+    /**
+     * HACER SIEMPRE LA FUNCION CLUSTERING ANTES
+     * @return
+     */
+    public ArrayList<RespuestasEncuesta> getCentroids(){
+        return cl.getCentroids();
     }
 
     /**

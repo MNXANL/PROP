@@ -1,12 +1,14 @@
 package com.presentacio;
 
 import com.domini.ControladorDominio;
+import com.domini.RespuestasEncuesta;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.List;
 
@@ -22,7 +24,7 @@ public class VistaClustering {
     private JTable clusterTable;
     private ControladorPresentacio cp;
 
-    public VistaClustering(ControladorPresentacio cp, HashMap<Integer, List<String>> clusts, String name) {
+    public VistaClustering(ControladorPresentacio cp, HashMap<Integer, List<String>> clusts, ArrayList<RespuestasEncuesta> centroids, String name) {
         frame = new JFrame("Encuesta '" + name + "'");
         Initialize(clusts);
         this.cp = cp;
