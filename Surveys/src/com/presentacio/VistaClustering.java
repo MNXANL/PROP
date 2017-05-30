@@ -14,17 +14,16 @@ import java.util.List;
  * Created by Alejandro on 26/05/2017.
  */
 public class VistaClustering {
-    private JFrame frame = new JFrame("Clustering");
+    private JFrame frame;
     private JPanel CPanel;
     private JButton recalc;
     private JTabbedPane tabs;
-    private JPanel clusters;
-    private JPanel centroids;
     private JScrollPane scrollable;
     private JTable clusterTable;
     private ControladorPresentacio cp;
 
     public VistaClustering(ControladorPresentacio cp, HashMap<Integer, List<String>> clusts, String name) {
+        frame = new JFrame("Encuesta '" + name + "'");
         Initialize(clusts);
         this.cp = cp;
         recalc.addActionListener(new ActionListener() {
@@ -63,8 +62,8 @@ public class VistaClustering {
         scrollable = new JScrollPane(clusterTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         //clusterTable.setFillsViewportHeight(true);
         clusterTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-        clusters.add(scrollable);
-        frame.add(CPanel);
+        tabs.addTab("Clusters", scrollable);
+        // frame.add(CPanel);
         CPanel.setPreferredSize(clusterTable.getSize());
         CPanel.setSize(clusterTable.getSize());
 
@@ -72,7 +71,7 @@ public class VistaClustering {
         frame.setContentPane(CPanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
-        frame.setSize(500, 500);
+        frame.setSize(600, 600);
         frame.setVisible(true);
         frame.setVisible(true);
 
@@ -103,12 +102,6 @@ public class VistaClustering {
         CPanel.add(recalc, BorderLayout.SOUTH);
         tabs = new JTabbedPane();
         CPanel.add(tabs, BorderLayout.CENTER);
-        clusters = new JPanel();
-        clusters.setLayout(new GridBagLayout());
-        tabs.addTab("Untitled", clusters);
-        centroids = new JPanel();
-        centroids.setLayout(new GridBagLayout());
-        tabs.addTab("Untitled", centroids);
     }
 
     /**

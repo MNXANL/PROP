@@ -20,24 +20,7 @@
         <constraints border-constraint="Center"/>
         <properties/>
         <border type="none"/>
-        <children>
-          <grid id="5f8dd" binding="clusters" layout-manager="GridBagLayout">
-            <constraints>
-              <tabbedpane title="Untitled"/>
-            </constraints>
-            <properties/>
-            <border type="none"/>
-            <children/>
-          </grid>
-          <grid id="f53fe" binding="centroids" layout-manager="GridBagLayout">
-            <constraints>
-              <tabbedpane title="Untitled"/>
-            </constraints>
-            <properties/>
-            <border type="none"/>
-            <children/>
-          </grid>
-        </children>
+        <children/>
       </tabbedpane>
     </children>
   </grid>
