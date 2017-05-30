@@ -75,15 +75,15 @@ public class VistaCrearEncuesta {
         list1.setModel(modelEnc);
         listOption.setModel(modelPregs);
 
-        minSpinner.setValue(0);
+        /*minSpinner.setValue(0);
         maxSpinner.setValue(10);
-        spinner1.setValue(2);
-        SpinnerModel sm = new SpinnerNumberModel(2, 2, Integer.MAX_VALUE, 1);
+        spinner1.setValue(2);*/
+        SpinnerModel sm = new SpinnerNumberModel(2, 2, 2000000, 1);
         spinner1.setModel(sm);
-        sm = new SpinnerNumberModel(0, Double.MIN_VALUE, Double.MAX_VALUE, 0.01);
-        minSpinner.setModel(sm);
-        sm = new SpinnerNumberModel(10, Double.MIN_VALUE, Double.MAX_VALUE, 0.01);
-        maxSpinner.setModel(sm);
+        SpinnerModel sm2 = new SpinnerNumberModel(0.0, -10000000, +10000000, 0.01);
+        minSpinner.setModel(sm2);
+        SpinnerModel sm3 = new SpinnerNumberModel(10.0, -10000000, +10000000, 0.01);
+        maxSpinner.setModel(sm3);
 
         minusButton.setEnabled(false);
 
@@ -269,8 +269,7 @@ public class VistaCrearEncuesta {
                         if (opt < 2 || opt > modelPregs.size()) {
                             aviso("Numero máximo de respuestas no válido. Introduce un número entre 2 y " + modelPregs.size());
                             error = true;
-                        }
-                        else {
+                        } else {
                             preg.add("PCNOM");
                             preg.add(NomPreg);
                             preg.add(spinner1.getValue().toString());
@@ -719,6 +718,8 @@ public class VistaCrearEncuesta {
         buttonPanel.add(spacer23, gbc);
         PCNOMpanel = new JPanel();
         PCNOMpanel.setLayout(new GridBagLayout());
+        PCNOMpanel.setMinimumSize(new Dimension(183, 40));
+        PCNOMpanel.setOpaque(false);
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 8;
@@ -726,6 +727,7 @@ public class VistaCrearEncuesta {
         PregCual.add(PCNOMpanel, gbc);
         spinner1 = new JSpinner();
         spinner1.setDebugGraphicsOptions(0);
+        spinner1.setMaximumSize(new Dimension(32767, 30));
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
         gbc.gridy = 0;
