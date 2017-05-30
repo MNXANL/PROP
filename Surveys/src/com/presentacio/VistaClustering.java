@@ -1,16 +1,21 @@
 package com.presentacio;
 
-import com.domini.ControladorDominio;
-import com.domini.RespuestasEncuesta;
+import com.domini.*;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumnModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.lang.reflect.Array;
 import java.util.*;
 import java.util.List;
+import java.util.EventObject;
+import java.awt.AWTEvent;
+import java.awt.event.ComponentEvent;
+import java.awt.event.InputEvent;
+import java.awt.event.MouseEvent;
 
 /**
  * Created by Alejandro on 26/05/2017.
@@ -20,13 +25,13 @@ public class VistaClustering {
     private JPanel CPanel;
     private JButton recalc;
     private JTabbedPane tabs;
-    private JScrollPane scrollable;
-    private JTable clusterTable;
+    private JScrollPane scrollable1, scrollable2;
+    private JTable clusterTable, centroidTable;
     private ControladorPresentacio cp;
 
     public VistaClustering(ControladorPresentacio cp, HashMap<Integer, List<String>> clusts, ArrayList<RespuestasEncuesta> centroids, String name) {
         frame = new JFrame("Encuesta '" + name + "'");
-        Initialize(clusts);
+        Initialize(clusts, centroids);
         this.cp = cp;
         recalc.addActionListener(new ActionListener() {
             @Override
@@ -37,7 +42,32 @@ public class VistaClustering {
         });
     }
 
-    public void Initialize(HashMap<Integer, List<String>> clusts) {
+    public void Initialize(HashMap<Integer, List<String>> clusts, ArrayList<RespuestasEncuesta> centroids) {
+        ini_clTable(clusts);
+        ini_ceTable(centroids);
+        scrollable1 = new JScrollPane(clusterTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scrollable2 = new JScrollPane(centroidTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        //clusterTable.setFillsViewportHeight(true);
+        clusterTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        centroidTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        tabs.addTab("Clusters", scrollable1);
+        tabs.addTab("Centroides", scrollable2);
+        // frame.add(CPanel);
+        CPanel.setPreferredSize(clusterTable.getSize());
+        CPanel.setSize(clusterTable.getSize());
+
+
+        frame.setContentPane(CPanel);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.pack();
+        frame.setSize(600, 600);
+        frame.setVisible(true);
+        frame.setVisible(true);
+
+
+    }
+
+    public void ini_clTable(HashMap<Integer, List<String>> clusts) {
         int maxAssig = 0;
         for (Map.Entry<Integer, List<String>> entry : clusts.entrySet()) {
             if (entry.getValue().size() > maxAssig)
@@ -57,27 +87,75 @@ public class VistaClustering {
             }
         }
         DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
-        clusterTable = new JTable(tableModel);
+        clusterTable = new JTable(tableModel) {
+            public String getToolTipText(MouseEvent e) {
+                int row = rowAtPoint(e.getPoint());
+                int column = columnAtPoint(e.getPoint());
+
+                Object value = getValueAt(row, column);
+                return value == null ? null : value.toString();
+            }
+        };
         for (Object[] os : data) {
             tableModel.addRow(os);
         }
-        scrollable = new JScrollPane(clusterTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        //clusterTable.setFillsViewportHeight(true);
-        clusterTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-        tabs.addTab("Clusters", scrollable);
-        // frame.add(CPanel);
-        CPanel.setPreferredSize(clusterTable.getSize());
-        CPanel.setSize(clusterTable.getSize());
+        TableColumnModel tcm = clusterTable.getColumnModel();
+        for (int i = 0; i != clusts.size(); ++i) {
+            tcm.getColumn(i).setPreferredWidth(100);
+        }
+    }
 
+    public void ini_ceTable(ArrayList<RespuestasEncuesta> centroids) {
+        int nResps = centroids.get(0).getResps().size();
+        String[] columnNames = new String[centroids.size()];
+        Object[][] data = new Object[nResps][centroids.size()];
+        for (Integer i = 0; i != centroids.size(); ++i) {
+            columnNames[i] = "Centroid " + (i + 1);
+        }
 
-        frame.setContentPane(CPanel);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.pack();
-        frame.setSize(600, 600);
-        frame.setVisible(true);
-        frame.setVisible(true);
+        for (int i = 0; i != centroids.size(); ++i) {
+            ArrayList<Respuesta> rs = centroids.get(i).getResps();
+            for (int j = 0; j != rs.size(); ++j) {
+                Respuesta r = rs.get(j);
+                data[j][i] = rs.get(j);
+                if (r instanceof RespNumerica) {
+                    data[j][i] = ((RespNumerica) r).get();
+                }
+                if (r instanceof RespCualitativaNoOrdenadaUnica) {
+                    data[j][i] = ((RespCualitativaNoOrdenadaUnica) r).getText();
+                }
+                if (r instanceof RespCualitativaOrdenada) {
+                    data[j][i] = ((RespCualitativaOrdenada) r).getText();
+                }
+                if (r instanceof RespCualitativaNoOrdenadaMultiple) {
+                    data[j][i] = ((RespCualitativaNoOrdenadaMultiple) r).getMap().values();
+                }
+                if (r instanceof RespLibre) {
+                    data[j][i] = ((RespLibre) r).get();
+                }
+                if (r instanceof RespVacia) {
+                    data[j][i] = "No contestada";
+                }
 
+            }
+        }
+        DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
+        centroidTable = new JTable(tableModel) {
+            public String getToolTipText(MouseEvent e) {
+                int row = rowAtPoint(e.getPoint());
+                int column = columnAtPoint(e.getPoint());
 
+                Object value = getValueAt(row, column);
+                return value == null ? null : value.toString();
+            }
+        };
+        for (Object[] os : data) {
+            tableModel.addRow(os);
+        }
+        TableColumnModel tcm = centroidTable.getColumnModel();
+        for (int i = 0; i != centroids.size(); ++i) {
+            tcm.getColumn(i).setPreferredWidth(100);
+        }
     }
 
     {

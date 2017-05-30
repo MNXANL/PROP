@@ -4,11 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/src/com/domini/Clustering.java" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6261926-014f-4e17-847e-29161c7babb7" name="Default" comment="">
+    <list default="true" id="a6261926-014f-4e17-847e-29161c7babb7" name="Default" comment="vista centroides">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/Clustering.java" afterPath="$PROJECT_DIR$/src/com/domini/Clustering.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/ControladorDominio.java" afterPath="$PROJECT_DIR$/src/com/domini/ControladorDominio.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java" afterPath="$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,8 +25,8 @@
       <file leaf-file-name="Clustering.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="362" column="10" lean-forward="false" selection-start-line="362" selection-start-column="10" selection-end-line="362" selection-end-column="10" />
+            <state relative-caret-position="168">
+              <caret line="86" column="24" lean-forward="false" selection-start-line="86" selection-start-column="24" selection-end-line="103" selection-end-column="25" />
               <folding>
                 <element signature="e#16205#16206#0" expanded="true" />
                 <element signature="e#16237#16238#0" expanded="true" />
@@ -43,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/domini/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+              <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
               <folding>
                 <marker date="1494934134978" expanded="true" signature="9637:9643" ph="{...}" />
               </folding>
@@ -51,21 +48,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VistaClustering.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ControladorDominio.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/domini/ControladorDominio.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="55" column="11" lean-forward="true" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="40" />
+              <caret line="55" column="11" lean-forward="false" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="40" />
               <folding>
                 <element signature="e#1663#1664#0" expanded="true" />
                 <element signature="e#1703#1704#0" expanded="true" />
+                <marker date="1496145800324" expanded="true" signature="9617:9624" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="9676:18209" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="18258:18343" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="18437:19982" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="20034:20414" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="20546:21319" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="21392:21478" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="21534:21629" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="21688:21825" ph="{...}" />
+                <marker date="1496145800324" expanded="false" signature="21865:21876" ph=" { " />
+                <marker date="1496145800324" expanded="false" signature="21918:21924" ph=" }" />
+                <marker date="1496145800324" expanded="true" signature="22077:22254" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -74,11 +76,65 @@
       <file leaf-file-name="VistaClustering.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+            <state relative-caret-position="6">
+              <caret line="122" column="17" lean-forward="true" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RespLibre.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/domini/RespLibre.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="94" column="40" lean-forward="false" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="40" />
+              <folding>
+                <element signature="e#578#579#0" expanded="true" />
+                <element signature="e#621#622#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Encuesta_Aleix.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_Aleix.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-127">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RespCualitativaNoOrdenadaUnica.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RespCualitativaOrdenada.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RespCualitativaNoOrdenadaMultiple.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="933">
+              <caret line="73" column="13" lean-forward="false" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -86,10 +142,29 @@
       <file leaf-file-name="ControladorPresentacio.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="154" column="63" lean-forward="false" selection-start-line="154" selection-start-column="63" selection-end-line="154" selection-end-column="63" />
+            <state relative-caret-position="949">
+              <caret line="155" column="63" lean-forward="false" selection-start-line="155" selection-start-column="63" selection-end-line="155" selection-end-column="63" />
               <folding>
-                <marker date="1496141752716" expanded="true" signature="7851:7859" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="3501:3683" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="3717:4578" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="4617:4736" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="4785:4932" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="4983:5095" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="5192:5297" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="5410:5525" ph="{...}" />
+                <marker date="1496145800324" expanded="false" signature="5584:5595" ph=" { " />
+                <marker date="1496145800324" expanded="false" signature="5631:5637" ph=" }" />
+                <marker date="1496145800324" expanded="true" signature="5685:5874" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="5922:6848" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="6975:7081" ph="{...}" />
+                <marker date="1496145800324" expanded="false" signature="7149:7160" ph=" { " />
+                <marker date="1496145800324" expanded="false" signature="7204:7210" ph=" }" />
+                <marker date="1496145800324" expanded="false" signature="7263:7274" ph=" { " />
+                <marker date="1496145800324" expanded="false" signature="7311:7317" ph=" }" />
+                <marker date="1496145800324" expanded="true" signature="7369:7482" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="7627:7767" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="7851:7935" ph="{...}" />
+                <marker date="1496145800324" expanded="true" signature="7927:7935" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -174,7 +249,6 @@
         <option value="$PROJECT_DIR$/src/com/domini/PregNumerica.java" />
         <option value="$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaMultiple.java" />
         <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/RespLibre.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/RespLibre/RespLibre.java" />
         <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java" />
         <option value="$PROJECT_DIR$/src/com/domini/RespNumerica.java" />
@@ -192,10 +266,11 @@
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaKClustering.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaClustering.form" />
-        <option value="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" />
         <option value="$PROJECT_DIR$/src/com/domini/Clustering.java" />
         <option value="$PROJECT_DIR$/src/com/domini/ControladorDominio.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/RespLibre.java" />
+        <option value="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" />
       </list>
     </option>
   </component>
@@ -418,6 +493,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dades" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DirectorioRespuestas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -461,15 +562,14 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/uiDesigner.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/ControladorDatos.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Docs/CapaPresentacion.uxf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Docs/DiagramaGeneral.uxf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/domini/ControladorDominio.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.form</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaPrincipalUsuario.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/tests/domini/RespuestasEncuesta/DriverRespuestasEncuesta.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -477,12 +577,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/vcs.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Docs/CapaDatos.uxf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Docs/CapaPresentacion.uxf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Docs/DiagramaDominio.dia</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Docs/DiagramaGeneral.uxf</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -1291,7 +1385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496140180292</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="vista centroides">
+      <created>1496141766969</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1496141766969</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1328,7 +1429,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1337,7 +1437,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32237872" sideWeight="0.5043924" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3114241" sideWeight="0.4956076" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23787168" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23787168" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18960468" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1385,7 +1485,8 @@
     <MESSAGE value="clustering bien" />
     <MESSAGE value="clustering bien probablemente" />
     <MESSAGE value="clustering recuperado chavales" />
-    <option name="LAST_COMMIT_MESSAGE" value="clustering recuperado chavales" />
+    <MESSAGE value="vista centroides" />
+    <option name="LAST_COMMIT_MESSAGE" value="vista centroides" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1408,27 +1509,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/tests/domini/CjtEncuestas/CjtEncuestasTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/CjtEncuestas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="114" column="16" lean-forward="true" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/domini/Encuesta/EncuestaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/Administrador.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -1440,13 +1520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/Respuesta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1562,20 +1635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-207">
-          <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="73" column="13" lean-forward="false" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/domini/Clustering/Clustering.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1604,24 +1663,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/RespLibre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="141" column="13" lean-forward="true" selection-start-line="141" selection-start-column="13" selection-end-line="141" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/PregCualitativaOrdenada.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -1681,15 +1726,15 @@
         <state relative-caret-position="1155">
           <caret line="93" column="47" lean-forward="false" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
           <folding>
-            <marker date="1496140165596" expanded="true" signature="9180:9278" ph="{...}" />
-            <marker date="1496140165596" expanded="true" signature="11112:11263" ph="{...}" />
-            <marker date="1496140165596" expanded="true" signature="11114:11232" ph="//..." />
-            <marker date="1496140165596" expanded="true" signature="11269:11449" ph="/**...*/" />
-            <marker date="1496140165596" expanded="true" signature="11483:24541" ph="{...}" />
-            <marker date="1496140165596" expanded="true" signature="20905:24541" ph="{...}" />
-            <marker date="1496140165596" expanded="true" signature="24547:24583" ph="/**...*/" />
-            <marker date="1496140165596" expanded="false" signature="24630:24641" ph=" { " />
-            <marker date="1496140165596" expanded="false" signature="24655:24661" ph=" }" />
+            <marker date="1496145800328" expanded="true" signature="9626:9724" ph="{...}" />
+            <marker date="1496145800328" expanded="true" signature="11558:11709" ph="{...}" />
+            <marker date="1496145800328" expanded="true" signature="11560:11678" ph="//..." />
+            <marker date="1496145800328" expanded="true" signature="11715:11895" ph="/**...*/" />
+            <marker date="1496145800328" expanded="true" signature="11929:24987" ph="{...}" />
+            <marker date="1496145800328" expanded="true" signature="21351:24987" ph="{...}" />
+            <marker date="1496145800328" expanded="true" signature="24993:25029" ph="/**...*/" />
+            <marker date="1496145800328" expanded="false" signature="25076:25087" ph=" { " />
+            <marker date="1496145800328" expanded="false" signature="25101:25107" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1720,8 +1765,8 @@
         <state relative-caret-position="120">
           <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="62" />
           <folding>
-            <marker date="1496140165596" expanded="true" signature="33721:36844" ph="{...}" />
-            <marker date="1496140165596" expanded="true" signature="36619:36844" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="34565:37688" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="37463:37688" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1734,17 +1779,69 @@
     <entry file="file://$PROJECT_DIR$/src/com/domini/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+          <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
           <folding>
             <marker date="1494934134978" expanded="true" signature="9637:9643" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/ControladorDominio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="55" column="11" lean-forward="false" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="40" />
+          <folding>
+            <element signature="e#1663#1664#0" expanded="true" />
+            <element signature="e#1703#1704#0" expanded="true" />
+            <marker date="1496145800324" expanded="true" signature="9617:9624" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="9676:18209" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="18258:18343" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="18437:19982" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="20034:20414" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="20546:21319" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="21392:21478" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="21534:21629" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="21688:21825" ph="{...}" />
+            <marker date="1496145800324" expanded="false" signature="21865:21876" ph=" { " />
+            <marker date="1496145800324" expanded="false" signature="21918:21924" ph=" }" />
+            <marker date="1496145800324" expanded="true" signature="22077:22254" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="949">
+          <caret line="155" column="63" lean-forward="false" selection-start-line="155" selection-start-column="63" selection-end-line="155" selection-end-column="63" />
+          <folding>
+            <marker date="1496145800324" expanded="true" signature="3501:3683" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="3717:4578" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="4617:4736" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="4785:4932" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="4983:5095" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="5192:5297" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="5410:5525" ph="{...}" />
+            <marker date="1496145800324" expanded="false" signature="5584:5595" ph=" { " />
+            <marker date="1496145800324" expanded="false" signature="5631:5637" ph=" }" />
+            <marker date="1496145800324" expanded="true" signature="5685:5874" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="5922:6848" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="6975:7081" ph="{...}" />
+            <marker date="1496145800324" expanded="false" signature="7149:7160" ph=" { " />
+            <marker date="1496145800324" expanded="false" signature="7204:7210" ph=" }" />
+            <marker date="1496145800324" expanded="false" signature="7263:7274" ph=" { " />
+            <marker date="1496145800324" expanded="false" signature="7311:7317" ph=" }" />
+            <marker date="1496145800324" expanded="true" signature="7369:7482" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="7627:7767" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="7851:7935" ph="{...}" />
+            <marker date="1496145800324" expanded="true" signature="7927:7935" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="362" column="10" lean-forward="false" selection-start-line="362" selection-start-column="10" selection-end-line="362" selection-end-column="10" />
+        <state relative-caret-position="168">
+          <caret line="86" column="24" lean-forward="false" selection-start-line="86" selection-start-column="24" selection-end-line="103" selection-end-column="25" />
           <folding>
             <element signature="e#16205#16206#0" expanded="true" />
             <element signature="e#16237#16238#0" expanded="true" />
@@ -1753,32 +1850,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/ControladorDominio.java">
+    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_pepe.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="55" column="11" lean-forward="true" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="40" />
-          <folding>
-            <element signature="e#1663#1664#0" expanded="true" />
-            <element signature="e#1703#1704#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java">
+    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_Juan.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="154" column="63" lean-forward="false" selection-start-line="154" selection-start-column="63" selection-end-line="154" selection-end-column="63" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/Respuesta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="933">
+          <caret line="73" column="13" lean-forward="false" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_Aleix.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-127">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespLibre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="94" column="40" lean-forward="false" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="40" />
           <folding>
-            <marker date="1496141752716" expanded="true" signature="7851:7859" ph="{...}" />
+            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#621#622#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+        <state relative-caret-position="6">
+          <caret line="122" column="17" lean-forward="true" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
           </folding>
         </state>
