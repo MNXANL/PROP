@@ -376,7 +376,10 @@
               <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
               <gridbag weightx="0.0" weighty="0.0"/>
             </constraints>
-            <properties/>
+            <properties>
+              <minimumSize width="183" height="40"/>
+              <opaque value="false"/>
+            </properties>
             <border type="none"/>
             <children>
               <component id="c8f7e" class="javax.swing.JSpinner" binding="spinner1" default-binding="true">
@@ -386,6 +389,7 @@
                 </constraints>
                 <properties>
                   <debugGraphicsOptions value="0"/>
+                  <maximumSize width="32767" height="30"/>
                 </properties>
               </component>
               <hspacer id="11ab5">

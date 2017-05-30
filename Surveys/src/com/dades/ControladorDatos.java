@@ -9,9 +9,11 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.TreeMap;
 
+
 /**
  * Controlador de la capa de datos
  */
+
 public class ControladorDatos {
     String pathEnc = "src/com/dades/DirectorioEncuestas";
     String pathResp = "src/com/dades/DirectorioRespuestas";
@@ -113,7 +115,7 @@ public class ControladorDatos {
         listOfFiles = folder.listFiles();
 
         for (int i = 0; i < listOfFiles.length; i++) {
-                String path = listOfFiles[i].getAbsolutePath();
+            String path = listOfFiles[i].getAbsolutePath();
 
 
             RespuestasEncuesta re = RespuestasEncuesta.importar(listOfFiles[i].getAbsolutePath());
@@ -139,39 +141,11 @@ public class ControladorDatos {
     public void guardarRespuestasEncuesta (RespuestasEncuesta re) {
         re.exportar(pathResp + "/" + re.getNombreFichero()  +".txt");
     }
+
     public void actualizarRespuestasEncuesta (RespuestasEncuesta re) {
         borrarRespuestasEncuesta(re.toString()); //maybe not like this
         re.exportar(pathResp + "/" + re.getNombreFichero()  +".txt");
     }
-
-    /* Not 100% working... yet
-
-    public void importarEncAndRespDeUnPath (String absolPath) {
-
-        TreeMap<String,Encuesta> enc = new TreeMap<>();
-
-        File folder = new File(absolPath);
-        File[] listOfFiles = folder.listFiles();
-
-        for (int i = 0; i < listOfFiles.length; i++) {
-            Encuesta e = null;
-            try {
-                e = Encuesta.importar(listOfFiles[i].getAbsolutePath());
-            } catch (ExcFormatoIncorrecto excFormatoIncorrecto) {
-                excFormatoIncorrecto.printStackTrace();
-            }
-            enc.put(e.getTitulo(), e);
-        }
-
-        //cargamos respuestas encuestas
-        folder = new File(pathResp);
-        listOfFiles = folder.listFiles();
-
-        for (int i = 0; i < listOfFiles.length; i++) {
-            RespuestasEncuesta re = RespuestasEncuesta.importar(listOfFiles[i].getAbsolutePath());
-            enc.get(re.getEncuesta().getTitulo()).responder(re);
-        }
-    }*/
 
     public void borrarRespuestasEncuesta (String titulo) {
         File f = new File (pathResp + "/" + titulo + ".txt");

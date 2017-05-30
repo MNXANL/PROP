@@ -221,12 +221,6 @@ public class ControladorPresentacio {
         else return false;
     }
 
-    public void respuestaEncuesta() {
-        //ctrlDom.responderEncuesta(...);
-        ce.close();
-    }
-
-
     public void actualizarEncuestaArgs(String encAnt, String enc, ArrayList<ArrayList<String>> preguntasGuardadas) throws ExcEncuestaExistente {
         ctrlDom.actualizarEncuestaMatrix(encAnt, enc, preguntasGuardadas);
         vp.llenarLista(ctrlDom.listaEncuestas(criterio));

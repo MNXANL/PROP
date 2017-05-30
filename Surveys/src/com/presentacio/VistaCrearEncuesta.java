@@ -78,11 +78,11 @@ public class VistaCrearEncuesta {
         minSpinner.setValue(0);
         maxSpinner.setValue(10);
         spinner1.setValue(2);
-        SpinnerModel sm = new SpinnerNumberModel(0, Integer.MIN_VALUE, Integer.MAX_VALUE, 0.01);
+        SpinnerModel sm = new SpinnerNumberModel(2, 2, Integer.MAX_VALUE, 1);
         spinner1.setModel(sm);
+        sm = new SpinnerNumberModel(0, Double.MIN_VALUE, Double.MAX_VALUE, 0.01);
         minSpinner.setModel(sm);
-
-        sm = new SpinnerNumberModel(10, Integer.MIN_VALUE, Integer.MAX_VALUE, 0.01);
+        sm = new SpinnerNumberModel(10, Double.MIN_VALUE, Double.MAX_VALUE, 0.01);
         maxSpinner.setModel(sm);
 
         minusButton.setEnabled(false);
