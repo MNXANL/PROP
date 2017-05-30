@@ -173,6 +173,8 @@ public class VistaCrearEncuesta {
             public void actionPerformed(ActionEvent e) {
                 panelPreg.setVisible(true);
                 esModificado = false;
+                modificarPreguntaButton.setEnabled(false);
+                borrarPreguntaButton.setEnabled(false);
             }
         });
 
@@ -181,6 +183,9 @@ public class VistaCrearEncuesta {
             @Override
             public void actionPerformed(ActionEvent e) {
                 idxMod = list1.getSelectedIndex();
+                nuevaPreguntaButton.setEnabled(false);
+                modificarPreguntaButton.setEnabled(false);
+                borrarPreguntaButton.setEnabled(false);
                 ArrayList<String> PregMod = PreguntasGuardadas.get(idxMod);
                 if (PregMod.get(0).equals("PN")) {
                     panelVisibility(0);
@@ -248,7 +253,10 @@ public class VistaCrearEncuesta {
                             preg.add(NomPreg);
                             preg.add(minSpinner.getValue().toString()); //Min
                             preg.add(maxSpinner.getValue().toString()); //Max
-                        } else System.out.println("ERROR: min < max");
+                        } else {
+                            aviso("Error: el valor mínimo de la pregunta es mayor que el máximo");
+                            error = true;
+                        }
                     } else if (comboBox1.getSelectedItem().toString().equals("Libre")) {
                         preg.add("PRL");
                         preg.add(NomPreg);
@@ -266,7 +274,10 @@ public class VistaCrearEncuesta {
                         }
                     } else if (comboBox1.getSelectedItem().toString().equals("Cualitativa no ordenada multiple")) {
                         int opt = Integer.parseInt(spinner1.getValue().toString());
-                        if (opt < 2 || opt > modelPregs.size()) {
+                        if (modelPregs.size() == 1) {
+                            aviso("Numero de respuestas no válido. Introduce al menos dos respuestas.");
+                            error = true;
+                        } else if (opt < 2 || opt > modelPregs.size()) {
                             aviso("Numero máximo de respuestas no válido. Introduce un número entre 2 y " + modelPregs.size());
                             error = true;
                         } else {
@@ -293,6 +304,10 @@ public class VistaCrearEncuesta {
                             modelEnc.addElement(NomPreg);
                             PreguntasGuardadas.add(preg);
                         }
+                        panelPreg.setVisible(false);
+                        PregNum.setVisible(false);
+                        PregCual.setVisible(false);
+                        nuevaPreguntaButton.setEnabled(true);
                     }
                 }
             }
@@ -334,8 +349,8 @@ public class VistaCrearEncuesta {
                 if (!optField.getText().equals("")) {
                     modelPregs.addElement(optField.getText());
                     optField.setText("");
+                    if (!guardarPreguntaButton.isEnabled()) guardarPreguntaButton.setEnabled(true);
                 }
-                if (!guardarPreguntaButton.isEnabled()) guardarPreguntaButton.setEnabled(true);
             }
         });
         minusButton.addActionListener(new ActionListener() {
