@@ -23,14 +23,13 @@ public class VistaPrincipalAdmin {
     private ControladorPresentacio ctrlPres;
 
     private JFrame frame = new JFrame("Vista Principal");
-    private JLabel userLabel;
     private JPanel panel1;
+    private JLabel userLabel;
     private JList list1;
-    private JComboBox comboBox1;
-    private JButton buscarButton;
     private JTextField palClave;
     private JTextField fechaIni;
     private JTextField fechaFin;
+    private JButton buscarButton;
     private JButton nuevaEncuestaButton;
     private JButton borrarEncuestaButton;
     private JButton modificarEncuestaButton;
@@ -38,6 +37,7 @@ public class VistaPrincipalAdmin {
     private JButton cerrarSesiónButton;
     private JButton exportarButton;
     private JButton importarRespuestasButton;
+    private JComboBox comboBox1;
 
     /**
      * Constructora vista principal del programa

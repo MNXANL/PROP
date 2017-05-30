@@ -20,20 +20,20 @@ public class VistaPrincipalUsuario {
     private ControladorPresentacio ctrlPres;
 
     private JFrame frame = new JFrame("Vista Principal");
-    private JLabel userLabel;
     private JPanel panel1;
+    private JLabel userLabel;
     private JList list1;
-    private JComboBox comboBox1;
-    private JButton buscarButton;
+    private JList list2;
     private JTextField palClave;
     private JTextField fechaIni;
     private JTextField fechaFin;
+    private JButton buscarButton;
     private JButton cerrarSesiónButton;
     private JButton responderEncuestaButton;
-    private JList list2;
     private JButton exportarRespuestaButton;
-    private JTabbedPane tabs;
     private JButton borrarRespuestaButton;
+    private JComboBox comboBox1;
+    private JTabbedPane tabs;
 
     /**
      * Constructora vista principal del programa

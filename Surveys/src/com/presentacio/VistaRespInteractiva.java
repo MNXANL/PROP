@@ -17,29 +17,29 @@ public class VistaRespInteractiva {
 
     private JPanel panelList;
     private JLabel tituloEnc;
-    private JList listaPreguntas;
-    private JButton responderPreguntaButton;
-    private JButton borrarRespuestaButton;
-    private JButton modificarRespuestaButton;
     private JPanel panelBotones;
     private JPanel panel1;
     private JPanel panelRespLibre;
     private JPanel panelRespNum;
     private JPanel panelRespCual;
+    private JList listaPreguntas;
     private JList listaOpciones;
-    private DefaultListModel<String> modelOpts;
-    private DefaultListModel<String> modelEnc;
-    private JButton guardarRespuestaLibreButton;
-    private JSpinner spinner1;
-    private JButton guardarRespuestasButton;
-    private JTextArea textArea1;
-    private JButton guardarRespuestaNumericaButton;
-    private JButton guardarRespuestaCualitativaButton;
-    private JLabel minMax;
-    private JLabel maxOpts;
+    private JButton responderPreguntaButton;
+    private JButton borrarRespuestaButton;
+    private JButton modificarRespuestaButton;
     private JButton NSNCButtonRL;
     private JButton NSNCButtonRN;
     private JButton NSNCButtonRC;
+    private JButton guardarRespuestaNumericaButton;
+    private JButton guardarRespuestaCualitativaButton;
+    private JButton guardarRespuestaLibreButton;
+    private JButton guardarRespuestasButton;
+    private DefaultListModel<String> modelOpts;
+    private DefaultListModel<String> modelEnc;
+    private JLabel minMax;
+    private JLabel maxOpts;
+    private JTextArea textArea1;
+    private JSpinner spinner1;
 
     private ArrayList<ArrayList<String>> respuestas;
 

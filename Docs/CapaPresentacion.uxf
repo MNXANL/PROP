@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>432</x>
-      <y>108</y>
+      <x>312</x>
+      <y>150</y>
       <w>450</w>
       <h>432</h>
     </coordinates>
@@ -54,14 +54,17 @@ vc: VistaClustering
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>948</x>
-      <y>66</y>
+      <x>504</x>
+      <y>0</y>
       <w>222</w>
-      <h>78</h>
+      <h>108</h>
     </coordinates>
     <panel_attributes>*ImportarEncuesta*
 --
 - ctrlPres: ControladorPresentacio
+- frame: JFrame
+- panel1: JPanel
+- fileChooser: JFileChooser
 --
 + ImportarEncuesta(ctrlPres: ControladorPresentacio)
 + asignarListeners()
@@ -74,8 +77,8 @@ vc: VistaClustering
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>366</x>
-      <y>108</y>
+      <x>246</x>
+      <y>150</y>
       <w>78</w>
       <h>24</h>
     </coordinates>
@@ -87,8 +90,8 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>876</x>
-      <y>258</y>
+      <x>756</x>
+      <y>216</y>
       <w>84</w>
       <h>30</h>
     </coordinates>
@@ -101,8 +104,8 @@ m2=0..1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>876</x>
-      <y>162</y>
+      <x>756</x>
+      <y>150</y>
       <w>84</w>
       <h>30</h>
     </coordinates>
@@ -115,28 +118,35 @@ m2=0..1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>876</x>
-      <y>108</y>
-      <w>84</w>
-      <h>30</h>
+      <x>534</x>
+      <y>102</y>
+      <w>30</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=0..1
 </panel_attributes>
-    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>948</x>
-      <y>156</y>
-      <w>174</w>
-      <h>78</h>
+      <x>828</x>
+      <y>18</y>
+      <w>210</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>*LogIn*
 --
 - ctrlPres: ControladorPresentacio
+- frame: JFrame
+- panel1: JPanel
+- textField1: JTextField
+- passwordField1: JPasswordField
+- logInButton: JButton
+- error: JLabel
+- registrarseButton: JButton
 --
 + LogIn(ctrlPres: ControladorPresentacio)
 + asignarListeners()
@@ -149,14 +159,20 @@ m2=0..1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>948</x>
-      <y>246</y>
+      <x>828</x>
+      <y>186</y>
       <w>246</w>
-      <h>66</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>*VistaClustering*
 --
 - ctrlPres: ControladorPresentacio
+- frame: JFrame
+- CPanel: JPanel
+- recalc: JButton
+- clusterTable: JTable
+- recalc: JTabbedPane
+- scrollable: JScrollPane
 --
 + VistaClustering(cp: ControladorPresentacio, 
     clusts: HashMap&lt;Integer, List&lt;String&gt;&gt;, name: String)
@@ -166,15 +182,14 @@ m2=0..1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>144</x>
-      <y>0</y>
+      <x>24</x>
+      <y>42</y>
       <w>228</w>
       <h>150</h>
     </coordinates>
     <panel_attributes>*RegistroUsuario*
 --
 - ctrlPres: ControladorPresentacio
-
 - frame: JFrame
 - panel1: JPanel
 - nombreTextField: JTextField
@@ -193,14 +208,18 @@ m2=0..1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>948</x>
-      <y>324</y>
-      <w>216</w>
-      <h>72</h>
+      <x>828</x>
+      <y>312</y>
+      <w>246</w>
+      <h>114</h>
     </coordinates>
     <panel_attributes>*VistaKClustering*
 --
 - ctrlPres: ControladorPresentacio
+- frame: JFrame
+- panel1: JPanel
+- clusteringButton: JButton
+- spinner1: JSpinner
 --
 + VistaKClustering(ctrlPres: ControladorPresentacio, 
     enc: String, maxClusters: int)
@@ -212,8 +231,8 @@ m2=0..1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>876</x>
-      <y>324</y>
+      <x>756</x>
+      <y>312</y>
       <w>84</w>
       <h>30</h>
     </coordinates>
@@ -226,8 +245,8 @@ m2=0..1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>120</x>
-      <y>186</y>
+      <x>0</x>
+      <y>228</y>
       <w>252</w>
       <h>222</h>
     </coordinates>
@@ -248,8 +267,8 @@ m2=0..1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>366</x>
-      <y>222</y>
+      <x>246</x>
+      <y>264</y>
       <w>78</w>
       <h>24</h>
     </coordinates>
@@ -261,14 +280,34 @@ m2=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>138</x>
-      <y>426</y>
+      <x>18</x>
+      <y>468</y>
       <w>234</w>
       <h>270</h>
     </coordinates>
     <panel_attributes>*VistaPrincipalUsuario*
 --
 - ctrlPres: ControladorPresentacio
+- frame: JFrame
+- panel1: JPanel
+- list1: JList
+- list2: JList
+- buscarButton: JButton
+- nuevaRespuestaButton: JButton
+- borrarRespuestaButton: JButton
+- modificarRespuestaButton: JButton
+- clusteringButton: JButton
+- cerrarSesionButton: JButton
+- exportarButton: JButton
+- importarRespuestasButton: JButton
+- comboBox1: JComboBox 
+- fechaIni: JTextField
+- fechaFin: JTextField
+- palClave: JTextField
+- comboBox1: JComboBox
+- userLabel: JLabel
+- tabs: JTabbedPane
+	REVISAAAAR
 --
 + VistaPrincipalUsuario(ctrlPres: ControladorPresentacio,
     user: String)
@@ -291,8 +330,8 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>366</x>
-      <y>432</y>
+      <x>246</x>
+      <y>474</y>
       <w>78</w>
       <h>24</h>
     </coordinates>
@@ -304,14 +343,31 @@ m2=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>438</x>
-      <y>594</y>
-      <w>240</w>
-      <h>126</h>
+      <x>318</x>
+      <y>624</y>
+      <w>258</w>
+      <h>276</h>
     </coordinates>
     <panel_attributes>*VistaPrincipalAdmin*
 --
 - ctrlPres: ControladorPresentacio
+- frame: JFrame
+- panel1: JPanel
+- list1: JList
+- buscarButton: JButton
+- nuevaEncuestaButton: JButton
+- borrarEncuestaButton: JButton
+- modificarEncuestaButton: JButton
+- clusteringButton: JButton
+- cerrarSesionButton: JButton
+- exportarButton: JButton
+- importarRespuestasButton: JButton
+- comboBox1: JComboBox 
+- fechaIni: JTextField
+- fechaFin: JTextField
+- palClave: JTextField
+- comboBox1: JComboBox
+- userLabel: JLabel
 --
 + VistaPrincipalAdmin(ctrlPres: ControladorPresentacio,
     user: String)
@@ -326,27 +382,51 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>474</x>
-      <y>534</y>
+      <x>354</x>
+      <y>576</y>
       <w>30</w>
-      <h>72</h>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=0..1</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>948</x>
-      <y>408</y>
-      <w>240</w>
-      <h>228</h>
+      <x>828</x>
+      <y>432</y>
+      <w>366</w>
+      <h>456</h>
     </coordinates>
     <panel_attributes>*VistaCrearEncuesta*
 --
 - ctrlPres: ControladorPresentacio
+- frame: JFrame
+- panel1: JPanel
+- panelPreg: JPanel
+- panelBotones: JPanel
+- PregNum: JPanel
+- PregCual: JPanel
+- buttonPanel: JPanel
+- PCNOMpanel: JPanel
+- tituloEnc: JTextField
+- preguntaField: JTextField
+- optField: JTextField
+- list1: JList
+- listOption: JList
+- nuevaPreguntaButton: JButton
+- borrarPreguntaButton: JButton
+- modificarPreguntaButton: JButton
+- guardarPreguntaButton: JButton
+- plusButton: JButton
+- minusButton: JButton
+- guardarEncuestaButton: JButton
+- comboBox1: JComboBox 
+- spinner1: JSpinner spinner1;
+- minSpinner: JSpinner
+- maxSpinner: JSpinner
 - esModificado: boolean
 - modEnc: boolean
 - idxMod: int
@@ -373,8 +453,8 @@ m2=0..1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>876</x>
-      <y>426</y>
+      <x>756</x>
+      <y>450</y>
       <w>84</w>
       <h>24</h>
     </coordinates>
