@@ -267,10 +267,6 @@ public class VistaRespInteractiva {
         guardarRespuestaCualitativaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                responderPreguntaButton.setEnabled(false);
-                modificarRespuestaButton.setEnabled(true);
-                borrarRespuestaButton.setEnabled(true);
-                panelRespCual.setVisible(false);
                 ArrayList<String> resp = new ArrayList<>();
                 if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCO")) {
                     resp.add("RCO");
@@ -282,12 +278,23 @@ public class VistaRespInteractiva {
                     resp.add(Integer.toString(listaOpciones.getSelectedIndex()));
                     resp.add(listaOpciones.getSelectedValue().toString());
                 } else if (pregs.get(listaPreguntas.getSelectedIndex()).get(0).equals("PCNOM")) {
+                    int index = listaPreguntas.getSelectedIndex();
+                    ArrayList<String> preg = pregs.get(index);
+                    if (listaOpciones.getSelectedValuesList().size() > Integer.parseInt(preg.get(2))) {
+                        aviso("No se pueden seleccionar más de " + preg.get(2) + " respuestas.");
+                        return;
+                    }
                     resp.add("RCNOM");
                     for (int i = 0; i < listaOpciones.getSelectedValuesList().size(); i++) {
                         resp.add(Integer.toString(listaOpciones.getSelectedIndices()[i]));
                         resp.add(listaOpciones.getSelectedValuesList().get(i).toString());
                     }
                 }
+                responderPreguntaButton.setEnabled(false);
+                modificarRespuestaButton.setEnabled(true);
+                borrarRespuestaButton.setEnabled(true);
+                panelRespCual.setVisible(false);
+
                 respuestas.remove(listaPreguntas.getSelectedIndex());
                 respuestas.add(listaPreguntas.getSelectedIndex(), resp);
                 listaPreguntas.setEnabled(true);
@@ -389,6 +396,16 @@ public class VistaRespInteractiva {
      */
     public void close() {
         frame.setVisible(false);
+    }
+
+    public void aviso(String mensaje) {
+        JOptionPane optionPane = new JOptionPane(mensaje, JOptionPane.ERROR_MESSAGE);
+        String[] strBotones = {"Aceptar"};
+        optionPane.setOptions(strBotones);
+        JDialog dialogOptionPane = optionPane.createDialog(new JFrame(), "AVISO");
+        dialogOptionPane.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        dialogOptionPane.pack();
+        dialogOptionPane.setVisible(true);
     }
 
     {

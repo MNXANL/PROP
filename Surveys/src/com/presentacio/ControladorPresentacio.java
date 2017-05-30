@@ -4,6 +4,7 @@ import com.domini.*;
 
 import javax.swing.*;
 import java.lang.reflect.Array;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -113,11 +114,11 @@ public class ControladorPresentacio {
         vu.llenarListaEncuestasRespondidas(ctrlDom.listaEncuestasPalabrasUsuario(palabras, true));
     }
 
-    public void buscarEncuestaFecha (String f1, String f2) {
+    public void buscarEncuestaFecha (String f1, String f2) throws ParseException{
         vp.llenarLista(ctrlDom.listaEncuestaFecha(f1,f2));
     }
 
-    public void buscarEncuestaFechaUsuario (String f1, String f2) {
+    public void buscarEncuestaFechaUsuario (String f1, String f2) throws ParseException {
         vu.llenarListaEncuestas(ctrlDom.listaEncuestaFechaUsuario(f1,f2, false));
         vu.llenarListaEncuestasRespondidas(ctrlDom.listaEncuestaFechaUsuario(f1,f2, true));
 

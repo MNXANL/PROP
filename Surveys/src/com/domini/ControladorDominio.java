@@ -224,36 +224,26 @@ public class ControladorDominio {
     }
 
 
-    public String[] listaEncuestaFecha (String f1, String f2) {
-        try {
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-            Date fecha1 = sdf.parse(f1);
-            Date fecha2 = sdf.parse(f2);
-            fecha2.setHours(23);
-            fecha2.setMinutes(59);
-            fecha2.setSeconds(59);
-            return cjt.getTitulosEncuestasFecha(fecha1, fecha2);
-        }
-        catch (ParseException e1) {
-            e1.printStackTrace();
-        }
-        return null;
+    public String[] listaEncuestaFecha (String f1, String f2) throws ParseException{
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        sdf.setLenient(false);
+        Date fecha1 = sdf.parse(f1);
+        Date fecha2 = sdf.parse(f2);
+        fecha2.setHours(23);
+        fecha2.setMinutes(59);
+        fecha2.setSeconds(59);
+        return cjt.getTitulosEncuestasFecha(fecha1, fecha2);
     }
 
-    public String[] listaEncuestaFechaUsuario (String f1, String f2, boolean respondidas) {
-        try {
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-            Date fecha1 = sdf.parse(f1);
-            Date fecha2 = sdf.parse(f2);
-            fecha2.setHours(23);
-            fecha2.setMinutes(59);
-            fecha2.setSeconds(59);
-            return cjt.getTitulosEncuestasFechaUsuario(fecha1, fecha2, this.getUser(), respondidas);
-        }
-        catch (ParseException e1) {
-            e1.printStackTrace();
-        }
-        return null;
+    public String[] listaEncuestaFechaUsuario (String f1, String f2, boolean respondidas) throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        sdf.setLenient(false);
+        Date fecha1 = sdf.parse(f1);
+        Date fecha2 = sdf.parse(f2);
+        fecha2.setHours(23);
+        fecha2.setMinutes(59);
+        fecha2.setSeconds(59);
+        return cjt.getTitulosEncuestasFechaUsuario(fecha1, fecha2, this.getUser(), respondidas);
     }
 
     public void modificarEncuesta(String tituloE) {

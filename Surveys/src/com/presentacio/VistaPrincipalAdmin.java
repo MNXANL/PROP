@@ -14,6 +14,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.text.ParseException;
 
 /**
  * Created by aleixballetbo on 12/5/17.
@@ -61,8 +62,15 @@ public class VistaPrincipalAdmin {
                     ctrlPres.buscarEncuestas(comboBox1.getSelectedItem().toString());
                 else if (palClave.isEnabled() && !palClave.getText().equals(""))
                     ctrlPres.buscarEncuestasPalabras(palClave.getText());
-                else if (fechaIni.isEnabled() && fechaFin.isEnabled() && !fechaIni.getText().equals("") && !fechaFin.getText().equals(""))
-                    ctrlPres.buscarEncuestaFecha(fechaIni.getText(), fechaFin.getText());
+                else if (fechaIni.isEnabled() && fechaFin.isEnabled() && !fechaIni.getText().equals("") && !fechaFin.getText().equals("")) {
+                    try {
+                        if (fechaIni.getText().length() != 10 || fechaFin.getText().length() != 10) aviso("Formato de fechas incorrecto. El formato debe ser dd/mm/aaaa");
+                        else ctrlPres.buscarEncuestaFecha(fechaIni.getText(), fechaFin.getText());
+                    }
+                    catch (ParseException e1) {
+                        aviso("Formato de fechas incorrecto. El formato debe ser dd/mm/aaaa");
+                    }
+                }
 
             }
         });
