@@ -11,6 +11,7 @@ public class Clustering {
     private Encuesta E;
     private int k;
     private boolean [][] skippables;
+    private ArrayList<RespuestasEncuesta> centroids;
 
     /**
      *Creadora de clustering
@@ -27,7 +28,7 @@ public class Clustering {
      */
     public HashMap<Integer,List<String>> run(){
         skippables = new boolean[E.getCjtRespsEnc().size()][E.getCjtRespsEnc().get(0).getResps().size()];
-        ArrayList<RespuestasEncuesta> centroids = new ArrayList<>();  //guarda los indices de los centroids iniciales, que seran conjuntos de respuestas de usuarios al azar
+        centroids = new ArrayList<>();  //guarda los indices de los centroids iniciales, que seran conjuntos de respuestas de usuarios al azar
         ArrayList<RespuestasEncuesta> RE = E.getCjtRespsEnc();
         if(k>RE.size()){
             System.out.println("No puede haber más clusters que encuestados");
@@ -353,5 +354,13 @@ public class Clustering {
                 if(RE.get(i).getResps().get(j) instanceof RespVacia)
                     skippables[i][j] = true;
             }
+    }
+
+    /**
+     * PRE: el clustering ya ha sido realizado
+     * @return la matriz de centroides
+     */
+    public ArrayList<RespuestasEncuesta> getCentroids(){
+        return centroids;
     }
 }
