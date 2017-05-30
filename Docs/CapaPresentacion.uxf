@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>4</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>392</x>
-      <y>184</y>
-      <w>300</w>
-      <h>288</h>
+      <x>432</x>
+      <y>108</y>
+      <w>450</w>
+      <h>432</h>
     </coordinates>
     <panel_attributes>*ControladorPresentacio*
 --
@@ -54,10 +54,10 @@ vc: VistaClustering
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>736</x>
-      <y>156</y>
-      <w>148</w>
-      <h>52</h>
+      <x>948</x>
+      <y>66</y>
+      <w>222</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>*ImportarEncuesta*
 --
@@ -74,10 +74,10 @@ vc: VistaClustering
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>348</x>
-      <y>184</y>
-      <w>52</w>
-      <h>16</h>
+      <x>366</x>
+      <y>108</y>
+      <w>78</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..1
@@ -87,10 +87,10 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>688</x>
-      <y>284</y>
-      <w>56</w>
-      <h>20</h>
+      <x>876</x>
+      <y>258</y>
+      <w>84</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
@@ -101,10 +101,10 @@ m2=0..1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>688</x>
-      <y>220</y>
-      <w>56</w>
-      <h>20</h>
+      <x>876</x>
+      <y>162</y>
+      <w>84</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
@@ -115,10 +115,10 @@ m2=0..1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>688</x>
-      <y>184</y>
-      <w>56</w>
-      <h>20</h>
+      <x>876</x>
+      <y>108</y>
+      <w>84</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
@@ -129,10 +129,10 @@ m2=0..1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>736</x>
-      <y>216</y>
-      <w>116</w>
-      <h>52</h>
+      <x>948</x>
+      <y>156</y>
+      <w>174</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>*LogIn*
 --
@@ -149,10 +149,10 @@ m2=0..1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>736</x>
-      <y>276</y>
-      <w>164</w>
-      <h>44</h>
+      <x>948</x>
+      <y>246</y>
+      <w>246</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>*VistaClustering*
 --
@@ -166,14 +166,21 @@ m2=0..1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>196</x>
-      <y>160</y>
-      <w>156</w>
-      <h>52</h>
+      <x>144</x>
+      <y>0</y>
+      <w>228</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>*RegistroUsuario*
 --
 - ctrlPres: ControladorPresentacio
+
+- frame: JFrame
+- panel1: JPanel
+- nombreTextField: JTextField
+- pass1TextField: JPasswordField
+- pass2TextField: JPasswordField
+- crearUsuarioButton: JButton
 --
 + RegistroUsuario(ctrlPres: ControladorPresentacio)
 + asignarListeners()
@@ -186,10 +193,10 @@ m2=0..1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>736</x>
-      <y>328</y>
-      <w>144</w>
-      <h>48</h>
+      <x>948</x>
+      <y>324</y>
+      <w>216</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>*VistaKClustering*
 --
@@ -205,10 +212,10 @@ m2=0..1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>688</x>
-      <y>328</y>
-      <w>56</w>
-      <h>20</h>
+      <x>876</x>
+      <y>324</y>
+      <w>84</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
@@ -219,10 +226,10 @@ m2=0..1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>196</x>
-      <y>220</y>
-      <w>156</w>
-      <h>68</h>
+      <x>120</x>
+      <y>186</y>
+      <w>252</w>
+      <h>222</h>
     </coordinates>
     <panel_attributes>*VistaRespInteractiva*
 --
@@ -241,10 +248,10 @@ m2=0..1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>348</x>
-      <y>244</y>
-      <w>52</w>
-      <h>16</h>
+      <x>366</x>
+      <y>222</y>
+      <w>78</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..1
@@ -254,10 +261,10 @@ m2=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>196</x>
-      <y>292</y>
-      <w>156</w>
-      <h>124</h>
+      <x>138</x>
+      <y>426</y>
+      <w>234</w>
+      <h>270</h>
     </coordinates>
     <panel_attributes>*VistaPrincipalUsuario*
 --
@@ -284,10 +291,10 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>348</x>
-      <y>296</y>
-      <w>52</w>
-      <h>16</h>
+      <x>366</x>
+      <y>432</y>
+      <w>78</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..1
@@ -297,10 +304,10 @@ m2=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>196</x>
-      <y>420</y>
-      <w>156</w>
-      <h>84</h>
+      <x>438</x>
+      <y>594</y>
+      <w>240</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>*VistaPrincipalAdmin*
 --
@@ -319,23 +326,23 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>348</x>
-      <y>392</y>
-      <w>52</w>
-      <h>56</h>
+      <x>474</x>
+      <y>534</y>
+      <w>30</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=0..1</panel_attributes>
-    <additional_attributes>110.0;10.0;70.0;10.0;70.0;110.0;10.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>736</x>
-      <y>384</y>
-      <w>160</w>
-      <h>152</h>
+      <x>948</x>
+      <y>408</y>
+      <w>240</w>
+      <h>228</h>
     </coordinates>
     <panel_attributes>*VistaCrearEncuesta*
 --
@@ -366,10 +373,10 @@ m2=0..1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>688</x>
-      <y>396</y>
-      <w>56</w>
-      <h>16</h>
+      <x>876</x>
+      <y>426</y>
+      <w>84</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
