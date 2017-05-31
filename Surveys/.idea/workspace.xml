@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a6261926-014f-4e17-847e-29161c7babb7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/RespLibre.java" afterPath="$PROJECT_DIR$/src/com/domini/RespLibre.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,9 +46,36 @@
       <file leaf-file-name="ControladorPresentacio.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2970">
-              <caret line="209" column="37" lean-forward="false" selection-start-line="209" selection-start-column="37" selection-end-line="209" selection-end-column="37" />
-              <folding />
+            <state relative-caret-position="3045">
+              <caret line="210" column="37" lean-forward="false" selection-start-line="210" selection-start-column="37" selection-end-line="210" selection-end-column="37" />
+              <folding>
+                <marker date="1496262336331" expanded="true" signature="6962:6970" ph="{...}" />
+                <marker date="1496262336331" expanded="true" signature="6976:7072" ph="/**...*/" />
+                <marker date="1496262336331" expanded="true" signature="7122:7234" ph="{...}" />
+                <marker date="1496262336331" expanded="true" signature="7240:7435" ph="/**...*/" />
+                <marker date="1496262336331" expanded="true" signature="7531:7636" ph="{...}" />
+                <marker date="1496262336331" expanded="true" signature="7642:7847" ph="/**...*/" />
+                <marker date="1496262336331" expanded="true" signature="7959:8074" ph="{...}" />
+                <marker date="1496262336331" expanded="true" signature="8080:8233" ph="/**...*/" />
+                <marker date="1496262336331" expanded="false" signature="8291:8302" ph=" { " />
+                <marker date="1496262336331" expanded="false" signature="8338:8344" ph=" }" />
+                <marker date="1496262336331" expanded="true" signature="8350:8446" ph="/**...*/" />
+                <marker date="1496262336331" expanded="true" signature="8493:8682" ph="{...}" />
+                <marker date="1496262336331" expanded="true" signature="8688:8781" ph="/**...*/" />
+                <marker date="1496262336331" expanded="true" signature="8828:9754" ph="{...}" />
+                <marker date="1496262336331" expanded="true" signature="9760:10011" ph="/**...*/" />
+                <marker date="1496262336331" expanded="true" signature="10137:10243" ph="{...}" />
+                <marker date="1496262336331" expanded="true" signature="10249:10410" ph="/**...*/" />
+                <marker date="1496262336331" expanded="false" signature="10477:10488" ph=" { " />
+                <marker date="1496262336331" expanded="false" signature="10532:10538" ph=" }" />
+                <marker date="1496262336331" expanded="true" signature="10544:10652" ph="/**...*/" />
+                <marker date="1496262336331" expanded="false" signature="10704:10715" ph=" { " />
+                <marker date="1496262336331" expanded="false" signature="10752:10758" ph=" }" />
+                <marker date="1496262336331" expanded="true" signature="10764:10917" ph="/**...*/" />
+                <marker date="1496262336331" expanded="true" signature="10968:11081" ph="{...}" />
+                <marker date="1496262336331" expanded="true" signature="11087:11347" ph="/**...*/" />
+                <marker date="1496262336331" expanded="true" signature="11491:11631" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,10 +84,14 @@
         <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2175">
-              <caret line="189" column="17" lean-forward="false" selection-start-line="189" selection-start-column="17" selection-end-line="189" selection-end-column="17" />
+              <caret line="215" column="17" lean-forward="false" selection-start-line="215" selection-start-column="17" selection-end-line="215" selection-end-column="17" />
               <folding>
                 <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
                 <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
+                <marker date="1496262336331" expanded="true" signature="7597:9817" ph="{...}" />
+                <marker date="1496262336331" expanded="true" signature="9250:9563" ph="{...}" />
+                <marker date="1496262336331" expanded="true" signature="9307:9553" ph="{...}" />
+                <marker date="1496262336331" expanded="true" signature="9825:9943" ph="//..." />
               </folding>
             </state>
           </provider>
@@ -757,13 +787,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491302909485</updated>
     </task>
-    <task id="LOCAL-00009" summary="encuesta">
-      <created>1491388075480</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1491388075480</updated>
-    </task>
     <task id="LOCAL-00010" summary="encuesta">
       <created>1491388648331</created>
       <option name="number" value="00010" />
@@ -1100,7 +1123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496251725708</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="clustering muestra respuestas">
+      <created>1496262316982</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1496262316983</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1144,8 +1174,8 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32237872" sideWeight="0.5043924" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3114241" sideWeight="0.4956076" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23630673" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3114241" sideWeight="0.4956076" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23630673" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18960468" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1404,9 +1434,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2970">
-          <caret line="209" column="37" lean-forward="false" selection-start-line="209" selection-start-column="37" selection-end-line="209" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="3045">
+          <caret line="210" column="37" lean-forward="false" selection-start-line="210" selection-start-column="37" selection-end-line="210" selection-end-column="37" />
+          <folding>
+            <marker date="1496262336331" expanded="true" signature="6962:6970" ph="{...}" />
+            <marker date="1496262336331" expanded="true" signature="6976:7072" ph="/**...*/" />
+            <marker date="1496262336331" expanded="true" signature="7122:7234" ph="{...}" />
+            <marker date="1496262336331" expanded="true" signature="7240:7435" ph="/**...*/" />
+            <marker date="1496262336331" expanded="true" signature="7531:7636" ph="{...}" />
+            <marker date="1496262336331" expanded="true" signature="7642:7847" ph="/**...*/" />
+            <marker date="1496262336331" expanded="true" signature="7959:8074" ph="{...}" />
+            <marker date="1496262336331" expanded="true" signature="8080:8233" ph="/**...*/" />
+            <marker date="1496262336331" expanded="false" signature="8291:8302" ph=" { " />
+            <marker date="1496262336331" expanded="false" signature="8338:8344" ph=" }" />
+            <marker date="1496262336331" expanded="true" signature="8350:8446" ph="/**...*/" />
+            <marker date="1496262336331" expanded="true" signature="8493:8682" ph="{...}" />
+            <marker date="1496262336331" expanded="true" signature="8688:8781" ph="/**...*/" />
+            <marker date="1496262336331" expanded="true" signature="8828:9754" ph="{...}" />
+            <marker date="1496262336331" expanded="true" signature="9760:10011" ph="/**...*/" />
+            <marker date="1496262336331" expanded="true" signature="10137:10243" ph="{...}" />
+            <marker date="1496262336331" expanded="true" signature="10249:10410" ph="/**...*/" />
+            <marker date="1496262336331" expanded="false" signature="10477:10488" ph=" { " />
+            <marker date="1496262336331" expanded="false" signature="10532:10538" ph=" }" />
+            <marker date="1496262336331" expanded="true" signature="10544:10652" ph="/**...*/" />
+            <marker date="1496262336331" expanded="false" signature="10704:10715" ph=" { " />
+            <marker date="1496262336331" expanded="false" signature="10752:10758" ph=" }" />
+            <marker date="1496262336331" expanded="true" signature="10764:10917" ph="/**...*/" />
+            <marker date="1496262336331" expanded="true" signature="10968:11081" ph="{...}" />
+            <marker date="1496262336331" expanded="true" signature="11087:11347" ph="/**...*/" />
+            <marker date="1496262336331" expanded="true" signature="11491:11631" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1431,10 +1488,14 @@
     <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2175">
-          <caret line="189" column="17" lean-forward="false" selection-start-line="189" selection-start-column="17" selection-end-line="189" selection-end-column="17" />
+          <caret line="215" column="17" lean-forward="false" selection-start-line="215" selection-start-column="17" selection-end-line="215" selection-end-column="17" />
           <folding>
             <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
             <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
+            <marker date="1496262336331" expanded="true" signature="7597:9817" ph="{...}" />
+            <marker date="1496262336331" expanded="true" signature="9250:9563" ph="{...}" />
+            <marker date="1496262336331" expanded="true" signature="9307:9553" ph="{...}" />
+            <marker date="1496262336331" expanded="true" signature="9825:9943" ph="//..." />
           </folding>
         </state>
       </provider>
