@@ -60,22 +60,34 @@ public class Encuesta {
         CjtRespsEnc = (ArrayList) E.CjtRespsEnc.clone();
     }
 
+    /**
+     * Modificador de titulo de encuesta
+     * @param titulo Nuevo titulo para la encuesta
+     */
     public void setTitulo (String titulo) {
         title = titulo;
     }
 
+    /**
+     * Consultora de titulo de encuesta
+     * @return Titulo actual de la encuesta
+     */
     public String getTitulo () {
         return title;
     }
 
-    public Pregunta getPregunta (int index) {
-        return preguntas.get(index);
-    }
-
+    /**
+     * Consultora de las preguntas de la encuesta
+     * @return Todas las preguntas que constituyen la encuesta
+     */
     public ArrayList<Pregunta> getPreguntas () {
         return preguntas;
     }
 
+    /**
+     * Consultora de la fecha en la que fue creada la encuesta
+     * @return Fecha en la que fue creada la encuesta
+     */
     public Date getFecha () {
         return fecha;
     }
@@ -86,18 +98,6 @@ public class Encuesta {
      */
     public void add_question(Pregunta p){
         preguntas.add(p);
-    }
-
-    public void add_question(int index, Pregunta p) {
-        preguntas.set(index,p);
-    }
-
-    /**
-     * borra la pregunta con indice i en la encuesta (de 0 a size-1)
-     * @param index Indice de la pregunta a borrar
-     */
-    public void delete_question(int index){
-        preguntas.remove(index);
     }
 
     /**

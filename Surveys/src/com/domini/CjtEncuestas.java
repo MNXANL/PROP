@@ -60,7 +60,7 @@ public class CjtEncuestas {
     }
 
     /**
-     * Metodo para obtener los titulos de las encuestas
+     * Metodo para obtener los titulos de las encuestas para la vista de administrador
      * @param criterio El criterio sobre el cual ordenar
      * @return Conjunto de los titulos de las encuestas ordenados segun el criterio
      */
@@ -113,11 +113,11 @@ public class CjtEncuestas {
     }
 
     /**
-     * Metodo para obtener los titulos de las encuestas respondidas
+     * Metodo para obtener los titulos de las encuestas para la vista de usuario
      * @param criterio El criterio sobre el cual ordenar
      * @param user Usuario del que se buscan las respuestas de las encuestas
-     * @param respondidas Indicacion de si la encuesta se ha respondido o no
-     * @return Conjunto de los titulos de las encuestas respondidas por el usuario, ordenados segun el criterio
+     * @param respondidas Indicacion para obtener encuestas respondidas o no respondidas
+     * @return Conjunto de los titulos de las encuestas ordenados segun el criterio
      */
     public String[] getTitulosEncuestasUsuario (String criterio, String user, boolean respondidas) {
         if (criterio.equals("A-Z")) {
@@ -209,10 +209,10 @@ public class CjtEncuestas {
 
 
     /**
-     * Devuelve los títulos de las encuestas que se encuentren en el intervalo indicado con fecha1 y fecha2 (inclusivo)
+     * Devuelve los títulos de las encuestas que se encuentren en el intervalo indicado con fecha1 y fecha2 para la vista de administrador (inclusivo)
      * @param fecha1 fecha más antigua a partir de la cual buscar
      * @param fecha2 fecha más reciente
-     * @return Conjunto de los titulos de las encuestas respondidas entre ambas fechas
+     * @return Conjunto de los titulos de las encuestas creadas entre ambas fechas
      */
     public String[] getTitulosEncuestasFecha (Date fecha1, Date fecha2) {
         String[] t = encuestas.keySet().toArray(new String[encuestas.keySet().size()]);
@@ -226,10 +226,12 @@ public class CjtEncuestas {
     }
 
     /**
-     * Devuelve los títulos de las encuestas que se encuentren en el intervalo indicado con fecha1 y fecha2 (inclusivo)
+     * Devuelve los títulos de las encuestas que se encuentren en el intervalo indicado con fecha1 y fecha2 para la vista de usuario (inclusivo)
      * @param fecha1 fecha más antigua a partir de la cual buscar
      * @param fecha2 fecha más reciente
-     * @return Conjunto de los titulos de las encuestas ordenados segun el criterio
+     * @param user usuario identificado en el sistema
+     * @param respondidas Indicación para obtener encuestas respondidas o no respondidas
+     * @return Conjunto de los titulos de las encuestas creadas entre ambas fechas
      */
     public String[] getTitulosEncuestasFechaUsuario (Date fecha1, Date fecha2, String user, boolean respondidas) {
         Set<String> enc = new TreeSet<>(encuestas.keySet());
@@ -253,7 +255,7 @@ public class CjtEncuestas {
     }
 
     /**
-     * Metodo para obtener los titulos filtrados de las encuestas
+     * Metodo para obtener los titulos filtrados de las encuestas para la vista de administrador
      * @param palabras Las palabras sobre las que filtrar las encuestas
      * @return Conjunto de los titulos de las encuestas filtradas
      */
@@ -269,11 +271,11 @@ public class CjtEncuestas {
     }
 
     /**
-     * Metodo para obtener los titulos filtrados de las encuestas respondidas por un usuario
+     * Metodo para obtener los titulos filtrados de las encuestas para la vista de usuario
      * @param palabras Las palabras sobre las que filtrar las encuestas
      * @param user Usuario que responde las encuestas
      * @param respondidas Si el usuario ha respondido la encuesta
-     * @return Conjunto de los titulos de las encuestas respondidas filtradas
+     * @return Conjunto de los titulos de las encuestas filtradas
      */
     public String[] getTitulosEncuestasPalabrasUsuario (String palabras, String user, boolean respondidas) {
         Set<String> enc = new TreeSet<>(encuestas.keySet());
@@ -303,15 +305,6 @@ public class CjtEncuestas {
      */
     public Encuesta getEncuesta (String titulo) {
         return encuestas.get(titulo);
-    }
-
-    /**
-     * Metodo para cambiar el titulo de una encuesta
-     * @param nuevoTitulo Titulo de la nueva encuesta
-     * @param viejoTitulo Titulo de la encuesta a modificar
-     */
-    public void cambiarTitulo (String nuevoTitulo, String viejoTitulo) {
-        encuestas.put(nuevoTitulo, encuestas.remove(viejoTitulo));
     }
 
 }

@@ -7,6 +7,7 @@ package com.domini;
 public class PregRespuestaLibre extends Pregunta {
     /**
      * Constructora por defecto
+     * @param titulo Titulo de la pregunta
      */
     public PregRespuestaLibre(String titulo) {
         super(titulo);

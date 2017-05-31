@@ -10,6 +10,7 @@ public class PregCualitativaOrdenada extends Pregunta {
 
     /**
      * Constructora de la clase
+     * @param titulo Titulo de la pregunta
      * @param opciones Opciones ordenadas a escoger
      */
     public PregCualitativaOrdenada(String titulo, ArrayList<String> opciones) {
@@ -19,7 +20,7 @@ public class PregCualitativaOrdenada extends Pregunta {
 
     /**
      * Obtener el tipo de la pregunta
-     * @return
+     * @return tipo de pregunta
      */
     public String tipo () {
         return "PCO";
@@ -27,7 +28,7 @@ public class PregCualitativaOrdenada extends Pregunta {
 
     /**
      * Obtener toda la información de la pregunta a expeción del título
-     * @return
+     * @return contenido de la pregunta
      */
     public String getContenido () {
         String contenido = "";

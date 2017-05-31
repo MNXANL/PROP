@@ -10,6 +10,7 @@ public class PregCualitativaNoOrdenadaUnica extends Pregunta {
 
     /**
      * Constructora de la clase.
+     * @param titulo Titulo de la pregunta
      * @param opciones El conjunto de opciones de la encuesta.
      */
     public PregCualitativaNoOrdenadaUnica(String titulo, ArrayList<String> opciones) {

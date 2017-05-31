@@ -10,6 +10,7 @@ public class PregNumerica extends Pregunta {
 
     /**
      * Constructora de la clase con valores minimo y maximo en los extremos.
+     * @param titulo Titulo de la pregunta
      */
     public PregNumerica(String titulo) { //Admito clase vacía que coga el máximo intervalo posible.
         super(titulo);
@@ -18,7 +19,8 @@ public class PregNumerica extends Pregunta {
     }
 
     /**
-     * Constructora de la clase con valorMin y valorMax arbitrarios
+     * Constructora de la clase con valorMin y valorMax
+     * @param titulo Titulo de la pregunta
      * @param valorMin valor minimo
      * @param valorMax valor maximo
      */
@@ -30,16 +32,16 @@ public class PregNumerica extends Pregunta {
     }
 
     /**
-     * Devuelve el valorMin de la clase
-     * @return valorMin de la clase
+     * Devuelve el valorMin de la pregunta
+     * @return valorMin de la pregunta
      */
     public double getValorMin() {
         return valorMin;
     }
 
     /**
-     * Devuelve el valorMax de la clase
-     * @return valorMax de la clase
+     * Devuelve el valorMax de la pregunta
+     * @return valorMax de la pregunta
      */
     public double getValorMax() {
         return valorMax;
