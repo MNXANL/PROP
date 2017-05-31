@@ -25,13 +25,14 @@ public class VistaClustering {
     private JPanel CPanel;
     private JButton recalc;
     private JTabbedPane tabs;
-    private JScrollPane scrollable1, scrollable2;
-    private JTable clusterTable, centroidTable;
+    private JScrollPane scrollable1, scrollable2, scrollable3;
+    private JTable clusterTable, centroidTable, rTable;
     private ControladorPresentacio cp;
 
-    public VistaClustering(ControladorPresentacio cp, HashMap<Integer, List<String>> clusts, ArrayList<RespuestasEncuesta> centroids, String name) {
+    public VistaClustering(ControladorPresentacio cp, HashMap<Integer, List<String>> clusts, ArrayList<RespuestasEncuesta> centroids,
+                           String name, ArrayList<RespuestasEncuesta> resps) {
         frame = new JFrame("Encuesta '" + name + "'");
-        Initialize(clusts, centroids);
+        Initialize(clusts, centroids, resps);
         this.cp = cp;
         recalc.addActionListener(new ActionListener() {
             @Override
@@ -42,16 +43,19 @@ public class VistaClustering {
         });
     }
 
-    public void Initialize(HashMap<Integer, List<String>> clusts, ArrayList<RespuestasEncuesta> centroids) {
+    public void Initialize(HashMap<Integer, List<String>> clusts, ArrayList<RespuestasEncuesta> centroids, ArrayList<RespuestasEncuesta> resps) {
         ini_clTable(clusts);
         ini_ceTable(centroids);
+        ini_rTable(resps);
         scrollable1 = new JScrollPane(clusterTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         scrollable2 = new JScrollPane(centroidTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scrollable3 = new JScrollPane(rTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         //clusterTable.setFillsViewportHeight(true);
         clusterTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         centroidTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         tabs.addTab("Clusters", scrollable1);
         tabs.addTab("Centroides", scrollable2);
+        tabs.addTab("Respuestas", scrollable3);
         // frame.add(CPanel);
         CPanel.setPreferredSize(clusterTable.getSize());
         CPanel.setSize(clusterTable.getSize());
@@ -154,6 +158,59 @@ public class VistaClustering {
         }
         TableColumnModel tcm = centroidTable.getColumnModel();
         for (int i = 0; i != centroids.size(); ++i) {
+            tcm.getColumn(i).setPreferredWidth(100);
+        }
+    }
+
+    public void ini_rTable(ArrayList<RespuestasEncuesta> resps) {
+        int nResps = resps.get(0).getResps().size();
+        String[] columnNames = new String[resps.size()];
+        Object[][] data = new Object[nResps][resps.size()];
+        for (Integer i = 0; i != resps.size(); ++i) {
+            columnNames[i] = "Pregunta " + (i + 1);
+        }
+
+        for (int i = 0; i != resps.size(); ++i) {
+            ArrayList<Respuesta> rs = resps.get(i).getResps();
+            for (int j = 0; j != rs.size(); ++j) {
+                Respuesta r = rs.get(j);
+                data[j][i] = rs.get(j);
+                if (r instanceof RespNumerica) {
+                    data[j][i] = ((RespNumerica) r).get();
+                }
+                if (r instanceof RespCualitativaNoOrdenadaUnica) {
+                    data[j][i] = ((RespCualitativaNoOrdenadaUnica) r).getText();
+                }
+                if (r instanceof RespCualitativaOrdenada) {
+                    data[j][i] = ((RespCualitativaOrdenada) r).getText();
+                }
+                if (r instanceof RespCualitativaNoOrdenadaMultiple) {
+                    data[j][i] = ((RespCualitativaNoOrdenadaMultiple) r).getMap().values();
+                }
+                if (r instanceof RespLibre) {
+                    data[j][i] = ((RespLibre) r).get();
+                }
+                if (r instanceof RespVacia) {
+                    data[j][i] = "No contestada";
+                }
+
+            }
+        }
+        DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
+        rTable = new JTable(tableModel) {
+            public String getToolTipText(MouseEvent e) {
+                int row = rowAtPoint(e.getPoint());
+                int column = columnAtPoint(e.getPoint());
+
+                Object value = getValueAt(row, column);
+                return value == null ? null : value.toString();
+            }
+        };
+        for (Object[] os : data) {
+            tableModel.addRow(os);
+        }
+        TableColumnModel tcm = rTable.getColumnModel();
+        for (int i = 0; i != resps.size(); ++i) {
             tcm.getColumn(i).setPreferredWidth(100);
         }
     }

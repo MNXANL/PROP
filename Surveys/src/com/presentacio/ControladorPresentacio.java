@@ -153,7 +153,7 @@ public class ControladorPresentacio {
 
     public void Clustering(String name, int k) {
         HashMap<Integer,List<String>> c = ctrlDom.clustering(name,k);
-        vc = new VistaClustering(this,c,ctrlDom.getCentroids(),name);
+        vc = new VistaClustering(this,c,ctrlDom.getCentroids(),name,ctrlDom.getResps());
     }
 
     public void modificarEncuesta(String titulo) {

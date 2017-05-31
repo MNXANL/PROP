@@ -97,6 +97,13 @@ public class ControladorDominio {
     public ArrayList<RespuestasEncuesta> getCentroids(){
         return cl.getCentroids();
     }
+    /**
+     * HACER SIEMPRE LA FUNCION CLUSTERING ANTES
+     * @return
+     */
+    public ArrayList<RespuestasEncuesta> getResps(){
+        return cl.getResps();
+    }
 
     /**
      * Metodo para crear la encuesta desde la vista creadora

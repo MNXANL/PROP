@@ -363,4 +363,10 @@ public class Clustering {
     public ArrayList<RespuestasEncuesta> getCentroids(){
         return centroids;
     }
+
+    /**
+     * PRE: el clustering ya ha sido realizado
+     * @return la matriz de respuestas
+     */
+    public ArrayList<RespuestasEncuesta> getResps(){return E.getCjtRespsEnc();}
 }
