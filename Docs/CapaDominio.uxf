@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>3</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>363</x>
+      <y>348</y>
+      <w>132</w>
+      <h>93</h>
+    </coordinates>
+    <panel_attributes>*CjtEncuestas*
+--
+encuestas: TreeMap&lt;String, Encuesta&gt;
+--
++ CjtEncuestas()
++ CjtEncuestas(enc: TreeMap&lt;String, Encuesta&gt;)
++ addEncuesta(e: Encuesta)
++ borrarEncuesta(titulo: String)
++ borrarEncuesta(titulo: String, user: String)
++ getTitulosEncuestas(criterio: String): String[]
++ getTitulosEncuestasUsuario(criterio: String,
+    user: String, respondidas: boolean): String[]
++ getTitulosEncuestasFecha(fecha1: Date, fecha2: Date): 
+    String[]
++ getTitulosEncuestasFechaUsuario(fecha1: Date, 
+    fecha2: Date, user: String, respondidas: boolean): String[]
++ getTitulosEncuestasPalabras(palabras: String): String[]
++ getTitulosEncuestasPalabrasUsuario(palabras: String,
+    user: String, respondidas: boolean): String[]
++ getEncuesta(titulo: String): Encuesta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>492</x>
+      <y>405</y>
+      <w>318</w>
+      <h>39</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;1020.0;10.0;1020.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>789</x>
+      <y>438</y>
+      <w>63</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>*Encuestado*
+--
+--
++ Encuestado(name: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>672</x>
+      <y>441</y>
+      <w>69</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>*Administrador*
+--
+--
++ Administrador(name: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>723</x>
+      <y>489</y>
+      <w>57</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>*Usuario*
+--
+userName: String
+--
++ Usuario(name: String)
++ leer()
++ getUsername(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>699</x>
+      <y>456</y>
+      <w>60</w>
+      <h>39</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;110.0;180.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>453</y>
+      <w>75</w>
+      <h>39</h>
+    </coordinates>
+    <panel_attributes>
+
+   Rol {d, c}</panel_attributes>
+    <additional_attributes>10.0;90.0;230.0;90.0;230.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>525</x>
+      <y>498</y>
+      <w>174</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>*RespuestasEncuesta*
+--
+- resps: ArrayList&lt;Respuesta&gt;
+- Encuesta_respondida: String
+- fecha: Date
+- User: String
+--
++ RespuestasEncuesta(e: String, user: String)
++ RespuestasEncuesta(e: Encuesta, user: String, resps: ArrayList&lt;Respuesta&gt;)
++ getResps(): ArrayList&lt;Respuesta&gt;
++ getNombreEncuesta_respondida(): String
++ getFecha(): Date
++ getUser(): String
++ addRespuesta(r: Respuesta)
++ printarRespuesta()
++ getNombreFichero(): String
++ importar(path: String): RespuestasEncuesta
++ exportar(path: String)
++ equals(o: Object): boolean
++ hashCode(): int </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>696</x>
+      <y>519</y>
+      <w>63</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>10.0;200.0;190.0;200.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>597</x>
+      <y>591</y>
+      <w>15</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>675</y>
+      <w>75</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>/*Respuesta*/
+--
++ distance(r: Respuesta): double
++ equals(o: Object): boolean
++ hashCode(): int </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>507</x>
+      <y>693</y>
+      <w>51</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..1</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>447</x>
+      <y>645</y>
+      <w>63</w>
+      <h>57</h>
+    </coordinates>
+    <panel_attributes>*Pregunta*
+--
+- titulo: String
+--
++ Pregunta()
++ Pregunta(titulo: String)
++ getTitulo(): String
++ setTitulo(titulo: String) 
++ getContenido(): String
++ leer()
++ tipo(): String
++ respuesta()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>474</x>
+      <y>618</y>
+      <w>15</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1= 1
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>363</x>
+      <y>492</y>
+      <w>141</w>
+      <h>129</h>
+    </coordinates>
+    <panel_attributes>*Encuesta*
+--
+- title: String
+- fecha: Date
+- preguntas: ArrayList&lt;Pregunta&gt;
+- CjtRespsEnc: ArrayList&lt;RespuestasEncuesta&gt;
+--
++ Encuesta()
++ Encuesta(title: String)
++ Encuesta(title: String, fecha: Date, 
+  ps: ArrayList&lt;Pregunta&gt;, rs: ArrayList&lt;RespuestasEncuesta&gt;)
++ Encuesta(E: Encuesta)
++ setTitulo(titulo: String)
++ getTitulo(): String
++ getPreguntas(): ArrayList&lt;Pregunta&gt;
++ getFecha(): Date
++ add_question(p: Pregunta)
++ importar(path: String): Encuesta
++ exportar(path: String)
++ responder(re: RespuestasEncuesta): boolean
++ respondida(user: String): boolean
++ getRespuesta(user: String): RespuestasEncuesta
++ getNumResps(): int
++ leer()
++ getMatrix(): ArrayList&lt;ArrayList&lt;String&gt; &gt; 
++ getCjtRespsEnc(): ArrayList&lt;RespuestasEncuesta&gt;
++ borrarRespuesta(user: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>483</x>
+      <y>468</y>
+      <w>72</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>220.0;100.0;220.0;10.0;10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>414</x>
+      <y>438</y>
+      <w>15</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>168</x>
+      <y>573</y>
+      <w>186</w>
+      <h>123</h>
+    </coordinates>
+    <panel_attributes>*Clustering*
+--
+- E: Encuesta
+- k: int
+- skippables: boolean[][]
+- centroids: ArrayList&lt;RespuestasEncuesta&gt;
+--
++ Clustering(E: Encuesta, k: int)
++ run(): HashMap&lt;Integer, List&lt;String&gt; &gt;
+- Kmeans(RE: ArrayList&lt;RespuestasEncuesta&gt;, 
+    centroids: ArrayList&lt;RespuestasEncuesta&gt;): 
+    HashMap&lt;Integer, List&lt;String&gt; &gt;
++ RespLib_maxfreq(cli: int, rn: int, assig: ArrayList&lt;Integer&gt;, 
+    RE: final ArrayList&lt;RespuestasEncuesta&gt;): RespLibre
++ RespMUL_maxfreq(cli: int, rn: int, assig: ArrayList&lt;Integer&gt;, 
+    RE: final ArrayList&lt;RespuestasEncuesta&gt; RE): RespCualitativaNoOrdenadaMultiple
++ RespCNOU_mode(cli: int, rn: int, assig: ArrayList&lt;Integer&gt;, 
+    RE: final ArrayList&lt;RespuestasEncuesta&gt; RE): RespCualitativaNoOrdenadaUnica
++ RespCO_mode(cli: int, rn: int, assig: ArrayList&lt;Integer&gt;, 
+    RE: final ArrayList&lt;RespuestasEncuesta&gt; RE): RespCualitativaOrdenada
++ Respnum_avg (cli: int, rn: int, assig: ArrayList&lt;Integer&gt;, 
+    RE: final ArrayList&lt;RespuestasEncuesta&gt; RE): RespNumerica
++ answer_dist(r1: RespuestasEncuesta, r2: RespuestasEncuesta): double
++ preprocess(RE: Arraylist&lt;RespuestasEncuesta&gt;)
++ getCentroids(): ArrayList&lt;RespuestasEncuesta&gt;
++ getResps(): ArrayList&lt;RespuestasEncuesta&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>306</x>
+      <y>510</y>
+      <w>63</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>10.0;210.0;10.0;10.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>699</y>
+      <w>159</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+m1=\n TipoPregunta {d, c}</panel_attributes>
+    <additional_attributes>370.0;10.0;370.0;70.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>447</x>
+      <y>717</y>
+      <w>9</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>714</y>
+      <w>87</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*PregNumerica*
+--
+valorMin: double
+valorMax: double
+--
++ PregNumerica(titulo: String)
++ PregNumerica(titulo: String, 
+    valorMin: double, valorMax: double)
++ getValorMin(): double
++ getValorMax(): double
++ getContenido(): String
++ leer()
++ tipo(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>390</x>
+      <y>738</y>
+      <w>90</w>
+      <h>51</h>
+    </coordinates>
+    <panel_attributes>*PregCualitativaOrdenada*
+--
+opciones: ArrayList&lt;String&gt;
+--
++ PregCualitativaOrdenada(titulo: String, 
+    opciones: ArrayList&lt;String&gt;)
++ getSize(): int
++ getPreguntaIesima(i: int): String
++ getContenido(): String
++ leer()
++ tipo(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>390</x>
+      <y>795</y>
+      <w>108</w>
+      <h>51</h>
+    </coordinates>
+    <panel_attributes>*PregCualitativaNoOrdenadaUnica*
+--
+- opciones: ArrayList&lt;String&gt;
+--
++ PregCualitativaNoOrdenadaUnica(titulo: String, 
+    opciones: ArrayList&lt;String&gt;)
++ getSize(): int
++ getPreguntaIesima(i: int): String
++ getContenido(): String
++ leer()
++ tipo(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>483</x>
+      <y>717</y>
+      <w>9</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>780</y>
+      <w>114</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>*PregCualitativaNoOrdenadaMultiple*
+--
+- opciones: ArrayList&lt;String&gt;
+- maxOpciones: int
+--
++ 
++ PregCualitativaNoOrdenadaMultiple(titulo: String, 
+    opciones: ArrayList&lt;String&gt;)
++ PregCualitativaNoOrdenadaMultiple(titulo: String, 
+    opciones: ArrayList&lt;String&gt;, maxOpciones: int)
++ getSize(): int
++ getPreguntaIesima(i: int): String
++ getContenido(): String
++ leer()
++ tipo(): String
++ getMaxOptions(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>507</x>
+      <y>717</y>
+      <w>9</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>492</x>
+      <y>714</y>
+      <w>51</w>
+      <h>39</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;150.0;20.0;150.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>519</x>
+      <y>747</y>
+      <w>87</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>*PregRespuestaLibre*
+--
+--
++ PregRespuestaLibre(titulo: String)
++ leer()
++ tipo(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>627</x>
+      <y>702</y>
+      <w>255</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;60.0;830.0;60.0;830.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>621</x>
+      <y>741</y>
+      <w>117</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>*RespNumerica*
+--
+- resp: double
+- min: double
+- max: double
+--
++ RespNumerica(f: double, min: double, max: double)
++ RespNumerica(rn: RespNumerica)
++ get(): double
++ getMin(): double
++ getMax(): double
++ set(f: double)
++ distance(r: Respuesta): double
++ equals(o: Object): boolean
++ hashCode(): int </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>567</x>
+      <y>699</y>
+      <w>87</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+m1=\n TipoRespuesta {d, c}</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;270.0;70.0;270.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>708</x>
+      <y>636</y>
+      <w>132</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>*RespCualitativaOrdenada*
+--
+- seleccion: int
+- textoSelec: String
+- noptions: int
+--
++ RespCualitativaOrdenada(ns: int, nopts: int, text: String)
++ RespCualitativaOrdenada(r: RespCualitativaOrdenada)
++ get(): int
++ getText(): String
++ getNoptions(): int
++ set(n: int)
++ distance(x: Respuesta): double
++ equals(o: Object): boolean
++ hashCode(): int </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>747</x>
+      <y>741</y>
+      <w>117</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>*RespCualitativaNoOrdenadaUnica*
+--
+- seleccion: int
+- textoSelec: String
+- noptions: int
+--
++ RespCualitativaNoOrdenadaUnica(n: int, txt: String)
++ get(): int
++ getText(): String
++ getNoptions(): int
++ set(n: int)
++ distance(x: Respuesta): double
++ equals(o: Object): boolean
++ hashCode(): int </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>867</x>
+      <y>735</y>
+      <w>99</w>
+      <h>57</h>
+    </coordinates>
+    <panel_attributes>*RespCualitativaNoOrdenadaMultiple*
+--
+- seleccion: HashMap&lt;Integer, String&gt;
+--
++ RespCualitativaNoOrdenadaMultiple
+    (seleccion: HashMap&lt;Integer, String&gt;)
++ get(): HashSet&lt;Integer&gt;
++ getMap(): HashMap&lt;Integer, String&gt;
++ set(seleccion: HashMap&lt;Integer, String&gt;)
++ distance(x: Respuesta): double
++ equals(o: Object): boolean
++ hashCode(): int </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>843</x>
+      <y>630</y>
+      <w>117</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>*RespLibre*
+--
+- resp: String
+- funcWords: HashSet&lt;String&gt;
+--
++ RespLibre(s: String)
++ RespLibre(rl: RespLibre)
++ get(): String
++ set(s: String)
++ distance(x: Respuesta): double
++ levenshtein(lhs: CharSequence, rhs: CharSequence): double
++ Functionals()
++ clean(r: String): String
++ distance(r: Respuesta): double
++ equals(o: Object): boolean
++ hashCode(): int </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>675</y>
+      <w>75</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>*RespVacia*
+--
+--
++ distance(r: Respuesta): double
++ equals(o: Object): boolean
++ hashCode(): int </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>681</x>
+      <y>699</y>
+      <w>9</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>768</x>
+      <y>714</y>
+      <w>114</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;360.0;20.0;360.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>765</x>
+      <y>717</y>
+      <w>9</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>774</x>
+      <y>702</y>
+      <w>9</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
