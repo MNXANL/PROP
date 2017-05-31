@@ -8,7 +8,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 /**
- * Created by aleixballetbo on 10/5/17.
+ * Vista de log in
  */
 public class LogIn {
     ControladorPresentacio ctrlPres;
@@ -21,12 +21,19 @@ public class LogIn {
     private JLabel error;
     private JButton registrarseButton;
 
+    /**
+     * Constructora de la vista de login
+     * @param ctrlPres Referencia al controlador de presentacion
+     */
     public LogIn(ControladorPresentacio ctrlPres) {
         this.ctrlPres = ctrlPres;
         asignarListeners();
 
     }
 
+    /**
+     * Método para asignar los listeners de la vista.
+     */
     public void asignarListeners() {
         logInButton.addActionListener(new ActionListener() {
             @Override
@@ -69,11 +76,17 @@ public class LogIn {
         });
     }
 
+    /**
+     * Metodo que avisa si los datos son incorrectos
+     */
     public void datosIncorrectos() {
         error.setText("Nombre de usuario o contraseña incorrectos");
         error.updateUI();
     }
 
+    /**
+     * Método para visualizar la vista
+     */
     public void show() {
         frame.setContentPane(panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -81,6 +94,9 @@ public class LogIn {
         frame.setVisible(true);
     }
 
+    /**
+     * Método para cerrar la vista
+     */
     public void close() {
         frame.setVisible(false);
     }

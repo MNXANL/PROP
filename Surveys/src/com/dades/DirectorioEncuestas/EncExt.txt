@@ -35,8 +35,8 @@ Seat
 Pregunta
 PN
 Valora tu experiencia en PROP
-0
-100
+0.0
+100.0
 
 Pregunta
 PRL
@@ -52,14 +52,14 @@ Eurobeat
 FutureFunk
 Trumpwave
 
-Pregunta 
+Pregunta
 PN
 Cuanto mides en cm?
-100
-220
+100.0
+220.0
 
 Pregunta
-PRL 
+PRL
 Escribe un poema
 
 Final encuesta

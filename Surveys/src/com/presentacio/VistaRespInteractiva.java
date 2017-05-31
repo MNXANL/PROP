@@ -77,8 +77,6 @@ public class VistaRespInteractiva {
 
     }
 
-
-
     /**
      * Método para asignar los listeners de la vista.
      */
@@ -363,7 +361,6 @@ public class VistaRespInteractiva {
 
     /**
      * Método que lanza un popup para borrar encuesta o no
-     *
      * @return identificador de borrado de encuesta: 0 = Sí; 1 = No
      */
     private int AvisoBorrarRespuesta() {

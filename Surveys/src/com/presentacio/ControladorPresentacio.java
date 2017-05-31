@@ -44,7 +44,7 @@ public class ControladorPresentacio {
     }
 
     public void logIn (String user, String pass) {
-        int codigo = ctrlDom.logIn(user,pass);
+        int codigo = ctrlDom.logIn(user, pass);
         if (codigo == 0) {
             li.datosIncorrectos();
         }
