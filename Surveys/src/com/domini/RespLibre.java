@@ -59,21 +59,6 @@ public class RespLibre extends Respuesta{
         return levenshtein(s1,s2)/ Math.max(s1.length(),s2.length());
     }
 
-   /*
-    private double levenshtein (String a, String b, int i, int j){
-        System.out.println("i: " +i + "j: " +j);
-        if(Math.min(i,j)==0)
-            return Math.max(i,j);
-        else{
-            System.out.println("levenstein");
-            double x = levenshtein(a,b,i-1,j) + 1;
-            double y = levenshtein(a,b,i,j-1) + 1;
-            double z = levenshtein(a,b,i-1,j-1);
-            if(a.charAt(i-1) != b.charAt(j-1)) z+=1;
-
-            return Math.min(x, Math.min(y,z));
-        }
-    }*/
 
     /**
      * distancia levenshtein entre dos strings

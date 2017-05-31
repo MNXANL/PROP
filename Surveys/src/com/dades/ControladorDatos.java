@@ -13,12 +13,16 @@ import java.util.TreeMap;
 /**
  * Controlador de la capa de datos
  */
-
 public class ControladorDatos {
     String pathEnc = "src/com/dades/DirectorioEncuestas";
     String pathResp = "src/com/dades/DirectorioRespuestas";
     String pathUsers = "src/com/dades/Usuarios.txt";
 
+    /**
+     * Clase para representar una tupla
+     * @param <X>
+     * @param <Y>
+     */
     public class Tuple<X, Y> {
         public final X x;
         public final Y y;
@@ -30,6 +34,12 @@ public class ControladorDatos {
 
     HashMap<String, Tuple<String, String>> users; //nombre, pass y tipo
 
+    /**
+     * Método para hacer login del programa
+     * @param usuario Usuario que entra
+     * @param pass Contraseña del usuario
+     * @return Codigo de login: 0 si no existe usuario, 1 con contraseña incorrecta y 2 login correcto
+     */
     public int logIn (String usuario, String pass) {
         if (users.containsKey(usuario)) {
             String p = users.get(usuario).x;
@@ -44,6 +54,13 @@ public class ControladorDatos {
         return 0;
     }
 
+    /**
+     * Crear nuevo usuario
+     * @param tipo Privilegios de usuario
+     * @param nombre Nombre del usuario
+     * @param pass Contraseña del usuario
+     * @throws ExcUsuarioExistente
+     */
     public void nuevoUsuario (String tipo, String nombre, String pass) throws ExcUsuarioExistente {
         try {
             if (!users.containsKey(nombre)) {
@@ -73,6 +90,11 @@ public class ControladorDatos {
         }
     }
 
+    /**
+     * Cargar los datos de disco al programa
+     * @return Arbol que representa un conjunto de encuestas
+     * @throws ExcFormatoIncorrecto
+     */
     public TreeMap<String,Encuesta> cargar () throws ExcFormatoIncorrecto{
         //cargamos usuarios existentes
         users = new HashMap<>();
@@ -87,16 +109,10 @@ public class ControladorDatos {
                 users.put(nombre,p);
             }
             bufferedReader.close();
-        }
-        catch(FileNotFoundException ex) {
-            System.out.println(
-                    "Unable to open file '" +
-                            pathUsers + "'");
-        }
-        catch(IOException ex) {
-            System.out.println(
-                    "Error reading file '"
-                            + pathUsers + "'");
+        } catch(FileNotFoundException ex) {
+            System.out.println("Unable to open file '" + pathUsers + "'");
+        } catch(IOException ex) {
+            System.out.println("Error reading file '" + pathUsers + "'");
         }
 
         //cargamos encuestas existentes
@@ -116,37 +132,60 @@ public class ControladorDatos {
 
         for (int i = 0; i < listOfFiles.length; i++) {
             String path = listOfFiles[i].getAbsolutePath();
-
-
             RespuestasEncuesta re = RespuestasEncuesta.importar(listOfFiles[i].getAbsolutePath());
             enc.get(re.getNombreEncuesta_respondida()).responder(re);
         }
         return enc;
     }
 
+    /**
+     * Metodo para guardar encuesta en disco
+     * @param e Encuesta a guardar
+     */
     public void guardarEncuesta (Encuesta e) {
         e.exportar(pathEnc+"/"+e.getTitulo()+".txt");
     }
 
+    /**
+     * Metodo para actualizar encuesta en disco
+     * @param titulo Titulo de la encuesta a actualizar
+     * @param e Encuesta a actualizar
+     */
     public void actualizarEncuesta (String titulo, Encuesta e) {
         borrarEncuesta(titulo);
         e.exportar(pathEnc+"/"+e.getTitulo()+".txt");
     }
 
+    /**
+     * Metodo para borrar encuesta en disco
+     * @param titulo Titulo de la encuesta a borrar
+     */
     public void borrarEncuesta (String titulo) {
         File f = new File (pathEnc+"/"+titulo+".txt");
         f.delete();
     }
 
+    /**
+     * Metodo para guardar respuestas de encuesta en disco
+     * @param re Respuestas de encuesta a guardar
+     */
     public void guardarRespuestasEncuesta (RespuestasEncuesta re) {
         re.exportar(pathResp + "/" + re.getNombreFichero()  +".txt");
     }
 
+    /**
+     * Metodo para actualizar respuestas de encuesta en disco
+     * @param re Respuestas de encuesta a actualizar
+     */
     public void actualizarRespuestasEncuesta (RespuestasEncuesta re) {
         borrarRespuestasEncuesta(re.toString()); //maybe not like this
         re.exportar(pathResp + "/" + re.getNombreFichero()  +".txt");
     }
 
+    /**
+     * Metodo para borrar respuestas de encuesta en disco
+     * @param re Respuestas de encuesta a borrar
+     */
     public void borrarRespuestasEncuesta (String titulo) {
         File f = new File (pathResp + "/" + titulo + ".txt");
         f.delete();

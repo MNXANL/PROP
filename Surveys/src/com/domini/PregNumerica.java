@@ -46,23 +46,8 @@ public class PregNumerica extends Pregunta {
     }
 
     /**
-     * Actualiza el valorMin de la clase
-     * @param valorMin valor minimo a actualizar
-     */
-    public void setValorMin(double valorMin) {
-        this.valorMin = valorMin;
-    }
-    /**
-     * Actualiza el valorMax de la clase
-     * @param valorMax valor maximo a actualizar
-     */
-    public void setValorMax(double valorMax) {
-        this.valorMax = valorMax;
-    }
-
-    /**
      * Obtener el tipo de la pregunta
-     * @return
+     * @return Tipo de la pregunta
      */
     public String tipo () {
         return "PN";
@@ -70,12 +55,15 @@ public class PregNumerica extends Pregunta {
 
     /**
      * Obtener toda la información de la pregunta a excepción del título
-     * @return
+     * @return Contenido de la pregunta
      */
     public String getContenido () {
         return valorMin+"\n"+valorMax+"\n";
     }
 
+    /**
+     * Metodo para escribir por consola el contenido de la pregunta
+     */
     public void leer () {
         System.out.println(getTitulo());
         System.out.println(valorMin);

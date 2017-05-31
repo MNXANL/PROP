@@ -244,6 +244,9 @@ public class VistaPrincipalAdmin {
         }
     }
 
+    /**
+     * Método para visualizar la vista
+     */
     public void show() {
         frame.setContentPane(panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -251,6 +254,9 @@ public class VistaPrincipalAdmin {
         frame.setVisible(true);
     }
 
+    /**
+     * Método para cerrar la vista
+     */
     public void close() {
         frame.setVisible(false);
     }
@@ -313,6 +319,10 @@ public class VistaPrincipalAdmin {
         }
     }
 
+    /**
+     * Aviso de la vista
+     * @param mensaje Mensaje que sale en el aviso
+     */
     public void aviso(String mensaje) {
         JOptionPane optionPane = new JOptionPane(mensaje, JOptionPane.ERROR_MESSAGE);
         String[] strBotones = {"Aceptar"};

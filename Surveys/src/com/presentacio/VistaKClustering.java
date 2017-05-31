@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by aleixballetbo on 27/5/17.
+ * Vista de seleccion de la K del clustering
  */
 public class VistaKClustering {
     private JFrame frame = new JFrame("Selección de número de clusters");
@@ -18,6 +18,12 @@ public class VistaKClustering {
 
     private ControladorPresentacio ctrlPres;
 
+    /**
+     * Creadora
+     * @param ctrlPres Referencia al controlador de presentacion
+     * @param enc Titulo de la encuesta
+     * @param maxClusters Maximo de clusters del sistema
+     */
     public VistaKClustering(ControladorPresentacio ctrlPres, String enc, int maxClusters) {
         this.ctrlPres = ctrlPres;
         spinner1.setModel(new SpinnerNumberModel(1, 1, maxClusters, 1));

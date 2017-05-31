@@ -1,13 +1,21 @@
 package com.domini;
 
 /**
- * Created by aleixballetbo on 25/4/17.
+ * Excepcion de formato incorrecto
  */
 public class ExcFormatoIncorrecto extends Exception {
+
+    /**
+     * Constructora basica
+     */
     public ExcFormatoIncorrecto() {
         super();
     }
 
+    /**
+     * Constructora con parámetro
+     * @param s Texto de la excepcion
+     */
     public ExcFormatoIncorrecto(String s) {
         super(s);
     }

@@ -14,12 +14,15 @@ public class PregRespuestaLibre extends Pregunta {
 
     /**
      * Obtener el tipo de la pregunta
-     * @return
+     * @return Tipo de la pregunta
      */
     public String tipo () {
         return "PRL";
     }
 
+    /**
+     * Metodo para escribir por consola el contenido de la pregunta
+     */
     public void leer () {
         System.out.println(getTitulo());
     }

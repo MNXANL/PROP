@@ -37,6 +37,9 @@ public class PregCualitativaOrdenada extends Pregunta {
         return contenido;
     }
 
+    /**
+     * Metodo para escribir por consola el contenido de la pregunta
+     */
     public void leer () {
         System.out.println(getTitulo());
         for(int i = 0; i < opciones.size(); i++) {
@@ -44,10 +47,19 @@ public class PregCualitativaOrdenada extends Pregunta {
         }
     }
 
+    /**
+     * Obtener tamanyo preguntas
+     * @return maximo numero de preguntas
+     */
     public int getSize() {
         return opciones.size();
     }
 
+    /**
+     * Metodo para obtener pregunta iesima
+     * @param i indice de la pregunta
+     * @return La pregunta en la posicion i
+     */
     public String getPreguntaIesima(int i) {
         return opciones.get(i);
     }
