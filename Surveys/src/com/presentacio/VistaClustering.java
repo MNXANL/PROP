@@ -18,7 +18,7 @@ import java.awt.event.InputEvent;
 import java.awt.event.MouseEvent;
 
 /**
- * Created by Alejandro on 26/05/2017.
+ * Clase de la vista del clustering
  */
 public class VistaClustering {
     private JFrame frame;

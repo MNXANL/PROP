@@ -186,6 +186,9 @@ public class VistaPrincipalUsuario {
         });
     }
 
+    /**
+     * Metodo para actualizar la vista en caso de que se busque por palabras
+     */
     private void palabrasClaveChanged() {
         if (palClave.getText().equals("")) {
             comboBox1.setEnabled(true);
@@ -208,6 +211,9 @@ public class VistaPrincipalUsuario {
         }
     }
 
+    /**
+     * Método para visualizar la vista
+     */
     public void show() {
         frame.setContentPane(panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -215,6 +221,9 @@ public class VistaPrincipalUsuario {
         frame.setVisible(true);
     }
 
+    /**
+     * Método para cerrar la vista
+     */
     public void close() {
         frame.setVisible(false);
     }

@@ -11,7 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by aleixballetbo on 16/5/17.
+ * Clase de vista de importacion de encuesta
  */
 public class ImportarEncuesta {
     private ControladorPresentacio ctrlPres;
@@ -20,11 +20,18 @@ public class ImportarEncuesta {
     private JPanel panel1;
     private JFileChooser fileChooser;
 
+    /**
+     * Constructora de la vista de importacion de encuesta
+     * @param ctrlPres Referencia al controlador de presentacion
+     */
     public ImportarEncuesta(ControladorPresentacio ctrlPres) {
         this.ctrlPres = ctrlPres;
         asignarListeners();
     }
 
+    /**
+     * Método para asignar los listeners de la vista.
+     */
     public void asignarListeners() {
         FileFilter txt = new FileNameExtensionFilter("txt", "txt");
         fileChooser.setFileFilter(txt);
@@ -48,6 +55,10 @@ public class ImportarEncuesta {
         });
     }
 
+    /**
+     * Método que lanza un popup de aviso
+     * @param mensaje Mensaje que se escribe en el aviso
+     */
     public void aviso(String mensaje) {
         JOptionPane optionPane = new JOptionPane(mensaje, JOptionPane.ERROR_MESSAGE);
         String[] strBotones = {"Aceptar"};
@@ -58,6 +69,9 @@ public class ImportarEncuesta {
         dialogOptionPane.setVisible(true);
     }
 
+    /**
+     * Método para visualizar la vista
+     */
     public void show() {
         frame.setContentPane(panel1);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -65,6 +79,9 @@ public class ImportarEncuesta {
         frame.setVisible(true);
     }
 
+    /**
+     * Método para cerrar la vista
+     */
     public void close() {
         frame.setVisible(false);
     }

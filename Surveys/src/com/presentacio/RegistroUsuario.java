@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by aleixballetbo on 14/5/17.
+ * Clase de vista de registro de usuario
  */
 public class RegistroUsuario {
     private ControladorPresentacio ctrlPres;
@@ -20,11 +20,18 @@ public class RegistroUsuario {
     private JPasswordField pass2TextField;
     private JButton crearUsuarioButton;
 
+    /**
+     * Constructora de clase
+     * @param ctrlPres Referencia al controlador de presentacion
+     */
     public RegistroUsuario(ControladorPresentacio ctrlPres) {
         this.ctrlPres = ctrlPres;
         asignarListeners();
     }
 
+    /**
+     * Método para asignar los listeners de la vista.
+     */
     public void asignarListeners() {
         crearUsuarioButton.addActionListener(new ActionListener() {
             @Override
@@ -43,6 +50,10 @@ public class RegistroUsuario {
         });
     }
 
+    /**
+     * Aviso de la vista
+     * @param contenido Mensaje que sale en el aviso
+     */
     private void lanzarAviso(String contenido) {
         JOptionPane optionPane = new JOptionPane(contenido, JOptionPane.ERROR_MESSAGE);
         String[] opciones = {"Aceptar"};
@@ -53,6 +64,9 @@ public class RegistroUsuario {
         dialogOptionPane.setVisible(true);
     }
 
+    /**
+     * Método para visualizar la vista
+     */
     public void show() {
         frame.setContentPane(panel1);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -60,6 +74,9 @@ public class RegistroUsuario {
         frame.setVisible(true);
     }
 
+    /**
+     * Método para cerrar la vista
+     */
     public void close() {
         frame.setVisible(false);
     }
