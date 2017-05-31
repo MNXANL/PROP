@@ -12,6 +12,7 @@ import java.util.Objects;
  */
 public class RespLibre extends Respuesta{
     private String resp;
+    HashSet<String> funcWords;
 
     /**
      *
@@ -20,6 +21,7 @@ public class RespLibre extends Respuesta{
 
     public RespLibre(String s){
         resp=s;
+        Functionals();
     }
 
     /**
@@ -28,6 +30,7 @@ public class RespLibre extends Respuesta{
      */
     public RespLibre(RespLibre rl){
         resp = new String(rl.get());
+        Functionals();
     }
 
     /**
@@ -106,18 +109,12 @@ public class RespLibre extends Respuesta{
         return cost[len0 - 1];
     }
 
-
     /**
-     * Coge un String y devuelve el conjunto de palabras no funcionales para ser tratado en distance
-     * @param r string de entrada
-     * @return r sin palabras funcionales ni espacios
+     * coger las palabras funcionales y guardarlas en un HashSet
      */
-    private String clean (String r){
-        String [] words = r.split(" ");
+    private void Functionals(){
+        funcWords = new HashSet<>();
         String path = "src/com/dades/PalabrasFuncionales";
-        String result = "";
-        HashSet<String> funcWords = new HashSet<>();
-
         try{
             String line = null;
             FileReader fileReader = new FileReader(path);
@@ -132,6 +129,16 @@ public class RespLibre extends Respuesta{
         catch(IOException ex) {
             System.out.println("Error reading file '" + path + "'");
         }
+    }
+    /**
+     * Coge un String y devuelve el conjunto de palabras no funcionales para ser tratado en distance
+     * @param r string de entrada
+     * @return r sin palabras funcionales ni espacios
+     */
+    private String clean (String r){
+        String [] words = r.split(" ");
+        String result = "";
+
 
         //poner las palabras no funcionales en el string de salida
         for(int i = 0; i!= words.length; ++i){

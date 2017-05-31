@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a6261926-014f-4e17-847e-29161c7babb7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/RespLibre.java" afterPath="$PROJECT_DIR$/src/com/domini/RespLibre.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,21 +25,11 @@
       <file leaf-file-name="Clustering.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
+            <state relative-caret-position="5490">
               <caret line="370" column="79" lean-forward="false" selection-start-line="370" selection-start-column="79" selection-end-line="370" selection-end-column="79" />
               <folding>
                 <marker date="1496249385419" expanded="true" signature="5910:5916" ph="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControladorDominio.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/ControladorDominio.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="104" column="28" lean-forward="false" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -49,26 +39,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PregNumerica.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/PregNumerica.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PregRespuestaLibre.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/PregRespuestaLibre.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -84,14 +54,75 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VistaClustering.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VistaClustering.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="175" column="47" lean-forward="false" selection-start-line="175" selection-start-column="47" selection-end-line="175" selection-end-column="47" />
+            <state relative-caret-position="2175">
+              <caret line="189" column="17" lean-forward="false" selection-start-line="189" selection-start-column="17" selection-end-line="189" selection-end-column="17" />
               <folding>
                 <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
+                <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Respuesta.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/domini/Respuesta.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RespuestasEncuesta.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5576">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RespVacia.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/domini/RespVacia.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RespNumerica.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/domini/RespNumerica.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-732">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RespCualitativaOrdenada.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RespLibre.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/domini/RespLibre.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="112" column="64" lean-forward="false" selection-start-line="112" selection-start-column="64" selection-end-line="112" selection-end-column="64" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -192,13 +223,13 @@
         <option value="$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_pepe.txt" />
         <option value="$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_Juan.txt" />
         <option value="$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_Aleix.txt" />
-        <option value="$PROJECT_DIR$/src/com/domini/RespLibre.java" />
         <option value="$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User2.txt" />
         <option value="$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/EncExt.txt" />
         <option value="$PROJECT_DIR$/src/com/domini/ControladorDominio.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java" />
         <option value="$PROJECT_DIR$/src/com/domini/Clustering.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/RespLibre.java" />
       </list>
     </option>
   </component>
@@ -225,6 +256,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -269,10 +302,6 @@
               <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presentacio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -292,63 +321,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="presentacio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VistaClustering" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Surveys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Surveys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Surveys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Surveys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dades" />
+              <option name="myItemId" value="domini" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="/usr/lib/jvm/java-8-openjdk/lib/tools.jar!/" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -774,13 +757,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491302909485</updated>
     </task>
-    <task id="LOCAL-00008" summary="encuesta">
-      <created>1491388021499</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1491388021499</updated>
-    </task>
     <task id="LOCAL-00009" summary="encuesta">
       <created>1491388075480</created>
       <option name="number" value="00009" />
@@ -1117,7 +1093,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496250938928</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="clustering muestra respuestas">
+      <created>1496251725708</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1496251725708</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1154,7 +1137,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1162,11 +1144,12 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32237872" sideWeight="0.5043924" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3114241" sideWeight="0.4956076" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3114241" sideWeight="0.4956076" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23630673" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18960468" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2316119" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1237,11 +1220,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Encuesta_User39" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Encuesta_User40" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Encuesta_User49" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Encuesta_User55" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Encuesta_User61" />
     <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Encuesta_User67" />
     <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Encuesta_User76" />
     <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Encuesta_User81" />
@@ -1299,13 +1277,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/RespLibre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1413,7 +1384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1421,7 +1391,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1451,7 +1420,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
+        <state relative-caret-position="5490">
           <caret line="370" column="79" lean-forward="false" selection-start-line="370" selection-start-column="79" selection-end-line="370" selection-end-column="79" />
           <folding>
             <marker date="1496249385419" expanded="true" signature="5910:5916" ph="{...}" />
@@ -1461,11 +1430,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="175" column="47" lean-forward="false" selection-start-line="175" selection-start-column="47" selection-end-line="175" selection-end-column="47" />
+        <state relative-caret-position="2175">
+          <caret line="189" column="17" lean-forward="false" selection-start-line="189" selection-start-column="17" selection-end-line="189" selection-end-column="17" />
           <folding>
             <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
+            <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/Respuesta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5576">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespVacia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespNumerica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-732">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespLibre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="112" column="64" lean-forward="false" selection-start-line="112" selection-start-column="64" selection-end-line="112" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
