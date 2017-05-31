@@ -64,7 +64,7 @@ public class VistaClustering {
         frame.setContentPane(CPanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
-        frame.setSize(600, 600);
+        frame.setSize(1000, 600);
         frame.setVisible(true);
         frame.setVisible(true);
 
@@ -164,34 +164,36 @@ public class VistaClustering {
 
     public void ini_rTable(ArrayList<RespuestasEncuesta> resps) {
         int nResps = resps.get(0).getResps().size();
-        String[] columnNames = new String[resps.size()];
-        Object[][] data = new Object[nResps][resps.size()];
-        for (Integer i = 0; i != resps.size(); ++i) {
+        String[] columnNames = new String[nResps + 1];
+        Object[][] data = new Object[resps.size()][nResps + 1];
+        columnNames[0] = "";
+        for (Integer i = 1; i != nResps + 1; ++i) {
             columnNames[i] = "Pregunta " + (i + 1);
         }
-
+        for (int i = 0; i != resps.size(); ++i) {
+            data[i][0] = "Encuestado " + (i + 1);
+        }
         for (int i = 0; i != resps.size(); ++i) {
             ArrayList<Respuesta> rs = resps.get(i).getResps();
-            for (int j = 0; j != rs.size(); ++j) {
+            for (int j = 0; j != nResps; ++j) {
                 Respuesta r = rs.get(j);
-                data[j][i] = rs.get(j);
                 if (r instanceof RespNumerica) {
-                    data[j][i] = ((RespNumerica) r).get();
+                    data[i][j + 1] = ((RespNumerica) r).get();
                 }
                 if (r instanceof RespCualitativaNoOrdenadaUnica) {
-                    data[j][i] = ((RespCualitativaNoOrdenadaUnica) r).getText();
+                    data[i][j + 1] = ((RespCualitativaNoOrdenadaUnica) r).getText();
                 }
                 if (r instanceof RespCualitativaOrdenada) {
-                    data[j][i] = ((RespCualitativaOrdenada) r).getText();
+                    data[i][j + 1] = ((RespCualitativaOrdenada) r).getText();
                 }
                 if (r instanceof RespCualitativaNoOrdenadaMultiple) {
-                    data[j][i] = ((RespCualitativaNoOrdenadaMultiple) r).getMap().values();
+                    data[i][j + 1] = ((RespCualitativaNoOrdenadaMultiple) r).getMap().values();
                 }
                 if (r instanceof RespLibre) {
-                    data[j][i] = ((RespLibre) r).get();
+                    data[i][j + 1] = ((RespLibre) r).get();
                 }
                 if (r instanceof RespVacia) {
-                    data[j][i] = "No contestada";
+                    data[i][j + 1] = "No contestada";
                 }
 
             }
@@ -210,7 +212,7 @@ public class VistaClustering {
             tableModel.addRow(os);
         }
         TableColumnModel tcm = rTable.getColumnModel();
-        for (int i = 0; i != resps.size(); ++i) {
+        for (int i = 0; i != nResps + 1; ++i) {
             tcm.getColumn(i).setPreferredWidth(100);
         }
     }

@@ -126,7 +126,7 @@ public class Clustering {
             //show_clusters(RE,assig,centroids.size());
         }
         else{
-            System.out.println("calling k means");
+            //System.out.println("calling k means");
             return Kmeans(RE,centroids);
         }
     }

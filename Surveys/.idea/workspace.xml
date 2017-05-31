@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a6261926-014f-4e17-847e-29161c7babb7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/Clustering.java" afterPath="$PROJECT_DIR$/src/com/domini/Clustering.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,10 +26,10 @@
       <file leaf-file-name="Clustering.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="368" column="38" lean-forward="false" selection-start-line="368" selection-start-column="38" selection-end-line="368" selection-end-column="38" />
+            <state relative-caret-position="660">
+              <caret line="67" column="53" lean-forward="false" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
               <folding>
-                <marker date="1496248365382" expanded="true" signature="5908:5914" ph="{...}" />
+                <marker date="1496249385419" expanded="true" signature="5910:5916" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -106,13 +108,13 @@
       <file leaf-file-name="VistaClustering.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="213" column="41" lean-forward="false" selection-start-line="213" selection-start-column="41" selection-end-line="213" selection-end-column="41" />
+            <state relative-caret-position="224">
+              <caret line="66" column="26" lean-forward="false" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
               <folding>
                 <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
-                <marker date="1496249264584" expanded="false" signature="8661:8812" ph="UI Designer generated code" />
-                <marker date="1496249264584" expanded="false" signature="9521:9532" ph=" { " />
-                <marker date="1496249264584" expanded="false" signature="9546:9552" ph=" }" />
+                <marker date="1496250574338" expanded="false" signature="8779:8930" ph="UI Designer generated code" />
+                <marker date="1496250574338" expanded="false" signature="9639:9650" ph=" { " />
+                <marker date="1496250574338" expanded="false" signature="9664:9670" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -145,6 +147,7 @@
       <find>runn</find>
       <find>cluster</find>
       <find>clust</find>
+      <find>scrollable1</find>
     </findStrings>
     <replaceStrings>
       <replace>rco</replace>
@@ -216,9 +219,9 @@
         <option value="$PROJECT_DIR$/src/com/domini/RespLibre.java" />
         <option value="$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User2.txt" />
         <option value="$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/EncExt.txt" />
-        <option value="$PROJECT_DIR$/src/com/domini/Clustering.java" />
         <option value="$PROJECT_DIR$/src/com/domini/ControladorDominio.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/Clustering.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" />
       </list>
     </option>
@@ -311,36 +314,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presentacio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VistaClustering" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Surveys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Surveys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domini" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -923,13 +896,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491302909485</updated>
     </task>
-    <task id="LOCAL-00005" summary="nuevas clases">
-      <created>1491306033798</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1491306033798</updated>
-    </task>
     <task id="LOCAL-00006" summary="nuevas clases">
       <created>1491306631149</created>
       <option name="number" value="00006" />
@@ -1266,7 +1232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496249250508</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="clustering muestra respuestas">
+      <created>1496249286134</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1496249286134</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1605,16 +1578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="368" column="38" lean-forward="false" selection-start-line="368" selection-start-column="38" selection-end-line="368" selection-end-column="38" />
-          <folding>
-            <marker date="1496248365382" expanded="true" signature="5908:5914" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/ControladorDominio.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
@@ -1631,15 +1594,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="67" column="53" lean-forward="false" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
+          <folding>
+            <marker date="1496249385419" expanded="true" signature="5910:5916" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="213" column="41" lean-forward="false" selection-start-line="213" selection-start-column="41" selection-end-line="213" selection-end-column="41" />
+        <state relative-caret-position="224">
+          <caret line="66" column="26" lean-forward="false" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
           <folding>
             <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
-            <marker date="1496249264584" expanded="false" signature="8661:8812" ph="UI Designer generated code" />
-            <marker date="1496249264584" expanded="false" signature="9521:9532" ph=" { " />
-            <marker date="1496249264584" expanded="false" signature="9546:9552" ph=" }" />
+            <marker date="1496250574338" expanded="false" signature="8779:8930" ph="UI Designer generated code" />
+            <marker date="1496250574338" expanded="false" signature="9639:9650" ph=" { " />
+            <marker date="1496250574338" expanded="false" signature="9664:9670" ph=" }" />
           </folding>
         </state>
       </provider>
