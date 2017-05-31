@@ -16,12 +16,14 @@ public class RespVacia extends Respuesta{
         else
             return 1;
     }
+
     @Override
     public boolean equals(Object o){
         if(!(o instanceof RespVacia))
             return false;
         return true;
     }
+
     @Override
     public int hashCode(){
         return 42;

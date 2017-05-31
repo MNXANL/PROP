@@ -7,6 +7,7 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.nio.DoubleBuffer;
 import java.util.ArrayList;
 
 
@@ -398,6 +399,10 @@ public class VistaRespInteractiva {
         frame.setVisible(false);
     }
 
+    /**
+     * Aviso de la vista
+     * @param mensaje Mensaje que sale en el aviso
+     */
     public void aviso(String mensaje) {
         JOptionPane optionPane = new JOptionPane(mensaje, JOptionPane.ERROR_MESSAGE);
         String[] strBotones = {"Aceptar"};

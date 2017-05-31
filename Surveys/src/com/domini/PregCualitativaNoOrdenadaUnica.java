@@ -19,7 +19,7 @@ public class PregCualitativaNoOrdenadaUnica extends Pregunta {
 
     /**
      * Obtener el tipo de la pregunta
-     * @return
+     * @return Tipo de la pregunta
      */
     public String tipo () {
         return "PCNOU";
@@ -27,7 +27,7 @@ public class PregCualitativaNoOrdenadaUnica extends Pregunta {
 
     /**
      * Obtener toda la información de la pregunta a excepción del título
-     * @return
+     * @return Contenido de la pregunta
      */
     public String getContenido () {
         String contenido = "";
@@ -37,6 +37,9 @@ public class PregCualitativaNoOrdenadaUnica extends Pregunta {
         return contenido;
     }
 
+    /**
+     * Metodo para escribir por consola el contenido de la pregunta
+     */
     public void leer () {
         System.out.println(getTitulo());
         for(int i = 0; i < opciones.size(); i++) {
@@ -44,6 +47,11 @@ public class PregCualitativaNoOrdenadaUnica extends Pregunta {
         }
     }
 
+    /**
+     * Metodo para obtener pregunta iesima
+     * @param i indice de la pregunta
+     * @return La pregunta en la posicion i
+     */
     public String getPreguntaIesima(int i) {
         return opciones.get(i);
     }

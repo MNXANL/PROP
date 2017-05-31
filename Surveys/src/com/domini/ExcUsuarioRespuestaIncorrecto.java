@@ -1,13 +1,20 @@
 package com.domini;
 
 /**
- * Created by aleixballetbo on 21/5/17.
+ * Excepcion de usuario existente
  */
 public class ExcUsuarioRespuestaIncorrecto extends Exception {
+    /**
+     * Constructora basica
+     */
     public ExcUsuarioRespuestaIncorrecto() {
         super();
     }
 
+    /**
+     * Constructora con parámetro
+     * @param s Texto de la excepcion
+     */
     public ExcUsuarioRespuestaIncorrecto(String s) {
         super(s);
     }

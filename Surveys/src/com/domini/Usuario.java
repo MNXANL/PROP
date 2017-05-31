@@ -15,12 +15,16 @@ public class Usuario {
     }
 
     /**
-     *
+     * Metodo para escribir en pantalla el nombre de usuario
      */
     public void leer () {
         System.out.println(userName);
     }
 
+    /**
+     * Metodo para obtener el nombre de usuario
+     * @return Nombre del usuario
+     */
     public String getUsername() {
         return userName;
     }

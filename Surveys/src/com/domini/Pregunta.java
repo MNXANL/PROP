@@ -15,7 +15,7 @@ public class Pregunta {
 
     /**
      * Creadora de Pregunta con título
-     * @param titulo
+     * @param titulo Titulo de la pregunta
      */
     public Pregunta(String titulo) {
         this.titulo = titulo;
@@ -23,7 +23,7 @@ public class Pregunta {
 
     /**
      * Obtener el título de la pregunta
-     * @return
+     * @return Titulo de pregunta
      */
     public String getTitulo() {
         return titulo;
@@ -31,8 +31,8 @@ public class Pregunta {
     }
 
     /**
-     *
-     * @param titulo
+     * Modificar el titulo de la pregunta
+     * @param titulo El nuevo titulo de la pregunta
      */
     public void setTitulo(String titulo) {
         this.titulo = titulo;
@@ -40,22 +40,27 @@ public class Pregunta {
 
     /**
      * Obtener toda la información de la pregunta a excepción del título
-     * @return
+     * @return Contenido de la pregunta
      */
     public String getContenido () {
         return "";
     }
 
-
-    public void leer ()     {}
+    /**
+     * Metodo por defecto de leer
+     */
+    public void leer () {}
 
     /**
      * Obtener el tipo de la pregunta
-     * @return
+     * @return Tipo de pregunta
      */
     public String tipo () {
         return null;
     }
 
+    /**
+     * Metodo por defecto de respuesta
+     */
     public void respuesta() {}
 }
