@@ -86,7 +86,8 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--n', type=int, default=100,
                      help='El número de Encuestas a generar')
-
+parser.add_argument('--p', type=int, default=5,
+                     help='La probabilidad de que una pregunta dada no sea contestada')
 
 
 args = parser.parse_args()
