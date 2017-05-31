@@ -1,0 +1,59 @@
+Título
+EncExt
+
+Usuario
+User1
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+4
+5
+Mucho
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RCNOM
+2
+0
+Fiat
+3
+Seat
+
+Respuesta pregunta
+RN
+46.745326163099975
+0.0
+100.0
+
+Respuesta pregunta
+RL
+My mom creates a sloth
+
+Respuesta pregunta
+RCNOM
+4
+0
+Vaporwave
+2
+Eurobeat
+3
+FutureFunk
+4
+Trumpwave
+
+Respuesta pregunta
+RN
+154
+100.0
+220.0
+
+Respuesta pregunta
+RL
+A sloth gives some guy
+
+Final respuestas encuesta

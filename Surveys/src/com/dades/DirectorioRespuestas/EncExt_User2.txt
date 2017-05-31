@@ -1,0 +1,59 @@
+Título
+EncExt
+
+Usuario
+User2
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+3
+5
+Bastante
+
+Respuesta pregunta
+RCNOU
+2
+Amarillo
+
+Respuesta pregunta
+RCNOM
+1
+2
+Ford
+
+Respuesta pregunta
+RN
+17.327316598923638
+0.0
+100.0
+
+Respuesta pregunta
+RL
+A cat with rabies spies on a sloth
+
+Respuesta pregunta
+RCNOM
+4
+0
+Vaporwave
+2
+Eurobeat
+3
+FutureFunk
+4
+Trumpwave
+
+Respuesta pregunta
+RN
+108
+100.0
+220.0
+
+Respuesta pregunta
+RL
+A dude spies on the king
+
+Final respuestas encuesta
