@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a6261926-014f-4e17-847e-29161c7babb7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/Clustering.java" afterPath="$PROJECT_DIR$/src/com/domini/Clustering.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/ControladorDominio.java" afterPath="$PROJECT_DIR$/src/com/domini/ControladorDominio.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java" afterPath="$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,8 +96,8 @@
       <file leaf-file-name="ControladorPresentacio.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="149" column="37" lean-forward="false" selection-start-line="149" selection-start-column="37" selection-end-line="149" selection-end-column="37" />
+            <state relative-caret-position="1124">
+              <caret line="209" column="37" lean-forward="false" selection-start-line="209" selection-start-column="37" selection-end-line="209" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -114,6 +110,9 @@
               <caret line="213" column="41" lean-forward="false" selection-start-line="213" selection-start-column="41" selection-end-line="213" selection-end-column="41" />
               <folding>
                 <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
+                <marker date="1496249264584" expanded="false" signature="8661:8812" ph="UI Designer generated code" />
+                <marker date="1496249264584" expanded="false" signature="9521:9532" ph=" { " />
+                <marker date="1496249264584" expanded="false" signature="9546:9552" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -924,13 +923,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491302909485</updated>
     </task>
-    <task id="LOCAL-00004" summary="Encuesta">
-      <created>1491304939838</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1491304939838</updated>
-    </task>
     <task id="LOCAL-00005" summary="nuevas clases">
       <created>1491306033798</created>
       <option name="number" value="00005" />
@@ -1267,7 +1259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496247751329</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="clustering muestra respuestas">
+      <created>1496249250508</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1496249250508</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1363,7 +1362,8 @@
     <MESSAGE value="clustering recuperado chavales" />
     <MESSAGE value="vista centroides" />
     <MESSAGE value="pruebas para el clustering" />
-    <option name="LAST_COMMIT_MESSAGE" value="pruebas para el clustering" />
+    <MESSAGE value="clustering muestra respuestas" />
+    <option name="LAST_COMMIT_MESSAGE" value="clustering muestra respuestas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1625,8 +1625,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="149" column="37" lean-forward="false" selection-start-line="149" selection-start-column="37" selection-end-line="149" selection-end-column="37" />
+        <state relative-caret-position="1124">
+          <caret line="209" column="37" lean-forward="false" selection-start-line="209" selection-start-column="37" selection-end-line="209" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1637,6 +1637,9 @@
           <caret line="213" column="41" lean-forward="false" selection-start-line="213" selection-start-column="41" selection-end-line="213" selection-end-column="41" />
           <folding>
             <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
+            <marker date="1496249264584" expanded="false" signature="8661:8812" ph="UI Designer generated code" />
+            <marker date="1496249264584" expanded="false" signature="9521:9532" ph=" { " />
+            <marker date="1496249264584" expanded="false" signature="9546:9552" ph=" }" />
           </folding>
         </state>
       </provider>
