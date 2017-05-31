@@ -173,7 +173,7 @@ public class VistaClustering {
             columnNames[i] = "Pregunta " + (i + 1);
         }
         for (int i = 0; i != resps.size(); ++i) {
-            data[i][0] = "Encuestado " + (i + 1);
+            data[i][0] = resps.get(i).getUser();
         }
         for (int i = 0; i != resps.size(); ++i) {
             ArrayList<Respuesta> rs = resps.get(i).getResps();
