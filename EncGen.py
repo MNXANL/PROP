@@ -4,9 +4,9 @@ import argparse
 #######################################################################################
 #                                A E S T H E T I C                                    #
 #######################################################################################
-def coinToss():
+def coinToss(p):
 	x = random.randint(0,99)
-	return x <= 5
+	return x <= p
 
 def ansRCO():
 	ret = 'RCO\n'
@@ -72,7 +72,7 @@ p_verbs = ["eat", "kick", "give", "treat", "meet with", "create", "hack", "confi
 infinitives = ["to make a pie.", "for no apparent reason.", "because the sky is green.", "for a disease.", "to be able to make toast explode.", "to know more about archeology."]
 
 def ansRL():
-	return 'RL\n'+random.choice(s_nouns)+" "+ random.choice(s_verbs)+" "+ random.choice(s_nouns).lower() or random.choice(p_nouns).lower()+" "+ random.choice(infinitives) +'\n\n'
+	return 'RL\n'+(random.choice(s_nouns)+" "+ random.choice(s_verbs)+" "+ random.choice(s_nouns).lower() or random.choice(p_nouns).lower()+" "+ random.choice(infinitives) )+'\n\n'
 
 
 
@@ -94,6 +94,7 @@ args = parser.parse_args()
 if args.n == None :
     parser.print_help()
 n = args.n   
+p = args.p
 
 for x in range (0,n):
 
@@ -102,37 +103,37 @@ for x in range (0,n):
 	file.write('Fecha\n18/05/2017 10:11:12\n\n')
 
 	file.write('Respuesta pregunta\n')
-	if coinToss():
+	if coinToss(p):
 		file.write('RV\n\n')
 	else:
 		file.write(ansRCO())
 
 	file.write('Respuesta pregunta\n')	
-	if coinToss():
+	if coinToss(p):
 		file.write('RV\n\n')
 	else:
 		file.write(ansRCNOU())
 	
 	file.write('Respuesta pregunta\n')	
-	if coinToss():
+	if coinToss(p):
 		file.write('RV\n\n')
 	else:
 		file.write(ansRCNOM())
 
 
 	file.write('Respuesta pregunta\n')
-	if coinToss():
+	if coinToss(p):
 		file.write('RV\n\n')
 	else:
 		file.write(ansRN())
 
 	file.write('Respuesta pregunta\n')	
-	if coinToss():
+	if coinToss(p):
 		file.write('RV\n\n')
 	else:
 		file.write(ansRL())				
 
-	file.write("\n\nFinal respuestas encuesta")
+	file.write("Final respuestas encuesta")
 
 
 
