@@ -1,0 +1,35 @@
+Título
+Encuesta
+
+Usuario
+User67
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+2
+5
+Regular
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RCNOM
+1
+0
+Opel
+
+Respuesta pregunta
+RN
+0.06797665766750227
+0.0
+10.0
+
+Respuesta pregunta
+RL
+A cat with rabies creates a cat with rabies
+
+Final respuestas encuesta

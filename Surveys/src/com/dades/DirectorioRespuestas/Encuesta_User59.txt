@@ -1,0 +1,39 @@
+Título
+Encuesta
+
+Usuario
+User59
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+3
+5
+Bastante
+
+Respuesta pregunta
+RCNOU
+1
+Azul
+
+Respuesta pregunta
+RCNOM
+2
+0
+Opel
+3
+Nissan
+
+Respuesta pregunta
+RN
+7.819027721882886
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Some guy treats the king
+
+Final respuestas encuesta

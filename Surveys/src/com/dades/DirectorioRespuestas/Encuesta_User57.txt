@@ -1,0 +1,39 @@
+Título
+Encuesta
+
+Usuario
+User57
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+4
+5
+Mucho
+
+Respuesta pregunta
+RCNOU
+0
+Rojo
+
+Respuesta pregunta
+RCNOM
+2
+0
+Opel
+2
+Hyundai
+
+Respuesta pregunta
+RN
+6.5027330934366745
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Your homie retards my mom
+
+Final respuestas encuesta

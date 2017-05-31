@@ -1,0 +1,33 @@
+Título
+Encuesta
+
+Usuario
+User2
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+3
+5
+Bastante
+
+Respuesta pregunta
+RCNOU
+1
+Azul
+
+Respuesta pregunta
+RCNOM
+1
+0
+Opel
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RV
+
+Final respuestas encuesta

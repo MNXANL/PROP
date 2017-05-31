@@ -2,7 +2,7 @@ Título
 EncExt
 
 Usuario
-User1
+User38
 
 Fecha
 21/05/2017 10:14:12
@@ -15,8 +15,8 @@ Muy poco
 
 Respuesta pregunta
 RCNOU
-3
-Verde
+1
+Azul
 
 Respuesta pregunta
 RCNOM
@@ -26,28 +26,33 @@ Ford
 
 Respuesta pregunta
 RN
-97.15811408797667
+37.911023837478766
 0.0
 100.0
 
 Respuesta pregunta
 RL
-My mom explodes a sloth
+Superman retards your homie
 
 Respuesta pregunta
 RCNOM
+5
+0
+Vaporwave
 1
+Rosswave
+2
+Eurobeat
+3
+FutureFunk
 4
 Trumpwave
 
 Respuesta pregunta
-RN
-215
-100.0
-220.0
+RV
 
 Respuesta pregunta
 RL
-The king tries to automate a dude
+Some guy eats superman
 
 Final respuestas encuesta

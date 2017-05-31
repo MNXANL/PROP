@@ -1,0 +1,39 @@
+Título
+Encuesta
+
+Usuario
+User44
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+1
+5
+Poco
+
+Respuesta pregunta
+RCNOU
+2
+Amarillo
+
+Respuesta pregunta
+RCNOM
+2
+1
+Renault
+2
+Hyundai
+
+Respuesta pregunta
+RN
+6.579098703523783
+0.0
+10.0
+
+Respuesta pregunta
+RL
+A dude meets with a cat with rabies
+
+Final respuestas encuesta

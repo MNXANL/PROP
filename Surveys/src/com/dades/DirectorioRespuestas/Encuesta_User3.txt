@@ -1,0 +1,39 @@
+Título
+Encuesta
+
+Usuario
+User3
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+1
+5
+Poco
+
+Respuesta pregunta
+RCNOU
+3
+Verde
+
+Respuesta pregunta
+RCNOM
+2
+1
+Renault
+2
+Hyundai
+
+Respuesta pregunta
+RN
+2.856677367094127
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Superman flees from my mom
+
+Final respuestas encuesta

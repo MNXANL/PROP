@@ -1,0 +1,31 @@
+Título
+Encuesta
+
+Usuario
+User14
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RCNOU
+3
+Verde
+
+Respuesta pregunta
+RCNOM
+1
+3
+Nissan
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RL
+A cat with rabies explodes your homie
+
+Final respuestas encuesta

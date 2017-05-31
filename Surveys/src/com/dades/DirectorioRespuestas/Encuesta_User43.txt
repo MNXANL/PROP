@@ -1,0 +1,37 @@
+Título
+Encuesta
+
+Usuario
+User43
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+4
+5
+Mucho
+
+Respuesta pregunta
+RCNOU
+2
+Amarillo
+
+Respuesta pregunta
+RCNOM
+1
+1
+Renault
+
+Respuesta pregunta
+RN
+4.2690490030334525
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Superman tries to automate a dude
+
+Final respuestas encuesta

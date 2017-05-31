@@ -2,52 +2,46 @@ Título
 EncExt
 
 Usuario
-User1
+User3
 
 Fecha
 21/05/2017 10:14:12
 
 Respuesta pregunta
-RCO
-0
-5
-Muy poco
+RV
 
 Respuesta pregunta
 RCNOU
-3
-Verde
+0
+Rojo
 
 Respuesta pregunta
 RCNOM
 1
-2
-Ford
+3
+Seat
 
 Respuesta pregunta
 RN
-97.15811408797667
+26.95217821147701
 0.0
 100.0
 
 Respuesta pregunta
 RL
-My mom explodes a sloth
+A cat with rabies hacks superman
 
 Respuesta pregunta
-RCNOM
-1
-4
-Trumpwave
+RV
 
 Respuesta pregunta
 RN
-215
+181
 100.0
 220.0
 
 Respuesta pregunta
 RL
-The king tries to automate a dude
+A cat with rabies explodes this cool guy my gardener met yesterday
 
 Final respuestas encuesta

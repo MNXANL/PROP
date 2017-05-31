@@ -1,0 +1,34 @@
+Título
+Encuesta
+
+Usuario
+User51
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+0
+5
+Muy poco
+
+Respuesta pregunta
+RCNOU
+1
+Azul
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RN
+2.0072166671353555
+0.0
+10.0
+
+Respuesta pregunta
+RL
+A cat with rabies tries to automate a cat with rabies
+
+Final respuestas encuesta

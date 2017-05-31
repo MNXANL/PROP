@@ -1,0 +1,39 @@
+Título
+Encuesta
+
+Usuario
+User55
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+2
+5
+Regular
+
+Respuesta pregunta
+RCNOU
+2
+Amarillo
+
+Respuesta pregunta
+RCNOM
+2
+1
+Renault
+2
+Hyundai
+
+Respuesta pregunta
+RN
+0.2175307529029813
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Your homie spies on superman
+
+Final respuestas encuesta

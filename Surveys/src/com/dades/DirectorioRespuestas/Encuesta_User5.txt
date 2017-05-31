@@ -1,0 +1,37 @@
+Título
+Encuesta
+
+Usuario
+User5
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+4
+5
+Mucho
+
+Respuesta pregunta
+RCNOU
+2
+Amarillo
+
+Respuesta pregunta
+RCNOM
+1
+2
+Hyundai
+
+Respuesta pregunta
+RN
+3.9343428979509873
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Superman explodes this cool guy my gardener met yesterday
+
+Final respuestas encuesta

@@ -1,0 +1,37 @@
+Título
+Encuesta
+
+Usuario
+User47
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+3
+5
+Bastante
+
+Respuesta pregunta
+RCNOU
+1
+Azul
+
+Respuesta pregunta
+RCNOM
+1
+1
+Renault
+
+Respuesta pregunta
+RN
+5.486179542512838
+0.0
+10.0
+
+Respuesta pregunta
+RL
+My mom gives a sloth
+
+Final respuestas encuesta

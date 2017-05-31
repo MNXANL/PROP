@@ -2,52 +2,51 @@ Título
 EncExt
 
 Usuario
-User1
+User7
 
 Fecha
 21/05/2017 10:14:12
 
 Respuesta pregunta
-RCO
-0
-5
-Muy poco
+RV
 
 Respuesta pregunta
 RCNOU
-3
-Verde
+1
+Azul
 
 Respuesta pregunta
 RCNOM
 1
-2
-Ford
+3
+Seat
 
 Respuesta pregunta
 RN
-97.15811408797667
+60.78809687796195
 0.0
 100.0
 
 Respuesta pregunta
 RL
-My mom explodes a sloth
+Your homie hacks my mom
 
 Respuesta pregunta
 RCNOM
+2
 1
+Rosswave
 4
 Trumpwave
 
 Respuesta pregunta
 RN
-215
+149
 100.0
 220.0
 
 Respuesta pregunta
 RL
-The king tries to automate a dude
+A cat with rabies tries to automate my mom
 
 Final respuestas encuesta

@@ -1,0 +1,34 @@
+Título
+Encuesta
+
+Usuario
+User61
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+0
+5
+Muy poco
+
+Respuesta pregunta
+RCNOU
+0
+Rojo
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RN
+8.88380868441409
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Your homie hacks superman
+
+Final respuestas encuesta

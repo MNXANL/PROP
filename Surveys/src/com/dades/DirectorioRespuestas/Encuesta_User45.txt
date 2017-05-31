@@ -1,0 +1,39 @@
+Título
+Encuesta
+
+Usuario
+User45
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+3
+5
+Bastante
+
+Respuesta pregunta
+RCNOU
+2
+Amarillo
+
+Respuesta pregunta
+RCNOM
+2
+0
+Opel
+1
+Renault
+
+Respuesta pregunta
+RN
+0.08493125148577807
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Your homie configures your homie
+
+Final respuestas encuesta

@@ -5,7 +5,7 @@ Usuario
 User0
 
 Fecha
-18/05/2017 10:11:12
+21/05/2017 10:14:12
 
 Respuesta pregunta
 RCO
@@ -15,44 +15,44 @@ Bastante
 
 Respuesta pregunta
 RCNOU
-2
-Amarillo
+0
+Rojo
 
 Respuesta pregunta
 RCNOM
 2
 0
 Fiat
-3
-Seat
+1
+Toyota
 
 Respuesta pregunta
 RN
-88.41700982068434
+57.48638288245864
 0.0
 100.0
+
+Respuesta pregunta
+RL
+My mom configures the king
+
+Respuesta pregunta
+RCNOM
+4
+0
+Vaporwave
+1
+Rosswave
+2
+Eurobeat
+4
+Trumpwave
 
 Respuesta pregunta
 RV
 
 Respuesta pregunta
-RCNOM
-3
-0
-Vaporwave
-3
-FutureFunk
-4
-Trumpwave
-
-Respuesta pregunta
-RN
-109
-100.0
-220.0
-
-Respuesta pregunta
 RL
-Superman spies on the king
+A sloth flees from superman
 
 Final respuestas encuesta

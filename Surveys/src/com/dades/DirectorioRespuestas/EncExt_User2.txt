@@ -5,18 +5,18 @@ Usuario
 User2
 
 Fecha
-18/05/2017 10:11:12
+21/05/2017 10:14:12
 
 Respuesta pregunta
 RCO
-3
+4
 5
-Bastante
+Mucho
 
 Respuesta pregunta
 RCNOU
-2
-Amarillo
+1
+Azul
 
 Respuesta pregunta
 RCNOM
@@ -26,34 +26,30 @@ Ford
 
 Respuesta pregunta
 RN
-17.327316598923638
+77.01169171051353
 0.0
 100.0
 
 Respuesta pregunta
 RL
-A cat with rabies spies on a sloth
+My mom meets with some guy
 
 Respuesta pregunta
 RCNOM
-4
+2
 0
 Vaporwave
-2
-Eurobeat
 3
 FutureFunk
-4
-Trumpwave
 
 Respuesta pregunta
 RN
-108
+170
 100.0
 220.0
 
 Respuesta pregunta
 RL
-A dude spies on the king
+A dude explodes a sloth
 
 Final respuestas encuesta

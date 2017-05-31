@@ -1,0 +1,39 @@
+Título
+Encuesta
+
+Usuario
+User0
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+1
+5
+Poco
+
+Respuesta pregunta
+RCNOU
+3
+Verde
+
+Respuesta pregunta
+RCNOM
+2
+0
+Opel
+1
+Renault
+
+Respuesta pregunta
+RN
+8.982796014631848
+0.0
+10.0
+
+Respuesta pregunta
+RL
+A sloth configures this cool guy my gardener met yesterday
+
+Final respuestas encuesta

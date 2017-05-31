@@ -2,52 +2,52 @@ Título
 EncExt
 
 Usuario
-User1
+User49
 
 Fecha
 21/05/2017 10:14:12
 
 Respuesta pregunta
 RCO
-0
+4
 5
-Muy poco
+Mucho
 
 Respuesta pregunta
 RCNOU
-3
-Verde
+0
+Rojo
 
 Respuesta pregunta
 RCNOM
 1
-2
-Ford
+1
+Toyota
 
 Respuesta pregunta
 RN
-97.15811408797667
+91.19256083202157
 0.0
 100.0
 
 Respuesta pregunta
 RL
-My mom explodes a sloth
+The king hacks superman
 
 Respuesta pregunta
 RCNOM
 1
-4
-Trumpwave
+3
+FutureFunk
 
 Respuesta pregunta
 RN
-215
+169
 100.0
 220.0
 
 Respuesta pregunta
 RL
-The king tries to automate a dude
+Some guy meows on a sloth
 
 Final respuestas encuesta

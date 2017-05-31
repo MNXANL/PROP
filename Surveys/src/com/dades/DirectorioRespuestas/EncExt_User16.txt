@@ -2,16 +2,16 @@ Título
 EncExt
 
 Usuario
-User1
+User16
 
 Fecha
 21/05/2017 10:14:12
 
 Respuesta pregunta
 RCO
-0
+4
 5
-Muy poco
+Mucho
 
 Respuesta pregunta
 RCNOU
@@ -20,34 +20,42 @@ Verde
 
 Respuesta pregunta
 RCNOM
-1
+2
+0
+Fiat
 2
 Ford
 
 Respuesta pregunta
 RN
-97.15811408797667
+78.72435039168451
 0.0
 100.0
 
 Respuesta pregunta
 RL
-My mom explodes a sloth
+A cat with rabies flees from a dude
 
 Respuesta pregunta
 RCNOM
+4
 1
+Rosswave
+2
+Eurobeat
+3
+FutureFunk
 4
 Trumpwave
 
 Respuesta pregunta
 RN
-215
+156
 100.0
 220.0
 
 Respuesta pregunta
 RL
-The king tries to automate a dude
+A dude eats a dude
 
 Final respuestas encuesta

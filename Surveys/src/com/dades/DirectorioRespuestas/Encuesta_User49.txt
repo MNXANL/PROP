@@ -1,0 +1,36 @@
+Título
+Encuesta
+
+Usuario
+User49
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RCNOU
+1
+Azul
+
+Respuesta pregunta
+RCNOM
+2
+0
+Opel
+3
+Nissan
+
+Respuesta pregunta
+RN
+7.837318391002802
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Some guy gives some guy
+
+Final respuestas encuesta

@@ -2,7 +2,7 @@ Título
 EncExt
 
 Usuario
-User1
+User23
 
 Fecha
 21/05/2017 10:14:12
@@ -14,40 +14,44 @@ RCO
 Muy poco
 
 Respuesta pregunta
-RCNOU
-3
-Verde
+RV
 
 Respuesta pregunta
 RCNOM
 1
-2
-Ford
+1
+Toyota
 
 Respuesta pregunta
 RN
-97.15811408797667
+95.01466879530693
 0.0
 100.0
 
 Respuesta pregunta
 RL
-My mom explodes a sloth
+A sloth eats your homie
 
 Respuesta pregunta
 RCNOM
-1
 4
-Trumpwave
+0
+Vaporwave
+1
+Rosswave
+2
+Eurobeat
+3
+FutureFunk
 
 Respuesta pregunta
 RN
-215
+182
 100.0
 220.0
 
 Respuesta pregunta
 RL
-The king tries to automate a dude
+Your homie meets with my mom
 
 Final respuestas encuesta

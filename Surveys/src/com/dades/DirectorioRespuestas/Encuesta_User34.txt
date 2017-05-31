@@ -1,0 +1,39 @@
+Título
+Encuesta
+
+Usuario
+User34
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+1
+5
+Poco
+
+Respuesta pregunta
+RCNOU
+0
+Rojo
+
+Respuesta pregunta
+RCNOM
+2
+1
+Renault
+3
+Nissan
+
+Respuesta pregunta
+RN
+5.890070566470495
+0.0
+10.0
+
+Respuesta pregunta
+RL
+A dude configures a cat with rabies
+
+Final respuestas encuesta

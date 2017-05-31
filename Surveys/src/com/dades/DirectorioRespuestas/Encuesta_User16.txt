@@ -1,0 +1,34 @@
+Título
+Encuesta
+
+Usuario
+User16
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RCNOU
+0
+Rojo
+
+Respuesta pregunta
+RCNOM
+1
+1
+Renault
+
+Respuesta pregunta
+RN
+6.847669945515635
+0.0
+10.0
+
+Respuesta pregunta
+RL
+A cat with rabies gives the king
+
+Final respuestas encuesta

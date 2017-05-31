@@ -35,8 +35,8 @@ Seat
 Pregunta
 PN
 Valora tu experiencia en PROP
-0.0
-100.0
+0
+100
 
 Pregunta
 PRL
@@ -55,8 +55,8 @@ Trumpwave
 Pregunta
 PN
 Cuanto mides en cm?
-100.0
-220.0
+100
+220
 
 Pregunta
 PRL

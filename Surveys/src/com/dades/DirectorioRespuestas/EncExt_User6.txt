@@ -2,7 +2,7 @@ Título
 EncExt
 
 Usuario
-User1
+User6
 
 Fecha
 21/05/2017 10:14:12
@@ -14,40 +14,44 @@ RCO
 Muy poco
 
 Respuesta pregunta
-RCNOU
-3
-Verde
+RV
 
 Respuesta pregunta
 RCNOM
 1
-2
-Ford
+3
+Seat
 
 Respuesta pregunta
 RN
-97.15811408797667
+74.0570191253503
 0.0
 100.0
 
 Respuesta pregunta
 RL
-My mom explodes a sloth
+A dude explodes my mom
 
 Respuesta pregunta
 RCNOM
+4
+0
+Vaporwave
 1
+Rosswave
+2
+Eurobeat
 4
 Trumpwave
 
 Respuesta pregunta
 RN
-215
+141
 100.0
 220.0
 
 Respuesta pregunta
 RL
-The king tries to automate a dude
+Some guy tries to automate a sloth
 
 Final respuestas encuesta

@@ -1,0 +1,37 @@
+Título
+Encuesta
+
+Usuario
+User41
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+1
+5
+Poco
+
+Respuesta pregunta
+RCNOU
+1
+Azul
+
+Respuesta pregunta
+RCNOM
+1
+0
+Opel
+
+Respuesta pregunta
+RN
+0.16819456142300848
+0.0
+10.0
+
+Respuesta pregunta
+RL
+A dude flees from a cat with rabies
+
+Final respuestas encuesta
