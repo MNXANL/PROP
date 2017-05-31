@@ -79,10 +79,10 @@ public class ControladorDominio {
     }
 
     /**
-     *
-     * @param name
-     * @param k
-     * @return
+     * Metodo que ejecuta el clustering
+     * @param name Nombre de la encuesta
+     * @param k Numero de clusters
+     * @return Diccionario del clustering
      */
     public HashMap<Integer,List<String>> clustering(String name,int k){
         Encuesta x = cjt.getEncuesta(name);
@@ -91,15 +91,15 @@ public class ControladorDominio {
     }
 
     /**
-     * HACER SIEMPRE LA FUNCION CLUSTERING ANTES
-     * @return
+     * Metodo para obtener los centroides
+     * @return Lista de centroides
      */
     public ArrayList<RespuestasEncuesta> getCentroids(){
         return cl.getCentroids();
     }
     /**
-     * HACER SIEMPRE LA FUNCION CLUSTERING ANTES
-     * @return
+     * Metodo para obtener las respuestas del cluster
+     * @return Lista de respuestas del cluster
      */
     public ArrayList<RespuestasEncuesta> getResps(){
         return cl.getResps();
@@ -266,6 +266,11 @@ public class ControladorDominio {
         contDatos.borrarEncuesta(titulo);
     }
 
+    /**
+     * Metodo para responder la encuesta con una matriz de respuesta
+     * @param titulo El titulo de la encuesta
+     * @param resps Matriz con datos de respuesta de encuesta
+     */
     public void responderEncuestaMatrix(String titulo, ArrayList<ArrayList<String>> resps) {
         e = cjt.getEncuesta(titulo);
         ArrayList<Respuesta> ALR = new ArrayList<>();
@@ -303,6 +308,13 @@ public class ControladorDominio {
         System.out.println("Guardada.");
     }
 
+    /**
+     * Metodo para importar la respuesta a una encuesta
+     * @param tituloE El titulo de la encuesta
+     * @param path El path desde donde importar la respuesta de la encuesta
+     * @throws ExcFormatoIncorrecto
+     * @throws ExcUsuarioRespuestaIncorrecto
+     */
     public void importarRespuestaEncuesta(String tituloE, String path) throws ExcFormatoIncorrecto, ExcUsuarioRespuestaIncorrecto {
         RespuestasEncuesta re = RespuestasEncuesta.importar(path);
         if (!re.getUser().equals(this.getUser()) && !this.getUser().equals("admin")) {
@@ -322,19 +334,40 @@ public class ControladorDominio {
         }
     }
 
+    /**
+     * Metodo para ex
+     * @param tituloE El titulo de la encuesta
+     * @param path El path a donde exportar la respuesta de la encuesta
+     */
     public void exportarRespuestaEncuesta(String tituloE, String path) {
         cjt.getEncuesta(tituloE).getRespuesta(u.getUsername()).exportar(path);
     }
 
+    /**
+     * Metodo para borrar la respuesta de encuesta del usuario
+     * @param titulo El titulo de la encuesta
+     */
     public void borrarRespuestaEncuesta (String titulo) {
         cjt.borrarRespuesta(titulo, u.getUsername());
         contDatos.borrarRespuestasEncuesta(titulo + "_" + u.getUsername());
     }
 
+    /**
+     * Metodo para obtener el numero de respuestas
+     * @param enc El titulo de la encuesta
+     * @return El numero de respuestas de la encuesta
+     */
     public int getNumResps(String enc) {
         return cjt.getEncuesta(enc).getNumResps();
     }
 
+    /**
+     * Metodo de actualizacion de una encuesta
+     * @param tituloAnt El titulo anterior de la encuesta
+     * @param titulo El nuevo titulo de la encuesta
+     * @param preguntasGuardadas Matriz que representa las preguntas de una encuesta
+     * @throws ExcEncuestaExistente
+     */
     public void actualizarEncuestaMatrix(String tituloAnt, String titulo, ArrayList<ArrayList<String>> preguntasGuardadas) throws ExcEncuestaExistente {
         cjt.borrarEncuesta(tituloAnt);
         crearEncuestaMatrix(titulo, preguntasGuardadas);

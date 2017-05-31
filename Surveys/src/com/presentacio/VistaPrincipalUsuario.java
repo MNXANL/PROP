@@ -201,6 +201,9 @@ public class VistaPrincipalUsuario {
         }
     }
 
+    /**
+     * Metodo que modifica los paneles al cambiar la fecha
+     */
     private void fechaChanged() {
         if (fechaIni.getText().equals("") && fechaFin.getText().equals("")) {
             comboBox1.setEnabled(true);
@@ -228,7 +231,10 @@ public class VistaPrincipalUsuario {
         frame.setVisible(false);
     }
 
-
+    /**
+     * Metodo que infla la lista de encuestas
+     * @param lista Lista con los titulos de las encuestas a inflar
+     */
     public void llenarListaEncuestas(String[] lista) {
 
         DefaultListModel<String> model = new DefaultListModel<>();
@@ -238,6 +244,10 @@ public class VistaPrincipalUsuario {
         list1.setModel(model);
     }
 
+    /**
+     * Metodo que infla la lista de encuestas respondidas
+     * @param lista Lista con los titulos de las encuestas respondidas a inflar
+     */
     public void llenarListaEncuestasRespondidas(String[] lista) {
         DefaultListModel<String> model = new DefaultListModel<>();
         for (int i = 0; i < lista.length; i++) {
@@ -246,6 +256,9 @@ public class VistaPrincipalUsuario {
         list2.setModel(model);
     }
 
+    /**
+     * Metodo para gestionar las busquedas de la vista
+     */
     public void buscar() {
         if (comboBox1.isEnabled())
             ctrlPres.buscarEncuestasUsuario(comboBox1.getSelectedItem().toString());
@@ -261,24 +274,36 @@ public class VistaPrincipalUsuario {
             }
     }
 
+    /**
+     * Metodo para configurar los botones cuando no se selecciona ninguna encuesta de la lista
+     */
     public void NOseleccionadaEncuesta() {
         responderEncuestaButton.setEnabled(false);
         exportarRespuestaButton.setEnabled(false);
         borrarRespuestaButton.setEnabled(false);
     }
 
+    /**
+     * Metodo para configurar los botones cuando se selecciona una encuesta sin responder
+     */
     public void seleccionadaEncuestaSinResponder() {
         responderEncuestaButton.setEnabled(true);
         exportarRespuestaButton.setEnabled(false);
         borrarRespuestaButton.setEnabled(false);
     }
 
+    /**
+     * Metodo para configurar los botones cuando se selecciona una encuesta respondida
+     */
     public void seleccionadaEncuestaRespondida() {
         responderEncuestaButton.setEnabled(false);
         exportarRespuestaButton.setEnabled(true);
         borrarRespuestaButton.setEnabled(true);
     }
 
+    /**
+     * Metodo para importar una respuesta al sistema
+     */
     public void importarRespuesta() {
         JFrame parentFrame = new JFrame("Importar respuesta");
         JFileChooser fileChooser = new JFileChooser();
@@ -304,6 +329,10 @@ public class VistaPrincipalUsuario {
         buscar();
     }
 
+    /**
+     * Aviso de la vista
+     * @param mensaje Mensaje que sale en el aviso
+     */
     public void aviso(String mensaje) {
         JOptionPane optionPane = new JOptionPane(mensaje, JOptionPane.ERROR_MESSAGE);
         String[] strBotones = {"Aceptar"};
@@ -314,6 +343,9 @@ public class VistaPrincipalUsuario {
         dialogOptionPane.setVisible(true);
     }
 
+    /**
+     * Aviso de la vista en caso de borrar una respuesta de la encuesta
+     */
     private int AvisoBorrarRespuestaEncuesta() {
         JOptionPane optionPane = new JOptionPane("Quieres borrar tu respuesta a esta encuesta?", 3);
         String[] strBotones = {"Sí", "No"};

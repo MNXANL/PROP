@@ -29,6 +29,14 @@ public class VistaClustering {
     private JTable clusterTable, centroidTable, rTable;
     private ControladorPresentacio cp;
 
+    /**
+     * Constructor de la vista de clustering
+     * @param cp Referencia al controlador de presentacion
+     * @param clusts Diccionario de clusters de la encuesta
+     * @param centroids Lista de los centroides de la encuesta
+     * @param name Nombre de la respuesta
+     * @param resps Lista de las respuestas a la encuesta
+     */
     public VistaClustering(ControladorPresentacio cp, HashMap<Integer, List<String>> clusts, ArrayList<RespuestasEncuesta> centroids,
                            String name, ArrayList<RespuestasEncuesta> resps) {
         frame = new JFrame("Encuesta '" + name + "'");
@@ -43,6 +51,12 @@ public class VistaClustering {
         });
     }
 
+    /**
+     * Metodo para inicializar el clustering
+     * @param clusts Diccionario de clusters de la encuesta
+     * @param centroids Lista de los centroides de la encuesta
+     * @param resps Lista de las respuestas a la encuesta
+     */
     public void Initialize(HashMap<Integer, List<String>> clusts, ArrayList<RespuestasEncuesta> centroids, ArrayList<RespuestasEncuesta> resps) {
         ini_clTable(clusts);
         ini_ceTable(centroids);
@@ -73,6 +87,10 @@ public class VistaClustering {
 
     }
 
+    /**
+     * Metodo para inicializar la pestanya de centroides
+     * @param clusts Diccionario de los clusters de la encuesta
+     */
     public void ini_clTable(HashMap<Integer, List<String>> clusts) {
         int maxAssig = 0;
         for (Map.Entry<Integer, List<String>> entry : clusts.entrySet()) {
@@ -111,6 +129,10 @@ public class VistaClustering {
         }
     }
 
+    /**
+     * Metodo para inicializar la pestanya de centroides
+     * @param centroids Lista de los centroides de la encuesta
+     */
     public void ini_ceTable(ArrayList<RespuestasEncuesta> centroids) {
         int nResps = centroids.get(0).getResps().size();
         String[] columnNames = new String[centroids.size()];
@@ -164,6 +186,10 @@ public class VistaClustering {
         }
     }
 
+    /**
+     * Metodo para inicializar la pestanya de respuestas
+     * @param resps Lista de respuestas de la encuesta
+     */
     public void ini_rTable(ArrayList<RespuestasEncuesta> resps) {
         int nResps = resps.get(0).getResps().size();
         String[] columnNames = new String[nResps + 1];

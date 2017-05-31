@@ -222,6 +222,9 @@ public class VistaPrincipalAdmin {
         return isel;
     }
 
+    /**
+     * Metodo que modifica los paneles al cambiar las palabras clave
+     */
     private void palabrasClaveChanged() {
         if (palClave.getText().equals("")) {
             comboBox1.setEnabled(true);
@@ -234,6 +237,9 @@ public class VistaPrincipalAdmin {
         }
     }
 
+    /**
+     * Metodo que modifica los paneles al cambiar la fecha
+     */
     private void fechaChanged() {
         if (fechaIni.getText().equals("") && fechaFin.getText().equals("")) {
             comboBox1.setEnabled(true);
@@ -261,6 +267,10 @@ public class VistaPrincipalAdmin {
         frame.setVisible(false);
     }
 
+    /**
+     * Metodo que infla la lista de encuestas
+     * @param lista Lista con los titulos de las encuestas a inflar
+     */
     public void llenarLista(String[] lista) {
 
         DefaultListModel<String> model = new DefaultListModel<>();
@@ -270,6 +280,9 @@ public class VistaPrincipalAdmin {
         list1.setModel(model);
     }
 
+    /**
+     * Metodo para configurar los botones cuando no se selecciona ninguna encuesta de la lista
+     */
     public void NOseleccionadaEncuesta() {
         borrarEncuestaButton.setEnabled(false);
         modificarEncuestaButton.setEnabled(false);
@@ -278,6 +291,9 @@ public class VistaPrincipalAdmin {
         importarRespuestasButton.setEnabled(false);
     }
 
+    /**
+     * Metodo para configurar los botones cuando se selecciona una encuesta sin responder
+     */
     public void seleccionadaEncuestaSinResponder() {
         borrarEncuestaButton.setEnabled(true);
         modificarEncuestaButton.setEnabled(true);
@@ -286,6 +302,9 @@ public class VistaPrincipalAdmin {
         importarRespuestasButton.setEnabled(true);
     }
 
+    /**
+     * Metodo para configurar los botones cuando se selecciona una encuesta respondida
+     */
     public void seleccionadaEncuestaRespondida() {
         clusteringButton.setEnabled(true);
         borrarEncuestaButton.setEnabled(true);
@@ -294,6 +313,9 @@ public class VistaPrincipalAdmin {
         importarRespuestasButton.setEnabled(true);
     }
 
+    /**
+     * Metodo para importar una respuesta al sistema
+     */
     public void importarRespuesta() {
         JFrame parentFrame = new JFrame("Importar respuesta");
         JFileChooser fileChooser = new JFileChooser();
