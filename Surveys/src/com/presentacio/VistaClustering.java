@@ -53,6 +53,8 @@ public class VistaClustering {
         //clusterTable.setFillsViewportHeight(true);
         clusterTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         centroidTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        rTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+
         tabs.addTab("Clusters", scrollable1);
         tabs.addTab("Centroides", scrollable2);
         tabs.addTab("Respuestas", scrollable3);

@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a6261926-014f-4e17-847e-29161c7babb7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/Clustering.java" afterPath="$PROJECT_DIR$/src/com/domini/Clustering.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -108,13 +107,13 @@
       <file leaf-file-name="VistaClustering.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="66" column="26" lean-forward="false" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
+            <state relative-caret-position="119">
+              <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
               <folding>
                 <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
-                <marker date="1496250574338" expanded="false" signature="8779:8930" ph="UI Designer generated code" />
-                <marker date="1496250574338" expanded="false" signature="9639:9650" ph=" { " />
-                <marker date="1496250574338" expanded="false" signature="9664:9670" ph=" }" />
+                <marker date="1496250873502" expanded="false" signature="8838:8989" ph="UI Designer generated code" />
+                <marker date="1496250873502" expanded="false" signature="9698:9709" ph=" { " />
+                <marker date="1496250873502" expanded="false" signature="9723:9729" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -896,13 +895,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491302909485</updated>
     </task>
-    <task id="LOCAL-00006" summary="nuevas clases">
-      <created>1491306631149</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1491306631149</updated>
-    </task>
     <task id="LOCAL-00007" summary="javadoc resps">
       <created>1491307138951</created>
       <option name="number" value="00007" />
@@ -1239,7 +1231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496249286134</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="clustering muestra respuestas">
+      <created>1496250609416</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1496250609416</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1606,13 +1605,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="66" column="26" lean-forward="false" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
+        <state relative-caret-position="119">
+          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
           <folding>
             <element signature="initializer##0;class#VistaClustering#0" expanded="true" />
-            <marker date="1496250574338" expanded="false" signature="8779:8930" ph="UI Designer generated code" />
-            <marker date="1496250574338" expanded="false" signature="9639:9650" ph=" { " />
-            <marker date="1496250574338" expanded="false" signature="9664:9670" ph=" }" />
+            <marker date="1496250873502" expanded="false" signature="8838:8989" ph="UI Designer generated code" />
+            <marker date="1496250873502" expanded="false" signature="9698:9709" ph=" { " />
+            <marker date="1496250873502" expanded="false" signature="9723:9729" ph=" }" />
           </folding>
         </state>
       </provider>
