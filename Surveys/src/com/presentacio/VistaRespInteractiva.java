@@ -48,8 +48,9 @@ public class VistaRespInteractiva {
 
     /**
      * Constructora vista de respuesta interactiva
-     *
      * @param ctrlPres Controlador de presentacion
+     * @param enc Titulo de la encuesta
+     * @param pregs Preguntas de la encuesta
      */
     public VistaRespInteractiva(ControladorPresentacio ctrlPres, String enc, ArrayList<ArrayList<String>> pregs) {
         this.ctrlPres = ctrlPres;
