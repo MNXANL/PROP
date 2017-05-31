@@ -144,6 +144,12 @@ public class RespLibre extends Respuesta{
         }
         return result;
     }
+
+    /**
+     * Metodo para comparar la clase con otro objeto
+     * @param o Objeto a comparar
+     * @return Si los objetos son los mismos o no
+     */
     @Override
     public boolean equals(Object o){
         if(!(o instanceof RespLibre))
@@ -152,6 +158,11 @@ public class RespLibre extends Respuesta{
 
         return resp.equals(r.resp);
     }
+
+    /**
+     * Metodo para obtener el codigo de hash
+     * @return El codigo de hash
+     */
     @Override
     public int hashCode(){
         return Objects.hash(resp);

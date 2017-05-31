@@ -12,7 +12,7 @@ public class RespCualitativaOrdenada extends Respuesta {
     private int noptions;
 
     /**
-     *
+     * Constructora
      * @param ns numero de la seleccion que ha hecho el usuario
      * @param nopts numero de opcciones totales a elegir
      */
@@ -32,26 +32,30 @@ public class RespCualitativaOrdenada extends Respuesta {
         noptions = r.noptions;
     }
     /**
-     *
-     * @return seleccion
+     * Obtener indice de respuesta
+     * @return seleccion de respuesta
      */
     public int get(){
         return seleccion;
     }
     /**
-     *
+     * Obtener texto de respuesta
      * @return texto correspondiente a la seleccion
      */
     public String getText(){
         return textoSelec;
     }
 
+    /**
+     * Metodo para obtener el numero de opciones
+     * @return El numero de opciones de la encuesta
+     */
     public int getNoptions(){
         return noptions;
     }
 
     /**
-     *
+     * Fijar numero de seleccion
      * @param n seleccion
      */
     public void set(int n){
@@ -70,6 +74,12 @@ public class RespCualitativaOrdenada extends Respuesta {
             return ((double) Math.abs(re.seleccion-seleccion))/(noptions-1);
         }
     }
+
+    /**
+     * Metodo para comparar la clase con otro objeto
+     * @param o Objeto a comparar
+     * @return Si los objetos son los mismos o no
+     */
     @Override
     public boolean equals(Object o){
         if(!(o instanceof RespCualitativaOrdenada))
@@ -78,6 +88,11 @@ public class RespCualitativaOrdenada extends Respuesta {
 
         return r.seleccion==seleccion && r.noptions==noptions;
     }
+
+    /**
+     * Metodo para obtener el codigo de hash
+     * @return El codigo de hash
+     */
     @Override
     public int hashCode(){
         return Objects.hash(seleccion,noptions);

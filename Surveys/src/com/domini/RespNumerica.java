@@ -32,29 +32,31 @@ public class RespNumerica extends Respuesta{
     }
 
     /**
-     *
+     * Obtener valor de respuesta
      * @return respuesta
      */
     public double get(){
         return resp;
     }
+
     /**
-     *
-     * @return minimo
+     *Obtener valor minimo posible
+     * @return minimo valor minimo posible respuesta
      */
     public double getMin(){
         return min;
     }
+
     /**
-     *
-     * @return maximo
+     * Obtener valor maximo posible
+     * @return maximo valor maximo posible respuesta
      */
     public double getMax(){
         return max;
     }
 
     /**
-     *
+     * Fijar valor de respuesta. Debe estar entre el valor minimo y el maximo
      * @param f respuesta
      */
     public void set(double f){
@@ -70,6 +72,12 @@ public class RespNumerica extends Respuesta{
         RespNumerica r = (RespNumerica) x;
         return Math.abs(r.resp - resp)/(max-min);
     }
+
+    /**
+     * Metodo para comparar la clase con otro objeto
+     * @param o Objeto a comparar
+     * @return Si los objetos son los mismos o no
+     */
     @Override
     public boolean equals(Object o){
         if(!(o instanceof RespNumerica))
@@ -78,6 +86,11 @@ public class RespNumerica extends Respuesta{
 
         return r.resp==resp && r.max == max && r.min == min;
     }
+
+    /**
+     * Metodo para obtener el codigo de hash
+     * @return El codigo de hash
+     */
     @Override
     public int hashCode(){
         return Objects.hash(resp,min,max);

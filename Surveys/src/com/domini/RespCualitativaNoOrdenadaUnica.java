@@ -13,7 +13,7 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
     private String textoSelec;
 
     /**
-     *
+     * Constructora
      * @param n numero de la opcion seleccionada
      */
     public RespCualitativaNoOrdenadaUnica(int n, String txt){
@@ -22,15 +22,15 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
     }
 
     /**
-     *
-     * @return la seleccion
+     * Obtener indice de respuesta
+     * @return seleccion de respuesta
      */
     public int get(){
         return seleccion;
     }
 
     /**
-     *
+     * Obtener texto seleccionado
      * @return el string correspondiente a la seleccion
      */
     public String getText(){
@@ -38,7 +38,7 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
     }
 
     /**
-     *
+     * Fijar texto y numero de seleccion
      * @param n seleccion
      */
     public void set(int n, String txt){
@@ -56,6 +56,12 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
         if (re.seleccion == seleccion) return 0;
         else return 1;
     }
+
+    /**
+     * Metodo para comparar la clase con otro objeto
+     * @param o Objeto a comparar
+     * @return Si los objetos son los mismos o no
+     */
     @Override
     public boolean equals(Object o){
         if(!(o instanceof RespCualitativaNoOrdenadaUnica))
@@ -64,6 +70,11 @@ public class RespCualitativaNoOrdenadaUnica extends Respuesta{
 
         return r.seleccion==seleccion;
     }
+
+    /**
+     * Metodo para obtener el codigo de hash
+     * @return El codigo de hash
+     */
     @Override
     public int hashCode(){
         return Objects.hash(seleccion);

@@ -1,30 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6261926-014f-4e17-847e-29161c7babb7" name="Default" comment="Fix bugs crear encuesta V1">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Docs/CapaPresentacion.uxf" afterPath="$PROJECT_DIR$/../Docs/CapaPresentacion.uxf" />
+    <list default="true" id="a6261926-014f-4e17-847e-29161c7babb7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Surveys/com/domini/PregRespuestaLibre.class" afterPath="$PROJECT_DIR$/out/production/Surveys/com/domini/PregRespuestaLibre.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Surveys/com/domini/Pregunta.class" afterPath="$PROJECT_DIR$/out/production/Surveys/com/domini/Pregunta.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Surveys/com/domini/RespVacia.class" afterPath="$PROJECT_DIR$/out/production/Surveys/com/domini/RespVacia.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dades/ControladorDatos.java" afterPath="$PROJECT_DIR$/src/com/dades/ControladorDatos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/CjtEncuestas.java" afterPath="$PROJECT_DIR$/src/com/domini/CjtEncuestas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/ControladorDominio.java" afterPath="$PROJECT_DIR$/src/com/domini/ControladorDominio.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/ExcEncuestaExistente.java" afterPath="$PROJECT_DIR$/src/com/domini/ExcEncuestaExistente.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/ExcFormatoIncorrecto.java" afterPath="$PROJECT_DIR$/src/com/domini/ExcFormatoIncorrecto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/ExcUsuarioExistente.java" afterPath="$PROJECT_DIR$/src/com/domini/ExcUsuarioExistente.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/ExcUsuarioRespuestaIncorrecto.java" afterPath="$PROJECT_DIR$/src/com/domini/ExcUsuarioRespuestaIncorrecto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/Main.java" afterPath="$PROJECT_DIR$/src/com/domini/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaMultiple.java" afterPath="$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaMultiple.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaUnica.java" afterPath="$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaUnica.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/PregCualitativaOrdenada.java" afterPath="$PROJECT_DIR$/src/com/domini/PregCualitativaOrdenada.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/PregNumerica.java" afterPath="$PROJECT_DIR$/src/com/domini/PregNumerica.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/PregRespuestaLibre.java" afterPath="$PROJECT_DIR$/src/com/domini/PregRespuestaLibre.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/Pregunta.java" afterPath="$PROJECT_DIR$/src/com/domini/Pregunta.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java" afterPath="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java" afterPath="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java" afterPath="$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/RespLibre.java" afterPath="$PROJECT_DIR$/src/com/domini/RespLibre.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/RespNumerica.java" afterPath="$PROJECT_DIR$/src/com/domini/RespNumerica.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/RespVacia.java" afterPath="$PROJECT_DIR$/src/com/domini/RespVacia.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/Usuario.java" afterPath="$PROJECT_DIR$/src/com/domini/Usuario.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaKClustering.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaKClustering.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/Respuesta.java" afterPath="$PROJECT_DIR$/src/com/domini/Respuesta.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java" afterPath="$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,14 +33,13 @@
       <file leaf-file-name="ControladorDatos.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dades/ControladorDatos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="97" column="73" lean-forward="false" selection-start-line="97" selection-start-column="73" selection-end-line="97" selection-end-column="73" />
+            <state relative-caret-position="320">
+              <caret line="40" column="7" lean-forward="false" selection-start-line="40" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
               <folding>
                 <element signature="docComment;class#ControladorDatos#0" expanded="false" />
                 <element signature="docComment;class#Tuple#0;class#ControladorDatos#0" expanded="false" />
                 <element signature="class#Tuple#0;class#ControladorDatos#0" expanded="false" />
                 <element signature="method#Tuple#0;class#Tuple#0;class#ControladorDatos#0" expanded="false" />
-                <element signature="docComment;method#logIn#0;class#ControladorDatos#0" expanded="false" />
                 <element signature="method#logIn#0;class#ControladorDatos#0" expanded="false" />
                 <element signature="docComment;method#nuevoUsuario#0;class#ControladorDatos#0" expanded="false" />
                 <element signature="method#nuevoUsuario#0;class#ControladorDatos#0" expanded="false" />
@@ -73,26 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RespVacia.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/RespVacia.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-              <folding>
-                <element signature="docComment;class#RespVacia#0" expanded="false" />
-                <element signature="docComment;method#distance#0;class#RespVacia#0" expanded="false" />
-                <element signature="method#distance#0;class#RespVacia#0" expanded="false" />
-                <element signature="method#equals#0;class#RespVacia#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RespuestasEncuesta.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RespuestasEncuesta.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="385" column="13" lean-forward="true" selection-start-line="385" selection-start-column="13" selection-end-line="385" selection-end-column="13" />
+            <state relative-caret-position="864">
+              <caret line="129" column="59" lean-forward="false" selection-start-line="129" selection-start-column="59" selection-end-line="129" selection-end-column="59" />
               <folding>
                 <element signature="docComment;class#RespuestasEncuesta#0" expanded="false" />
                 <element signature="docComment;method#RespuestasEncuesta#0;class#RespuestasEncuesta#0" expanded="false" />
@@ -110,143 +83,73 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Respuesta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/Respuesta.java">
+      <file leaf-file-name="Encuesta.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/domini/Encuesta.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RespLibre.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/RespLibre.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+            <state relative-caret-position="544">
+              <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
               <folding>
-                <element signature="docComment;class#RespLibre#0" expanded="false" />
-                <element signature="docComment;method#RespLibre#0;class#RespLibre#0" expanded="false" />
-                <element signature="docComment;method#RespLibre#1;class#RespLibre#0" expanded="false" />
-                <element signature="docComment;method#get#0;class#RespLibre#0" expanded="false" />
-                <element signature="docComment;method#set#0;class#RespLibre#0" expanded="false" />
-                <element signature="docComment;method#distance#0;class#RespLibre#0" expanded="false" />
-                <element signature="method#distance#0;class#RespLibre#0" expanded="false" />
-                <element signature="docComment;method#levenshtein#0;class#RespLibre#0" expanded="false" />
-                <element signature="method#levenshtein#0;class#RespLibre#0" expanded="false" />
-                <element signature="e#1766#1813#0" expanded="false" />
-                <element signature="docComment;method#clean#0;class#RespLibre#0" expanded="false" />
-                <element signature="method#clean#0;class#RespLibre#0" expanded="false" />
-                <element signature="method#equals#0;class#RespLibre#0" expanded="false" />
+                <element signature="docComment;class#Encuesta#0" expanded="false" />
+                <element signature="docComment;method#Encuesta#0;class#Encuesta#0" expanded="false" />
+                <element signature="method#Encuesta#0;class#Encuesta#0" expanded="false" />
+                <element signature="docComment;method#Encuesta#1;class#Encuesta#0" expanded="false" />
+                <element signature="method#Encuesta#1;class#Encuesta#0" expanded="false" />
+                <element signature="docComment;method#Encuesta#2;class#Encuesta#0" expanded="false" />
+                <element signature="method#Encuesta#2;class#Encuesta#0" expanded="false" />
+                <marker date="1496243454445" expanded="false" signature="25436:25442" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RespNumerica.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/RespNumerica.java">
+      <file leaf-file-name="CjtEncuestas.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/domini/CjtEncuestas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="44" column="26" lean-forward="false" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+            <state relative-caret-position="736">
+              <caret line="309" column="0" lean-forward="false" selection-start-line="309" selection-start-column="0" selection-end-line="309" selection-end-column="0" />
               <folding>
-                <element signature="docComment;class#RespNumerica#0" expanded="false" />
-                <element signature="docComment;method#RespNumerica#0;class#RespNumerica#0" expanded="false" />
-                <element signature="method#RespNumerica#0;class#RespNumerica#0" expanded="false" />
-                <element signature="docComment;method#RespNumerica#1;class#RespNumerica#0" expanded="false" />
-                <element signature="method#RespNumerica#1;class#RespNumerica#0" expanded="false" />
-                <element signature="docComment;method#get#0;class#RespNumerica#0" expanded="false" />
-                <element signature="docComment;method#getMin#0;class#RespNumerica#0" expanded="false" />
-                <element signature="e#860#861#0" expanded="true" />
-                <element signature="e#886#887#0" expanded="true" />
-                <element signature="docComment;method#getMax#0;class#RespNumerica#0" expanded="false" />
-                <element signature="docComment;method#set#0;class#RespNumerica#0" expanded="false" />
-                <element signature="docComment;method#distance#0;class#RespNumerica#0" expanded="false" />
-                <element signature="method#distance#0;class#RespNumerica#0" expanded="false" />
-                <element signature="method#equals#0;class#RespNumerica#0" expanded="false" />
+                <element signature="docComment;class#CjtEncuestas#0" expanded="false" />
+                <element signature="docComment;method#CjtEncuestas#0;class#CjtEncuestas#0" expanded="false" />
+                <element signature="docComment;method#CjtEncuestas#1;class#CjtEncuestas#0" expanded="false" />
+                <element signature="docComment;method#addEncuesta#0;class#CjtEncuestas#0" expanded="false" />
+                <element signature="method#addEncuesta#0;class#CjtEncuestas#0" expanded="false" />
+                <element signature="docComment;method#borrarEncuesta#0;class#CjtEncuestas#0" expanded="false" />
+                <element signature="docComment;method#borrarRespuesta#0;class#CjtEncuestas#0" expanded="false" />
+                <marker date="1496243452295" expanded="false" signature="1593:1652" ph="/**...*/" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RespCualitativaOrdenada.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java">
+      <file leaf-file-name="ControladorDominio.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/domini/ControladorDominio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="128">
+              <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
               <folding>
-                <element signature="docComment;class#RespCualitativaOrdenada#0" expanded="false" />
-                <element signature="docComment;method#RespCualitativaOrdenada#0;class#RespCualitativaOrdenada#0" expanded="false" />
-                <element signature="method#RespCualitativaOrdenada#0;class#RespCualitativaOrdenada#0" expanded="false" />
-                <element signature="docComment;method#RespCualitativaOrdenada#1;class#RespCualitativaOrdenada#0" expanded="false" />
-                <element signature="method#RespCualitativaOrdenada#1;class#RespCualitativaOrdenada#0" expanded="false" />
-                <element signature="docComment;method#get#0;class#RespCualitativaOrdenada#0" expanded="false" />
-                <element signature="docComment;method#getText#0;class#RespCualitativaOrdenada#0" expanded="false" />
-                <element signature="docComment;method#set#0;class#RespCualitativaOrdenada#0" expanded="false" />
-                <element signature="docComment;method#distance#0;class#RespCualitativaOrdenada#0" expanded="false" />
-                <element signature="method#distance#0;class#RespCualitativaOrdenada#0" expanded="false" />
-                <element signature="method#equals#0;class#RespCualitativaOrdenada#0" expanded="false" />
+                <element signature="docComment;class#ControladorDominio#0" expanded="false" />
+                <marker date="1496243453161" expanded="false" signature="13668:13845" ph="{...}" />
+                <marker date="1496243453161" expanded="false" signature="13839:13845" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RespCualitativaNoOrdenadaUnica.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java">
+      <file leaf-file-name="LogIn.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/presentacio/LogIn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="42" column="7" lean-forward="true" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+            <state relative-caret-position="144">
+              <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="21" selection-end-column="38" />
               <folding>
-                <element signature="docComment;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-                <element signature="docComment;method#RespCualitativaNoOrdenadaUnica#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-                <element signature="method#RespCualitativaNoOrdenadaUnica#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-                <element signature="docComment;method#get#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-                <element signature="docComment;method#getText#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-                <element signature="docComment;method#set#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-                <element signature="method#set#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-                <element signature="docComment;method#distance#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-                <element signature="method#distance#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-                <element signature="method#equals#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RespCualitativaNoOrdenadaMultiple.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="44" column="4" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
-              <folding>
-                <element signature="docComment;class#RespCualitativaNoOrdenadaMultiple#0" expanded="false" />
-                <element signature="docComment;method#RespCualitativaNoOrdenadaMultiple#0;class#RespCualitativaNoOrdenadaMultiple#0" expanded="false" />
-                <element signature="docComment;method#get#0;class#RespCualitativaNoOrdenadaMultiple#0" expanded="false" />
-                <element signature="docComment;method#getMap#0;class#RespCualitativaNoOrdenadaMultiple#0" expanded="false" />
-                <element signature="docComment;method#set#0;class#RespCualitativaNoOrdenadaMultiple#0" expanded="false" />
-                <element signature="docComment;method#distance#0;class#RespCualitativaNoOrdenadaMultiple#0" expanded="false" />
-                <element signature="method#distance#0;class#RespCualitativaNoOrdenadaMultiple#0" expanded="false" />
-                <element signature="method#equals#0;class#RespCualitativaNoOrdenadaMultiple#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Pregunta.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/Pregunta.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-              <folding>
-                <element signature="docComment;class#Pregunta#0" expanded="false" />
-                <element signature="docComment;method#Pregunta#0;class#Pregunta#0" expanded="false" />
-                <element signature="docComment;method#Pregunta#1;class#Pregunta#0" expanded="false" />
-                <element signature="docComment;method#getTitulo#0;class#Pregunta#0" expanded="false" />
-                <element signature="method#getTitulo#0;class#Pregunta#0" expanded="false" />
-                <element signature="docComment;method#setTitulo#0;class#Pregunta#0" expanded="false" />
-                <element signature="docComment;method#getContenido#0;class#Pregunta#0" expanded="false" />
-                <element signature="docComment;method#leer#0;class#Pregunta#0" expanded="false" />
-                <element signature="docComment;method#tipo#0;class#Pregunta#0" expanded="false" />
-                <element signature="docComment;method#respuesta#0;class#Pregunta#0" expanded="false" />
+                <element signature="docComment;class#LogIn#0" expanded="false" />
+                <element signature="method#LogIn#0;class#LogIn#0" expanded="false" />
+                <element signature="method#asignarListeners#0;class#LogIn#0" expanded="false" />
+                <element signature="method#datosIncorrectos#0;class#LogIn#0" expanded="false" />
+                <element signature="method#show#0;class#LogIn#0" expanded="false" />
+                <element signature="e#2816#2874#0" expanded="false" />
+                <element signature="docComment;method#$$$setupUI$$$#0;class#LogIn#0" expanded="false" />
+                <element signature="method#$$$setupUI$$$#0;class#LogIn#0" expanded="false" />
+                <element signature="docComment;method#$$$getRootComponent$$$#0;class#LogIn#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -323,17 +226,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/tests/domini/RespNumerica/JPRespNumerica.txt" />
         <option value="$PROJECT_DIR$/src/tests/domini/Respuesta/JPRespuesta.txt" />
-        <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/RespLibre/RespLibre.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/RespNumerica.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/Clustering/DriverClustering.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/Clustering/Clustering.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/Clustering/ClusteringUTest.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/MainMenu.form" />
         <option value="$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/EncuestaCopy.txt" />
@@ -344,7 +241,6 @@
         <option value="$PROJECT_DIR$/src/com/presentacio/LogIn.form" />
         <option value="$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/EnTuPutaCara.txt" />
         <option value="$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Puto.txt" />
-        <option value="$PROJECT_DIR$/src/com/domini/Encuesta.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalUsuario.form" />
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.form" />
         <option value="$PROJECT_DIR$/src/com/domini/Clustering.java" />
@@ -357,11 +253,9 @@
         <option value="$PROJECT_DIR$/src/com/domini/ExcUsuarioExistente.java" />
         <option value="$PROJECT_DIR$/src/com/domini/ExcFormatoIncorrecto.java" />
         <option value="$PROJECT_DIR$/src/com/domini/ExcUsuarioRespuestaIncorrecto.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/CjtEncuestas.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java" />
         <option value="$PROJECT_DIR$/src/com/dades/ControladorDatos.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/RespVacia.java" />
         <option value="$PROJECT_DIR$/src/com/domini/Usuario.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaKClustering.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java" />
@@ -371,9 +265,18 @@
         <option value="$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaUnica.java" />
         <option value="$PROJECT_DIR$/src/com/domini/PregRespuestaLibre.java" />
         <option value="$PROJECT_DIR$/src/com/domini/PregNumerica.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/RespLibre.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/ControladorDominio.java" />
         <option value="$PROJECT_DIR$/src/com/domini/Pregunta.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/Respuesta.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/RespLibre.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/RespVacia.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/RespNumerica.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/Encuesta.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/CjtEncuestas.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/ControladorDominio.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java" />
       </list>
     </option>
   </component>
@@ -400,7 +303,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -467,6 +370,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="presentacio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LogIn" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="domini" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -495,8 +424,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -520,6 +449,123 @@
       <recent name="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaUnica" />
       <recent name="$PROJECT_DIR$/src/tests/domini/RespCualitativaOrdenada" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/domini/CjtEncuestas.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/domini/ControladorDominio.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/domini/Encuesta.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaMultiple.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaUnica.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/domini/PregCualitativaOrdenada.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/domini/PregNumerica.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/domini/PregRespuestaLibre.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -991,13 +1037,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491302909485</updated>
     </task>
-    <task id="LOCAL-00015" summary="Levenshtein">
-      <created>1491927302822</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1491927302822</updated>
-    </task>
     <task id="LOCAL-00016" summary="cluster">
       <created>1492014839839</created>
       <option name="number" value="00016" />
@@ -1334,7 +1373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496145571054</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Mas JavaDoc, y eliminadas funciones grises">
+      <created>1496229117353</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1496229117353</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1391,8 +1437,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32237872" sideWeight="0.5043924" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2179289" sideWeight="0.4956076" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23956724" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2172043" sideWeight="0.4956076" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23870967" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1408,7 +1454,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3075734" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3075269" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38639876" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1418,7 +1464,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Docs: 2a entrega + Java GUI ref" />
     <MESSAGE value="Borrado de encuestas OK (probar bajo vuestra responsabilidad!)" />
     <MESSAGE value="Mejorando iface creacion de encuestas" />
     <MESSAGE value="Mejorando iface creacion de encuestas V2" />
@@ -1443,7 +1488,8 @@
     <MESSAGE value="Fix bugs crear encuesta V2" />
     <MESSAGE value="Fix bugs crear encuesta V1" />
     <MESSAGE value="Last class push" />
-    <option name="LAST_COMMIT_MESSAGE" value="Last class push" />
+    <MESSAGE value="Mas JavaDoc, y eliminadas funciones grises" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mas JavaDoc, y eliminadas funciones grises" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1760,45 +1806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/CjtEncuestas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="210" column="4" lean-forward="false" selection-start-line="210" selection-start-column="4" selection-end-line="210" selection-end-column="4" />
-          <folding>
-            <element signature="docComment;class#CjtEncuestas#0" expanded="false" />
-            <element signature="docComment;method#CjtEncuestas#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="docComment;method#CjtEncuestas#1;class#CjtEncuestas#0" expanded="false" />
-            <element signature="docComment;method#addEncuesta#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="method#addEncuesta#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="docComment;method#borrarEncuesta#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="docComment;method#borrarRespuesta#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="docComment;method#getTitulosEncuestas#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="method#getTitulosEncuestas#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="class#2576:3049" expanded="false" />
-            <element signature="method#compare#0;class#2576:3049" expanded="false" />
-            <element signature="class#3273:3726" expanded="false" />
-            <element signature="method#compare#0;class#3273:3726" expanded="false" />
-            <element signature="docComment;method#getTitulosEncuestasUsuario#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="method#getTitulosEncuestasUsuario#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="class#6292:6765" expanded="false" />
-            <element signature="method#compare#0;class#6292:6765" expanded="false" />
-            <element signature="class#7414:7867" expanded="false" />
-            <element signature="method#compare#0;class#7414:7867" expanded="false" />
-            <element signature="docComment;method#getTitulosEncuestasFecha#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="method#getTitulosEncuestasFecha#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="docComment;method#getTitulosEncuestasFechaUsuario#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="method#getTitulosEncuestasFechaUsuario#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="docComment;method#getTitulosEncuestasPalabras#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="method#getTitulosEncuestasPalabras#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="docComment;method#getTitulosEncuestasPalabrasUsuario#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="method#getTitulosEncuestasPalabrasUsuario#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="docComment;method#getEncuesta#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="docComment;method#cambiarTitulo#0;class#CjtEncuestas#0" expanded="false" />
-            <element signature="method#cambiarTitulo#0;class#CjtEncuestas#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="691">
@@ -1850,27 +1857,6 @@
             <element signature="docComment;method#$$$setupUI$$$#0;class#ImportarEncuesta#0" expanded="false" />
             <element signature="method#$$$setupUI$$$#0;class#ImportarEncuesta#0" expanded="false" />
             <element signature="docComment;method#$$$getRootComponent$$$#0;class#ImportarEncuesta#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/presentacio/LogIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="21" selection-end-column="38" />
-          <folding>
-            <element signature="docComment;class#LogIn#0" expanded="false" />
-            <element signature="method#LogIn#0;class#LogIn#0" expanded="false" />
-            <element signature="method#asignarListeners#0;class#LogIn#0" expanded="false" />
-            <element signature="class#767:1086" expanded="false" />
-            <element signature="method#actionPerformed#0;class#767:1086" expanded="false" />
-            <element signature="class#2248:2409" expanded="false" />
-            <element signature="method#datosIncorrectos#0;class#LogIn#0" expanded="false" />
-            <element signature="method#show#0;class#LogIn#0" expanded="false" />
-            <element signature="e#2816#2874#0" expanded="false" />
-            <element signature="docComment;method#$$$setupUI$$$#0;class#LogIn#0" expanded="false" />
-            <element signature="method#$$$setupUI$$$#0;class#LogIn#0" expanded="false" />
-            <element signature="docComment;method#$$$getRootComponent$$$#0;class#LogIn#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1963,9 +1949,6 @@
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="24" selection-end-column="7" />
           <folding>
             <element signature="docComment;class#PregRespuestaLibre#0" expanded="false" />
-            <element signature="docComment;method#PregRespuestaLibre#0;class#PregRespuestaLibre#0" expanded="false" />
-            <element signature="docComment;method#tipo#0;class#PregRespuestaLibre#0" expanded="false" />
-            <element signature="docComment;method#leer#0;class#PregRespuestaLibre#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2012,37 +1995,6 @@
           <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
           <folding>
             <element signature="docComment;class#PregCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="docComment;method#PregCualitativaNoOrdenadaUnica#0;class#PregCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="method#PregCualitativaNoOrdenadaUnica#0;class#PregCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="docComment;method#tipo#0;class#PregCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="docComment;method#getContenido#0;class#PregCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="method#getContenido#0;class#PregCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="docComment;method#leer#0;class#PregCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="method#leer#0;class#PregCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="docComment;method#getPreguntaIesima#0;class#PregCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="docComment;method#getSize#0;class#PregCualitativaNoOrdenadaUnica#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaMultiple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="32" column="4" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-          <folding>
-            <element signature="docComment;class#PregCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="docComment;method#PregCualitativaNoOrdenadaMultiple#0;class#PregCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="method#PregCualitativaNoOrdenadaMultiple#0;class#PregCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="docComment;method#PregCualitativaNoOrdenadaMultiple#1;class#PregCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="method#PregCualitativaNoOrdenadaMultiple#1;class#PregCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="docComment;method#tipo#0;class#PregCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="docComment;method#getContenido#0;class#PregCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="method#getContenido#0;class#PregCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="docComment;method#getPreguntaIesima#0;class#PregCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="docComment;method#leer#0;class#PregCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="method#leer#0;class#PregCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="docComment;method#getMaxOptions#0;class#PregCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="docComment;method#getSize#0;class#PregCualitativaNoOrdenadaMultiple#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2077,10 +2029,129 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/Administrador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/Pregunta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#Pregunta#0" expanded="false" />
+            <element signature="docComment;method#Pregunta#0;class#Pregunta#0" expanded="false" />
+            <element signature="docComment;method#Pregunta#1;class#Pregunta#0" expanded="false" />
+            <element signature="docComment;method#getTitulo#0;class#Pregunta#0" expanded="false" />
+            <element signature="method#getTitulo#0;class#Pregunta#0" expanded="false" />
+            <element signature="docComment;method#setTitulo#0;class#Pregunta#0" expanded="false" />
+            <element signature="docComment;method#getContenido#0;class#Pregunta#0" expanded="false" />
+            <element signature="e#877#878#0" expanded="false" />
+            <element signature="e#902#903#0" expanded="false" />
+            <element signature="docComment;method#leer#0;class#Pregunta#0" expanded="false" />
+            <element signature="docComment;method#tipo#0;class#Pregunta#0" expanded="false" />
+            <element signature="docComment;method#respuesta#0;class#Pregunta#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespLibre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="52" column="7" lean-forward="true" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+          <folding>
+            <element signature="docComment;class#RespLibre#0" expanded="false" />
+            <element signature="docComment;method#RespLibre#0;class#RespLibre#0" expanded="false" />
+            <element signature="docComment;method#RespLibre#1;class#RespLibre#0" expanded="false" />
+            <element signature="docComment;method#get#0;class#RespLibre#0" expanded="false" />
+            <element signature="docComment;method#set#0;class#RespLibre#0" expanded="false" />
+            <element signature="docComment;method#distance#0;class#RespLibre#0" expanded="false" />
+            <element signature="method#distance#0;class#RespLibre#0" expanded="false" />
+            <element signature="docComment;method#levenshtein#0;class#RespLibre#0" expanded="false" />
+            <element signature="method#levenshtein#0;class#RespLibre#0" expanded="false" />
+            <element signature="e#1766#1813#0" expanded="false" />
+            <element signature="docComment;method#clean#0;class#RespLibre#0" expanded="false" />
+            <element signature="method#clean#0;class#RespLibre#0" expanded="false" />
+            <element signature="docComment;method#equals#0;class#RespLibre#0" expanded="false" />
+            <element signature="method#equals#0;class#RespLibre#0" expanded="false" />
+            <element signature="docComment;method#hashCode#0;class#RespLibre#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-128">
+          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="37" column="49" lean-forward="false" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-208">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespNumerica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/Respuesta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#Respuesta#0" expanded="false" />
+            <element signature="docComment;method#distance#0;class#Respuesta#0" expanded="false" />
+            <element signature="docComment;method#equals#0;class#Respuesta#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespVacia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding>
+            <element signature="docComment;class#RespVacia#0" expanded="false" />
+            <element signature="method#distance#0;class#RespVacia#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaMultiple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding>
+            <element signature="docComment;class#PregCualitativaNoOrdenadaMultiple#0" expanded="false" />
+            <element signature="method#leer#0;class#PregCualitativaNoOrdenadaMultiple#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/Encuesta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="406" column="7" lean-forward="true" selection-start-line="406" selection-start-column="7" selection-end-line="406" selection-end-column="7" />
+        <state relative-caret-position="544">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#Encuesta#0" expanded="false" />
             <element signature="docComment;method#Encuesta#0;class#Encuesta#0" expanded="false" />
@@ -2089,54 +2160,7 @@
             <element signature="method#Encuesta#1;class#Encuesta#0" expanded="false" />
             <element signature="docComment;method#Encuesta#2;class#Encuesta#0" expanded="false" />
             <element signature="method#Encuesta#2;class#Encuesta#0" expanded="false" />
-            <element signature="docComment;method#Encuesta#3;class#Encuesta#0" expanded="false" />
-            <element signature="method#Encuesta#3;class#Encuesta#0" expanded="false" />
-            <element signature="docComment;method#add_question#0;class#Encuesta#0" expanded="false" />
-            <element signature="docComment;method#delete_question#0;class#Encuesta#0" expanded="false" />
-            <element signature="docComment;method#importar#0;class#Encuesta#0" expanded="false" />
-            <element signature="method#importar#0;class#Encuesta#0" expanded="false" />
-            <element signature="docComment;method#exportar#0;class#Encuesta#0" expanded="false" />
-            <element signature="method#exportar#0;class#Encuesta#0" expanded="false" />
-            <element signature="docComment;method#responder#0;class#Encuesta#0" expanded="false" />
-            <element signature="method#responder#0;class#Encuesta#0" expanded="false" />
-            <element signature="method#respondida#0;class#Encuesta#0" expanded="false" />
-            <element signature="method#getRespuesta#0;class#Encuesta#0" expanded="false" />
-            <element signature="method#leer#0;class#Encuesta#0" expanded="false" />
-            <element signature="method#getMatrix#0;class#Encuesta#0" expanded="false" />
-            <element signature="method#borrarRespuesta#0;class#Encuesta#0" expanded="false" />
-            <element signature="method#responderEncuesta#0;class#Encuesta#0" expanded="false" />
-            <element signature="method#printarRespuestasDeEncuesta#0;class#Encuesta#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/ControladorDominio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="252" column="4" lean-forward="false" selection-start-line="252" selection-start-column="4" selection-end-line="252" selection-end-column="4" />
-          <folding>
-            <element signature="docComment;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#ControladorDominio#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#logIn#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#nuevoUsuario#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#clustering#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="docComment;method#getCentroids#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="docComment;method#crearEncuestaMatrix#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#crearEncuestaMatrix#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#getEncuestaMatrix#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#crearEncuesta#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#importarEncuesta#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#listaEncuestasUsuario#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#listaEncuestasPalabrasUsuario#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#listaEncuestaFecha#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#listaEncuestaFechaUsuario#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#borrarEncuesta#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#responderEncuestaMatrix#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#importarRespuestaEncuesta#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#exportarRespuestaEncuesta#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#borrarRespuestaEncuesta#0;class#ControladorDominio#0" expanded="false" />
-            <element signature="method#actualizarEncuestaMatrix#0;class#ControladorDominio#0" expanded="false" />
-            <marker date="1496229088046" expanded="false" signature="13078:13084" ph="{...}" />
+            <marker date="1496243454445" expanded="false" signature="25436:25442" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2174,24 +2198,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/Administrador.java">
+    <entry file="file://$PROJECT_DIR$/src/com/domini/CjtEncuestas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="736">
+          <caret line="309" column="0" lean-forward="false" selection-start-line="309" selection-start-column="0" selection-end-line="309" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#CjtEncuestas#0" expanded="false" />
+            <element signature="docComment;method#CjtEncuestas#0;class#CjtEncuestas#0" expanded="false" />
+            <element signature="docComment;method#CjtEncuestas#1;class#CjtEncuestas#0" expanded="false" />
+            <element signature="docComment;method#addEncuesta#0;class#CjtEncuestas#0" expanded="false" />
+            <element signature="method#addEncuesta#0;class#CjtEncuestas#0" expanded="false" />
+            <element signature="docComment;method#borrarEncuesta#0;class#CjtEncuestas#0" expanded="false" />
+            <element signature="docComment;method#borrarRespuesta#0;class#CjtEncuestas#0" expanded="false" />
+            <marker date="1496243452295" expanded="false" signature="1593:1652" ph="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/LogIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="21" selection-end-column="38" />
+          <folding>
+            <element signature="docComment;class#LogIn#0" expanded="false" />
+            <element signature="method#LogIn#0;class#LogIn#0" expanded="false" />
+            <element signature="method#asignarListeners#0;class#LogIn#0" expanded="false" />
+            <element signature="method#datosIncorrectos#0;class#LogIn#0" expanded="false" />
+            <element signature="method#show#0;class#LogIn#0" expanded="false" />
+            <element signature="e#2816#2874#0" expanded="false" />
+            <element signature="docComment;method#$$$setupUI$$$#0;class#LogIn#0" expanded="false" />
+            <element signature="method#$$$setupUI$$$#0;class#LogIn#0" expanded="false" />
+            <element signature="docComment;method#$$$getRootComponent$$$#0;class#LogIn#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dades/ControladorDatos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="97" column="73" lean-forward="false" selection-start-line="97" selection-start-column="73" selection-end-line="97" selection-end-column="73" />
+        <state relative-caret-position="320">
+          <caret line="40" column="7" lean-forward="false" selection-start-line="40" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
           <folding>
             <element signature="docComment;class#ControladorDatos#0" expanded="false" />
             <element signature="docComment;class#Tuple#0;class#ControladorDatos#0" expanded="false" />
             <element signature="class#Tuple#0;class#ControladorDatos#0" expanded="false" />
             <element signature="method#Tuple#0;class#Tuple#0;class#ControladorDatos#0" expanded="false" />
-            <element signature="docComment;method#logIn#0;class#ControladorDatos#0" expanded="false" />
             <element signature="method#logIn#0;class#ControladorDatos#0" expanded="false" />
             <element signature="docComment;method#nuevoUsuario#0;class#ControladorDatos#0" expanded="false" />
             <element signature="method#nuevoUsuario#0;class#ControladorDatos#0" expanded="false" />
@@ -2212,23 +2262,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/RespVacia.java">
+    <entry file="file://$PROJECT_DIR$/src/com/domini/ControladorDominio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        <state relative-caret-position="128">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
           <folding>
-            <element signature="docComment;class#RespVacia#0" expanded="false" />
-            <element signature="docComment;method#distance#0;class#RespVacia#0" expanded="false" />
-            <element signature="method#distance#0;class#RespVacia#0" expanded="false" />
-            <element signature="method#equals#0;class#RespVacia#0" expanded="false" />
+            <element signature="docComment;class#ControladorDominio#0" expanded="false" />
+            <marker date="1496243453161" expanded="false" signature="13668:13845" ph="{...}" />
+            <marker date="1496243453161" expanded="false" signature="13839:13845" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="385" column="13" lean-forward="true" selection-start-line="385" selection-start-column="13" selection-end-line="385" selection-end-column="13" />
+        <state relative-caret-position="864">
+          <caret line="129" column="59" lean-forward="false" selection-start-line="129" selection-start-column="59" selection-end-line="129" selection-end-column="59" />
           <folding>
             <element signature="docComment;class#RespuestasEncuesta#0" expanded="false" />
             <element signature="docComment;method#RespuestasEncuesta#0;class#RespuestasEncuesta#0" expanded="false" />
@@ -2241,134 +2290,6 @@
             <element signature="docComment;method#exportar#0;class#RespuestasEncuesta#0" expanded="false" />
             <element signature="method#exportar#0;class#RespuestasEncuesta#0" expanded="false" />
             <element signature="method#equals#0;class#RespuestasEncuesta#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/Respuesta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/RespLibre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#RespLibre#0" expanded="false" />
-            <element signature="docComment;method#RespLibre#0;class#RespLibre#0" expanded="false" />
-            <element signature="docComment;method#RespLibre#1;class#RespLibre#0" expanded="false" />
-            <element signature="docComment;method#get#0;class#RespLibre#0" expanded="false" />
-            <element signature="docComment;method#set#0;class#RespLibre#0" expanded="false" />
-            <element signature="docComment;method#distance#0;class#RespLibre#0" expanded="false" />
-            <element signature="method#distance#0;class#RespLibre#0" expanded="false" />
-            <element signature="docComment;method#levenshtein#0;class#RespLibre#0" expanded="false" />
-            <element signature="method#levenshtein#0;class#RespLibre#0" expanded="false" />
-            <element signature="e#1766#1813#0" expanded="false" />
-            <element signature="docComment;method#clean#0;class#RespLibre#0" expanded="false" />
-            <element signature="method#clean#0;class#RespLibre#0" expanded="false" />
-            <element signature="method#equals#0;class#RespLibre#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/RespNumerica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="44" column="26" lean-forward="false" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
-          <folding>
-            <element signature="docComment;class#RespNumerica#0" expanded="false" />
-            <element signature="docComment;method#RespNumerica#0;class#RespNumerica#0" expanded="false" />
-            <element signature="method#RespNumerica#0;class#RespNumerica#0" expanded="false" />
-            <element signature="docComment;method#RespNumerica#1;class#RespNumerica#0" expanded="false" />
-            <element signature="method#RespNumerica#1;class#RespNumerica#0" expanded="false" />
-            <element signature="docComment;method#get#0;class#RespNumerica#0" expanded="false" />
-            <element signature="docComment;method#getMin#0;class#RespNumerica#0" expanded="false" />
-            <element signature="e#860#861#0" expanded="true" />
-            <element signature="e#886#887#0" expanded="true" />
-            <element signature="docComment;method#getMax#0;class#RespNumerica#0" expanded="false" />
-            <element signature="docComment;method#set#0;class#RespNumerica#0" expanded="false" />
-            <element signature="docComment;method#distance#0;class#RespNumerica#0" expanded="false" />
-            <element signature="method#distance#0;class#RespNumerica#0" expanded="false" />
-            <element signature="method#equals#0;class#RespNumerica#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="docComment;class#RespCualitativaOrdenada#0" expanded="false" />
-            <element signature="docComment;method#RespCualitativaOrdenada#0;class#RespCualitativaOrdenada#0" expanded="false" />
-            <element signature="method#RespCualitativaOrdenada#0;class#RespCualitativaOrdenada#0" expanded="false" />
-            <element signature="docComment;method#RespCualitativaOrdenada#1;class#RespCualitativaOrdenada#0" expanded="false" />
-            <element signature="method#RespCualitativaOrdenada#1;class#RespCualitativaOrdenada#0" expanded="false" />
-            <element signature="docComment;method#get#0;class#RespCualitativaOrdenada#0" expanded="false" />
-            <element signature="docComment;method#getText#0;class#RespCualitativaOrdenada#0" expanded="false" />
-            <element signature="docComment;method#set#0;class#RespCualitativaOrdenada#0" expanded="false" />
-            <element signature="docComment;method#distance#0;class#RespCualitativaOrdenada#0" expanded="false" />
-            <element signature="method#distance#0;class#RespCualitativaOrdenada#0" expanded="false" />
-            <element signature="method#equals#0;class#RespCualitativaOrdenada#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="42" column="7" lean-forward="true" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
-          <folding>
-            <element signature="docComment;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="docComment;method#RespCualitativaNoOrdenadaUnica#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="method#RespCualitativaNoOrdenadaUnica#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="docComment;method#get#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="docComment;method#getText#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="docComment;method#set#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="method#set#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="docComment;method#distance#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="method#distance#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-            <element signature="method#equals#0;class#RespCualitativaNoOrdenadaUnica#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="44" column="4" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
-          <folding>
-            <element signature="docComment;class#RespCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="docComment;method#RespCualitativaNoOrdenadaMultiple#0;class#RespCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="docComment;method#get#0;class#RespCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="docComment;method#getMap#0;class#RespCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="docComment;method#set#0;class#RespCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="docComment;method#distance#0;class#RespCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="method#distance#0;class#RespCualitativaNoOrdenadaMultiple#0" expanded="false" />
-            <element signature="method#equals#0;class#RespCualitativaNoOrdenadaMultiple#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/domini/Pregunta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding>
-            <element signature="docComment;class#Pregunta#0" expanded="false" />
-            <element signature="docComment;method#Pregunta#0;class#Pregunta#0" expanded="false" />
-            <element signature="docComment;method#Pregunta#1;class#Pregunta#0" expanded="false" />
-            <element signature="docComment;method#getTitulo#0;class#Pregunta#0" expanded="false" />
-            <element signature="method#getTitulo#0;class#Pregunta#0" expanded="false" />
-            <element signature="docComment;method#setTitulo#0;class#Pregunta#0" expanded="false" />
-            <element signature="docComment;method#getContenido#0;class#Pregunta#0" expanded="false" />
-            <element signature="docComment;method#leer#0;class#Pregunta#0" expanded="false" />
-            <element signature="docComment;method#tipo#0;class#Pregunta#0" expanded="false" />
-            <element signature="docComment;method#respuesta#0;class#Pregunta#0" expanded="false" />
           </folding>
         </state>
       </provider>

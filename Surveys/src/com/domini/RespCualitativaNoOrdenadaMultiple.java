@@ -11,7 +11,7 @@ public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
     private HashMap<Integer, String> seleccion;
 
     /**
-     *
+     * Constructora
      * @param seleccion el set que contiene las selecciones del encuestado
      */
     public RespCualitativaNoOrdenadaMultiple(HashMap<Integer, String> seleccion){
@@ -19,7 +19,7 @@ public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
     }
 
     /**
-     *
+     * Obtener diccionario de claves
      * @return  las selecciones
      */
     public HashSet<Integer> get(){
@@ -27,7 +27,7 @@ public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
     }
 
     /**
-     *
+     * Obtener diccionaro con claves y valores
      * @return las selecciones con su string correspondiente
      */
     public HashMap<Integer, String> getMap(){
@@ -35,7 +35,7 @@ public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
     }
 
     /**
-     *
+     * Fijar conjunto de respuestas seleccionadas
      * @param seleccion el set que contiene las selecciones del encuestado
      */
     public void set(HashMap<Integer, String> seleccion){
@@ -61,6 +61,12 @@ public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
         }
         return (1-jaccard);
     }
+
+    /**
+     * Metodo para comparar la clase con otro objeto
+     * @param o Objeto a comparar
+     * @return Si los objetos son los mismos o no
+     */
     @Override
     public boolean equals(Object o){
         if(!(o instanceof RespCualitativaNoOrdenadaMultiple))
@@ -71,6 +77,11 @@ public class RespCualitativaNoOrdenadaMultiple extends Respuesta{
         intersection.retainAll(seleccion.keySet());
         return intersection.size()==seleccion.keySet().size();
     }
+
+    /**
+     * Metodo para obtener el codigo de hash
+     * @return El codigo de hash
+     */
     @Override
     public int hashCode(){
         return Objects.hash(seleccion.keySet());

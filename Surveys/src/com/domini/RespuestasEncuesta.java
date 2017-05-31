@@ -15,23 +15,6 @@ public class RespuestasEncuesta {
     private Date fecha;
     private String User;
 
-
-    public ArrayList<Respuesta> getResps() {
-        return resps;
-    }
-
-    public String getNombreEncuesta_respondida() {
-        return Encuesta_respondida;
-    }
-
-    public Date getFecha() {
-        return fecha;
-    }
-
-    public String getUser() {
-        return User;
-    }
-
     /**
      * Creadora
      * @param e (El titulo de la) La encuesta a la que corresponden las preguntas
@@ -42,9 +25,6 @@ public class RespuestasEncuesta {
         User = user;
         resps = new ArrayList<>();
         fecha = new Date();
-    }
-    public void addRespuesta(Respuesta r){
-        resps.add(r);
     }
 
     /**
@@ -60,7 +40,49 @@ public class RespuestasEncuesta {
         this.fecha = new Date();
     }
 
+    /**
+     * Metodo para obtener las respuestas de la encuesta
+     * @return Lista de respuestas de la encuesta
+     */
+    public ArrayList<Respuesta> getResps() {
+        return resps;
+    }
 
+    /**
+     * Obtener el nombre de la encuesta respondida
+     * @return El nombre de la encuesta respondida
+     */
+    public String getNombreEncuesta_respondida() {
+        return Encuesta_respondida;
+    }
+
+    /**
+     * Obtener la fecha en la que se respondió la encuesta
+     * @return La fecha de respuesta
+     */
+    public Date getFecha() {
+        return fecha;
+    }
+
+    /**
+     * Obtener el usuario que respondió la encuesta
+     * @return La usuario de la respuesta
+     */
+    public String getUser() {
+        return User;
+    }
+
+    /**
+     * Metodo para insertar una respuesta a la encuesta
+     * @param r Respuesta a insertar
+     */
+    public void addRespuesta(Respuesta r){
+        resps.add(r);
+    }
+
+    /**
+     * Escribe las respuestas por consila
+     */
     public void printarRespuestas() {
         System.out.println("Respuestas del usuario " + User);
         System.out.println("----------------------");
@@ -103,6 +125,10 @@ public class RespuestasEncuesta {
         System.out.println();
     }
 
+    /**
+     * Obtener el nombre del fichero
+     * @return Formato del nombre del fichero (sin extension)
+     */
     public String getNombreFichero() {
         return (Encuesta_respondida + "_" + User);
     }
@@ -375,6 +401,12 @@ public class RespuestasEncuesta {
             System.out.println("Error writing to file '" + path + "'");
         }
     }
+
+    /**
+     * Comparador entre clase y un objeto
+     * @param o Objeto a comparar
+     * @return Si el objeto es igual a la clase
+     */
     @Override
     public boolean equals(Object o){
         if(!(o instanceof RespuestasEncuesta))
@@ -383,6 +415,11 @@ public class RespuestasEncuesta {
 
         return r.resps.equals(resps);
     }
+
+    /**
+     * Consultora del codigo de hash
+     * @return El codigo de hash de la lcase
+     */
     @Override
     public int hashCode(){
         return Objects.hash(Encuesta_respondida, User);
