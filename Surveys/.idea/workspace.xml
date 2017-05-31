@@ -858,13 +858,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491302909485</updated>
     </task>
-    <task id="LOCAL-00001" summary="project">
-      <created>1491303318900</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1491303318900</updated>
-    </task>
     <task id="LOCAL-00002" summary="domini">
       <created>1491303462180</created>
       <option name="number" value="00002" />
@@ -1201,7 +1194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496246390757</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="vista centroides">
+      <created>1496246743621</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1496246743622</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TestHistory">
