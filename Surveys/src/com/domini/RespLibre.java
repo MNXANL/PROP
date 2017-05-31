@@ -62,7 +62,6 @@ public class RespLibre extends Respuesta{
         return levenshtein(s1,s2)/ Math.max(s1.length(),s2.length());
     }
 
-
     /**
      * distancia levenshtein entre dos strings
      * @param lhs primer string
@@ -130,6 +129,7 @@ public class RespLibre extends Respuesta{
             System.out.println("Error reading file '" + path + "'");
         }
     }
+
     /**
      * Coge un String y devuelve el conjunto de palabras no funcionales para ser tratado en distance
      * @param r string de entrada

@@ -81,7 +81,6 @@ public class PregCualitativaNoOrdenadaMultiple extends Pregunta {
         return maxOpciones;
     }
 
-
     /**
      * Obtener tamanyo preguntas
      * @return maximo numero de preguntas

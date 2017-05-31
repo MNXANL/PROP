@@ -49,6 +49,7 @@ public class Encuesta {
         preguntas = ps;
         CjtRespsEnc = rs;
     }
+
     /**
      * creador de copia
      * @param E encuesta a copiar
@@ -417,6 +418,11 @@ public class Encuesta {
         return false;
     }
 
+    /**
+     * Metodo que comprueba si el usuario ha respondido la encuesta
+     * @param user El usuario
+     * @return Si el usuario ha respondido la encuesta o no
+     */
     public boolean respondida(String user) {
         for (int i = 0; i < CjtRespsEnc.size(); i++) {
             if (CjtRespsEnc.get(i).getUser().equals(user)) {
@@ -426,6 +432,11 @@ public class Encuesta {
         return false;
     }
 
+    /**
+     * Metodo para obtener las respuestas de un usuario
+     * @param user El usuario
+     * @return Las respuestas del usuario en la encuesta
+     */
     public RespuestasEncuesta getRespuesta(String user) {
         for (int i = 0; i < CjtRespsEnc.size(); i++) {
             if (CjtRespsEnc.get(i).getUser().equals(user)) {
@@ -435,10 +446,17 @@ public class Encuesta {
         return null;
     }
 
+    /**
+     * Metodo para obtener el numero de veces que se ha respondido la encuesta
+     * @return El numero de respuestas de la encuesta
+     */
     public int getNumResps () {
         return CjtRespsEnc.size();
     }
 
+    /**
+     * Metodo para escribir por consola el contenido de la pregunta
+     */
     public void leer () {
         System.out.println(title + "\n");
         DateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
@@ -450,6 +468,10 @@ public class Encuesta {
         }
     }
 
+    /**
+     * Metodo para obtener una matriz de la encuesta
+     * @return Matriz representativa de la encuesta
+     */
     public ArrayList<ArrayList<String>> getMatrix () {
         ArrayList<ArrayList<String>> pregs = new ArrayList<>();
         for (Pregunta p : preguntas) {
@@ -489,10 +511,19 @@ public class Encuesta {
         return pregs;
     }
 
+    /**
+     * Metodo para tener todas las respuestas de la encuesta
+     * @return La lista de respuestas de la pregunta
+     */
     public ArrayList<RespuestasEncuesta> getCjtRespsEnc(){
-        return new ArrayList<RespuestasEncuesta>(CjtRespsEnc);
+        return new ArrayList<R>(CjtRespsEnc);
     }
 
+    /**
+     * Metodo para borrar las respuestas de un usuario
+     * @param user El usuario
+     * @return Si la respuesta se ha borrado satisfactoriamente
+     */
     public boolean borrarRespuesta(String user) {
         for (int i = 0; i < getCjtRespsEnc().size(); ++i) {
             if (CjtRespsEnc.get(i).getUser().equals(user)) {
@@ -503,88 +534,4 @@ public class Encuesta {
         return false;
     }
 
-    public ArrayList<Respuesta> responderEncuesta(String user) {
-        boolean found = false;
-        for (int i = 0; i < getCjtRespsEnc().size() && !found; ++i) {
-            if (CjtRespsEnc.get(i).getUser().equals(user)) { //Ya existe; la vamos a modificar
-                found = true;
-                CjtRespsEnc.get(i).printarRespuestas();
-                CjtRespsEnc.remove(i);
-            }
-        }
-
-        ArrayList<Respuesta> ALR = new ArrayList<>();
-        for (int i = 0; i < preguntas.size(); i++) {
-            System.out.println(preguntas.get(i).getTitulo());
-            System.out.println(preguntas.get(i).getContenido());
-
-            Scanner sc = new Scanner(System.in);
-            if (preguntas.get(i) instanceof PregCualitativaNoOrdenadaMultiple) {
-                int n = ((PregCualitativaNoOrdenadaMultiple) preguntas.get(i)).getMaxOptions();
-                System.out.println("Escribe el numero de opciones que quieres elegir (de como mucho " + n + "):" );
-            }
-            else if (preguntas.get(i) instanceof PregCualitativaOrdenada ||
-                     preguntas.get(i) instanceof PregCualitativaNoOrdenadaUnica) {
-                System.out.println("Escribe el NUMERO de la opcion que quieres elegir: ");
-            }
-            String respu = sc.nextLine();
-
-            if (respu.equals("")) {
-                Respuesta r = new RespVacia();
-                ALR.add(r);
-            }
-            else {
-                if (preguntas.get(i) instanceof PregRespuestaLibre) {
-                    Respuesta r = new RespLibre(respu);
-                    ALR.add(r);
-                }
-                else if (preguntas.get(i) instanceof PregNumerica) {
-                    float resp = Float.parseFloat(respu);
-                    PregNumerica p = (PregNumerica) preguntas.get(i);
-                    Respuesta r = null;
-                    r = new RespNumerica(resp, p.getValorMin(), p.getValorMax());
-
-                    ALR.add(r);
-                }
-                else if (preguntas.get(i) instanceof PregCualitativaOrdenada) {
-                    int resp = Integer.parseInt(respu);
-                    ++resp;
-                    PregCualitativaOrdenada p = (PregCualitativaOrdenada) preguntas.get(i);
-                    Respuesta r = null;
-                    r = new RespCualitativaOrdenada(resp, p.getSize(), p.getPreguntaIesima(resp));
-                    ALR.add(r);
-                }
-                else if (preguntas.get(i) instanceof PregCualitativaNoOrdenadaUnica) {
-                    int resp = Integer.parseInt(respu);
-                    PregCualitativaNoOrdenadaUnica p = (PregCualitativaNoOrdenadaUnica) preguntas.get(i);
-                    Respuesta r = null;
-                    r = new RespCualitativaNoOrdenadaUnica(resp, p.getPreguntaIesima(resp));
-
-                    ALR.add(r);
-                }
-                else {
-                    PregCualitativaNoOrdenadaMultiple p = (PregCualitativaNoOrdenadaMultiple) preguntas.get(i);
-                    HashMap<Integer, String> CjtResps = new HashMap<>();
-                    System.out.println("Escribe los NUMEROS de las " + p.getMaxOptions() + " opciones que quieres elegir: ");
-                    int opts = Integer.parseInt(respu);
-                    for (int j = 0; j < opts; j++) {
-                        int resp = sc.nextInt();
-                        String respTxt = p.getPreguntaIesima(resp);
-                        CjtResps.put(resp, respTxt);
-                    }
-                    Respuesta r = new RespCualitativaNoOrdenadaMultiple(CjtResps);
-                    ALR.add(r);
-                }
-            }
-
-        }
-        return ALR;
-    }
-
-
-    public void printarRespuestasDeEncuesta() {
-        for (int i = 0; i != CjtRespsEnc.size(); ++i) {
-            CjtRespsEnc.get(i).printarRespuestas();
-        }
-    }
 }

@@ -6,7 +6,6 @@ package com.domini;
 public class PregNumerica extends Pregunta {
     private double valorMin;
     private double valorMax;
-    //public boolean doubleingPoint;     Puede ser que lo necesitemos en un futuro...
 
     /**
      * Constructora de la clase con valores minimo y maximo en los extremos.

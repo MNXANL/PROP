@@ -140,7 +140,7 @@ public class Clustering {
      * @return
      */
     private RespLibre
-    RespLib_maxfreq(int cli, int rn,final ArrayList<Integer> assig,final  ArrayList<RespuestasEncuesta> RE ){
+    RespLib_maxfreq(int cli, int rn, final ArrayList<Integer> assig, final ArrayList<RespuestasEncuesta> RE ){
         HashMap<String,Integer> occ = new HashMap<>(); //por cada palabra, cuantas veces aparece
         for(int i = 0; i!= RE.size(); ++i){
             if(assig.get(i)==cli){
@@ -168,6 +168,7 @@ public class Clustering {
         }
         return new RespLibre(maxValue);
     }
+
     /**
      * devuelve la Respuesta que contiene la seleccion mas comun
      * @param cli indice del cluster que estamos tratando
@@ -177,7 +178,7 @@ public class Clustering {
      * @return
      */
     private RespCualitativaNoOrdenadaMultiple
-    RespMUL_maxfreq(int cli, int rn,final ArrayList<Integer> assig,final  ArrayList<RespuestasEncuesta> RE ){
+    RespMUL_maxfreq(int cli, int rn, final ArrayList<Integer> assig, final ArrayList<RespuestasEncuesta> RE ){
 
         int maxCount=-1;
         HashMap<Integer,String> maxValue = new HashMap<>();
@@ -241,6 +242,7 @@ public class Clustering {
         }
         return new RespCualitativaNoOrdenadaUnica(maxValue, text);
     }
+
     /**
      * devuelve la Respuesta que contiene la moda de entre todas las respuestas
      * @param cli indice del cluster que estamos tratando
@@ -249,8 +251,7 @@ public class Clustering {
      * @param RE lista de respuestas que han dado los encuestados
      * @return
      */
-    private RespCualitativaOrdenada
-    RespCO_mode(int cli, int rn,  final ArrayList<Integer> assig, final ArrayList<RespuestasEncuesta> RE){
+    private RespCualitativaOrdenada RespCO_mode(int cli, int rn, final ArrayList<Integer> assig, final ArrayList<RespuestasEncuesta> RE){
         int maxValue,maxCount;
         maxCount=maxValue=-1;
         for(int i = 0; i != RE.size(); ++i){
@@ -278,6 +279,7 @@ public class Clustering {
         x.set(maxValue);
         return x;
     }
+
     /**
      * devuelve la RespNumerica que es la media de todas las respuestas numericas de un grupo de RespuestasEncuesta
      * @param cli indice del cluster que estamos tratando
@@ -286,7 +288,7 @@ public class Clustering {
      * @param RE lista de respuestas que han dado los encuestados
      * @return
      */
-    private RespNumerica Respnum_avg (int cli, int rn,  final ArrayList<Integer> assig, final ArrayList<RespuestasEncuesta> RE){
+    private RespNumerica Respnum_avg (int cli, int rn, final ArrayList<Integer> assig, final ArrayList<RespuestasEncuesta> RE){
         double sum,count;
         sum = count = 0;
         int u = 0;
@@ -304,6 +306,7 @@ public class Clustering {
         result.set(sum/count);
         return result;
     }
+
     /**
      * devuelve la distancia total entre el conjunto de respuestas de un usuario y otro
      * @param r1 conjunto de respuestas de un usuario 1
@@ -321,24 +324,6 @@ public class Clustering {
         }
         //System.out.println ("Distance: "+acc/r1.getResps().size());
         return acc/r1.getResps().size();
-    }
-
-    /**
-     * mostrar una lista de clusters y los usuarios que pertenecen a ellos
-     * @param RE todas las respuestas de los usuarios a la encuesta
-     * @param assig el cluster asignado a cada usuario
-     * @param n el numero de clusters
-     */
-    private void show_clusters(ArrayList<RespuestasEncuesta> RE, ArrayList<Integer> assig, int n){
-        List<List<String>> clusters = new ArrayList<>(n);
-
-        for(int i = 0; i!=n; ++i){  //podria ser lineal en vez de O(n²) pero java no quiere ponerte facil usar matrices
-            System.out.println("Cluster " + i + ": ");
-            for(int j = 0; j != assig.size(); ++j){
-                if(assig.get(j)==i)
-                    System.out.println("\t"+RE.get(j).getUser());
-            }
-        }
     }
 
     /**
