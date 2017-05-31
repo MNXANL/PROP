@@ -38,6 +38,7 @@ public class VistaPrincipalAdmin {
     private JButton exportarButton;
     private JButton importarRespuestasButton;
     private JComboBox comboBox1;
+    private JButton verEncuestaButton;
 
     /**
      * Constructora vista principal del programa
@@ -64,10 +65,10 @@ public class VistaPrincipalAdmin {
                     ctrlPres.buscarEncuestasPalabras(palClave.getText());
                 else if (fechaIni.isEnabled() && fechaFin.isEnabled() && !fechaIni.getText().equals("") && !fechaFin.getText().equals("")) {
                     try {
-                        if (fechaIni.getText().length() != 10 || fechaFin.getText().length() != 10) aviso("Formato de fechas incorrecto. El formato debe ser dd/mm/aaaa");
+                        if (fechaIni.getText().length() != 10 || fechaFin.getText().length() != 10)
+                            aviso("Formato de fechas incorrecto. El formato debe ser dd/mm/aaaa");
                         else ctrlPres.buscarEncuestaFecha(fechaIni.getText(), fechaFin.getText());
-                    }
-                    catch (ParseException e1) {
+                    } catch (ParseException e1) {
                         aviso("Formato de fechas incorrecto. El formato debe ser dd/mm/aaaa");
                     }
                 }
@@ -82,8 +83,7 @@ public class VistaPrincipalAdmin {
                     NOseleccionadaEncuesta();
                 else if (ctrlPres.encuestaRespondida(list1.getSelectedValue().toString())) {
                     seleccionadaEncuestaRespondida();
-                }
-                else {
+                } else {
                     seleccionadaEncuestaSinResponder();
                 }
             }
@@ -100,6 +100,13 @@ public class VistaPrincipalAdmin {
             @Override
             public void actionPerformed(ActionEvent e) {
                 ctrlPres.Clusters(list1.getSelectedValue().toString());
+            }
+        });
+
+        verEncuestaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ctrlPres.verEncuesta(list1.getSelectedValue().toString());
             }
         });
 
@@ -222,6 +229,9 @@ public class VistaPrincipalAdmin {
         return isel;
     }
 
+    /**
+     * Metodo que modifica los paneles al cambiar las palabras clave
+     */
     private void palabrasClaveChanged() {
         if (palClave.getText().equals("")) {
             comboBox1.setEnabled(true);
@@ -234,6 +244,9 @@ public class VistaPrincipalAdmin {
         }
     }
 
+    /**
+     * Metodo que modifica los paneles al cambiar la fecha
+     */
     private void fechaChanged() {
         if (fechaIni.getText().equals("") && fechaFin.getText().equals("")) {
             comboBox1.setEnabled(true);
@@ -261,6 +274,11 @@ public class VistaPrincipalAdmin {
         frame.setVisible(false);
     }
 
+    /**
+     * Metodo que infla la lista de encuestas
+     *
+     * @param lista Lista con los titulos de las encuestas a inflar
+     */
     public void llenarLista(String[] lista) {
 
         DefaultListModel<String> model = new DefaultListModel<>();
@@ -270,6 +288,9 @@ public class VistaPrincipalAdmin {
         list1.setModel(model);
     }
 
+    /**
+     * Metodo para configurar los botones cuando no se selecciona ninguna encuesta de la lista
+     */
     public void NOseleccionadaEncuesta() {
         borrarEncuestaButton.setEnabled(false);
         modificarEncuestaButton.setEnabled(false);
@@ -278,6 +299,9 @@ public class VistaPrincipalAdmin {
         importarRespuestasButton.setEnabled(false);
     }
 
+    /**
+     * Metodo para configurar los botones cuando se selecciona una encuesta sin responder
+     */
     public void seleccionadaEncuestaSinResponder() {
         borrarEncuestaButton.setEnabled(true);
         modificarEncuestaButton.setEnabled(true);
@@ -286,6 +310,9 @@ public class VistaPrincipalAdmin {
         importarRespuestasButton.setEnabled(true);
     }
 
+    /**
+     * Metodo para configurar los botones cuando se selecciona una encuesta respondida
+     */
     public void seleccionadaEncuestaRespondida() {
         clusteringButton.setEnabled(true);
         borrarEncuestaButton.setEnabled(true);
@@ -294,6 +321,9 @@ public class VistaPrincipalAdmin {
         importarRespuestasButton.setEnabled(true);
     }
 
+    /**
+     * Metodo para importar una respuesta al sistema
+     */
     public void importarRespuesta() {
         JFrame parentFrame = new JFrame("Importar respuesta");
         JFileChooser fileChooser = new JFileChooser();
@@ -321,6 +351,7 @@ public class VistaPrincipalAdmin {
 
     /**
      * Aviso de la vista
+     *
      * @param mensaje Mensaje que sale en el aviso
      */
     public void aviso(String mensaje) {
@@ -386,7 +417,7 @@ public class VistaPrincipalAdmin {
         label4.setText("Fecha Final");
         panel1.add(label4, new com.intellij.uiDesigner.core.GridConstraints(1, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JPanel panel2 = new JPanel();
-        panel2.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(11, 2, new Insets(0, 0, 0, 0), -1, -1));
+        panel2.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(13, 2, new Insets(0, 0, 0, 0), -1, -1));
         panel1.add(panel2, new com.intellij.uiDesigner.core.GridConstraints(3, 5, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         nuevaEncuestaButton = new JButton();
         nuevaEncuestaButton.setText("Nueva encuesta");
@@ -398,13 +429,13 @@ public class VistaPrincipalAdmin {
         borrarEncuestaButton = new JButton();
         borrarEncuestaButton.setEnabled(false);
         borrarEncuestaButton.setText("Borrar encuesta");
-        panel2.add(borrarEncuestaButton, new com.intellij.uiDesigner.core.GridConstraints(8, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        panel2.add(borrarEncuestaButton, new com.intellij.uiDesigner.core.GridConstraints(10, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer3 = new com.intellij.uiDesigner.core.Spacer();
-        panel2.add(spacer3, new com.intellij.uiDesigner.core.GridConstraints(9, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
+        panel2.add(spacer3, new com.intellij.uiDesigner.core.GridConstraints(11, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer4 = new com.intellij.uiDesigner.core.Spacer();
         panel2.add(spacer4, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer5 = new com.intellij.uiDesigner.core.Spacer();
-        panel2.add(spacer5, new com.intellij.uiDesigner.core.GridConstraints(7, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
+        panel2.add(spacer5, new com.intellij.uiDesigner.core.GridConstraints(9, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer6 = new com.intellij.uiDesigner.core.Spacer();
         panel2.add(spacer6, new com.intellij.uiDesigner.core.GridConstraints(5, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         clusteringButton = new JButton();
@@ -414,15 +445,20 @@ public class VistaPrincipalAdmin {
         modificarEncuestaButton = new JButton();
         modificarEncuestaButton.setEnabled(false);
         modificarEncuestaButton.setText("Modificar encuesta");
-        panel2.add(modificarEncuestaButton, new com.intellij.uiDesigner.core.GridConstraints(6, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        panel2.add(modificarEncuestaButton, new com.intellij.uiDesigner.core.GridConstraints(8, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         exportarButton = new JButton();
         exportarButton.setEnabled(false);
         exportarButton.setText("Exportar encuesta");
-        panel2.add(exportarButton, new com.intellij.uiDesigner.core.GridConstraints(10, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        panel2.add(exportarButton, new com.intellij.uiDesigner.core.GridConstraints(12, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         importarRespuestasButton = new JButton();
         importarRespuestasButton.setEnabled(false);
         importarRespuestasButton.setText("Importar respuestas");
         panel2.add(importarRespuestasButton, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        verEncuestaButton = new JButton();
+        verEncuestaButton.setText("Ver encuesta");
+        panel2.add(verEncuestaButton, new com.intellij.uiDesigner.core.GridConstraints(6, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        final com.intellij.uiDesigner.core.Spacer spacer7 = new com.intellij.uiDesigner.core.Spacer();
+        panel2.add(spacer7, new com.intellij.uiDesigner.core.GridConstraints(7, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         cerrarSesiónButton = new JButton();
         cerrarSesiónButton.setText("Cerrar sesión");
         panel1.add(cerrarSesiónButton, new com.intellij.uiDesigner.core.GridConstraints(0, 5, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
