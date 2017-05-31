@@ -10,7 +10,9 @@ import java.awt.event.ActionListener;
 import java.nio.DoubleBuffer;
 import java.util.ArrayList;
 
-
+/**
+ * Clase de vista de respuesta interactiva
+ */
 public class VistaRespInteractiva {
     private ControladorPresentacio ctrlPres;
     private ArrayList<ArrayList<String>> pregs;
