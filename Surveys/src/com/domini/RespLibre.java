@@ -113,7 +113,14 @@ public class RespLibre extends Respuesta{
      */
     private void Functionals(){
         funcWords = new HashSet<>();
-        String path = "src/com/dades/PalabrasFuncionales";
+        String path;
+        String os = System.getProperty("os.name").toLowerCase();
+        if (os.indexOf("win") >= 0) {
+            path = "src\\com\\dades\\PalabrasFuncionales";
+        }
+        else {
+            path = "src/com/dades/PalabrasFuncionales";
+        }
         try{
             String line = null;
             FileReader fileReader = new FileReader(path);
