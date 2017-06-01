@@ -1,0 +1,57 @@
+Titulo
+EncExt
+
+Usuario
+User23
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RCO
+0
+5
+Muy poco
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RCNOM
+1
+1
+Toyota
+
+Respuesta pregunta
+RN
+95.01466879530693
+0.0
+100.0
+
+Respuesta pregunta
+RL
+A sloth eats your homie
+
+Respuesta pregunta
+RCNOM
+4
+0
+Vaporwave
+1
+Rosswave
+2
+Eurobeat
+3
+FutureFunk
+
+Respuesta pregunta
+RN
+182
+100.0
+220.0
+
+Respuesta pregunta
+RL
+Your homie meets with my mom
+
+Final respuestas encuesta

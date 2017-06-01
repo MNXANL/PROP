@@ -1,0 +1,61 @@
+Titulo
+EncExt
+
+Usuario
+User37
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RCO
+3
+5
+Bastante
+
+Respuesta pregunta
+RCNOU
+3
+Verde
+
+Respuesta pregunta
+RCNOM
+1
+0
+Fiat
+
+Respuesta pregunta
+RN
+89.26387233351511
+0.0
+100.0
+
+Respuesta pregunta
+RL
+A sloth retards the king
+
+Respuesta pregunta
+RCNOM
+5
+0
+Vaporwave
+1
+Rosswave
+2
+Eurobeat
+3
+FutureFunk
+4
+Trumpwave
+
+Respuesta pregunta
+RN
+181
+100.0
+220.0
+
+Respuesta pregunta
+RL
+Your homie explodes a dude
+
+Final respuestas encuesta

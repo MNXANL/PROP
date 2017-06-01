@@ -1,0 +1,54 @@
+Titulo
+EncExt
+
+Usuario
+User19
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RCNOU
+3
+Verde
+
+Respuesta pregunta
+RCNOM
+2
+1
+Toyota
+3
+Seat
+
+Respuesta pregunta
+RN
+94.69304679535706
+0.0
+100.0
+
+Respuesta pregunta
+RL
+My mom kicks a dude
+
+Respuesta pregunta
+RCNOM
+2
+0
+Vaporwave
+4
+Trumpwave
+
+Respuesta pregunta
+RN
+220
+100.0
+220.0
+
+Respuesta pregunta
+RL
+Some guy creates the king
+
+Final respuestas encuesta

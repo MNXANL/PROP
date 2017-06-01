@@ -1,0 +1,36 @@
+Titulo
+Encuesta
+
+Usuario
+User28
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+2
+5
+Regular
+
+Respuesta pregunta
+RCNOU
+2
+Amarillo
+
+Respuesta pregunta
+RCNOM
+1
+1
+Renault
+
+Respuesta pregunta
+RN
+0.3871640665328169
+0.0
+10.0
+
+Respuesta pregunta
+RV
+
+Final respuestas encuesta

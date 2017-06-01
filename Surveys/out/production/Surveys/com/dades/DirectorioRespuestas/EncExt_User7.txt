@@ -1,0 +1,52 @@
+Titulo
+EncExt
+
+Usuario
+User7
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RCNOU
+1
+Azul
+
+Respuesta pregunta
+RCNOM
+1
+3
+Seat
+
+Respuesta pregunta
+RN
+60.78809687796195
+0.0
+100.0
+
+Respuesta pregunta
+RL
+Your homie hacks my mom
+
+Respuesta pregunta
+RCNOM
+2
+1
+Rosswave
+4
+Trumpwave
+
+Respuesta pregunta
+RN
+149
+100.0
+220.0
+
+Respuesta pregunta
+RL
+A cat with rabies tries to automate my mom
+
+Final respuestas encuesta

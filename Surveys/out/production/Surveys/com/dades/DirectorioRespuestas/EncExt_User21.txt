@@ -1,0 +1,52 @@
+Titulo
+EncExt
+
+Usuario
+User21
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RCO
+2
+5
+Regular
+
+Respuesta pregunta
+RCNOU
+3
+Verde
+
+Respuesta pregunta
+RCNOM
+2
+2
+Ford
+3
+Seat
+
+Respuesta pregunta
+RN
+15.51582176428803
+0.0
+100.0
+
+Respuesta pregunta
+RL
+This cool guy my gardener met yesterday treats a sloth
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RN
+167
+100.0
+220.0
+
+Respuesta pregunta
+RL
+Some guy creates my mom
+
+Final respuestas encuesta

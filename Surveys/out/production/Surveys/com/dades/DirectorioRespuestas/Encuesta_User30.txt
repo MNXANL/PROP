@@ -1,0 +1,39 @@
+Titulo
+Encuesta
+
+Usuario
+User30
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+2
+5
+Regular
+
+Respuesta pregunta
+RCNOU
+1
+Azul
+
+Respuesta pregunta
+RCNOM
+2
+2
+Hyundai
+3
+Nissan
+
+Respuesta pregunta
+RN
+0.9714315878939761
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Some guy tries to automate a cat with rabies
+
+Final respuestas encuesta

@@ -1,0 +1,52 @@
+Titulo
+EncExt
+
+Usuario
+User29
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RCO
+2
+5
+Regular
+
+Respuesta pregunta
+RCNOU
+2
+Amarillo
+
+Respuesta pregunta
+RCNOM
+2
+0
+Fiat
+3
+Seat
+
+Respuesta pregunta
+RN
+70.83112624310893
+0.0
+100.0
+
+Respuesta pregunta
+RL
+A dude explodes a sloth
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RN
+106
+100.0
+220.0
+
+Respuesta pregunta
+RL
+Your homie creates my mom
+
+Final respuestas encuesta

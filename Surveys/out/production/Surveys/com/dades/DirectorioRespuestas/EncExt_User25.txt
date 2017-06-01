@@ -1,0 +1,61 @@
+Titulo
+EncExt
+
+Usuario
+User25
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RCO
+0
+5
+Muy poco
+
+Respuesta pregunta
+RCNOU
+1
+Azul
+
+Respuesta pregunta
+RCNOM
+2
+1
+Toyota
+2
+Ford
+
+Respuesta pregunta
+RN
+40.54960742143382
+0.0
+100.0
+
+Respuesta pregunta
+RL
+Superman hacks a sloth
+
+Respuesta pregunta
+RCNOM
+4
+0
+Vaporwave
+1
+Rosswave
+3
+FutureFunk
+4
+Trumpwave
+
+Respuesta pregunta
+RN
+152
+100.0
+220.0
+
+Respuesta pregunta
+RL
+Some guy treats your homie
+
+Final respuestas encuesta

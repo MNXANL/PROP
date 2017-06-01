@@ -462,7 +462,6 @@ public class VistaCrearEncuesta {
      * >>> IMPORTANT!! <<<
      * DO NOT edit this method OR call it in your code!
      *
-     * @noinspection ALL
      */
     private void $$$setupUI$$$() {
         panel1 = new JPanel();
@@ -833,9 +832,8 @@ public class VistaCrearEncuesta {
         panel1.add(spacer31, gbc);
     }
 
-    /**
-     * @noinspection ALL
-     */
+
+
     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }

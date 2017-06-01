@@ -1,0 +1,37 @@
+Titulo
+Encuesta
+
+Usuario
+User69
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+4
+5
+Mucho
+
+Respuesta pregunta
+RCNOU
+3
+Verde
+
+Respuesta pregunta
+RCNOM
+1
+3
+Nissan
+
+Respuesta pregunta
+RN
+9.368417892290742
+0.0
+10.0
+
+Respuesta pregunta
+RL
+A sloth flees from superman
+
+Final respuestas encuesta

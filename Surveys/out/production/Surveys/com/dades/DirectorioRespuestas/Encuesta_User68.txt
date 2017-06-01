@@ -1,0 +1,36 @@
+Titulo
+Encuesta
+
+Usuario
+User68
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+2
+5
+Regular
+
+Respuesta pregunta
+RCNOU
+1
+Azul
+
+Respuesta pregunta
+RCNOM
+1
+0
+Opel
+
+Respuesta pregunta
+RN
+1.6061269294502278
+0.0
+10.0
+
+Respuesta pregunta
+RV
+
+Final respuestas encuesta

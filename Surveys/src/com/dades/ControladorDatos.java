@@ -222,7 +222,7 @@ public class ControladorDatos {
 
     /**
      * Metodo para borrar respuestas de encuesta en disco
-     * @param re Respuestas de encuesta a borrar
+     * @param titulo Respuestas de encuesta a borrar
      */
     public void borrarRespuestasEncuesta (String titulo) {
         File f;

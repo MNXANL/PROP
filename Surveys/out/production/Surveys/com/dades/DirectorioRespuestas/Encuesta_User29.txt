@@ -1,0 +1,39 @@
+Titulo
+Encuesta
+
+Usuario
+User29
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+2
+5
+Regular
+
+Respuesta pregunta
+RCNOU
+2
+Amarillo
+
+Respuesta pregunta
+RCNOM
+2
+0
+Opel
+1
+Renault
+
+Respuesta pregunta
+RN
+7.772478336838921
+0.0
+10.0
+
+Respuesta pregunta
+RL
+A cat with rabies meows on superman
+
+Final respuestas encuesta

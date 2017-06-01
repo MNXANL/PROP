@@ -1,0 +1,52 @@
+Titulo
+EncExt
+
+Usuario
+User42
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RCO
+4
+5
+Mucho
+
+Respuesta pregunta
+RCNOU
+3
+Verde
+
+Respuesta pregunta
+RCNOM
+2
+0
+Fiat
+3
+Seat
+
+Respuesta pregunta
+RN
+47.27987146490089
+0.0
+100.0
+
+Respuesta pregunta
+RL
+A sloth retards this cool guy my gardener met yesterday
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RN
+183
+100.0
+220.0
+
+Respuesta pregunta
+RL
+A cat with rabies configures some guy
+
+Final respuestas encuesta

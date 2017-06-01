@@ -1,0 +1,82 @@
+Prueba 1
+Descripción: Registro de usuario encuestado
+Objetivos: Dar de alta un nuevo usuario encuestado en el sistema
+Entrada:
+En la pantalla de LogIn:
+    Seleccionar el botón Registrarse.
+En la pantalla emergente:
+    Nombre de usuario: Aleix
+    Contraseña: 12345
+    Repite la contraseña: 12345
+    Seleccionar botón Crear Usuario
+Salida:
+Se cierra la pantalla de registro de usuario y no muestra mensaje de error
+Resultado de la prueba: OK
+
+Prueba 2
+Descripción: Registro de usuario con nombre existente
+Objetivos: Comprobar que no pueden haber dos usuarios con el mismo nombre en el sistema
+Entrada:
+Precondición: Prueba 1
+En la pantalla de LogIn:
+    Seleccionar el botón Registrarse.
+En la pantalla emergente:
+    Nombre de usuario: Aleix
+    Contraseña: 12345
+    Repite la contraseña: 12345
+    Seleccionar botón Crear Usuario
+Salida:
+Se muestra un mensaje de error indicando que el nombre de usuario ya existe
+Resultado de la prueba: OK
+
+Prueba 3
+Descripicón: Registro de usuario con error en la contraseña
+Objetivos: Comprobar que un usuario no puede equivocarse al introducir la contraseña dos veces en el momento de registrarse
+Entrada:
+En la pantalla de LogIn:
+    Seleccionar el botón Registrarse.
+En la pantalla emergente:
+    Nombre de usuario: Juan
+    Contraseña: 123
+    Repite la contraseña: 122
+    Selecccionar botón Crear Usuario
+Salida:
+Se muestra un mensaje de error indicando que las contraseñas no son iguales
+Resultado de la prueba: OK
+
+Prueba 4
+Descripción: Entrar al sistema con usuario encuestado
+Objetivos: Identificarse en el sistema como un usuario encuestado y acceder a la pantalla principal de usuario
+Entrada:
+Precondición: Prueba 1
+En la pantalla de LogIn:
+    Nombre de usuario: Aleix
+    Contraseña: 12345
+    Seleccionar botón Iniciar Sesión
+Salida:
+Se muestra la pantalla principal de usuario
+Resultado de la prueba: OK
+
+Prueba 5
+Descripción: Entrar al sistema como usuario administrador
+Objetivos: Identificarse en el sistema como un administrador y acceder a la pantalla principal de administrador
+Entrada:
+En la pantalla de LogIn:
+    Nombre de usuario: admin
+    Contraseña: 1234
+    Seleccionar botón Iniciar Sesión
+Salida:
+Se muestra la pantalla principal de administrador
+Resultado de la prueba: OK
+
+Prueba 6
+Descripción: Entrar al sistema con datos incorrectos
+Objetivos: Comprobar que un usuario no puede entrar en el sistema a no ser que introduzca datos válidos de usuario y contraseña
+Entrada:
+En la pantalla de LogIn:
+    Nombre de usuario: Marc
+    Contraseña: asdf
+    Seleccionar botón Iniciar Sesión
+Salida:
+Se muestra un mensaje indicando que el nombre de usuario o la contraseña son incorrectos
+Resultado de la prueba: OK

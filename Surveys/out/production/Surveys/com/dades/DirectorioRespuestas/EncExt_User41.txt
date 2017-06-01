@@ -1,0 +1,60 @@
+Titulo
+EncExt
+
+Usuario
+User41
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RCO
+4
+5
+Mucho
+
+Respuesta pregunta
+RCNOU
+3
+Verde
+
+Respuesta pregunta
+RCNOM
+1
+3
+Seat
+
+Respuesta pregunta
+RN
+40.45342399695565
+0.0
+100.0
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RCNOM
+5
+0
+Vaporwave
+1
+Rosswave
+2
+Eurobeat
+3
+FutureFunk
+4
+Trumpwave
+
+Respuesta pregunta
+RN
+108
+100.0
+220.0
+
+Respuesta pregunta
+RL
+This cool guy my gardener met yesterday configures some guy
+
+Final respuestas encuesta

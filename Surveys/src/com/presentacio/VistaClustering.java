@@ -262,7 +262,6 @@ public class VistaClustering {
      * >>> IMPORTANT!! <<<
      * DO NOT edit this method OR call it in your code!
      *
-     * @noinspection ALL
      */
     private void $$$setupUI$$$() {
         CPanel = new JPanel();
@@ -277,7 +276,6 @@ public class VistaClustering {
     }
 
     /**
-     * @noinspection ALL
      */
     public JComponent $$$getRootComponent$$$() {
         return CPanel;

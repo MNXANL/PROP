@@ -1,0 +1,49 @@
+Titulo
+EncExt
+
+Usuario
+User27
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RCNOU
+3
+Verde
+
+Respuesta pregunta
+RCNOM
+1
+2
+Ford
+
+Respuesta pregunta
+RN
+83.05282434216126
+0.0
+100.0
+
+Respuesta pregunta
+RL
+My mom retards your homie
+
+Respuesta pregunta
+RCNOM
+1
+3
+FutureFunk
+
+Respuesta pregunta
+RN
+132
+100.0
+220.0
+
+Respuesta pregunta
+RV
+
+Final respuestas encuesta

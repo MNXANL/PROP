@@ -1,0 +1,54 @@
+Titulo
+EncExt
+
+Usuario
+User22
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RCO
+4
+5
+Mucho
+
+Respuesta pregunta
+RCNOU
+3
+Verde
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RN
+35.95765381870491
+0.0
+100.0
+
+Respuesta pregunta
+RL
+My mom kicks your homie
+
+Respuesta pregunta
+RCNOM
+3
+0
+Vaporwave
+2
+Eurobeat
+4
+Trumpwave
+
+Respuesta pregunta
+RN
+153
+100.0
+220.0
+
+Respuesta pregunta
+RL
+A cat with rabies meets with a cat with rabies
+
+Final respuestas encuesta

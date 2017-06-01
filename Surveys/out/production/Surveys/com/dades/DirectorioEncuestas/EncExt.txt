@@ -1,0 +1,65 @@
+Titulo
+EncExt
+
+Fecha
+20/04/2017 23:20:00
+
+Pregunta
+PCO
+Cuanto te gusta PROP?
+Muy poco
+Poco
+Regular
+Bastante
+Mucho
+
+Pregunta
+PCNOU
+De que color es tu coche?
+Rojo
+Azul
+Amarillo
+Verde
+Negro
+Blanco
+
+Pregunta
+PCNOM
+Que marcas te gustan?
+2
+Fiat
+Toyota
+Ford
+Seat
+
+Pregunta
+PN
+Valora tu experiencia en PROP
+0
+100
+
+Pregunta
+PRL
+Cual es tu frase favorita?
+
+Pregunta
+PCNOM
+Cuales son tus generos musicales favoritos?
+5
+Vaporwave
+Rosswave
+Eurobeat
+FutureFunk
+Trumpwave
+
+Pregunta
+PN
+Cuanto mides en cm?
+100
+220
+
+Pregunta
+PRL
+Escribe un poema
+
+Final encuesta

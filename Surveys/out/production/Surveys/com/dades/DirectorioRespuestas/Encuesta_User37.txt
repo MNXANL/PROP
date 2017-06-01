@@ -1,0 +1,37 @@
+Titulo
+Encuesta
+
+Usuario
+User37
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+3
+5
+Bastante
+
+Respuesta pregunta
+RCNOU
+2
+Amarillo
+
+Respuesta pregunta
+RCNOM
+1
+2
+Hyundai
+
+Respuesta pregunta
+RN
+2.075166627817705
+0.0
+10.0
+
+Respuesta pregunta
+RL
+This cool guy my gardener met yesterday creates superman
+
+Final respuestas encuesta

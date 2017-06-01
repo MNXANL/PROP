@@ -5,9 +5,100 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6261926-014f-4e17-847e-29161c7babb7" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Administrador/Administrador.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Administrador/AdministradorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Administrador/DriverAdministrador.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Administrador/JPAdministrador.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/CjtEncuestas/CjtEncuestas.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/CjtEncuestas/CjtEncuestasTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/CjtEncuestas/DriverCjtEncuestas.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/CjtEncuestas/JPCjtEncuestas.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Clustering/Clustering.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Clustering/ClusteringUTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Clustering/DriverClustering.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Clustering/JpruebaClustering" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Encuesta/DriverEncuesta.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Encuesta/Encuesta.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Encuesta/Encuesta.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Encuesta/EncuestaTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Encuesta/JPEncuesta.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Encuestado/DriverEncuestado.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Encuestado/Encuestado.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Encuestado/EncuestadoTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Encuestado/JPEncuestado.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregCualitativaNoOrdenadaMultiple/DriverPregCualitativaNoOrdenadaMultiple.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregCualitativaNoOrdenadaMultiple/JPPregCualitativaNoOrdenadaMultiple.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregCualitativaNoOrdenadaMultiple/PregCualitativaNoOrdenadaMultiple.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregCualitativaNoOrdenadaMultiple/PregCualitativaNoOrdenadaMultipleTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregCualitativaNoOrdenadaUnica/DriverPregCualitativaNoOrdenadaUnica.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregCualitativaNoOrdenadaUnica/JPPregCualitativaNoOrdenadaUnica.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregCualitativaNoOrdenadaUnica/PregCualitativaNoOrdenadaUnica.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregCualitativaNoOrdenadaUnica/PregCualitativaNoOrdenadaUnicaTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregCualitativaOrdenada/DriverPregCualitativaOrdenada.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregCualitativaOrdenada/JPPregCualitativaOrdenada.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregCualitativaOrdenada/PregCualitativaOrdenada.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregCualitativaOrdenada/PregCualitativaOrdenadaTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregNumerica/DriverPregNumerica.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregNumerica/JPPregNumerica.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregNumerica/PregNumerica.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregNumerica/PregNumericaTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregRespuestaLibre/DriverPregRespuestaLibre.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregRespuestaLibre/JPPregRespuestaLibre.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregRespuestaLibre/PregRespuestaLibre.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/PregRespuestaLibre/PregRespuestaLibreTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Pregunta/DriverPregunta.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Pregunta/JPPregunta.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Pregunta/Pregunta.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Pregunta/PreguntaTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaMultiple/DriverRespCualitativaNoOrdenadaMultiple.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaMultiple/JPRespCualitativaNoOrdenadaMultiple.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaMultiple/RespCualitativaNoOrdenadaMultiple.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaMultiple/RespCualitativaNoOrdenadaMultipleTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaUnica/DriverRespCualitativaNoOrdenadaUnica.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaUnica/JPRespCualitativaNoOrdenadaUnica.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaUnica/RespCualitativaNoOrdenadaUnica.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaUnica/RespCualitativaNoOrdenadaUnicaTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespCualitativaOrdenada/DriverRespCualitativaOrdenada.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespCualitativaOrdenada/JPRespCualitativaOrdenada.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespCualitativaOrdenada/RespCualitativaOrdenada.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespCualitativaOrdenada/RespCualitativaOrdenadaTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespLibre/DriverRespLibre.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespLibre/JPRespLibre.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespLibre/RespLibre.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespLibre/RespLibreTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespNumerica/DriverRespNumerica.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespNumerica/JPRespNumerica.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespNumerica/RespNumerica.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespNumerica/RespNumericaTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespVacia/DriverRespVacia.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespVacia/JPRespVacia.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespVacia/RespVacia.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespVacia/RespVaciaTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Respuesta/DriverRespuesta.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Respuesta/Respuesta.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespuestasEncuesta/DriverRespuestasEncuesta.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespuestasEncuesta/JPRespuestasEncuesta.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespuestasEncuesta/RespuestasEncuesta.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/RespuestasEncuesta/RespuestasEncuestaTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Usuario/DriverUsuario.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Usuario/JPUsuario.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Usuario/Usuario.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/domini/Usuario/UsuarioTest.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Surveys/com/dades/Usuarios.txt" afterPath="$PROJECT_DIR$/out/production/Surveys/com/dades/Usuarios.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dades/ControladorDatos.java" afterPath="$PROJECT_DIR$/src/com/dades/ControladorDatos.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaMultiple.java" afterPath="$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaMultiple.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/ImportarEncuesta.java" afterPath="$PROJECT_DIR$/src/com/presentacio/ImportarEncuesta.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/LogIn.java" afterPath="$PROJECT_DIR$/src/com/presentacio/LogIn.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/RegistroUsuario.java" afterPath="$PROJECT_DIR$/src/com/presentacio/RegistroUsuario.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaKClustering.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaKClustering.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.form" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalUsuario.form" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalUsuario.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalUsuario.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalUsuario.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/presentacio/VistaVerEncuesta.java" afterPath="$PROJECT_DIR$/src/com/presentacio/VistaVerEncuesta.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,111 +114,99 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Clustering.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5265">
-              <caret line="355" column="79" lean-forward="false" selection-start-line="355" selection-start-column="79" selection-end-line="355" selection-end-column="79" />
-              <folding>
-                <marker date="1496318659789" expanded="true" signature="5910:5916" ph="{...}" />
-                <marker date="1496318659789" expanded="true" signature="14680:14686" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControladorPresentacio.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2985">
-              <caret line="210" column="37" lean-forward="false" selection-start-line="210" selection-start-column="37" selection-end-line="210" selection-end-column="37" />
-              <folding>
-                <marker date="1496262336331" expanded="true" signature="6962:6970" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VistaClustering.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VistaClustering.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="201" column="7" lean-forward="false" selection-start-line="201" selection-start-column="7" selection-end-line="201" selection-end-column="7" />
+            <state relative-caret-position="431">
+              <caret line="277" column="7" lean-forward="false" selection-start-line="277" selection-start-column="7" selection-end-line="277" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Respuesta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/Respuesta.java">
+      <file leaf-file-name="RegistroUsuario.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/presentacio/RegistroUsuario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="417">
+              <caret line="119" column="7" lean-forward="false" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RespuestasEncuesta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java">
+      <file leaf-file-name="LogIn.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/presentacio/LogIn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="465">
+              <caret line="220" column="5" lean-forward="false" selection-start-line="220" selection-start-column="5" selection-end-line="220" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RespVacia.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/RespVacia.java">
+      <file leaf-file-name="ImportarEncuesta.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/presentacio/ImportarEncuesta.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="587">
+              <caret line="108" column="7" lean-forward="false" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RespNumerica.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/RespNumerica.java">
+      <file leaf-file-name="ControladorDatos.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/dades/ControladorDatos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="414">
+              <caret line="227" column="15" lean-forward="true" selection-start-line="227" selection-start-column="15" selection-end-line="227" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RespCualitativaOrdenada.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java">
+      <file leaf-file-name="VistaPrincipalUsuario.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaPrincipalUsuario.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VistaPrincipalUsuario.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaPrincipalUsuario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="417">
+              <caret line="464" column="7" lean-forward="false" selection-start-line="464" selection-start-column="7" selection-end-line="464" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RespLibre.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/RespLibre.java">
+      <file leaf-file-name="VistaPrincipalAdmin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="111" column="64" lean-forward="false" selection-start-line="111" selection-start-column="64" selection-end-line="111" selection-end-column="64" />
+            <state relative-caret-position="417">
+              <caret line="476" column="0" lean-forward="false" selection-start-line="476" selection-start-column="0" selection-end-line="476" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Encuesta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/domini/Encuesta.java">
+      <file leaf-file-name="VistaKClustering.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaKClustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7710">
-              <caret line="532" column="9" lean-forward="false" selection-start-line="532" selection-start-column="9" selection-end-line="532" selection-end-column="9" />
-              <folding>
-                <marker date="1496352186248" expanded="true" signature="22073:22079" ph=" }" />
-                <marker date="1496352186248" expanded="true" signature="22085:22245" ph="/**...*/" />
-                <marker date="1496352186248" expanded="true" signature="22294:22536" ph="{...}" />
-              </folding>
+            <state relative-caret-position="417">
+              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VistaCrearEncuesta.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="835" column="0" lean-forward="false" selection-start-line="835" selection-start-column="0" selection-end-line="835" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,6 +239,9 @@
       <find>cluster</find>
       <find>clust</find>
       <find>scrollable1</find>
+      <find>&lt;=</find>
+      <find>noin</find>
+      <find>error</find>
     </findStrings>
     <replaceStrings>
       <replace>rco</replace>
@@ -184,15 +266,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaOrdenada/RespCualitativaOrdenada.java" />
-        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaOrdenada/PregRespuestaCualitativaOrdenadaTest.java" />
-        <option value="$PROJECT_DIR$/src/tests/domini/Pregunta/PreguntaTest.java" />
-        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaOrdenada/RespCualitativaOrdenadaTest.java" />
-        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaOrdenada/DriverRespCualitativaOrdenada.java" />
-        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaUnica/RespCualitativaNoOrdenadaUnica.java" />
-        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaUnica/DriverRespCualitativaNoOrdenadaUnica.java" />
-        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaOrdenada/JPRespCualitativaOrdenada.txt" />
-        <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaUnica/JPRespCualitativaNoOrdenadaUnica.txt" />
         <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaUnica/RespCualitativaNoOrdenadaUnicaTest.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaMultiple/RespCualitativaNoOrdenadaMultiple.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/RespCualitativaNoOrdenadaMultiple/RespCualitativaNoOrdenadaMultipleTest.java" />
@@ -203,7 +276,6 @@
         <option value="$PROJECT_DIR$/src/tests/domini/RespuestasEncuesta/JPRespuestasEncuesta.txt" />
         <option value="$PROJECT_DIR$/src/tests/domini/RespuestasEncuesta/DriverRespuestasEncuesta.java" />
         <option value="$PROJECT_DIR$/src/com/domini/PregNumerica.java" />
-        <option value="$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaMultiple.java" />
         <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/RespLibre/RespLibre.java" />
         <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaUnica.java" />
@@ -211,15 +283,11 @@
         <option value="$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/Clustering/DriverClustering.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/Clustering/JpruebaClustering" />
-        <option value="$PROJECT_DIR$/src/com/dades/ControladorDatos.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/Clustering/ClusteringUTest.java" />
         <option value="$PROJECT_DIR$/src/tests/domini/Clustering/Clustering.java" />
         <option value="$PROJECT_DIR$/src/com/domini/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/vistaClustering.form" />
         <option value="$PROJECT_DIR$/src/com/presentacio/vistaClustering.java" />
-        <option value="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java" />
-        <option value="$PROJECT_DIR$/src/com/presentacio/VistaKClustering.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaClustering.form" />
         <option value="$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_empty.txt" />
         <option value="$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Encuesta_User79" />
@@ -234,14 +302,29 @@
         <option value="$PROJECT_DIR$/src/com/domini/Clustering.java" />
         <option value="$PROJECT_DIR$/src/com/domini/RespLibre.java" />
         <option value="$PROJECT_DIR$/src/com/domini/Encuesta.java" />
+        <option value="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalUsuario.form" />
+        <option value="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.form" />
+        <option value="$PROJECT_DIR$/src/tests/domini/Encuesta/EncuestaTest.java" />
+        <option value="$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaMultiple.java" />
+        <option value="$PROJECT_DIR$/src/com/presentacio/VistaVerEncuesta.java" />
+        <option value="$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.java" />
+        <option value="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalUsuario.java" />
+        <option value="$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java" />
+        <option value="$PROJECT_DIR$/src/com/presentacio/VistaKClustering.java" />
+        <option value="$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java" />
         <option value="$PROJECT_DIR$/src/com/presentacio/VistaClustering.java" />
+        <option value="$PROJECT_DIR$/src/com/presentacio/RegistroUsuario.java" />
+        <option value="$PROJECT_DIR$/src/com/presentacio/LogIn.java" />
+        <option value="$PROJECT_DIR$/src/com/presentacio/ImportarEncuesta.java" />
+        <option value="$PROJECT_DIR$/src/com/dades/ControladorDatos.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="width" value="1368" />
-    <option name="height" value="741" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
@@ -261,9 +344,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -307,13 +387,324 @@
               <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentacio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VistaVerEncuesta" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentacio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VistaRespInteractiva" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentacio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VistaPrincipalUsuario" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentacio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VistaPrincipalAdmin" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentacio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VistaKClustering" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentacio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VistaCrearEncuesta" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentacio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VistaClustering" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentacio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RegistroUsuario" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentacio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LogIn" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentacio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImportarEncuesta" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentacio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domini" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Surveys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dades" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="/usr/lib/jvm/java-8-openjdk/lib/tools.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
@@ -334,258 +725,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/com/dades" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Surveys/com/dades/DirectorioEncuestas/Enc.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Surveys/com/dades/DirectorioEncuestas/Encuesta.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Surveys/com/dades/DirectorioRespuestas/Encuesta_Aleix.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Surveys/com/dades/DirectorioRespuestas/Encuesta_Juan.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Surveys/com/dades/DirectorioRespuestas/Encuesta_pepe.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/ControladorDatos.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Enc.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/EncExt.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Encuesta.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User0.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User1.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User10.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User11.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User12.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User13.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User14.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User15.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User16.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User17.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User18.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User19.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User2.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User20.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User21.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User22.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User23.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User24.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User25.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User26.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User27.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User28.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User29.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User3.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User30.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User31.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User32.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User33.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User34.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User35.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User36.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User37.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User38.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User39.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User4.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User40.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User41.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User42.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User43.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User44.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User45.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User46.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User47.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User48.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User49.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User5.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User6.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User7.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User8.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/EncExt_User9.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_Aleix.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_Juan.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User0.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User1.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User10.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User11.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User12.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User13.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User14.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User15.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User16.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User17.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User18.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User19.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User2.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User20.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User21.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User22.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User23.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User24.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User25.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User26.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User27.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User28.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User29.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User3.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User30.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User31.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User32.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User33.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User34.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User35.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User36.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User37.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User38.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User39.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User4.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User40.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User41.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User42.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User43.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User44.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User45.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User46.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User47.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User48.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User49.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User5.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User50.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User51.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User52.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User53.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User54.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User55.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User56.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User57.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User58.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User59.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User6.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User60.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User61.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User62.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User63.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User64.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User65.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User66.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User67.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User68.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User69.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User7.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User8.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User9.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_pepe.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/domini/ControladorDominio.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/domini/Encuesta.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.form</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.form</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.form</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaVerEncuesta.form</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/presentacio/VistaVerEncuesta.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -644,6 +783,61 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Surveys" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1371,39 +1565,39 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32707354" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32237872" sideWeight="0.5043924" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3114241" sideWeight="0.4956076" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31078225" sideWeight="0.4956076" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23630673" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18960468" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2316119" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18958333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5399061" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2316119" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -1456,21 +1650,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Encuesta_User76" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Encuesta_User81" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Encuesta_User80" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Encuesta_User79" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioEncuestas/Encuesta_User78" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User0" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User2" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User3" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User5" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User6" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User8" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User11" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User12" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User1" />
-    <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User4" />
     <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_User10" />
     <entry file="file://$PROJECT_DIR$/src/com/dades/DirectorioRespuestas/Encuesta_Aleix.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -1498,13 +1677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-217">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dades/ControladorDatos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1643,18 +1815,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/Clustering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5265">
+        <state relative-caret-position="5967">
           <caret line="355" column="79" lean-forward="false" selection-start-line="355" selection-start-column="79" selection-end-line="355" selection-end-column="79" />
-          <folding>
-            <marker date="1496318659789" expanded="true" signature="5910:5916" ph="{...}" />
-            <marker date="1496318659789" expanded="true" signature="14680:14686" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/Respuesta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="85">
           <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
           <folding />
         </state>
@@ -1662,70 +1831,251 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/RespuestasEncuesta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="119">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1374#1375#0" expanded="false" />
+            <element signature="e#1402#1403#0" expanded="false" />
+            <element signature="e#1572#1573#0" expanded="false" />
+            <element signature="e#1614#1615#0" expanded="false" />
+            <element signature="e#1756#1757#0" expanded="false" />
+            <element signature="e#1784#1785#0" expanded="false" />
+            <element signature="e#1925#1926#0" expanded="false" />
+            <element signature="e#1952#1953#0" expanded="false" />
+            <element signature="e#2105#2106#0" expanded="false" />
+            <element signature="e#2133#2134#0" expanded="false" />
+            <element signature="e#4237#4238#0" expanded="false" />
+            <element signature="e#4294#4295#0" expanded="false" />
+            <element signature="e#17743#17744#0" expanded="false" />
+            <element signature="e#17805#17806#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/RespVacia.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#883#884#0" expanded="false" />
+            <element signature="e#908#909#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/RespNumerica.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="119">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#787#788#0" expanded="false" />
+            <element signature="e#814#815#0" expanded="false" />
+            <element signature="e#947#948#0" expanded="false" />
+            <element signature="e#973#974#0" expanded="false" />
+            <element signature="e#1107#1108#0" expanded="false" />
+            <element signature="e#1133#1134#0" expanded="false" />
+            <element signature="e#1285#1286#0" expanded="false" />
+            <element signature="e#1307#1308#0" expanded="false" />
+            <element signature="e#2130#2131#0" expanded="false" />
+            <element signature="e#2179#2180#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaOrdenada.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="119">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#921#922#0" expanded="false" />
+            <element signature="e#953#954#0" expanded="false" />
+            <element signature="e#1084#1085#0" expanded="false" />
+            <element signature="e#1117#1118#0" expanded="false" />
+            <element signature="e#1265#1266#0" expanded="false" />
+            <element signature="e#1296#1297#0" expanded="false" />
+            <element signature="e#1400#1401#0" expanded="false" />
+            <element signature="e#1429#1430#0" expanded="false" />
+            <element signature="e#2409#2410#0" expanded="false" />
+            <element signature="e#2464#2465#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/RespLibre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
+        <state relative-caret-position="1734">
           <caret line="111" column="64" lean-forward="false" selection-start-line="111" selection-start-column="64" selection-end-line="111" selection-end-column="64" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#821#822#0" expanded="false" />
+            <element signature="e#855#856#0" expanded="false" />
+            <element signature="e#926#927#0" expanded="false" />
+            <element signature="e#948#949#0" expanded="false" />
+            <element signature="e#5037#5038#0" expanded="false" />
+            <element signature="e#5078#5079#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/domini/Encuesta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7710">
+        <state relative-caret-position="8738">
           <caret line="532" column="9" lean-forward="false" selection-start-line="532" selection-start-column="9" selection-end-line="532" selection-end-column="9" />
           <folding>
-            <marker date="1496352186248" expanded="true" signature="22073:22079" ph=" }" />
-            <marker date="1496352186248" expanded="true" signature="22085:22245" ph="/**...*/" />
-            <marker date="1496352186248" expanded="true" signature="22294:22536" ph="{...}" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1826#1827#0" expanded="false" />
+            <element signature="e#1856#1857#0" expanded="false" />
+            <element signature="e#1990#1991#0" expanded="false" />
+            <element signature="e#2018#2019#0" expanded="false" />
+            <element signature="e#2197#2198#0" expanded="false" />
+            <element signature="e#2229#2230#0" expanded="false" />
+            <element signature="e#2393#2394#0" expanded="false" />
+            <element signature="e#2421#2422#0" expanded="false" />
+            <element signature="e#2557#2558#0" expanded="false" />
+            <element signature="e#2589#2590#0" expanded="false" />
+            <element signature="e#19448#19449#0" expanded="false" />
+            <element signature="e#19489#19490#0" expanded="false" />
+            <element signature="e#22027#22028#0" expanded="false" />
+            <element signature="e#22078#22079#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/presentacio/ControladorPresentacio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2985">
+        <state relative-caret-position="3383">
           <caret line="210" column="37" lean-forward="false" selection-start-line="210" selection-start-column="37" selection-end-line="210" selection-end-column="37" />
-          <folding>
-            <marker date="1496262336331" expanded="true" signature="6962:6970" ph="{...}" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/domini/Encuesta/EncuestaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaUnica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-419">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/RespCualitativaNoOrdenadaMultiple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/domini/PregCualitativaNoOrdenadaMultiple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="60" lean-forward="false" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaVerEncuesta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="517" column="7" lean-forward="false" selection-start-line="517" selection-start-column="7" selection-end-line="517" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaRespInteractiva.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="761" column="7" lean-forward="false" selection-start-line="761" selection-start-column="7" selection-end-line="761" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaPrincipalUsuario.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaPrincipalUsuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="464" column="7" lean-forward="false" selection-start-line="464" selection-start-column="7" selection-end-line="464" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaPrincipalAdmin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="476" column="0" lean-forward="false" selection-start-line="476" selection-start-column="0" selection-end-line="476" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaKClustering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaCrearEncuesta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="835" column="0" lean-forward="false" selection-start-line="835" selection-start-column="0" selection-end-line="835" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/presentacio/VistaClustering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="201" column="7" lean-forward="false" selection-start-line="201" selection-start-column="7" selection-end-line="201" selection-end-column="7" />
+        <state relative-caret-position="431">
+          <caret line="277" column="7" lean-forward="false" selection-start-line="277" selection-start-column="7" selection-end-line="277" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/RegistroUsuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="119" column="7" lean-forward="false" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/LogIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="220" column="5" lean-forward="false" selection-start-line="220" selection-start-column="5" selection-end-line="220" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/presentacio/ImportarEncuesta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="108" column="7" lean-forward="false" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dades/ControladorDatos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="227" column="15" lean-forward="true" selection-start-line="227" selection-start-column="15" selection-end-line="227" selection-end-column="15" />
           <folding />
         </state>
       </provider>

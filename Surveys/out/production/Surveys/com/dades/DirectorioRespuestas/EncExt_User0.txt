@@ -1,0 +1,58 @@
+Titulo
+EncExt
+
+Usuario
+User0
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RCO
+3
+5
+Bastante
+
+Respuesta pregunta
+RCNOU
+0
+Rojo
+
+Respuesta pregunta
+RCNOM
+2
+0
+Fiat
+1
+Toyota
+
+Respuesta pregunta
+RN
+57.48638288245864
+0.0
+100.0
+
+Respuesta pregunta
+RL
+My mom configures the king
+
+Respuesta pregunta
+RCNOM
+4
+0
+Vaporwave
+1
+Rosswave
+2
+Eurobeat
+4
+Trumpwave
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RL
+A sloth flees from superman
+
+Final respuestas encuesta

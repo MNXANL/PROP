@@ -1,0 +1,36 @@
+Titulo
+Encuesta
+
+Usuario
+User15
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RCNOU
+2
+Amarillo
+
+Respuesta pregunta
+RCNOM
+2
+1
+Renault
+3
+Nissan
+
+Respuesta pregunta
+RN
+8.813961055898591
+0.0
+10.0
+
+Respuesta pregunta
+RL
+A cat with rabies eats my mom
+
+Final respuestas encuesta

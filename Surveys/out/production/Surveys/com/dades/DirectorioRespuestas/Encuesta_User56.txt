@@ -1,0 +1,37 @@
+Titulo
+Encuesta
+
+Usuario
+User56
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+0
+5
+Muy poco
+
+Respuesta pregunta
+RCNOU
+1
+Azul
+
+Respuesta pregunta
+RCNOM
+1
+2
+Hyundai
+
+Respuesta pregunta
+RN
+5.218059011119047
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Superman configures some guy
+
+Final respuestas encuesta

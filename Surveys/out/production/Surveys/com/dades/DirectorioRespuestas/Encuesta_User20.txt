@@ -1,0 +1,37 @@
+Titulo
+Encuesta
+
+Usuario
+User20
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+4
+5
+Mucho
+
+Respuesta pregunta
+RCNOU
+1
+Azul
+
+Respuesta pregunta
+RCNOM
+1
+2
+Hyundai
+
+Respuesta pregunta
+RN
+2.002868274090912
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Your homie configures the king
+
+Final respuestas encuesta

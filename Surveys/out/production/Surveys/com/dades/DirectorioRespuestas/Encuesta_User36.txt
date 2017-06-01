@@ -1,0 +1,37 @@
+Titulo
+Encuesta
+
+Usuario
+User36
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+3
+5
+Bastante
+
+Respuesta pregunta
+RCNOU
+2
+Amarillo
+
+Respuesta pregunta
+RCNOM
+1
+2
+Hyundai
+
+Respuesta pregunta
+RN
+6.580596350902262
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Superman eats a sloth
+
+Final respuestas encuesta

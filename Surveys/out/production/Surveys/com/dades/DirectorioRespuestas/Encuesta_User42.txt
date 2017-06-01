@@ -1,0 +1,39 @@
+Titulo
+Encuesta
+
+Usuario
+User42
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+0
+5
+Muy poco
+
+Respuesta pregunta
+RCNOU
+1
+Azul
+
+Respuesta pregunta
+RCNOM
+2
+0
+Opel
+3
+Nissan
+
+Respuesta pregunta
+RN
+7.196987264377767
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Some guy flees from a sloth
+
+Final respuestas encuesta

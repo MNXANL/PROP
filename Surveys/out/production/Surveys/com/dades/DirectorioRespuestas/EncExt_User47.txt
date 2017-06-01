@@ -1,0 +1,63 @@
+Titulo
+EncExt
+
+Usuario
+User47
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RCO
+2
+5
+Regular
+
+Respuesta pregunta
+RCNOU
+1
+Azul
+
+Respuesta pregunta
+RCNOM
+2
+1
+Toyota
+3
+Seat
+
+Respuesta pregunta
+RN
+18.85078753256839
+0.0
+100.0
+
+Respuesta pregunta
+RL
+A dude retards a cat with rabies
+
+Respuesta pregunta
+RCNOM
+5
+0
+Vaporwave
+1
+Rosswave
+2
+Eurobeat
+3
+FutureFunk
+4
+Trumpwave
+
+Respuesta pregunta
+RN
+122
+100.0
+220.0
+
+Respuesta pregunta
+RL
+Your homie retards superman
+
+Final respuestas encuesta

@@ -1,8 +1,0 @@
-Prueba 1
-Descripción: Test de la clase Usuario, creación de usuarios
-Objetivos: Creación de un usuario con un nombre de usuario, y mostrar el nombre
-Entrada:
-Aleix
-Salida:
-Aleix
-Resultado de la prueba: OK

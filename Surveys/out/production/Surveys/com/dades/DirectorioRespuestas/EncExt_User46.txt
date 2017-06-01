@@ -1,0 +1,58 @@
+Titulo
+EncExt
+
+Usuario
+User46
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RCNOU
+2
+Amarillo
+
+Respuesta pregunta
+RCNOM
+1
+2
+Ford
+
+Respuesta pregunta
+RN
+85.75507791357127
+0.0
+100.0
+
+Respuesta pregunta
+RL
+Your homie spies on a dude
+
+Respuesta pregunta
+RCNOM
+5
+0
+Vaporwave
+1
+Rosswave
+2
+Eurobeat
+3
+FutureFunk
+4
+Trumpwave
+
+Respuesta pregunta
+RN
+158
+100.0
+220.0
+
+Respuesta pregunta
+RL
+Your homie retards superman
+
+Final respuestas encuesta

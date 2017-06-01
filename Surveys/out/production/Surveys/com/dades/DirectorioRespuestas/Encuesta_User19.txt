@@ -1,0 +1,32 @@
+Titulo
+Encuesta
+
+Usuario
+User19
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+4
+5
+Mucho
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RN
+1.8159835656534262
+0.0
+10.0
+
+Respuesta pregunta
+RL
+The king flees from some guy
+
+Final respuestas encuesta

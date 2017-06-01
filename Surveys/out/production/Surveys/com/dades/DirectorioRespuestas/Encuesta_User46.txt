@@ -1,0 +1,37 @@
+Titulo
+Encuesta
+
+Usuario
+User46
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+2
+5
+Regular
+
+Respuesta pregunta
+RCNOU
+1
+Azul
+
+Respuesta pregunta
+RCNOM
+1
+2
+Hyundai
+
+Respuesta pregunta
+RN
+4.592713784122715
+0.0
+10.0
+
+Respuesta pregunta
+RL
+A cat with rabies explodes a sloth
+
+Final respuestas encuesta

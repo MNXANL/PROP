@@ -1,0 +1,47 @@
+Titulo
+EncExt
+
+Usuario
+User43
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RCO
+1
+5
+Poco
+
+Respuesta pregunta
+RCNOU
+0
+Rojo
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RN
+52.95122509960498
+0.0
+100.0
+
+Respuesta pregunta
+RL
+A dude retards the king
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RN
+126
+100.0
+220.0
+
+Respuesta pregunta
+RL
+My mom spies on my mom
+
+Final respuestas encuesta

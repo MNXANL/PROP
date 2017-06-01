@@ -1,0 +1,37 @@
+Titulo
+Encuesta
+
+Usuario
+User48
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+3
+5
+Bastante
+
+Respuesta pregunta
+RCNOU
+2
+Amarillo
+
+Respuesta pregunta
+RCNOM
+1
+3
+Nissan
+
+Respuesta pregunta
+RN
+7.110443666921467
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Superman meows on a sloth
+
+Final respuestas encuesta

@@ -1,0 +1,39 @@
+Titulo
+Encuesta
+
+Usuario
+User54
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+4
+5
+Mucho
+
+Respuesta pregunta
+RCNOU
+2
+Amarillo
+
+Respuesta pregunta
+RCNOM
+2
+0
+Opel
+3
+Nissan
+
+Respuesta pregunta
+RN
+3.4307578732081243
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Some guy explodes some guy
+
+Final respuestas encuesta

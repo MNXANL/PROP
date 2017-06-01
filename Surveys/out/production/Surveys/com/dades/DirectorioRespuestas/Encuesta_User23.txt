@@ -1,0 +1,37 @@
+Titulo
+Encuesta
+
+Usuario
+User23
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+4
+5
+Mucho
+
+Respuesta pregunta
+RCNOU
+3
+Verde
+
+Respuesta pregunta
+RCNOM
+1
+0
+Opel
+
+Respuesta pregunta
+RN
+0.14844845797759243
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Your homie eats a dude
+
+Final respuestas encuesta

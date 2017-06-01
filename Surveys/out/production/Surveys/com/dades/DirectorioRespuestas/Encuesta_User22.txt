@@ -1,0 +1,35 @@
+Titulo
+Encuesta
+
+Usuario
+User22
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+2
+5
+Regular
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RCNOM
+1
+0
+Opel
+
+Respuesta pregunta
+RN
+7.584870645302113
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Your homie explodes superman
+
+Final respuestas encuesta

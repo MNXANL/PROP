@@ -1,0 +1,54 @@
+Titulo
+EncExt
+
+Usuario
+User14
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RCO
+4
+5
+Mucho
+
+Respuesta pregunta
+RCNOU
+1
+Azul
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RN
+46.60115947497599
+0.0
+100.0
+
+Respuesta pregunta
+RL
+This cool guy my gardener met yesterday kicks a sloth
+
+Respuesta pregunta
+RCNOM
+3
+0
+Vaporwave
+2
+Eurobeat
+4
+Trumpwave
+
+Respuesta pregunta
+RN
+175
+100.0
+220.0
+
+Respuesta pregunta
+RL
+Superman creates your homie
+
+Final respuestas encuesta

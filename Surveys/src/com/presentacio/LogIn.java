@@ -113,7 +113,6 @@ public class LogIn {
      * >>> IMPORTANT!! <<<
      * DO NOT edit this method OR call it in your code!
      *
-     * @noinspection ALL
      */
     private void $$$setupUI$$$() {
         panel1 = new JPanel();
@@ -218,10 +217,8 @@ public class LogIn {
         panel1.add(spacer7, gbc);
     }
 
-    /**
-     * @noinspection ALL
-     */
-    public JComponent $$$getRootComponent$$$() {
+
+     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
 }

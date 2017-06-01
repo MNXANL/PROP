@@ -1,0 +1,39 @@
+Titulo
+Encuesta
+
+Usuario
+User64
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+2
+5
+Regular
+
+Respuesta pregunta
+RCNOU
+3
+Verde
+
+Respuesta pregunta
+RCNOM
+2
+0
+Opel
+2
+Hyundai
+
+Respuesta pregunta
+RN
+0.7717601183678324
+0.0
+10.0
+
+Respuesta pregunta
+RL
+A cat with rabies retards some guy
+
+Final respuestas encuesta

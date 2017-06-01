@@ -1,0 +1,37 @@
+Titulo
+Encuesta
+
+Usuario
+User25
+
+Fecha
+18/05/2017 10:11:12
+
+Respuesta pregunta
+RCO
+0
+5
+Muy poco
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RCNOM
+2
+0
+Opel
+2
+Hyundai
+
+Respuesta pregunta
+RN
+5.494165553467218
+0.0
+10.0
+
+Respuesta pregunta
+RL
+Your homie treats superman
+
+Final respuestas encuesta

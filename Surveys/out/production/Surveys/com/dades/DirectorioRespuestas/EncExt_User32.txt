@@ -1,0 +1,50 @@
+Titulo
+EncExt
+
+Usuario
+User32
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RCO
+4
+5
+Mucho
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RCNOM
+1
+2
+Ford
+
+Respuesta pregunta
+RN
+49.283151299019465
+0.0
+100.0
+
+Respuesta pregunta
+RL
+A sloth spies on your homie
+
+Respuesta pregunta
+RCNOM
+2
+0
+Vaporwave
+2
+Eurobeat
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RL
+Superman spies on my mom
+
+Final respuestas encuesta

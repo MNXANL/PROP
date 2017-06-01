@@ -1,0 +1,62 @@
+Titulo
+EncExt
+
+Usuario
+User5
+
+Fecha
+21/05/2017 10:14:12
+
+Respuesta pregunta
+RCO
+2
+5
+Regular
+
+Respuesta pregunta
+RCNOU
+0
+Rojo
+
+Respuesta pregunta
+RCNOM
+2
+1
+Toyota
+3
+Seat
+
+Respuesta pregunta
+RN
+99.86882037447418
+0.0
+100.0
+
+Respuesta pregunta
+RV
+
+Respuesta pregunta
+RCNOM
+5
+0
+Vaporwave
+1
+Rosswave
+2
+Eurobeat
+3
+FutureFunk
+4
+Trumpwave
+
+Respuesta pregunta
+RN
+151
+100.0
+220.0
+
+Respuesta pregunta
+RL
+The king eats this cool guy my gardener met yesterday
+
+Final respuestas encuesta
