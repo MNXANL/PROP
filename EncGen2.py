@@ -129,7 +129,7 @@ p = args.p
 for x in range (0,n):
 
 	file = open('EncExt_User'+str(x)+'.txt', 'w+')
-	file.write('Título\nEncExt\n\nUsuario\nUser'+str(x)+'\n\n')
+	file.write('Titulo\nEncExt\n\nUsuario\nUser'+str(x)+'\n\n')
 	file.write('Fecha\n21/05/2017 10:14:12\n\n')
 
 	file.write('Respuesta pregunta\n')

@@ -99,7 +99,7 @@ p = args.p
 for x in range (0,n):
 
 	file = open('Encuesta_User'+str(x)+'.txt', 'w+')
-	file.write('Título\nEncuesta\n\nUsuario\nUser'+str(x)+'\n\n')
+	file.write('Titulo\nEncuesta\n\nUsuario\nUser'+str(x)+'\n\n')
 	file.write('Fecha\n18/05/2017 10:11:12\n\n')
 
 	file.write('Respuesta pregunta\n')
