@@ -39,9 +39,10 @@ public class VistaVerEncuesta {
 
     /**
      * Constructora vista ver encuesta
+     *
      * @param ctrlPres Controlador de presentacion
-     * @param enc Titulo de la encuesta
-     * @param pregs Preguntas de la encuesta
+     * @param enc      Titulo de la encuesta
+     * @param pregs    Preguntas de la encuesta
      */
     public VistaVerEncuesta(ControladorPresentacio ctrlPres, String enc, ArrayList<ArrayList<String>> pregs) {
         this.ctrlPres = ctrlPres;
@@ -176,10 +177,11 @@ public class VistaVerEncuesta {
         GridBagConstraints gbc;
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 1;
+        gbc.gridy = 2;
         gbc.fill = GridBagConstraints.BOTH;
         panel1.add(panelBotones, gbc);
         verPreguntaButton = new JButton();
+        verPreguntaButton.setEnabled(false);
         verPreguntaButton.setText("Ver pregunta");
         panelBotones.add(verPreguntaButton, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer1 = new com.intellij.uiDesigner.core.Spacer();
@@ -189,7 +191,7 @@ public class VistaVerEncuesta {
         final com.intellij.uiDesigner.core.Spacer spacer3 = new com.intellij.uiDesigner.core.Spacer();
         panelBotones.add(spacer3, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         cerrarButton = new JButton();
-        cerrarButton.setEnabled(false);
+        cerrarButton.setEnabled(true);
         cerrarButton.setText("Cerrar");
         panelBotones.add(cerrarButton, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer4 = new com.intellij.uiDesigner.core.Spacer();
@@ -199,7 +201,7 @@ public class VistaVerEncuesta {
         panelList.setMinimumSize(new Dimension(414, 153));
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
-        gbc.gridy = 1;
+        gbc.gridy = 2;
         panel1.add(panelList, gbc);
         final JScrollPane scrollPane1 = new JScrollPane();
         panelList.add(scrollPane1, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 2, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
@@ -213,7 +215,7 @@ public class VistaVerEncuesta {
         panelRespLibre.setVisible(true);
         gbc = new GridBagConstraints();
         gbc.gridx = 2;
-        gbc.gridy = 1;
+        gbc.gridy = 2;
         gbc.fill = GridBagConstraints.BOTH;
         panel1.add(panelRespLibre, gbc);
         final JPanel spacer5 = new JPanel();
@@ -281,7 +283,7 @@ public class VistaVerEncuesta {
         panelRespNum.setVisible(true);
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
-        gbc.gridy = 1;
+        gbc.gridy = 2;
         gbc.fill = GridBagConstraints.BOTH;
         panel1.add(panelRespNum, gbc);
         final JPanel spacer10 = new JPanel();
@@ -379,7 +381,7 @@ public class VistaVerEncuesta {
         panelRespCual.setVisible(true);
         gbc = new GridBagConstraints();
         gbc.gridx = 4;
-        gbc.gridy = 1;
+        gbc.gridy = 2;
         gbc.fill = GridBagConstraints.BOTH;
         panel1.add(panelRespCual, gbc);
         final JPanel spacer18 = new JPanel();
@@ -495,17 +497,23 @@ public class VistaVerEncuesta {
         final JPanel spacer26 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 5;
-        gbc.gridy = 1;
+        gbc.gridy = 2;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panel1.add(spacer26, gbc);
         tituloEnc = new JLabel();
-        tituloEnc.setText("Título encuesta");
+        tituloEnc.setText("Titulo encuesta");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.gridwidth = 5;
         gbc.anchor = GridBagConstraints.NORTH;
         panel1.add(tituloEnc, gbc);
+        final JPanel spacer27 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 2;
+        gbc.gridy = 1;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        panel1.add(spacer27, gbc);
     }
 
     /**

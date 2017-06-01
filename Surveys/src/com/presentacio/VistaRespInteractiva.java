@@ -751,7 +751,7 @@ public class VistaRespInteractiva {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panel1.add(spacer25, gbc);
         tituloEnc = new JLabel();
-        tituloEnc.setText("Título encuesta");
+        tituloEnc.setText("Titulo encuesta");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 0;

@@ -1,4 +1,4 @@
-Título
+Titulo
 Enc
 
 Fecha
@@ -6,7 +6,7 @@ Fecha
 
 Pregunta
 PCO
-Título de la pregunta 1
+Titulo de la pregunta 1
 Muy poco
 Poco
 Regular
@@ -15,7 +15,7 @@ Mucho
 
 Pregunta
 PCNOU
-Título de la pregunta 2
+Titulo de la pregunta 2
 Rojo
 Azul
 Amarillo
@@ -23,7 +23,7 @@ Verde
 
 Pregunta
 PCNOM
-Título de la pregunta 3 pcnom
+Titulo de la pregunta 3 pcnom
 2
 Opel
 Renault
@@ -32,12 +32,12 @@ Nissan
 
 Pregunta
 PN
-Título de la pregunta 4 num
+Titulo de la pregunta 4 num
 0
 10
 
 Pregunta
 PRL
-Título de la pregunta 5 libre
+Titulo de la pregunta 5 libre
 
 Final encuesta

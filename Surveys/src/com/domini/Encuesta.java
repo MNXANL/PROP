@@ -122,7 +122,7 @@ public class Encuesta {
             int indexPreg = 0;
             while((line = bufferedReader.readLine()) != null) {
                 contLinea++;
-                if (line.equals("Título")) {
+                if (line.equals("Titulo")) {
                     line = bufferedReader.readLine();
                     contLinea++;
                     if (line == null) {
@@ -130,7 +130,7 @@ public class Encuesta {
                         throw exc;
                     }
                     else if (line.equals("")){
-                        ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Título de encuesta vacío");
+                        ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Titulo de encuesta vacío");
                         throw exc;
                     }
                     else {
@@ -154,7 +154,7 @@ public class Encuesta {
                             throw exc;
                         }
                         else if (tituloP.equals("")) {
-                            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Título de pregunta vacío");
+                            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Titulo de pregunta vacío");
                             throw exc;
                         }
                         //leer todas las opciones de respuesta
@@ -162,7 +162,7 @@ public class Encuesta {
                         int index = 0;
                         while ((line = bufferedReader.readLine()) != null && !line.equals("")){
                             contLinea++;
-                            if (line.equals("Título") || line.equals("Pregunta") || line.equals("Fecha") || line.equals("Final encuesta")) {
+                            if (line.equals("Titulo") || line.equals("Pregunta") || line.equals("Fecha") || line.equals("Final encuesta")) {
                                 ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Debes dejar una línea en blanco entre el final de una pregunta y el siguiente contenido.");
                                 throw exc;
                             }
@@ -187,7 +187,7 @@ public class Encuesta {
                             throw exc;
                         }
                         else if (tituloP.equals("")) {
-                            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Título de pregunta vacío");
+                            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Titulo de pregunta vacío");
                             throw exc;
                         }
                         //leer todas las opciones de respuesta
@@ -195,7 +195,7 @@ public class Encuesta {
                         int index = 0;
                         while ((line = bufferedReader.readLine()) != null && !line.equals("")){
                             contLinea++;
-                            if (line.equals("Título") || line.equals("Pregunta") || line.equals("Fecha") || line.equals("Final encuesta")) {
+                            if (line.equals("Titulo") || line.equals("Pregunta") || line.equals("Fecha") || line.equals("Final encuesta")) {
                                 ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Debes dejar una línea en blanco entre el final de una pregunta y el siguiente contenido.");
                                 throw exc;
                             }
@@ -220,7 +220,7 @@ public class Encuesta {
                             throw exc;
                         }
                         else if (tituloP.equals("")) {
-                            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Título de pregunta vacío");
+                            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Titulo de pregunta vacío");
                             throw exc;
                         }
                         //leer max opciones
@@ -236,7 +236,7 @@ public class Encuesta {
                         int index = 0;
                         while ((line = bufferedReader.readLine()) != null && !line.equals("")){
                             contLinea++;
-                            if (line.equals("Título") || line.equals("Pregunta") || line.equals("Fecha") || line.equals("Final encuesta")) {
+                            if (line.equals("Titulo") || line.equals("Pregunta") || line.equals("Fecha") || line.equals("Final encuesta")) {
                                 ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Debes dejar una línea en blanco entre el final de una pregunta y el siguiente contenido.");
                                 throw exc;
                             }
@@ -265,7 +265,7 @@ public class Encuesta {
                             throw exc;
                         }
                         else if (tituloP.equals("")) {
-                            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Título de pregunta vacío");
+                            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Titulo de pregunta vacío");
                             throw exc;
                         }
                         contLinea++;
@@ -298,7 +298,7 @@ public class Encuesta {
                             throw exc;
                         }
                         else if (tituloP.equals("")) {
-                            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Título de pregunta vacío");
+                            ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Titulo de pregunta vacío");
                             throw exc;
                         }
                         PregRespuestaLibre preg = new PregRespuestaLibre(tituloP);
@@ -368,7 +368,7 @@ public class Encuesta {
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
             //Escribimos el título
-            bufferedWriter.write("Título\n");
+            bufferedWriter.write("Titulo\n");
             bufferedWriter.write(this.title+"\n");
 
             bufferedWriter.newLine();
@@ -516,7 +516,7 @@ public class Encuesta {
      * @return La lista de respuestas de la pregunta
      */
     public ArrayList<RespuestasEncuesta> getCjtRespsEnc(){
-        return new ArrayList<R>(CjtRespsEnc);
+        return new ArrayList<>(CjtRespsEnc);
     }
 
     /**

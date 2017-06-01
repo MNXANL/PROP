@@ -35,6 +35,18 @@ public class ControladorDatos {
     HashMap<String, Tuple<String, String>> users; //nombre, pass y tipo
 
     /**
+     * Connstructor por defecto de la capa de datos, adapta los path para SO Windows
+     */
+    public ControladorDatos() {
+        String os = System.getProperty("os.name").toLowerCase();
+        if (os.indexOf("win") >= 0) {
+            pathEnc = "src\\com\\dades\\DirectorioEncuestas";
+            pathResp = "src\\com\\dades\\DirectorioRespuestas";
+            pathUsers = "src\\com\\dades\\Usuarios.txt";
+        }
+    }
+
+    /**
      * Método para hacer login del programa
      * @param usuario Usuario que entra
      * @param pass Contraseña del usuario

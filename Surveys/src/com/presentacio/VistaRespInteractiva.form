@@ -421,7 +421,7 @@
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Título encuesta"/>
+          <text value="Titulo encuesta"/>
         </properties>
       </component>
     </children>

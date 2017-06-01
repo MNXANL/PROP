@@ -520,7 +520,7 @@ public class VistaCrearEncuesta {
         list1.setModel(defaultListModel1);
         scrollPane1.setViewportView(list1);
         final JLabel label1 = new JLabel();
-        label1.setText("Título");
+        label1.setText("Titulo");
         panelList.add(label1, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         panelPreg = new JPanel();
         panelPreg.setLayout(new GridBagLayout());

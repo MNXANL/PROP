@@ -297,6 +297,7 @@ public class VistaPrincipalAdmin {
         clusteringButton.setEnabled(false);
         exportarButton.setEnabled(false);
         importarRespuestasButton.setEnabled(false);
+        verEncuestaButton.setEnabled(false);
     }
 
     /**
@@ -308,6 +309,7 @@ public class VistaPrincipalAdmin {
         clusteringButton.setEnabled(false);
         exportarButton.setEnabled(true);
         importarRespuestasButton.setEnabled(true);
+        verEncuestaButton.setEnabled(true);
     }
 
     /**
@@ -319,6 +321,7 @@ public class VistaPrincipalAdmin {
         modificarEncuestaButton.setEnabled(false);
         exportarButton.setEnabled(true);
         importarRespuestasButton.setEnabled(true);
+        verEncuestaButton.setEnabled(true);
     }
 
     /**
@@ -455,6 +458,7 @@ public class VistaPrincipalAdmin {
         importarRespuestasButton.setText("Importar respuestas");
         panel2.add(importarRespuestasButton, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         verEncuestaButton = new JButton();
+        verEncuestaButton.setEnabled(false);
         verEncuestaButton.setText("Ver encuesta");
         panel2.add(verEncuestaButton, new com.intellij.uiDesigner.core.GridConstraints(6, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer7 = new com.intellij.uiDesigner.core.Spacer();

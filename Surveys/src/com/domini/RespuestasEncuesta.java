@@ -155,14 +155,14 @@ public class RespuestasEncuesta {
             boolean hasFinished = false;
             while((line = bufferedReader.readLine()) != null) {
                 ++contLinea;
-                if (line.equals("Título")) {
+                if (line.equals("Titulo")) {
                     line = bufferedReader.readLine(); ++contLinea;
                     if (line == null) {
                         ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Encuesta inacabada");
                         throw exc;
                     }
                     else if (line.equals("")){
-                        ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Título de encuesta vacío");
+                        ExcFormatoIncorrecto exc = new ExcFormatoIncorrecto("Error en linea "+contLinea+". Titulo de encuesta vacío");
                         throw exc;
                     }
                     else {
@@ -325,7 +325,7 @@ public class RespuestasEncuesta {
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
             //Escribimos el título de la encuesta respondida
-            bufferedWriter.write("Título\n");
+            bufferedWriter.write("Titulo\n");
             bufferedWriter.write(Encuesta_respondida + "\n");
 
             bufferedWriter.newLine();
