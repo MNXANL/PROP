@@ -80,3 +80,462 @@ En la pantalla de LogIn:
 Salida:
 Se muestra un mensaje indicando que el nombre de usuario o la contraseña son incorrectos
 Resultado de la prueba: OK
+
+
+
+Prueba 7
+Descripción: Cerrar sesión del usuario
+Objetivos: Cerrar la sesión del usuario
+Entrada: 
+Precondición: Prueba 4 o 5
+En la pantalla de VistaPrincipal:
+    El usuario marca a "Cerrar sesión"
+    Marca a "Responder encuesta"
+En el aviso:
+    Dar a "Sí"
+Salida:
+Se ha cerrado la sesión del usuario, y se vuelve a mostrar la pantalla de LogIn
+Resultado de la prueba: OK
+
+Prueba 8
+Descripción: Respuesta a encuesta
+Objetivos: Mostrar la vista de respuesta a encuesta
+Precondición: Prueba 4
+Entrada: 
+En la pantalla de VistaPrincipal:
+    El usuario selecciona la encuesta "EncExt"
+    Marca a "Responder encuesta"
+En el aviso:
+    Dar a "Responder"
+Salida:
+Se muestra una instancia de VistaRespInteractiva
+Resultado de la prueba: OK
+
+Prueba 9
+Descripción: Borrar respuesta de encuesta
+Objetivos: Eliminar la respuesta de encuesta del usuario
+Entrada: 
+Precondición: La encuesta "Encuesta" debe estar respondida. Prueba 4
+En la pantalla de VistaPrincipal:
+    Clicar en la pestaña de "Encuestas respondidas"
+    Marcar la encuesta "Encuesta"
+    Clicar el botón de "Borrar respuesta"
+En el aviso:
+    Clicar al "Sí"
+Salida:
+Se ha borrado la respuesta de la encuesta "Encuesta"
+Resultado de la prueba: OK
+
+Prueba 10
+Descripción: Importar respuesta a encuesta
+Objetivos: Importar una respuesta a la encuesta
+Entrada: 
+Precondición: Prueba 5
+En la pantalla de VistaPrincipal:
+    El usuario selecciona la encuesta "EncExt"
+    Marca a "Responder encuesta"
+En el aviso:
+    Dar a "Responder"
+En la ventana emergente:
+    Buscar un fichero llamado "EncExt_Aleix.txt"
+Salida:
+Se muestra una instancia de VistaRespInteractiva
+Resultado de la prueba: OK
+
+Prueba 11
+Descripción: Exportar respuesta de encuesta
+Objetivos: Exportar la respuesta de encuesta del usuario a disco
+Precondición: Prueba 4
+Entrada: 
+En la pantalla de VistaPrincipal:
+    Clicar en la pestaña de "Encuestas respondidas"
+    Clicar el botón de "Borrar respuesta"
+En la ventana emergente:
+    Dar a la carpeta de "Documentos"
+    Clicar el botón de "Save"
+Salida:
+Se ha guardado la respuesta de la encuesta "Encuesta" en la carpeta de "Documentos" del usuario
+Resultado de la prueba: OK
+
+Prueba 12
+Descripción: Importar incorrectamente respuesta a encuesta
+Objetivos: Importar una respuesta a la encuesta de forma incorrecta
+Entrada: 
+Precondición: Prueba 5
+En la pantalla de VistaPrincipal:
+    El usuario selecciona la encuesta "EncExt"
+    Marca a "Responder encuesta"
+En el aviso:
+    Dar a "Importar"
+En la ventana emergente:
+    Buscar un fichero llamado "EncExt-Aleix.txt"
+Salida:
+Se muestra un aviso que dice "Error en la línea 1. Palabra clave incorrecta"
+Resultado de la prueba: OK
+
+Prueba 13
+Descripción: Importar incorrectamente respuesta a encuesta
+Objetivos: Importar una respuesta a la encuesta de forma incorrecta
+Entrada: 
+Precondición: Prueba 4 o 5. El usuario dentro del fichero "Enc_Aleix.txt" no se corresponde con un usuario del sistema
+En la pantalla de VistaPrincipal:
+    El usuario selecciona la encuesta "EncExt"
+    Marca a "Responder encuesta" (si no es admin) o a "Importar respuestas" (si lo es)
+En el aviso (solo si no es admin):
+    Dar a "Importar"
+En la ventana emergente:
+    Buscar un fichero llamado "EncExt_Aleix.txt"
+Salida:
+Se muestra un aviso que dice "Error en la línea 1. Palabra clave incorrecta"
+Resultado de la prueba: OK
+
+Prueba 14
+Descripción: Busqueda por fechas
+Objetivos: Mostrar una encuesta filtrada por fechas
+Entrada: 
+En la pantalla de VistaPrincipal:
+    Escribir en Fecha Inicial: 20/04/2017
+    Escribir en Fecha Final: 27/04/2017
+    Clicar el botón de Buscar
+Salida:
+Se muestra en la lista la encuesta "EncExt"
+Resultado de la prueba: OK
+
+Prueba 15
+Descripción: Busqueda por fechas
+Objetivos: Mostrar una encuesta filtrada por fechas
+Entrada: 
+En la pantalla de VistaPrincipal:
+    Escribir en Fecha Inicial: 20/04/17
+    Escribir en Fecha Final: 27/04/17
+    Clicar el botón de Buscar
+Salida:
+Se muestra un aviso que dice: "Formato de fechas incorrecto. El formato debe ser dd/mm/aaaa"
+Resultado de la prueba: OK
+
+Prueba 16
+Descripción: Probar la busqueda por palabras
+Objetivos: Probar la busqueda filtrada por palabras
+Precondición: 
+Entrada: 
+En la pantalla de VistaPrincipal:
+    Escribir en Palabras Clave: "cE"
+    Clicar a "Buscar"
+Salida:
+Se muestran solamente las encuestas que contengan en alguna parte de su titulo los carácteres "cE"
+Resultado de la prueba: OK
+
+Prueba 17
+Descripción: Probar la busqueda por criterio
+Objetivos: Probar la busqueda según un criterio dado
+Entrada: 
+En la pantalla de VistaPrincipal:
+    Poner el spinbox de criterio a "Nuevas"
+    Clicar a "Buscar"
+Salida:
+Se muestra primero la encuesta "EncExt", seguido de "Enc"
+Resultado de la prueba: OK
+
+
+Prueba 18
+Descripción: Guardar respuesta a pregunta
+Objetivos: Guardar la respuesta a una pregunta
+Entrada: 
+Precondición: La encuesta a responder debe ser "EncExt"
+En la pantalla de VistaRespInteractiva:
+    El usuario selecciona la encuesta "EncExt"
+    Marca en la lista a"Cuanto te gusta PROP?"
+    Clicar a "Responder pregunta"
+    Bajar y marcar la opción "Bastante"
+    Clicar a "Guardar respuesta"
+Salida:
+Se guarda una respuesta a la pregunta "Cuanto te gusta PROP?" con valor "Bastante"
+Resultado de la prueba: OK
+
+Prueba 19
+Descripción: Modificar respuesta a pregunta
+Objetivos: Modificar la respuesta a una pregunta
+Entrada: 
+Precondición: La encuesta a responder debe ser "EncExt" y Prueba 14.
+En la pantalla de VistaRespInteractiva:
+    El usuario selecciona la encuesta "EncExt"
+    Marca en la lista a "Cuanto te gusta PROP?"
+    Clicar a "Modificar pregunta"
+    Bajar y cambia la opción de "Bastante" a "Mucho"
+    Clicar a "Guardar respuesta"
+Salida:
+Se guarda una respuesta a la pregunta "Cuanto te gusta PROP?" con valor "Mucho"
+Resultado de la prueba: OK
+
+Prueba 20
+Descripción: Borrar respuesta a pregunta
+Objetivos: Guardar una respuesta vacía a una pregunta
+Entrada: 
+Precondición: La encuesta a responder debe ser "EncExt" y Prueba 14.
+En la pantalla de VistaRespInteractiva:
+    El usuario selecciona la encuesta "EncExt"
+    Marca en la lista a" Cuanto te gusta PROP?"
+    Clicar a "Borrar pregunta"
+    Clicar a "Sí"
+Salida:
+Se borr una respuesta a la pregunta "Cuanto te gusta PROP?"
+Resultado de la prueba: OK
+
+Prueba 21
+Descripción: Guardar respuesta vacía a pregunta
+Objetivos: Guardar una respuesta vacía a una pregunta
+Entrada: 
+Precondición: La encuesta a responder debe ser "EncExt" y Prueba 14.
+En la pantalla de VistaRespInteractiva:
+    El usuario selecciona la encuesta "EncExt"
+    Marca en la lista a" Cuanto te gusta PROP?"
+    Clicar a "Modificar pregunta"
+    Clicar a "NS / NC"
+Salida:
+Se guarda una respuesta a la pregunta "Cuanto te gusta PROP?" con respuesta vacía
+Resultado de la prueba: OK
+
+Prueba 22
+Descripción: Entrar una respuesta ilegal
+Objetivos: Entrar una respuesta con más opciones de las requeridas
+Entrada: 
+Precondición: La encuesta a responder debe ser "EncExt".
+En la pantalla de VistaRespInteractiva:
+    El usuario selecciona la encuesta "EncExt"
+    Marca en la lista a "Que marcas te gustan?"
+    Clicar a "Responder pregunta"
+    Marcar las 4 opciones
+    Clicar a "Guardar pregunta"
+Salida:
+Se dará un aviso que pone "No se pueden seleccionar más de 2 respuestas."
+Resultado de la prueba: OK
+
+Prueba 23
+Descripción: Guardar todas las respuestas de la encuesta
+Objetivos: Guardar todas las respuestas de la encuesta en el sistema
+Entrada: 
+Precondición: La encuesta a responder debe ser "EncExt" y Prueba 14.
+En la pantalla de VistaRespInteractiva:
+    Clicar a "Guardar respuestas"
+Salida:
+Se guardarán las respuestas de la encuesta del usuario en el sistema.
+Resultado de la prueba: OK
+
+Prueba 24
+Descripción: Importar una encuesta del sistema
+Objetivos: Importar una encuesta que ya está en el sistema
+Entrada: 
+Precondición: Prueba 5. La encuesta "EncExt" no se encuentra en el sistema
+En la pantalla de VistaPrincipal:
+    El usuario selecciona la encuesta "EncExt"
+    Marca a "Nueva encuesta"
+En el aviso:
+    Dar a "Importar"
+En la ventana emergente:
+    Buscar un fichero llamado "EncExt_Aleix.txt"
+Salida:
+Se muestra la encuesta EncExt en la lista de encuestas del sistema
+Resultado de la prueba: OK
+
+Prueba 25
+Descripción: Importar una encuesta del sistema
+Objetivos: Importar una encuesta que ya está en el sistema
+Entrada: 
+Precondición: Prueba 5. La encuesta "EncExt" se encuentra en el sistema
+En la pantalla de VistaPrincipal:
+    El usuario selecciona la encuesta "EncExt"
+    Marca a "Nueva encuesta"
+En el aviso:
+    Dar a "Importar"
+En la ventana emergente:
+    Buscar un fichero llamado "EncExt.txt"
+Salida:
+Se muestra un aviso que dice "La encuesta con titulo EncExt ya existe"
+Resultado de la prueba: OK
+
+Prueba 26
+Descripción: Importar incorrectamente respuesta a encuesta
+Objetivos: Importar una respuesta a la encuesta de forma incorrecta
+Entrada: 
+Precondición: Prueba 5. El usuario dentro del fichero "Enc_Aleix.txt" no se corresponde con un usuario del sistema
+En la pantalla de VistaPrincipal:
+    El usuario selecciona la encuesta "EncExt"
+    Marca a "Nueva encuesta"
+En el aviso:
+    Dar a "Importar"
+En la ventana emergente:
+    Buscar un fichero llamado "EncExt.txt"
+Salida:
+Se muestra un aviso que dice "Error en la línea 1. Palabra clave incorrecta"
+Resultado de la prueba: OK
+
+Prueba 27
+Descripción: Borrar encuesta
+Objetivos: Borrar una nueva encuesta
+Entrada: 
+Precondición: Prueba 5
+En la pantalla de VistaPrincipalAdmin:
+    El usuario marca una encuesta
+    Clica "Borrar encuesta"
+En el aviso:
+    Dar a "Sí"
+Salida:
+Se muestra la pantalla con la encuesta borrada
+Resultado de la prueba: OK
+
+Prueba 28
+Descripción: Modificar encuesta
+Objetivos: Modificar una nueva encuesta
+Entrada: 
+Precondición: Prueba 5. La encuesta no puede tener ninguna respuesta de ningún usuario.
+En la pantalla de VistaPrincipalAdmin:
+    El usuario marca una encuesta
+    Clica "Modificar encuesta"
+En el aviso:
+    Dar a "Crear"
+Salida:
+Se muestra la pantalla de modificadora de encuesta
+Resultado de la prueba: OK
+
+Prueba 29
+Descripción: Exportar encuesta
+Objetivos: Exportar una encuesta
+Entrada: 
+Precondición: Prueba 5. Existe la encuesta EncExt
+En la pantalla de VistaPrincipalAdmin:
+    El usuario marca a "Exportar encuesta"
+    Marca a "Nueva encuesta"
+En la ventana emergente:
+    Marca el lugar donde guardar la encuesta
+Salida:
+Se guarda en disco la encuesta
+Resultado de la prueba: OK
+
+Prueba 30
+Descripción: Ver creadora de  encuesta
+Objetivos: Ver la creadora de una nueva encuesta.
+Entrada: 
+Precondición: Prueba 5
+En la pantalla de VistaPrincipalAdmin:
+    El usuario marca a "Nueva encuesta"
+    Marca a "Nueva encuesta"
+En el aviso:
+    Dar a "Crear"
+Salida:
+Se muestra la pantalla de creación de encuesta
+Resultado de la prueba: OK
+
+Prueba 31
+Descripción: Ver las preguntas de la encuesta
+Objetivos: Ver las preguntas de la encuesta seleccionada
+Precondición: Prueba 5. Existe una encuesta EncExt
+Entrada: 
+En la pantalla de VistaRespInteractiva:
+    Seleccionar la encuesta "EncExt"
+    Clicar a "Ver encuesta"
+Salida:
+Se muestran las preguntas de la encuesta en la vista de ver encuesta
+Resultado de la prueba: OK
+
+Prueba 32
+Descripción: Ver las pregunta de una encuesta
+Objetivos: Mostrar el contenido de una pregunta de la encuesta
+Precondición: Prueba 5. Existe una encuesta EncExt
+Entrada: 
+En la pantalla de VistaVerEncuesta:
+    Clicar a la pregunta "Que marcas te gustan"
+    Clicar a "Ver pregunta"
+Salida:
+Se muestran las opciones y detalles de la pregunta.
+Resultado de la prueba: OK
+
+Prueba 33
+Descripción: Ver la pregunta de una encuesta
+Objetivos: Entrar una respuesta con más opciones de las requeridas
+Precondición: Prueba 5. Existe una encuesta EncExt
+Entrada: 
+En la pantalla de VistaRespInteractiva:
+    Clicar a "Ver Encuesta"
+    Clicar a "Ver Encuesta"
+Salida:
+Se muestran las preguntas de la encuesta en la vista ver encuesta
+Resultado de la prueba: OK
+
+Prueba 34
+Descripción: Crear encuesta nueva
+Objetivos: Crear una nueva encuesta.
+Entrada: 
+Precondición: Prueba 30
+En la pantalla de VistaVerEncuesta:
+    El usuario marca a "Nueva pregunta"
+    Escribe en el recuadro de titulo "Encuestilla"
+    Marca a "Guardar pregunta"
+    Escribe en el recuadro de nombre de pregunta "Preg libre"
+    Marca a "Guardar encuesta"
+Salida:
+Se crea una encuesta con titulo "Encuestilla"
+Resultado de la prueba: OK
+
+Prueba 35
+Descripción: Crear encuesta con mismo titulo
+Objetivos: Crear una encuesta incorrecta con el mismo título que otra.
+Entrada: 
+Precondición: Prueba 30
+En la pantalla de VistaVerEncuesta:
+    El usuario marca a "Nueva pregunta"
+    Escribe en el recuadro de titulo "EncExt"
+    Marca a "Guardar pregunta"
+    Escribe en el recuadro de nombre de pregunta "Preg libre"
+    Marca a "Guardar encuesta"
+Salida:
+Se crea un aviso que dice "No se puede guardar. La encuesta EncExt ya existe."
+Resultado de la prueba: OK
+
+Prueba 36
+Descripción: Insertar una pregunta a una encuesta
+Objetivos: Insertar una nueva pregunta en la encuesta.
+Entrada: 
+Precondición: Prueba 34, pero sin haber guardado la encuesta
+En la pantalla de VistaVerEncuesta:
+    El usuario marca a "Nueva pregunta"
+    Escribe en el recuadro de nombre de pregunta "Cual es tu sexo?"
+    Pone en el spinbox "Cualitativa no ordenada unica"
+    Escribe en el recuadro de opción "Hombre"
+    Pulsa el botón +
+    Escribe en el recuadro de opción "Mujer"
+    Pulsa el botón +
+    Marca a "Guardar pregunta"
+    Marca a "Guardar encuesta"
+Salida:
+Se crea una encuesta con titulo "Encuestilla" con dos preguntas
+Resultado de la prueba: OK
+
+Prueba 37
+Descripción: Modificar una pregunta a una encuesta
+Objetivos: Modificar una nueva pregunta en la encuesta.
+Entrada: 
+Precondición: Prueba 36, pero sin haber guardado la encuesta
+En la pantalla de VistaVerEncuesta:
+    El usuario marca la pregunta "Cual es tu sexo?"
+    Marca a "Modificar pregunta"
+    Escribe en el recuadro de opción "Robot"
+    Pulsa el botón +
+    Marca a "Guardar pregunta"
+Salida:
+Se ha modificado la pregunta de la encuesta
+Resultado de la prueba: OK
+
+Prueba 38
+Descripción: Borrar una pregunta a una encuesta
+Objetivos: Borrar una nueva pregunta en la encuesta.
+Entrada: 
+Precondición: Prueba 36, pero sin haber guardado la encuesta
+En la pantalla de VistaVerEncuesta:
+    El usuario marca la pregunta "Cual es tu sexo?"
+    Marca a "Borrar pregunta"
+En el aviso:
+    Dar a "Sí"
+Salida:
+Se ha eliminado la pregunta de la encuesta
+Resultado de la prueba: OK
+

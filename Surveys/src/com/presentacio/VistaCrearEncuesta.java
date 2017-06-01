@@ -326,7 +326,7 @@ public class VistaCrearEncuesta {
                     else ctrlPres.crearEncuestaArgs(tituloEnc.getText(), PreguntasGuardadas);
                     close();
                 } catch (ExcEncuestaExistente excEncuestaExistente) {
-                    excEncuestaExistente.printStackTrace();
+                    aviso("No se puede guardar. La encuesta " + tituloEnc.getText()+ " ya existe.");
                 }
             }
         });
