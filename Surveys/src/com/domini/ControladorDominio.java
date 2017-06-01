@@ -262,6 +262,10 @@ public class ControladorDominio {
      * @param titulo Titulo de la encuesta a borrar
      */
     public void borrarEncuesta (String titulo) {
+        Encuesta e = cjt.getEncuesta(titulo);
+        for (RespuestasEncuesta re : e.getCjtRespsEnc()) {
+            contDatos.borrarRespuestasEncuesta(titulo+"_"+re.getUser());
+        }
         cjt.borrarEncuesta(titulo);
         contDatos.borrarEncuesta(titulo);
     }

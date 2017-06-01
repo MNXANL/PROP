@@ -18,6 +18,8 @@ public class ControladorDatos {
     String pathResp = "src/com/dades/DirectorioRespuestas";
     String pathUsers = "src/com/dades/Usuarios.txt";
 
+    String os;
+
     /**
      * Clase para representar una tupla
      * @param <X>
@@ -38,7 +40,7 @@ public class ControladorDatos {
      * Connstructor por defecto de la capa de datos, adapta los path para SO Windows
      */
     public ControladorDatos() {
-        String os = System.getProperty("os.name").toLowerCase();
+        os = System.getProperty("os.name").toLowerCase();
         if (os.indexOf("win") >= 0) {
             pathEnc = "src\\com\\dades\\DirectorioEncuestas";
             pathResp = "src\\com\\dades\\DirectorioRespuestas";
@@ -155,7 +157,11 @@ public class ControladorDatos {
      * @param e Encuesta a guardar
      */
     public void guardarEncuesta (Encuesta e) {
-        e.exportar(pathEnc+"/"+e.getTitulo()+".txt");
+        if (os.indexOf("win") >= 0) {
+            e.exportar(pathEnc + "\\" + e.getTitulo() + ".txt");
+        } else {
+            e.exportar(pathEnc + "/" + e.getTitulo() + ".txt");
+        }
     }
 
     /**
@@ -165,7 +171,12 @@ public class ControladorDatos {
      */
     public void actualizarEncuesta (String titulo, Encuesta e) {
         borrarEncuesta(titulo);
-        e.exportar(pathEnc+"/"+e.getTitulo()+".txt");
+        if (os.indexOf("win") >= 0) {
+            e.exportar(pathEnc+"\\"+e.getTitulo()+".txt");
+        }
+        else {
+            e.exportar(pathEnc + "/" + e.getTitulo() + ".txt");
+        }
     }
 
     /**
@@ -173,7 +184,12 @@ public class ControladorDatos {
      * @param titulo Titulo de la encuesta a borrar
      */
     public void borrarEncuesta (String titulo) {
-        File f = new File (pathEnc+"/"+titulo+".txt");
+        File f;
+        if (os.indexOf("win") >= 0) {
+            f = new File (pathEnc+"\\"+titulo+".txt");
+        } else {
+            f = new File(pathEnc + "/" + titulo + ".txt");
+        }
         f.delete();
     }
 
@@ -182,7 +198,12 @@ public class ControladorDatos {
      * @param re Respuestas de encuesta a guardar
      */
     public void guardarRespuestasEncuesta (RespuestasEncuesta re) {
-        re.exportar(pathResp + "/" + re.getNombreFichero()  +".txt");
+        if (os.indexOf("win") >= 0) {
+            re.exportar(pathResp + "\\" + re.getNombreFichero()  +".txt");
+        }
+        else {
+            re.exportar(pathResp + "/" + re.getNombreFichero() + ".txt");
+        }
     }
 
     /**
@@ -190,8 +211,13 @@ public class ControladorDatos {
      * @param re Respuestas de encuesta a actualizar
      */
     public void actualizarRespuestasEncuesta (RespuestasEncuesta re) {
-        borrarRespuestasEncuesta(re.toString()); //maybe not like this
-        re.exportar(pathResp + "/" + re.getNombreFichero()  +".txt");
+        borrarRespuestasEncuesta(re.toString());
+        if (os.indexOf("win") >= 0) {
+            re.exportar(pathResp + "/" + re.getNombreFichero()  +".txt");
+        }
+        else {
+            re.exportar(pathResp + "/" + re.getNombreFichero() + ".txt");
+        }
     }
 
     /**
@@ -199,7 +225,13 @@ public class ControladorDatos {
      * @param re Respuestas de encuesta a borrar
      */
     public void borrarRespuestasEncuesta (String titulo) {
-        File f = new File (pathResp + "/" + titulo + ".txt");
+        File f;
+        if (os.indexOf("win") >= 0) {
+            f = new File (pathResp + "/" + titulo + ".txt");
+        }
+        else {
+            f = new File(pathResp + "/" + titulo + ".txt");
+        }
         f.delete();
     }
 }
