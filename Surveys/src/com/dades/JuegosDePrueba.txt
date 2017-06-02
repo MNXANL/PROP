@@ -537,3 +537,30 @@ Salida:
 Se ha eliminado la pregunta de la encuesta
 Resultado de la prueba: OK
 
+Prueba 39
+Descripción: Visualizar el clustering de una encuesta
+Objetivos: Ver el clustering de los usuarios en una encuesta.
+Entrada: 
+Precondición: La encuesta "EncExt" debe tener como minimo 2 respuestas. Prueba 5
+En la pantalla de VistaPrincipalAdmin:
+    El usuario marca la encuesta "EncExt"
+    Clica en "Clustering"
+En la pantalla emergente:
+    Marcar K = 2
+    Clica en "Clustering"
+Salida:
+Se muestra una pantalla de VistaClustering con la vista de los clusters con K = 2, con dos clusters y dos centroides
+Resultado de la prueba: OK
+
+Prueba 40
+Descripción: Cambiar la K del clustering de una encuesta
+Objetivos: Cambiar la K del clustering de los usuarios en una encuesta.
+Entrada: 
+Precondición: Prueba 39
+    Clica en "Seleccionar otra K"
+En la pantalla emergente:
+    Marcar K = 10
+    Clica en "Clustering"
+Salida:
+Se muestra una pantalla de VistaClustering con la vista de los clusters con K = 10, con diez clusters y diez centroides
+Resultado de la prueba: OK
