@@ -81,8 +81,6 @@ Salida:
 Se muestra un mensaje indicando que el nombre de usuario o la contraseña son incorrectos
 Resultado de la prueba: OK
 
-
-
 Prueba 7
 Descripción: Cerrar sesión del usuario
 Objetivos: Cerrar la sesión del usuario
